@@ -7,6 +7,25 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.44-bin" level="project" />
+    <orderEntry type="library" name="ormlite-core-5.0" level="project" />
+    <orderEntry type="library" name="ormlite-jdbc-5.0" level="project" />
+    <orderEntry type="library" name="log4j-api-2.10.0-javadoc" level="project" />
+    <orderEntry type="library" name="log4j-api-2.10.0-sources" level="project" />
+    <orderEntry type="library" name="log4j-api-2.10.0" level="project" />
+    <orderEntry type="library" name="log4j-core-2.10.0-javadoc" level="project" />
+    <orderEntry type="library" name="log4j-core-2.10.0-sources" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/log4j-2.10.0-bin/log4j-core-2.10.0-tests.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/lib/log4j-2.10.0-bin/log4j-core-2.10.0-tests.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="log4j-core-2.10.0" level="project" />
   </component>
 </module>
-

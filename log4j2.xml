@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <!-- Properties section -->
+    <Properties>
+        <Property name="module_1_all_log">logs/module_1-all.log</Property>
+        <Property name="module_1_errors_log">logs/module_1-errors.log</Property>
+        <Property name="module_2_all_log">logs/module_2-all.log</Property>
+        <Property name="module_2_errors_log">logs/module_2-errors.log</Property>
+    </Properties>
+
+    <!-- Appenders section -->
+    <Appenders>
+        <!-- console appender -->
+        <Console name="console_appender_all" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <!-- File appender of for module 1 for all -->
+        <RollingFile name="module_1_appender_1_all" fileName="${module_1_all_log}"
+                     filePattern="logs/arch/arch_module_1_all_log-%d{MM-dd-yyyy_HH}-%i.gz"
+                     append="true">
+            <PatternLayout>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="6"
+                                           modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <!-- File appender of for module 1 for errors -->
+        <RollingFile name="module_1_appender_2_errors" fileName="${module_1_errors_log}"
+                     filePattern="logs/arch/arch_module_1_errors_log-%d{MM-dd-yyyy_HH}-%i.gz"
+                     append="true">
+            <PatternLayout>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="2000"/>
+            </Policies>
+        </RollingFile>
+
+        <!-- File appender of for module 2 for all -->
+        <RollingFile name="module_2_appender_1_all" fileName="${module_2_all_log}"
+                     filePattern="logs/arch/arch_module_2_all_log-%d{MM-dd-yyyy_HH}-%i.gz"
+                     append="true">
+            <PatternLayout>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="6"
+                                           modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <!-- File appender of for module 2 for errors -->
+        <RollingFile name="module_2_appender_2_errors" fileName="${module_2_errors_log}"
+                     filePattern="logs/arch/arch_module_2_errors_log-%d{MM-dd-yyyy_HH}-%i.gz"
+                     append="true">
+            <PatternLayout>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="2000"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <!-- Loggers section -->
+    <Loggers>
+        <!-- Root logger -->
+
+        <Root level="TRACE">
+            <AppenderRef ref="console_appender_all"/>
+        </Root>
+        <!-- module 1 loggers -->
+        <Logger name="ua.com.univerpulse.loggers.module1" additivity="TRUE" level="ALL">
+            <AppenderRef ref="module_1_appender_1_all" level="ALL"/>
+            <AppenderRef ref="module_1_appender_2_errors" level="ERROR"/>
+        </Logger>
+        <!-- module 2 loggers -->
+        <Logger name="ua.com.univerpulse.loggers.module2" additivity="TRUE"
+                level="ALL">
+            <AppenderRef ref="module_2_appender_1_all" level="ALL"/>
+            <AppenderRef ref="module_2_appender_2_errors" level="ERROR"/>
+        </Logger>
+
+
+    </Loggers>
+</Configuration>
