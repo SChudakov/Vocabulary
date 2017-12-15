@@ -97,7 +97,7 @@ public abstract class AbstractJdbcAppenderDataSourceTest {
             assertTrue("There should be at least one row.", resultSet.next());
 
             final long date = resultSet.getTimestamp("eventDate").getTime();
-            assertTrue("The date should be later than pre-logging (1).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (1).", date >= millis);
             assertTrue("The date should be earlier than now (1).", date <= System.currentTimeMillis());
             assertEquals("The literal column is not correct (1).", "Literal Value of Data Source",
                 resultSet.getString("literalColumn"));

@@ -30,7 +30,7 @@ public class DefaultLoggerContextAccessor implements LoggerContextAccessor {
     /*
      * Returns the current LoggerContext.
      * 
-     * @see org.apache.logging.log4j.core.LoggerContextAccessor#getLoggerContext()
+     * @see org.apache.com.sschudakov.logging.log4j.core.LoggerContextAccessor#getLoggerContext()
      */
     @Override
     public LoggerContext getLoggerContext() {

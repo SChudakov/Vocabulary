@@ -87,7 +87,7 @@ public class ThrowablePatternConverterTest {
 
     @Test
     public void testShortClassName() {
-        final String packageName = "org.apache.logging.log4j.core.pattern.";
+        final String packageName = "org.apache.com.sschudakov.logging.log4j.core.pattern.";
         final String[] options = { "short.className" };
         final ThrowablePatternConverter converter = ThrowablePatternConverter.newInstance(null, options);
         final Throwable cause = new NullPointerException("null pointer");
@@ -224,7 +224,7 @@ public class ThrowablePatternConverterTest {
 
     @Test
     public void testShortOptionWithSuffix() {
-        final String packageName = "org.apache.logging.log4j.core.pattern.";
+        final String packageName = "org.apache.com.sschudakov.logging.log4j.core.pattern.";
         final String[] options = { "short.className", "suffix(test suffix)" };
         final ThrowablePatternConverter converter = ThrowablePatternConverter.newInstance(null, options);
         final Throwable cause = new NullPointerException("null pointer");

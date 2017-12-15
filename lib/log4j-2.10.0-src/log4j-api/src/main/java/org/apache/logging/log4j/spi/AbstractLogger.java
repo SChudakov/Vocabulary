@@ -171,7 +171,7 @@ public abstract class AbstractLogger implements ExtendedLogger, Serializable {
      * Logs a Throwable that has been caught with location information.
      *
      * @param fqcn The fully qualified class name of the <b>caller</b>.
-     * @param level The logging level.
+     * @param level The com.sschudakov.logging level.
      * @param t The Throwable.
      */
     protected void catching(final String fqcn, final Level level, final Throwable t) {
@@ -2100,7 +2100,7 @@ public abstract class AbstractLogger implements ExtendedLogger, Serializable {
         try {
             logMessageTrackRecursion(fqcn, level, marker, msg, throwable);
         } finally {
-            // LOG4J2-1583 prevent scrambled logs when logging calls are nested (logging in toString())
+            // LOG4J2-1583 prevent scrambled logs when com.sschudakov.logging calls are nested (com.sschudakov.logging in toString())
             ReusableMessageFactory.release(msg);
         }
     }
@@ -2142,10 +2142,10 @@ public abstract class AbstractLogger implements ExtendedLogger, Serializable {
     }
 
     /**
-     * Returns the depth of nested logging calls in the current Thread: zero if no logging call has been made,
-     * one if a single logging call without nested logging calls has been made, or more depending on the level of
+     * Returns the depth of nested com.sschudakov.logging calls in the current Thread: zero if no com.sschudakov.logging call has been made,
+     * one if a single com.sschudakov.logging call without nested com.sschudakov.logging calls has been made, or more depending on the level of
      * nesting.
-     * @return the depth of the nested logging calls in the current Thread
+     * @return the depth of the nested com.sschudakov.logging calls in the current Thread
      */
     public static int getRecursionDepth() {
         return getRecursionDepthHolder()[0];
@@ -2178,7 +2178,7 @@ public abstract class AbstractLogger implements ExtendedLogger, Serializable {
         sb.append(fqcn);
         sb.append(" caught ");
         sb.append(exception.getClass().getName());
-        sb.append(" logging ");
+        sb.append("com/sschudakov/logging ");
         sb.append(msg.getClass().getSimpleName());
         sb.append(": ");
         sb.append(format);
@@ -2200,7 +2200,7 @@ public abstract class AbstractLogger implements ExtendedLogger, Serializable {
      *
      * @param <T> the type of the Throwable.
      * @param fqcn the fully qualified class name of this Logger implementation.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param t The Throwable.
      * @return the Throwable.
      */
@@ -2512,7 +2512,7 @@ public abstract class AbstractLogger implements ExtendedLogger, Serializable {
 
     @Override
     public void traceExit(final EntryMessage message) {
-        // If the message is null, traceEnter returned null because flow logging was disabled, we can optimize out calling isEnabled().
+        // If the message is null, traceEnter returned null because flow com.sschudakov.logging was disabled, we can optimize out calling isEnabled().
         if (message != null && isEnabled(Level.TRACE, EXIT_MARKER, message, null)) {
             logMessageSafely(FQCN, Level.TRACE, EXIT_MARKER, flowMessageFactory.newExitMessage(message), null);
         }
@@ -2520,7 +2520,7 @@ public abstract class AbstractLogger implements ExtendedLogger, Serializable {
 
     @Override
     public <R> R traceExit(final EntryMessage message, final R result) {
-        // If the message is null, traceEnter returned null because flow logging was disabled, we can optimize out calling isEnabled().
+        // If the message is null, traceEnter returned null because flow com.sschudakov.logging was disabled, we can optimize out calling isEnabled().
         if (message != null && isEnabled(Level.TRACE, EXIT_MARKER, message, null)) {
             logMessageSafely(FQCN, Level.TRACE, EXIT_MARKER, flowMessageFactory.newExitMessage(result, message), null);
         }
@@ -2529,7 +2529,7 @@ public abstract class AbstractLogger implements ExtendedLogger, Serializable {
 
     @Override
     public <R> R traceExit(final Message message, final R result) {
-        // If the message is null, traceEnter returned null because flow logging was disabled, we can optimize out calling isEnabled().
+        // If the message is null, traceEnter returned null because flow com.sschudakov.logging was disabled, we can optimize out calling isEnabled().
         if (message != null && isEnabled(Level.TRACE, EXIT_MARKER, message, null)) {
             logMessageSafely(FQCN, Level.TRACE, EXIT_MARKER, flowMessageFactory.newExitMessage(result, message), null);
         }

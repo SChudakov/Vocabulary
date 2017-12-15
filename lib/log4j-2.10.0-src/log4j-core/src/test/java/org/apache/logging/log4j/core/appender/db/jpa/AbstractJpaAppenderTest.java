@@ -109,7 +109,7 @@ public abstract class AbstractJpaAppenderTest {
             assertTrue("There should be at least one row.", resultSet.next());
 
             long date = resultSet.getTimestamp("eventDate").getTime();
-            assertTrue("The date should be later than pre-logging (1).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (1).", date >= millis);
             assertTrue("The date should be earlier than now (1).", date <= System.currentTimeMillis());
             assertEquals("The level column is not correct (1).", "INFO", resultSet.getString("level"));
             assertEquals("The logger column is not correct (1).", logger1.getName(), resultSet.getString("logger"));
@@ -120,7 +120,7 @@ public abstract class AbstractJpaAppenderTest {
             assertTrue("There should be at least two rows.", resultSet.next());
 
             date = resultSet.getTimestamp("eventDate").getTime();
-            assertTrue("The date should be later than pre-logging (2).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (2).", date >= millis);
             assertTrue("The date should be earlier than now (2).", date <= System.currentTimeMillis());
             assertEquals("The level column is not correct (2).", "ERROR", resultSet.getString("level"));
             assertEquals("The logger column is not correct (2).", logger1.getName(), resultSet.getString("logger"));
@@ -131,7 +131,7 @@ public abstract class AbstractJpaAppenderTest {
             assertTrue("There should be three rows.", resultSet.next());
 
             date = resultSet.getTimestamp("eventDate").getTime();
-            assertTrue("The date should be later than pre-logging (3).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (3).", date >= millis);
             assertTrue("The date should be earlier than now (3).", date <= System.currentTimeMillis());
             assertEquals("The level column is not correct (3).", "WARN", resultSet.getString("level"));
             assertEquals("The logger column is not correct (3).", logger2.getName(), resultSet.getString("logger"));
@@ -171,7 +171,7 @@ public abstract class AbstractJpaAppenderTest {
             assertTrue("There should be at least one row.", resultSet.next());
 
             long date = resultSet.getLong("timemillis");
-            assertTrue("The date should be later than pre-logging (1).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (1).", date >= millis);
             assertTrue("The date should be earlier than now (1).", date <= System.currentTimeMillis());
             assertEquals("The level column is not correct (1).", "DEBUG", resultSet.getString("level"));
             assertEquals("The logger column is not correct (1).", logger1.getName(), resultSet.getString("loggerName"));
@@ -182,7 +182,7 @@ public abstract class AbstractJpaAppenderTest {
             assertTrue("There should be at least two rows.", resultSet.next());
 
             date = resultSet.getLong("timemillis");
-            assertTrue("The date should be later than pre-logging (2).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (2).", date >= millis);
             assertTrue("The date should be earlier than now (2).", date <= System.currentTimeMillis());
             assertEquals("The level column is not correct (2).", "WARN", resultSet.getString("level"));
             assertEquals("The logger column is not correct (2).", logger1.getName(), resultSet.getString("loggerName"));
@@ -193,7 +193,7 @@ public abstract class AbstractJpaAppenderTest {
             assertTrue("There should be three rows.", resultSet.next());
 
             date = resultSet.getLong("timemillis");
-            assertTrue("The date should be later than pre-logging (3).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (3).", date >= millis);
             assertTrue("The date should be earlier than now (3).", date <= System.currentTimeMillis());
             assertEquals("The level column is not correct (3).", "FATAL", resultSet.getString("level"));
             assertEquals("The logger column is not correct (3).", logger2.getName(), resultSet.getString("loggerName"));

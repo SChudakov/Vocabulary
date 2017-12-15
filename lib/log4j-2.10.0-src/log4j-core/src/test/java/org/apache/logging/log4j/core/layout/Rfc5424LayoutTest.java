@@ -377,9 +377,9 @@ public class Rfc5424LayoutTest {
     @Test
     public void testLoggerFields() {
         final String[] fields = new String[] {
-                "[BAZ@32473 baz=\"org.apache.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]",
-                "[RequestContext@3692 bar=\"org.apache.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]",
-                "[SD-ID@32473 source=\"org.apache.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]"
+                "[BAZ@32473 baz=\"org.apache.com.sschudakov.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]",
+                "[RequestContext@3692 bar=\"org.apache.com.sschudakov.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]",
+                "[SD-ID@32473 source=\"org.apache.com.sschudakov.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]"
         };
         final List<String> expectedToContain = Arrays.asList(fields);
 
@@ -426,8 +426,8 @@ public class Rfc5424LayoutTest {
         final String mdcId = "RequestContext";
 
         Arrays.asList(
-                "[BAZ@32473 baz=\"org.apache.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]"  +
-                        "[RequestContext@3692 bar=\"org.apache.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]"
+                "[BAZ@32473 baz=\"org.apache.com.sschudakov.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]"  +
+                        "[RequestContext@3692 bar=\"org.apache.com.sschudakov.logging.log4j.core.layout.Rfc5424LayoutTest.testLoggerFields\"]"
         );
 
         for (final Appender appender : root.getAppenders().values()) {

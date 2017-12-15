@@ -35,7 +35,7 @@ import org.apache.logging.log4j.core.config.plugins.PluginFactory;
 import org.apache.logging.log4j.core.util.Booleans;
 
 /**
- * This Appender allows the logging event to be manipulated before it is processed by other Appenders.
+ * This Appender allows the com.sschudakov.logging event to be manipulated before it is processed by other Appenders.
  */
 @Plugin(name = "Rewrite", category = Core.CATEGORY_NAME, elementType = Appender.ELEMENT_TYPE, printObject = true)
 public final class RewriteAppender extends AbstractAppender {

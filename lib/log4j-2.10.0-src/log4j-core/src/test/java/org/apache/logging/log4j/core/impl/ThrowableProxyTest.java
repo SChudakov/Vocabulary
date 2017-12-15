@@ -365,7 +365,7 @@ public class ThrowableProxyTest {
     /**
      * Asserts that LOG4J2-834 is solved by constructing a ThrowableProxy over a RuntimeException object thrown at a
      * unloaded known class (already compiled and available as a test resource:
-     * org.apache.logging.log4j.core.impl.ForceNoDefClassFoundError.class).
+     * org.apache.com.sschudakov.logging.log4j.core.impl.ForceNoDefClassFoundError.class).
      */
     @Test
     public void testStackWithUnloadableClass() throws Exception {

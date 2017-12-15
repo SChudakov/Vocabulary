@@ -250,7 +250,7 @@ public final class TimeFilter extends AbstractFilter {
         try {
             return stf.parse(timestamp).getTime();
         } catch (final ParseException e) {
-            LOGGER.warn("Error parsing TimeFilter timestamp value {}", timestamp, e);
+            LOGGER.warn("Error com.sschudakov.parsing TimeFilter timestamp value {}", timestamp, e);
             return defaultValue;
         }
     }

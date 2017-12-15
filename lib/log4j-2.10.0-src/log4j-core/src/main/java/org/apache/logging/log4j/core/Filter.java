@@ -93,7 +93,7 @@ public interface Filter extends LifeCycle {
     /**
      * Filter an event.
      * @param logger The Logger.
-     * @param level The event logging Level.
+     * @param level The event com.sschudakov.logging Level.
      * @param marker The Marker for the event or null.
      * @param msg String text to filter on.
      * @param params An array of parameters or null.
@@ -105,7 +105,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -117,7 +117,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -130,7 +130,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -144,7 +144,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -159,7 +159,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -176,7 +176,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -194,7 +194,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -213,7 +213,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -233,7 +233,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -254,7 +254,7 @@ public interface Filter extends LifeCycle {
      * Filter an event.
      *
      * @param logger The Logger.
-     * @param level the event logging level.
+     * @param level the event com.sschudakov.logging level.
      * @param marker The Marker for the event or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -275,7 +275,7 @@ public interface Filter extends LifeCycle {
     /**
      * Filter an event.
      * @param logger The Logger.
-     * @param level The event logging Level.
+     * @param level The event com.sschudakov.logging Level.
      * @param marker The Marker for the event or null.
      * @param msg Any Object.
      * @param t A Throwable or null.
@@ -286,7 +286,7 @@ public interface Filter extends LifeCycle {
     /**
      * Filter an event.
      * @param logger The Logger.
-     * @param level The event logging Level.
+     * @param level The event com.sschudakov.logging Level.
      * @param marker The Marker for the event or null.
      * @param msg The Message
      * @param t A Throwable or null.

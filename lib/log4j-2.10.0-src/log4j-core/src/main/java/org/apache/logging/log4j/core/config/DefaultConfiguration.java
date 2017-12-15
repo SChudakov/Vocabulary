@@ -17,8 +17,8 @@
 package org.apache.logging.log4j.core.config;
 
 /**
- * The default configuration writes all output to the Console using the default logging level. You configure default
- * logging level by setting the system property "org.apache.logging.log4j.level" to a level name. If you do not
+ * The default configuration writes all output to the Console using the default com.sschudakov.logging level. You configure default
+ * com.sschudakov.logging level by setting the system property "org.apache.com.sschudakov.logging.log4j.level" to a level name. If you do not
  * specify the property, Log4j uses the ERROR Level. Log Events will be printed using the basic formatting provided
  * by each Message.
  */
@@ -30,9 +30,9 @@ public class DefaultConfiguration extends AbstractConfiguration {
     public static final String DEFAULT_NAME = "Default";
     
     /**
-     * The System Property used to specify the logging level.
+     * The System Property used to specify the com.sschudakov.logging level.
      */
-    public static final String DEFAULT_LEVEL = "org.apache.logging.log4j.level";
+    public static final String DEFAULT_LEVEL = "org.apache.com.sschudakov.logging.log4j.level";
     
     /**
      * The default Pattern used for the default Layout.

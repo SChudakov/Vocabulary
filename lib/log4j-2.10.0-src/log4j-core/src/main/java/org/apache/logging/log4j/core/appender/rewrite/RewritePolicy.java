@@ -24,10 +24,10 @@ import org.apache.logging.log4j.core.LogEvent;
 
 public interface RewritePolicy {
     /**
-     * Rewrite a logging event.
-     * @param source a logging event that may be returned or
-     * used to create a new logging event.
-     * @return a logging event or null to suppress processing.
+     * Rewrite a com.sschudakov.logging event.
+     * @param source a com.sschudakov.logging event that may be returned or
+     * used to create a new com.sschudakov.logging event.
+     * @return a com.sschudakov.logging event or null to suppress processing.
      */
     LogEvent rewrite(final LogEvent source);
 }

@@ -101,7 +101,7 @@ public class Interpolator extends AbstractConfigurationAwareLookup {
         try {
             // [LOG4J2-703] We might be on Android
             lookups.put(LOOKUP_KEY_JNDI,
-                Loader.newCheckedInstanceOf("org.apache.logging.log4j.core.lookup.JndiLookup", StrLookup.class));
+                Loader.newCheckedInstanceOf("org.apache.com.sschudakov.logging.log4j.core.lookup.JndiLookup", StrLookup.class));
         } catch (final LinkageError | Exception e) {
             handleError(LOOKUP_KEY_JNDI, e);
         }
@@ -109,7 +109,7 @@ public class Interpolator extends AbstractConfigurationAwareLookup {
         try {
             // We might be on Android
             lookups.put(LOOKUP_KEY_JVMRUNARGS,
-                Loader.newCheckedInstanceOf("org.apache.logging.log4j.core.lookup.JmxRuntimeInputArgumentsLookup",
+                Loader.newCheckedInstanceOf("org.apache.com.sschudakov.logging.log4j.core.lookup.JmxRuntimeInputArgumentsLookup",
                         StrLookup.class));
         } catch (final LinkageError | Exception e) {
             handleError(LOOKUP_KEY_JVMRUNARGS, e);
@@ -119,7 +119,7 @@ public class Interpolator extends AbstractConfigurationAwareLookup {
         if (Constants.IS_WEB_APP) {
             try {
                 lookups.put(LOOKUP_KEY_WEB,
-                    Loader.newCheckedInstanceOf("org.apache.logging.log4j.web.WebLookup", StrLookup.class));
+                    Loader.newCheckedInstanceOf("org.apache.com.sschudakov.logging.log4j.web.WebLookup", StrLookup.class));
             } catch (final Exception ignored) {
                 handleError(LOOKUP_KEY_WEB, ignored);
             }
@@ -131,13 +131,13 @@ public class Interpolator extends AbstractConfigurationAwareLookup {
     private void handleError(final String lookupKey, final Throwable t) {
         switch (lookupKey) {
             case LOOKUP_KEY_JNDI:
-                // java.lang.VerifyError: org/apache/logging/log4j/core/lookup/JndiLookup
+                // java.lang.VerifyError: org/apache/com.sschudakov.logging/log4j/core/lookup/JndiLookup
                 LOGGER.warn( // LOG4J2-1582 don't print the whole stack trace (it is just a warning...)
                         "JNDI lookup class is not available because this JRE does not support JNDI." +
                         " JNDI string lookups will not be available, continuing configuration. Ignoring " + t);
                 break;
             case LOOKUP_KEY_JVMRUNARGS:
-                // java.lang.VerifyError: org/apache/logging/log4j/core/lookup/JmxRuntimeInputArgumentsLookup
+                // java.lang.VerifyError: org/apache/com.sschudakov.logging/log4j/core/lookup/JmxRuntimeInputArgumentsLookup
                 LOGGER.warn(
                         "JMX runtime input lookup class is not available because this JRE does not support JMX. " +
                         "JMX lookups will not be available, continuing configuration. Ignoring " + t);

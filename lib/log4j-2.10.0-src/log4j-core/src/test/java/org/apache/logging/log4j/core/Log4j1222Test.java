@@ -24,7 +24,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Tests logging during shutdown.
+ * Tests com.sschudakov.logging during shutdown.
  */
 public class Log4j1222Test
 {

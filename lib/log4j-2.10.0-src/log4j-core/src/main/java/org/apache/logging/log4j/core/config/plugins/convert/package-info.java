@@ -16,7 +16,7 @@
  */
 
 /**
- * TypeConverter plugins for converter strings into various types. These plugins are used for parsing plugin
+ * TypeConverter plugins for converter strings into various types. These plugins are used for com.sschudakov.parsing plugin
  * attributes in plugin factory methods.
  */
 package org.apache.logging.log4j.core.config.plugins.convert;

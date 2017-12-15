@@ -395,7 +395,7 @@ public class AsyncLoggerConfigDisruptor extends AbstractLifeCycle implements Asy
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.logging.log4j.core.async.AsyncLoggerConfigDelegate#createRingBufferAdmin(java.lang.String,
+     * @see org.apache.com.sschudakov.logging.log4j.core.async.AsyncLoggerConfigDelegate#createRingBufferAdmin(java.lang.String,
      * java.lang.String)
      */
     @Override

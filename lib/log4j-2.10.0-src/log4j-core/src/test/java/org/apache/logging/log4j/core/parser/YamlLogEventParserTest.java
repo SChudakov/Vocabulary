@@ -54,7 +54,7 @@ public class YamlLogEventParserTest extends LogEventParserTest {
             "- \"one\"\n" +
             "- \"two\"\n" +
             "endOfBatch: false\n" +
-            "loggerFqcn: \"org.apache.logging.log4j.spi.AbstractLogger\"\n" +
+            "loggerFqcn: \"org.apache.com.sschudakov.logging.log4j.spi.AbstractLogger\"\n" +
             "contextMap:\n" +
             " bar: \"BAR\"\n" +
             " foo: \"FOO\"\n" +

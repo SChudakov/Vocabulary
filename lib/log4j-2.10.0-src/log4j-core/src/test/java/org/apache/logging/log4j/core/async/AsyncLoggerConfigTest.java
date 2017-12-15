@@ -48,7 +48,7 @@ public class AsyncLoggerConfigTest {
         assertTrue("Deleted old file before test", !file.exists() || file.delete());
 
         final Logger log = LogManager.getLogger("com.foo.Bar");
-        final String msg = "Additive logging: 2 for the price of 1!";
+        final String msg = "Additive com.sschudakov.logging: 2 for the price of 1!";
         log.info(msg);
         CoreLoggerContexts.stopLoggerContext(file); // stop async thread
 

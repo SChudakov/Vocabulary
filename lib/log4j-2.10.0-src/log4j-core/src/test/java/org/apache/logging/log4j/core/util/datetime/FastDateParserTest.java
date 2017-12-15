@@ -256,7 +256,7 @@ public class FastDateParserTest {
         }
     }
 
-    // we cannot use historic dates to test timezone parsing, some timezones have second offsets
+    // we cannot use historic dates to test timezone com.sschudakov.parsing, some timezones have second offsets
     // as well as hours and minutes which makes the z formats a low fidelity round trip
     @Test
     public void testTzParses() throws Exception {

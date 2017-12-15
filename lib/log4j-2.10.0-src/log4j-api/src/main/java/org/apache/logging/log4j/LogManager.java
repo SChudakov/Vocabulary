@@ -36,7 +36,7 @@ import org.apache.logging.log4j.util.StackLocatorUtil;
 import org.apache.logging.log4j.util.Strings;
 
 /**
- * The anchor point for the Log4j logging system. The most common usage of this class is to obtain a named
+ * The anchor point for the Log4j com.sschudakov.logging system. The most common usage of this class is to obtain a named
  * {@link Logger}. The method {@link #getLogger()} is provided as the most convenient way to obtain a named Logger based
  * on the calling class name. This class also provides method for obtaining named Loggers that use
  * {@link String#format(String, Object...)} style messages instead of the default type of parameterized messages. These
@@ -65,11 +65,11 @@ public class LogManager {
     private static volatile LoggerContextFactory factory;
 
     /**
-     * Scans the classpath to find all logging implementation. Currently, only one will be used but this could be
+     * Scans the classpath to find all com.sschudakov.logging implementation. Currently, only one will be used but this could be
      * extended to allow multiple implementations to be used.
      */
     static {
-        // Shortcut binding to force a specific logging implementation.
+        // Shortcut binding to force a specific com.sschudakov.logging implementation.
         final PropertiesUtil managerProps = PropertiesUtil.getProperties();
         final String factoryClassName = managerProps.getStringProperty(FACTORY_PROPERTY_NAME);
         if (factoryClassName != null) {
@@ -100,13 +100,13 @@ public class LogManager {
                 }
 
                 if (factories.isEmpty()) {
-                    LOGGER.error("Log4j2 could not find a logging implementation. "
+                    LOGGER.error("Log4j2 could not find a com.sschudakov.logging implementation. "
                             + "Please add log4j-core to the classpath. Using SimpleLogger to log to the console...");
                     factory = new SimpleLoggerContextFactory();
                 } else if (factories.size() == 1) {
                     factory = factories.get(factories.lastKey());
                 } else {
-                    final StringBuilder sb = new StringBuilder("Multiple logging implementations found: \n");
+                    final StringBuilder sb = new StringBuilder("Multiple com.sschudakov.logging implementations found: \n");
                     for (final Map.Entry<Integer, LoggerContextFactory> entry : factories.entrySet()) {
                         sb.append("Factory: ").append(entry.getValue().getClass().getName());
                         sb.append(", Weighting: ").append(entry.getKey()).append('\n');
@@ -117,7 +117,7 @@ public class LogManager {
 
                 }
             } else {
-                LOGGER.error("Log4j2 could not find a logging implementation. "
+                LOGGER.error("Log4j2 could not find a com.sschudakov.logging implementation. "
                         + "Please add log4j-core to the classpath. Using SimpleLogger to log to the console...");
                 factory = new SimpleLoggerContextFactory();
             }
@@ -372,7 +372,7 @@ public class LogManager {
     }
 
     /**
-     * Shutdown the logging system if the logging system supports it.
+     * Shutdown the com.sschudakov.logging system if the com.sschudakov.logging system supports it.
      * This is equivalent to calling {@code LogManager.shutdown(LogManager.getContext(currentContext))}.
      *
      * This call is synchronous and will block until shut down is complete.
@@ -391,7 +391,7 @@ public class LogManager {
     }
 
     /**
-     * Shutdown the logging system if the logging system supports it.
+     * Shutdown the com.sschudakov.logging system if the com.sschudakov.logging system supports it.
      *
      * This call is synchronous and will block until shut down is complete.
      * This may include flushing pending log events over network connections.
@@ -457,7 +457,7 @@ public class LogManager {
      * This logger let you use a {@link java.util.Formatter} string in the message to format parameters.
      * </p>
      * <p>
-     * Short-hand for {@code getLogger(clazz, StringFormatterMessageFactory.INSTANCE)}
+     * Short-hand for {@code getParsingLogger(clazz, StringFormatterMessageFactory.INSTANCE)}
      * </p>
      *
      * @param clazz The Class whose name should be used as the Logger name.
@@ -489,7 +489,7 @@ public class LogManager {
      * This logger let you use a {@link java.util.Formatter} string in the message to format parameters.
      * </p>
      * <p>
-     * Short-hand for {@code getLogger(value, StringFormatterMessageFactory.INSTANCE)}
+     * Short-hand for {@code getParsingLogger(value, StringFormatterMessageFactory.INSTANCE)}
      * </p>
      *
      * @param value The value's whose class name should be used as the Logger name.
@@ -521,7 +521,7 @@ public class LogManager {
      * This logger let you use a {@link java.util.Formatter} string in the message to format parameters.
      * </p>
      * <p>
-     * Short-hand for {@code getLogger(name, StringFormatterMessageFactory.INSTANCE)}
+     * Short-hand for {@code getParsingLogger(name, StringFormatterMessageFactory.INSTANCE)}
      * </p>
      *
      * @param name The logger name. If null it will default to the name of the calling class.

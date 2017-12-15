@@ -27,7 +27,7 @@ import org.apache.logging.log4j.core.config.plugins.PluginFactory;
 import org.apache.logging.log4j.core.util.Booleans;
 
 /**
- * This Appender writes logging events to a NoSQL database using a configured NoSQL provider. It requires
+ * This Appender writes com.sschudakov.logging events to a NoSQL database using a configured NoSQL provider. It requires
  * implementations of {@link NoSqlObject}, {@link NoSqlConnection}, and {@link NoSqlProvider} to "know" how to write
  * events to the chosen NoSQL database.
  * 

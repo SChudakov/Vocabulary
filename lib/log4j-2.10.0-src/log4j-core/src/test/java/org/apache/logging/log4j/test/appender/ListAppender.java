@@ -66,7 +66,7 @@ public class ListAppender extends AbstractAppender {
     private static final String WINDOWS_LINE_SEP = "\r\n";
 
     /**
-     * CountDownLatch for asynchronous logging tests. Example usage:
+     * CountDownLatch for asynchronous com.sschudakov.logging tests. Example usage:
      * <pre>
      * @Rule
      * public LoggerContextRule context = new LoggerContextRule("log4j-list.xml");
@@ -81,7 +81,7 @@ public class ListAppender extends AbstractAppender {
      * public void testSomething() throws Exception {
      *     listAppender.countDownLatch = new CountDownLatch(1);
      *
-     *     Logger logger = LogManager.getLogger();
+     *     Logger logger = LogManager.getParsingLogger();
      *     logger.info("log one event anynchronously");
      *
      *     // wait for the appender to finish processing this event (wait max 1 second)

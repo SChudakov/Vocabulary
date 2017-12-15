@@ -93,7 +93,7 @@ public final class JdbcDatabaseManager extends AbstractDatabaseManager {
             this.statement = this.connection.prepareStatement(this.sqlStatement);
         } catch (final SQLException e) {
             throw new AppenderLoggingException(
-                    "Cannot write logging event or flush buffer; JDBC manager cannot connect to the database.", e
+                    "Cannot write com.sschudakov.logging event or flush buffer; JDBC manager cannot connect to the database.", e
             );
         }
     }
@@ -105,7 +105,7 @@ public final class JdbcDatabaseManager extends AbstractDatabaseManager {
             if (!this.isRunning() || this.connection == null || this.connection.isClosed() || this.statement == null
                     || this.statement.isClosed()) {
                 throw new AppenderLoggingException(
-                        "Cannot write logging event; JDBC manager not connected to the database.");
+                        "Cannot write com.sschudakov.logging event; JDBC manager not connected to the database.");
             }
 
             int i = 1;
@@ -174,12 +174,12 @@ public final class JdbcDatabaseManager extends AbstractDatabaseManager {
                 this.connection.commit();
             }
         } catch (final SQLException e) {
-            throw new AppenderLoggingException("Failed to commit transaction logging event or flushing buffer.", e);
+            throw new AppenderLoggingException("Failed to commit transaction com.sschudakov.logging event or flushing buffer.", e);
         } finally {
             try {
                 Closer.close(this.statement);
             } catch (final Exception e) {
-                logWarn("Failed to close SQL statement logging event or flushing buffer", e);
+                logWarn("Failed to close SQL statement com.sschudakov.logging event or flushing buffer", e);
                 closed = false;
             } finally {
                 this.statement = null;
@@ -188,7 +188,7 @@ public final class JdbcDatabaseManager extends AbstractDatabaseManager {
             try {
                 Closer.close(this.connection);
             } catch (final Exception e) {
-                logWarn("Failed to close database connection logging event or flushing buffer", e);
+                logWarn("Failed to close database connection com.sschudakov.logging event or flushing buffer", e);
                 closed = false;
             } finally {
                 this.connection = null;

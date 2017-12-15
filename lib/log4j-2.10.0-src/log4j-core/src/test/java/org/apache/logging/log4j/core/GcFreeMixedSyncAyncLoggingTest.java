@@ -19,7 +19,7 @@ package org.apache.logging.log4j.core;
 import org.junit.Test;
 
 /**
- * Verifies steady state mixed synchronous and asynchronous logging is GC-free.
+ * Verifies steady state mixed synchronous and asynchronous com.sschudakov.logging is GC-free.
  *
  * @see <a href="https://github.com/google/allocation-instrumenter">https://github.com/google/allocation-instrumenter</a>
  */

@@ -77,7 +77,7 @@ public class DefaultErrorHandler implements ErrorHandler {
     }
 
     /**
-     * Handle an error with a message, and exception and a logging event.
+     * Handle an error with a message, and exception and a com.sschudakov.logging event.
      * @param msg The message.
      * @param event The LogEvent.
      * @param t The Throwable.

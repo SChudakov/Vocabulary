@@ -27,7 +27,7 @@ import org.apache.logging.log4j.util.StringBuilders;
 import org.apache.logging.log4j.util.Strings;
 
 /**
- * A copy-on-write thread-safe variant of {@code org.apache.logging.log4j.spi.ThreadContextStack} in which all mutative
+ * A copy-on-write thread-safe variant of {@code org.apache.com.sschudakov.logging.log4j.spi.ThreadContextStack} in which all mutative
  * operations (add, pop, and so on) are implemented by making a fresh copy of the underlying list.
  */
 public class DefaultThreadContextStack implements ThreadContextStack, StringBuilderFormattable {
@@ -310,7 +310,7 @@ public class DefaultThreadContextStack implements ThreadContextStack, StringBuil
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.logging.log4j.ThreadContext.ContextStack#getImmutableStackOrNull()
+     * @see org.apache.com.sschudakov.logging.log4j.ThreadContext.ContextStack#getImmutableStackOrNull()
      */
     @Override
     public ContextStack getImmutableStackOrNull() {

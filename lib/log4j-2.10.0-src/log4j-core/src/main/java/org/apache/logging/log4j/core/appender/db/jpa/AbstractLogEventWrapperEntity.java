@@ -264,10 +264,10 @@ public abstract class AbstractLogEventWrapperEntity implements LogEvent {
     }
 
     /**
-     * Indicates whether the source of the logging request is required downstream. Annotated
+     * Indicates whether the source of the com.sschudakov.logging request is required downstream. Annotated
      * {@link Transient @Transient} so as to not be included in the persisted entity.
      *
-     * @return whether the source of the logging request is required downstream.
+     * @return whether the source of the com.sschudakov.logging request is required downstream.
      */
     @Override
     @Transient

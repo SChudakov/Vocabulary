@@ -35,13 +35,13 @@ import org.junit.experimental.categories.Category;
  * </p>
  *
  * <pre>
- * mvn -Dtest=org.apache.logging.log4j.core.appender.ConsoleAppenderJAnsiXExceptionMain test
+ * mvn -Dtest=org.apache.com.sschudakov.logging.log4j.core.appender.ConsoleAppenderJAnsiXExceptionMain test
  * </pre>
  *
  * or, on Windows:
  *
  * <pre>
- * java -classpath log4j-core\target\test-classes;log4j-core\target\classes;log4j-api\target\classes;%USERPROFILE%\.m2\repository\org\fusesource\jansi\jansi\1.14\jansi-1.14.jar; org.apache.logging.log4j.core.appender.ConsoleAppenderJAnsiXExceptionMain log4j-core/src/test/resources/log4j2-console-xex-ansi.xml
+ * java -classpath log4j-core\target\test-classes;log4j-core\target\classes;log4j-api\target\classes;%USERPROFILE%\.m2\repository\org\fusesource\jansi\jansi\1.14\jansi-1.14.jar; org.apache.com.sschudakov.logging.log4j.core.appender.ConsoleAppenderJAnsiXExceptionMain log4j-core/src/test/resources/log4j2-console-xex-ansi.xml
  * </pre>
  *
  */

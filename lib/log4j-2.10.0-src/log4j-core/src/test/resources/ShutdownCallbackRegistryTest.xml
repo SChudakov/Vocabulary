@@ -22,7 +22,7 @@
     <List name="List"/>
   </Appenders>
   <Loggers>
-    <Logger name="org.apache.logging.log4j.core.util.ShutdownCallbackRegistryTest" level="trace" additivity="false">
+    <Logger name="org.apache.com.sschudakov.logging.log4j.core.util.ShutdownCallbackRegistryTest" level="trace" additivity="false">
       <AppenderRef ref="List"/>
     </Logger>
     <Root level="error">

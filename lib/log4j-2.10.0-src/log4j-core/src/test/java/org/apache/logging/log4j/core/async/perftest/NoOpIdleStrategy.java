@@ -20,7 +20,7 @@ package org.apache.logging.log4j.core.async.perftest;
  * No operation idle strategy.
  * <p>
  * This idle strategy should be prevented from being inlined by using a Hotspot compiler command as a JVM argument e.g:
- * <code>-XX:CompileCommand=dontinline,org.apache.logging.log4j.core.async.perftest.NoOpIdleStrategy::idle</code>
+ * <code>-XX:CompileCommand=dontinline,org.apache.com.sschudakov.logging.log4j.core.async.perftest.NoOpIdleStrategy::idle</code>
  * </p>
  */
 class NoOpIdleStrategy implements IdleStrategy {

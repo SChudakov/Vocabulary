@@ -40,7 +40,7 @@ import java.util.TimeZone;
  * </code>
  * 
  * <p>This class can be used as a direct replacement to
- * {@code SimpleDateFormat} in most formatting and parsing situations.
+ * {@code SimpleDateFormat} in most formatting and com.sschudakov.parsing situations.
  * This class is especially useful in multi-threaded server environments.
  * {@code SimpleDateFormat} is not thread-safe in any JDK version,
  * nor will it be as Sun have closed the bug/RFE.
@@ -49,7 +49,7 @@ import java.util.TimeZone;
  * <p>All patterns are compatible with
  * SimpleDateFormat (except time zones and some year patterns - see below).</p>
  *
- * <p>Since 3.2, FastDateFormat supports parsing as well as printing.</p>
+ * <p>Since 3.2, FastDateFormat supports com.sschudakov.parsing as well as printing.</p>
  *
  * <p>Java 1.4 introduced a new pattern letter, {@code 'Z'}, to represent
  * time zones in RFC822 format (eg. {@code +0800} or {@code -1100}).
@@ -391,7 +391,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
      * @param pattern  {@link java.text.SimpleDateFormat} compatible pattern
      * @param timeZone  non-null time zone to use
      * @param locale  non-null locale to use
-     * @param centuryStart The start of the 100 year period to use as the "default century" for 2 digit year parsing.  If centuryStart is null, defaults to now - 80 years
+     * @param centuryStart The start of the 100 year period to use as the "default century" for 2 digit year com.sschudakov.parsing.  If centuryStart is null, defaults to now - 80 years
      * @throws NullPointerException if pattern, timeZone, or locale is null.
      */
     protected FastDateFormat(final String pattern, final TimeZone timeZone, final Locale locale, final Date centuryStart) {

@@ -19,7 +19,7 @@ package org.apache.logging.log4j.core.config;
 import org.apache.logging.log4j.Level;
 
 /**
- * This configuration defaults to no logging.
+ * This configuration defaults to no com.sschudakov.logging.
  */
 public class NullConfiguration extends AbstractConfiguration {
 

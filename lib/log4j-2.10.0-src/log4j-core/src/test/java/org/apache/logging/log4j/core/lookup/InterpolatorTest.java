@@ -39,7 +39,7 @@ public class InterpolatorTest {
     private static final String TESTKEY2 = "TestKey2";
     private static final String TESTVAL = "TestValue";
 
-    private static final String TEST_CONTEXT_RESOURCE_NAME = "logging/context-name";
+    private static final String TEST_CONTEXT_RESOURCE_NAME = "com/sschudakov/logging/context-name";
     private static final String TEST_CONTEXT_NAME = "app-1";
 
     @ClassRule

@@ -26,13 +26,13 @@ public class XmlLogEventParserTest extends LogEventParserTest {
 
     private XmlLogEventParser parser;
 
-    private static final String XML = "<Event xmlns=\"http://logging.apache.org/log4j/2.0/events\"\n" +
+    private static final String XML = "<Event xmlns=\"http://com.sschudakov.logging.apache.org/log4j/2.0/events\"\n" +
             "       timeMillis=\"1493121664118\"\n" +
             "       level=\"INFO\"\n" +
             "       loggerName=\"HelloWorld\"\n" +
             "       endOfBatch=\"false\"\n" +
             "       thread=\"main\"\n" +
-            "       loggerFqcn=\"org.apache.logging.log4j.spi.AbstractLogger\"\n" +
+            "       loggerFqcn=\"org.apache.com.sschudakov.logging.log4j.spi.AbstractLogger\"\n" +
             "       threadId=\"1\"\n" +
             "       threadPriority=\"5\">\n" +
             "  <Marker name=\"child\">\n" +

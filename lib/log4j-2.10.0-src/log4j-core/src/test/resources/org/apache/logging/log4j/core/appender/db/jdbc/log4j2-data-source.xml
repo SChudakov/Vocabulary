@@ -33,7 +33,7 @@
   </Appenders>
 
   <Loggers>
-    <Logger name="org.apache.logging.log4j.core.appender.db" level="debug" additivity="false">
+    <Logger name="org.apache.com.sschudakov.logging.log4j.core.appender.db" level="debug" additivity="false">
       <AppenderRef ref="databaseAppender" />
     </Logger>
 

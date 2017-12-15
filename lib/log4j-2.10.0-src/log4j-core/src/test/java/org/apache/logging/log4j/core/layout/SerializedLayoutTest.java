@@ -149,7 +149,7 @@ public class SerializedLayoutTest {
         final Throwable throwable = new LoggingException("Test");
         final LogEvent event = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")) //
                 .setThrown(throwable) //

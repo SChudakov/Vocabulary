@@ -36,9 +36,9 @@ public interface ComponentBuilder<T extends ComponentBuilder<T>> extends Builder
     T addAttribute(String key, String value);
 
     /**
-     * Adds a logging Level attribute.
+     * Adds a com.sschudakov.logging Level attribute.
      * @param key The attribute key.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @return This ComponentBuilder.
      */
     T addAttribute(String key, Level level);

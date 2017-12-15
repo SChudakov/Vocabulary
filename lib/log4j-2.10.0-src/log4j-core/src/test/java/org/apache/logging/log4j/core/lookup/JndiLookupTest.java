@@ -32,7 +32,7 @@ import static org.junit.Assert.*;
  */
 public class JndiLookupTest {
 
-    private static final String TEST_CONTEXT_RESOURCE_NAME = "logging/context-name";
+    private static final String TEST_CONTEXT_RESOURCE_NAME = "com/sschudakov/logging/context-name";
     private static final String TEST_CONTEXT_NAME = "app-1";
     private static final String TEST_INTEGRAL_NAME = "int-value";
     private static final int TEST_INTEGRAL_VALUE = 42;
@@ -60,7 +60,7 @@ public class JndiLookupTest {
         contextName = lookup.lookup(JndiLookup.CONTAINER_JNDI_RESOURCE_PATH_PREFIX + TEST_CONTEXT_RESOURCE_NAME);
         assertEquals(TEST_CONTEXT_NAME, contextName);
 
-        final String nonExistingResource = lookup.lookup("logging/non-existing-resource");
+        final String nonExistingResource = lookup.lookup("com/sschudakov/logging/non-existing-resource");
         assertNull(nonExistingResource);
     }
 

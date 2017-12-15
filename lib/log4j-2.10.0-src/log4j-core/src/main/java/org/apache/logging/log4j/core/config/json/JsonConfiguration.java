@@ -106,7 +106,7 @@ public class JsonConfiguration extends AbstractConfiguration implements Reconfig
                 setName(configSource.getLocation());
             }
         } catch (final Exception ex) {
-            LOGGER.error("Error parsing " + configSource.getLocation(), ex);
+            LOGGER.error("Error com.sschudakov.parsing " + configSource.getLocation(), ex);
         }
     }
 
@@ -128,7 +128,7 @@ public class JsonConfiguration extends AbstractConfiguration implements Reconfig
                 LOGGER.error("Arrays are not supported at the root configuration.");
             }
         }
-        LOGGER.debug("Completed parsing configuration");
+        LOGGER.debug("Completed com.sschudakov.parsing configuration");
         if (status.size() > 0) {
             for (final Status s : status) {
                 LOGGER.error("Error processing element {}: {}", s.name, s.errorType);

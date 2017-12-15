@@ -293,7 +293,7 @@ public class Log4jLogEvent implements LogEvent {
     * @param loggerName The name of the Logger.
     * @param marker The Marker or null.
     * @param loggerFQCN The fully qualified class name of the caller.
-    * @param level The logging Level.
+    * @param level The com.sschudakov.logging Level.
     * @param message The Message.
     * @param t A Throwable or null.
     * @deprecated use {@link Log4jLogEvent.Builder} instead. This constructor will be removed in an upcoming release.
@@ -309,7 +309,7 @@ public class Log4jLogEvent implements LogEvent {
     * @param loggerName The name of the Logger.
     * @param marker The Marker or null.
     * @param loggerFQCN The fully qualified class name of the caller.
-    * @param level The logging Level.
+    * @param level The com.sschudakov.logging Level.
     * @param message The Message.
     * @param properties the properties to be merged with ThreadContext key-value pairs into the event's ReadOnlyStringMap.
     * @param t A Throwable or null.
@@ -333,7 +333,7 @@ public class Log4jLogEvent implements LogEvent {
     * @param loggerName The name of the Logger.
     * @param marker The Marker or null.
     * @param loggerFQCN The fully qualified class name of the caller.
-    * @param level The logging Level.
+    * @param level The com.sschudakov.logging Level.
     * @param message The Message.
     * @param t A Throwable or null.
     * @param mdc The mapped diagnostic context.
@@ -357,7 +357,7 @@ public class Log4jLogEvent implements LogEvent {
     * @param loggerName The name of the Logger.
     * @param marker The Marker or null.
     * @param loggerFQCN The fully qualified class name of the caller.
-    * @param level The logging Level.
+    * @param level The com.sschudakov.logging Level.
     * @param message The Message.
     * @param thrown A Throwable or null.
     * @param thrownProxy A ThrowableProxy or null.
@@ -386,7 +386,7 @@ public class Log4jLogEvent implements LogEvent {
      * @param loggerName The name of the Logger.
      * @param marker The Marker or null.
      * @param loggerFQCN The fully qualified class name of the caller.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param message The Message.
      * @param thrown A Throwable or null.
      * @param thrownProxy A ThrowableProxy or null.
@@ -480,7 +480,7 @@ public class Log4jLogEvent implements LogEvent {
     }
 
     /**
-     * Returns the logging Level.
+     * Returns the com.sschudakov.logging Level.
      * @return the Level associated with this event.
      */
     @Override
@@ -580,7 +580,7 @@ public class Log4jLogEvent implements LogEvent {
 
     /**
      * The fully qualified class name of the class that was called by the caller.
-     * @return the fully qualified class name of the class that is performing logging.
+     * @return the fully qualified class name of the class that is performing com.sschudakov.logging.
      */
     @Override
     public String getLoggerFqcn() {

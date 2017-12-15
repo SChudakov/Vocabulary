@@ -18,7 +18,7 @@ available to test classes. For instance, to use the ListAppender:
         <List name="List"/>
       </Appenders>
       <Loggers>
-        <Logger name="org.apache.logging.log4j" level="debug">
+        <Logger name="org.apache.com.sschudakov.logging.log4j" level="debug">
           <AppenderRef ref="List"/>
         </Logger>
       </Loggers>
@@ -27,7 +27,7 @@ available to test classes. For instance, to use the ListAppender:
 Note that if you don't specify a layout for a ListAppender, your log messages will be stored in a list of LogEvents.
 If you use a SerializedLayout, your log messages will be stored in a list of byte arrays. If you specify any other
 type of layout, your log messages will be stored in a list of strings. For more details, check out the class
-`org.apache.logging.log4j.test.appender.ListAppender`.
+`org.apache.com.sschudakov.logging.log4j.test.appender.ListAppender`.
 
 Specifying Configuration Files in JUnit Tests
 ---------------------------------------------
@@ -45,7 +45,7 @@ in your test class:
     @Test
     public void testSomeAwesomeFeature() {
         final LoggerContext ctx = init.getContext();
-        final Logger logger = init.getLogger("org.apache.logging.log4j.my.awesome.test.logger");
+        final Logger logger = init.getLogger("org.apache.com.sschudakov.logging.log4j.my.awesome.test.logger");
         final Configuration cfg = init.getConfiguration();
         final ListAppender app = init.getListAppender("List");
         logger.warn("Test message");
@@ -83,6 +83,6 @@ can be done at the class or method level:
         // ...
     }
 
-Various pre-defined categories are defined in `org.apache.logging.log4j.categories` in `log4j-core` test.
+Various pre-defined categories are defined in `org.apache.com.sschudakov.logging.log4j.categories` in `log4j-core` test.
 If you only want to run your test as part of the `maven-failsafe-plugin` integration tests phase, then simply name
 your test `FooIT` instead of `FooTest` for automatic configuration.

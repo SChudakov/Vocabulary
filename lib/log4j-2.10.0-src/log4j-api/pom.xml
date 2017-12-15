@@ -99,7 +99,7 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.apache.logging.log4j</groupId>
+                  <groupId>org.apache.com.sschudakov.logging.log4j</groupId>
                   <artifactId>log4j-api-java9</artifactId>
                   <version>${project.version}</version>
                   <type>zip</type>
@@ -204,15 +204,15 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <configuration>
           <instructions>
-            <Export-Package>org.apache.logging.log4j.*</Export-Package>
+            <Export-Package>org.apache.com.sschudakov.logging.log4j.*</Export-Package>
             <Import-Package>
-              sun.reflect;resolution:=optional,
-              org.apache.logging.log4j.core.osgi;resolution:=optional,
-              org.apache.logging.log4j.core.util;resolution:=optional,
-              org.apache.logging.log4j.core.async;resolution:=optional,
-              *
+                sun.reflect;resolution:=optional,
+                org.apache.com.sschudakov.logging.log4j.core.osgi;resolution:=optional,
+                org.apache.com.sschudakov.logging.log4j.core.util;resolution:=optional,
+                org.apache.com.sschudakov.logging.log4j.core.async;resolution:=optional,
+                *
             </Import-Package>
-            <Bundle-Activator>org.apache.logging.log4j.util.Activator</Bundle-Activator>
+            <Bundle-Activator>org.apache.com.sschudakov.logging.log4j.util.Activator</Bundle-Activator>
           </instructions>
         </configuration>
       </plugin>

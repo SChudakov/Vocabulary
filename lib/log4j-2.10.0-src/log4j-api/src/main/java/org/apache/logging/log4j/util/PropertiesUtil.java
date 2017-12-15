@@ -37,7 +37,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * system. Properties by default are loaded from the system properties, system environment, and a classpath resource
  * file named {@value #LOG4J_PROPERTIES_FILE_NAME}. Additional properties can be loaded by implementing a custom
  * {@link PropertySource} service and specifying it via a {@link ServiceLoader} file called
- * {@code META-INF/services/org.apache.logging.log4j.util.PropertySource} with a list of fully qualified class names
+ * {@code META-INF/services/org.apache.com.sschudakov.logging.log4j.util.PropertySource} with a list of fully qualified class names
  * implementing that interface.
  * </p>
  *

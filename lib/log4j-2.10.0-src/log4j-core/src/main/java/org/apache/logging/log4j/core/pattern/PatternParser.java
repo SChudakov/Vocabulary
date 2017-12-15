@@ -50,7 +50,7 @@ public final class PatternParser {
     private static final char ESCAPE_CHAR = '%';
 
     /**
-     * The states the parser can be in while parsing the pattern.
+     * The states the parser can be in while com.sschudakov.parsing the pattern.
      */
     private enum ParserState {
         /**
@@ -290,7 +290,7 @@ public final class PatternParser {
                 i = pattern.lastIndexOf('}');
                 if (i == -1 || i < start) {
                     // if no closing bracket could be found or there is no closing bracket behind the starting
-                    // character of our parsing process continue parsing after the first opening bracket
+                    // character of our com.sschudakov.parsing process continue com.sschudakov.parsing after the first opening bracket
                     return begin;
                 }
                 return i + 1;

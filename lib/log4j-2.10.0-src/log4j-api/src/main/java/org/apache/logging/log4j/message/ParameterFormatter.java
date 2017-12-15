@@ -382,7 +382,7 @@ final class ParameterFormatter {
      * Confusing? Just read the last paragraph again and check the respective toString() implementation.
      * </p>
      * <p>
-     * This means, in effect, that logging would produce a usable output even if an ordinary System.out.println(o)
+     * This means, in effect, that com.sschudakov.logging would produce a usable output even if an ordinary System.out.println(o)
      * would produce a relatively hard-to-debug StackOverflowError.
      * </p>
      * @param o The object.
@@ -441,7 +441,7 @@ final class ParameterFormatter {
      * Confusing? Just read the last paragraph again and check the respective toString() implementation.
      * </p>
      * <p>
-     * This means, in effect, that logging would produce a usable output even if an ordinary System.out.println(o)
+     * This means, in effect, that com.sschudakov.logging would produce a usable output even if an ordinary System.out.println(o)
      * would produce a relatively hard-to-debug StackOverflowError.
      * </p>
      *

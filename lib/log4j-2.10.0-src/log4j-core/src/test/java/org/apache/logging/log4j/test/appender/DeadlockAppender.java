@@ -77,7 +77,7 @@ public class DeadlockAppender extends AbstractAppender {
 
         @Override
         public void run() {
-            final Logger logger = LogManager.getLogger("org.apache.logging.log4j.test.WorkerThread");
+            final Logger logger = LogManager.getLogger("org.apache.com.sschudakov.logging.log4j.test.WorkerThread");
             logger.debug("Worker is running");
         }
     }

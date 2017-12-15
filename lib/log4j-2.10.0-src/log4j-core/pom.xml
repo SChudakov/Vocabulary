@@ -375,7 +375,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <excludedGroups>
-            org.apache.logging.log4j.categories.PerformanceTests
+              org.apache.com.sschudakov.logging.log4j.categories.PerformanceTests
           </excludedGroups>
           <forkCount>1</forkCount>
           <reuseForks>false</reuseForks>
@@ -407,7 +407,7 @@
               <Implementation-Vendor-Id>org.apache</Implementation-Vendor-Id>
               <X-Compile-Source-JDK>${maven.compiler.source}</X-Compile-Source-JDK>
               <X-Compile-Target-JDK>${maven.compiler.target}</X-Compile-Target-JDK>
-              <Automatic-Module-Name>org.apache.logging.log4j.core</Automatic-Module-Name>
+              <Automatic-Module-Name>org.apache.com.sschudakov.logging.log4j.core</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>
@@ -424,14 +424,14 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <configuration>
           <instructions>
-            <Bundle-SymbolicName>org.apache.logging.log4j.core</Bundle-SymbolicName>
+            <Bundle-SymbolicName>org.apache.com.sschudakov.logging.log4j.core</Bundle-SymbolicName>
             <!-- TODO: exclude internal classes from export -->
-            <Export-Package>org.apache.logging.log4j.core.*</Export-Package>
+            <Export-Package>org.apache.com.sschudakov.logging.log4j.core.*</Export-Package>
             <Import-Package>
               sun.reflect;resolution:=optional,
               *
             </Import-Package>
-            <Bundle-Activator>org.apache.logging.log4j.core.osgi.Activator</Bundle-Activator>
+            <Bundle-Activator>org.apache.com.sschudakov.logging.log4j.core.osgi.Activator</Bundle-Activator>
           </instructions>
         </configuration>
       </plugin>
@@ -489,23 +489,23 @@
           <groups>
             <group>
               <title>Core API</title>
-              <packages>org.apache.logging.log4j.core</packages>
+              <packages>org.apache.com.sschudakov.logging.log4j.core</packages>
             </group>
             <group>
               <title>Configuration</title>
-              <packages>org.apache.logging.log4j.core.config*:org.apache.logging.log4j.core.selector</packages>
+              <packages>org.apache.com.sschudakov.logging.log4j.core.config*:org.apache.com.sschudakov.logging.log4j.core.selector</packages>
             </group>
             <group>
               <title>Core Plugins</title>
-              <packages>org.apache.logging.log4j.core.appender*:org.apache.logging.log4j.core.filter:org.apache.logging.log4j.core.layout:org.apache.logging.log4j.core.lookup:org.apache.logging.log4j.core.pattern:org.apache.logging.log4j.core.script</packages>
+              <packages>org.apache.com.sschudakov.logging.log4j.core.appender*:org.apache.com.sschudakov.logging.log4j.core.filter:org.apache.com.sschudakov.logging.log4j.core.layout:org.apache.com.sschudakov.logging.log4j.core.lookup:org.apache.com.sschudakov.logging.log4j.core.pattern:org.apache.com.sschudakov.logging.log4j.core.script</packages>
             </group>
             <group>
               <title>Tools</title>
-              <packages>org.apache.logging.log4j.core.net*:org.apache.logging.log4j.core.tools</packages>
+              <packages>org.apache.com.sschudakov.logging.log4j.core.net*:org.apache.com.sschudakov.logging.log4j.core.tools</packages>
             </group>
             <group>
               <title>Internals</title>
-              <packages>org.apache.logging.log4j.core.async:org.apache.logging.log4j.core.impl:org.apache.logging.log4j.core.util*:org.apache.logging.log4j.core.osgi:org.apache.logging.log4j.core.jackson:org.apache.logging.log4j.core.jmx</packages>
+              <packages>org.apache.com.sschudakov.logging.log4j.core.async:org.apache.com.sschudakov.logging.log4j.core.impl:org.apache.com.sschudakov.logging.log4j.core.util*:org.apache.com.sschudakov.logging.log4j.core.osgi:org.apache.com.sschudakov.logging.log4j.core.jackson:org.apache.com.sschudakov.logging.log4j.core.jmx</packages>
             </group>
           </groups>
         </configuration>

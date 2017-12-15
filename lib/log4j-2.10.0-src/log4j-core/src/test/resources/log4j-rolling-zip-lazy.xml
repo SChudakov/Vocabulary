@@ -41,14 +41,14 @@
   </Appenders>
 
   <Loggers>
-    <Logger name="org.apache.logging.log4j.test1" level="debug" additivity="false">
+    <Logger name="org.apache.com.sschudakov.logging.log4j.test1" level="debug" additivity="false">
       <ThreadContextMapFilter>
         <KeyValuePair key="test" value="123"/>
       </ThreadContextMapFilter>
       <AppenderRef ref="STDOUT"/>
     </Logger>>
 
-    <Logger name="org.apache.logging.log4j.core.appender.rolling" level="debug" additivity="false">
+    <Logger name="org.apache.com.sschudakov.logging.log4j.core.appender.rolling" level="debug" additivity="false">
       <AppenderRef ref="RollingFile"/>
     </Logger>>
 

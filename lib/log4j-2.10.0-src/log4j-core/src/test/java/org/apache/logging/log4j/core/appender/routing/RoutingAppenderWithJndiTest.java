@@ -40,7 +40,7 @@ import static org.junit.Assert.*;
  */
 public class RoutingAppenderWithJndiTest {
 
-    public static final String JNDI_CONTEXT_NAME = "java:comp/env/logging/context-name";
+    public static final String JNDI_CONTEXT_NAME = "java:comp/env/com.sschudakov.logging/context-name";
     private ListAppender listAppender1;
     private ListAppender listAppender2;
 
@@ -96,7 +96,7 @@ public class RoutingAppenderWithJndiTest {
 
         // now set jndi resource to Application3.
         // The context name, 'Application3', will be used as log file name by the default route.
-        context.rebind("java:comp/env/logging/context-name", "Application3");
+        context.rebind("java:comp/env/com.sschudakov.logging/context-name", "Application3");
         msg = new StructuredDataMessage("Test", "This is a message from Application3", "Context");
         EventLogger.logEvent(msg);
         final File application3LogFile = new File("target/routingbyjndi/routingbyjnditest-Application3.log");
@@ -104,7 +104,7 @@ public class RoutingAppenderWithJndiTest {
 
         // now set jndi resource to Application4
         // The context name, 'Application4', will be used as log file name by the default route.
-        context.rebind("java:comp/env/logging/context-name", "Application4");
+        context.rebind("java:comp/env/com.sschudakov.logging/context-name", "Application4");
         msg = new StructuredDataMessage("Test", "This is a message from Application4", "Context");
         EventLogger.logEvent(msg);
         final File application4LogFile = new File("target/routingbyjndi/routingbyjnditest-Application4.log");

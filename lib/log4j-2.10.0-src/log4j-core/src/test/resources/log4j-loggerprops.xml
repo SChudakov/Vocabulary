@@ -29,7 +29,7 @@
   </Appenders>
 
   <Loggers>
-    <Logger name="org.apache.logging.log4j.core" level="debug" additivity="false">
+    <Logger name="org.apache.com.sschudakov.logging.log4j.core" level="debug" additivity="false">
       <Property name="user">$${sys:user.name}</Property>
       <Property name="phrasex">${sys:user.phrasex:-****}</Property>
       <Property name="test">${sys:test}</Property>

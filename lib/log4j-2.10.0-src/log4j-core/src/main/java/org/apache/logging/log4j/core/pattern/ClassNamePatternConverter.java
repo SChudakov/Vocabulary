@@ -21,7 +21,7 @@ import org.apache.logging.log4j.core.config.plugins.Plugin;
 
 
 /**
- * Formats the class name of the site of the logging request.
+ * Formats the class name of the site of the com.sschudakov.logging request.
  */
 @Plugin(name = "ClassNamePatternConverter", category = PatternConverter.CATEGORY)
 @ConverterKeys({ "C", "class" })
@@ -50,7 +50,7 @@ public final class ClassNamePatternConverter extends NamePatternConverter {
     }
 
     /**
-     * Format a logging event.
+     * Format a com.sschudakov.logging event.
      *
      * @param event      event to format.
      * @param toAppendTo string buffer to which class name will be appended.

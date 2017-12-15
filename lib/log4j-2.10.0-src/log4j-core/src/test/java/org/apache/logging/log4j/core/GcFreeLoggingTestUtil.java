@@ -39,7 +39,7 @@ import com.google.monitoring.runtime.instrumentation.AllocationRecorder;
 import com.google.monitoring.runtime.instrumentation.Sampler;
 
 /**
- * Utily methods for the GC-free logging tests.s.
+ * Utily methods for the GC-free com.sschudakov.logging tests.s.
  */
 public class GcFreeLoggingTestUtil {
 
@@ -61,7 +61,7 @@ public class GcFreeLoggingTestUtil {
         final Marker test = MarkerManager.getMarker("test").setParents(testParent); // initial creation, value is cached
 
         // initialize LoggerContext etc.
-        // This is not steady-state logging and will allocate objects.
+        // This is not steady-state com.sschudakov.logging and will allocate objects.
         ThreadContext.put("aKey", "value1");
         ThreadContext.put("key2", "value2");
 
@@ -108,7 +108,7 @@ public class GcFreeLoggingTestUtil {
         final StringMapMessage mapMessage = new StringMapMessage().with("eventId", "Login");
         AllocationRecorder.addSampler(sampler);
 
-        // now do some steady-state logging
+        // now do some steady-state com.sschudakov.logging
 
         ThreadContext.put("aKey", "value1");
         ThreadContext.put("key2", "value2");

@@ -58,8 +58,8 @@ public final class PropertiesRewritePolicy implements RewritePolicy {
 
     /**
      * Rewrite the event.
-     * @param source a logging event that may be returned or
-     * used to create a new logging event.
+     * @param source a com.sschudakov.logging event that may be returned or
+     * used to create a new com.sschudakov.logging event.
      * @return The LogEvent after rewriting.
      */
     @Override

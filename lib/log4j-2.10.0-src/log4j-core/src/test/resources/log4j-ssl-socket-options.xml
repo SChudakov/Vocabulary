@@ -25,9 +25,9 @@
         <SocketPerformancePreferences bandwidth="100" connectionTime="100" latency="100" />
       </SocketOptions>
       <Ssl>
-        <KeyStore location="src/test/resources/org/apache/logging/log4j/core/net/ssl/client.log4j2-keystore.jks"
+        <KeyStore location="src/test/resources/org/apache/com.sschudakov.logging/log4j/core/net/ssl/client.log4j2-keystore.jks"
           password="changeit" type="JKS" />
-        <TrustStore location="src/test/resources/org/apache/logging/log4j/core/net/ssl/truststore.jks"
+        <TrustStore location="src/test/resources/org/apache/com.sschudakov.logging/log4j/core/net/ssl/truststore.jks"
           password="changeit" type="JKS" />
       </Ssl>
     </Socket>

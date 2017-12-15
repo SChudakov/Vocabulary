@@ -39,13 +39,13 @@ import org.apache.logging.log4j.core.net.SmtpManager;
 import org.apache.logging.log4j.core.util.Booleans;
 
 /**
- * Send an e-mail when a specific logging event occurs, typically on errors or
+ * Send an e-mail when a specific com.sschudakov.logging event occurs, typically on errors or
  * fatal errors.
  *
  * <p>
- * The number of logging events delivered in this e-mail depend on the value of
+ * The number of com.sschudakov.logging events delivered in this e-mail depend on the value of
  * <b>BufferSize</b> option. The <code>SmtpAppender</code> keeps only the last
- * <code>BufferSize</code> logging events in its cyclic buffer. This keeps
+ * <code>BufferSize</code> com.sschudakov.logging events in its cyclic buffer. This keeps
  * memory requirements at a reasonable level while still delivering useful
  * application context.
  *

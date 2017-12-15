@@ -36,7 +36,7 @@ GC_OPTIONS=
 #VM_OPTIONS="-XX:+PrintCompilation -XX:+PrintInlining"
 
 LOG4J_OPTIONS="-Dlog4j.configurationFile=perf-CountingNoOpAppender.xml"
-LOG4J_OPTIONS="${LOG4J_OPTIONS} -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector"
+LOG4J_OPTIONS="${LOG4J_OPTIONS} -DLog4jContextSelector=org.apache.com.sschudakov.logging.log4j.core.async.AsyncLoggerContextSelector"
 LOG4J_OPTIONS="${LOG4J_OPTIONS} -Dlog4j2.enable.threadlocals=true"
 LOG4J_OPTIONS="${LOG4J_OPTIONS} -DAsyncLogger.WaitStrategy=Block"
 LOG4J_OPTIONS="${LOG4J_OPTIONS} -Dlog4j.format.msg.async=true"
@@ -48,7 +48,7 @@ CP="${CP}:log4j-core-2.6-SNAPSHOT-tests.jar"
 export CP
 
 export MEM_OPTIONS="-Xms128m -Xmx128m"
-export MAIN="org.apache.logging.log4j.core.async.perftest.SimplePerfTest"
+export MAIN="org.apache.com.sschudakov.logging.log4j.core.async.perftest.SimplePerfTest"
 
 #PERF_OPTIONS="-e cycles,instructions,cache-references,cache-misses,branches,branch-misses,L1-dcache-loads,L1-dcache-load-misses,dTLB-loads,dTLB-load-misses"
 PERF_OPTIONS=

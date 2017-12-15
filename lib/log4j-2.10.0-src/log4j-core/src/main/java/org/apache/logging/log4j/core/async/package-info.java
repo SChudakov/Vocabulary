@@ -15,6 +15,6 @@
  * limitations under the license.
  */
 /**
- * Provides Asynchronous Logger classes and interfaces for low-latency logging.
+ * Provides Asynchronous Logger classes and interfaces for low-latency com.sschudakov.logging.
  */
 package org.apache.logging.log4j.core.async;

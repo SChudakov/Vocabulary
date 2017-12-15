@@ -46,7 +46,7 @@ import org.apache.logging.log4j.util.Strings;
 /**
  * Annotation processor for pre-scanning Log4j 2 plugins.
  */
-@SupportedAnnotationTypes("org.apache.logging.log4j.core.config.plugins.*")
+@SupportedAnnotationTypes("org.apache.com.sschudakov.logging.log4j.core.config.plugins.*")
 public class PluginProcessor extends AbstractProcessor {
 
     // TODO: this could be made more abstract to allow for compile-time and run-time plugin processing

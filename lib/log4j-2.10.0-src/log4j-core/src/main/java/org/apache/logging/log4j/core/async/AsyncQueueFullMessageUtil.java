@@ -39,7 +39,7 @@ public class AsyncQueueFullMessageUtil {
     public static Message transform(Message message) {
         SimpleMessage result = new SimpleMessage(message.getFormattedMessage() +
                 " (Log4j2 logged this message out of order to prevent deadlock caused by domain " +
-                "objects logging from their toString method when the async queue is full - LOG4J2-2031)");
+                "objects com.sschudakov.logging from their toString method when the async queue is full - LOG4J2-2031)");
         return result;
     }
 }

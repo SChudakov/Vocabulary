@@ -51,7 +51,7 @@ public class HostNameTest {
 
     @Test
     public void testHostname() {
-        final org.apache.logging.log4j.Logger testLogger = context.getLogger("org.apache.logging.log4j.hosttest");
+        final org.apache.logging.log4j.Logger testLogger = context.getLogger("org.apache.com.sschudakov.logging.log4j.hosttest");
         testLogger.debug("Hello, {}", "World");
         final List<String> msgs = host.getMessages();
         assertThat(msgs, hasSize(1));

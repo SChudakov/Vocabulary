@@ -54,7 +54,7 @@ public class ConfigurationAssemblerTest {
     public void testBuildConfiguration() throws Exception {
         try {
             System.setProperty(Constants.LOG4J_CONTEXT_SELECTOR,
-                    "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");
+                    "org.apache.com.sschudakov.logging.log4j.core.async.AsyncLoggerContextSelector");
             final ConfigurationBuilder<BuiltConfiguration> builder = ConfigurationBuilderFactory.newConfigurationBuilder();
             CustomConfigurationFactory.addTestFixtures("config name", builder);
             final Configuration configuration = builder.build();
@@ -70,9 +70,9 @@ public class ConfigurationAssemblerTest {
     public void testCustomConfigurationFactory() throws Exception {
         try {
             System.setProperty(ConfigurationFactory.CONFIGURATION_FACTORY_PROPERTY,
-                    "org.apache.logging.log4j.core.config.builder.CustomConfigurationFactory");
+                    "org.apache.com.sschudakov.logging.log4j.core.config.builder.CustomConfigurationFactory");
             System.setProperty(Constants.LOG4J_CONTEXT_SELECTOR,
-                    "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");
+                    "org.apache.com.sschudakov.logging.log4j.core.async.AsyncLoggerContextSelector");
             final Configuration config = ((LoggerContext) LogManager.getContext(false)).getConfiguration();
             validate(config);
         } finally {
@@ -98,7 +98,7 @@ public class ConfigurationAssemblerTest {
         final LoggerConfig rootLoggerConfig = loggers.get("");
         assertEquals(Level.ERROR, rootLoggerConfig.getLevel());
         assertFalse(rootLoggerConfig.isIncludeLocation());
-        final LoggerConfig loggerConfig = loggers.get("org.apache.logging.log4j");
+        final LoggerConfig loggerConfig = loggers.get("org.apache.com.sschudakov.logging.log4j");
         assertEquals(Level.DEBUG, loggerConfig.getLevel());
         assertTrue(loggerConfig.isIncludeLocation());
         final Filter filter = config.getFilter();

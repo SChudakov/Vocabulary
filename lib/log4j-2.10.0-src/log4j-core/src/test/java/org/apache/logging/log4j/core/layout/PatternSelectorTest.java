@@ -45,7 +45,7 @@ public class PatternSelectorTest {
         final PatternLayout layout = PatternLayout.newBuilder().withPatternSelector(selector)
                 .withConfiguration(ctx.getConfiguration()).build();
         final LogEvent event1 = Log4jLogEvent.newBuilder() //
-                .setLoggerName(this.getClass().getName()).setLoggerFqcn("org.apache.logging.log4j.core.layout.PatternSelectorTest$FauxLogger")
+                .setLoggerName(this.getClass().getName()).setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.layout.PatternSelectorTest$FauxLogger")
                 .setMarker(MarkerManager.getMarker("FLOW"))
                 .setLevel(Level.TRACE) //
                 .setIncludeLocation(true)
@@ -54,7 +54,7 @@ public class PatternSelectorTest {
         final String expectSuffix1 = String.format("====== PatternSelectorTest.testPatternSelector:53 entry ======%n");
         assertTrue("Unexpected result: " + result1, result1.endsWith(expectSuffix1));
         final LogEvent event2 = Log4jLogEvent.newBuilder() //
-                .setLoggerName(this.getClass().getName()).setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerName(this.getClass().getName()).setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world 1!")).build();
         final String result2 = new String(layout.toByteArray(event2));

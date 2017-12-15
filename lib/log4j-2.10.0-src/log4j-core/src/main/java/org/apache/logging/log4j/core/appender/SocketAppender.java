@@ -446,8 +446,8 @@ public class SocketAppender extends AbstractOutputStreamAppender<AbstractSocketM
 
     @Override
     protected void directEncodeEvent(final LogEvent event) {
-        // Disable garbage-free logging for now:
+        // Disable garbage-free com.sschudakov.logging for now:
         // problem with UDP: 8K buffer size means that largish messages get broken up into chunks
-        writeByteArrayToManager(event); // revert to classic (non-garbage free) logging
+        writeByteArrayToManager(event); // revert to classic (non-garbage free) com.sschudakov.logging
     }
 }

@@ -87,7 +87,7 @@ public abstract class AbstractAsyncThreadContextTestBase {
 
         void init() {
             System.clearProperty("log4j2.threadContextMap");
-            final String PACKAGE = "org.apache.logging.log4j.spi.";
+            final String PACKAGE = "org.apache.com.sschudakov.logging.log4j.spi.";
             System.setProperty("log4j2.threadContextMap", PACKAGE + implClassSimpleName());
             PropertiesUtil.getProperties().reload();
             ThreadContextTestAccess.init();

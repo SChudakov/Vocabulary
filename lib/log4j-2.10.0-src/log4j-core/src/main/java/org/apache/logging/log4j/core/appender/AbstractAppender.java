@@ -173,7 +173,7 @@ public abstract class AbstractAppender extends AbstractFilterable implements App
     }
 
     /**
-     * Handle an error with a message, exception, and a logging event, using the {@link ErrorHandler} configured for
+     * Handle an error with a message, exception, and a com.sschudakov.logging event, using the {@link ErrorHandler} configured for
      * this Appender.
      * 
      * @param msg The message.

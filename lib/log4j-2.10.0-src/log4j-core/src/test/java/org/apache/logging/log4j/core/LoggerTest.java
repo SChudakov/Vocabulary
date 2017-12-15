@@ -322,7 +322,7 @@ public class LoggerTest {
 
     @Test
     public void testImpliedThrowable() {
-        final org.apache.logging.log4j.Logger testLogger = context.getLogger("org.apache.logging.log4j.hosttest");
+        final org.apache.logging.log4j.Logger testLogger = context.getLogger("org.apache.com.sschudakov.logging.log4j.hosttest");
         testLogger.debug("This is a test", new Throwable("Testing"));
         final List<String> msgs = host.getMessages();
         assertEquals("Incorrect number of messages. Expected 1, actual " + msgs.size(), 1, msgs.size());
@@ -333,7 +333,7 @@ public class LoggerTest {
 
     @Test
     public void testSuppressedThrowable() {
-        final org.apache.logging.log4j.Logger testLogger = context.getLogger("org.apache.logging.log4j.nothrown");
+        final org.apache.logging.log4j.Logger testLogger = context.getLogger("org.apache.com.sschudakov.logging.log4j.nothrown");
         testLogger.debug("This is a test", new Throwable("Testing"));
         final List<String> msgs = noThrown.getMessages();
         assertEquals("Incorrect number of messages. Expected 1, actual " + msgs.size(), 1, msgs.size());
@@ -402,11 +402,11 @@ public class LoggerTest {
     @Test
     public void testLevelInheritence() throws Exception {
         final Configuration config = context.getConfiguration();
-        final LoggerConfig loggerConfig = config.getLoggerConfig("org.apache.logging.log4j.core.LoggerTest");
+        final LoggerConfig loggerConfig = config.getLoggerConfig("org.apache.com.sschudakov.logging.log4j.core.LoggerTest");
         assertNotNull(loggerConfig);
-        assertEquals(loggerConfig.getName(), "org.apache.logging.log4j.core.LoggerTest");
+        assertEquals(loggerConfig.getName(), "org.apache.com.sschudakov.logging.log4j.core.LoggerTest");
         assertEquals(loggerConfig.getLevel(), Level.DEBUG);
-        final Logger localLogger = context.getLogger("org.apache.logging.log4j.core.LoggerTest");
+        final Logger localLogger = context.getLogger("org.apache.com.sschudakov.logging.log4j.core.LoggerTest");
         assertTrue("Incorrect level - expected DEBUG, actual " + localLogger.getLevel(), localLogger.getLevel() == Level.DEBUG);
     }
 

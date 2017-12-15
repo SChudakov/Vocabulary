@@ -34,5 +34,5 @@ public final class XmlConstants {
     public static final String ELT_SUPPRESSED = "Suppressed";
     public static final String ELT_SUPPRESSED_ITEM = "SuppressedItem";
     public static final String ELT_THROWN = "Thrown";
-    public static final String XML_NAMESPACE = "http://logging.apache.org/log4j/2.0/events";
+    public static final String XML_NAMESPACE = "http://com.sschudakov.logging.apache.org/log4j/2.0/events";
 }

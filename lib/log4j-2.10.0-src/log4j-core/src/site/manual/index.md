@@ -18,8 +18,8 @@
 
 # Log4j 2 Implementation
 
-The Log4j 2 implementation provides the functional components of the logging system.
-Users are free to create their own plugins and include them in the logging configuration.
+The Log4j 2 implementation provides the functional components of the com.sschudakov.logging system.
+Users are free to create their own plugins and include them in the com.sschudakov.logging configuration.
 
 ## Requirements
 

@@ -24,7 +24,7 @@ package org.apache.logging.log4j.core.async.perftest;
  * If the caller spins in a 'counted' loop, and the implementation does not include a a safepoint poll this may cause a TTSP
  * (Time To SafePoint) problem. If this is the case for your application you can solve it by preventing the idle method from
  * being inlined by using a Hotspot compiler command as a JVM argument e.g:
- * <code>-XX:CompileCommand=dontinline,org.apache.logging.log4j.core.async.perftest.NoOpIdleStrategy::idle</code>
+ * <code>-XX:CompileCommand=dontinline,org.apache.com.sschudakov.logging.log4j.core.async.perftest.NoOpIdleStrategy::idle</code>
  *
  * @see <a href="https://github.com/real-logic/Agrona/blob/master/src/main/java/org/agrona/concurrent/IdleStrategy.java">
  *     https://github.com/real-logic/Agrona/blob/master/src/main/java/org/agrona/concurrent/IdleStrategy.java</a>

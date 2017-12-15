@@ -68,7 +68,7 @@ public final class NoSqlDatabaseManager<W> extends AbstractDatabaseManager {
     protected void writeInternal(final LogEvent event) {
         if (!this.isRunning() || this.connection == null || this.connection.isClosed()) {
             throw new AppenderLoggingException(
-                    "Cannot write logging event; NoSQL manager not connected to the database.");
+                    "Cannot write com.sschudakov.logging event; NoSQL manager not connected to the database.");
         }
 
         final NoSqlObject<W> entity = this.connection.createObject();

@@ -332,11 +332,11 @@ public class CommandLine {
     }
 
     /** Parses the specified command line arguments and returns a list of {@code CommandLine} objects representing the
-     * top-level command and any subcommands (if any) that were recognized and initialized during the parsing process.
+     * top-level command and any subcommands (if any) that were recognized and initialized during the com.sschudakov.parsing process.
      * <p>
-     * If parsing succeeds, the first element in the returned list is always {@code this CommandLine} object. The
+     * If com.sschudakov.parsing succeeds, the first element in the returned list is always {@code this CommandLine} object. The
      * returned list may contain more elements if subcommands were {@linkplain #addSubcommand(String, Object) registered}
-     * and these subcommands were initialized by matching command line arguments. If parsing fails, a
+     * and these subcommands were initialized by matching command line arguments. If com.sschudakov.parsing fails, a
      * {@link ParameterException} is thrown.
      * </p>
      *
@@ -350,7 +350,7 @@ public class CommandLine {
     }
     /**
      * Represents a function that can process a List of {@code CommandLine} objects resulting from successfully
-     * {@linkplain #parse(String...) parsing} the command line arguments. This is a
+     * {@linkplain #parse(String...) com.sschudakov.parsing} the command line arguments. This is a
      * <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html">functional interface</a>
      * whose functional method is {@link #handleParseResult(List, PrintStream, CommandLine.Help.Ansi)}.
      * <p>
@@ -363,8 +363,8 @@ public class CommandLine {
      * @since 2.0 */
     public static interface IParseResultHandler {
         /** Processes a List of {@code CommandLine} objects resulting from successfully
-         * {@linkplain #parse(String...) parsing} the command line arguments and optionally returns a list of results.
-         * @param parsedCommands the {@code CommandLine} objects that resulted from successfully parsing the command line arguments
+         * {@linkplain #parse(String...) com.sschudakov.parsing} the command line arguments and optionally returns a list of results.
+         * @param parsedCommands the {@code CommandLine} objects that resulted from successfully com.sschudakov.parsing the command line arguments
          * @param out the {@code PrintStream} to print help to if requested
          * @param ansi for printing help messages using ANSI styles and colors
          * @return a list of results, or an empty list if there are no results
@@ -375,7 +375,7 @@ public class CommandLine {
     }
     /**
      * Represents a function that can handle a {@code ParameterException} that occurred while
-     * {@linkplain #parse(String...) parsing} the command line arguments. This is a
+     * {@linkplain #parse(String...) com.sschudakov.parsing} the command line arguments. This is a
      * <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html">functional interface</a>
      * whose functional method is {@link #handleException(CommandLine.ParameterException, PrintStream, CommandLine.Help.Ansi, String...)}.
      * <p>
@@ -385,9 +385,9 @@ public class CommandLine {
      * @see DefaultExceptionHandler
      * @since 2.0 */
     public static interface IExceptionHandler {
-        /** Handles a {@code ParameterException} that occurred while {@linkplain #parse(String...) parsing} the command
+        /** Handles a {@code ParameterException} that occurred while {@linkplain #parse(String...) com.sschudakov.parsing} the command
          * line arguments and optionally returns a list of results.
-         * @param ex the ParameterException describing the problem that occurred while parsing the command line arguments,
+         * @param ex the ParameterException describing the problem that occurred while com.sschudakov.parsing the command line arguments,
          *           and the CommandLine representing the command or subcommand whose input was invalid
          * @param out the {@code PrintStream} to print help to if requested
          * @param ansi for printing help messages using ANSI styles and colors
@@ -415,7 +415,7 @@ public class CommandLine {
     }
     /**
      * Helper method that may be useful when processing the list of {@code CommandLine} objects that result from successfully
-     * {@linkplain #parse(String...) parsing} command line arguments. This method prints out
+     * {@linkplain #parse(String...) com.sschudakov.parsing} command line arguments. This method prints out
      * {@linkplain #usage(PrintStream, Help.Ansi) usage help} if {@linkplain #isUsageHelpRequested() requested}
      * or {@linkplain #printVersionHelp(PrintStream, Help.Ansi) version help} if {@linkplain #isVersionHelpRequested() requested}
      * and returns {@code true}. Otherwise, if none of the specified {@code CommandLine} objects have help requested,
@@ -473,7 +473,7 @@ public class CommandLine {
          * If the top-level command does not implement either {@code Runnable} or {@code Callable}, a {@code ExecutionException}
          * is thrown detailing the problem and capturing the offending {@code CommandLine} object.
          *
-         * @param parsedCommands the {@code CommandLine} objects that resulted from successfully parsing the command line arguments
+         * @param parsedCommands the {@code CommandLine} objects that resulted from successfully com.sschudakov.parsing the command line arguments
          * @param out the {@code PrintStream} to print help to if requested
          * @param ansi for printing help messages using ANSI styles and colors
          * @return an empty list if help was requested, or a list containing a single element: the result of calling the
@@ -523,7 +523,7 @@ public class CommandLine {
          * If the last (sub)command does not implement either {@code Runnable} or {@code Callable}, a {@code ExecutionException}
          * is thrown detailing the problem and capturing the offending {@code CommandLine} object.
          *
-         * @param parsedCommands the {@code CommandLine} objects that resulted from successfully parsing the command line arguments
+         * @param parsedCommands the {@code CommandLine} objects that resulted from successfully com.sschudakov.parsing the command line arguments
          * @param out the {@code PrintStream} to print help to if requested
          * @param ansi for printing help messages using ANSI styles and colors
          * @return an empty list if help was requested, or a list containing a single element: the result of calling the
@@ -548,7 +548,7 @@ public class CommandLine {
          * {@code Runnable} or {@code Callable}, a {@code ExecutionException}
          * is thrown detailing the problem and capturing the offending {@code CommandLine} object.
          *
-         * @param parsedCommands the {@code CommandLine} objects that resulted from successfully parsing the command line arguments
+         * @param parsedCommands the {@code CommandLine} objects that resulted from successfully com.sschudakov.parsing the command line arguments
          * @param out the {@code PrintStream} to print help to if requested
          * @param ansi for printing help messages using ANSI styles and colors
          * @return an empty list if help was requested, or a list containing the result of executing all commands:
@@ -595,7 +595,7 @@ public class CommandLine {
      *   <li>{@link RunAll} handler prints help if requested, and otherwise executes all recognized commands and subcommands as {@code Runnable} or {@code Callable} tasks.</li>
      *   <li>{@link DefaultExceptionHandler} prints the error message followed by usage help</li>
      * </ul>
-     * @param handler the function that will process the result of successfully parsing the command line arguments
+     * @param handler the function that will process the result of successfully com.sschudakov.parsing the command line arguments
      * @param out the {@code PrintStream} to print help to if requested
      * @param args the command line arguments
      * @return a list of results, or an empty list if there are no results
@@ -637,7 +637,7 @@ public class CommandLine {
      *   <li>{@link DefaultExceptionHandler} prints the error message followed by usage help</li>
      * </ul>
      *
-     * @param handler the function that will process the result of successfully parsing the command line arguments
+     * @param handler the function that will process the result of successfully com.sschudakov.parsing the command line arguments
      * @param out the {@code PrintStream} to print help to if requested
      * @param ansi for printing help messages using ANSI styles and colors
      * @param exceptionHandler the function that can handle the {@code ParameterException} thrown when the command line arguments are invalid
@@ -817,7 +817,7 @@ public class CommandLine {
      * From picocli v2.0, this method prints usage help or version help if {@linkplain #printHelpIfRequested(List, PrintStream, Help.Ansi) requested},
      * and any exceptions thrown by the {@code Callable} are caught and rethrown wrapped in an {@code ExecutionException}.
      * </p>
-     * @param callable the command to call when {@linkplain #parse(String...) parsing} succeeds.
+     * @param callable the command to call when {@linkplain #parse(String...) com.sschudakov.parsing} succeeds.
      * @param out the printStream to print to
      * @param args the command line arguments to parse
      * @param <C> the annotated object must implement Callable
@@ -825,7 +825,7 @@ public class CommandLine {
      * @see #call(Callable, PrintStream, Help.Ansi, String...)
      * @throws InitializationException if the specified command object does not have a {@link Command}, {@link Option} or {@link Parameters} annotation
      * @throws ExecutionException if the Callable throws an exception
-     * @return {@code null} if an error occurred while parsing the command line options, otherwise returns the result of calling the Callable
+     * @return {@code null} if an error occurred while com.sschudakov.parsing the command line options, otherwise returns the result of calling the Callable
      * @see #parseWithHandlers(IParseResultHandler, PrintStream, Help.Ansi, IExceptionHandler, String...)
      * @see RunFirst
      */
@@ -865,7 +865,7 @@ public class CommandLine {
      * From picocli v2.0, this method prints usage help or version help if {@linkplain #printHelpIfRequested(List, PrintStream, Help.Ansi) requested},
      * and any exceptions thrown by the {@code Callable} are caught and rethrown wrapped in an {@code ExecutionException}.
      * </p>
-     * @param callable the command to call when {@linkplain #parse(String...) parsing} succeeds.
+     * @param callable the command to call when {@linkplain #parse(String...) com.sschudakov.parsing} succeeds.
      * @param out the printStream to print to
      * @param ansi whether the usage message should include ANSI escape codes or not
      * @param args the command line arguments to parse
@@ -873,7 +873,7 @@ public class CommandLine {
      * @param <T> the return type of the specified {@code Callable}
      * @throws InitializationException if the specified command object does not have a {@link Command}, {@link Option} or {@link Parameters} annotation
      * @throws ExecutionException if the Callable throws an exception
-     * @return {@code null} if an error occurred while parsing the command line options, or if help was requested and printed. Otherwise returns the result of calling the Callable
+     * @return {@code null} if an error occurred while com.sschudakov.parsing the command line options, or if help was requested and printed. Otherwise returns the result of calling the Callable
      * @see #parseWithHandlers(IParseResultHandler, PrintStream, Help.Ansi, IExceptionHandler, String...)
      * @see RunLast
      */
@@ -889,7 +889,7 @@ public class CommandLine {
      * From picocli v2.0, this method prints usage help or version help if {@linkplain #printHelpIfRequested(List, PrintStream, Help.Ansi) requested},
      * and any exceptions thrown by the {@code Runnable} are caught and rethrown wrapped in an {@code ExecutionException}.
      * </p>
-     * @param runnable the command to run when {@linkplain #parse(String...) parsing} succeeds.
+     * @param runnable the command to run when {@linkplain #parse(String...) com.sschudakov.parsing} succeeds.
      * @param out the printStream to print to
      * @param args the command line arguments to parse
      * @param <R> the annotated object must implement Runnable
@@ -935,7 +935,7 @@ public class CommandLine {
      * From picocli v2.0, this method prints usage help or version help if {@linkplain #printHelpIfRequested(List, PrintStream, Help.Ansi) requested},
      * and any exceptions thrown by the {@code Runnable} are caught and rethrown wrapped in an {@code ExecutionException}.
      * </p>
-     * @param runnable the command to run when {@linkplain #parse(String...) parsing} succeeds.
+     * @param runnable the command to run when {@linkplain #parse(String...) com.sschudakov.parsing} succeeds.
      * @param out the printStream to print to
      * @param ansi whether the usage message should include ANSI escape codes or not
      * @param args the command line arguments to parse
@@ -1001,7 +1001,7 @@ public class CommandLine {
         return this;
     }
 
-    /** Returns the String that separates option names from option values when parsing command line options. {@value Help#DEFAULT_SEPARATOR} by default.
+    /** Returns the String that separates option names from option values when com.sschudakov.parsing command line options. {@value Help#DEFAULT_SEPARATOR} by default.
      * @return the String the parser uses to separate option names from option values */
     public String getSeparator() {
         return interpreter.separator;
@@ -1023,7 +1023,7 @@ public class CommandLine {
     }
 
     /** Sets the command name (also called program name) displayed in the usage help synopsis to the specified value.
-     * Note that this method only modifies the usage help message, it does not impact parsing behaviour.
+     * Note that this method only modifies the usage help message, it does not impact com.sschudakov.parsing behaviour.
      * The command name may also be set declaratively with the {@link CommandLine.Command#name()} annotation attribute.
      * @param commandName command name (also called program name) displayed in the usage help synopsis
      * @return this {@code CommandLine} object, to allow method chaining */
@@ -1320,7 +1320,7 @@ public class CommandLine {
      * {@link #index()} attribute you can pick which (or what range) of the positional parameters to apply. If no index
      * is specified, the field will get all positional parameters (so it should be an array or a collection).
      * </p><p>
-     * When parsing the command line arguments, picocli first tries to match arguments to {@link Option Options}.
+     * When com.sschudakov.parsing the command line arguments, picocli first tries to match arguments to {@link Option Options}.
      * Positional parameters are the arguments that follow the options, or the arguments that follow a "--" (double
      * dash) argument on the command line.
      * </p><p>
@@ -1486,7 +1486,7 @@ public class CommandLine {
         Class<?>[] subcommands() default {};
 
         /** String that separates options from option parameters. Default is {@code "="}. Spaces are also accepted.
-         * @return the string that separates options from option parameters, used both when parsing and when generating usage help
+         * @return the string that separates options from option parameters, used both when com.sschudakov.parsing and when generating usage help
          * @see Help#separator
          * @see CommandLine#setSeparator(String) */
         String separator() default "=";
@@ -1589,7 +1589,7 @@ public class CommandLine {
     }
     /**
      * <p>
-     * When parsing command line arguments and initializing
+     * When com.sschudakov.parsing command line arguments and initializing
      * fields annotated with {@link Option @Option} or {@link Parameters @Parameters},
      * String values can be converted to any type for which a {@code ITypeConverter} is registered.
      * </p><p>
@@ -1944,7 +1944,7 @@ public class CommandLine {
         }
 
         /**
-         * Entry point into parsing command line arguments.
+         * Entry point into com.sschudakov.parsing command line arguments.
          * @param args the command line arguments
          * @return a list with all commands and subcommands initialized by this method
          * @throws ParameterException if the specified command line arguments are invalid
@@ -2175,7 +2175,7 @@ public class CommandLine {
                     }
                     cluster = args.pop();
                 } else { // cluster is empty || cluster.charAt(0) is not a short option key
-                    if (cluster.length() == 0) { // we finished parsing a group of short options like -rxv
+                    if (cluster.length() == 0) { // we finished com.sschudakov.parsing a group of short options like -rxv
                         return; // return normally and parse the next arg
                     }
                     // We get here when the remainder of the cluster group is neither an option,
@@ -2469,7 +2469,7 @@ public class CommandLine {
         }
 
         /**
-         * Called when parsing varargs parameters for a multi-value option.
+         * Called when com.sschudakov.parsing varargs parameters for a multi-value option.
          * When an option is encountered, the remainder should not be interpreted as vararg elements.
          * @param arg the string to determine whether it is an option or not
          * @return true if it is an option, false otherwise
@@ -2478,7 +2478,7 @@ public class CommandLine {
             if ("--".equals(arg)) {
                 return true;
             }
-            // not just arg prefix: we may be in the middle of parsing -xrvfFILE
+            // not just arg prefix: we may be in the middle of com.sschudakov.parsing -xrvfFILE
             if (optionName2Field.containsKey(arg)) { // -v or -f or --file (not attached to param or other option)
                 return true;
             }
@@ -4249,7 +4249,7 @@ public class CommandLine {
             }
 
             /**
-             * A set of pre-defined ANSI escape code styles and colors, and a set of convenience methods for parsing
+             * A set of pre-defined ANSI escape code styles and colors, and a set of convenience methods for com.sschudakov.parsing
              * text with embedded markup style names, as well as convenience methods for converting
              * styles to strings with embedded escape codes.
              */
@@ -4661,7 +4661,7 @@ public class CommandLine {
         private static final long serialVersionUID = 4251973913816346114L;
         public TypeConversionException(String msg) { super(msg); }
     }
-    /** Exception indicating something went wrong while parsing command line options. */
+    /** Exception indicating something went wrong while com.sschudakov.parsing command line options. */
     public static class ParameterException extends PicocliException {
         private static final long serialVersionUID = 1477112829129763139L;
         private final CommandLine commandLine;
@@ -4685,7 +4685,7 @@ public class CommandLine {
         }
 
         /** Returns the {@code CommandLine} object for the (sub)command whose input could not be parsed.
-         * @return the {@code CommandLine} object for the (sub)command where parsing failed.
+         * @return the {@code CommandLine} object for the (sub)command where com.sschudakov.parsing failed.
          * @since 2.0
          */
         public CommandLine getCommandLine() { return commandLine; }

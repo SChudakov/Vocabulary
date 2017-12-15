@@ -44,7 +44,7 @@ public class LogEventTest {
     public void testSerialization() throws Exception {
         final LogEvent event1 = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")) //
                 .build();
@@ -52,7 +52,7 @@ public class LogEventTest {
         final Throwable child = new LoggingException("This is a test", parent);
         final LogEvent event2 = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")) //
                 .setThrown(child) //
@@ -81,7 +81,7 @@ public class LogEventTest {
     public void testNanoTimeIsNotSerialized1() throws Exception {
         final LogEvent event1 = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")) //
                 .setThreadName("this must be initialized or the test fails") //
@@ -106,7 +106,7 @@ public class LogEventTest {
     public void testNanoTimeIsNotSerialized2() throws Exception {
         final LogEvent event1 = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")) //
                 .setThreadId(1) // this must be initialized or the test fails
@@ -132,19 +132,19 @@ public class LogEventTest {
     public void testEquals() {
         final LogEvent event1 = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")) //
                 .build();
         final LogEvent event2 = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")) //
                 .build();
         final LogEvent event3 = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")) //
                 .build();

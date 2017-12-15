@@ -134,7 +134,7 @@ public class StatusLoggerAdmin extends NotificationBroadcasterSupport implements
      * (non-Javadoc)
      * 
      * @see
-     * org.apache.logging.log4j.status.StatusListener#log(org.apache.logging
+     * org.apache.com.sschudakov.logging.log4j.status.StatusListener#log(org.apache.com.sschudakov.logging
      * .log4j.status.StatusData)
      */
     @Override

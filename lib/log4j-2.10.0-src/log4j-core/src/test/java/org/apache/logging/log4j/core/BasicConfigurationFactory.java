@@ -47,7 +47,7 @@ public class BasicConfigurationFactory extends ConfigurationFactory {
 
     public class BasicConfiguration extends AbstractConfiguration {
 
-        private static final String DEFAULT_LEVEL = "org.apache.logging.log4j.level";
+        private static final String DEFAULT_LEVEL = "org.apache.com.sschudakov.logging.log4j.level";
 
         public BasicConfiguration() {
             super(null, ConfigurationSource.NULL_SOURCE);

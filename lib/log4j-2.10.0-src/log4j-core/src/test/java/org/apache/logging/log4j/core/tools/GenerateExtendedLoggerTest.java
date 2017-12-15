@@ -52,7 +52,7 @@ public class GenerateExtendedLoggerTest {
     
     @BeforeClass
     public static void beforeClass() {
-        System.setProperty("log4j2.loggerContextFactory", "org.apache.logging.log4j.TestLoggerContextFactory");
+        System.setProperty("log4j2.loggerContextFactory", "org.apache.com.sschudakov.logging.log4j.TestLoggerContextFactory");
     }
 
     @Test
@@ -144,7 +144,7 @@ public class GenerateExtendedLoggerTest {
         }
         
         // This logger extends o.a.l.log4j.spi.ExtendedLogger,
-        // so all the standard logging methods can be used as well
+        // so all the standard com.sschudakov.logging methods can be used as well
         final ExtendedLogger logger = (ExtendedLogger) extendedLogger;
         logger.trace("trace message");
         logger.debug("debug message");
@@ -159,7 +159,7 @@ public class GenerateExtendedLoggerTest {
             assertEquals(" " + levels.get(i).name + " This is message " + i, lines.get(i));
         }
         
-        // test that the standard logging methods still work
+        // test that the standard com.sschudakov.logging methods still work
         int i = lines.size() - 6;
         assertEquals(" TRACE trace message", lines.get(i++));
         assertEquals(" DEBUG debug message", lines.get(i++));

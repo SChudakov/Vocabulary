@@ -88,7 +88,7 @@ public interface LogEvent extends Serializable {
     ThreadContext.ContextStack getContextStack();
 
     /**
-     * Returns the fully qualified class name of the caller of the logging API.
+     * Returns the fully qualified class name of the caller of the com.sschudakov.logging API.
      *
      * @return The fully qualified class name of the caller.
      */
@@ -131,9 +131,9 @@ public interface LogEvent extends Serializable {
     long getTimeMillis();
 
     /**
-     * Gets the source of logging request.
+     * Gets the source of com.sschudakov.logging request.
      *
-     * @return source of logging request, may be null.
+     * @return source of com.sschudakov.logging request, may be null.
      */
     StackTraceElement getSource();
 
@@ -162,7 +162,7 @@ public interface LogEvent extends Serializable {
     int getThreadPriority();
 
     /**
-     * Gets throwable associated with logging request.
+     * Gets throwable associated with com.sschudakov.logging request.
      *
      * <p>Convenience method for {@code ThrowableProxy.getThrowable();}</p>
      *
@@ -171,7 +171,7 @@ public interface LogEvent extends Serializable {
     Throwable getThrown();
 
     /**
-     * Gets throwable proxy associated with logging request.
+     * Gets throwable proxy associated with com.sschudakov.logging request.
      *
      * @return throwable, may be null.
      */
@@ -188,11 +188,11 @@ public interface LogEvent extends Serializable {
     boolean isEndOfBatch();
 
     /**
-     * Returns whether the source of the logging request is required downstream. Asynchronous Loggers and Appenders use
+     * Returns whether the source of the com.sschudakov.logging request is required downstream. Asynchronous Loggers and Appenders use
      * this flag to determine whether to take a {@code StackTrace} snapshot or not before handing off this event to
      * another thread.
      *
-     * @return {@code true} if the source of the logging request is required downstream, {@code false} otherwise.
+     * @return {@code true} if the source of the com.sschudakov.logging request is required downstream, {@code false} otherwise.
      * @see #getSource()
      */
     // see also LOG4J2-153
@@ -208,11 +208,11 @@ public interface LogEvent extends Serializable {
     void setEndOfBatch(boolean endOfBatch);
 
     /**
-     * Sets whether the source of the logging request is required downstream. Asynchronous Loggers and Appenders use
+     * Sets whether the source of the com.sschudakov.logging request is required downstream. Asynchronous Loggers and Appenders use
      * this flag to determine whether to take a {@code StackTrace} snapshot or not before handing off this event to
      * another thread.
      *
-     * @param locationRequired {@code true} if the source of the logging request is required downstream, {@code false}
+     * @param locationRequired {@code true} if the source of the com.sschudakov.logging request is required downstream, {@code false}
      *                         otherwise.
      * @see #getSource()
      */

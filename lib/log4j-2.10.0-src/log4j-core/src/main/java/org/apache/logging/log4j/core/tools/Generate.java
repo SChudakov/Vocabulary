@@ -28,19 +28,19 @@ import java.util.List;
  * Usage:
  * <p>
  * To generate source code for an extended logger that adds custom log levels to the existing ones: <br>
- * {@code java org.apache.logging.log4j.core.tools.Generate$ExtendedLogger <logger.class.name> <CUSTOMLEVEL>=<WEIGHT>
+ * {@code java org.apache.com.sschudakov.logging.log4j.core.tools.Generate$ExtendedLogger <logger.class.name> <CUSTOMLEVEL>=<WEIGHT>
  * [CUSTOMLEVEL2=WEIGHT2 [CUSTOMLEVEL3=WEIGHT3] ...]}
  * <p>
  * Example of creating an extended logger:<br>
- * {@code java org.apache.logging.log4j.core.tools.Generate$ExtendedLogger com.mycomp.ExtLogger DIAG=350 NOTICE=450
+ * {@code java org.apache.com.sschudakov.logging.log4j.core.tools.Generate$ExtendedLogger com.mycomp.ExtLogger DIAG=350 NOTICE=450
  * VERBOSE=550}
  * <p>
  * To generate source code for a custom logger that replaces the existing log levels with custom ones: <br>
- * {@code java org.apache.logging.log4j.core.tools.Generate$CustomLogger <logger.class.name> <CUSTOMLEVEL>=<WEIGHT>
+ * {@code java org.apache.com.sschudakov.logging.log4j.core.tools.Generate$CustomLogger <logger.class.name> <CUSTOMLEVEL>=<WEIGHT>
  * [CUSTOMLEVEL2=WEIGHT2 [CUSTOMLEVEL3=WEIGHT3] ...]}
  * <p>
  * Example of creating a custom logger:<br>
- * {@code java org.apache.logging.log4j.core.tools.Generate$CustomLogger com.mycomp.MyLogger DEFCON1=350 DEFCON2=450
+ * {@code java org.apache.com.sschudakov.logging.log4j.core.tools.Generate$CustomLogger com.mycomp.MyLogger DEFCON1=350 DEFCON2=450
  * DEFCON3=550}
  */
 public final class Generate {
@@ -57,16 +57,16 @@ public final class Generate {
                 //@formatter:off
                 return "" 
                         + "import java.io.Serializable;%n" 
-                        + "import org.apache.logging.log4j.Level;%n" 
-                        + "import org.apache.logging.log4j.LogManager;%n" 
-                        + "import org.apache.logging.log4j.Logger;%n" 
-                        + "import org.apache.logging.log4j.Marker;%n" 
-                        + "import org.apache.logging.log4j.message.Message;%n" 
-                        + "import org.apache.logging.log4j.message.MessageFactory;%n" 
-                        + "import org.apache.logging.log4j.spi.AbstractLogger;%n" 
-                        + "import org.apache.logging.log4j.spi.ExtendedLoggerWrapper;%n" 
-                        + "import org.apache.logging.log4j.util.MessageSupplier;%n" 
-                        + "import org.apache.logging.log4j.util.Supplier;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.Level;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.LogManager;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.Logger;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.Marker;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.message.Message;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.message.MessageFactory;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.spi.AbstractLogger;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.spi.ExtendedLoggerWrapper;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.util.MessageSupplier;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.util.Supplier;%n"
                         + "%n";
                 //@formatter:on
             }
@@ -109,16 +109,16 @@ public final class Generate {
             String imports() {
                 //@formatter:off
                 return "" 
-                        + "import org.apache.logging.log4j.Level;%n" 
-                        + "import org.apache.logging.log4j.LogManager;%n" 
-                        + "import org.apache.logging.log4j.Logger;%n" 
-                        + "import org.apache.logging.log4j.Marker;%n" 
-                        + "import org.apache.logging.log4j.message.Message;%n" 
-                        + "import org.apache.logging.log4j.message.MessageFactory;%n" 
-                        + "import org.apache.logging.log4j.spi.AbstractLogger;%n" 
-                        + "import org.apache.logging.log4j.spi.ExtendedLoggerWrapper;%n" 
-                        + "import org.apache.logging.log4j.util.MessageSupplier;%n" 
-                        + "import org.apache.logging.log4j.util.Supplier;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.Level;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.LogManager;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.Logger;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.Marker;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.message.Message;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.message.MessageFactory;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.spi.AbstractLogger;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.spi.ExtendedLoggerWrapper;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.util.MessageSupplier;%n"
+                        + "import org.apache.com.sschudakov.logging.log4j.util.Supplier;%n"
                         + "%n";
                 //@formatter:on
             }
@@ -180,7 +180,7 @@ public final class Generate {
             + "     * @return The custom Logger for the calling class.%n" 
             + "     */%n" 
             + "    public static CLASSNAME create() {%n" 
-            + "        final Logger wrapped = LogManager.getLogger();%n" 
+            + "        final Logger wrapped = LogManager.getParsingLogger();%n"
             + "        return new CLASSNAME(wrapped);%n" 
             + "    }%n" 
             + "%n" 
@@ -193,7 +193,7 @@ public final class Generate {
             + "     * @return The custom Logger.%n" 
             + "     */%n" 
             + "    public static CLASSNAME create(final Class<?> loggerName) {%n" 
-            + "        final Logger wrapped = LogManager.getLogger(loggerName);%n" 
+            + "        final Logger wrapped = LogManager.getParsingLogger(loggerName);%n"
             + "        return new CLASSNAME(wrapped);%n" 
             + "    }%n" 
             + "%n" 
@@ -210,7 +210,7 @@ public final class Generate {
             + "     */%n" 
             + "    public static CLASSNAME create(final Class<?> loggerName, final MessageFactory" 
             + " messageFactory) {%n" 
-            + "        final Logger wrapped = LogManager.getLogger(loggerName, messageFactory);%n" 
+            + "        final Logger wrapped = LogManager.getParsingLogger(loggerName, messageFactory);%n"
             + "        return new CLASSNAME(wrapped);%n" 
             + "    }%n" 
             + "%n" 
@@ -224,7 +224,7 @@ public final class Generate {
             + "     * @return The custom Logger.%n" 
             + "     */%n" 
             + "    public static CLASSNAME create(final Object value) {%n" 
-            + "        final Logger wrapped = LogManager.getLogger(value);%n" 
+            + "        final Logger wrapped = LogManager.getParsingLogger(value);%n"
             + "        return new CLASSNAME(wrapped);%n" 
             + "    }%n" 
             + "%n" 
@@ -241,7 +241,7 @@ public final class Generate {
             + "     * @return The custom Logger.%n" 
             + "     */%n" 
             + "    public static CLASSNAME create(final Object value, final MessageFactory messageFactory) {%n" 
-            + "        final Logger wrapped = LogManager.getLogger(value, messageFactory);%n" 
+            + "        final Logger wrapped = LogManager.getParsingLogger(value, messageFactory);%n"
             + "        return new CLASSNAME(wrapped);%n" 
             + "    }%n" 
             + "%n" 
@@ -253,7 +253,7 @@ public final class Generate {
             + "     * @return The custom Logger.%n" 
             + "     */%n" 
             + "    public static CLASSNAME create(final String name) {%n" 
-            + "        final Logger wrapped = LogManager.getLogger(name);%n" 
+            + "        final Logger wrapped = LogManager.getParsingLogger(name);%n"
             + "        return new CLASSNAME(wrapped);%n" 
             + "    }%n" 
             + "%n" 
@@ -268,7 +268,7 @@ public final class Generate {
             + "     * @return The custom Logger.%n" 
             + "     */%n" 
             + "    public static CLASSNAME create(final String name, final MessageFactory messageFactory) {%n" 
-            + "        final Logger wrapped = LogManager.getLogger(name, messageFactory);%n" 
+            + "        final Logger wrapped = LogManager.getParsingLogger(name, messageFactory);%n"
             + "        return new CLASSNAME(wrapped);%n" 
             + "    }%n";
             //@formatter:on
@@ -852,7 +852,7 @@ public final class Generate {
             + "    }%n"
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message which is only to be constructed if the logging level is the {@code CUSTOM_LEVEL}"
+            + "     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@code CUSTOM_LEVEL}"
             + "level.%n" 
             + "     *%n" 
             + "     * @param msgSupplier A function, which when called, produces the desired log message;%n" 
@@ -864,7 +864,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message (only to be constructed if the logging level is the {@code CUSTOM_LEVEL}%n" 
+            + "     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@code CUSTOM_LEVEL}%n"
             + "     * level) including the stack trace of the {@link Throwable} <code>t</code> passed as parameter.%n"
             + "     *%n" 
             + "     * @param msgSupplier A function, which when called, produces the desired log message;%n" 
@@ -877,7 +877,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message which is only to be constructed if the logging level is the%n" 
+            + "     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the%n"
             + "     * {@code CUSTOM_LEVEL} level with the specified Marker.%n" 
             + "     *%n" 
             + "     * @param marker the marker data specific to this log statement%n" 
@@ -890,7 +890,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message with parameters which are only to be constructed if the logging level is the%n" 
+            + "     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the%n"
             + "     * {@code CUSTOM_LEVEL} level.%n" 
             + "     *%n" 
             + "     * @param marker the marker data specific to this log statement%n" 
@@ -905,7 +905,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message (only to be constructed if the logging level is the {@code CUSTOM_LEVEL}%n" 
+            + "     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@code CUSTOM_LEVEL}%n"
             + "     * level) with the specified Marker and including the stack trace of the {@link Throwable}%n" 
             + "     * <code>t</code> passed as parameter.%n"
             + "     *%n" 
@@ -920,7 +920,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message with parameters which are only to be constructed if the logging level is%n" 
+            + "     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is%n"
             + "     * the {@code CUSTOM_LEVEL} level.%n" 
             + "     *%n" 
             + "     * @param message the message to log; the format depends on the message factory.%n" 
@@ -933,7 +933,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message which is only to be constructed if the logging level is the%n" 
+            + "     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the%n"
             + "     * {@code CUSTOM_LEVEL} level with the specified Marker. The {@code MessageSupplier} may or may%n" 
             + "     * not use the {@link MessageFactory} to construct the {@code Message}.%n" 
             + "     *%n" 
@@ -946,7 +946,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message (only to be constructed if the logging level is the {@code CUSTOM_LEVEL}%n" 
+            + "     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@code CUSTOM_LEVEL}%n"
             + "     * level) with the specified Marker and including the stack trace of the {@link Throwable}%n" 
             + "     * <code>t</code> passed as parameter. The {@code MessageSupplier} may or may not use the%n" 
             + "     * {@link MessageFactory} to construct the {@code Message}.%n"
@@ -962,7 +962,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message which is only to be constructed if the logging level is the%n" 
+            + "     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the%n"
             + "     * {@code CUSTOM_LEVEL} level. The {@code MessageSupplier} may or may not use the%n" 
             + "     * {@link MessageFactory} to construct the {@code Message}.%n"
             + "     *%n" 
@@ -974,7 +974,7 @@ public final class Generate {
             + "    }%n" 
             + "%n" 
             + "    /**%n" 
-            + "     * Logs a message (only to be constructed if the logging level is the {@code CUSTOM_LEVEL}%n" 
+            + "     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@code CUSTOM_LEVEL}%n"
             + "     * level) including the stack trace of the {@link Throwable} <code>t</code> passed as parameter.%n"
             + "     * The {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the%n" 
             + "     * {@code Message}.%n"
@@ -1013,7 +1013,7 @@ public final class Generate {
 
     /**
      * Generates source code for extended logger wrappers that provide convenience methods for the specified custom
-     * levels, and by extending {@code org.apache.logging.log4j.spi.ExtendedLoggerWrapper}, inherit the convenience
+     * levels, and by extending {@code org.apache.com.sschudakov.logging.log4j.spi.ExtendedLoggerWrapper}, inherit the convenience
      * methods for the built-in levels provided by the {@code Logger} interface.
      */
     public static final class ExtendedLogger {

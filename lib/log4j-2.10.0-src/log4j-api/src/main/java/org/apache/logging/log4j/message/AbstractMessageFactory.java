@@ -42,7 +42,7 @@ public abstract class AbstractMessageFactory implements MessageFactory2, Seriali
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.logging.log4j.message.MessageFactory#newMessage(java.lang.Object)
+     * @see org.apache.com.sschudakov.logging.log4j.message.MessageFactory#newMessage(java.lang.Object)
      */
     @Override
     public Message newMessage(final Object message) {
@@ -52,7 +52,7 @@ public abstract class AbstractMessageFactory implements MessageFactory2, Seriali
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.logging.log4j.message.MessageFactory#newMessage(java.lang.String)
+     * @see org.apache.com.sschudakov.logging.log4j.message.MessageFactory#newMessage(java.lang.String)
      */
     @Override
     public Message newMessage(final String message) {

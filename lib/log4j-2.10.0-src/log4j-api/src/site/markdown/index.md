@@ -19,7 +19,7 @@
 # Log4j 2 API
 
 The Log4j 2 API provides the interface that applications should code to and provides the
-adapter components required for implementers to create a logging implementation.
+adapter components required for implementers to create a com.sschudakov.logging implementation.
 
 ## Requirements
 

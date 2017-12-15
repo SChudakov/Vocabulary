@@ -30,124 +30,124 @@ import org.apache.logging.log4j.util.Supplier;
 public interface ExtendedLogger extends Logger {
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The Message.
      * @param t A Throwable.
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, Message message, Throwable t);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param t A Throwable.
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, CharSequence message, Throwable t);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param t A Throwable.
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, Object message, Throwable t);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      * @param t the exception to log, including its stack trace.
      */
     boolean isEnabled(Level level, Marker marker, String message, Throwable t);
 
     /**
-     * Determine if logging is enabled.
+     * Determine if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param params The parameters.
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object... params);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
      * @param p1 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
      * @param p1 the message parameters
      * @param p2 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
      * @param p1 the message parameters
      * @param p2 the message parameters
      * @param p3 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -155,15 +155,15 @@ public interface ExtendedLogger extends Logger {
      * @param p2 the message parameters
      * @param p3 the message parameters
      * @param p4 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3,
             Object p4);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -172,15 +172,15 @@ public interface ExtendedLogger extends Logger {
      * @param p3 the message parameters
      * @param p4 the message parameters
      * @param p5 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3,
             Object p4, Object p5);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -190,15 +190,15 @@ public interface ExtendedLogger extends Logger {
      * @param p4 the message parameters
      * @param p5 the message parameters
      * @param p6 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3,
             Object p4, Object p5, Object p6);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -209,15 +209,15 @@ public interface ExtendedLogger extends Logger {
      * @param p5 the message parameters
      * @param p6 the message parameters
      * @param p7 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3,
             Object p4, Object p5, Object p6, Object p7);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -229,15 +229,15 @@ public interface ExtendedLogger extends Logger {
      * @param p6 the message parameters
      * @param p7 the message parameters
      * @param p8 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3,
             Object p4, Object p5, Object p6, Object p7, Object p8);
 
     /**
-     * Determines if logging is enabled.
+     * Determines if com.sschudakov.logging is enabled.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param p0 the message parameters
@@ -250,7 +250,7 @@ public interface ExtendedLogger extends Logger {
      * @param p7 the message parameters
      * @param p8 the message parameters
      * @param p9 the message parameters
-     * @return True if logging is enabled, false otherwise.
+     * @return True if com.sschudakov.logging is enabled, false otherwise.
      */
     boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3,
             Object p4, Object p5, Object p6, Object p7, Object p8, Object p9);
@@ -260,7 +260,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The Message.
      * @param t the exception to log, including its stack trace.
@@ -272,7 +272,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The CharSequence message.
      * @param t the exception to log, including its stack trace.
@@ -284,7 +284,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param t the exception to log, including its stack trace.
@@ -296,7 +296,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param t the exception to log, including its stack trace.
@@ -308,7 +308,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      */
@@ -319,7 +319,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param params The message parameters.
@@ -331,7 +331,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -343,7 +343,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -356,7 +356,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -370,7 +370,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -386,7 +386,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -403,7 +403,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -421,7 +421,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -440,7 +440,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -460,7 +460,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -481,7 +481,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param p0 the message parameters
@@ -504,7 +504,7 @@ public interface ExtendedLogger extends Logger {
          *
          * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
          *            method when location information needs to be logged.
-         * @param level The logging Level to check.
+         * @param level The com.sschudakov.logging Level to check.
          * @param marker A Marker or null.
          * @param message The Message.
          * @param t the exception to log, including its stack trace.
@@ -516,7 +516,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param msgSupplier A function, which when called, produces the desired log message.
      * @param t the exception to log, including its stack trace.
@@ -528,7 +528,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message format.
      * @param paramSuppliers An array of functions, which when called, produce the desired log message parameters.
@@ -540,7 +540,7 @@ public interface ExtendedLogger extends Logger {
      *
      * @param fqcn The fully qualified class name of the logger entry point, used to determine the caller class and
      *            method when location information needs to be logged.
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param msgSupplier A function, which when called, produces the desired log message.
      * @param t the exception to log, including its stack trace.

@@ -146,7 +146,7 @@ public class XmlConfiguration extends AbstractConfiguration implements Reconfigu
             }
             statusConfig.initialize();
         } catch (final SAXException | IOException | ParserConfigurationException e) {
-            LOGGER.error("Error parsing " + configSource.getLocation(), e);
+            LOGGER.error("Error com.sschudakov.parsing " + configSource.getLocation(), e);
         }
         if (strict && schemaResource != null && buffer != null) {
             try (InputStream is = Loader.getResourceAsStream(schemaResource, XmlConfiguration.class.getClassLoader())) {
@@ -157,7 +157,7 @@ public class XmlConfiguration extends AbstractConfiguration implements Reconfigu
                     try {
                         schema = factory.newSchema(src);
                     } catch (final SAXException ex) {
-                        LOGGER.error("Error parsing Log4j schema", ex);
+                        LOGGER.error("Error com.sschudakov.parsing Log4j schema", ex);
                     }
                     if (schema != null) {
                         final Validator validator = schema.newValidator();
@@ -181,7 +181,7 @@ public class XmlConfiguration extends AbstractConfiguration implements Reconfigu
     }
 
     /**
-     * Creates a new DocumentBuilder suitable for parsing a configuration file.
+     * Creates a new DocumentBuilder suitable for com.sschudakov.parsing a configuration file.
      * 
      * @param xIncludeAware enabled XInclude
      * @return a new DocumentBuilder
@@ -260,7 +260,7 @@ public class XmlConfiguration extends AbstractConfiguration implements Reconfigu
     @Override
     public void setup() {
         if (rootElement == null) {
-            LOGGER.error("No logging configuration");
+            LOGGER.error("No com.sschudakov.logging configuration");
             return;
         }
         constructHierarchy(rootNode, rootElement);

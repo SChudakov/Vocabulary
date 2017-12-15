@@ -33,7 +33,7 @@ import static org.junit.Assert.assertTrue;
 public class NoConsoleNoAnsiTest {
 
     private static final String EXPECTED =
-            "ERROR LoggerTest o.a.l.l.c.p.NoConsoleNoAnsiTest org.apache.logging.log4j.core.pattern.NoConsoleNoAnsiTest"
+            "ERROR LoggerTest o.a.l.l.c.p.NoConsoleNoAnsiTest org.apache.com.sschudakov.logging.log4j.core.pattern.NoConsoleNoAnsiTest"
             + Strings.LINE_SEPARATOR;
 
     @Rule

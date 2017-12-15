@@ -330,7 +330,7 @@ public class TestConfigurator {
         final Configuration config = ctx.getConfiguration();
         assertNotNull("No configuration", config);
         assertEquals("Unexpected Configuration", "XMLConfigTest", config.getName());
-        final LoggerConfig lcfg = config.getLoggerConfig("org.apache.logging.log4j.test1");
+        final LoggerConfig lcfg = config.getLoggerConfig("org.apache.com.sschudakov.logging.log4j.test1");
         assertNotNull("No Logger", lcfg);
         final Filter filter = lcfg.getFilter();
         assertNull("Unexpected Filter", filter);
@@ -343,7 +343,7 @@ public class TestConfigurator {
         final Configuration config = ctx.getConfiguration();
         assertNotNull("No configuration", config);
         assertEquals("Unexpected Configuration", "XMLConfigTest", config.getName());
-        final LoggerConfig lcfg = config.getLoggerConfig("org.apache.logging.log4j.test1");
+        final LoggerConfig lcfg = config.getLoggerConfig("org.apache.com.sschudakov.logging.log4j.test1");
         assertNotNull("No Logger", lcfg);
         final Filter filter = lcfg.getFilter();
         assertNotNull("No Filter", filter);
@@ -392,7 +392,7 @@ public class TestConfigurator {
         appenderBuilder.add(builder.newFilter("MarkerFilter", Filter.Result.DENY,
                 Filter.Result.NEUTRAL).addAttribute("marker", "FLOW"));
         builder.add(appenderBuilder);
-        builder.add(builder.newLogger("org.apache.logging.log4j", Level.DEBUG).
+        builder.add(builder.newLogger("org.apache.com.sschudakov.logging.log4j", Level.DEBUG).
                 add(builder.newAppenderRef("Stdout")).
                 addAttribute("additivity", false));
         builder.add(builder.newRootLogger(Level.ERROR).add(builder.newAppenderRef("Stdout")));
@@ -472,7 +472,7 @@ public class TestConfigurator {
         appenderBuilder.add(builder.newFilter("ScriptFilter", Filter.Result.DENY,
                 Filter.Result.NEUTRAL).addComponent(builder.newComponent("ScriptRef").addAttribute("ref", "filter.groovy")));
         builder.add(appenderBuilder);
-        builder.add(builder.newLogger("org.apache.logging.log4j", Level.DEBUG).
+        builder.add(builder.newLogger("org.apache.com.sschudakov.logging.log4j", Level.DEBUG).
                 add(builder.newAppenderRef("Stdout")).
                 addAttribute("additivity", false));
         builder.add(builder.newRootLogger(Level.ERROR).add(builder.newAppenderRef("Stdout")));

@@ -125,7 +125,7 @@ public class StatusConfiguration {
     }
 
     /**
-     * Specifies the logging level by name to use for filtering StatusLogger messages.
+     * Specifies the com.sschudakov.logging level by name to use for filtering StatusLogger messages.
      *
      * @param status name of logger level to filter below.
      * @return {@code this}
@@ -141,7 +141,7 @@ public class StatusConfiguration {
     }
 
     /**
-     * Specifies the logging level to use for filtering StatusLogger messages.
+     * Specifies the com.sschudakov.logging level to use for filtering StatusLogger messages.
      *
      * @param status logger level to filter below.
      * @return {@code this}

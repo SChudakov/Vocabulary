@@ -28,7 +28,7 @@ import org.apache.logging.log4j.core.config.ConfigurationSource;
 import org.apache.logging.log4j.core.util.Builder;
 
 /**
- * Interface for building logging configurations.
+ * Interface for building com.sschudakov.logging configurations.
  * @param <T> The Configuration type created by this builder.
  * @since 2.4
  */
@@ -137,7 +137,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
     /**
      * Returns a builder for creating Async Loggers.
      * @param name The name of the Logger.
-     * @param level The logging Level to be assigned to the Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the Logger.
      * @return A new LoggerComponentBuilder.
      */
     LoggerComponentBuilder newAsyncLogger(String name, Level level);
@@ -145,7 +145,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
     /**
      * Returns a builder for creating Async Loggers.
      * @param name The name of the Logger.
-     * @param level The logging Level to be assigned to the Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the Logger.
      * @param includeLocation If true include location information.
      * @return A new LoggerComponentBuilder.
      */
@@ -154,7 +154,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
     /**
      * Returns a builder for creating Async Loggers.
      * @param name The name of the Logger.
-     * @param level The logging Level to be assigned to the Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the Logger.
      * @return A new LoggerComponentBuilder.
      */
     LoggerComponentBuilder newAsyncLogger(String name, String level);
@@ -162,7 +162,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
     /**
      * Returns a builder for creating Async Loggers.
      * @param name The name of the Logger.
-     * @param level The logging Level to be assigned to the Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the Logger.
      * @param includeLocation If true include location information.
      * @return A new LoggerComponentBuilder.
      */
@@ -170,7 +170,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
 
     /**
      * Returns a builder for creating the async root Logger.
-     * @param level The logging Level to be assigned to the root Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the root Logger.
      * @return A new RootLoggerComponentBuilder.
      */
     RootLoggerComponentBuilder newAsyncRootLogger(Level level);
@@ -178,7 +178,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
 
     /**
      * Returns a builder for creating the async root Logger.
-     * @param level The logging Level to be assigned to the root Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the root Logger.
      * @param includeLocation If true include location information.
      * @return A new RootLoggerComponentBuilder.
      */
@@ -186,7 +186,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
 
     /**
      * Returns a builder for creating the async root Logger.
-     * @param level The logging Level to be assigned to the root Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the root Logger.
      * @return A new RootLoggerComponentBuilder.
      */
     RootLoggerComponentBuilder newAsyncRootLogger(String level);
@@ -194,7 +194,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
 
     /**
      * Returns a builder for creating the async root Logger.
-     * @param level The logging Level to be assigned to the root Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the root Logger.
      * @param includeLocation If true include location information.
      * @return A new RootLoggerComponentBuilder.
      */
@@ -279,7 +279,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
     /**
      * Returns a builder for creating Loggers.
      * @param name The name of the Logger.
-     * @param level The logging Level to be assigned to the Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the Logger.
      * @return A new LoggerComponentBuilder.
      */
     LoggerComponentBuilder newLogger(String name, Level level);
@@ -287,7 +287,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
     /**
      * Returns a builder for creating Loggers.
      * @param name The name of the Logger.
-     * @param level The logging Level to be assigned to the Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the Logger.
      * @param includeLocation If true include location information.
      * @return A new LoggerComponentBuilder.
      */
@@ -296,7 +296,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
     /**
      * Returns a builder for creating Loggers.
      * @param name The name of the Logger.
-     * @param level The logging Level to be assigned to the Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the Logger.
      * @return A new LoggerComponentBuilder.
      */
     LoggerComponentBuilder newLogger(String name, String level);
@@ -304,7 +304,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
     /**
      * Returns a builder for creating Loggers.
      * @param name The name of the Logger.
-     * @param level The logging Level to be assigned to the Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the Logger.
      * @param includeLocation If true include location information.
      * @return A new LoggerComponentBuilder.
      */
@@ -312,14 +312,14 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
 
     /**
      * Returns a builder for creating the root Logger.
-     * @param level The logging Level to be assigned to the root Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the root Logger.
      * @return A new RootLoggerComponentBuilder.
      */
     RootLoggerComponentBuilder newRootLogger(Level level);
 
     /**
      * Returns a builder for creating the root Logger.
-     * @param level The logging Level to be assigned to the root Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the root Logger.
      * @param includeLocation If true include location information.
      * @return A new RootLoggerComponentBuilder.
      */
@@ -327,7 +327,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
 
     /**
      * Returns a builder for creating the root Logger.
-     * @param level The logging Level to be assigned to the root Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the root Logger.
      *
      * @return A new RootLoggerComponentBuilder.
      */
@@ -335,7 +335,7 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
 
     /**
      * Returns a builder for creating the root Logger.
-     * @param level The logging Level to be assigned to the root Logger.
+     * @param level The com.sschudakov.logging Level to be assigned to the root Logger.
      *
      * @return A new RootLoggerComponentBuilder.
      */
@@ -397,14 +397,14 @@ public interface ConfigurationBuilder<T extends Configuration> extends Builder<T
 
     /**
      * Sets the level of the StatusLogger.
-     * @param level The logging level.
+     * @param level The com.sschudakov.logging level.
      * @return this builder instance.
      */
     ConfigurationBuilder<T> setStatusLevel(Level level);
 
 
     /**
-     * Sets whether the logging should include constructing Plugins.
+     * Sets whether the com.sschudakov.logging should include constructing Plugins.
      * @param verbosity "disable" will hide messages from plugin construction.
      * @return this builder instance.
      */

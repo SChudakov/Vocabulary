@@ -20,7 +20,7 @@ import org.apache.logging.log4j.util.PerformanceSensitive;
 import org.apache.logging.log4j.util.StringBuilderFormattable;
 
 /**
- * Messages implementing this interface are reused between logging calls.
+ * Messages implementing this interface are reused between com.sschudakov.logging calls.
  * <p>
  * If a Message is reusable, downstream components should not hand over this instance to another thread, but extract its
  * content (via the {@link StringBuilderFormattable#formatTo(StringBuilder)} method) instead.

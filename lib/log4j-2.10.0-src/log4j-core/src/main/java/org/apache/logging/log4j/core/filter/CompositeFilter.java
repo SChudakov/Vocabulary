@@ -175,7 +175,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -203,7 +203,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -230,7 +230,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -258,7 +258,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -287,7 +287,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -317,7 +317,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -349,7 +349,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -382,7 +382,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -416,7 +416,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -452,7 +452,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -489,7 +489,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -527,7 +527,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg
@@ -555,7 +555,7 @@ public final class CompositeFilter extends AbstractLifeCycle implements Iterable
      * @param logger
      *            The Logger.
      * @param level
-     *            The event logging Level.
+     *            The event com.sschudakov.logging Level.
      * @param marker
      *            The Marker for the event or null.
      * @param msg

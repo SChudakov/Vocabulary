@@ -39,7 +39,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 @JsonRootName(XmlConstants.ELT_EVENT)
 @JacksonXmlRootElement(namespace = XmlConstants.XML_NAMESPACE, localName = XmlConstants.ELT_EVENT)
-@JsonFilter("org.apache.logging.log4j.core.impl.Log4jLogEvent")
+@JsonFilter("org.apache.com.sschudakov.logging.log4j.core.impl.Log4jLogEvent")
 @JsonPropertyOrder({ "timeMillis", "threadName", "level", "loggerName", "marker", "message", "thrown", XmlConstants.ELT_CONTEXT_MAP,
         JsonConstants.ELT_CONTEXT_STACK, "loggerFQCN", "Source", "endOfBatch" })
 abstract class LogEventWithContextListMixIn implements LogEvent {

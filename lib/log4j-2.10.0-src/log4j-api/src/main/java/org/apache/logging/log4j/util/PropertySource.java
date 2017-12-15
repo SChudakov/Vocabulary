@@ -76,13 +76,13 @@ public interface PropertySource {
      * @since 2.10.0
      */
     final class Util {
-        private static final String PREFIXES = "(?i:^log4j2?[-._/]?|^org\\.apache\\.logging\\.log4j\\.)?";
+        private static final String PREFIXES = "(?i:^log4j2?[-._/]?|^org\\.apache\\.com.sschudakov.logging\\.log4j\\.)?";
         private static final Pattern PROPERTY_TOKENIZER = Pattern.compile(PREFIXES + "([A-Z]*[a-z0-9]+|[A-Z0-9]+)[-._/]?");
         private static final Map<CharSequence, List<CharSequence>> CACHE = new ConcurrentHashMap<>();
 
         /**
          * Converts a property name string into a list of tokens. This will strip a prefix of {@code log4j},
-         * {@code log4j2}, {@code Log4j}, or {@code org.apache.logging.log4j}, along with separators of
+         * {@code log4j2}, {@code Log4j}, or {@code org.apache.com.sschudakov.logging.log4j}, along with separators of
          * dash {@code -}, dot {@code .}, underscore {@code _}, and slash {@code /}. Tokens can also be separated
          * by camel case conventions without needing a separator character in between.
          *

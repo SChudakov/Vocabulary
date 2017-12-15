@@ -19,7 +19,7 @@ package org.apache.logging.log4j.spi;
 import org.apache.logging.log4j.message.MessageFactory;
 
 /**
- * Anchor point for logging implementations.
+ * Anchor point for com.sschudakov.logging implementations.
  */
 public interface LoggerContext {
 

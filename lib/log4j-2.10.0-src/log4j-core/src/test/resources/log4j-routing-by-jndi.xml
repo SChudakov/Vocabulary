@@ -31,9 +31,9 @@
       <ThresholdFilter level="debug"/>
     </List>
     <Routing name="Routing">
-      <Routes pattern="$${jndi:logging/context-name}">
+      <Routes pattern="$${jndi:com.sschudakov.logging/context-name}">
         <Route>
-          <File name="DefaultApplicationLogFile" fileName="target/routingbyjndi/routingbyjnditest-${jndi:logging/context-name:-unknown}.log" append="false">
+          <File name="DefaultApplicationLogFile" fileName="target/routingbyjndi/routingbyjnditest-${jndi:com.sschudakov.logging/context-name:-unknown}.log" append="false">
             <PatternLayout>
               <Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
             </PatternLayout>

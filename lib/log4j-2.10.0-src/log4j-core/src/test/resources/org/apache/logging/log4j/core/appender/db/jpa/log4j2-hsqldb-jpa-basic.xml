@@ -22,11 +22,11 @@
       <PatternLayout pattern="%C{1.} %m %level MDC%X%n"/>
     </Console>
     <Jpa name="databaseAppender" persistenceUnitName="hyperSqlJpaAppenderTestUnit"
-         entityClassName="org.apache.logging.log4j.core.appender.db.jpa.TestBasicEntity" ignoreExceptions="false" />
+         entityClassName="org.apache.com.sschudakov.logging.log4j.core.appender.db.jpa.TestBasicEntity" ignoreExceptions="false" />
   </Appenders>
 
   <Loggers>
-    <Logger name="org.apache.logging.log4j.core.appender.db" level="debug" additivity="false">
+    <Logger name="org.apache.com.sschudakov.logging.log4j.core.appender.db" level="debug" additivity="false">
       <AppenderRef ref="databaseAppender" />
     </Logger>
 

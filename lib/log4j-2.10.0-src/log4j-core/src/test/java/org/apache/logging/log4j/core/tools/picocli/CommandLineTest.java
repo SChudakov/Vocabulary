@@ -64,7 +64,7 @@ import static org.junit.Assert.*;
 import static org.apache.logging.log4j.core.tools.picocli.CommandLine.*;
 
 /**
- * Tests for the CommandLine argument parsing interpreter functionality.
+ * Tests for the CommandLine argument com.sschudakov.parsing interpreter functionality.
  */
 // DONE arrays
 // DONE collection fields
@@ -548,7 +548,7 @@ public class CommandLineTest {
             assertEquals(suffix, ex.getMessage().substring(ex.getMessage().length() - suffix.length(), ex.getMessage().length()));
         }
     }
-    @Ignore("Requires #14 case-insensitive enum parsing")
+    @Ignore("Requires #14 case-insensitive enum com.sschudakov.parsing")
     @Test
     public void testEnumTypeConversionIsCaseInsensitive() {
         EnumParams params = CommandLine.populateCommand(new EnumParams(),

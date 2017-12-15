@@ -75,7 +75,7 @@ public class DeleteAction extends AbstractPathAction {
     /*
      * (non-Javadoc)
      * 
-     * @see org.apache.logging.log4j.core.appender.rolling.action.AbstractPathAction#execute()
+     * @see org.apache.com.sschudakov.logging.log4j.core.appender.rolling.action.AbstractPathAction#execute()
      */
     @Override
     public boolean execute() throws IOException {
@@ -125,7 +125,7 @@ public class DeleteAction extends AbstractPathAction {
     /*
      * (non-Javadoc)
      * 
-     * @see org.apache.logging.log4j.core.appender.rolling.action.AbstractPathAction#execute(FileVisitor)
+     * @see org.apache.com.sschudakov.logging.log4j.core.appender.rolling.action.AbstractPathAction#execute(FileVisitor)
      */
     @Override
     public boolean execute(final FileVisitor<Path> visitor) throws IOException {

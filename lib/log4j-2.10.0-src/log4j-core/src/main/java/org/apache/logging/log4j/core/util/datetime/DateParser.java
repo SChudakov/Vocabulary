@@ -24,7 +24,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 /**
- * DateParser is the "missing" interface for the parsing methods of
+ * DateParser is the "missing" interface for the com.sschudakov.parsing methods of
  * {@link java.text.DateFormat}. You can obtain an object implementing this
  * interface by using one of the FastDateFormat factory methods.
  * <p>
@@ -69,7 +69,7 @@ public interface DateParser {
      * the offset of the source text which does not match the supplied format.
      *
      * @param source The text to parse.
-     * @param pos On input, the position in the source to start parsing, on output, updated position.
+     * @param pos On input, the position in the source to start com.sschudakov.parsing, on output, updated position.
      * @param calendar The calendar into which to set parsed fields.
      * @return true, if source has been parsed (pos parsePosition is updated); otherwise false (and pos errorIndex is updated)
      * @throws IllegalArgumentException when Calendar has been set to be not lenient, and a parsed field is

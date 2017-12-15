@@ -44,7 +44,7 @@ public class ReusableParameterizedMessage implements ReusableMessage {
     private transient Object[] varargs;
     private transient Object[] params = new Object[MAX_PARMS];
     private transient Throwable throwable;
-    transient boolean reserved = false; // LOG4J2-1583 prevent scrambled logs with nested logging calls
+    transient boolean reserved = false; // LOG4J2-1583 prevent scrambled logs with nested com.sschudakov.logging calls
 
     /**
      * Creates a reusable message.

@@ -209,7 +209,7 @@ public class CompositeConfigurationTest {
             @Override
             public void evaluate() throws Throwable {
                 final Configuration oldConfig = rule.getConfiguration();
-                final org.apache.logging.log4j.Logger logger = rule.getLogger("LoggerTest");
+                final org.apache.com.sschudakov.logging.log4j.Logger logger = rule.getParsingLogger("LoggerTest");
                 final int MONITOR_INTERVAL_SECONDS = 5;
                 final File file = new File("target/test-classes/log4j-comp-reconfig.properties");
                 final long orig = file.lastModified();

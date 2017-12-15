@@ -178,7 +178,7 @@ public interface Configuration extends Filterable {
      * (non-Javadoc)
      *
      * @see
-     * org.apache.logging.log4j.core.config.ReliabilityStrategyFactory#getReliabilityStrategy(org.apache.logging.log4j
+     * org.apache.com.sschudakov.logging.log4j.core.config.ReliabilityStrategyFactory#getReliabilityStrategy(org.apache.com.sschudakov.logging.log4j
      * .core.config.LoggerConfig)
      */
 

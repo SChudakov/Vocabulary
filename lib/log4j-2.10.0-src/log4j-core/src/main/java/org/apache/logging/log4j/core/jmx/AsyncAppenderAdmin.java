@@ -94,7 +94,7 @@ public class AsyncAppenderAdmin implements AsyncAppenderAdminMBean {
     
     /**
      * Returns {@code true} if this AsyncAppender will take a snapshot of the stack with
-     * every log event to determine the class and method where the logging call
+     * every log event to determine the class and method where the com.sschudakov.logging call
      * was made.
      * @return {@code true} if location is included with every event, {@code false} otherwise
      */

@@ -686,7 +686,7 @@ public abstract class AbstractConfiguration extends AbstractFilterable implement
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.logging.log4j.core.config.ReliabilityStrategyFactory#getReliabilityStrategy(org.apache.logging.log4j
+     * @see org.apache.com.sschudakov.logging.log4j.core.config.ReliabilityStrategyFactory#getReliabilityStrategy(org.apache.com.sschudakov.logging.log4j
      * .core.config.LoggerConfig)
      */
     @Override
@@ -791,7 +791,7 @@ public abstract class AbstractConfiguration extends AbstractFilterable implement
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.logging.log4j.core.config.Configuration#getCustomLevels()
+     * @see org.apache.com.sschudakov.logging.log4j.core.config.Configuration#getCustomLevels()
      */
     @Override
     public List<CustomLevelConfig> getCustomLevels() {

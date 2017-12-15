@@ -49,9 +49,9 @@ public class OutputStreamManagerTest {
             data = statusData.get(1);
         }
         assertEquals(Level.ERROR, data.getLevel());
-        assertEquals("Could not create plugin of type class org.apache.logging.log4j.core.appender.RollingRandomAccessFileAppender for element RollingRandomAccessFile",
+        assertEquals("Could not create plugin of type class org.apache.com.sschudakov.logging.log4j.core.appender.RollingRandomAccessFileAppender for element RollingRandomAccessFile",
                 data.getMessage().getFormattedMessage());
-        assertEquals("org.apache.logging.log4j.core.config.ConfigurationException: Configuration has multiple incompatible Appenders pointing to the same resource 'target/multiIncompatibleAppender.log'",
+        assertEquals("org.apache.com.sschudakov.logging.log4j.core.config.ConfigurationException: Configuration has multiple incompatible Appenders pointing to the same resource 'target/multiIncompatibleAppender.log'",
                 data.getThrowable().toString());
     }
 

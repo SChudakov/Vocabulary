@@ -24,7 +24,7 @@ import org.apache.logging.log4j.util.MessageSupplier;
 import org.apache.logging.log4j.util.Supplier;
 
 /**
- * This is the central interface in the log4j package. Most logging operations, except configuration, are done through
+ * This is the central interface in the log4j package. Most com.sschudakov.logging operations, except configuration, are done through
  * this interface.
  *
  * <p>
@@ -35,7 +35,7 @@ import org.apache.logging.log4j.util.Supplier;
  *
  * <pre>
  * public class MyClass {
- *     private static final Logger LOGGER = LogManager.getLogger();
+ *     private static final Logger LOGGER = LogManager.getParsingLogger();
  *     // ...
  * }
  * </pre>
@@ -77,16 +77,16 @@ import org.apache.logging.log4j.util.Supplier;
 public interface Logger {
 
     /**
-     * Logs an exception or error that has been caught to a specific logging level.
+     * Logs an exception or error that has been caught to a specific com.sschudakov.logging level.
      *
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param t The Throwable.
      */
     void catching(Level level, Throwable t);
 
     /**
      * Logs an exception or error that has been caught. Normally, one may wish to provide additional information with an
-     * exception while logging it; in these cases, one would not use this method. In other cases where simply logging
+     * exception while com.sschudakov.logging it; in these cases, one would not use this method. In other cases where simply com.sschudakov.logging
      * the fact that an exception was swallowed somewhere (e.g., at the top of the stack trace in a {@code main()}
      * method), this method is ideal for it.
      *
@@ -112,7 +112,7 @@ public interface Logger {
     void debug(Marker marker, Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#DEBUG DEBUG} level with
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG DEBUG} level with
      * the specified Marker. The {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the
      * {@code Message}.
      *
@@ -123,7 +123,7 @@ public interface Logger {
     void debug(Marker marker, MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#DEBUG DEBUG} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG DEBUG} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -189,7 +189,7 @@ public interface Logger {
     void debug(Marker marker, String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#DEBUG
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG
      * DEBUG} level.
      *
      * @param marker the marker data specific to this log statement
@@ -210,7 +210,7 @@ public interface Logger {
     void debug(Marker marker, String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#DEBUG DEBUG} level with
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG DEBUG} level with
      * the specified Marker.
      *
      * @param marker the marker data specific to this log statement
@@ -221,7 +221,7 @@ public interface Logger {
     void debug(Marker marker, Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#DEBUG DEBUG} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG DEBUG} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param marker the marker data specific to this log statement
@@ -248,7 +248,7 @@ public interface Logger {
     void debug(Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#DEBUG DEBUG} level. The
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG DEBUG} level. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
      * @param msgSupplier A function, which when called, produces the desired log message.
@@ -257,7 +257,7 @@ public interface Logger {
     void debug(MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#DEBUG DEBUG} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG DEBUG} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter. The {@code MessageSupplier} may or may
      * not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -316,7 +316,7 @@ public interface Logger {
     void debug(String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#DEBUG
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG
      * DEBUG} level.
      *
      * @param message the message to log; the format depends on the message factory.
@@ -335,7 +335,7 @@ public interface Logger {
     void debug(String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#DEBUG DEBUG} level.
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG DEBUG} level.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
@@ -344,7 +344,7 @@ public interface Logger {
     void debug(Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#DEBUG DEBUG} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#DEBUG DEBUG} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
@@ -666,7 +666,7 @@ public interface Logger {
     void error(Marker marker, Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#ERROR ERROR} level with
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR ERROR} level with
      * the specified Marker. The {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the
      * {@code Message}.
      *
@@ -677,7 +677,7 @@ public interface Logger {
     void error(Marker marker, MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#ERROR ERROR} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR ERROR} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -743,7 +743,7 @@ public interface Logger {
     void error(Marker marker, String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#ERROR
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR
      * ERROR} level.
      *
      * @param marker the marker data specific to this log statement
@@ -764,7 +764,7 @@ public interface Logger {
     void error(Marker marker, String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#ERROR ERROR} level with
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR ERROR} level with
      * the specified Marker.
      *
      * @param marker the marker data specific to this log statement
@@ -775,7 +775,7 @@ public interface Logger {
     void error(Marker marker, Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#ERROR ERROR} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR ERROR} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param marker the marker data specific to this log statement
@@ -802,7 +802,7 @@ public interface Logger {
     void error(Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#ERROR ERROR} level. The
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR ERROR} level. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
      * @param msgSupplier A function, which when called, produces the desired log message.
@@ -811,7 +811,7 @@ public interface Logger {
     void error(MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#ERROR ERROR} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR ERROR} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter. The {@code MessageSupplier} may or may
      * not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -870,7 +870,7 @@ public interface Logger {
     void error(String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#ERROR
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR
      * ERROR} level.
      *
      * @param message the message to log; the format depends on the message factory.
@@ -889,7 +889,7 @@ public interface Logger {
     void error(String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#ERROR ERROR} level.
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR ERROR} level.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
@@ -898,7 +898,7 @@ public interface Logger {
     void error(Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#ERROR ERROR} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#ERROR ERROR} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
@@ -1214,7 +1214,7 @@ public interface Logger {
     void fatal(Marker marker, Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#FATAL FATAL} level with
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL FATAL} level with
      * the specified Marker. The {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the
      * {@code Message}.
      *
@@ -1225,7 +1225,7 @@ public interface Logger {
     void fatal(Marker marker, MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#FATAL FATAL} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL FATAL} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -1291,7 +1291,7 @@ public interface Logger {
     void fatal(Marker marker, String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#FATAL
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL
      * FATAL} level.
      *
      * @param marker the marker data specific to this log statement
@@ -1312,7 +1312,7 @@ public interface Logger {
     void fatal(Marker marker, String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#FATAL FATAL} level with
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL FATAL} level with
      * the specified Marker.
      *
      * @param marker the marker data specific to this log statement
@@ -1323,7 +1323,7 @@ public interface Logger {
     void fatal(Marker marker, Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#FATAL FATAL} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL FATAL} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param marker the marker data specific to this log statement
@@ -1350,7 +1350,7 @@ public interface Logger {
     void fatal(Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#FATAL FATAL} level. The
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL FATAL} level. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
      * @param msgSupplier A function, which when called, produces the desired log message.
@@ -1359,7 +1359,7 @@ public interface Logger {
     void fatal(MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#FATAL FATAL} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL FATAL} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter. The {@code MessageSupplier} may or may
      * not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -1418,7 +1418,7 @@ public interface Logger {
     void fatal(String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#FATAL
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL
      * FATAL} level.
      *
      * @param message the message to log; the format depends on the message factory.
@@ -1437,7 +1437,7 @@ public interface Logger {
     void fatal(String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#FATAL FATAL} level.
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL FATAL} level.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
@@ -1446,7 +1446,7 @@ public interface Logger {
     void fatal(Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#FATAL FATAL} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#FATAL FATAL} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
@@ -1767,7 +1767,7 @@ public interface Logger {
     void info(Marker marker, Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#INFO INFO} level with the
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO INFO} level with the
      * specified Marker. The {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the
      * {@code Message}.
      *
@@ -1778,7 +1778,7 @@ public interface Logger {
     void info(Marker marker, MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#INFO INFO} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO INFO} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -1844,7 +1844,7 @@ public interface Logger {
     void info(Marker marker, String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#INFO
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO
      * INFO} level.
      *
      * @param marker the marker data specific to this log statement
@@ -1865,7 +1865,7 @@ public interface Logger {
     void info(Marker marker, String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#INFO INFO} level with the
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO INFO} level with the
      * specified Marker.
      *
      * @param marker the marker data specific to this log statement
@@ -1876,7 +1876,7 @@ public interface Logger {
     void info(Marker marker, Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#INFO INFO} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO INFO} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param marker the marker data specific to this log statement
@@ -1903,7 +1903,7 @@ public interface Logger {
     void info(Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#INFO INFO} level. The
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO INFO} level. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
      * @param msgSupplier A function, which when called, produces the desired log message.
@@ -1912,7 +1912,7 @@ public interface Logger {
     void info(MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#INFO INFO} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO INFO} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter. The {@code MessageSupplier} may or may
      * not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -1971,7 +1971,7 @@ public interface Logger {
     void info(String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#INFO
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO
      * INFO} level.
      *
      * @param message the message to log; the format depends on the message factory.
@@ -1990,7 +1990,7 @@ public interface Logger {
     void info(String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#INFO INFO} level.
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO INFO} level.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
@@ -1999,7 +1999,7 @@ public interface Logger {
     void info(Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#INFO INFO} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#INFO INFO} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
@@ -2394,7 +2394,7 @@ public interface Logger {
     /**
      * Logs a message with the specific Marker at the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param msg the message string to be logged
      */
@@ -2403,7 +2403,7 @@ public interface Logger {
     /**
      * Logs a message with the specific Marker at the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param msg the message string to be logged
      * @param t A Throwable or null.
@@ -2411,11 +2411,11 @@ public interface Logger {
     void log(Level level, Marker marker, Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the specified level with the specified
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the specified level with the specified
      * Marker. The {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the
      * {@code Message}.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param msgSupplier A function, which when called, produces the desired log message.
      * @since 2.4
@@ -2423,11 +2423,11 @@ public interface Logger {
     void log(Level level, Marker marker, MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the specified level) with the specified Marker and
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the specified level) with the specified Marker and
      * including the stack log of the {@link Throwable} <code>t</code> passed as parameter. The {@code MessageSupplier}
      * may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param msgSupplier A function, which when called, produces the desired log message.
      * @param t A Throwable or null.
@@ -2438,7 +2438,7 @@ public interface Logger {
     /**
      * Logs a message CharSequence with the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message CharSequence to log.
      */
@@ -2448,7 +2448,7 @@ public interface Logger {
      * Logs a CharSequence at the given level including the stack trace of the {@link Throwable} <code>t</code> passed as
      * parameter.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message CharSequence to log.
      * @param t the exception to log, including its stack trace.
@@ -2458,7 +2458,7 @@ public interface Logger {
     /**
      * Logs a message object with the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message object to log.
      */
@@ -2468,7 +2468,7 @@ public interface Logger {
      * Logs a message at the given level including the stack trace of the {@link Throwable} <code>t</code> passed as
      * parameter.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log.
      * @param t the exception to log, including its stack trace.
@@ -2478,7 +2478,7 @@ public interface Logger {
     /**
      * Logs a message object with the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message object to log.
      */
@@ -2487,7 +2487,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param params parameters to the message.
@@ -2496,9 +2496,9 @@ public interface Logger {
     void log(Level level, Marker marker, String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the specified level.
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param paramSuppliers An array of functions, which when called, produce the desired log message parameters.
@@ -2510,7 +2510,7 @@ public interface Logger {
      * Logs a message at the given level including the stack trace of the {@link Throwable} <code>t</code> passed as
      * parameter.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log.
      * @param t the exception to log, including its stack trace.
@@ -2518,9 +2518,9 @@ public interface Logger {
     void log(Level level, Marker marker, String message, Throwable t);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the specified level) with the specified Marker.
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the specified level) with the specified Marker.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
@@ -2529,10 +2529,10 @@ public interface Logger {
     void log(Level level, Marker marker, Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the specified level) with the specified Marker and
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the specified level) with the specified Marker and
      * including the stack log of the {@link Throwable} <code>t</code> passed as parameter.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
@@ -2544,7 +2544,7 @@ public interface Logger {
     /**
      * Logs a message with the specific Marker at the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param msg the message string to be logged
      */
     void log(Level level, Message msg);
@@ -2552,28 +2552,28 @@ public interface Logger {
     /**
      * Logs a message with the specific Marker at the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param msg the message string to be logged
      * @param t A Throwable or null.
      */
     void log(Level level, Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the specified level. The
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the specified level. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param msgSupplier A function, which when called, produces the desired log message.
      * @since 2.4
      */
     void log(Level level, MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the specified level) including the stack log of
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the specified level) including the stack log of
      * the {@link Throwable} <code>t</code> passed as parameter. The {@code MessageSupplier} may or may not use the
      * {@link MessageFactory} to construct the {@code Message}.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param msgSupplier A function, which when called, produces the desired log message.
      * @param t the exception to log, including its stack log.
      * @since 2.4
@@ -2583,7 +2583,7 @@ public interface Logger {
     /**
      * Logs a message CharSequence with the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message CharSequence to log.
      */
     void log(Level level, CharSequence message);
@@ -2592,7 +2592,7 @@ public interface Logger {
      * Logs a CharSequence at the given level including the stack trace of the {@link Throwable} <code>t</code> passed as
      * parameter.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message CharSequence to log.
      * @param t the exception to log, including its stack trace.
      */
@@ -2601,7 +2601,7 @@ public interface Logger {
     /**
      * Logs a message object with the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message object to log.
      */
     void log(Level level, Object message);
@@ -2610,7 +2610,7 @@ public interface Logger {
      * Logs a message at the given level including the stack trace of the {@link Throwable} <code>t</code> passed as
      * parameter.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log.
      * @param t the exception to log, including its stack trace.
      */
@@ -2619,7 +2619,7 @@ public interface Logger {
     /**
      * Logs a message object with the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message string to log.
      */
     void log(Level level, String message);
@@ -2627,7 +2627,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the given level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param params parameters to the message.
      * @see #getMessageFactory()
@@ -2635,9 +2635,9 @@ public interface Logger {
     void log(Level level, String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the specified level.
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param paramSuppliers An array of functions, which when called, produce the desired log message parameters.
      * @since 2.4
@@ -2648,16 +2648,16 @@ public interface Logger {
      * Logs a message at the given level including the stack trace of the {@link Throwable} <code>t</code> passed as
      * parameter.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log.
      * @param t the exception to log, including its stack trace.
      */
     void log(Level level, String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the specified level.
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
      * @since 2.4
@@ -2665,10 +2665,10 @@ public interface Logger {
     void log(Level level, Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the specified level) including the stack log of
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the specified level) including the stack log of
      * the {@link Throwable} <code>t</code> passed as parameter.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
      * @param t the exception to log, including its stack log.
@@ -2679,7 +2679,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2689,7 +2689,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2700,7 +2700,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2712,7 +2712,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2725,7 +2725,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2739,7 +2739,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2754,7 +2754,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2771,7 +2771,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2789,7 +2789,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2808,7 +2808,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param marker the marker data specific to this log statement
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
@@ -2828,7 +2828,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      */
@@ -2837,7 +2837,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2847,7 +2847,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2858,7 +2858,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2870,7 +2870,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2883,7 +2883,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2897,7 +2897,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2912,7 +2912,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2928,7 +2928,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2946,7 +2946,7 @@ public interface Logger {
     /**
      * Logs a message with parameters at the specified level.
      *
-     * @param level the logging level
+     * @param level the com.sschudakov.logging level
      * @param message the message to log; the format depends on the message factory.
      * @param p0 parameter to the message.
      * @param p1 parameter to the message.
@@ -2965,7 +2965,7 @@ public interface Logger {
     /**
      * Logs a formatted message using the specified format string and arguments.
      *
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker the marker data specific to this log statement.
      * @param format The format String.
      * @param params Arguments specified by the format.
@@ -2975,7 +2975,7 @@ public interface Logger {
     /**
      * Logs a formatted message using the specified format string and arguments.
      *
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param format The format String.
      * @param params Arguments specified by the format.
      */
@@ -2989,7 +2989,7 @@ public interface Logger {
      * </pre>
      *
      * @param <T> the Throwable type.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param t The Throwable.
      * @return the Throwable.
      */
@@ -3026,7 +3026,7 @@ public interface Logger {
     void trace(Marker marker, Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#TRACE TRACE} level with
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE TRACE} level with
      * the specified Marker. The {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the
      * {@code Message}.
      *
@@ -3037,7 +3037,7 @@ public interface Logger {
     void trace(Marker marker, MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#TRACE TRACE} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE TRACE} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -3105,7 +3105,7 @@ public interface Logger {
     void trace(Marker marker, String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#TRACE
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE
      * TRACE} level.
      *
      * @param marker the marker data specific to this log statement
@@ -3127,7 +3127,7 @@ public interface Logger {
     void trace(Marker marker, String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#TRACE TRACE} level with
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE TRACE} level with
      * the specified Marker.
      *
      * @param marker the marker data specific to this log statement
@@ -3138,7 +3138,7 @@ public interface Logger {
     void trace(Marker marker, Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#TRACE TRACE} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE TRACE} level) with the
      * specified Marker and including the stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param marker the marker data specific to this log statement
@@ -3165,7 +3165,7 @@ public interface Logger {
     void trace(Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#TRACE TRACE} level. The
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE TRACE} level. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
      * @param msgSupplier A function, which when called, produces the desired log message.
@@ -3174,7 +3174,7 @@ public interface Logger {
     void trace(MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#TRACE TRACE} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE TRACE} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter. The {@code MessageSupplier} may or may
      * not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -3235,7 +3235,7 @@ public interface Logger {
     void trace(String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#TRACE
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE
      * TRACE} level.
      *
      * @param message the message to log; the format depends on the message factory.
@@ -3255,7 +3255,7 @@ public interface Logger {
     void trace(String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#TRACE TRACE} level.
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE TRACE} level.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
@@ -3264,7 +3264,7 @@ public interface Logger {
     void trace(Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#TRACE TRACE} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#TRACE TRACE} level) including the
      * stack trace of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
@@ -3741,7 +3741,7 @@ public interface Logger {
     void warn(Marker marker, Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#WARN WARN} level with the
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN WARN} level with the
      * specified Marker. The {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the
      * {@code Message}.
      *
@@ -3752,7 +3752,7 @@ public interface Logger {
     void warn(Marker marker, MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#WARN WARN} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN WARN} level) with the
      * specified Marker and including the stack warn of the {@link Throwable} <code>t</code> passed as parameter. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -3818,7 +3818,7 @@ public interface Logger {
     void warn(Marker marker, String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#WARN
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN
      * WARN} level.
      *
      * @param marker the marker data specific to this log statement
@@ -3839,7 +3839,7 @@ public interface Logger {
     void warn(Marker marker, String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#WARN WARN} level with the
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN WARN} level with the
      * specified Marker.
      *
      * @param marker the marker data specific to this log statement
@@ -3850,7 +3850,7 @@ public interface Logger {
     void warn(Marker marker, Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#WARN WARN} level) with the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN WARN} level) with the
      * specified Marker and including the stack warn of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param marker the marker data specific to this log statement
@@ -3877,7 +3877,7 @@ public interface Logger {
     void warn(Message msg, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#WARN WARN} level. The
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN WARN} level. The
      * {@code MessageSupplier} may or may not use the {@link MessageFactory} to construct the {@code Message}.
      *
      * @param msgSupplier A function, which when called, produces the desired log message.
@@ -3886,7 +3886,7 @@ public interface Logger {
     void warn(MessageSupplier msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#WARN WARN} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN WARN} level) including the
      * stack warn of the {@link Throwable} <code>t</code> passed as parameter. The {@code MessageSupplier} may or may
      * not use the {@link MessageFactory} to construct the {@code Message}.
      *
@@ -3945,7 +3945,7 @@ public interface Logger {
     void warn(String message, Object... params);
 
     /**
-     * Logs a message with parameters which are only to be constructed if the logging level is the {@link Level#WARN
+     * Logs a message with parameters which are only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN
      * WARN} level.
      *
      * @param message the message to log; the format depends on the message factory.
@@ -3964,7 +3964,7 @@ public interface Logger {
     void warn(String message, Throwable t);
 
     /**
-     * Logs a message which is only to be constructed if the logging level is the {@link Level#WARN WARN} level.
+     * Logs a message which is only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN WARN} level.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the
      *            message factory.
@@ -3973,7 +3973,7 @@ public interface Logger {
     void warn(Supplier<?> msgSupplier);
 
     /**
-     * Logs a message (only to be constructed if the logging level is the {@link Level#WARN WARN} level) including the
+     * Logs a message (only to be constructed if the com.sschudakov.logging level is the {@link Level#WARN WARN} level) including the
      * stack warn of the {@link Throwable} <code>t</code> passed as parameter.
      *
      * @param msgSupplier A function, which when called, produces the desired log message; the format depends on the

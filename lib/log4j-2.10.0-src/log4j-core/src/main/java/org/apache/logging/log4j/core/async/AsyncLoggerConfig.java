@@ -47,9 +47,9 @@ import org.apache.logging.log4j.util.Strings;
  * combined with synchronous loggers.
  * <p>
  * AsyncLoggerConfig is a logger designed for high throughput and low latency
- * logging. It does not perform any I/O in the calling (application) thread, but
+ * com.sschudakov.logging. It does not perform any I/O in the calling (application) thread, but
  * instead hands off the work to another thread as soon as possible. The actual
- * logging is performed in the background thread. It uses the LMAX Disruptor
+ * com.sschudakov.logging is performed in the background thread. It uses the LMAX Disruptor
  * library for inter-thread communication. (<a
  * href="http://lmax-exchange.github.com/disruptor/"
  * >http://lmax-exchange.github.com/disruptor/</a>)

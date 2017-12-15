@@ -89,7 +89,7 @@ public class XmlCompleteFileAppenderTest {
         assertTrue("line1 incorrect: [" + line1 + "], does not contain: [" + msg1 + ']', line1.equals(msg1));
 
         assertNotNull("line2", line2);
-        final String msg2 = "<Events xmlns=\"http://logging.apache.org/log4j/2.0/events\">";
+        final String msg2 = "<Events xmlns=\"http://com.sschudakov.logging.apache.org/log4j/2.0/events\">";
         assertTrue("line2 incorrect: [" + line2 + "], does not contain: [" + msg2 + ']', line2.equals(msg2));
 
         assertNotNull("line3", line3);
@@ -111,11 +111,11 @@ public class XmlCompleteFileAppenderTest {
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;Events xmlns=&quot;http://logging.apache.org/log4j/2.0/events&quot;&gt;
 
-  &lt;Event xmlns=&quot;http://logging.apache.org/log4j/2.0/events&quot; timeMillis=&quot;1460974522088&quot; thread=&quot;main&quot; level=&quot;INFO&quot; loggerName=&quot;com.foo.Bar&quot; endOfBatch=&quot;false&quot; loggerFqcn=&quot;org.apache.logging.log4j.spi.AbstractLogger&quot; threadId=&quot;11&quot; threadPriority=&quot;5&quot;&gt;
+  &lt;Event xmlns=&quot;http://logging.apache.org/log4j/2.0/events&quot; timeMillis=&quot;1460974522088&quot; thread=&quot;main&quot; level=&quot;INFO&quot; loggerName=&quot;com.foo.Bar&quot; endOfBatch=&quot;false&quot; loggerFqcn=&quot;org.apache.com.sschudakov.logging.log4j.spi.AbstractLogger&quot; threadId=&quot;11&quot; threadPriority=&quot;5&quot;&gt;
     &lt;Message&gt;First Msg tag must be in level 2 after correct indentation&lt;/Message&gt;
   &lt;/Event&gt;
 
-  &lt;Event xmlns=&quot;http://logging.apache.org/log4j/2.0/events&quot; timeMillis=&quot;1460974522089&quot; thread=&quot;main&quot; level=&quot;INFO&quot; loggerName=&quot;com.foo.Bar&quot; endOfBatch=&quot;true&quot; loggerFqcn=&quot;org.apache.logging.log4j.spi.AbstractLogger&quot; threadId=&quot;11&quot; threadPriority=&quot;5&quot;&gt;
+  &lt;Event xmlns=&quot;http://logging.apache.org/log4j/2.0/events&quot; timeMillis=&quot;1460974522089&quot; thread=&quot;main&quot; level=&quot;INFO&quot; loggerName=&quot;com.foo.Bar&quot; endOfBatch=&quot;true&quot; loggerFqcn=&quot;org.apache.com.sschudakov.logging.log4j.spi.AbstractLogger&quot; threadId=&quot;11&quot; threadPriority=&quot;5&quot;&gt;
     &lt;Message&gt;Second Msg tag must also be in level 2 after correct indentation&lt;/Message&gt;
   &lt;/Event&gt;
 &lt;/Events&gt;

@@ -44,14 +44,14 @@ import com.lmax.disruptor.EventTranslatorVararg;
 import com.lmax.disruptor.dsl.Disruptor;
 
 /**
- * AsyncLogger is a logger designed for high throughput and low latency logging. It does not perform any I/O in the
+ * AsyncLogger is a logger designed for high throughput and low latency com.sschudakov.logging. It does not perform any I/O in the
  * calling (application) thread, but instead hands off the work to another thread as soon as possible. The actual
- * logging is performed in the background thread. It uses the LMAX Disruptor library for inter-thread communication. (<a
+ * com.sschudakov.logging is performed in the background thread. It uses the LMAX Disruptor library for inter-thread communication. (<a
  * href="http://lmax-exchange.github.com/disruptor/" >http://lmax-exchange.github.com/disruptor/</a>)
  * <p>
  * To use AsyncLogger, specify the System property
- * {@code -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector} before you obtain a
- * Logger, and all Loggers returned by LogManager.getLogger will be AsyncLoggers.
+ * {@code -DLog4jContextSelector=org.apache.com.sschudakov.logging.log4j.core.async.AsyncLoggerContextSelector} before you obtain a
+ * Logger, and all Loggers returned by LogManager.getParsingLogger will be AsyncLoggers.
  * <p>
  * Note that for performance reasons, this logger does not include source location by default. You need to specify
  * {@code includeLocation="true"} in the configuration or any %class, %location or %line conversion patterns in your
@@ -86,7 +86,7 @@ public class AsyncLogger extends Logger implements EventTranslatorVararg<RingBuf
      * @param context context of this logger
      * @param name name of this logger
      * @param messageFactory message factory of this logger
-     * @param loggerDisruptor helper class that logging can be delegated to. This object owns the Disruptor.
+     * @param loggerDisruptor helper class that com.sschudakov.logging can be delegated to. This object owns the Disruptor.
      */
     public AsyncLogger(final LoggerContext context, final String name, final MessageFactory messageFactory,
             final AsyncLoggerDisruptor loggerDisruptor) {
@@ -99,7 +99,7 @@ public class AsyncLogger extends Logger implements EventTranslatorVararg<RingBuf
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.logging.log4j.core.Logger#updateConfiguration(org.apache.logging.log4j.core.config.Configuration)
+     * @see org.apache.com.sschudakov.logging.log4j.core.Logger#updateConfiguration(org.apache.com.sschudakov.logging.log4j.core.config.Configuration)
      */
     @Override
     protected void updateConfiguration(final Configuration newConfig) {
@@ -139,7 +139,7 @@ public class AsyncLogger extends Logger implements EventTranslatorVararg<RingBuf
     }
 
     /**
-     * Enqueues the specified log event data for logging in a background thread.
+     * Enqueues the specified log event data for com.sschudakov.logging in a background thread.
      * <p>
      * This re-uses a {@code RingBufferLogEventTranslator} instance cached in a {@code ThreadLocal} to avoid creating
      * unnecessary objects with each event.
@@ -228,7 +228,7 @@ public class AsyncLogger extends Logger implements EventTranslatorVararg<RingBuf
     }
 
     /**
-     * Enqueues the specified log event data for logging in a background thread.
+     * Enqueues the specified log event data for com.sschudakov.logging in a background thread.
      * <p>
      * This creates a new varargs Object array for each invocation, but does not store any non-JDK classes in a
      * {@code ThreadLocal} to avoid memory leaks in web applications (see LOG4J2-1172).

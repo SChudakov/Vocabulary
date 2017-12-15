@@ -122,7 +122,7 @@ public class MapMessage<M extends MapMessage<M, V>, V> implements MultiFormatStr
     }
 
     /**
-     * Returns the data elements as if they were parameters on the logging event.
+     * Returns the data elements as if they were parameters on the com.sschudakov.logging event.
      * @return the data elements.
      */
     @Override

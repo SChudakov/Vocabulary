@@ -116,24 +116,24 @@ public class ResolverUtilCustomProtocolTest {
     @Test
     public void testExtractPathFromVfsEarJarWindowsUrl() throws Exception {
         final URL url = new URL(
-                "vfs:/C:/jboss/jboss-eap-6.4/standalone/deployments/com.xxx.yyy.application-ear.ear/lib/com.xxx.yyy.logging.jar/com/xxx/yyy/logging/config/");
-        final String expected = "/C:/jboss/jboss-eap-6.4/standalone/deployments/com.xxx.yyy.application-ear.ear/lib/com.xxx.yyy.logging.jar/com/xxx/yyy/logging/config/";
+                "vfs:/C:/jboss/jboss-eap-6.4/standalone/deployments/com.xxx.yyy.application-ear.ear/lib/com.xxx.yyy.com.sschudakov.logging.jar/com/xxx/yyy/com.sschudakov.logging/config/");
+        final String expected = "/C:/jboss/jboss-eap-6.4/standalone/deployments/com.xxx.yyy.application-ear.ear/lib/com.xxx.yyy.com.sschudakov.logging.jar/com/xxx/yyy/com.sschudakov.logging/config/";
         assertEquals(expected, new ResolverUtil().extractPath(url));
     }
 
     @Test
     public void testExtractPathFromVfsWarClassesWindowsUrl() throws Exception {
         final URL url = new URL(
-                "vfs:/C:/jboss/jboss-eap-6.4/standalone/deployments/test-log4j2-web-standalone.war/WEB-INF/classes/org/hypik/test/jboss/eap7/logging/config/");
-        final String expected = "/C:/jboss/jboss-eap-6.4/standalone/deployments/test-log4j2-web-standalone.war/WEB-INF/classes/org/hypik/test/jboss/eap7/logging/config/";
+                "vfs:/C:/jboss/jboss-eap-6.4/standalone/deployments/test-log4j2-web-standalone.war/WEB-INF/classes/org/hypik/test/jboss/eap7/com.sschudakov.logging/config/");
+        final String expected = "/C:/jboss/jboss-eap-6.4/standalone/deployments/test-log4j2-web-standalone.war/WEB-INF/classes/org/hypik/test/jboss/eap7/com.sschudakov.logging/config/";
         assertEquals(expected, new ResolverUtil().extractPath(url));
     }
 
     @Test
     public void testExtractPathFromVfsWarClassesLinuxUrl() throws Exception {
         final URL url = new URL(
-                "vfs:/content/mycustomweb.war/WEB-INF/classes/org/hypik/test/jboss/log4j2/logging/pluginweb/");
-        final String expected = "/content/mycustomweb.war/WEB-INF/classes/org/hypik/test/jboss/log4j2/logging/pluginweb/";
+                "vfs:/content/mycustomweb.war/WEB-INF/classes/org/hypik/test/jboss/log4j2/com.sschudakov.logging/pluginweb/");
+        final String expected = "/content/mycustomweb.war/WEB-INF/classes/org/hypik/test/jboss/log4j2/com.sschudakov.logging/pluginweb/";
         assertEquals(expected, new ResolverUtil().extractPath(url));
     }
 

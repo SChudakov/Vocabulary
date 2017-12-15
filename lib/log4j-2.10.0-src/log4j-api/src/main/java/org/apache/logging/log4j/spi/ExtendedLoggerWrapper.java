@@ -53,7 +53,7 @@ public class ExtendedLoggerWrapper extends AbstractLogger {
     /**
      * Detect if the event would be logged.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The Message.
      * @param t A Throwable.
@@ -67,7 +67,7 @@ public class ExtendedLoggerWrapper extends AbstractLogger {
     /**
      * Detect if the event would be logged.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message CharSequence.
      * @param t A Throwable.
@@ -81,7 +81,7 @@ public class ExtendedLoggerWrapper extends AbstractLogger {
     /**
      * Detect if the event would be logged.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param t A Throwable.
@@ -95,7 +95,7 @@ public class ExtendedLoggerWrapper extends AbstractLogger {
     /**
      * Detect if the event would be logged.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @return true if the event would be logged for the Level, Marker, message and parameter.
@@ -108,7 +108,7 @@ public class ExtendedLoggerWrapper extends AbstractLogger {
     /**
      * Detect if the event would be logged.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param params The parameters.
@@ -190,7 +190,7 @@ public class ExtendedLoggerWrapper extends AbstractLogger {
     /**
      * Detect if the event would be logged.
      *
-     * @param level The logging Level to check.
+     * @param level The com.sschudakov.logging Level to check.
      * @param marker A Marker or null.
      * @param message The message.
      * @param t A Throwable.
@@ -206,7 +206,7 @@ public class ExtendedLoggerWrapper extends AbstractLogger {
      * the logger level again
      *
      * @param fqcn The fully qualified class name of the <b>caller</b>
-     * @param level The logging level
+     * @param level The com.sschudakov.logging level
      * @param marker The Marker
      * @param message The Message.
      * @param t A Throwable or null.

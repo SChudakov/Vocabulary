@@ -251,18 +251,18 @@ public class LoggerConfig extends AbstractFilterable {
     }
 
     /**
-     * Sets the logging Level.
+     * Sets the com.sschudakov.logging Level.
      *
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      */
     public void setLevel(final Level level) {
         this.level = level;
     }
 
     /**
-     * Returns the logging Level.
+     * Returns the com.sschudakov.logging Level.
      *
-     * @return the logging Level.
+     * @return the com.sschudakov.logging Level.
      */
     public Level getLevel() {
         return level == null ? parent.getLevel() : level;
@@ -306,7 +306,7 @@ public class LoggerConfig extends AbstractFilterable {
 
     /**
      * Returns the value of logger configuration attribute {@code includeLocation}, or, if no such attribute was
-     * configured, {@code true} if logging is synchronous or {@code false} if logging is asynchronous.
+     * configured, {@code true} if com.sschudakov.logging is synchronous or {@code false} if com.sschudakov.logging is asynchronous.
      *
      * @return whether location should be passed downstream
      */
@@ -402,7 +402,7 @@ public class LoggerConfig extends AbstractFilterable {
         try {
             log(logEvent);
         } finally {
-            // LOG4J2-1583 prevent scrambled logs when logging calls are nested (logging in toString())
+            // LOG4J2-1583 prevent scrambled logs when com.sschudakov.logging calls are nested (com.sschudakov.logging in toString())
             ReusableLogEventFactory.release(logEvent);
         }
     }

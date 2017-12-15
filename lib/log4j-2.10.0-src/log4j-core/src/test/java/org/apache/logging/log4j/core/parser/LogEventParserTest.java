@@ -46,7 +46,7 @@ public abstract class LogEventParserTest {
         assertThat(logEvent.getThrownProxy().getName(), equalTo("java.lang.RuntimeException"));
         assertThat(logEvent.getThrownProxy().getExtendedStackTrace()[0].getClassName(),
                 equalTo("logtest.Main"));
-        assertThat(logEvent.getLoggerFqcn(), equalTo("org.apache.logging.log4j.spi.AbstractLogger"));
+        assertThat(logEvent.getLoggerFqcn(), equalTo("org.apache.com.sschudakov.logging.log4j.spi.AbstractLogger"));
         assertThat(logEvent.getContextStack().asList(), equalTo(Arrays.asList("one", "two")));
         assertThat((String) logEvent.getContextData().getValue("foo"), equalTo("FOO"));
         assertThat((String) logEvent.getContextData().getValue("bar"), equalTo("BAR"));

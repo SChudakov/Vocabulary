@@ -23,7 +23,7 @@ import java.io.Writer;
 import java.util.Objects;
 
 /**
- * PrintWriter-based logging utility for classes too low level to use {@link org.apache.logging.log4j.status.StatusLogger}.
+ * PrintWriter-based com.sschudakov.logging utility for classes too low level to use {@link org.apache.logging.log4j.status.StatusLogger}.
  * Such classes cannot use StatusLogger as StatusLogger or {@link org.apache.logging.log4j.simple.SimpleLogger} depends
  * on them for initialization. Other framework classes should stick to using StatusLogger.
  *

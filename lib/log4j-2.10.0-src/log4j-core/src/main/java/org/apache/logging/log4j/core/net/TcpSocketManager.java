@@ -46,7 +46,7 @@ public class TcpSocketManager extends AbstractSocketManager {
      */
     public static final int DEFAULT_RECONNECTION_DELAY_MILLIS = 30000;
     /**
-     * The default port number of remote logging server (4560).
+     * The default port number of remote com.sschudakov.logging server (4560).
      */
     private static final int DEFAULT_PORT = 4560;
 

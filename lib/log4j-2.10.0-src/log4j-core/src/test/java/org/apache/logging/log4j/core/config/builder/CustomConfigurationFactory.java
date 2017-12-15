@@ -58,7 +58,7 @@ public class CustomConfigurationFactory extends ConfigurationFactory {
             addComponent(builder.newKeyValuePair("extraField", "extraValue")));
         builder.add(appenderBuilder2);
 
-        builder.add(builder.newLogger("org.apache.logging.log4j", Level.DEBUG, true).
+        builder.add(builder.newLogger("org.apache.com.sschudakov.logging.log4j", Level.DEBUG, true).
                     add(builder.newAppenderRef("Stdout")).
                     addAttribute("additivity", false));
         builder.add(builder.newRootLogger(Level.ERROR).add(builder.newAppenderRef("Stdout")));

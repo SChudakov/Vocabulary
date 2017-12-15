@@ -390,9 +390,9 @@ public abstract class ConfigurationFactory extends ConfigurationBuilderFactory {
                 return config;
             }
             LOGGER.error("No log4j2 configuration file found. " +
-                    "Using default configuration: logging only errors to the console. " +
+                    "Using default configuration: com.sschudakov.logging only errors to the console. " +
                     "Set system property 'log4j2.debug' " +
-                    "to show Log4j2 internal initialization logging.");
+                    "to show Log4j2 internal initialization com.sschudakov.logging.");
             return new DefaultConfiguration();
         }
 

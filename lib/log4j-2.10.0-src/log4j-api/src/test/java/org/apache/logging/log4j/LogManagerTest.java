@@ -84,7 +84,7 @@ public class LogManagerTest {
             
             @Override
             public void close() throws IOException {
-                Assert.assertEquals("org.apache.logging.log4j.LogManagerTest$1", LOGGER.getName());
+                Assert.assertEquals("org.apache.com.sschudakov.logging.log4j.LogManagerTest$1", LOGGER.getName());
             }
         };
         closeable.close();
@@ -98,7 +98,7 @@ public class LogManagerTest {
             
             @Override
             public void close() throws IOException {
-                Assert.assertEquals("org.apache.logging.log4j.LogManagerTest$2", LOGGER.getName());
+                Assert.assertEquals("org.apache.com.sschudakov.logging.log4j.LogManagerTest$2", LOGGER.getName());
             }
         };
         closeable.close();
@@ -106,22 +106,22 @@ public class LogManagerTest {
 
     @Test
     public void testGetLoggerForInner() {
-        Assert.assertEquals("org.apache.logging.log4j.LogManagerTest.Inner", new Inner().LOGGER.getName());
+        Assert.assertEquals("org.apache.com.sschudakov.logging.log4j.LogManagerTest.Inner", new Inner().LOGGER.getName());
     }
 
     @Test
     public void testGetLoggerForInnerByClass() {
-        Assert.assertEquals("org.apache.logging.log4j.LogManagerTest.InnerByClass", new InnerByClass().LOGGER.getName());
+        Assert.assertEquals("org.apache.com.sschudakov.logging.log4j.LogManagerTest.InnerByClass", new InnerByClass().LOGGER.getName());
     }
 
     @Test
     public void testGetLoggerForStaticInner() {
-        Assert.assertEquals("org.apache.logging.log4j.LogManagerTest.StaticInner", StaticInner.LOGGER.getName());
+        Assert.assertEquals("org.apache.com.sschudakov.logging.log4j.LogManagerTest.StaticInner", StaticInner.LOGGER.getName());
     }
 
     @Test
     public void testGetLoggerForStaticInnerByClass() {
-        Assert.assertEquals("org.apache.logging.log4j.LogManagerTest.StaticInnerByClass", StaticInnerByClass.LOGGER.getName());
+        Assert.assertEquals("org.apache.com.sschudakov.logging.log4j.LogManagerTest.StaticInnerByClass", StaticInnerByClass.LOGGER.getName());
     }
 
     @Test

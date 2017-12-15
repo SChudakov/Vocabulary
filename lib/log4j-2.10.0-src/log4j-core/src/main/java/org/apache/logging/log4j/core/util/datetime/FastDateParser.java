@@ -52,14 +52,14 @@ import java.util.regex.Pattern;
  * </code>
  * 
  * <p>This class can be used as a direct replacement for
- * <code>SimpleDateFormat</code> in most parsing situations.
+ * <code>SimpleDateFormat</code> in most com.sschudakov.parsing situations.
  * This class is especially useful in multi-threaded server environments.
  * <code>SimpleDateFormat</code> is not thread-safe in any JDK version,
  * nor will it be as Sun has closed the
  * <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4228335">bug</a>/RFE.
  * </p>
  *
- * <p>Only parsing is supported by this class, but all patterns are compatible with
+ * <p>Only com.sschudakov.parsing is supported by this class, but all patterns are compatible with
  * SimpleDateFormat.</p>
  *
  * <p>The class operates in lenient mode, so for example a time of 90 minutes is treated as 1 hour 30 minutes.</p>
@@ -127,7 +127,7 @@ public class FastDateParser implements DateParser, Serializable {
      *  pattern
      * @param timeZone non-null time zone to use
      * @param locale non-null locale
-     * @param centuryStart The start of the century for 2 digit year parsing
+     * @param centuryStart The start of the century for 2 digit year com.sschudakov.parsing
      *
      * @since 3.5
      */
@@ -411,7 +411,7 @@ public class FastDateParser implements DateParser, Serializable {
      * the offset of the source text which does not match the supplied format.
      * 
      * @param source The text to parse.
-     * @param pos On input, the position in the source to start parsing, on output, updated position.
+     * @param pos On input, the position in the source to start com.sschudakov.parsing, on output, updated position.
      * @param calendar The calendar into which to set parsed fields.
      * @return true, if source has been parsed (pos parsePosition is updated); otherwise false (and pos errorIndex is updated)
      * @throws IllegalArgumentException when Calendar has been set to be not lenient, and a parsed field is
@@ -493,7 +493,7 @@ public class FastDateParser implements DateParser, Serializable {
     }
 
     /**
-     * A strategy to parse a single field from the parsing pattern
+     * A strategy to parse a single field from the com.sschudakov.parsing pattern
      */
     private static abstract class Strategy {
         /**
@@ -510,7 +510,7 @@ public class FastDateParser implements DateParser, Serializable {
     }
 
     /**
-     * A strategy to parse a single field from the parsing pattern
+     * A strategy to parse a single field from the com.sschudakov.parsing pattern
      */
     private static abstract class PatternStrategy extends Strategy {
 
@@ -554,7 +554,7 @@ public class FastDateParser implements DateParser, Serializable {
      * Obtain a Strategy given a field from a SimpleDateFormat pattern
      * @param formatField A sub-sequence of the SimpleDateFormat pattern
      * @param definingCalendar The calendar to obtain the short and long values
-     * @return The Strategy that will handle parsing for the field
+     * @return The Strategy that will handle com.sschudakov.parsing for the field
      */
     private Strategy getStrategy(final char f, final int width, final Calendar definingCalendar) {
         switch(f) {
@@ -648,7 +648,7 @@ public class FastDateParser implements DateParser, Serializable {
     }
 
     /**
-     * A strategy that copies the static or quoted field in the parsing pattern
+     * A strategy that copies the static or quoted field in the com.sschudakov.parsing pattern
      */
     private static class CopyQuotedStrategy extends Strategy {
 
@@ -689,7 +689,7 @@ public class FastDateParser implements DateParser, Serializable {
     }
 
     /**
-     * A strategy that handles a text field in the parsing pattern
+     * A strategy that handles a text field in the com.sschudakov.parsing pattern
      */
      private static class CaseInsensitiveTextStrategy extends PatternStrategy {
         private final int field;
@@ -726,7 +726,7 @@ public class FastDateParser implements DateParser, Serializable {
 
 
     /**
-     * A strategy that handles a number field in the parsing pattern
+     * A strategy that handles a number field in the com.sschudakov.parsing pattern
      */
     private static class NumberStrategy extends Strategy {
         private final int field;
@@ -810,7 +810,7 @@ public class FastDateParser implements DateParser, Serializable {
     };
 
     /**
-     * A strategy that handles a timezone field in the parsing pattern
+     * A strategy that handles a timezone field in the com.sschudakov.parsing pattern
      */
     static class TimeZoneStrategy extends PatternStrategy {
         private static final String RFC_822_TIME_ZONE = "[+-]\\d{4}";

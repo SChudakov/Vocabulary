@@ -32,7 +32,7 @@ import org.apache.logging.log4j.util.StringBuilderFormattable;
  * </p>
  * <p>
  * Note: Message objects should not be considered to be thread safe nor should they be assumed to be
- * safely reusable even on the same thread. The logging system may provide information to the Message
+ * safely reusable even on the same thread. The com.sschudakov.logging system may provide information to the Message
  * objects and the Messages might be queued for asynchronous delivery. Thus, any modifications to a
  * Message object by an application should by avoided after the Message has been passed as a parameter on
  * a Logger method.
@@ -58,7 +58,7 @@ public interface Message extends Serializable {
      * calls. (See <a href="https://issues.apache.org/jira/browse/LOG4J2-763">LOG4J2-763</a>.)
      * </p>
      * <p>
-     * When logging synchronously, this method will not be called for Messages that implement the
+     * When com.sschudakov.logging synchronously, this method will not be called for Messages that implement the
      * {@link StringBuilderFormattable} interface: instead, the
      * {@link StringBuilderFormattable#formatTo(StringBuilder) formatTo(StringBuilder)} method will be called so the
      * Message can format its contents without creating intermediate String objects.

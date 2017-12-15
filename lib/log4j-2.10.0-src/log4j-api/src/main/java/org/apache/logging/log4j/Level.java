@@ -29,7 +29,7 @@ import org.apache.logging.log4j.util.Strings;
 /**
  * Levels used for identifying the severity of an event. Levels are organized from most specific to least:
  * <ul>
- * <li>{@link #OFF} (most specific, no logging)</li>
+ * <li>{@link #OFF} (most specific, no com.sschudakov.logging)</li>
  * <li>{@link #FATAL} (most specific, little data)</li>
  * <li>{@link #ERROR}</li>
  * <li>{@link #WARN}</li>
@@ -39,9 +39,9 @@ import org.apache.logging.log4j.util.Strings;
  * <li>{@link #ALL} (least specific, all data)</li>
  * </ul>
  *
- * Typically, configuring a level in a filter or on a logger will cause logging events of that level and those that are
+ * Typically, configuring a level in a filter or on a logger will cause com.sschudakov.logging events of that level and those that are
  * more specific to pass through the filter. A special level, {@link #ALL}, is guaranteed to capture all levels when
- * used in logging configurations.
+ * used in com.sschudakov.logging configurations.
  */
 public final class Level implements Comparable<Level>, Serializable {
 

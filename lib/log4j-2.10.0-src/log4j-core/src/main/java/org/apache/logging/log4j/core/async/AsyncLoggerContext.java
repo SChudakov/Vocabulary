@@ -68,7 +68,7 @@ public class AsyncLoggerContext extends LoggerContext {
     /*
      * (non-Javadoc)
      * 
-     * @see org.apache.logging.log4j.core.LoggerContext#start()
+     * @see org.apache.com.sschudakov.logging.log4j.core.LoggerContext#start()
      */
     @Override
     public void start() {
@@ -79,7 +79,7 @@ public class AsyncLoggerContext extends LoggerContext {
     /*
      * (non-Javadoc)
      * 
-     * @see org.apache.logging.log4j.core.LoggerContext#start(org.apache.logging.log4j.core.config.Configuration)
+     * @see org.apache.com.sschudakov.logging.log4j.core.LoggerContext#start(org.apache.com.sschudakov.logging.log4j.core.config.Configuration)
      */
     @Override
     public void start(final Configuration config) {

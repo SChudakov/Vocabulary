@@ -47,7 +47,7 @@ public class FormattingInfoTest {
 
 	@Test
 	public void testFormatTruncateFromEndGivenFieldStart() {
-		final StringBuilder message = new StringBuilder("2015-03-09 11:49:28,295; INFO  org.apache.logging.log4j.PatternParserTest");
+		final StringBuilder message = new StringBuilder("2015-03-09 11:49:28,295; INFO  org.apache.com.sschudakov.logging.log4j.PatternParserTest");
 
 		final FormattingInfo formattingInfo = new FormattingInfo(false, 0, 5, false);
 		formattingInfo.format(31, message);

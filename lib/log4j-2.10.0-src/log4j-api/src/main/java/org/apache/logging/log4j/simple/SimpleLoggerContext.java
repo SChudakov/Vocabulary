@@ -41,7 +41,7 @@ public class SimpleLoggerContext implements LoggerContext {
     protected static final String DEFAULT_DATE_TIME_FORMAT = "yyyy/MM/dd HH:mm:ss:SSS zzz";
 
     /** All system properties used by <code>SimpleLog</code> start with this */
-    protected static final String SYSTEM_PREFIX = "org.apache.logging.log4j.simplelog.";
+    protected static final String SYSTEM_PREFIX = "org.apache.com.sschudakov.logging.log4j.simplelog.";
 
     private final PropertiesUtil props;
 

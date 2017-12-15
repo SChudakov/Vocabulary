@@ -22,7 +22,7 @@ import java.util.EventListener;
 import org.apache.logging.log4j.Level;
 
 /**
- * Interface that allows implementers to be notified of events in the logging system.
+ * Interface that allows implementers to be notified of events in the com.sschudakov.logging system.
  */
 public interface StatusListener extends Closeable, EventListener {
 

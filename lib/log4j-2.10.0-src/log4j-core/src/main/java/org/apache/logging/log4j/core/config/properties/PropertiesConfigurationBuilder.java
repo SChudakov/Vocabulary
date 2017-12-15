@@ -45,7 +45,7 @@ import org.apache.logging.log4j.util.PropertiesUtil;
 import org.apache.logging.log4j.util.Strings;
 
 /**
- * Helper builder for parsing properties files into a PropertiesConfiguration.
+ * Helper builder for com.sschudakov.parsing properties files into a PropertiesConfiguration.
  *
  * @since 2.6
  */

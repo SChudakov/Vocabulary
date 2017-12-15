@@ -182,7 +182,7 @@ public final class JAnsiTextRenderer implements TextRenderer {
             for (final String styleAssignmentStr : allStyleAssignmentsArr) {
                 final String[] styleAssignmentArr = styleAssignmentStr.split("=");
                 if (styleAssignmentArr.length != 2) {
-                    StatusLogger.getLogger().warn("{} parsing style \"{}\", expected format: StyleName=Code(,Code)*",
+                    StatusLogger.getLogger().warn("{} com.sschudakov.parsing style \"{}\", expected format: StyleName=Code(,Code)*",
                             getClass().getSimpleName(), styleAssignmentStr);
                 } else {
                     final String styleName = styleAssignmentArr[0];
@@ -190,7 +190,7 @@ public final class JAnsiTextRenderer implements TextRenderer {
                     final String[] codeNames = codeListStr.split(",");
                     if (codeNames.length == 0) {
                         StatusLogger.getLogger().warn(
-                                "{} parsing style \"{}\", expected format: StyleName=Code(,Code)*",
+                                "{} com.sschudakov.parsing style \"{}\", expected format: StyleName=Code(,Code)*",
                                 getClass().getSimpleName(), styleAssignmentStr);
                     } else {
                         switch (styleName) {

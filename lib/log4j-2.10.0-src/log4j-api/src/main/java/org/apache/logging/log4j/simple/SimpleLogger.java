@@ -32,7 +32,7 @@ import org.apache.logging.log4j.util.PropertiesUtil;
 import org.apache.logging.log4j.util.Strings;
 
 /**
- * This is the default logger that is used when no suitable logging implementation is available.
+ * This is the default logger that is used when no suitable com.sschudakov.logging implementation is available.
  */
 public class SimpleLogger extends AbstractLogger {
 

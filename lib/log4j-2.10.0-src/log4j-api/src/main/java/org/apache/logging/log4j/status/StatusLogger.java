@@ -42,7 +42,7 @@ import org.apache.logging.log4j.util.PropertiesUtil;
 import org.apache.logging.log4j.util.Strings;
 
 /**
- * Records events that occur in the logging system. By default, only error messages are logged to {@link System#err}.
+ * Records events that occur in the com.sschudakov.logging system. By default, only error messages are logged to {@link System#err}.
  * Normally, the Log4j StatusLogger is configured via the root {@code <Configuration status="LEVEL"/>} node in a Log4j
  * configuration file. However, this can be overridden via a system property named
  * "{@value SimpleLoggerContext#SYSTEM_PREFIX}StatusLogger.level" and will work with any Log4j provider.
@@ -100,13 +100,13 @@ public final class StatusLogger extends AbstractLogger {
                 messageFactory, PROPS, System.err);
         this.listenersLevel = Level.toLevel(DEFAULT_STATUS_LEVEL, Level.WARN).intLevel();
 
-        // LOG4J2-1813 if system property "log4j2.debug" is defined, print all status logging
+        // LOG4J2-1813 if system property "log4j2.debug" is defined, print all status com.sschudakov.logging
         if (isDebugPropertyEnabled()) {
             logger.setLevel(Level.TRACE);
         }
     }
 
-    // LOG4J2-1813 if system property "log4j2.debug" is defined, print all status logging
+    // LOG4J2-1813 if system property "log4j2.debug" is defined, print all status com.sschudakov.logging
     private boolean isDebugPropertyEnabled() {
         return PropertiesUtil.getProperties().getBooleanProperty(Constants.LOG4J2_DEBUG, false, true);
     }
@@ -241,7 +241,7 @@ public final class StatusLogger extends AbstractLogger {
      *
      * @param marker The Marker
      * @param fqcn The fully qualified class name of the <b>caller</b>
-     * @param level The logging level
+     * @param level The com.sschudakov.logging level
      * @param msg The message associated with the event.
      * @param t A Throwable or null.
      */
@@ -259,7 +259,7 @@ public final class StatusLogger extends AbstractLogger {
         } finally {
             msgLock.unlock();
         }
-        // LOG4J2-1813 if system property "log4j2.debug" is defined, all status logging is enabled
+        // LOG4J2-1813 if system property "log4j2.debug" is defined, all status com.sschudakov.logging is enabled
         if (isDebugPropertyEnabled()) {
             logger.logMessage(fqcn, level, marker, msg, t);
         } else {
@@ -394,7 +394,7 @@ public final class StatusLogger extends AbstractLogger {
 
     @Override
     public boolean isEnabled(final Level level, final Marker marker) {
-        // LOG4J2-1813 if system property "log4j2.debug" is defined, all status logging is enabled
+        // LOG4J2-1813 if system property "log4j2.debug" is defined, all status com.sschudakov.logging is enabled
         if (isDebugPropertyEnabled()) {
             return true;
         }

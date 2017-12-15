@@ -57,7 +57,7 @@ public class ConfigurationBuilderTest {
             addComponent(builder.newKeyValuePair("extraField", "extraValue")));
         builder.add(appenderBuilder2);
 
-        builder.add(builder.newLogger("org.apache.logging.log4j", Level.DEBUG, true).
+        builder.add(builder.newLogger("org.apache.com.sschudakov.logging.log4j", Level.DEBUG, true).
                     add(builder.newAppenderRef("Stdout")).
                     addAttribute("additivity", false));
         builder.add(builder.newRootLogger(Level.ERROR).add(builder.newAppenderRef("Stdout")));
@@ -93,7 +93,7 @@ public class ConfigurationBuilderTest {
                 INDENT + INDENT + "</Kafka>" + EOL +
                 INDENT + "</Appenders>" + EOL +
                 INDENT + "<Loggers>" + EOL +
-                INDENT + INDENT + "<Logger name=\"org.apache.logging.log4j\" level=\"DEBUG\" includeLocation=\"true\" additivity=\"false\">" + EOL +
+                INDENT + INDENT + "<Logger name=\"org.apache.com.sschudakov.logging.log4j\" level=\"DEBUG\" includeLocation=\"true\" additivity=\"false\">" + EOL +
                 INDENT + INDENT + INDENT + "<AppenderRef ref=\"Stdout\"/>" + EOL +
                 INDENT + INDENT + "</Logger>" + EOL +
                 INDENT + INDENT + "<Root level=\"ERROR\">" + EOL +

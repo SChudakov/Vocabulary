@@ -45,7 +45,7 @@ public class StatusData implements Serializable {
      * Creates the StatusData object.
      * 
      * @param caller The method that created the event.
-     * @param level The logging level.
+     * @param level The com.sschudakov.logging level.
      * @param msg The message String.
      * @param t The Error or Exception that occurred.
      * @param threadName The thread name
@@ -79,9 +79,9 @@ public class StatusData implements Serializable {
     }
 
     /**
-     * Returns the logging level for the event.
+     * Returns the com.sschudakov.logging level for the event.
      * 
-     * @return The logging level.
+     * @return The com.sschudakov.logging level.
      */
     public Level getLevel() {
         return level;

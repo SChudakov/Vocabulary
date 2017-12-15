@@ -24,7 +24,7 @@ NOW=$(date +%Y%m%d-%H%M%S)
 GC_OPTIONS="-XX:+UnlockDiagnosticVMOptions -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationConcurrentTime -XX:+PrintGCApplicationStoppedTime"
 #GC_OPTIONS="${GC_OPTIONS} -XX:GuaranteedSafepointInterval=500000"
 GC_OPTIONS="${GC_OPTIONS} -XX:+PrintGCCause  -XX:+PrintSafepointStatistics -XX:+LogVMOutput -XX:LogFile=safepoint$NOW.log"
-COMPILE_OPTIONS="-XX:CompileCommand=dontinline,org.apache.logging.log4j.core.async.perftest.NoOpIdleStrategy::idle"
+COMPILE_OPTIONS="-XX:CompileCommand=dontinline,org.apache.com.sschudakov.logging.log4j.core.async.perftest.NoOpIdleStrategy::idle"
 
 #VM_OPTIONS="-XX:+UnlockDiagnosticVMOptions -XX:+PrintCompilation -XX:+PrintInlining"
 
@@ -39,7 +39,7 @@ LOG4J_OPTIONS="-Dlog4j.configurationFile=perf5AsyncApndNoLoc.xml"
 #LOG4J_OPTIONS="-Dlogback.configurationFile=perf-logback-async.xml"
 #LOG4J_OPTIONS="-Dlogback.configurationFile=perf-logback.xml"
 
-#LOG4J_OPTIONS="${LOG4J_OPTIONS} -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector"
+#LOG4J_OPTIONS="${LOG4J_OPTIONS} -DLog4jContextSelector=org.apache.com.sschudakov.logging.log4j.core.async.AsyncLoggerContextSelector"
 LOG4J_OPTIONS="${LOG4J_OPTIONS} -Dlog4j2.enable.threadlocals=true"
 LOG4J_OPTIONS="${LOG4J_OPTIONS} -Dlog4j2.enable.direct.encoders=true"
 LOG4J_OPTIONS="${LOG4J_OPTIONS} -DAsyncLogger.WaitStrategy=busySpin"
@@ -51,9 +51,9 @@ CP=".:HdrHistogram-2.1.8.jar:disruptor-3.3.4.jar:log4j-1.2.17.jar:slf4j-api-1.7.
 
 RUNNER=RunLog4j2
 RESULTDIR=ApndLog4j2
-java -Xms1G -Xmx1G $GC_OPTIONS $COMPILE_OPTIONS $VM_OPTIONS $JFR_OPTIONS $LOG4J_OPTIONS -cp $CP org.apache.logging.log4j.core.async.perftest.ResponseTimeTest 1 10000 $RUNNER
-java -Xms1G -Xmx1G $GC_OPTIONS $COMPILE_OPTIONS $VM_OPTIONS $JFR_OPTIONS $LOG4J_OPTIONS -cp $CP org.apache.logging.log4j.core.async.perftest.ResponseTimeTest 2 5000 $RUNNER
-java -Xms1G -Xmx1G $GC_OPTIONS $COMPILE_OPTIONS $VM_OPTIONS $JFR_OPTIONS $LOG4J_OPTIONS -cp $CP org.apache.logging.log4j.core.async.perftest.ResponseTimeTest 4 2500 $RUNNER
+java -Xms1G -Xmx1G $GC_OPTIONS $COMPILE_OPTIONS $VM_OPTIONS $JFR_OPTIONS $LOG4J_OPTIONS -cp $CP org.apache.com.sschudakov.logging.log4j.core.async.perftest.ResponseTimeTest 1 10000 $RUNNER
+java -Xms1G -Xmx1G $GC_OPTIONS $COMPILE_OPTIONS $VM_OPTIONS $JFR_OPTIONS $LOG4J_OPTIONS -cp $CP org.apache.com.sschudakov.logging.log4j.core.async.perftest.ResponseTimeTest 2 5000 $RUNNER
+java -Xms1G -Xmx1G $GC_OPTIONS $COMPILE_OPTIONS $VM_OPTIONS $JFR_OPTIONS $LOG4J_OPTIONS -cp $CP org.apache.com.sschudakov.logging.log4j.core.async.perftest.ResponseTimeTest 4 2500 $RUNNER
 mkdir async$RESULTDIR-10k
 mv *k? async$RESULTDIR-10k
 mv nohup.out async$RESULTDIR-10k

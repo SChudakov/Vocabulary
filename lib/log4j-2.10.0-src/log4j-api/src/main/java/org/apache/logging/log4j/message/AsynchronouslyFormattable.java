@@ -23,23 +23,23 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation that signals to asynchronous logging components that messages of this type can safely be passed to
+ * Annotation that signals to asynchronous com.sschudakov.logging components that messages of this type can safely be passed to
  * a background thread without calling {@link Message#getFormattedMessage()} first.
  * <p>
- * Generally, logging mutable objects asynchronously always has the risk that the object is modified between the time
+ * Generally, com.sschudakov.logging mutable objects asynchronously always has the risk that the object is modified between the time
  * the logger is called and the time the log message is formatted and written to disk. Strictly speaking it is the
  * responsibility of the application to ensure that mutable objects are not modified after they have been logged,
  * but this is not always possible.
  * </p><p>
  * Log4j prevents the above race condition as follows:
  * </p><ol>
- * <li>If the Message implements {@link ReusableMessage}, asynchronous logging components in the Log4j implementation
+ * <li>If the Message implements {@link ReusableMessage}, asynchronous com.sschudakov.logging components in the Log4j implementation
  * will copy the message content (formatted message, parameters) onto the queue rather than passing the
  * {@code Message} instance itself. This ensures that the formatted message will not change
  * when the mutable object is modified.
  * </li>
  * <li>If the Message is annotated with {@link AsynchronouslyFormattable}, it can be passed to another thread as is.</li>
- * <li>Otherwise, asynchronous logging components in the Log4j implementation will call
+ * <li>Otherwise, asynchronous com.sschudakov.logging components in the Log4j implementation will call
  * {@link Message#getFormattedMessage()} before passing the Message object to another thread.
  * This gives the Message implementation class a chance to create a formatted message String with the current value
  * of the mutable object. The intention is that the Message implementation caches this formatted message and returns

@@ -17,7 +17,7 @@
 package org.apache.logging.log4j;
 
 /**
- * Exception thrown when an error occurs while logging.  In most cases exceptions will be handled
+ * Exception thrown when an error occurs while com.sschudakov.logging.  In most cases exceptions will be handled
  * within Log4j but certain Appenders may be configured to allow exceptions to propagate to the
  * application. This is a RuntimeException so that the exception may be thrown in those cases without
  * requiring all Logger methods be contained with try/catch blocks.

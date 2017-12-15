@@ -318,7 +318,7 @@ public class FastDatePrinter implements DatePrinter, Serializable {
     }
 
     /**
-     * <p>Performs the parsing of tokens.</p>
+     * <p>Performs the com.sschudakov.parsing of tokens.</p>
      *
      * @param pattern  the pattern
      * @param indexRef  index references

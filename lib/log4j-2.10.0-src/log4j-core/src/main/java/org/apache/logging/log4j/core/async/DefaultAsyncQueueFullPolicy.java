@@ -19,7 +19,7 @@ package org.apache.logging.log4j.core.async;
 import org.apache.logging.log4j.Level;
 
 /**
- * Default router: enqueue the event for asynchronous logging in the background thread, unless the current thread is the
+ * Default router: enqueue the event for asynchronous com.sschudakov.logging in the background thread, unless the current thread is the
  * background thread and the queue is full (enqueueing would cause a deadlock). In that case send the event directly to
  * the appender (in the current thread).
  */

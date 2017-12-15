@@ -22,15 +22,15 @@ import org.apache.logging.log4j.Level;
  * Policy for deciding whether to discard the event, enqueue it or log the event on the current thread when the queue
  * is full.
  * <p>
- * The asynchronous logging queue may become full when the application is logging faster than the underlying appender
- * can keep up with for a long enough time to fill up the bounded queue. When this happens, the logging subsystem has to
+ * The asynchronous com.sschudakov.logging queue may become full when the application is com.sschudakov.logging faster than the underlying appender
+ * can keep up with for a long enough time to fill up the bounded queue. When this happens, the com.sschudakov.logging subsystem has to
  * choose what to do with the event:
  * </p>
  * <ul>
  *   <li>Enqueue the event. This will block until the background thread removes a log event from the queue and space for
- *     new events becomes available in the queue. There is a risk of causing deadlock here when the new logging call was
- *     made while processing another logging call, for example when Log4j calls {@code toString()} on a message
- *     parameter, and the parameter object makes a logging call from its {@code toString()} method.</li>
+ *     new events becomes available in the queue. There is a risk of causing deadlock here when the new com.sschudakov.logging call was
+ *     made while processing another com.sschudakov.logging call, for example when Log4j calls {@code toString()} on a message
+ *     parameter, and the parameter object makes a com.sschudakov.logging call from its {@code toString()} method.</li>
  *   <li>Bypass the queue and send the event directly to the underlying appenders. This is the default policy used by
  *     Log4j since 2.7: see {@link DefaultAsyncQueueFullPolicy}. The benefit of this approach is that
  *     events will not get lost, but the disadvantage is that the resulting log file will be confusing for users,

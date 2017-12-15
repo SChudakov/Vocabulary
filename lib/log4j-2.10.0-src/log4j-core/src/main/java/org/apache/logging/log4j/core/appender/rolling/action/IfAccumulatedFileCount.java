@@ -60,7 +60,7 @@ public final class IfAccumulatedFileCount implements PathCondition {
     /*
      * (non-Javadoc)
      * 
-     * @see org.apache.logging.log4j.core.appender.rolling.action.PathCondition#accept(java.nio.file.Path,
+     * @see org.apache.com.sschudakov.logging.log4j.core.appender.rolling.action.PathCondition#accept(java.nio.file.Path,
      * java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes)
      */
     @Override
@@ -79,7 +79,7 @@ public final class IfAccumulatedFileCount implements PathCondition {
     /*
      * (non-Javadoc)
      * 
-     * @see org.apache.logging.log4j.core.appender.rolling.action.PathCondition#beforeFileTreeWalk()
+     * @see org.apache.com.sschudakov.logging.log4j.core.appender.rolling.action.PathCondition#beforeFileTreeWalk()
      */
     @Override
     public void beforeFileTreeWalk() {

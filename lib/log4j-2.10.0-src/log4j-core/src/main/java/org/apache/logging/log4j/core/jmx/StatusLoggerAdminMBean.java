@@ -55,13 +55,13 @@ public interface StatusLoggerAdminMBean {
      * Notifications with this type have a {@code StatusData} userData object
      * and a {@code null} message.
      */
-    String NOTIF_TYPE_DATA = "com.apache.logging.log4j.core.jmx.statuslogger.data";
+    String NOTIF_TYPE_DATA = "com.apache.com.sschudakov.logging.log4j.core.jmx.statuslogger.data";
 
     /**
      * Notifications with this type have a formatted status data message string
      * but no {@code StatusData} in their userData field.
      */
-    String NOTIF_TYPE_MESSAGE = "com.apache.logging.log4j.core.jmx.statuslogger.message";
+    String NOTIF_TYPE_MESSAGE = "com.apache.com.sschudakov.logging.log4j.core.jmx.statuslogger.message";
 
     /**
      * Returns the {@code ObjectName} that this status logger mbean is registered with.

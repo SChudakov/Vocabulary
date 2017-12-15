@@ -58,7 +58,7 @@ public class JsonLogEventParserTest extends LogEventParserTest {
             "    } ]\n" +
             "  },\n" +
             "  \"contextStack\" : [ \"one\", \"two\" ],\n" +
-            "  \"loggerFqcn\" : \"org.apache.logging.log4j.spi.AbstractLogger\",\n" +
+            "  \"loggerFqcn\" : \"org.apache.com.sschudakov.logging.log4j.spi.AbstractLogger\",\n" +
             "  \"endOfBatch\" : false,\n" +
             "  \"contextMap\" : {\n" +
             "    \"bar\" : \"BAR\",\n" +

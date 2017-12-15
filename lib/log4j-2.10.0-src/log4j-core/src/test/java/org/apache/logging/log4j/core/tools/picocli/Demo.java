@@ -49,7 +49,7 @@ import java.util.concurrent.Callable;
         //descriptionHeading = "@|bold %nDescription|@:%n",
         description = {
                 "",
-                "Demonstrates picocli subcommands parsing and usage help.", },
+                "Demonstrates picocli subcommands com.sschudakov.parsing and usage help.", },
         optionListHeading = "@|bold %nOptions|@:%n",
         footer = {
                 "",
@@ -677,7 +677,7 @@ public class Demo implements Runnable {
 
         public static void main(String[] args) throws Exception {
             // CheckSum implements Callable,
-            // so parsing and error handling can be done in one line of code
+            // so com.sschudakov.parsing and error handling can be done in one line of code
             CommandLine.call(new CheckSum(), System.err, args);
         }
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <!-- Properties section -->
+    <Properties>
+        <Property name="parsing_all">com.sschudakov.parsing-all.log</Property>
+        <Property name="parsing_errors">logs/com.sschudakov.parsing-errors.log</Property>
+        <Property name="module_2_all_log">logs/module_2-all.log</Property>
+        <Property name="module_2_errors_log">logs/module_2-errors.log</Property>
+    </Properties>
+
+    <!-- Appenders section -->
+    <Appenders>
+        <!-- console appender -->
+        <Console name="console_appender_all" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <!-- File appender for com.sschudakov.parsing all-->
+        <RollingFile name="parsing_appender_all" fileName="${parsing_all}"
+                     filePattern="logs/arch/arch_module_1_all_log-%d{MM-dd-yyyy_HH}-%i.gz"
+                     append="true">
+            <PatternLayout>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="6"
+                                           modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <!-- File appender of for com.sschudakov.parsing errors -->
+        <RollingFile name="parsing_appender_errors" fileName="${parsing_errors}"
+                     filePattern="logs/arch/arch_module_1_errors_log-%d{MM-dd-yyyy_HH}-%i.gz"
+                     append="true">
+            <PatternLayout>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="2000"/>
+            </Policies>
+        </RollingFile>
+
+    </Appenders>
+
+    <!-- Loggers section -->
+    <Loggers>
+
+        <!-- Root logger -->
+        <Root level="TRACE">
+            <AppenderRef ref="console_appender_all"/>
+        </Root>
+        <!-- com.sschudakov.parsing logger -->
+        <Logger name="com.sschudakov.parsing_logger" additivity="TRUE" level="ALL">
+            <AppenderRef ref="parsing_appender_all" level="ALL"/>
+            <AppenderRef ref="parsing_appender_errors" level="ERROR"/>
+        </Logger>
+
+    </Loggers>
+</Configuration>

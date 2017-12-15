@@ -59,7 +59,7 @@ public interface LoggerContextAdminMBean {
      * {@code LoggerContext} has been reconfigured. Notifications of this type
      * ({@value} ) do not carry a message or user data.
      */
-    String NOTIF_TYPE_RECONFIGURED = "com.apache.logging.log4j.core.jmx.config.reconfigured";
+    String NOTIF_TYPE_RECONFIGURED = "com.apache.com.sschudakov.logging.log4j.core.jmx.config.reconfigured";
 
     /**
      * Returns the {@code ObjectName} that this MBean is registered with in the

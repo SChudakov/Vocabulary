@@ -76,11 +76,11 @@ public class QueueFullAsyncLoggerConfigLoggingFromToStringTest extends QueueFull
                                                final BlockingAppender blockingAppender,
                                                final QueueFullAbstractTest factory) {
         for (int i = 0; i < 1; i++) {
-            TRACE("Test logging message " + i  + ". Remaining capacity=" + asyncRemainingCapacity(logger));
+            TRACE("Test com.sschudakov.logging message " + i  + ". Remaining capacity=" + asyncRemainingCapacity(logger));
             TRACE("Test decrementing unlocker countdown latch. Count=" + unlocker.countDownLatch.getCount());
             unlocker.countDownLatch.countDown();
             final DomainObject obj = factory.new DomainObject(129);
-            logger.info("logging naughty object #{} {}", i, obj);
+            logger.info("com.sschudakov.logging naughty object #{} {}", i, obj);
         }
         TRACE("Before stop() blockingAppender.logEvents.count=" + blockingAppender.logEvents.size());
         //CoreLoggerContexts.stopLoggerContext(false); // stop async thread
@@ -91,13 +91,13 @@ public class QueueFullAsyncLoggerConfigLoggingFromToStringTest extends QueueFull
         assertEquals("Logging in toString() #0", actual.pop());
         assertEquals("Jumped the queue: queue full",
                 "Logging in toString() #128 (Log4j2 logged this message out of order " +
-                        "to prevent deadlock caused by domain objects logging from their toString " +
+                        "to prevent deadlock caused by domain objects com.sschudakov.logging from their toString " +
                         "method when the async queue is full - LOG4J2-2031)", actual.pop());
 
         for (int i = 1; i < 128; i++) {
             assertEquals("First batch", "Logging in toString() #" + i, actual.pop());
         }
-        assertEquals("logging naughty object #0 Who's bad?!", actual.pop());
+        assertEquals("com.sschudakov.logging naughty object #0 Who's bad?!", actual.pop());
         assertTrue(actual.isEmpty());
     }
 }

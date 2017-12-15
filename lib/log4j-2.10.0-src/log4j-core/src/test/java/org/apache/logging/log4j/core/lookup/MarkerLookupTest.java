@@ -44,7 +44,7 @@ public class MarkerLookupTest {
         final LogEvent event = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
                 .setMarker(marker) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")).build();
         final String value = strLookup.lookup(event, marker.getName());
@@ -55,7 +55,7 @@ public class MarkerLookupTest {
     public void testLookupEventNonExistant() {
         final LogEvent event = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")).build();
         final String value = strLookup.lookup(event, ABSENT_MARKER_NAME);
@@ -68,7 +68,7 @@ public class MarkerLookupTest {
         final LogEvent event = Log4jLogEvent.newBuilder() //
                 .setLoggerName(this.getClass().getName()) //
                 .setMarker(marker) //
-                .setLoggerFqcn("org.apache.logging.log4j.core.Logger") //
+                .setLoggerFqcn("org.apache.com.sschudakov.logging.log4j.core.Logger") //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world!")).build();
         final String value = strLookup.lookup(event, ABSENT_MARKER_NAME);

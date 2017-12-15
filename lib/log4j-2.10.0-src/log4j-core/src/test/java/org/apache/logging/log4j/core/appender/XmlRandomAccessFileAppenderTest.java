@@ -72,7 +72,7 @@ public class XmlRandomAccessFileAppenderTest {
         assertTrue("line1 incorrect: [" + line1 + "], does not contain: [" + msg1 + ']', line1.equals(msg1));
 
         assertNotNull("line2", line2);
-        final String msg2 = "<log4j:events xmlns:log4j=\"http://logging.apache.org/log4j/\">";
+        final String msg2 = "<log4j:events xmlns:log4j=\"http://com.sschudakov.logging.apache.org/log4j/\">";
         assertTrue("line2 incorrect: [" + line2 + "], does not contain: [" + msg2 + ']', line2.equals(msg2));
 
         assertNotNull("line3", line3);

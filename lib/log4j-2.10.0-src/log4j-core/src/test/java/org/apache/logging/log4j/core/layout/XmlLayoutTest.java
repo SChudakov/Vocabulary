@@ -276,7 +276,7 @@ public class XmlLayoutTest {
         this.checkContains(">starting mdc pattern test</Message>", list);
         // this.checkContains("<Message>starting mdc pattern test</Message>", list);
 
-        // <Marker xmlns="" _class="org.apache.logging.log4j.MarkerManager..Log4jMarker" name="EVENT"/>
+        // <Marker xmlns="" _class="org.apache.com.sschudakov.logging.log4j.MarkerManager..Log4jMarker" name="EVENT"/>
         this.checkContains("<Marker", list);
         this.checkContains("name=\"EVENT\"/>", list);
 

@@ -34,7 +34,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class PluginManager {
 
     private static final CopyOnWriteArrayList<String> PACKAGES = new CopyOnWriteArrayList<>();
-    private static final String LOG4J_PACKAGES = "org.apache.logging.log4j.core";
+    private static final String LOG4J_PACKAGES = "org.apache.com.sschudakov.logging.log4j.core";
 
     private static final Logger LOGGER = StatusLogger.getLogger();
 
@@ -63,7 +63,7 @@ public class PluginManager {
     public static void main(final String[] args) {
         System.err.println("ERROR: this tool is superseded by the annotation processor included in log4j-core.");
         System.err.println("If the annotation processor does not work for you, please see the manual page:");
-        System.err.println("http://logging.apache.org/log4j/2.x/manual/configuration.html#ConfigurationSyntax");
+        System.err.println("http://com.sschudakov.logging.apache.org/log4j/2.x/manual/configuration.html#ConfigurationSyntax");
         System.exit(-1);
     }
 

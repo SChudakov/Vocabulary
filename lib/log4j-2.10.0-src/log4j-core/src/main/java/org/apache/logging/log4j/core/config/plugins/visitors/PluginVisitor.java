@@ -26,7 +26,7 @@ import org.apache.logging.log4j.core.config.Node;
 import org.apache.logging.log4j.core.lookup.StrSubstitutor;
 
 /**
- * Visitor strategy for parsing data from a {@link Node}, doing any relevant type conversion, and returning a
+ * Visitor strategy for com.sschudakov.parsing data from a {@link Node}, doing any relevant type conversion, and returning a
  * parsed value for that variable. Implementations must be constructable using the default constructor.
  *
  * @param <A> the Annotation type.
@@ -76,7 +76,7 @@ public interface PluginVisitor<A extends Annotation> {
      * that is being used for injecting a value, or it could be the factory method being used to inject parameters
      * into.
      *
-     * @param member the member this visitor is parsing a value for.
+     * @param member the member this visitor is com.sschudakov.parsing a value for.
      * @return {@code this}.
      */
     PluginVisitor<A> setMember(Member member);

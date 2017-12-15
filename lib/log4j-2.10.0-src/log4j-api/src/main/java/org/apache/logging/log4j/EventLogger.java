@@ -48,9 +48,9 @@ public final class EventLogger {
     }
 
     /**
-     * Logs events and specify the logging level.
+     * Logs events and specify the com.sschudakov.logging level.
      * @param msg The event StructuredDataMessage.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      */
     public static void logEvent(final StructuredDataMessage msg, final Level level) {
         LOGGER.logIfEnabled(FQCN, level, EVENT_MARKER, msg, null);

@@ -287,7 +287,7 @@ public final class ThrowableFormatOptions {
                                 JAnsiTextRenderer.DefaultExceptionStyleMap);
                     } else {
                         StatusLogger.getLogger().warn(
-                                "You requested ANSI exception rendering but JANSI is not on the classpath. Please see https://logging.apache.org/log4j/2.x/runtime-dependencies.html");
+                                "You requested ANSI exception rendering but JANSI is not on the classpath. Please see https://com.sschudakov.logging.apache.org/log4j/2.x/runtime-dependencies.html");
                     }
                 } else if (option.startsWith("S(") && option.endsWith(")")){
                     suffix = option.substring("S(".length(), option.length() - 1);

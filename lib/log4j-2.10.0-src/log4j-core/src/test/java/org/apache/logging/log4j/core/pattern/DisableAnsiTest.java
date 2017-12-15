@@ -31,7 +31,7 @@ import static org.junit.Assert.*;
 public class DisableAnsiTest {
 
     private static final String EXPECTED =
-            "ERROR LoggerTest o.a.l.l.c.p.DisableAnsiTest org.apache.logging.log4j.core.pattern.DisableAnsiTest"
+            "ERROR LoggerTest o.a.l.l.c.p.DisableAnsiTest org.apache.com.sschudakov.logging.log4j.core.pattern.DisableAnsiTest"
             + Strings.LINE_SEPARATOR;
 
     @Rule

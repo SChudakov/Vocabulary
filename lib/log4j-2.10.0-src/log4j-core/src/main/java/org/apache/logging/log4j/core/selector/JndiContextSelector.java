@@ -37,7 +37,7 @@ import org.apache.logging.log4j.status.StatusLogger;
  * EJBs, each enterprise bean (albeit not each application) has its own context relative to the
  * <code>java:comp/env</code> context. An <code>env-entry</code> in a deployment descriptor provides the information to
  * the JNDI context. Once the <code>env-entry</code> is set, a repository selector can query the JNDI application
- * context to look up the value of the entry. The logging context of the web-application will depend on the value the
+ * context to look up the value of the entry. The com.sschudakov.logging context of the web-application will depend on the value the
  * env-entry. The JNDI context which is looked up by this class is <code>java:comp/env/log4j/context-name</code>.
  *
  * <p>
@@ -47,7 +47,7 @@ import org.apache.logging.log4j.status.StatusLogger;
  * 
  * <pre>
  * &lt;env-entry&gt;
- *   &lt;description&gt;JNDI logging context name for this app&lt;/description&gt;
+ *   &lt;description&gt;JNDI com.sschudakov.logging context name for this app&lt;/description&gt;
  *   &lt;env-entry-name&gt;log4j/context-name&lt;/env-entry-name&gt;
  *   &lt;env-entry-value&gt;aDistinctiveLoggingContextName&lt;/env-entry-value&gt;
  *   &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;
@@ -57,8 +57,8 @@ import org.apache.logging.log4j.status.StatusLogger;
  * </blockquote>
  *
  * <p>
- * <em>If multiple applications use the same logging context name, then they
- * will share the same logging context.</em>
+ * <em>If multiple applications use the same com.sschudakov.logging context name, then they
+ * will share the same com.sschudakov.logging context.</em>
  * </p>
  *
  * <p>

@@ -18,7 +18,7 @@
  * Log4j 2 network support. This package (and subpackages) include support for:
  * <ul>
  *     <li>Java Message System appenders (both queue-based and topic-based)</li>
- *     <li>Zeroconf support for finding logging systems</li>
+ *     <li>Zeroconf support for finding com.sschudakov.logging systems</li>
  *     <li>TCP and UDP socket servers for sending and receiving log events</li>
  *     <li>JavaMail appenders for sending log events over SMTP</li>
  *     <li>Syslog network log event support</li>

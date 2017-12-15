@@ -16,14 +16,14 @@ element. -->
                                categoryFactory?)>
 
 <!-- The "threshold" attribute takes a level value such that all -->
-<!-- logging statements with a level equal or below this value are -->
+<!-- com.sschudakov.logging statements with a level equal or below this value are -->
 <!-- disabled. -->
 
-<!-- Setting the "debug" enable the printing of internal log4j logging   -->
+<!-- Setting the "debug" enable the printing of internal log4j com.sschudakov.logging   -->
 <!-- statements.                                                         -->
 
 <!-- By default, debug attribute is "null", meaning that we not do touch -->
-<!-- internal log4j logging settings. The "null" value for the threshold -->
+<!-- internal log4j com.sschudakov.logging settings. The "null" value for the threshold -->
 <!-- attribute can be misleading. The threshold field of a repository	 -->
 <!-- cannot be set to null. The "null" value for the threshold attribute -->
 <!-- simply means don't touch the threshold field, the threshold field   --> 
@@ -134,7 +134,7 @@ element. -->
 
 
 <!-- ==================================================================== -->
-<!--                       A logging event                                -->
+<!--                       A com.sschudakov.logging event                                -->
 <!-- ==================================================================== -->
 <!ELEMENT log4j:events (log4j:event*)>
 <!ATTLIST log4j:events

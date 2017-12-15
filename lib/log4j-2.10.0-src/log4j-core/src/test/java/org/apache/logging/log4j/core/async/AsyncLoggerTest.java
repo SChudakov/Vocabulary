@@ -77,7 +77,7 @@ public class AsyncLoggerTest {
     // NOTE: only define one @Test method per test class with Async Loggers to prevent spurious failures
     // @Test
     // public void testNanoClockInitiallyDummy() {
-    // final AsyncLogger log = (AsyncLogger) LogManager.getLogger("com.foo.Bar");
+    // final AsyncLogger log = (AsyncLogger) LogManager.getParsingLogger("com.foo.Bar");
     // assertTrue(log.getNanoClock() instanceof DummyNanoClock);
     // }
 

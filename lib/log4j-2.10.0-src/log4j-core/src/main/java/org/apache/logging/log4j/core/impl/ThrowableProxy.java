@@ -46,7 +46,7 @@ import org.apache.logging.log4j.util.Strings;
  * </p>
  *
  * <p>
- * TODO: Move this class to org.apache.logging.log4j.core because it is used from LogEvent.
+ * TODO: Move this class to org.apache.com.sschudakov.logging.log4j.core because it is used from LogEvent.
  * </p>
  * <p>
  * TODO: Deserialize: Try to rebuild Throwable if the target exception is in this class loader?

@@ -33,7 +33,7 @@ import org.apache.logging.log4j.message.Message;
  */
 public enum EventRoute {
     /**
-     * Enqueues the event for asynchronous logging in the background thread.
+     * Enqueues the event for asynchronous com.sschudakov.logging in the background thread.
      */
     ENQUEUE {
         @Override

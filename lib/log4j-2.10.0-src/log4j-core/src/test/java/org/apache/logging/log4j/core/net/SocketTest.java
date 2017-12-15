@@ -49,7 +49,7 @@ public class SocketTest {
         try {
             logger = context.getLogger();
         } catch (final NullPointerException e) {
-            fail("Unexpected exception; should not occur until first logging statement " + e.getMessage());
+            fail("Unexpected exception; should not occur until first com.sschudakov.logging statement " + e.getMessage());
         }
 
         final String message = "Log #1";

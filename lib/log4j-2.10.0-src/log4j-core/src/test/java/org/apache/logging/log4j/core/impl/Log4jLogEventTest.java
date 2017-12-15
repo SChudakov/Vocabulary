@@ -67,7 +67,7 @@ public class Log4jLogEventTest {
         /*
          * (non-Javadoc)
          *
-         * @see org.apache.logging.log4j.core.helpers.Clock#currentTimeMillis()
+         * @see org.apache.com.sschudakov.logging.log4j.core.helpers.Clock#currentTimeMillis()
          */
         @Override
         public long currentTimeMillis() {

@@ -34,7 +34,7 @@ public final class Constants {
     public static final String LOG4J_CONTEXT_SELECTOR = "Log4jContextSelector";
 
     /**
-     * Property name for the default status (internal log4j logging) level to use if not specified in configuration.
+     * Property name for the default status (internal log4j com.sschudakov.logging) level to use if not specified in configuration.
      */
     public static final String LOG4J_DEFAULT_STATUS_LEVEL = "Log4jDefaultStatusLevel";
 
@@ -86,7 +86,7 @@ public final class Constants {
      * Objects.
      * <p>
      * {@code True} by default iff all loggers are asynchronous because system property
-     * {@code Log4jContextSelector} is set to {@code org.apache.logging.log4j.core.async.AsyncLoggerContextSelector}.
+     * {@code Log4jContextSelector} is set to {@code org.apache.com.sschudakov.logging.log4j.core.async.AsyncLoggerContextSelector}.
      * Disable by setting system property "log4j2.enable.direct.encoders" to "false".
      *
      * @since 2.6

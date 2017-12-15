@@ -36,7 +36,7 @@ import org.apache.logging.log4j.core.util.Loader;
 import org.apache.logging.log4j.util.LoaderUtil;
 
 /**
- * Represents the source for the logging configuration.
+ * Represents the source for the com.sschudakov.logging configuration.
  */
 public class ConfigurationSource {
     /**

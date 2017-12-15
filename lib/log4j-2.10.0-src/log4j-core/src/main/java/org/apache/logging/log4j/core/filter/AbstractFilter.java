@@ -98,7 +98,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param t A throwable or null.
@@ -113,7 +113,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param t A throwable or null.
@@ -128,7 +128,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param params An array of parameters or null.
@@ -143,7 +143,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -159,7 +159,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -176,7 +176,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -194,7 +194,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -213,7 +213,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -234,7 +234,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -256,7 +256,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -279,7 +279,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -304,7 +304,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters
@@ -330,7 +330,7 @@ public abstract class AbstractFilter extends AbstractLifeCycle implements Filter
     /**
      * Appender Filter method. The default returns NEUTRAL.
      * @param logger the Logger.
-     * @param level The logging Level.
+     * @param level The com.sschudakov.logging Level.
      * @param marker The Marker, if any.
      * @param msg The message, if present.
      * @param p0 the message parameters

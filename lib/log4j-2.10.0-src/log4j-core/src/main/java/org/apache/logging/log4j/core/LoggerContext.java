@@ -53,7 +53,7 @@ import org.apache.logging.log4j.util.LoaderUtil;
 import org.apache.logging.log4j.util.PropertiesUtil;
 
 /**
- * The LoggerContext is the anchor for the logging system. It maintains a list of all the loggers requested by
+ * The LoggerContext is the anchor for the com.sschudakov.logging system. It maintains a list of all the loggers requested by
  * applications and a reference to the Configuration. The Configuration will contain the configured loggers, appenders,
  * filters, etc and will be atomically updated whenever a reconfigure occurs.
  */

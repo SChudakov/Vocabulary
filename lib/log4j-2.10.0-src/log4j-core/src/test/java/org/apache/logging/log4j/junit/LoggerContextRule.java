@@ -49,8 +49,8 @@ public class LoggerContextRule implements TestRule, LoggerContextAccessor {
         return new LoggerContextRule(config, 10, TimeUnit.SECONDS);
     }
     
-    private static final String SYS_PROP_KEY_CLASS_NAME = "org.apache.logging.log4j.junit.LoggerContextRule#ClassName";
-    private static final String SYS_PROP_KEY_DISPLAY_NAME = "org.apache.logging.log4j.junit.LoggerContextRule#DisplayName";
+    private static final String SYS_PROP_KEY_CLASS_NAME = "org.apache.com.sschudakov.logging.log4j.junit.LoggerContextRule#ClassName";
+    private static final String SYS_PROP_KEY_DISPLAY_NAME = "org.apache.com.sschudakov.logging.log4j.junit.LoggerContextRule#DisplayName";
     private final String configLocation;
     private LoggerContext loggerContext;
     private Class<? extends ContextSelector> contextSelectorClass;

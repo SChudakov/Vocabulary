@@ -22,7 +22,7 @@ import org.junit.Test;
 /**
  * LOG4J2-1409
  */
-// test must be in log4j-core but in org.apache.logging.log4j.message package because it calls package-private methods
+// test must be in log4j-core but in org.apache.com.sschudakov.logging.log4j.message package because it calls package-private methods
 public class MutableLogEventWithReusableParamMsgTest {
     @Test
     public void testInteractionWithReusableParameterizedMessage() {

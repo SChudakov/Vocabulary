@@ -34,7 +34,7 @@ public class AsyncLoggerClassLoadDeadlockTest {
 
     @BeforeClass
     public static void beforeClass() {
-        System.setProperty("Log4jContextSelector", "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");
+        System.setProperty("Log4jContextSelector", "org.apache.com.sschudakov.logging.log4j.core.async.AsyncLoggerContextSelector");
         System.setProperty("AsyncLogger.RingBufferSize", String.valueOf(RING_BUFFER_SIZE));
         System.setProperty(ConfigurationFactory.CONFIGURATION_FILE_PROPERTY, "AsyncLoggerConsoleTest.xml");
     }

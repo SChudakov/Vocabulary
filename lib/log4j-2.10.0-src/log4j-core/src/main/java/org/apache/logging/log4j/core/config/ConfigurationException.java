@@ -17,7 +17,7 @@
 package org.apache.logging.log4j.core.config;
 
 /**
- * This exception is thrown when an error occurs reading from, parsing, using, or initializing the Log4j 2
+ * This exception is thrown when an error occurs reading from, com.sschudakov.parsing, using, or initializing the Log4j 2
  * configuration. It is also thrown if an appender cannot be created based on the configuration provided.
  */
 public class ConfigurationException extends RuntimeException {

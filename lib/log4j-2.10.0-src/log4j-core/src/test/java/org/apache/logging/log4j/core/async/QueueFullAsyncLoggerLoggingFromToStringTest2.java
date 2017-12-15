@@ -83,11 +83,11 @@ public class QueueFullAsyncLoggerLoggingFromToStringTest2 extends QueueFullAbstr
         unlocker.start();
 
         for (int i = 0; i < 1; i++) {
-            TRACE("Test logging message " + i  + ". Remaining capacity=" + asyncRemainingCapacity(logger));
+            TRACE("Test com.sschudakov.logging message " + i  + ". Remaining capacity=" + asyncRemainingCapacity(logger));
             TRACE("Test decrementing unlocker countdown latch. Count=" + unlocker.countDownLatch.getCount());
             unlocker.countDownLatch.countDown();
             final DomainObject obj = new DomainObject(129);
-            logger.info(new ParameterizedMessage("logging naughty object #{} {}", i, obj));
+            logger.info(new ParameterizedMessage("com.sschudakov.logging naughty object #{} {}", i, obj));
         }
         TRACE("Before stop() blockingAppender.logEvents.count=" + blockingAppender.logEvents.size());
         CoreLoggerContexts.stopLoggerContext(false); // stop async thread
@@ -96,9 +96,9 @@ public class QueueFullAsyncLoggerLoggingFromToStringTest2 extends QueueFullAbstr
 
         final Stack<String> actual = transform(blockingAppender.logEvents);
         assertEquals("Jumped the queue: test(2)+domain1(65)+domain2(61)=128: queue full",
-                "Logging in toString() #127 (Log4j2 logged this message out of order to prevent deadlock caused by domain objects logging from their toString method when the async queue is full - LOG4J2-2031)", actual.pop());
-        assertEquals("Logging in toString() #128 (Log4j2 logged this message out of order to prevent deadlock caused by domain objects logging from their toString method when the async queue is full - LOG4J2-2031)", actual.pop());
-        assertEquals("logging naughty object #0 Who's bad?!", actual.pop());
+                "Logging in toString() #127 (Log4j2 logged this message out of order to prevent deadlock caused by domain objects com.sschudakov.logging from their toString method when the async queue is full - LOG4J2-2031)", actual.pop());
+        assertEquals("Logging in toString() #128 (Log4j2 logged this message out of order to prevent deadlock caused by domain objects com.sschudakov.logging from their toString method when the async queue is full - LOG4J2-2031)", actual.pop());
+        assertEquals("com.sschudakov.logging naughty object #0 Who's bad?!", actual.pop());
 
         for (int i = 0; i < 127; i++) {
             assertEquals("First batch", "Logging in toString() #" + i, actual.pop());

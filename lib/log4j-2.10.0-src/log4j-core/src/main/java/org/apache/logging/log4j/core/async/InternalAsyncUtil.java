@@ -21,7 +21,7 @@ import org.apache.logging.log4j.message.AsynchronouslyFormattable;
 import org.apache.logging.log4j.message.Message;
 
 /**
- * Helper class providing some async logging-related functionality.
+ * Helper class providing some async com.sschudakov.logging-related functionality.
  * <p>
  *     Consider this class private.
  * </p>

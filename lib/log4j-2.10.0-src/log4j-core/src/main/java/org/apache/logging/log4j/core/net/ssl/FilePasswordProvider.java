@@ -32,9 +32,9 @@ import java.util.Arrays;
  * This is a relatively secure way to handle passwords:
  * <ul>
  *     <li>Managing file access privileges can be delegated to the operating system.</li>
- *     <li>The password file can be in a separate location from the logging configuration.
+ *     <li>The password file can be in a separate location from the com.sschudakov.logging configuration.
  *       This gives flexibility to have different passwords in different environments while
- *       using the same logging configuration. It also allows for separation of responsibilities:
+ *       using the same com.sschudakov.logging configuration. It also allows for separation of responsibilities:
  *       developers don't need to know the password that is used in the production environment.</li>
  *     <li>There is only a small window of opportunity for attackers to obtain the password from a memory
  *       dump: the password data is only resident in memory from the moment the caller calls the

@@ -62,7 +62,7 @@ public class Duration implements Serializable, Comparable<Duration> {
     private static final int SECONDS_PER_DAY = SECONDS_PER_HOUR * HOURS_PER_DAY;
 
     /**
-     * The pattern for parsing.
+     * The pattern for com.sschudakov.parsing.
      */
     private static final Pattern PATTERN = Pattern.compile("P?(?:([0-9]+)D)?"
             + "(T?(?:([0-9]+)H)?(?:([0-9]+)M)?(?:([0-9]+)?S)?)?", Pattern.CASE_INSENSITIVE);

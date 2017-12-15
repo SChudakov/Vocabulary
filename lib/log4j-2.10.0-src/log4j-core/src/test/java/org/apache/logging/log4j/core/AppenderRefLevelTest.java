@@ -40,9 +40,9 @@ public class AppenderRefLevelTest {
     @ClassRule
     public static LoggerContextRule context = new LoggerContextRule(CONFIG);
 
-    org.apache.logging.log4j.Logger logger1 = context.getLogger("org.apache.logging.log4j.test1");
-    org.apache.logging.log4j.Logger logger2 = context.getLogger("org.apache.logging.log4j.test2");
-    org.apache.logging.log4j.Logger logger3 = context.getLogger("org.apache.logging.log4j.test3");
+    org.apache.logging.log4j.Logger logger1 = context.getLogger("org.apache.com.sschudakov.logging.log4j.test1");
+    org.apache.logging.log4j.Logger logger2 = context.getLogger("org.apache.com.sschudakov.logging.log4j.test2");
+    org.apache.logging.log4j.Logger logger3 = context.getLogger("org.apache.com.sschudakov.logging.log4j.test3");
     Marker testMarker = MarkerManager.getMarker("TEST");
 
     @Before

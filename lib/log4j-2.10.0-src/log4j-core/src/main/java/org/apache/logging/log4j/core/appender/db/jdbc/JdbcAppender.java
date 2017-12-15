@@ -39,7 +39,7 @@ import org.apache.logging.log4j.core.util.Assert;
 import org.apache.logging.log4j.core.util.Booleans;
 
 /**
- * This Appender writes logging events to a relational database using standard JDBC mechanisms. It takes a list of
+ * This Appender writes com.sschudakov.logging events to a relational database using standard JDBC mechanisms. It takes a list of
  * {@link ColumnConfig}s and/or {@link ColumnMapping}s with which it determines how to save the event data into the
  * appropriate columns in the table. ColumnMapping is new as of Log4j 2.8 and supports
  * {@linkplain TypeConverter type conversion} and persistence using {@link PreparedStatement#setObject(int, Object)}.

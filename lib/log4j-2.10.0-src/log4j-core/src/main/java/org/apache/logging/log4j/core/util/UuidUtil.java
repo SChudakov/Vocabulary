@@ -39,11 +39,11 @@ public final class UuidUtil {
     /**
      * System property that may be used to seed the UUID generation with an integer value.
      */
-    public static final String UUID_SEQUENCE = "org.apache.logging.log4j.uuidSequence";
+    public static final String UUID_SEQUENCE = "org.apache.com.sschudakov.logging.log4j.uuidSequence";
 
     private static final Logger LOGGER = StatusLogger.getLogger();
 
-    private static final String ASSIGNED_SEQUENCES = "org.apache.logging.log4j.assignedSequences";
+    private static final String ASSIGNED_SEQUENCES = "org.apache.com.sschudakov.logging.log4j.assignedSequences";
 
     private static final AtomicInteger COUNT = new AtomicInteger(0);
     private static final long TYPE1 = 0x1000L;

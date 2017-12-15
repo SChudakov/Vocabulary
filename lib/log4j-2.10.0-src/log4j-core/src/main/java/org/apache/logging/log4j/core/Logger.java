@@ -131,7 +131,7 @@ public class Logger extends AbstractLogger implements Supplier<LoggerConfig> {
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.logging.log4j.util.Supplier#get()
+     * @see org.apache.com.sschudakov.logging.log4j.util.Supplier#get()
      */
     @Override
     public LoggerConfig get() {
@@ -370,7 +370,7 @@ public class Logger extends AbstractLogger implements Supplier<LoggerConfig> {
      */
     protected class PrivateConfig {
         // config fields are public to make them visible to Logger subclasses
-        /** LoggerConfig to delegate the actual logging to. */
+        /** LoggerConfig to delegate the actual com.sschudakov.logging to. */
         public final LoggerConfig loggerConfig; // SUPPRESS CHECKSTYLE
         /** The current Configuration associated with the LoggerConfig. */
         public final Configuration config; // SUPPRESS CHECKSTYLE

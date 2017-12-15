@@ -30,8 +30,8 @@ import com.lmax.disruptor.collections.Histogram;
  * Single-threaded performance test. Usually invoked from PerfTestDriver as part of a series of tests.
  * <p>
  * To run a single instance of this class for the log4j2 test runner:<br>
- * java -Dlog4j.configurationFile=mylog4j2.xml org.apache.logging.log4j.core.async.perftest.PerfTest \
- * org.apache.logging.log4j.core.async.perftest.RunLog4j2 <name> <resultfile.txt> <-verbose> <-throughput>
+ * java -Dlog4j.configurationFile=mylog4j2.xml org.apache.com.sschudakov.logging.log4j.core.async.perftest.PerfTest \
+ * org.apache.com.sschudakov.logging.log4j.core.async.perftest.RunLog4j2 <name> <resultfile.txt> <-verbose> <-throughput>
  */
 public class PerfTest {
 

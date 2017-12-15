@@ -47,14 +47,14 @@ public class PropertySourceTokenizerTest {
             {"log4j2.simple", Collections.singletonList("simple")},
             {"Log4jSimple", Collections.singletonList("simple")},
             {"LOG4J_simple", Collections.singletonList("simple")},
-            {"org.apache.logging.log4j.simple", Collections.singletonList("simple")},
+            {"org.apache.com.sschudakov.logging.log4j.simple", Collections.singletonList("simple")},
             {"log4j.simpleProperty", Arrays.asList("simple", "property")},
             {"log4j.simple_property", Arrays.asList("simple", "property")},
             {"LOG4J_simple_property", Arrays.asList("simple", "property")},
             {"LOG4J_SIMPLE_PROPERTY", Arrays.asList("simple", "property")},
             {"log4j2-dashed-propertyName", Arrays.asList("dashed", "property", "name")},
             {"Log4jProperty_with.all-the/separators", Arrays.asList("property", "with", "all", "the", "separators")},
-            {"org.apache.logging.log4j.config.property", Arrays.asList("config", "property")},
+            {"org.apache.com.sschudakov.logging.log4j.config.property", Arrays.asList("config", "property")},
         };
     }
 

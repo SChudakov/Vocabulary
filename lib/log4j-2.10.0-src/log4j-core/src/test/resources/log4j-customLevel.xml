@@ -37,11 +37,11 @@
   </Appenders>
 
   <Loggers>
-    <Logger name="org.apache.logging.log4j.test1" level="detail" additivity="false">
+    <Logger name="org.apache.com.sschudakov.logging.log4j.test1" level="detail" additivity="false">
       <AppenderRef ref="List1"/>
     </Logger>
 
-    <Logger name="org.apache.logging.log4j.test2" level="info" additivity="false">
+    <Logger name="org.apache.com.sschudakov.logging.log4j.test2" level="info" additivity="false">
       <AppenderRef ref="List2"/>
     </Logger>
 

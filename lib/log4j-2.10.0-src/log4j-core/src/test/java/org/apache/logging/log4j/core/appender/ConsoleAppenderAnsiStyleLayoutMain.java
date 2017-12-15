@@ -32,11 +32,11 @@ import org.junit.Test;
  * </p>
  *
  * <pre>
- * mvn -Dtest=org.apache.logging.log4j.core.appender.ConsoleAppenderAnsiStyleLayoutMain test
+ * mvn -Dtest=org.apache.com.sschudakov.logging.log4j.core.appender.ConsoleAppenderAnsiStyleLayoutMain test
  * </pre>
  * or:
  * <pre>
- * java -classpath log4j-core\target\test-classes;log4j-core\target\classes;log4j-api\target\classes;%HOME%\.m2\repository\org\fusesource\jansi\jansi\1.14\jansi-1.14.jar; org.apache.logging.log4j.core.appender.ConsoleAppenderAnsiStyleLayoutMain log4j-core/target/test-classes/log4j2-console-style-ansi.xml
+ * java -classpath log4j-core\target\test-classes;log4j-core\target\classes;log4j-api\target\classes;%HOME%\.m2\repository\org\fusesource\jansi\jansi\1.14\jansi-1.14.jar; org.apache.com.sschudakov.logging.log4j.core.appender.ConsoleAppenderAnsiStyleLayoutMain log4j-core/target/test-classes/log4j2-console-style-ansi.xml
  * </pre>
  *
  */

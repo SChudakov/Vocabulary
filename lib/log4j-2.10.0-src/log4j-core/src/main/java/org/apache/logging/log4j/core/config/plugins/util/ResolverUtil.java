@@ -78,7 +78,7 @@ import org.osgi.framework.wiring.BundleWiring;
  * </p>
  */
 public class ResolverUtil {
-    /** An instance of Log to use for logging in this class. */
+    /** An instance of Log to use for com.sschudakov.logging in this class. */
     private static final Logger LOGGER = StatusLogger.getLogger();
 
     private static final String VFSZIP = "vfszip";

@@ -57,8 +57,8 @@ import static org.junit.Assert.*;
 @RunWith(Parameterized.class)
 public class XIncludeTest {
 
-    private static final String LOGGER_NAME = "org.apache.logging.log4j.test1.Test";
-    private static final String FILE_LOGGER_NAME = "org.apache.logging.log4j.test2.Test";
+    private static final String LOGGER_NAME = "org.apache.com.sschudakov.logging.log4j.test1.Test";
+    private static final String FILE_LOGGER_NAME = "org.apache.com.sschudakov.logging.log4j.test2.Test";
     private static final String APPENDER_NAME = "STDOUT";
 
     private final String logFileName;

@@ -74,9 +74,9 @@ public abstract class QueueFullAbstractTest {
         @Override
         public String toString() {
             for (int i = 0; i < count; i++) {
-                TRACE("DomainObject decrementing unlocker countdown latch before logging. Count was " + unlocker.countDownLatch.getCount());
+                TRACE("DomainObject decrementing unlocker countdown latch before com.sschudakov.logging. Count was " + unlocker.countDownLatch.getCount());
                 unlocker.countDownLatch.countDown();
-                TRACE("DomainObject logging message " + i  + ". Remaining capacity=" + asyncRemainingCapacity(innerLogger));
+                TRACE("DomainObject com.sschudakov.logging message " + i  + ". Remaining capacity=" + asyncRemainingCapacity(innerLogger));
                 innerLogger.info("Logging in toString() #" + i);
             }
             return "Who's bad?!";

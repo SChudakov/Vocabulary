@@ -50,7 +50,7 @@ public class GenerateCustomLoggerTest {
     
     @BeforeClass
     public static void beforeClass() {
-        System.setProperty("log4j2.loggerContextFactory", "org.apache.logging.log4j.TestLoggerContextFactory");
+        System.setProperty("log4j2.loggerContextFactory", "org.apache.com.sschudakov.logging.log4j.TestLoggerContextFactory");
     }
 
     @Test

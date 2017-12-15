@@ -78,7 +78,7 @@ public abstract class AbstractJdbcAppenderFactoryMethodTest {
             long date = resultSet.getTimestamp("eventDate").getTime();
             long anotherDate = resultSet.getTimestamp("anotherDate").getTime();
             assertEquals(date, anotherDate);
-            assertTrue("The date should be later than pre-logging (1).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (1).", date >= millis);
             assertTrue("The date should be earlier than now (1).", date <= System.currentTimeMillis());
             assertEquals("The literal column is not correct (1).", "Some Other Literal Value",
                 resultSet.getString("literalColumn"));
@@ -94,7 +94,7 @@ public abstract class AbstractJdbcAppenderFactoryMethodTest {
             date = resultSet.getTimestamp("eventDate").getTime();
             anotherDate = resultSet.getTimestamp("anotherDate").getTime();
             assertEquals(date, anotherDate);
-            assertTrue("The date should be later than pre-logging (2).", date >= millis);
+            assertTrue("The date should be later than pre-com.sschudakov.logging (2).", date >= millis);
             assertTrue("The date should be earlier than now (2).", date <= System.currentTimeMillis());
             assertEquals("The literal column is not correct (2).", "Some Other Literal Value",
                 resultSet.getString("literalColumn"));

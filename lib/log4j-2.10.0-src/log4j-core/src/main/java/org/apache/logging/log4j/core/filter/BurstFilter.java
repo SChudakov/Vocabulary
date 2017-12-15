@@ -35,7 +35,7 @@ import org.apache.logging.log4j.core.config.plugins.PluginBuilderFactory;
 import org.apache.logging.log4j.message.Message;
 
 /**
- * The <code>BurstFilter</code> is a logging filter that regulates logging traffic.
+ * The <code>BurstFilter</code> is a com.sschudakov.logging filter that regulates com.sschudakov.logging traffic.
  *
  * <p>
  * Use this filter when you want to control the maximum burst of log statements that can be sent to an appender. The
@@ -308,7 +308,7 @@ public final class BurstFilter extends AbstractFilter {
         private Result onMismatch = Result.DENY;
 
         /**
-         * Sets the logging level to use.
+         * Sets the com.sschudakov.logging level to use.
          */
         public Builder setLevel(final Level level) {
             this.level = level;

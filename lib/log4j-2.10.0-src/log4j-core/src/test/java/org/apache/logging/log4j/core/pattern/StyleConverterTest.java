@@ -36,7 +36,7 @@ import static org.junit.Assert.*;
 public class StyleConverterTest {
 
     private static final String EXPECTED =
-        "\u001B[1;31mERROR\u001B[m \u001B[1;36mLoggerTest\u001B[m o.a.l.l.c.p.StyleConverterTest org.apache.logging.log4j.core.pattern.StyleConverterTest"
+        "\u001B[1;31mERROR\u001B[m \u001B[1;36mLoggerTest\u001B[m o.a.l.l.c.p.StyleConverterTest org.apache.com.sschudakov.logging.log4j.core.pattern.StyleConverterTest"
         + Strings.LINE_SEPARATOR;
 
     @BeforeClass

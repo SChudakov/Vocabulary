@@ -27,7 +27,7 @@ Configuration:
   Loggers:
     logger:
       -
-        name: org.apache.logging.log4j.test1
+        name: org.apache.com.sschudakov.logging.log4j.test1
         level: debug
         additivity: false
         ThreadContextMapFilter:
@@ -37,7 +37,7 @@ Configuration:
         AppenderRef:
           ref: STDOUT
       -
-        name: org.apache.logging.log4j.test2
+        name: org.apache.com.sschudakov.logging.log4j.test2
         level: debug
         additivity: false
         AppenderRef:

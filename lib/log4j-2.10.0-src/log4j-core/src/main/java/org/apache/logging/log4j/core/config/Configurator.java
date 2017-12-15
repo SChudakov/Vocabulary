@@ -94,7 +94,7 @@ public final class Configurator {
      * Initializes the Logging Context.
      * @param name The Context name.
      * @param loader The ClassLoader for the Context (or null).
-     * @param configLocation The configuration for the logging context.
+     * @param configLocation The configuration for the com.sschudakov.logging context.
      * @return The LoggerContext or null if an error occurred (check the status logger).
      */
     public static LoggerContext initialize(final String name, final ClassLoader loader, final String configLocation) {
@@ -106,7 +106,7 @@ public final class Configurator {
      * Initializes the Logging Context.
      * @param name The Context name.
      * @param loader The ClassLoader for the Context (or null).
-     * @param configLocation The configuration for the logging context (or null, or blank).
+     * @param configLocation The configuration for the com.sschudakov.logging context (or null, or blank).
      * @param externalContext The external context to be attached to the LoggerContext
      * @return The LoggerContext or null if an error occurred (check the status logger).
      */
@@ -135,7 +135,7 @@ public final class Configurator {
      * Initializes the Logging Context.
      * @param name The Context name.
      * @param loader The ClassLoader for the Context (or null).
-     * @param configLocation The configuration for the logging context.
+     * @param configLocation The configuration for the com.sschudakov.logging context.
      * @return The LoggerContext.
      */
     public static LoggerContext initialize(final String name, final ClassLoader loader, final URI configLocation) {
@@ -146,7 +146,7 @@ public final class Configurator {
      * Initializes the Logging Context.
      * @param name The Context name.
      * @param loader The ClassLoader for the Context (or null).
-     * @param configLocation The configuration for the logging context (or null).
+     * @param configLocation The configuration for the com.sschudakov.logging context (or null).
      * @param externalContext The external context to be attached to the LoggerContext
      * @return The LoggerContext.
      */
@@ -181,7 +181,7 @@ public final class Configurator {
     /**
      * Initializes the Logging Context.
      * @param name The Context name.
-     * @param configLocation The configuration for the logging context.
+     * @param configLocation The configuration for the com.sschudakov.logging context.
      * @return The LoggerContext or null if an error occurred (check the status logger).
      */
     public static LoggerContext initialize(final String name, final String configLocation) {

@@ -101,7 +101,7 @@ public class PatternParserTest {
         final Throwable t = new Throwable();
         final StackTraceElement[] elements = t.getStackTrace();
         final Log4jLogEvent event = Log4jLogEvent.newBuilder() //
-                .setLoggerName("org.apache.logging.log4j.PatternParserTest") //
+                .setLoggerName("org.apache.com.sschudakov.logging.log4j.PatternParserTest") //
                 .setMarker(MarkerManager.getMarker("TEST")) //
                 .setLoggerFqcn(Logger.class.getName()) //
                 .setLevel(Level.INFO) //
@@ -124,7 +124,7 @@ public class PatternParserTest {
         final List<PatternFormatter> formatters = parser.parse(patternTruncateFromBeginning);
         assertNotNull(formatters);
         final LogEvent event = Log4jLogEvent.newBuilder() //
-                .setLoggerName("org.apache.logging.log4j.PatternParserTest") //
+                .setLoggerName("org.apache.com.sschudakov.logging.log4j.PatternParserTest") //
                 .setLoggerFqcn(Logger.class.getName()) //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world")) //
@@ -145,7 +145,7 @@ public class PatternParserTest {
         final List<PatternFormatter> formatters = parser.parse(patternTruncateFromEnd);
         assertNotNull(formatters);
         final LogEvent event = Log4jLogEvent.newBuilder() //
-                .setLoggerName("org.apache.logging.log4j.PatternParserTest") //
+                .setLoggerName("org.apache.com.sschudakov.logging.log4j.PatternParserTest") //
                 .setLoggerFqcn(Logger.class.getName()) //
                 .setLevel(Level.INFO) //
                 .setMessage(new SimpleMessage("Hello, world")) //
@@ -208,7 +208,7 @@ public class PatternParserTest {
         final Throwable t = new Throwable();
         t.getStackTrace();
         final LogEvent event = Log4jLogEvent.newBuilder() //
-                .setLoggerName("org.apache.logging.log4j.PatternParserTest") //
+                .setLoggerName("org.apache.com.sschudakov.logging.log4j.PatternParserTest") //
                 .setMarker(MarkerManager.getMarker("TEST")) //
                 .setLoggerFqcn(Logger.class.getName()) //
                 .setLevel(level) //

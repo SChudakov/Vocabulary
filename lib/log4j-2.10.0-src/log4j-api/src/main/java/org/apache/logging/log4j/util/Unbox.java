@@ -26,7 +26,7 @@ import org.apache.logging.log4j.status.StatusLogger;
  * <p>
  * Example usage:
  * </p><pre>
- * import static org.apache.logging.log4j.util.Unbox.box;
+ * import static org.apache.com.sschudakov.logging.log4j.util.Unbox.box;
  * ...
  * long longValue = 123456L;
  * double doubleValue = 3.14;
