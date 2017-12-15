@@ -14,4 +14,23 @@ public class Word {
     public String getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return this.value;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Word) {
+            Word otherWord = (Word) obj;
+            return this.value.equals(otherWord.getValue());
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.value.hashCode();
+    }
 }

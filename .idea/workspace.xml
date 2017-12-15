@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="890b3d7b-d139-4703-bfc2-71adc06a978d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/bins/Word.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/logging/LoggersManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/logging/LogsRemover.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/bins/Word.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/logging/LoggersManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/logging/LogsRemover.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/parsing/FileParser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/FileParserTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_all_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/log4j2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/Utils.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/bin/Driver.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/bin/Line.class" afterPath="" />
@@ -24,10 +31,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bin/Wagon.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/facts/TrainMovingLine.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/facts/TrainVisitStation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logging/logging.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Vocabulary_Interface/vocabulary_interface/InputWrodsJFrame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Vocabulary_Interface/vocabulary_interface/InputWrodsJFrame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Vocabulary_Interface/vocabulary_interface/InputWrodsJFrame.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FirstLab" afterPath="$PROJECT_DIR$/../FirstLab" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Life" afterPath="$PROJECT_DIR$/../Life" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimplexMethod/out/production/SimplexMethod/com/sschudakov/table_building/input/ConsoleValuesInput.class" afterPath="$PROJECT_DIR$/../SimplexMethod/out/production/SimplexMethod/com/sschudakov/table_building/input/ConsoleValuesInput.class" />
@@ -73,323 +76,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/TrainLineMover.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/TrainLineMover.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Underground/src/log4j2.xml" afterPath="$PROJECT_DIR$/../Underground/src/log4j2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/pom.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/EventLogger.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/EventLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/Level.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/LogManager.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/LogManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/Logger.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/Logger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/LoggingException.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/LoggingException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/MarkerManager.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/MarkerManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/AbstractMessageFactory.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/AbstractMessageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/AsynchronouslyFormattable.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/AsynchronouslyFormattable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/DefaultFlowMessageFactory.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/DefaultFlowMessageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/MapMessage.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/MapMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/Message.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterFormatter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterFormatter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterizedMessage.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterizedMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ReusableMessage.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ReusableMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ReusableParameterizedMessage.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ReusableParameterizedMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ThreadDumpMessage.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ThreadDumpMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/simple/SimpleLogger.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/simple/SimpleLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/simple/SimpleLoggerContext.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/simple/SimpleLoggerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/simple/package-info.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/simple/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/AbstractLogger.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/AbstractLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/DefaultThreadContextStack.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/DefaultThreadContextStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/ExtendedLogger.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/ExtendedLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/ExtendedLoggerWrapper.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/ExtendedLoggerWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/LoggerContext.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/LoggerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/Terminable.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/Terminable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/package-info.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/spi/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/status/StatusData.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/status/StatusData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/status/StatusListener.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/status/StatusListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/status/StatusLogger.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/status/StatusLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/status/package-info.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/status/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/Constants.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/LowLevelLogUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/LowLevelLogUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/PropertiesUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/PropertiesUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/PropertySource.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/PropertySource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/Unbox.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/Unbox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/site/markdown/index.md" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/site/markdown/index.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/site/site.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/site/site.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/test/java/org/apache/logging/log4j/LogManagerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/test/java/org/apache/logging/log4j/LogManagerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/test/java/org/apache/logging/log4j/util/LegacyPropertiesCompatibilityTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/test/java/org/apache/logging/log4j/util/LegacyPropertiesCompatibilityTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/test/java/org/apache/logging/log4j/util/PropertySourceTokenizerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/test/java/org/apache/logging/log4j/util/PropertySourceTokenizerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/pom.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/DefaultLoggerContextAccessor.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/DefaultLoggerContextAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/ErrorHandler.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/ErrorHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/Filter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/Filter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/LogEvent.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/LogEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/Logger.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/Logger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/LoggerContext.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/LoggerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/AbstractAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/AbstractAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/AsyncAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/AsyncAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/DefaultErrorHandler.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/DefaultErrorHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/SmtpAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/SmtpAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/SocketAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/SocketAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jpa/AbstractLogEventWrapperEntity.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jpa/AbstractLogEventWrapperEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jpa/JpaAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jpa/JpaAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jpa/JpaDatabaseManager.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jpa/JpaDatabaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/mom/JmsManager.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/mom/JmsManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/mom/kafka/KafkaAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/mom/kafka/KafkaAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/nosql/NoSqlAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/nosql/NoSqlAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/nosql/NoSqlDatabaseManager.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/nosql/NoSqlDatabaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rewrite/MapRewritePolicy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rewrite/MapRewritePolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rewrite/PropertiesRewritePolicy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rewrite/PropertiesRewritePolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rewrite/RewriteAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rewrite/RewriteAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rewrite/RewritePolicy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rewrite/RewritePolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/FileSize.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/FileSize.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/RolloverStrategy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/RolloverStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/DeleteAction.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/DeleteAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/Duration.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/Duration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfAccumulatedFileCount.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfAccumulatedFileCount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfAccumulatedFileSize.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfAccumulatedFileSize.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfAll.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfAll.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfAny.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfAny.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfFileName.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfFileName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfLastModified.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfLastModified.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfNot.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/appender/rolling/action/IfNot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncLogger.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncLoggerConfig.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncLoggerConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncLoggerConfigDisruptor.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncLoggerConfigDisruptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncLoggerContext.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncLoggerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncQueueFullMessageUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncQueueFullMessageUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncQueueFullPolicy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/AsyncQueueFullPolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/DefaultAsyncQueueFullPolicy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/DefaultAsyncQueueFullPolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/EventRoute.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/EventRoute.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/InternalAsyncUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/InternalAsyncUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/package-info.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/async/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/AbstractConfiguration.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/AbstractConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/AwaitCompletionReliabilityStrategy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/AwaitCompletionReliabilityStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/AwaitUnconditionallyReliabilityStrategy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/AwaitUnconditionallyReliabilityStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/Configuration.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/Configuration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/ConfigurationException.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/ConfigurationException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/ConfigurationFactory.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/ConfigurationFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/ConfigurationSource.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/ConfigurationSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/Configurator.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/Configurator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/DefaultConfiguration.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/DefaultConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/DefaultReliabilityStrategy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/DefaultReliabilityStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/LockingReliabilityStrategy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/LockingReliabilityStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/LoggerConfig.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/LoggerConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/NullConfiguration.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/NullConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/builder/api/ComponentBuilder.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/builder/api/ComponentBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/builder/api/ConfigurationBuilder.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/builder/api/ConfigurationBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/json/JsonConfiguration.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/json/JsonConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/package-info.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/processor/PluginProcessor.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/processor/PluginProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/util/PluginManager.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/util/PluginManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/util/ResolverUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/util/ResolverUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/visitors/PluginVisitor.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/visitors/PluginVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/properties/PropertiesConfigurationBuilder.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/properties/PropertiesConfigurationBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/status/StatusConfiguration.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/status/StatusConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/xml/XmlConfiguration.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/xml/XmlConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/filter/AbstractFilter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/filter/AbstractFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/filter/BurstFilter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/filter/BurstFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/filter/CompositeFilter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/filter/CompositeFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/filter/TimeFilter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/filter/TimeFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/impl/Log4jLogEvent.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/impl/Log4jLogEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/impl/ThrowableFormatOptions.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/impl/ThrowableFormatOptions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/impl/ThrowableProxy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/impl/ThrowableProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jackson/LogEventJsonMixIn.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jackson/LogEventJsonMixIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jackson/LogEventWithContextListMixIn.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jackson/LogEventWithContextListMixIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jackson/XmlConstants.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jackson/XmlConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/AsyncAppenderAdmin.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/AsyncAppenderAdmin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/AsyncAppenderAdminMBean.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/AsyncAppenderAdminMBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/LoggerContextAdminMBean.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/LoggerContextAdminMBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/Server.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/StatusLoggerAdmin.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/StatusLoggerAdmin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/StatusLoggerAdminMBean.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/jmx/StatusLoggerAdminMBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/layout/PatternLayout.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/layout/PatternLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/lookup/Interpolator.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/lookup/Interpolator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/net/TcpSocketManager.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/net/TcpSocketManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/net/package-info.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/net/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/net/ssl/FilePasswordProvider.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/net/ssl/FilePasswordProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/pattern/ClassNamePatternConverter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/pattern/ClassNamePatternConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/pattern/JAnsiTextRenderer.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/pattern/JAnsiTextRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/pattern/PatternParser.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/pattern/PatternParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/selector/JndiContextSelector.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/selector/JndiContextSelector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/tools/Generate.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/tools/Generate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/Constants.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/DefaultShutdownCallbackRegistry.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/DefaultShutdownCallbackRegistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/UuidUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/UuidUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/DateParser.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/DateParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/FastDateFormat.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/FastDateFormat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/FastDateParser.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/FastDateParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/FastDatePrinter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/FastDatePrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/FixedDateFormat.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/util/datetime/FixedDateFormat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/resources/Log4j-config.xsd" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/resources/Log4j-config.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/resources/Log4j-events.dtd" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/resources/Log4j-events.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/resources/Log4j-events.xsd" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/resources/Log4j-events.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/resources/Log4j-levels.xsd" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/resources/Log4j-levels.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/site/manual/index.md" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/site/manual/index.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/site/site.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/site/site.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/AppenderRefLevelJsonTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/AppenderRefLevelJsonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/AppenderRefLevelTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/AppenderRefLevelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/BasicConfigurationFactory.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/BasicConfigurationFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/ExtendedLevelTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/ExtendedLevelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeAsynchronousLoggingTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeAsynchronousLoggingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeMixedSyncAyncLoggingTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeMixedSyncAyncLoggingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeSynchronousLoggingTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeSynchronousLoggingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/HostNameTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/HostNameTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/Log4j1222Test.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/Log4j1222Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/LogEventTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/LogEventTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/LoggerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/LoggerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiMessagesMain.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiMessagesMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiStyleJira180Main.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiStyleJira180Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiStyleJira272Main.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiStyleJira272Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiStyleJira319Main.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiStyleJira319Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiStyleLayoutMain.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderAnsiStyleLayoutMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderDefaultSuppressedThrowable.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderDefaultSuppressedThrowable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderJAnsiMessageMain.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderJAnsiMessageMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderJAnsiXExceptionMain.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderJAnsiXExceptionMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderNoAnsiStyleLayoutMain.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/ConsoleAppenderNoAnsiStyleLayoutMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/Jira739Test.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/Jira739Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/MemoryMappedFileAppenderLocationTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/MemoryMappedFileAppenderLocationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/OutputStreamManagerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/OutputStreamManagerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/XmlCompactFileAppenderTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/XmlCompactFileAppenderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/XmlCompleteFileAppenderTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/XmlCompleteFileAppenderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/XmlRandomAccessFileAppenderTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/XmlRandomAccessFileAppenderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/db/jdbc/AbstractJdbcAppenderDataSourceTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/db/jdbc/AbstractJdbcAppenderDataSourceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/db/jdbc/AbstractJdbcAppenderFactoryMethodTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/db/jdbc/AbstractJdbcAppenderFactoryMethodTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/db/jpa/AbstractJpaAppenderTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/db/jpa/AbstractJpaAppenderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/db/jpa/converter/StackTraceElementAttributeConverterTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/db/jpa/converter/StackTraceElementAttributeConverterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/rewrite/RewriteAppenderTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/rewrite/RewriteAppenderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/routing/RoutingAppenderWithJndiTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/appender/routing/RoutingAppenderWithJndiTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/AbstractAsyncThreadContextTestBase.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/AbstractAsyncThreadContextTestBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/AsyncLoggerClassLoadDeadlockTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/AsyncLoggerClassLoadDeadlockTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/AsyncLoggerConfigTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/AsyncLoggerConfigTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/AsyncLoggerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/AsyncLoggerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAbstractTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAbstractTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncAppenderTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncAppenderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerConfigLoggingFromToStringTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerConfigLoggingFromToStringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerConfigTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerConfigTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerLoggingFromToStringTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerLoggingFromToStringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerLoggingFromToStringTest2.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerLoggingFromToStringTest2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/QueueFullAsyncLoggerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/IdleStrategy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/IdleStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/NoOpIdleStrategy.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/NoOpIdleStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/PerfTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/PerfTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/CompositeConfigurationTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/CompositeConfigurationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/ConfigurationTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/ConfigurationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/CustomConfigurationTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/CustomConfigurationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/TestConfigurator.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/TestConfigurator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/XIncludeTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/XIncludeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/builder/ConfigurationAssemblerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/builder/ConfigurationAssemblerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/builder/ConfigurationBuilderTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/builder/ConfigurationBuilderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/builder/CustomConfigurationFactory.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/builder/CustomConfigurationFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/plugins/util/ResolverUtilCustomProtocolTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/config/plugins/util/ResolverUtilCustomProtocolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/impl/Log4jLogEventTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/impl/Log4jLogEventTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/impl/NestedLoggingFromToStringTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/impl/NestedLoggingFromToStringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/impl/ThrowableProxyTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/impl/ThrowableProxyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/PatternLayoutTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/PatternLayoutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/PatternSelectorTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/PatternSelectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/Rfc5424LayoutTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/Rfc5424LayoutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/SerializedLayoutTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/SerializedLayoutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/StringBuilderEncoderTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/StringBuilderEncoderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/XmlLayoutTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/layout/XmlLayoutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/lookup/InterpolatorTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/lookup/InterpolatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/lookup/JndiLookupTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/lookup/JndiLookupTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/lookup/MarkerLookupTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/lookup/MarkerLookupTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/lookup/ResourceBundleLookupTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/lookup/ResourceBundleLookupTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/net/SocketTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/net/SocketTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/parser/JsonLogEventParserTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/parser/JsonLogEventParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/parser/LogEventParserTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/parser/LogEventParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/parser/XmlLogEventParserTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/parser/XmlLogEventParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/parser/YamlLogEventParserTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/parser/YamlLogEventParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/DisableAnsiTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/DisableAnsiTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/FormattingInfoTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/FormattingInfoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/NoConsoleNoAnsiTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/NoConsoleNoAnsiTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/PatternParserTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/PatternParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/StyleConverterTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/StyleConverterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/ThrowablePatternConverterTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/pattern/ThrowablePatternConverterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/GenerateCustomLoggerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/GenerateCustomLoggerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/GenerateExtendedLoggerTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/GenerateExtendedLoggerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/Demo.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/Demo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/util/datetime/FastDateParserTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/util/datetime/FastDateParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/junit/LoggerContextRule.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/junit/LoggerContextRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/message/MutableLogEventWithReusableParamMsgTest.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/message/MutableLogEventWithReusableParamMsgTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/test/appender/DeadlockAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/test/appender/DeadlockAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/test/appender/ListAppender.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/test/appender/ListAppender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/README.md" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/ShutdownCallbackRegistryTest.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/ShutdownCallbackRegistryTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-badfilename.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-badfilename.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-badfilterparam.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-badfilterparam.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-badlayout.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-badlayout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-loggers.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-loggers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-nofilter.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-nofilter.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-status.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/bad/log4j-status.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/customplugin/FixedStringLayout.java.source" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/customplugin/FixedStringLayout.java.source" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/gcFreeMixedSyncAsyncLogging.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/gcFreeMixedSyncAsyncLogging.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-advertiser.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-advertiser.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-collectionLogging.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-collectionLogging.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-customLevel.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-customLevel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-date.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-date.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-filetest.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-filetest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-loggerprops.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-loggerprops.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-reference-level.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-reference-level.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rewrite.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rewrite.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-7z-lazy.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-7z-lazy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-7z.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-7z.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-bzip2-lazy.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-bzip2-lazy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-bzip2.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-bzip2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron-every2-direct.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron-every2-direct.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron-every2.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron-every2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron-once-a-day.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron-once-a-day.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron2.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-cron2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-deflate-lazy.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-deflate-lazy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-deflate.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-deflate.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-direct-reconfigure.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-direct-reconfigure.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-direct-tmp-compress-folder.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-direct-tmp-compress-folder.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-direct.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-direct.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-gz-lazy.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-gz-lazy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-gz-posix.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-gz-posix.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-gz-tmp-compress.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-gz-tmp-compress.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-gz.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-gz.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-pack200-lazy.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-pack200-lazy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-pack200.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-pack200.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-random-direct.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-random-direct.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-reconfigure.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-reconfigure.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-size.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-size.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-xz-lazy.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-xz-lazy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-xz.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-xz.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-zip-lazy.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-zip-lazy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-zip.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling-zip.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling2.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling3-direct.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling3-direct.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling3.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling4.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-rolling4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-routing-by-jndi.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-routing-by-jndi.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-ssl-socket-options.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-ssl-socket-options.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-strict1.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-strict1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test-shutdownTimeout.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test-shutdownTimeout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test1.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test1.yaml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test1.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test2.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test3.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-test3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-xinclude-loggers.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j-xinclude-loggers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j.dtd" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j2-console-progress.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/log4j2-console-progress.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jdbc/log4j2-data-source.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jdbc/log4j2-data-source.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jdbc/log4j2-h2-factory-method.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jdbc/log4j2-h2-factory-method.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jdbc/log4j2-hsqldb-factory-method.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jdbc/log4j2-hsqldb-factory-method.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jpa/log4j2-h2-jpa-base.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jpa/log4j2-h2-jpa-base.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jpa/log4j2-h2-jpa-basic.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jpa/log4j2-h2-jpa-basic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jpa/log4j2-hsqldb-jpa-base.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jpa/log4j2-hsqldb-jpa-base.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jpa/log4j2-hsqldb-jpa-basic.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/org/apache/logging/log4j/core/appender/db/jpa/log4j2-hsqldb-jpa-basic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/perf/SimplePerfTest.bat" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/perf/SimplePerfTest.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/perf/SimplePerfTest.sh" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/perf/SimplePerfTest.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/perf/runResponseTm.sh" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/perf/runResponseTm.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/perf9MMapNoLoc.xml" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/test/resources/perf9MMapNoLoc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vocabulary.iml" afterPath="$PROJECT_DIR$/Vocabulary.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/bins/Word.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/bins/Word.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log4j2.xml" afterPath="$PROJECT_DIR$/src/log4j2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/logging/log4j2.xml" afterPath="$PROJECT_DIR$/src/log4j2.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -401,13 +92,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -416,8 +109,8 @@
       <file leaf-file-name="FileParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="78" column="30" lean-forward="false" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+            <state relative-caret-position="510">
+              <caret line="64" column="0" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -425,44 +118,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/String.java">
+      <file leaf-file-name="FileParserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47311">
-              <caret line="2866" column="18" lean-forward="false" selection-start-line="2866" selection-start-column="18" selection-end-line="2866" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogAnalyzer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Tasks/src/com/sschudakov/task3/LogAnalyzer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="45" column="9" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="45" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Word.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/bins/Word.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state relative-caret-position="391">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="23" selection-end-column="9" />
               <folding>
-                <element signature="e#254#255#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j2.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
+      <file leaf-file-name="FileExtensionDeterminer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#FileExtensionDeterminer#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -475,6 +150,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>toString</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -489,13 +169,15 @@
       <list>
         <option value="$PROJECT_DIR$/log4j2.xml" />
         <option value="$PROJECT_DIR$/../Vocabulary_Interface/src/vocabulary_interface/InputWrodsJFrame.java" />
-        <option value="$PROJECT_DIR$/src/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/logging/LoggersManager.java" />
         <option value="$PROJECT_DIR$/src/logging/LogsRemover.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/logging/LogsRemover.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/bins/Word.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java" />
+        <option value="$PROJECT_DIR$/src/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -532,6 +214,11 @@
             <path>
               <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -543,9 +230,18 @@
             <path>
               <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="bins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
+              <item name="test_files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
@@ -570,7 +266,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FirstLab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/hamcrest-all-1.3.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -592,7 +288,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.InputWrodsJFrame">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="FileParserTest.parseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sschudakov.parsing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Vocabulary" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.parsing" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.parsing.FileParserTest" />
+      <option name="METHOD_NAME" value="parseTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="InputWrodsJFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -643,13 +364,16 @@
       <envs />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.InputWrodsJFrame" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FileParserTest.parseTest" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.InputWrodsJFrame" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FileParserTest.parseTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.InputWrodsJFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -674,23 +398,57 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 13h 39m 04s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 13h 39m 26s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 13h 42m 32s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 13h 44m 39s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 14h 36m 48s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 16h 07m 08s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 16h 07m 44s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 16h 08m 30s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 16h 09m 08s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileParserTest_parseTest - 2017.12.15 at 16h 19m 54s.xml">
+      <configuration name="FileParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="1" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28139183" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -701,9 +459,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -711,7 +467,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -722,6 +478,8 @@
           <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -747,6 +505,8 @@
           <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -765,6 +525,8 @@
           <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -777,6 +539,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -811,59 +575,126 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LogsRemover#0" expanded="false" />
+            <element signature="method#removeLogs#1;class#LogsRemover#0" expanded="false" />
+            <element signature="method#removeFile#0;class#LogsRemover#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47311">
-          <caret line="2866" column="18" lean-forward="false" selection-start-line="2866" selection-start-column="18" selection-end-line="2866" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Tasks/src/com/sschudakov/task3/LogAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="17">
           <caret line="45" column="9" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="45" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2866" column="18" lean-forward="false" selection-start-line="2866" selection-start-column="18" selection-end-line="2866" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/bins/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="docComment;class#Word#0" expanded="false" />
+            <element signature="method#equals#0;class#Word#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="51" />
+        <state relative-caret-position="466">
+          <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="105" column="40" lean-forward="true" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="464" column="35" lean-forward="false" selection-start-line="464" selection-start-column="35" selection-end-line="464" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/parsing-errors.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#FileExtensionDeterminer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="78" column="30" lean-forward="false" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        <state relative-caret-position="510">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/bins/Word.java">
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
           <folding>
-            <element signature="e#254#255#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
           </folding>
         </state>
       </provider>
