@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class FileParser {
 
-    private static final String WORD_FROM_MEANING_SEPARATOR = "–";
+    private static final String WORD_FROM_MEANING_SEPARATOR = "–|-";
     private static final int WORD_POSITION = 0;
     private static final int MEANINGS_POSITION = 1;
     private static final String REGULAR_EXPRESSION_FOR_PARSING_MEANINGS = ",|/|\\\\";//[^\w]

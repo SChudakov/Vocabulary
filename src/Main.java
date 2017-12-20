@@ -14,6 +14,8 @@ public class Main {
         LogsRemover.removeLogs();
     }
 
+
+
     private static void readUsingAllCharsets() {
         //x-Big5-HKSCS-2001
         for (String s : Charset.availableCharsets().keySet()) {
@@ -24,7 +26,6 @@ public class Main {
             }
         }
     }
-
 
     private static void readFile(String path, Charset charset) {
 
