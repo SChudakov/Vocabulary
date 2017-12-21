@@ -2,6 +2,7 @@ package com.sschudakov.parsing;
 
 import com.sschudakov.bins.Word;
 import com.sschudakov.logging.LoggersManager;
+import org.apache.logging.log4j.Marker;
 
 import java.io.*;
 import java.nio.charset.Charset;
@@ -16,7 +17,7 @@ import java.util.List;
  */
 public class FileParser {
 
-    private static final String WORD_FROM_MEANING_SEPARATOR = "–|-";
+    private static final String WORD_FROM_MEANING_SEPARATOR = " – | - ";
     private static final int WORD_POSITION = 0;
     private static final int MEANINGS_POSITION = 1;
     private static final String REGULAR_EXPRESSION_FOR_PARSING_MEANINGS = ",|/|\\\\";//[^\w]
@@ -30,12 +31,12 @@ public class FileParser {
         HashMap<Word, List<Word>> result = new HashMap<>();
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(
-                new FileInputStream(file), Charset.forName("windows-1251")))) {
+                new FileInputStream(file), Charset.defaultCharset()/*forName("windows-1251")*/))) {
 
             String line;
             Word word;
             List<Word> meanings;
-
+            int i = 0;
             while ((line = reader.readLine()) != null) {
                 try {
                     System.out.println(line);
@@ -54,9 +55,10 @@ public class FileParser {
                             meanings
                     );
                 } catch (IllegalArgumentException e) {
-                    LoggersManager.getParsingLogger().error(e);
+                    LoggersManager.getParsingLogger().error(e.getMessage() + " in " + file.getName() + " line: " + i);
 //                    e.printStackTrace();
                 }
+                i++;
             }
         } catch (IOException e) {
             LoggersManager.getParsingLogger().error(e);

@@ -1,41 +1,21 @@
-der Vormund - опекун
-
-bertreuen -ухаживать 
-
-von jdm etwas erben - наследовать от кого-то что-то
-
-der Junggestelle -холостяк 
-
-der Lebensgefahrte - спутник жизни 
-
-unehelich - внебрачный 
-
-das Trauschein - свидетельство о браке 
-
-die Abtreibung - аборт 
-
-leibliche Eltern - кровные родители 
-
-schmucken -украшать 
-
-beisetzen - погребать 
-
-taufen - крестить 
-
-verwohnen durch - баловать чем-то
-
-beinringen D Akk - прививать кому-то что-то
-
-gedenken G - чтить память 
-
-beweinen - оплакивать 
-
-schmieden - ковать 
-
-auskommen mit - ладить с кем-то
-
-versorgen - содержать (хозяйство)
-
-jdn stillen - успокаивать 
-
-krabbeln - ползти 
+п»їder Vormund - РѕРїРµРєСѓРЅ
+bertreuen -СѓС…Р°Р¶РёРІР°С‚СЊ 
+von jdm etwas erben - РЅР°СЃР»РµРґРѕРІР°С‚СЊ РѕС‚ РєРѕРіРѕ-С‚Рѕ С‡С‚Рѕ-С‚Рѕ
+der Junggestelle -С…РѕР»РѕСЃС‚СЏРє 
+der Lebensgefahrte - СЃРїСѓС‚РЅРёРє Р¶РёР·РЅРё 
+unehelich - РІРЅРµР±СЂР°С‡РЅС‹Р№ 
+das Trauschein - СЃРІРёРґРµС‚РµР»СЊСЃС‚РІРѕ Рѕ Р±СЂР°РєРµ 
+die Abtreibung - Р°Р±РѕСЂС‚ 
+leibliche Eltern - РєСЂРѕРІРЅС‹Рµ СЂРѕРґРёС‚РµР»Рё 
+schmucken -СѓРєСЂР°С€Р°С‚СЊ 
+beisetzen - РїРѕРіСЂРµР±Р°С‚СЊ 
+taufen - РєСЂРµСЃС‚РёС‚СЊ 
+verwohnen durch - Р±Р°Р»РѕРІР°С‚СЊ С‡РµРј-С‚Рѕ
+beinringen D Akk - РїСЂРёРІРёРІР°С‚СЊ РєРѕРјСѓ-С‚Рѕ С‡С‚Рѕ-С‚Рѕ
+gedenken G - С‡С‚РёС‚СЊ РїР°РјСЏС‚СЊ 
+beweinen - РѕРїР»Р°РєРёРІР°С‚СЊ 
+schmieden - РєРѕРІР°С‚СЊ 
+auskommen mit - Р»Р°РґРёС‚СЊ СЃ РєРµРј-С‚Рѕ
+versorgen - СЃРѕРґРµСЂР¶Р°С‚СЊ (С…РѕР·СЏР№СЃС‚РІРѕ)
+jdn stillen - СѓСЃРїРѕРєР°РёРІР°С‚СЊ 
+krabbeln - РїРѕР»Р·С‚Рё 

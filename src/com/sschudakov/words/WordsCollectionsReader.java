@@ -14,6 +14,7 @@ public class WordsCollectionsReader {
     public static Collection<HashMap<Word, List<Word>>> readWordsCollections() {
         Collection<HashMap<Word, List<Word>>> result = new ArrayList<>();
         for (File file : new File(WORDS_COLLECTIONS_DIRECTORY_PATH).listFiles()) {
+            System.out.println("\nFILE: " + file.getName() + "\n");
             if (!FileExtensionDeterminer.isDOCXFile(file.getPath())) {
                 result.add(FileParser.parse(file));
             }

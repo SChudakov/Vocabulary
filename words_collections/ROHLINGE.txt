@@ -1,61 +1,31 @@
-der Goldschmied - ювелир 
-
-die Espen - осина 
-
-der Kreisverkehr - перекрёстное движение  
-
-die Kreuzung - перекрёсток 
-
-es sit mir ausgegangen - заканчиваться 
-
-unermudlich - неустанно 
-
-fahrig - расторопный, суетливый 
-
-die Pachtung - договор аренды 
-
-die Garbe - сноп 
-
-der Tumpel - пруд, лужа, стоячая вода 
-
-der Faden - саженец, нитка 
-
-der Verfall - гибель 
-
-allmahlich - постепенно 
-
-verdaunen - переваривать 
-
-die Sprosse - ступенька 
-
-ubergie?en - заливать заварку, выливать, проливать 
-
-die Raureif - изморозь
-
-die Sorgfalt - тщательность, точность, старание
-
-die Last - ноша, груз 
-
-die Zwischenzeit - промежуток времени
-
-aufbrechen - взламывать (дверь)
-
-die Bedingung - условие 
-
-die Pampelmuse - грейпфрут 
-
-gro?spurig - надменный, кичливый 
-
-der Ahorn - клён 
-
-die Schmuggelware - контрабанда 
-
-toben - бушевать, свирепствовать, психовать 
-
-fluchen - браниться, сквернословить
-
-unverzuglich - немедленно, безотлагательно 
-
-vernachlassigen - пренебрегать, умалять  
-
-den Horer abnehmen - поднимать трубку 
+п»їder Goldschmied - СЋРІРµР»РёСЂ 
+die Espen - РѕСЃРёРЅР° 
+der Kreisverkehr - РїРµСЂРµРєСЂС‘СЃС‚РЅРѕРµ РґРІРёР¶РµРЅРёРµ  
+die Kreuzung - РїРµСЂРµРєСЂС‘СЃС‚РѕРє 
+es ist mir ausgegangen - Р·Р°РєР°РЅС‡РёРІР°С‚СЊСЃСЏ 
+unermГјdlich - РЅРµСѓСЃС‚Р°РЅРЅРѕ 
+fahrig - СЂР°СЃС‚РѕСЂРѕРїРЅС‹Р№, СЃСѓРµС‚Р»РёРІС‹Р№ 
+die Pachtung - РґРѕРіРѕРІРѕСЂ Р°СЂРµРЅРґС‹ 
+die Garbe - СЃРЅРѕРї 
+der Tumpel - РїСЂСѓРґ, Р»СѓР¶Р°, СЃС‚РѕСЏС‡Р°СЏ РІРѕРґР° 
+der Faden - СЃР°Р¶РµРЅРµС†, РЅРёС‚РєР° 
+der Verfall - РіРёР±РµР»СЊ 
+allmГ¤hlich - РїРѕСЃС‚РµРїРµРЅРЅРѕ 
+verdaunen - РїРµСЂРµРІР°СЂРёРІР°С‚СЊ 
+die Sprosse - СЃС‚СѓРїРµРЅСЊРєР° 
+ГјbergieГџen - Р·Р°Р»РёРІР°С‚СЊ Р·Р°РІР°СЂРєСѓ, РІС‹Р»РёРІР°С‚СЊ, РїСЂРѕР»РёРІР°С‚СЊ 
+die Raureif - РёР·РјРѕСЂРѕР·СЊ
+die Sorgfalt - С‚С‰Р°С‚РµР»СЊРЅРѕСЃС‚СЊ, С‚РѕС‡РЅРѕСЃС‚СЊ, СЃС‚Р°СЂР°РЅРёРµ
+die Last - РЅРѕС€Р°, РіСЂСѓР· 
+die Zwischenzeit - РїСЂРѕРјРµР¶СѓС‚РѕРє РІСЂРµРјРµРЅРё
+aufbrechen - РІР·Р»Р°РјС‹РІР°С‚СЊ (РґРІРµСЂСЊ)
+die Bedingung - СѓСЃР»РѕРІРёРµ 
+die Pampelmuse - РіСЂРµР№РїС„СЂСѓС‚ 
+groГџspurig - РЅР°РґРјРµРЅРЅС‹Р№, РєРёС‡Р»РёРІС‹Р№ 
+der Ahorn - РєР»С‘РЅ 
+die Schmuggelware - РєРѕРЅС‚СЂР°Р±Р°РЅРґР° 
+toben - Р±СѓС€РµРІР°С‚СЊ, СЃРІРёСЂРµРїСЃС‚РІРѕРІР°С‚СЊ, РїСЃРёС…РѕРІР°С‚СЊ 
+fluchen - Р±СЂР°РЅРёС‚СЊСЃСЏ, СЃРєРІРµСЂРЅРѕСЃР»РѕРІРёС‚СЊ
+unverzuglich - РЅРµРјРµРґР»РµРЅРЅРѕ, Р±РµР·РѕС‚Р»Р°РіР°С‚РµР»СЊРЅРѕ 
+vernachlГ¤ssigen - РїСЂРµРЅРµР±СЂРµРіР°С‚СЊ, СѓРјР°Р»СЏС‚СЊ  
+den HГ¶rer abnehmen - РїРѕРґРЅРёРјР°С‚СЊ С‚СЂСѓР±РєСѓ 

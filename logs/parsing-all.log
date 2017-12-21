@@ -1,0 +1,2466 @@
+word and meanings array [﻿von] has not length 2 in Adjective mit Präpositionen.txt line: 0 
+parsed word: abhängig sein von with meanings: [зависеть от чего-то] 
+parsed word: begeistert sein von with meanings: [быть взволнованным чем-то] 
+parsed word: überzeugt sein von with meanings: [быть убежденным в чем-то] 
+parsed word: enttäuscht sein von with meanings: [быть разочарованным в чем-то] 
+parsed word: entfernt sein von with meanings: [быть отдаленным от чего-то] 
+word and meanings array [auf A] has not length 2 in Adjective mit Präpositionen.txt line: 6 
+parsed word: ärgerlich sein auf A with meanings: [злиться из-за чего-то] 
+parsed word: böse sein auf A with meanings: [злиться из-за чего-то] 
+parsed word: angewiesen sein auf A with meanings: [быть уверенным в чем-то] 
+parsed word: eifersüchtig sein auf A with meanings: [завидовать чему-то] 
+parsed word: stolz sein auf A with meanings: [быть гордым чем-то] 
+word and meanings array [an D] has not length 2 in Adjective mit Präpositionen.txt line: 12 
+parsed word: interessiert sein an D with meanings: [быть заинтересованным в чем-то] 
+parsed word: erkrankt sein an D with meanings: [быть больным чем-то] 
+parsed word: reich sein an D with meanings: [быть богатым чем-то] 
+parsed word: schuld sein an D with meanings: [быть виноватым в чем-то] 
+parsed word: beteiligt sein an D with meanings: [быть задействованным в чем-то] 
+word and meanings array [zu] has not length 2 in Adjective mit Präpositionen.txt line: 18 
+parsed word: freundlich sein zu with meanings: [быть дружественным к кому-то] 
+parsed word: (un)fähig sein zu with meanings: [быть способным, быть неспособным на что-то] 
+parsed word: Bereit sein zu with meanings: [быть готовым на что-то] 
+parsed word: nett sein zu with meanings: [быть любезным с кем-то] 
+parsed word: entschlossen sein zu with meanings: [решиться на что-то] 
+word and meanings array [bei] has not length 2 in Adjective mit Präpositionen.txt line: 24 
+parsed word: angesehen sein bei with meanings: [быть в почете среди кого-то] 
+parsed word: (un)beliebt sein bei with meanings: [быть не любимым среди] 
+word and meanings array [gegenüber] has not length 2 in Adjective mit Präpositionen.txt line: 27 
+parsed word: zurückhaltend sein gegenüber with meanings: [быть сдержанным перед кем-то] 
+parsed word: aufgeschlossen sein gegenüber with meanings: [быть открытым перед кем-то] 
+word and meanings array [gegen A] has not length 2 in Adjective mit Präpositionen.txt line: 30 
+parsed word: (un)empfindlich sein gegen A with meanings: [быть нечувствительным к чему-то] 
+parsed word: immun sein gegen A with meanings: [быть неуязвимым к чему-то] 
+word and meanings array [an A] has not length 2 in Adjective mit Präpositionen.txt line: 33 
+parsed word: adressiert sein an A with meanings: [быть адресованным кому-то] 
+parsed word: gewöhnt sein an A with meanings: [привыкнуть к чему-то] 
+word and meanings array [für] has not length 2 in Adjective mit Präpositionen.txt line: 36 
+parsed word: (un)geeignet sein für with meanings: [быть пригодным, быть непригодным к чему-то] 
+parsed word: verantwortlich sein für with meanings: [быть ответственным за что-то] 
+parsed word: (un)wichtig sein für with meanings: [быть важным, быть неважным для] 
+parsed word: (un)schädlich sein für with meanings: [быть вредным, быть безвредным для] 
+parsed word: nützlich sein  für with meanings: [быть полезным для] 
+word and meanings array [mit] has not length 2 in Adjective mit Präpositionen.txt line: 42 
+parsed word: befreundet sein mit with meanings: [быть дружественным кому-то] 
+parsed word: verwandt sein mit with meanings: [быть родственным для кого-то] 
+parsed word: zufrieden sein mit with meanings: [быть довольным чем-то] 
+parsed word: beschäftigt sein mit with meanings: [быть занятым чем-то] 
+parsed word: fertig sein mit with meanings: [быть готовым с чем-то] 
+word and meanings array [nach] has not length 2 in Adjective mit Präpositionen.txt line: 48 
+parsed word: verrückt sein nach with meanings: [сходить с ума из-за] 
+word and meanings array [in A] has not length 2 in Adjective mit Präpositionen.txt line: 50 
+parsed word: unterteilt sein in A with meanings: [быть разделенным на] 
+parsed word: verliebt sein in A with meanings: [быть влюбленным в кого-то] 
+word and meanings array [über] has not length 2 in Adjective mit Präpositionen.txt line: 53 
+parsed word: glücklich sein über with meanings: [быть радостным из-за] 
+parsed word: erfreut sein über with meanings: [быть обрадованным чем-то] 
+parsed word: erstaunt sein über with meanings: [быть изумленным чем-то] 
+parsed word: traurig sein über with meanings: [быть грустным из-за] 
+parsed word: verwundert sein über with meanings: [быть удивленным чем-то] 
+parsed word: wütend sein über with meanings: [быть в ярости из-за] 
+word and meanings array [in D] has not length 2 in Adjective mit Präpositionen.txt line: 60 
+parsed word: (un)erfahren sein in D with meanings: [быть опытным, быть неопытным в чем-то] 
+parsed word: gut sein in D with meanings: [быть хорошим в чем-то, быть хорошим для чего-то] 
+parsed word: nachlässig sein in D with meanings: [быть неосторожным в] 
+word and meanings array [] has not length 2 in Adjective mit Präpositionen.txt line: 64 
+parsed word: ﻿unverbindlich with meanings: [ни к чему не обязывающий, слишком общий] 
+parsed word: seicht with meanings: [мелководный, ограниченный (умственно)] 
+parsed word: heiser with meanings: [хриплый, охрипший] 
+parsed word: verschwommen with meanings: [туманный, расплывчатый] 
+parsed word: artig with meanings: [вежливый, воспитанный] 
+parsed word: gepflegt with meanings: [ухоженный] 
+parsed word: kultiviert with meanings: [образцовый, умственно развитый] 
+parsed word: planmäßig with meanings: [планомерный, штатный] 
+parsed word: zahn with meanings: [ручной] 
+parsed word: schwerfällig with meanings: [неповоротливый, неуклюжий] 
+parsed word: solide with meanings: [солидный, надежный] 
+parsed word: dumpf with meanings: [глухой, затхлый] 
+parsed word: faul with meanings: [ленивый, гнилой, тухлый, затхлый] 
+parsed word: matt with meanings: [слабый, вялый] 
+parsed word: ranzig with meanings: [прогорклый, затхлый] 
+parsed word: schal with meanings: [безвкусный, пресный] 
+parsed word: schwül with meanings: [душный, знойный] 
+parsed word: unverfroren with meanings: [наглый, дерзкий] 
+parsed word: unwirsch with meanings: [грубый, неприветливый] 
+parsed word: unschlüssig with meanings: [неприветливый] 
+parsed word: unnahbar with meanings: [высокомерный, неприступный] 
+parsed word: ungestüm with meanings: [вспыльчивый, стремительный] 
+parsed word: unverhofft with meanings: [неожиданный] 
+parsed word: unbeschwert with meanings: [беззаботный, неотягощенный] 
+parsed word: berechtigt with meanings: [резонный] 
+parsed word: besonnen with meanings: [рассудительный] 
+parsed word: gedrückt with meanings: [угнетенный, подавленный] 
+word and meanings array [] has not length 2 in Adjective.txt line: 27 
+word and meanings array [] has not length 2 in Adjective.txt line: 28 
+word and meanings array [] has not length 2 in Adjective.txt line: 29 
+word and meanings array [] has not length 2 in Adjective.txt line: 30 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 31 
+word and meanings array [] has not length 2 in Adjective.txt line: 32 
+word and meanings array [] has not length 2 in Adjective.txt line: 33 
+parsed word: belegen with meanings: [���������� (������� ����)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 1 
+parsed word: von Natur aus with meanings: [�� �������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 3 
+parsed word: anhang with meanings: [� �������, �� ���������, ���������, ����] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 5 
+parsed word: ein Medikament gegen Kopfschmerzen with meanings: [�������� �� �������� ����] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 7 
+parsed word: behandeln with meanings: [������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 9 
+parsed word: Diagnosse stellen with meanings: [������� �������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 11 
+parsed word: zunachst with meanings: [�������, ������ �����] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 13 
+parsed word: allmahlich with meanings: [����������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 15 
+parsed word: die Werkstatt with meanings: [����������, ���, ���] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 17 
+parsed word: mutma?lich with meanings: [�����������������, ���������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 19 
+parsed word: umfangreich with meanings: [��������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 21 
+parsed word: vorsichtshalber with meanings: [�� ������ ������, � ����� ����������������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 23 
+word and meanings array [widerlegen] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 24 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 25 
+word and meanings array [zwischenmenschlich] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 26 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 27 
+parsed word: den Humor erwerben with meanings: [����������� ������� �����] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 29 
+parsed word: vom diesem Standpunkt with meanings: [� ���� ����� ������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 31 
+parsed word: erfassen with meanings: [��������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 33 
+parsed word: der Pechvogel with meanings: [���������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 35 
+parsed word: schlittern in with meanings: [���������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 37 
+parsed word: in den Griff bekommen with meanings: [��������� �� ��������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 39 
+parsed word: der Stillstand with meanings: [�������, ������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 41 
+parsed word: verherrlichen with meanings: [�����������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 43 
+parsed word: ergiebig with meanings: [�����������, ��������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 45 
+parsed word: sich eignen als with meanings: [������� ����] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 47 
+parsed word: jemandem vergehen with meanings: [���������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 49 
+parsed word: der Streich with meanings: [�������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 51 
+parsed word: hereinlegen with meanings: [�����������, ��������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 53 
+parsed word: glaubhaft with meanings: [��������������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 55 
+parsed word: umschlagen in Akk with meanings: [������������ �] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 57 
+parsed word: der Leistungssport with meanings: [������� �����] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 59 
+parsed word: das Gutachten with meanings: [����������, ����������, ��������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 1 
+parsed word: ernste Krankheit with meanings: [������� �������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 3 
+parsed word: hartnackig with meanings: [�������, ����������� (� ������)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 5 
+parsed word: fruhzeitig with meanings: [��������������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 7 
+parsed word: vervollstandigen with meanings: [��������� �� ������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 9 
+parsed word: zusammenlegen with meanings: [���������] 
+parsed word: gleichsetzen D with meanings: [������������, �������������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 1 
+parsed word: aufgehen with meanings: [��������� (� ������)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 3 
+parsed word: heiter with meanings: [�������, ���������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 5 
+parsed word: angeboren with meanings: [����������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 7 
+parsed word: landen auf with meanings: [�����������, ������������, ������������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 9 
+parsed word: erfassen with meanings: [��������, �������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 11 
+parsed word: erstellen with meanings: [���������, ���������� (�� ������ ��������� ������)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 13 
+parsed word: auftauchen with meanings: [����������, �����������, ���������] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 15 
+parsed word: das Erkenntis with meanings: [���������, ������� �����] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 17 
+parsed word: der Gesundheitsstatus with meanings: [��������� ��������] 
+parsed word: aufgrund G with meanings: [на основании] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 1 
+parsed word: der Wandel with meanings: [перемена, изменение] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 3 
+parsed word: verallgemeinern with meanings: [обобщенно] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 5 
+parsed word: fusionieren with meanings: [слиться] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 7 
+parsed word: die Verausgabung with meanings: [расходование, трата] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 9 
+parsed word: umgekehrt with meanings: [перевернутый, вывернутый, взаимный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 11 
+parsed word: zumindest with meanings: [по крайней мере] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 13 
+parsed word: bewirken with meanings: [вызывать, способствовать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 15 
+parsed word: umschlagen in with meanings: [обертывать, обматывать, резко меняться] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 17 
+parsed word: zum Teil with meanings: [частично] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 19 
+parsed word: sich stürzem in with meanings: [упасть в] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 21 
+parsed word: die Reflexion uber with meanings: [самоанализ в] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 23 
+parsed word: das Tun with meanings: [образ действий, поведение] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 25 
+parsed word: zahlen zu with meanings: [причислять к] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 27 
+parsed word: die Wertschätzung with meanings: [уважение, оценка] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 29 
+parsed word: ausbleibend with meanings: [отсутствующий] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 31 
+parsed word: ideell with meanings: [идефній] 
+parsed word: die Ressentiments with meanings: [обида, враждебность] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 1 
+parsed word: allgemeingultig with meanings: [общепринятій] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 3 
+parsed word: flussiges English with meanings: [беглый английский] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 5 
+parsed word: ergeben with meanings: [двавать в результате] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 7 
+parsed word: schlichtes Wissen with meanings: [простое знание] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 9 
+parsed word: aussagekräftig with meanings: [содержательный] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 11 
+parsed word: ruppig with meanings: [грубый, хамский] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 13 
+parsed word: geldgierig with meanings: [алчный, корыстный, жадный] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 15 
+parsed word: der Tugend with meanings: [добродетель] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 17 
+parsed word: der Anwärter with meanings: [претендент, кандидат] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 19 
+parsed word: vorrangig with meanings: [преимущественный, первоочередный] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 21 
+parsed word: die Ehre with meanings: [�����] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 1 
+parsed word: das R?tsel with meanings: [�������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 3 
+parsed word: der Butler with meanings: [���������, �������, ���������� ������ ��������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 5 
+parsed word: die S?nfte with meanings: [�������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 7 
+parsed word: die Buche with meanings: [���] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 9 
+parsed word: pr?chtig with meanings: [������������, ���������, ������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 11 
+parsed word: sich erheben with meanings: [�����������, ��������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 13 
+parsed word: die Dirne with meanings: [��������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 15 
+parsed word: der Heide with meanings: [�������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 17 
+parsed word: scheu?lich with meanings: [��������������, �������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 19 
+parsed word: die Angelegenheit with meanings: [����, ������, ��������������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 21 
+parsed word: sich wenden an + A with meanings: [���������� � ����-��] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 23 
+parsed word: unnachsichtlich with meanings: [�����������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 25 
+parsed word: die Verleumdung with meanings: [�������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 27 
+parsed word: das Gespenst with meanings: [����������, �������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 29 
+parsed word: die Glocke with meanings: [�����������, ����] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 31 
+parsed word: nach einer Sitte with meanings: [�������� ������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 33 
+parsed word: einstimmig with meanings: [������������, �����������] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 35 
+parsed word: z?gern with meanings: [������� ����������] 
+parsed word: der Schadel with meanings: [�����] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 1 
+parsed word: zittern with meanings: [�������] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 3 
+parsed word: der Fallschirm with meanings: [�������] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 5 
+parsed word: flattern with meanings: [������� (�� �����)] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 7 
+parsed word: der Trost with meanings: [��������] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 9 
+parsed word: die Stube with meanings: [�������� ���������] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 11 
+parsed word: die Handvoll with meanings: [������] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 13 
+parsed word: einschleppen with meanings: [������� �������] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 15 
+parsed word: sich aufrichten with meanings: [�����������] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 17 
+parsed word: auff?ttern with meanings: [�����������] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 19 
+parsed word: schmal with meanings: [�����, ������, �����] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 21 
+parsed word: bestimmen ?ber with meanings: [���������� ��] 
+parsed word: umfangreich with meanings: [��������, �������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 1 
+parsed word: unermundlich with meanings: [����������, ����������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 3 
+parsed word: knochenhart with meanings: [������ ��� ������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 5 
+parsed word: die Recherche with meanings: [������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 7 
+parsed word: hiebfest with meanings: [����������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 9 
+parsed word: stitchfest with meanings: [����������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 11 
+parsed word: zerlegen with meanings: [����������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 13 
+parsed word: die Sichtung with meanings: [�����������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 15 
+parsed word: anfallen with meanings: [���������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 17 
+parsed word: der Spa?vogel with meanings: [������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 19 
+parsed word: das Dabeisein with meanings: [�����������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 1 
+parsed word: die Bereicherung with meanings: [����������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 3 
+parsed word: die Gunst with meanings: [���������������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 5 
+parsed word: das Wagenrennen with meanings: [���������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 7 
+parsed word: sich ranken um with meanings: [������ ������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 9 
+parsed word: greifen zu with meanings: [��������� �] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 11 
+parsed word: der Fliegenpilz with meanings: [�������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 13 
+parsed word: die Inkas with meanings: [����] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 15 
+parsed word: schutten In with meanings: [������� �] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 17 
+parsed word: verallgemeinernd with meanings: [��������� (all in all)] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 19 
+parsed word: der Anreiz with meanings: [������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 21 
+parsed word: die Hemmschwelle with meanings: [��������������� ������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 23 
+parsed word: der Vorreiter with meanings: [����������] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 25 
+parsed word: der Bildhauer with meanings: [скульптор] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 1 
+parsed word: mitstimmen with meanings: [участвовать в голосовании] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 3 
+parsed word: das Werk with meanings: [дело, труд, работа] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 5 
+parsed word: der Nobelpreis with meanings: [нобелевская премия] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 7 
+parsed word: polarisieren in A und A with meanings: [простивопоставлять] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 9 
+parsed word: außerordentlich with meanings: [чрезвычайный] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 11 
+parsed word: verfassen with meanings: [составлять, сочинять] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 13 
+parsed word: die Lebensgeschichte with meanings: [биография, история жизни] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 15 
+parsed word: kleinwüchsig with meanings: [низкого роста, малорослый] 
+parsed word: der Goldschmied with meanings: [������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 1 
+parsed word: die Espen with meanings: [�����] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 3 
+parsed word: der Kreisverkehr with meanings: [����������� ��������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 5 
+parsed word: die Kreuzung with meanings: [����������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 7 
+parsed word: es sit mir ausgegangen with meanings: [�������������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 9 
+parsed word: unermudlich with meanings: [���������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 11 
+parsed word: fahrig with meanings: [�����������, ���������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 13 
+parsed word: die Pachtung with meanings: [������� ������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 15 
+parsed word: die Garbe with meanings: [����] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 17 
+parsed word: der Tumpel with meanings: [����, ����, ������� ����] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 19 
+parsed word: der Faden with meanings: [�������, �����] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 21 
+parsed word: der Verfall with meanings: [������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 23 
+parsed word: allmahlich with meanings: [����������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 25 
+parsed word: verdaunen with meanings: [������������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 27 
+parsed word: die Sprosse with meanings: [���������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 29 
+parsed word: ubergie?en with meanings: [�������� �������, ��������, ���������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 31 
+parsed word: die Raureif with meanings: [��������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 33 
+parsed word: die Sorgfalt with meanings: [������������, ��������, ��������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 35 
+parsed word: die Last with meanings: [����, ����] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 37 
+parsed word: die Zwischenzeit with meanings: [���������� �������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 39 
+parsed word: aufbrechen with meanings: [���������� (�����)] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 41 
+parsed word: die Bedingung with meanings: [�������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 43 
+parsed word: die Pampelmuse with meanings: [���������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 45 
+parsed word: gro?spurig with meanings: [���������, ��������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 47 
+parsed word: der Ahorn with meanings: [���] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 49 
+parsed word: die Schmuggelware with meanings: [�����������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 51 
+parsed word: toben with meanings: [��������, ��������������, ���������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 53 
+parsed word: fluchen with meanings: [���������, ��������������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 55 
+parsed word: unverzuglich with meanings: [����������, ���������������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 57 
+parsed word: vernachlassigen with meanings: [������������, �������] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 59 
+parsed word: den Horer abnehmen with meanings: [��������� ������] 
+parsed word: der Vormund with meanings: [������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 1 
+word and meanings array [bertreuen -��������� ] has not length 2 in SATZBILDUNG.txt line: 2 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 3 
+parsed word: von jdm etwas erben with meanings: [����������� �� ����-�� ���-��] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 5 
+word and meanings array [der Junggestelle -�������� ] has not length 2 in SATZBILDUNG.txt line: 6 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 7 
+parsed word: der Lebensgefahrte with meanings: [������� �����] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 9 
+parsed word: unehelich with meanings: [����������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 11 
+parsed word: das Trauschein with meanings: [������������� � �����] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 13 
+parsed word: die Abtreibung with meanings: [�����] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 15 
+parsed word: leibliche Eltern with meanings: [������� ��������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 17 
+word and meanings array [schmucken -�������� ] has not length 2 in SATZBILDUNG.txt line: 18 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 19 
+parsed word: beisetzen with meanings: [���������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 21 
+parsed word: taufen with meanings: [��������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 23 
+parsed word: verwohnen durch with meanings: [�������� ���-��] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 25 
+parsed word: beinringen D Akk with meanings: [��������� ����-�� ���-��] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 27 
+parsed word: gedenken G with meanings: [����� ������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 29 
+parsed word: beweinen with meanings: [����������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 31 
+parsed word: schmieden with meanings: [������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 33 
+parsed word: auskommen mit with meanings: [������ � ���-��] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 35 
+parsed word: versorgen with meanings: [��������� (���������)] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 37 
+parsed word: jdn stillen with meanings: [�����������] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 39 
+parsed word: krabbeln with meanings: [������] 
+parsed word: gewaltig with meanings: [�������, ��������������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 1 
+parsed word: vorl?ufig with meanings: [���������������, ���������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 3 
+parsed word: der Trumen with meanings: [���������, �����] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 5 
+parsed word: aufkommen with meanings: [��������������, ���������, ����������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 7 
+parsed word: reinpassen with meanings: [���������, �������, ��������� �� �������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 9 
+parsed word: endgultig with meanings: [�������������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 11 
+parsed word: schrittweis with meanings: [�����������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 13 
+java.lang.IllegalArgumentException: given word contains only white spaces 
+parsed word: erschutettern with meanings: [���������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 15 
+parsed word: festhalten an with meanings: [��������������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 17 
+parsed word: aufgeben with meanings: [��������, ��������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 19 
+parsed word: verstandigen with meanings: [������� � �����������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 21 
+parsed word: der Zuschuss with meanings: [��������, ��������, �������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 23 
+parsed word: aufwendig with meanings: [��������������] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 25 
+parsed word: Bescheid wissen in with meanings: [������ � ���-�� �����������] 
+parsed word: aus biologischer Sich with meanings: [� ������������� ����� ������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 1 
+word and meanings array [tendered �� ��������� � ] has not length 2 in TEXT GLÜCK.txt line: 2 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 3 
+parsed word: leichtsinnig with meanings: [������������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 5 
+parsed word: ubersehen with meanings: [�� ��������, ����������, ��������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 7 
+parsed word: die Abwehrhaltung with meanings: [�������� �������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 9 
+parsed word: vor allem und jedem with meanings: [����� ���� � ������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 11 
+parsed word: der Vortrag halten vor with meanings: [������ ������ �����] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 13 
+parsed word: heirfur with meanings: [�� ���, ��� �����] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 15 
+parsed word: das Lockmittel with meanings: [��������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 17 
+parsed word: das Ausleben with meanings: [��������� (�������)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 19 
+parsed word: der Saugling with meanings: [������� �������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 21 
+parsed word: die Nahrungsaufnahme with meanings: [�������� ����] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 23 
+parsed word: vorasugehen with meanings: [��������������, ����������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 25 
+parsed word: sich koppeln an with meanings: [������������ � (������� �������)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 27 
+parsed word: zufallig with meanings: [���������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 29 
+parsed word: unausweichlich with meanings: [���������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 31 
+parsed word: ausweichen with meanings: [��������, ����������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 33 
+parsed word: durchaus with meanings: [������, ����������, ���������, ����������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 35 
+parsed word: krass with meanings: [������, ����������, �������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 37 
+parsed word: krass with meanings: [�����] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 39 
+parsed word: fluchtig with meanings: [����������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 41 
+parsed word: loswerden with meanings: [�����������, �������������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 43 
+parsed word: antreiben with meanings: [��������, ��������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 45 
+parsed word: Chances haben zu with meanings: [����� ����� ��] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 47 
+parsed word: hingegen with meanings: [�������� (��������)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 49 
+parsed word: namenlos with meanings: [�����������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 51 
+parsed word: schicksalhaft with meanings: [���������, ������������] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 53 
+parsed word: mildern with meanings: [��������, ���������] 
+word and meanings array [яюv o n ] has not length 2 in Adjective mit Präpositionen.txt line: 0 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 1 
+word and meanings array [ a b h д n g i g   s e i n   v o n      7028A5BL  >B  G53>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 2 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 3 
+word and meanings array [ b e g e i s t e r t   s e i n   v o n      1KBL  272>;=>20==K<  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 4 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 5 
+word and meanings array [ ь b e r z e u g t   s e i n   v o n      1KBL  C15645==K<  2  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 6 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 7 
+word and meanings array [ e n t t д u s c h t   s e i n   v o n      1KBL  @07>G0@>20==K<  2  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 8 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 9 
+word and meanings array [ e n t f e r n t   s e i n   v o n      1KBL  >B40;5==K<  >B  G53>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 10 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 11 
+word and meanings array [ a u f   A ] has not length 2 in Adjective mit Präpositionen.txt line: 12 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 13 
+word and meanings array [ д r g e r l i c h   s e i n   a u f   A      7;8BLAO  87- 70  G53>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 14 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 15 
+word and meanings array [ b ц s e   s e i n   a u f   A      7;8BLAO  87- 70  G53>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 16 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 17 
+word and meanings array [ a n g e w i e s e n   s e i n   a u f   A      1KBL  C25@5==K<  2  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 18 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 19 
+word and meanings array [ e i f e r s ь c h t i g   s e i n   a u f   A      70284>20BL  G5<C- B>] has not length 2 in Adjective mit Präpositionen.txt line: 20 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 21 
+word and meanings array [ s t o l z   s e i n   a u f   A      1KBL  3>@4K<  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 22 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 23 
+word and meanings array [ a n   D ] has not length 2 in Adjective mit Präpositionen.txt line: 24 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 25 
+word and meanings array [ i n t e r e s s i e r t   s e i n   a n   D      1KBL  708=B5@5A>20==K<  2  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 26 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 27 
+word and meanings array [ e r k r a n k t   s e i n   a n   D      1KBL  1>;L=K<  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 28 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 29 
+word and meanings array [ r e i c h   s e i n   a n   D      1KBL  1>30BK<  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 30 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 31 
+word and meanings array [ s c h u l d   s e i n   a n   D      1KBL  28=>20BK<  2  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 32 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 33 
+word and meanings array [ b e t e i l i g t   s e i n   a n   D      1KBL  70459AB2>20==K<  2  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 34 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 35 
+word and meanings array [ z u ] has not length 2 in Adjective mit Präpositionen.txt line: 36 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 37 
+word and meanings array [ f r e u n d l i c h   s e i n   z u      1KBL  4@C65AB25==K<  :  :><C- B>] has not length 2 in Adjective mit Präpositionen.txt line: 38 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 39 
+word and meanings array [ ( u n ) f д h i g   s e i n   z u      1KBL  A?>A>1=K<  \   1KBL  =5A?>A>1=K<  =0  GB>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 40 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 41 
+word and meanings array [ B e r e i t   s e i n   z u      1KBL  3>B>2K<  =0  GB>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 42 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 43 
+word and meanings array [ n e t t   s e i n   z u      1KBL  ;N157=K<  A  :5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 44 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 45 
+word and meanings array [ e n t s c h l o s s e n   s e i n   z u      @5H8BLAO  =0  GB>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 46 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 47 
+word and meanings array [ b e i ] has not length 2 in Adjective mit Präpositionen.txt line: 48 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 49 
+word and meanings array [ a n g e s e h e n   s e i n   b e i      1KBL  2  ?>G5B5  A@548  :>3>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 50 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 51 
+word and meanings array [ ( u n ) b e l i e b t   s e i n   b e i      1KBL  =5  ;N18<K<  A@548] has not length 2 in Adjective mit Präpositionen.txt line: 52 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 53 
+word and meanings array [ g e g e n ь b e r ] has not length 2 in Adjective mit Präpositionen.txt line: 54 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 55 
+word and meanings array [ z u r ь c k h a l t e n d   s e i n   g e g e n ь b e r      1KBL  A45@60==K<  ?5@54  :5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 56 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 57 
+word and meanings array [ a u f g e s c h l o s s e n   s e i n   g e g e n ь b e r      1KBL  >B:@KBK<  ?5@54  :5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 58 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 59 
+word and meanings array [ g e g e n   A ] has not length 2 in Adjective mit Präpositionen.txt line: 60 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 61 
+word and meanings array [ ( u n ) e m p f i n d l i c h   s e i n   g e g e n   A      1KBL  =5GC2AB28B5;L=K<  :  G5<C- B>] has not length 2 in Adjective mit Präpositionen.txt line: 62 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 63 
+word and meanings array [ i m m u n   s e i n   g e g e n   A      1KBL  =5CO728<K<  :  G5<C- B>] has not length 2 in Adjective mit Präpositionen.txt line: 64 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 65 
+word and meanings array [ a n   A ] has not length 2 in Adjective mit Präpositionen.txt line: 66 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 67 
+word and meanings array [ a d r e s s i e r t   s e i n   a n   A      1KBL  04@5A>20==K<  :><C- B>	 ] has not length 2 in Adjective mit Präpositionen.txt line: 68 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 69 
+word and meanings array [ g e w ц h n t   s e i n   a n   A      ?@82K:=CBL  :  G5<C- B>] has not length 2 in Adjective mit Präpositionen.txt line: 70 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 71 
+word and meanings array [ f ь r ] has not length 2 in Adjective mit Präpositionen.txt line: 72 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 73 
+word and meanings array [ ( u n ) g e e i g n e t   s e i n   f ь r      1KBL  ?@83>4=K<  \   1KBL  =5?@83>4=K<  :  G5<C- B>] has not length 2 in Adjective mit Präpositionen.txt line: 74 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 75 
+word and meanings array [ v e r a n t w o r t l i c h   s e i n   f ь r      1KBL  >B25BAB25==K<  70  GB>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 76 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 77 
+word and meanings array [ ( u n ) w i c h t i g   s e i n   f ь r      1KBL  206=K<  \   1KBL  =5206=K<  4;O] has not length 2 in Adjective mit Präpositionen.txt line: 78 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 79 
+word and meanings array [ ( u n ) s c h д d l i c h   s e i n   f ь r      1KBL  2@54=K<  \   1KBL  1572@54=K<  4;O] has not length 2 in Adjective mit Präpositionen.txt line: 80 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 81 
+word and meanings array [ n ь t z l i c h   s e i n     f ь r      1KBL  ?>;57=K<  4;O] has not length 2 in Adjective mit Präpositionen.txt line: 82 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 83 
+word and meanings array [ m i t ] has not length 2 in Adjective mit Präpositionen.txt line: 84 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 85 
+word and meanings array [ b e f r e u n d e t   s e i n   m i t      1KBL  4@C65AB25==K<  :><C- B>] has not length 2 in Adjective mit Präpositionen.txt line: 86 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 87 
+word and meanings array [ v e r w a n d t   s e i n   m i t      1KBL  @>4AB25==K<  4;O  :>3>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 88 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 89 
+word and meanings array [ z u f r i e d e n   s e i n   m i t      1KBL  4>2>;L=K<  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 90 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 91 
+word and meanings array [ b e s c h д f t i g t   s e i n   m i t      1KBL  70=OBK<  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 92 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 93 
+word and meanings array [ f e r t i g   s e i n   m i t      1KBL  3>B>2K<  A  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 94 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 95 
+word and meanings array [ n a c h ] has not length 2 in Adjective mit Präpositionen.txt line: 96 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 97 
+word and meanings array [ v e r r ь c k t   s e i n   n a c h      AE>48BL  A  C<0  87- 70] has not length 2 in Adjective mit Präpositionen.txt line: 98 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 99 
+word and meanings array [ i n   A ] has not length 2 in Adjective mit Präpositionen.txt line: 100 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 101 
+word and meanings array [ u n t e r t e i l t   s e i n   i n   A      1KBL  @0745;5==K<  =0  ] has not length 2 in Adjective mit Präpositionen.txt line: 102 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 103 
+word and meanings array [ v e r l i e b t   s e i n   i n   A      1KBL  2;N1;5==K<  2  :>3>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 104 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 105 
+word and meanings array [ ь b e r ] has not length 2 in Adjective mit Präpositionen.txt line: 106 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 107 
+word and meanings array [ g l ь c k l i c h   s e i n   ь b e r      1KBL  @04>AB=K<  87- 70] has not length 2 in Adjective mit Präpositionen.txt line: 108 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 109 
+word and meanings array [ e r f r e u t   s e i n   ь b e r      1KBL  >1@04>20==K<  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 110 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 111 
+word and meanings array [ e r s t a u n t   s e i n   ь b e r      1KBL  87C<;5==K<  G5<- B>	 ] has not length 2 in Adjective mit Präpositionen.txt line: 112 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 113 
+word and meanings array [ t r a u r i g   s e i n   ь b e r      1KBL  3@CAB=K<  87- 70] has not length 2 in Adjective mit Präpositionen.txt line: 114 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 115 
+word and meanings array [ v e r w u n d e r t   s e i n   ь b e r      1KBL  C482;5==K<  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 116 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 117 
+word and meanings array [ w ь t e n d   s e i n   ь b e r      1KBL  2  O@>AB8  87- 70] has not length 2 in Adjective mit Präpositionen.txt line: 118 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 119 
+word and meanings array [ i n   D ] has not length 2 in Adjective mit Präpositionen.txt line: 120 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 121 
+word and meanings array [ ( u n ) e r f a h r e n   s e i n   i n   D      1KBL  >?KB=K<  \   1KBL  =5>?KB=K<  2  G5<- B>] has not length 2 in Adjective mit Präpositionen.txt line: 122 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 123 
+word and meanings array [ g u t   s e i n   i n   D      1KBL  E>@>H8<  2  G5<- B>  \   1KBL  E>@>H8<  4;O  G53>- B>] has not length 2 in Adjective mit Präpositionen.txt line: 124 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 125 
+word and meanings array [ n a c h l д s s i g   s e i n   i n   D      1KBL  =5>AB>@>6=K<  2  ] has not length 2 in Adjective mit Präpositionen.txt line: 126 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 127 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 128 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 129 
+word and meanings array [ ] has not length 2 in Adjective mit Präpositionen.txt line: 130 
+word and meanings array [яюu n v e r b i n d l i c h      =8  :  G5<C  =5  >1O7K20NI89,   A;8H:><  >1I89] has not length 2 in Adjective.txt line: 0 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 1 
+word and meanings array [ s e i c h t      <5;:>2>4=K9,   >3@0=8G5==K9  ( C<AB25==>) ] has not length 2 in Adjective.txt line: 2 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 3 
+word and meanings array [ h e i s e r      E@8?;K9,   >E@8?H89] has not length 2 in Adjective.txt line: 4 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 5 
+word and meanings array [ v e r s c h w o m m e n      BC<0==K9,   @0A?;K2G0BK9] has not length 2 in Adjective.txt line: 6 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 7 
+word and meanings array [ a r t i g      256;82K9,   2>A?8B0==K9] has not length 2 in Adjective.txt line: 8 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 9 
+word and meanings array [ g e p f l e g t      CE>65==K9] has not length 2 in Adjective.txt line: 10 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 11 
+word and meanings array [ k u l t i v i e r t      >1@07F>2K9,   C<AB25==>  @0728BK9] has not length 2 in Adjective.txt line: 12 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 13 
+word and meanings array [ p l a n m д Я i g      ?;0=><5@=K9,   HB0B=K9] has not length 2 in Adjective.txt line: 14 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 15 
+word and meanings array [ z a h n   -   @CG=>9] has not length 2 in Adjective.txt line: 16 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 17 
+word and meanings array [ s c h w e r f д l l i g      =5?>2>@>B;82K9,   =5C:;N689] has not length 2 in Adjective.txt line: 18 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 19 
+word and meanings array [ s o l i d e      A>;84=K9,   =0456=K9] has not length 2 in Adjective.txt line: 20 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 21 
+word and meanings array [ d u m p f     -   3;CE>9,   70BE;K9] has not length 2 in Adjective.txt line: 22 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 23 
+word and meanings array [ f a u l      ;5=82K9,   3=8;>9,   BCE;K9,   70BE;K9] has not length 2 in Adjective.txt line: 24 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 25 
+word and meanings array [ m a t t      A;01K9,   2O;K9] has not length 2 in Adjective.txt line: 26 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 27 
+word and meanings array [ r a n z i g      ?@>3>@:;K9,   70BE;K9] has not length 2 in Adjective.txt line: 28 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 29 
+word and meanings array [ s c h a l      1572:CA=K9,   ?@5A=K9] has not length 2 in Adjective.txt line: 30 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 31 
+word and meanings array [ s c h w ь l      4CH=K9,   7=>9=K9] has not length 2 in Adjective.txt line: 32 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 33 
+word and meanings array [ u n v e r f r o r e n      =03;K9,   45@7:89] has not length 2 in Adjective.txt line: 34 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 35 
+word and meanings array [ u n w i r s c h      3@C1K9,   =5?@825B;82K9] has not length 2 in Adjective.txt line: 36 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 37 
+word and meanings array [ u n s c h l ь s s i g   -   =5?@825B;82K9] has not length 2 in Adjective.txt line: 38 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 39 
+word and meanings array [ u n n a h b a r      2KA>:><5@=K9,   =5?@8ABC?=K9] has not length 2 in Adjective.txt line: 40 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 41 
+word and meanings array [ u n g e s t ь m      2A?K;LG82K9,   AB@5<8B5;L=K9] has not length 2 in Adjective.txt line: 42 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 43 
+word and meanings array [ u n v e r h o f f t   -   =5>6840==K9] has not length 2 in Adjective.txt line: 44 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 45 
+word and meanings array [ u n b e s c h w e r t      157701>B=K9,   =5>BO3>I5==K9] has not length 2 in Adjective.txt line: 46 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 47 
+word and meanings array [ b e r e c h t i g t   -   @57>==K9] has not length 2 in Adjective.txt line: 48 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 49 
+word and meanings array [ b e s o n n e n   -   @0AAC48B5;L=K9] has not length 2 in Adjective.txt line: 50 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 51 
+word and meanings array [ g e d r ь c k t      C3=5B5==K9,   ?>402;5==K9] has not length 2 in Adjective.txt line: 52 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 53 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 54 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 55 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 56 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 57 
+word and meanings array [ ] has not length 2 in Adjective.txt line: 58 
+parsed word: belegen with meanings: [доказывать (научным путём)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 1 
+parsed word: von Natur aus with meanings: [от природы] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 3 
+parsed word: anhang with meanings: [с помощью, по средством, пользуясь, зная] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 5 
+parsed word: ein Medikament gegen Kopfschmerzen with meanings: [средство от головной боли] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 7 
+parsed word: behandeln with meanings: [лечить] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 9 
+parsed word: Diagnosse stellen with meanings: [ставить диагноз] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 11 
+parsed word: zunachst with meanings: [сначала, прежде всего] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 13 
+parsed word: allmahlich with meanings: [постепенно] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 15 
+parsed word: die Werkstatt with meanings: [мастерская, цех, СТО] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 17 
+parsed word: mutma?lich with meanings: [предположительный, вероятный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 19 
+parsed word: umfangreich with meanings: [объемный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 21 
+parsed word: vorsichtshalber with meanings: [на всякий случай, в целях предосторожности] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 23 
+word and meanings array [widerlegen] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 24 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 25 
+word and meanings array [zwischenmenschlich] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 26 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 27 
+parsed word: den Humor erwerben with meanings: [приобретать чувство юмора] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 29 
+parsed word: vom diesem Standpunkt with meanings: [с этой точки зрения] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 31 
+parsed word: erfassen with meanings: [понимать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 33 
+parsed word: der Pechvogel with meanings: [неудачник] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 35 
+parsed word: schlittern in with meanings: [скользить] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 37 
+parsed word: in den Griff bekommen with meanings: [принимать во внимание] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 39 
+parsed word: der Stillstand with meanings: [затишье, застой] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 41 
+parsed word: verherrlichen with meanings: [прославлять] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 43 
+parsed word: ergiebig with meanings: [плодородный, обильный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 45 
+parsed word: sich eignen als with meanings: [считать себя] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 47 
+parsed word: jemandem vergehen with meanings: [пропадать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 49 
+parsed word: der Streich with meanings: [выходка] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 51 
+parsed word: hereinlegen with meanings: [прикалывать, разводит] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 53 
+parsed word: glaubhaft with meanings: [правдоподобный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 55 
+parsed word: umschlagen in Akk with meanings: [превращаться в] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 57 
+parsed word: der Leistungssport with meanings: [большой спорт] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 59 
+parsed word: das Gutachten with meanings: [заключение, экспертиза, рецензия] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 1 
+parsed word: ernste Krankheit with meanings: [сильная болезнь] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 3 
+parsed word: hartnackig with meanings: [упорный, настойчивый (о слухах)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 5 
+parsed word: fruhzeitig with meanings: [преждевременно] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 7 
+parsed word: vervollstandigen with meanings: [дополнять до целого] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 9 
+parsed word: zusammenlegen with meanings: [соединять] 
+parsed word: gleichsetzen D with meanings: [приравнивать, отождествлять] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 1 
+parsed word: aufgehen with meanings: [восходить (о солнце)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 3 
+parsed word: heiter with meanings: [веселый, радостный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 5 
+parsed word: angeboren with meanings: [врожденный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 7 
+parsed word: landen auf with meanings: [оказываться, приземляться, высаживаться] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 9 
+parsed word: erfassen with meanings: [понимать, хватать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 11 
+parsed word: erstellen with meanings: [создавать, составлять (на основе некоторых данных)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 13 
+parsed word: auftauchen with meanings: [выныривать, оказываться, возникать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 15 
+parsed word: das Erkenntis with meanings: [осознание, научный вывод] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 17 
+parsed word: der Gesundheitsstatus with meanings: [состояние здоровья] 
+parsed word: aufgrund G with meanings: [РЅР° РѕСЃРЅРѕРІР°РЅРёРё] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 1 
+parsed word: der Wandel with meanings: [РїРµСЂРµРјРµРЅР°, РёР·РјРµРЅРµРЅРёРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 3 
+parsed word: verallgemeinern with meanings: [РѕР±РѕР±С‰РµРЅРЅРѕ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 5 
+parsed word: fusionieren with meanings: [СЃР»РёС‚СЊСЃСЏ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 7 
+parsed word: die Verausgabung with meanings: [СЂР°СЃС…РѕРґРѕРІР°РЅРёРµ, С‚СЂР°С‚Р°] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 9 
+parsed word: umgekehrt with meanings: [РїРµСЂРµРІРµСЂРЅСѓС‚С‹Р№, РІС‹РІРµСЂРЅСѓС‚С‹Р№, РІР·Р°РёРјРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 11 
+parsed word: zumindest with meanings: [РїРѕ РєСЂР°Р№РЅРµР№ РјРµСЂРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 13 
+parsed word: bewirken with meanings: [РІС‹Р·С‹РІР°С‚СЊ, СЃРїРѕСЃРѕР±СЃС‚РІРѕРІР°С‚СЊ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 15 
+parsed word: umschlagen in with meanings: [РѕР±РµСЂС‚С‹РІР°С‚СЊ, РѕР±РјР°С‚С‹РІР°С‚СЊ, СЂРµР·РєРѕ РјРµРЅСЏС‚СЊСЃСЏ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 17 
+parsed word: zum Teil with meanings: [С‡Р°СЃС‚РёС‡РЅРѕ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 19 
+parsed word: sich stГјrzem in with meanings: [СѓРїР°СЃС‚СЊ РІ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 21 
+parsed word: die Reflexion uber with meanings: [СЃР°РјРѕР°РЅР°Р»РёР· РІ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 23 
+parsed word: das Tun with meanings: [РѕР±СЂР°Р· РґРµР№СЃС‚РІРёР№, РїРѕРІРµРґРµРЅРёРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 25 
+parsed word: zahlen zu with meanings: [РїСЂРёС‡РёСЃР»СЏС‚СЊ Рє] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 27 
+parsed word: die WertschГ¤tzung with meanings: [СѓРІР°Р¶РµРЅРёРµ, РѕС†РµРЅРєР°] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 29 
+parsed word: ausbleibend with meanings: [РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РёР№] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 31 
+parsed word: ideell with meanings: [РёРґРµС„РЅС–Р№] 
+parsed word: die Ressentiments with meanings: [РѕР±РёРґР°, РІСЂР°Р¶РґРµР±РЅРѕСЃС‚СЊ] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 1 
+parsed word: allgemeingultig with meanings: [РѕР±С‰РµРїСЂРёРЅСЏС‚С–Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 3 
+parsed word: flussiges English with meanings: [Р±РµРіР»С‹Р№ Р°РЅРіР»РёР№СЃРєРёР№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 5 
+parsed word: ergeben with meanings: [РґРІР°РІР°С‚СЊ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 7 
+parsed word: schlichtes Wissen with meanings: [РїСЂРѕСЃС‚РѕРµ Р·РЅР°РЅРёРµ] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 9 
+parsed word: aussagekrГ¤ftig with meanings: [СЃРѕРґРµСЂР¶Р°С‚РµР»СЊРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 11 
+parsed word: ruppig with meanings: [РіСЂСѓР±С‹Р№, С…Р°РјСЃРєРёР№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 13 
+parsed word: geldgierig with meanings: [Р°Р»С‡РЅС‹Р№, РєРѕСЂС‹СЃС‚РЅС‹Р№, Р¶Р°РґРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 15 
+parsed word: der Tugend with meanings: [РґРѕР±СЂРѕРґРµС‚РµР»СЊ] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 17 
+parsed word: der AnwГ¤rter with meanings: [РїСЂРµС‚РµРЅРґРµРЅС‚, РєР°РЅРґРёРґР°С‚] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 19 
+parsed word: vorrangig with meanings: [РїСЂРµРёРјСѓС‰РµСЃС‚РІРµРЅРЅС‹Р№, РїРµСЂРІРѕРѕС‡РµСЂРµРґРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 21 
+parsed word: die Ehre with meanings: [честь] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 1 
+parsed word: das R?tsel with meanings: [загадка] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 3 
+parsed word: der Butler with meanings: [дворецкий, швейцар, заведующий винным поглебом] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 5 
+parsed word: die S?nfte with meanings: [носилки] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 7 
+parsed word: die Buche with meanings: [бук] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 9 
+parsed word: pr?chtig with meanings: [великолеспны, роскошный, пыщный] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 11 
+parsed word: sich erheben with meanings: [подниматься, вставать] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 13 
+parsed word: die Dirne with meanings: [служанка] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 15 
+parsed word: der Heide with meanings: [язычник] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 17 
+parsed word: scheu?lich with meanings: [отвратительный, ужасгый] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 19 
+parsed word: die Angelegenheit with meanings: [дело, вопрос, обстоятельство] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 21 
+parsed word: sich wenden an + A with meanings: [обращаться к кому-то] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 23 
+parsed word: unnachsichtlich with meanings: [беспощажный] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 25 
+parsed word: die Verleumdung with meanings: [клевета] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 27 
+parsed word: das Gespenst with meanings: [привиление, призрак] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 29 
+parsed word: die Glocke with meanings: [колокольчик, гонг] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 31 
+parsed word: nach einer Sitte with meanings: [согласно обычаю] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 33 
+parsed word: einstimmig with meanings: [идиносгасный, единогласно] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 35 
+parsed word: z?gern with meanings: [медлить колебаться] 
+parsed word: der Schadel with meanings: [череп] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 1 
+parsed word: zittern with meanings: [дрожать] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 3 
+parsed word: der Fallschirm with meanings: [парашют] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 5 
+parsed word: flattern with meanings: [порхать (на ветру)] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 7 
+parsed word: der Trost with meanings: [утешение] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 9 
+parsed word: die Stube with meanings: [спальное помещение] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 11 
+parsed word: die Handvoll with meanings: [горсть] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 13 
+parsed word: einschleppen with meanings: [занести болезнь] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 15 
+parsed word: sich aufrichten with meanings: [подниматься] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 17 
+parsed word: auff?ttern with meanings: [скармливать] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 19 
+parsed word: schmal with meanings: [узкий, тонкий, худой] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 21 
+parsed word: bestimmen ?ber with meanings: [голосовать за] 
+parsed word: umfangreich with meanings: [обширный, большой] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 1 
+parsed word: unermundlich with meanings: [неутомимый, неустанный] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 3 
+parsed word: knochenhart with meanings: [твёрдый как камень] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 5 
+parsed word: die Recherche with meanings: [поиски] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 7 
+parsed word: hiebfest with meanings: [неуязвимый] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 9 
+parsed word: stitchfest with meanings: [неуязвимый] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 11 
+parsed word: zerlegen with meanings: [разчленять] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 13 
+parsed word: die Sichtung with meanings: [обнаружение] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 15 
+parsed word: anfallen with meanings: [возникать] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 17 
+parsed word: der Spa?vogel with meanings: [шутник] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 19 
+parsed word: das Dabeisein with meanings: [присутствие] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 1 
+parsed word: die Bereicherung with meanings: [обогащение] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 3 
+parsed word: die Gunst with meanings: [благосклонность] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 5 
+parsed word: das Wagenrennen with meanings: [автогонки] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 7 
+parsed word: sich ranken um with meanings: [виться вокруг] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 9 
+parsed word: greifen zu with meanings: [прибегать к] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 11 
+parsed word: der Fliegenpilz with meanings: [мухомор] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 13 
+parsed word: die Inkas with meanings: [инки] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 15 
+parsed word: schutten In with meanings: [вливать в] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 17 
+parsed word: verallgemeinernd with meanings: [обобщенно (all in all)] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 19 
+parsed word: der Anreiz with meanings: [стимул] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 21 
+parsed word: die Hemmschwelle with meanings: [психологический барьер] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 23 
+parsed word: der Vorreiter with meanings: [зачинатель] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 25 
+parsed word: der Bildhauer with meanings: [СЃРєСѓР»СЊРїС‚РѕСЂ] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 1 
+parsed word: mitstimmen with meanings: [СѓС‡Р°СЃС‚РІРѕРІР°С‚СЊ РІ РіРѕР»РѕСЃРѕРІР°РЅРёРё] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 3 
+parsed word: das Werk with meanings: [РґРµР»Рѕ, С‚СЂСѓРґ, СЂР°Р±РѕС‚Р°] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 5 
+parsed word: der Nobelpreis with meanings: [РЅРѕР±РµР»РµРІСЃРєР°СЏ РїСЂРµРјРёСЏ] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 7 
+parsed word: polarisieren in A und A with meanings: [РїСЂРѕСЃС‚РёРІРѕРїРѕСЃС‚Р°РІР»СЏС‚СЊ] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 9 
+parsed word: auГџerordentlich with meanings: [С‡СЂРµР·РІС‹С‡Р°Р№РЅС‹Р№] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 11 
+parsed word: verfassen with meanings: [СЃРѕСЃС‚Р°РІР»СЏС‚СЊ, СЃРѕС‡РёРЅСЏС‚СЊ] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 13 
+parsed word: die Lebensgeschichte with meanings: [Р±РёРѕРіСЂР°С„РёСЏ, РёСЃС‚РѕСЂРёСЏ Р¶РёР·РЅРё] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 15 
+parsed word: kleinwГјchsig with meanings: [РЅРёР·РєРѕРіРѕ СЂРѕСЃС‚Р°, РјР°Р»РѕСЂРѕСЃР»С‹Р№] 
+parsed word: der Goldschmied with meanings: [ювелир] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 1 
+parsed word: die Espen with meanings: [осина] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 3 
+parsed word: der Kreisverkehr with meanings: [перекрёстное движение] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 5 
+parsed word: die Kreuzung with meanings: [перекрёсток] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 7 
+parsed word: es sit mir ausgegangen with meanings: [заканчиваться] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 9 
+parsed word: unermudlich with meanings: [неустанно] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 11 
+parsed word: fahrig with meanings: [расторопный, суетливый] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 13 
+parsed word: die Pachtung with meanings: [договор аренды] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 15 
+parsed word: die Garbe with meanings: [сноп] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 17 
+parsed word: der Tumpel with meanings: [пруд, лужа, стоячая вода] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 19 
+parsed word: der Faden with meanings: [саженец, нитка] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 21 
+parsed word: der Verfall with meanings: [гибель] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 23 
+parsed word: allmahlich with meanings: [постепенно] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 25 
+parsed word: verdaunen with meanings: [переваривать] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 27 
+parsed word: die Sprosse with meanings: [ступенька] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 29 
+parsed word: ubergie?en with meanings: [заливать заварку, выливать, проливать] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 31 
+parsed word: die Raureif with meanings: [изморозь] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 33 
+parsed word: die Sorgfalt with meanings: [тщательность, точность, старание] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 35 
+parsed word: die Last with meanings: [ноша, груз] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 37 
+parsed word: die Zwischenzeit with meanings: [промежуток времени] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 39 
+parsed word: aufbrechen with meanings: [взламывать (дверь)] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 41 
+parsed word: die Bedingung with meanings: [условие] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 43 
+parsed word: die Pampelmuse with meanings: [грейпфрут] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 45 
+parsed word: gro?spurig with meanings: [надменный, кичливый] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 47 
+parsed word: der Ahorn with meanings: [клён] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 49 
+parsed word: die Schmuggelware with meanings: [контрабанда] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 51 
+parsed word: toben with meanings: [бушевать, свирепствовать, психовать] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 53 
+parsed word: fluchen with meanings: [браниться, сквернословить] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 55 
+parsed word: unverzuglich with meanings: [немедленно, безотлагательно] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 57 
+parsed word: vernachlassigen with meanings: [пренебрегать, умалять] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 59 
+parsed word: den Horer abnehmen with meanings: [поднимать трубку] 
+parsed word: der Vormund with meanings: [опекун] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 1 
+word and meanings array [bertreuen -ухаживать ] has not length 2 in SATZBILDUNG.txt line: 2 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 3 
+parsed word: von jdm etwas erben with meanings: [наследовать от кого-то что-то] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 5 
+word and meanings array [der Junggestelle -холостяк ] has not length 2 in SATZBILDUNG.txt line: 6 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 7 
+parsed word: der Lebensgefahrte with meanings: [спутник жизни] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 9 
+parsed word: unehelich with meanings: [внебрачный] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 11 
+parsed word: das Trauschein with meanings: [свидетельство о браке] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 13 
+parsed word: die Abtreibung with meanings: [аборт] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 15 
+parsed word: leibliche Eltern with meanings: [кровные родители] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 17 
+word and meanings array [schmucken -украшать ] has not length 2 in SATZBILDUNG.txt line: 18 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 19 
+parsed word: beisetzen with meanings: [погребать] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 21 
+parsed word: taufen with meanings: [крестить] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 23 
+parsed word: verwohnen durch with meanings: [баловать чем-то] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 25 
+parsed word: beinringen D Akk with meanings: [прививать кому-то что-то] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 27 
+parsed word: gedenken G with meanings: [чтить память] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 29 
+parsed word: beweinen with meanings: [оплакивать] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 31 
+parsed word: schmieden with meanings: [ковать] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 33 
+parsed word: auskommen mit with meanings: [ладить с кем-то] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 35 
+parsed word: versorgen with meanings: [содержать (хозяйство)] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 37 
+parsed word: jdn stillen with meanings: [успокаивать] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 39 
+parsed word: krabbeln with meanings: [ползти] 
+parsed word: gewaltig with meanings: [сильный, могущественный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 1 
+parsed word: vorl?ufig with meanings: [предварительный, временный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 3 
+parsed word: der Trumen with meanings: [развалины, руины] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 5 
+parsed word: aufkommen with meanings: [выздоравливать, возникать, появляться] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 7 
+parsed word: reinpassen with meanings: [помещатья, влазить, подходить по размеру] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 9 
+parsed word: endgultig with meanings: [окончательный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 11 
+parsed word: schrittweis with meanings: [постепенный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 13 
+java.lang.IllegalArgumentException: given word contains only white spaces 
+parsed word: erschutettern with meanings: [сотрясать] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 15 
+parsed word: festhalten an with meanings: [придерживаться] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 17 
+parsed word: aufgeben with meanings: [задавать, поручать] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 19 
+parsed word: verstandigen with meanings: [ставить в известность] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 21 
+parsed word: der Zuschuss with meanings: [прибавка, субсидия, пособие] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 23 
+parsed word: aufwendig with meanings: [расточительный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 25 
+parsed word: Bescheid wissen in with meanings: [хорошо в чем-то разбираться] 
+parsed word: aus biologischer Sich with meanings: [с биологической точки зрения] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 1 
+word and meanings array [tendered ты тенденцию к ] has not length 2 in TEXT GLÜCK.txt line: 2 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 3 
+parsed word: leichtsinnig with meanings: [безрассудный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 5 
+parsed word: ubersehen with meanings: [не замечать, пропускать, упускать] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 7 
+parsed word: die Abwehrhaltung with meanings: [защитная позиция] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 9 
+parsed word: vor allem und jedem with meanings: [перед всем и каждым] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 11 
+parsed word: der Vortrag halten vor with meanings: [внесли доклад перед] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 13 
+parsed word: heirfur with meanings: [на это, для этого] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 15 
+parsed word: das Lockmittel with meanings: [приманка] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 17 
+parsed word: das Ausleben with meanings: [изживание (аффекта)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 19 
+parsed word: der Saugling with meanings: [грудной ребенок] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 21 
+parsed word: die Nahrungsaufnahme with meanings: [принятие пищи] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 23 
+parsed word: vorasugehen with meanings: [предшествовать, предварять] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 25 
+parsed word: sich koppeln an with meanings: [отвязываться к (другому событию)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 27 
+parsed word: zufallig with meanings: [случайный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 29 
+parsed word: unausweichlich with meanings: [неизбежно] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 31 
+parsed word: ausweichen with meanings: [избегать, уклоняться] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 33 
+parsed word: durchaus with meanings: [совсем, совершенно, абсолютно, непременно] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 35 
+parsed word: krass with meanings: [резкий, неприятный, разящий] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 37 
+parsed word: krass with meanings: [резко] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 39 
+parsed word: fluchtig with meanings: [мимолетный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 41 
+parsed word: loswerden with meanings: [избавляться, освобождаться] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 43 
+parsed word: antreiben with meanings: [погонять, поощрять] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 45 
+parsed word: Chances haben zu with meanings: [иметь шансы на] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 47 
+parsed word: hingegen with meanings: [напротив (натомість)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 49 
+parsed word: namenlos with meanings: [неизвестный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 51 
+parsed word: schicksalhaft with meanings: [фатальный, судьбоносный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 53 
+parsed word: mildern with meanings: [смягчать, облегчать] 
+word and meanings array [п»їvon] has not length 2 in Adjective mit Präpositionen.txt line: 0 
+word and meanings array [abhГ¤ngig sein von вЂ“ Р·Р°РІРёСЃРµС‚СЊ РѕС‚ С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 1 
+word and meanings array [begeistert sein von вЂ“ Р±С‹С‚СЊ РІР·РІРѕР»РЅРѕРІР°РЅРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 2 
+word and meanings array [Гјberzeugt sein von вЂ“ Р±С‹С‚СЊ СѓР±РµР¶РґРµРЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 3 
+word and meanings array [enttГ¤uscht sein von вЂ“ Р±С‹С‚СЊ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 4 
+word and meanings array [entfernt sein von вЂ“ Р±С‹С‚СЊ РѕС‚РґР°Р»РµРЅРЅС‹Рј РѕС‚ С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 5 
+word and meanings array [auf A] has not length 2 in Adjective mit Präpositionen.txt line: 6 
+word and meanings array [Г¤rgerlich sein auf A вЂ“ Р·Р»РёС‚СЊСЃСЏ РёР·-Р·Р° С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 7 
+word and meanings array [bГ¶se sein auf A вЂ“ Р·Р»РёС‚СЊСЃСЏ РёР·-Р·Р° С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 8 
+word and meanings array [angewiesen sein auf A вЂ“ Р±С‹С‚СЊ СѓРІРµСЂРµРЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 9 
+word and meanings array [eifersГјchtig sein auf A вЂ“ Р·Р°РІРёРґРѕРІР°С‚СЊ С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 10 
+word and meanings array [stolz sein auf A вЂ“ Р±С‹С‚СЊ РіРѕСЂРґС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 11 
+word and meanings array [an D] has not length 2 in Adjective mit Präpositionen.txt line: 12 
+word and meanings array [interessiert sein an D вЂ“ Р±С‹С‚СЊ Р·Р°РёРЅС‚РµСЂРµСЃРѕРІР°РЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 13 
+word and meanings array [erkrankt sein an D вЂ“ Р±С‹С‚СЊ Р±РѕР»СЊРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 14 
+word and meanings array [reich sein an D вЂ“ Р±С‹С‚СЊ Р±РѕРіР°С‚С‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 15 
+word and meanings array [schuld sein an D вЂ“ Р±С‹С‚СЊ РІРёРЅРѕРІР°С‚С‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 16 
+word and meanings array [beteiligt sein an D вЂ“ Р±С‹С‚СЊ Р·Р°РґРµР№СЃС‚РІРѕРІР°РЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 17 
+word and meanings array [zu] has not length 2 in Adjective mit Präpositionen.txt line: 18 
+word and meanings array [freundlich sein zu вЂ“ Р±С‹С‚СЊ РґСЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Рј Рє РєРѕРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 19 
+word and meanings array [(un)fГ¤hig sein zu вЂ“ Р±С‹С‚СЊ СЃРїРѕСЃРѕР±РЅС‹Рј \ Р±С‹С‚СЊ РЅРµСЃРїРѕСЃРѕР±РЅС‹Рј РЅР° С‡С‚Рѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 20 
+word and meanings array [Bereit sein zu вЂ“ Р±С‹С‚СЊ РіРѕС‚РѕРІС‹Рј РЅР° С‡С‚Рѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 21 
+word and meanings array [nett sein zu вЂ“ Р±С‹С‚СЊ Р»СЋР±РµР·РЅС‹Рј СЃ РєРµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 22 
+word and meanings array [entschlossen sein zu вЂ“ СЂРµС€РёС‚СЊСЃСЏ РЅР° С‡С‚Рѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 23 
+word and meanings array [bei] has not length 2 in Adjective mit Präpositionen.txt line: 24 
+word and meanings array [angesehen sein bei вЂ“ Р±С‹С‚СЊ РІ РїРѕС‡РµС‚Рµ СЃСЂРµРґРё РєРѕРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 25 
+word and meanings array [(un)beliebt sein bei вЂ“ Р±С‹С‚СЊ РЅРµ Р»СЋР±РёРјС‹Рј СЃСЂРµРґРё] has not length 2 in Adjective mit Präpositionen.txt line: 26 
+word and meanings array [gegenГјber] has not length 2 in Adjective mit Präpositionen.txt line: 27 
+word and meanings array [zurГјckhaltend sein gegenГјber вЂ“ Р±С‹С‚СЊ СЃРґРµСЂР¶Р°РЅРЅС‹Рј РїРµСЂРµРґ РєРµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 28 
+word and meanings array [aufgeschlossen sein gegenГјber вЂ“ Р±С‹С‚СЊ РѕС‚РєСЂС‹С‚С‹Рј РїРµСЂРµРґ РєРµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 29 
+word and meanings array [gegen A] has not length 2 in Adjective mit Präpositionen.txt line: 30 
+word and meanings array [(un)empfindlich sein gegen A вЂ“ Р±С‹С‚СЊ РЅРµС‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅС‹Рј Рє С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 31 
+word and meanings array [immun sein gegen A вЂ“ Р±С‹С‚СЊ РЅРµСѓСЏР·РІРёРјС‹Рј Рє С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 32 
+word and meanings array [an A] has not length 2 in Adjective mit Präpositionen.txt line: 33 
+word and meanings array [adressiert sein an A вЂ“ Р±С‹С‚СЊ Р°РґСЂРµСЃРѕРІР°РЅРЅС‹Рј РєРѕРјСѓ-С‚Рѕ	] has not length 2 in Adjective mit Präpositionen.txt line: 34 
+word and meanings array [gewГ¶hnt sein an A вЂ“ РїСЂРёРІС‹РєРЅСѓС‚СЊ Рє С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 35 
+word and meanings array [fГјr] has not length 2 in Adjective mit Präpositionen.txt line: 36 
+word and meanings array [(un)geeignet sein fГјr вЂ“ Р±С‹С‚СЊ РїСЂРёРіРѕРґРЅС‹Рј \ Р±С‹С‚СЊ РЅРµРїСЂРёРіРѕРґРЅС‹Рј Рє С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 37 
+word and meanings array [verantwortlich sein fГјr вЂ“ Р±С‹С‚СЊ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Рј Р·Р° С‡С‚Рѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 38 
+word and meanings array [(un)wichtig sein fГјr вЂ“ Р±С‹С‚СЊ РІР°Р¶РЅС‹Рј \ Р±С‹С‚СЊ РЅРµРІР°Р¶РЅС‹Рј РґР»СЏ] has not length 2 in Adjective mit Präpositionen.txt line: 39 
+word and meanings array [(un)schГ¤dlich sein fГјr вЂ“ Р±С‹С‚СЊ РІСЂРµРґРЅС‹Рј \ Р±С‹С‚СЊ Р±РµР·РІСЂРµРґРЅС‹Рј РґР»СЏ] has not length 2 in Adjective mit Präpositionen.txt line: 40 
+word and meanings array [nГјtzlich sein  fГјr вЂ“ Р±С‹С‚СЊ РїРѕР»РµР·РЅС‹Рј РґР»СЏ] has not length 2 in Adjective mit Präpositionen.txt line: 41 
+word and meanings array [mit] has not length 2 in Adjective mit Präpositionen.txt line: 42 
+word and meanings array [befreundet sein mit вЂ“ Р±С‹С‚СЊ РґСЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Рј РєРѕРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 43 
+word and meanings array [verwandt sein mit вЂ“ Р±С‹С‚СЊ СЂРѕРґСЃС‚РІРµРЅРЅС‹Рј РґР»СЏ РєРѕРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 44 
+word and meanings array [zufrieden sein mit вЂ“ Р±С‹С‚СЊ РґРѕРІРѕР»СЊРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 45 
+word and meanings array [beschГ¤ftigt sein mit вЂ“ Р±С‹С‚СЊ Р·Р°РЅСЏС‚С‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 46 
+word and meanings array [fertig sein mit вЂ“ Р±С‹С‚СЊ РіРѕС‚РѕРІС‹Рј СЃ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 47 
+word and meanings array [nach] has not length 2 in Adjective mit Präpositionen.txt line: 48 
+word and meanings array [verrГјckt sein nach вЂ“ СЃС…РѕРґРёС‚СЊ СЃ СѓРјР° РёР·-Р·Р°] has not length 2 in Adjective mit Präpositionen.txt line: 49 
+word and meanings array [in A] has not length 2 in Adjective mit Präpositionen.txt line: 50 
+word and meanings array [unterteilt sein in A вЂ“ Р±С‹С‚СЊ СЂР°Р·РґРµР»РµРЅРЅС‹Рј РЅР° ] has not length 2 in Adjective mit Präpositionen.txt line: 51 
+word and meanings array [verliebt sein in A вЂ“ Р±С‹С‚СЊ РІР»СЋР±Р»РµРЅРЅС‹Рј РІ РєРѕРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 52 
+word and meanings array [Гјber] has not length 2 in Adjective mit Präpositionen.txt line: 53 
+word and meanings array [glГјcklich sein Гјber вЂ“ Р±С‹С‚СЊ СЂР°РґРѕСЃС‚РЅС‹Рј РёР·-Р·Р°] has not length 2 in Adjective mit Präpositionen.txt line: 54 
+word and meanings array [erfreut sein Гјber вЂ“ Р±С‹С‚СЊ РѕР±СЂР°РґРѕРІР°РЅРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 55 
+word and meanings array [erstaunt sein Гјber вЂ“ Р±С‹С‚СЊ РёР·СѓРјР»РµРЅРЅС‹Рј С‡РµРј-С‚Рѕ	] has not length 2 in Adjective mit Präpositionen.txt line: 56 
+word and meanings array [traurig sein Гјber вЂ“ Р±С‹С‚СЊ РіСЂСѓСЃС‚РЅС‹Рј РёР·-Р·Р°] has not length 2 in Adjective mit Präpositionen.txt line: 57 
+word and meanings array [verwundert sein Гјber вЂ“ Р±С‹С‚СЊ СѓРґРёРІР»РµРЅРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 58 
+word and meanings array [wГјtend sein Гјber вЂ“ Р±С‹С‚СЊ РІ СЏСЂРѕСЃС‚Рё РёР·-Р·Р°] has not length 2 in Adjective mit Präpositionen.txt line: 59 
+word and meanings array [in D] has not length 2 in Adjective mit Präpositionen.txt line: 60 
+word and meanings array [(un)erfahren sein in D вЂ“ Р±С‹С‚СЊ РѕРїС‹С‚РЅС‹Рј \ Р±С‹С‚СЊ РЅРµРѕРїС‹С‚РЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 61 
+word and meanings array [gut sein in D вЂ“ Р±С‹С‚СЊ С…РѕСЂРѕС€РёРј РІ С‡РµРј-С‚Рѕ \ Р±С‹С‚СЊ С…РѕСЂРѕС€РёРј РґР»СЏ С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 62 
+word and meanings array [nachlГ¤ssig sein in D вЂ“ Р±С‹С‚СЊ РЅРµРѕСЃС‚РѕСЂРѕР¶РЅС‹Рј РІ ] has not length 2 in Adjective mit Präpositionen.txt line: 63 
+word and meanings array [] has not length 2 in Adjective mit Präpositionen.txt line: 64 
+word and meanings array [п»їunverbindlich вЂ“ РЅРё Рє С‡РµРјСѓ РЅРµ РѕР±СЏР·С‹РІР°СЋС‰РёР№, СЃР»РёС€РєРѕРј РѕР±С‰РёР№] has not length 2 in Adjective.txt line: 0 
+word and meanings array [seicht вЂ“ РјРµР»РєРѕРІРѕРґРЅС‹Р№, РѕРіСЂР°РЅРёС‡РµРЅРЅС‹Р№ (СѓРјСЃС‚РІРµРЅРЅРѕ)] has not length 2 in Adjective.txt line: 1 
+word and meanings array [heiser вЂ“ С…СЂРёРїР»С‹Р№, РѕС…СЂРёРїС€РёР№] has not length 2 in Adjective.txt line: 2 
+word and meanings array [verschwommen вЂ“ С‚СѓРјР°РЅРЅС‹Р№, СЂР°СЃРїР»С‹РІС‡Р°С‚С‹Р№] has not length 2 in Adjective.txt line: 3 
+word and meanings array [artig вЂ“ РІРµР¶Р»РёРІС‹Р№, РІРѕСЃРїРёС‚Р°РЅРЅС‹Р№] has not length 2 in Adjective.txt line: 4 
+word and meanings array [gepflegt вЂ“ СѓС…РѕР¶РµРЅРЅС‹Р№] has not length 2 in Adjective.txt line: 5 
+word and meanings array [kultiviert вЂ“ РѕР±СЂР°Р·С†РѕРІС‹Р№, СѓРјСЃС‚РІРµРЅРЅРѕ СЂР°Р·РІРёС‚С‹Р№] has not length 2 in Adjective.txt line: 6 
+word and meanings array [planmГ¤Гџig вЂ“ РїР»Р°РЅРѕРјРµСЂРЅС‹Р№, С€С‚Р°С‚РЅС‹Р№] has not length 2 in Adjective.txt line: 7 
+parsed word: zahn with meanings: [СЂСѓС‡РЅРѕР№] 
+word and meanings array [schwerfГ¤llig вЂ“ РЅРµРїРѕРІРѕСЂРѕС‚Р»РёРІС‹Р№, РЅРµСѓРєР»СЋР¶РёР№] has not length 2 in Adjective.txt line: 9 
+word and meanings array [solide вЂ“ СЃРѕР»РёРґРЅС‹Р№, РЅР°РґРµР¶РЅС‹Р№] has not length 2 in Adjective.txt line: 10 
+parsed word: dumpf with meanings: [РіР»СѓС…РѕР№, Р·Р°С‚С…Р»С‹Р№] 
+word and meanings array [faul вЂ“ Р»РµРЅРёРІС‹Р№, РіРЅРёР»РѕР№, С‚СѓС…Р»С‹Р№, Р·Р°С‚С…Р»С‹Р№] has not length 2 in Adjective.txt line: 12 
+word and meanings array [matt вЂ“ СЃР»Р°Р±С‹Р№, РІСЏР»С‹Р№] has not length 2 in Adjective.txt line: 13 
+word and meanings array [ranzig вЂ“ РїСЂРѕРіРѕСЂРєР»С‹Р№, Р·Р°С‚С…Р»С‹Р№] has not length 2 in Adjective.txt line: 14 
+word and meanings array [schal вЂ“ Р±РµР·РІРєСѓСЃРЅС‹Р№, РїСЂРµСЃРЅС‹Р№] has not length 2 in Adjective.txt line: 15 
+word and meanings array [schwГјl вЂ“ РґСѓС€РЅС‹Р№, Р·РЅРѕР№РЅС‹Р№] has not length 2 in Adjective.txt line: 16 
+word and meanings array [unverfroren вЂ“ РЅР°РіР»С‹Р№, РґРµСЂР·РєРёР№] has not length 2 in Adjective.txt line: 17 
+word and meanings array [unwirsch вЂ“ РіСЂСѓР±С‹Р№, РЅРµРїСЂРёРІРµС‚Р»РёРІС‹Р№] has not length 2 in Adjective.txt line: 18 
+parsed word: unschlГјssig with meanings: [РЅРµРїСЂРёРІРµС‚Р»РёРІС‹Р№] 
+word and meanings array [unnahbar вЂ“ РІС‹СЃРѕРєРѕРјРµСЂРЅС‹Р№, РЅРµРїСЂРёСЃС‚СѓРїРЅС‹Р№] has not length 2 in Adjective.txt line: 20 
+word and meanings array [ungestГјm вЂ“ РІСЃРїС‹Р»СЊС‡РёРІС‹Р№, СЃС‚СЂРµРјРёС‚РµР»СЊРЅС‹Р№] has not length 2 in Adjective.txt line: 21 
+parsed word: unverhofft with meanings: [РЅРµРѕР¶РёРґР°РЅРЅС‹Р№] 
+word and meanings array [unbeschwert вЂ“ Р±РµР·Р·Р°Р±РѕС‚РЅС‹Р№, РЅРµРѕС‚СЏРіРѕС‰РµРЅРЅС‹Р№] has not length 2 in Adjective.txt line: 23 
+parsed word: berechtigt with meanings: [СЂРµР·РѕРЅРЅС‹Р№] 
+parsed word: besonnen with meanings: [СЂР°СЃСЃСѓРґРёС‚РµР»СЊРЅС‹Р№] 
+word and meanings array [gedrГјckt вЂ“ СѓРіРЅРµС‚РµРЅРЅС‹Р№, РїРѕРґР°РІР»РµРЅРЅС‹Р№] has not length 2 in Adjective.txt line: 26 
+word and meanings array [] has not length 2 in Adjective.txt line: 27 
+word and meanings array [] has not length 2 in Adjective.txt line: 28 
+parsed word: belegen with meanings: [доказывать (научным путём)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 1 
+parsed word: von Natur aus with meanings: [от природы] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 3 
+parsed word: anhang with meanings: [с помощью, по средством, пользуясь, зная] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 5 
+parsed word: ein Medikament gegen Kopfschmerzen with meanings: [средство от головной боли] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 7 
+parsed word: behandeln with meanings: [лечить] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 9 
+parsed word: Diagnosse stellen with meanings: [ставить диагноз] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 11 
+parsed word: zunachst with meanings: [сначала, прежде всего] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 13 
+parsed word: allmahlich with meanings: [постепенно] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 15 
+parsed word: die Werkstatt with meanings: [мастерская, цех, СТО] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 17 
+parsed word: mutma?lich with meanings: [предположительный, вероятный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 19 
+parsed word: umfangreich with meanings: [объемный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 21 
+parsed word: vorsichtshalber with meanings: [на всякий случай, в целях предосторожности] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 23 
+word and meanings array [widerlegen] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 24 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 25 
+word and meanings array [zwischenmenschlich] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 26 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 27 
+parsed word: den Humor erwerben with meanings: [приобретать чувство юмора] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 29 
+parsed word: vom diesem Standpunkt with meanings: [с этой точки зрения] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 31 
+parsed word: erfassen with meanings: [понимать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 33 
+parsed word: der Pechvogel with meanings: [неудачник] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 35 
+parsed word: schlittern in with meanings: [скользить] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 37 
+parsed word: in den Griff bekommen with meanings: [принимать во внимание] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 39 
+parsed word: der Stillstand with meanings: [затишье, застой] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 41 
+parsed word: verherrlichen with meanings: [прославлять] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 43 
+parsed word: ergiebig with meanings: [плодородный, обильный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 45 
+parsed word: sich eignen als with meanings: [считать себя] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 47 
+parsed word: jemandem vergehen with meanings: [пропадать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 49 
+parsed word: der Streich with meanings: [выходка] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 51 
+parsed word: hereinlegen with meanings: [прикалывать, разводит] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 53 
+parsed word: glaubhaft with meanings: [правдоподобный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 55 
+parsed word: umschlagen in Akk with meanings: [превращаться в] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 57 
+parsed word: der Leistungssport with meanings: [большой спорт] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 59 
+parsed word: das Gutachten with meanings: [заключение, экспертиза, рецензия] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 1 
+parsed word: ernste Krankheit with meanings: [сильная болезнь] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 3 
+parsed word: hartnackig with meanings: [упорный, настойчивый (о слухах)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 5 
+parsed word: fruhzeitig with meanings: [преждевременно] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 7 
+parsed word: vervollstandigen with meanings: [дополнять до целого] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 3 .txt line: 9 
+parsed word: zusammenlegen with meanings: [соединять] 
+parsed word: gleichsetzen D with meanings: [приравнивать, отождествлять] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 1 
+parsed word: aufgehen with meanings: [восходить (о солнце)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 3 
+parsed word: heiter with meanings: [веселый, радостный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 5 
+parsed word: angeboren with meanings: [врожденный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 7 
+parsed word: landen auf with meanings: [оказываться, приземляться, высаживаться] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 9 
+parsed word: erfassen with meanings: [понимать, хватать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 11 
+parsed word: erstellen with meanings: [создавать, составлять (на основе некоторых данных)] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 13 
+parsed word: auftauchen with meanings: [выныривать, оказываться, возникать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 15 
+parsed word: das Erkenntis with meanings: [осознание, научный вывод] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 39.txt line: 17 
+parsed word: der Gesundheitsstatus with meanings: [состояние здоровья] 
+parsed word: aufgrund G with meanings: [РЅР° РѕСЃРЅРѕРІР°РЅРёРё] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 1 
+parsed word: der Wandel with meanings: [РїРµСЂРµРјРµРЅР°, РёР·РјРµРЅРµРЅРёРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 3 
+parsed word: verallgemeinern with meanings: [РѕР±РѕР±С‰РµРЅРЅРѕ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 5 
+parsed word: fusionieren with meanings: [СЃР»РёС‚СЊСЃСЏ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 7 
+parsed word: die Verausgabung with meanings: [СЂР°СЃС…РѕРґРѕРІР°РЅРёРµ, С‚СЂР°С‚Р°] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 9 
+parsed word: umgekehrt with meanings: [РїРµСЂРµРІРµСЂРЅСѓС‚С‹Р№, РІС‹РІРµСЂРЅСѓС‚С‹Р№, РІР·Р°РёРјРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 11 
+parsed word: zumindest with meanings: [РїРѕ РєСЂР°Р№РЅРµР№ РјРµСЂРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 13 
+parsed word: bewirken with meanings: [РІС‹Р·С‹РІР°С‚СЊ, СЃРїРѕСЃРѕР±СЃС‚РІРѕРІР°С‚СЊ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 15 
+parsed word: umschlagen in with meanings: [РѕР±РµСЂС‚С‹РІР°С‚СЊ, РѕР±РјР°С‚С‹РІР°С‚СЊ, СЂРµР·РєРѕ РјРµРЅСЏС‚СЊСЃСЏ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 17 
+parsed word: zum Teil with meanings: [С‡Р°СЃС‚РёС‡РЅРѕ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 19 
+parsed word: sich stГјrzem in with meanings: [СѓРїР°СЃС‚СЊ РІ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 21 
+parsed word: die Reflexion uber with meanings: [СЃР°РјРѕР°РЅР°Р»РёР· РІ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 23 
+parsed word: das Tun with meanings: [РѕР±СЂР°Р· РґРµР№СЃС‚РІРёР№, РїРѕРІРµРґРµРЅРёРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 25 
+parsed word: zahlen zu with meanings: [РїСЂРёС‡РёСЃР»СЏС‚СЊ Рє] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 27 
+parsed word: die WertschГ¤tzung with meanings: [СѓРІР°Р¶РµРЅРёРµ, РѕС†РµРЅРєР°] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 29 
+parsed word: ausbleibend with meanings: [РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РёР№] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 31 
+parsed word: ideell with meanings: [РёРґРµС„РЅС–Р№] 
+parsed word: die Ressentiments with meanings: [РѕР±РёРґР°, РІСЂР°Р¶РґРµР±РЅРѕСЃС‚СЊ] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 1 
+parsed word: allgemeingultig with meanings: [РѕР±С‰РµРїСЂРёРЅСЏС‚С–Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 3 
+parsed word: flussiges English with meanings: [Р±РµРіР»С‹Р№ Р°РЅРіР»РёР№СЃРєРёР№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 5 
+parsed word: ergeben with meanings: [РґРІР°РІР°С‚СЊ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 7 
+parsed word: schlichtes Wissen with meanings: [РїСЂРѕСЃС‚РѕРµ Р·РЅР°РЅРёРµ] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 9 
+parsed word: aussagekrГ¤ftig with meanings: [СЃРѕРґРµСЂР¶Р°С‚РµР»СЊРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 11 
+parsed word: ruppig with meanings: [РіСЂСѓР±С‹Р№, С…Р°РјСЃРєРёР№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 13 
+parsed word: geldgierig with meanings: [Р°Р»С‡РЅС‹Р№, РєРѕСЂС‹СЃС‚РЅС‹Р№, Р¶Р°РґРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 15 
+parsed word: der Tugend with meanings: [РґРѕР±СЂРѕРґРµС‚РµР»СЊ] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 17 
+parsed word: der AnwГ¤rter with meanings: [РїСЂРµС‚РµРЅРґРµРЅС‚, РєР°РЅРґРёРґР°С‚] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 19 
+parsed word: vorrangig with meanings: [РїСЂРµРёРјСѓС‰РµСЃС‚РІРµРЅРЅС‹Р№, РїРµСЂРІРѕРѕС‡РµСЂРµРґРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 21 
+parsed word: die Ehre with meanings: [честь] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 1 
+parsed word: das R?tsel with meanings: [загадка] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 3 
+parsed word: der Butler with meanings: [дворецкий, швейцар, заведующий винным поглебом] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 5 
+parsed word: die S?nfte with meanings: [носилки] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 7 
+parsed word: die Buche with meanings: [бук] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 9 
+parsed word: pr?chtig with meanings: [великолеспны, роскошный, пыщный] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 11 
+parsed word: sich erheben with meanings: [подниматься, вставать] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 13 
+parsed word: die Dirne with meanings: [служанка] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 15 
+parsed word: der Heide with meanings: [язычник] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 17 
+parsed word: scheu?lich with meanings: [отвратительный, ужасгый] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 19 
+parsed word: die Angelegenheit with meanings: [дело, вопрос, обстоятельство] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 21 
+parsed word: sich wenden an + A with meanings: [обращаться к кому-то] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 23 
+parsed word: unnachsichtlich with meanings: [беспощажный] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 25 
+parsed word: die Verleumdung with meanings: [клевета] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 27 
+parsed word: das Gespenst with meanings: [привиление, призрак] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 29 
+parsed word: die Glocke with meanings: [колокольчик, гонг] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 31 
+parsed word: nach einer Sitte with meanings: [согласно обычаю] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 33 
+parsed word: einstimmig with meanings: [идиносгасный, единогласно] 
+word and meanings array [] has not length 2 in DER BESUCH DER ALTE DAME.txt line: 35 
+parsed word: z?gern with meanings: [медлить колебаться] 
+parsed word: der Schadel with meanings: [череп] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 1 
+parsed word: zittern with meanings: [дрожать] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 3 
+parsed word: der Fallschirm with meanings: [парашют] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 5 
+parsed word: flattern with meanings: [порхать (на ветру)] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 7 
+parsed word: der Trost with meanings: [утешение] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 9 
+parsed word: die Stube with meanings: [спальное помещение] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 11 
+parsed word: die Handvoll with meanings: [горсть] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 13 
+parsed word: einschleppen with meanings: [занести болезнь] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 15 
+parsed word: sich aufrichten with meanings: [подниматься] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 17 
+parsed word: auff?ttern with meanings: [скармливать] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 19 
+parsed word: schmal with meanings: [узкий, тонкий, худой] 
+word and meanings array [] has not length 2 in Der Funke des Lebens.txt line: 21 
+parsed word: bestimmen ?ber with meanings: [голосовать за] 
+parsed word: umfangreich with meanings: [обширный, большой] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 1 
+parsed word: unermundlich with meanings: [неутомимый, неустанный] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 3 
+parsed word: knochenhart with meanings: [твёрдый как камень] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 5 
+parsed word: die Recherche with meanings: [поиски] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 7 
+parsed word: hiebfest with meanings: [неуязвимый] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 9 
+parsed word: stitchfest with meanings: [неуязвимый] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 11 
+parsed word: zerlegen with meanings: [разчленять] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 13 
+parsed word: die Sichtung with meanings: [обнаружение] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 15 
+parsed word: anfallen with meanings: [возникать] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 17 
+parsed word: der Spa?vogel with meanings: [шутник] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 19 
+parsed word: das Dabeisein with meanings: [присутствие] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 1 
+parsed word: die Bereicherung with meanings: [обогащение] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 3 
+parsed word: die Gunst with meanings: [благосклонность] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 5 
+parsed word: das Wagenrennen with meanings: [автогонки] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 7 
+parsed word: sich ranken um with meanings: [виться вокруг] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 9 
+parsed word: greifen zu with meanings: [прибегать к] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 11 
+parsed word: der Fliegenpilz with meanings: [мухомор] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 13 
+parsed word: die Inkas with meanings: [инки] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 15 
+parsed word: schutten In with meanings: [вливать в] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 17 
+parsed word: verallgemeinernd with meanings: [обобщенно (all in all)] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 19 
+parsed word: der Anreiz with meanings: [стимул] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 21 
+parsed word: die Hemmschwelle with meanings: [психологический барьер] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 23 
+parsed word: der Vorreiter with meanings: [зачинатель] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 25 
+parsed word: der Bildhauer with meanings: [СЃРєСѓР»СЊРїС‚РѕСЂ] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 1 
+parsed word: mitstimmen with meanings: [СѓС‡Р°СЃС‚РІРѕРІР°С‚СЊ РІ РіРѕР»РѕСЃРѕРІР°РЅРёРё] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 3 
+parsed word: das Werk with meanings: [РґРµР»Рѕ, С‚СЂСѓРґ, СЂР°Р±РѕС‚Р°] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 5 
+parsed word: der Nobelpreis with meanings: [РЅРѕР±РµР»РµРІСЃРєР°СЏ РїСЂРµРјРёСЏ] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 7 
+parsed word: polarisieren in A und A with meanings: [РїСЂРѕСЃС‚РёРІРѕРїРѕСЃС‚Р°РІР»СЏС‚СЊ] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 9 
+parsed word: auГџerordentlich with meanings: [С‡СЂРµР·РІС‹С‡Р°Р№РЅС‹Р№] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 11 
+parsed word: verfassen with meanings: [СЃРѕСЃС‚Р°РІР»СЏС‚СЊ, СЃРѕС‡РёРЅСЏС‚СЊ] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 13 
+parsed word: die Lebensgeschichte with meanings: [Р±РёРѕРіСЂР°С„РёСЏ, РёСЃС‚РѕСЂРёСЏ Р¶РёР·РЅРё] 
+word and meanings array [] has not length 2 in LÜCKEN.txt line: 15 
+parsed word: kleinwГјchsig with meanings: [РЅРёР·РєРѕРіРѕ СЂРѕСЃС‚Р°, РјР°Р»РѕСЂРѕСЃР»С‹Р№] 
+parsed word: der Goldschmied with meanings: [ювелир] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 1 
+parsed word: die Espen with meanings: [осина] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 3 
+parsed word: der Kreisverkehr with meanings: [перекрёстное движение] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 5 
+parsed word: die Kreuzung with meanings: [перекрёсток] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 7 
+parsed word: es sit mir ausgegangen with meanings: [заканчиваться] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 9 
+parsed word: unermudlich with meanings: [неустанно] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 11 
+parsed word: fahrig with meanings: [расторопный, суетливый] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 13 
+parsed word: die Pachtung with meanings: [договор аренды] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 15 
+parsed word: die Garbe with meanings: [сноп] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 17 
+parsed word: der Tumpel with meanings: [пруд, лужа, стоячая вода] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 19 
+parsed word: der Faden with meanings: [саженец, нитка] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 21 
+parsed word: der Verfall with meanings: [гибель] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 23 
+parsed word: allmahlich with meanings: [постепенно] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 25 
+parsed word: verdaunen with meanings: [переваривать] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 27 
+parsed word: die Sprosse with meanings: [ступенька] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 29 
+parsed word: ubergie?en with meanings: [заливать заварку, выливать, проливать] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 31 
+parsed word: die Raureif with meanings: [изморозь] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 33 
+parsed word: die Sorgfalt with meanings: [тщательность, точность, старание] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 35 
+parsed word: die Last with meanings: [ноша, груз] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 37 
+parsed word: die Zwischenzeit with meanings: [промежуток времени] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 39 
+parsed word: aufbrechen with meanings: [взламывать (дверь)] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 41 
+parsed word: die Bedingung with meanings: [условие] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 43 
+parsed word: die Pampelmuse with meanings: [грейпфрут] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 45 
+parsed word: gro?spurig with meanings: [надменный, кичливый] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 47 
+parsed word: der Ahorn with meanings: [клён] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 49 
+parsed word: die Schmuggelware with meanings: [контрабанда] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 51 
+parsed word: toben with meanings: [бушевать, свирепствовать, психовать] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 53 
+parsed word: fluchen with meanings: [браниться, сквернословить] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 55 
+parsed word: unverzuglich with meanings: [немедленно, безотлагательно] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 57 
+parsed word: vernachlassigen with meanings: [пренебрегать, умалять] 
+word and meanings array [] has not length 2 in ROHLINGE.txt line: 59 
+parsed word: den Horer abnehmen with meanings: [поднимать трубку] 
+parsed word: der Vormund with meanings: [опекун] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 1 
+word and meanings array [bertreuen -ухаживать ] has not length 2 in SATZBILDUNG.txt line: 2 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 3 
+parsed word: von jdm etwas erben with meanings: [наследовать от кого-то что-то] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 5 
+word and meanings array [der Junggestelle -холостяк ] has not length 2 in SATZBILDUNG.txt line: 6 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 7 
+parsed word: der Lebensgefahrte with meanings: [спутник жизни] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 9 
+parsed word: unehelich with meanings: [внебрачный] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 11 
+parsed word: das Trauschein with meanings: [свидетельство о браке] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 13 
+parsed word: die Abtreibung with meanings: [аборт] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 15 
+parsed word: leibliche Eltern with meanings: [кровные родители] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 17 
+word and meanings array [schmucken -украшать ] has not length 2 in SATZBILDUNG.txt line: 18 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 19 
+parsed word: beisetzen with meanings: [погребать] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 21 
+parsed word: taufen with meanings: [крестить] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 23 
+parsed word: verwohnen durch with meanings: [баловать чем-то] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 25 
+parsed word: beinringen D Akk with meanings: [прививать кому-то что-то] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 27 
+parsed word: gedenken G with meanings: [чтить память] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 29 
+parsed word: beweinen with meanings: [оплакивать] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 31 
+parsed word: schmieden with meanings: [ковать] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 33 
+parsed word: auskommen mit with meanings: [ладить с кем-то] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 35 
+parsed word: versorgen with meanings: [содержать (хозяйство)] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 37 
+parsed word: jdn stillen with meanings: [успокаивать] 
+word and meanings array [] has not length 2 in SATZBILDUNG.txt line: 39 
+parsed word: krabbeln with meanings: [ползти] 
+parsed word: gewaltig with meanings: [сильный, могущественный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 1 
+parsed word: vorl?ufig with meanings: [предварительный, временный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 3 
+parsed word: der Trumen with meanings: [развалины, руины] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 5 
+parsed word: aufkommen with meanings: [выздоравливать, возникать, появляться] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 7 
+parsed word: reinpassen with meanings: [помещатья, влазить, подходить по размеру] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 9 
+parsed word: endgultig with meanings: [окончательный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 11 
+parsed word: schrittweis with meanings: [постепенный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 13 
+java.lang.IllegalArgumentException: given word contains only white spaces 
+parsed word: erschutettern with meanings: [сотрясать] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 15 
+parsed word: festhalten an with meanings: [придерживаться] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 17 
+parsed word: aufgeben with meanings: [задавать, поручать] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 19 
+parsed word: verstandigen with meanings: [ставить в известность] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 21 
+parsed word: der Zuschuss with meanings: [прибавка, субсидия, пособие] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 23 
+parsed word: aufwendig with meanings: [расточительный] 
+word and meanings array [] has not length 2 in TAGESSCHAU.txt line: 25 
+parsed word: Bescheid wissen in with meanings: [хорошо в чем-то разбираться] 
+parsed word: aus biologischer Sich with meanings: [с биологической точки зрения] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 1 
+word and meanings array [tendered ты тенденцию к ] has not length 2 in TEXT GLÜCK.txt line: 2 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 3 
+parsed word: leichtsinnig with meanings: [безрассудный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 5 
+parsed word: ubersehen with meanings: [не замечать, пропускать, упускать] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 7 
+parsed word: die Abwehrhaltung with meanings: [защитная позиция] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 9 
+parsed word: vor allem und jedem with meanings: [перед всем и каждым] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 11 
+parsed word: der Vortrag halten vor with meanings: [внесли доклад перед] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 13 
+parsed word: heirfur with meanings: [на это, для этого] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 15 
+parsed word: das Lockmittel with meanings: [приманка] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 17 
+parsed word: das Ausleben with meanings: [изживание (аффекта)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 19 
+parsed word: der Saugling with meanings: [грудной ребенок] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 21 
+parsed word: die Nahrungsaufnahme with meanings: [принятие пищи] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 23 
+parsed word: vorasugehen with meanings: [предшествовать, предварять] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 25 
+parsed word: sich koppeln an with meanings: [отвязываться к (другому событию)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 27 
+parsed word: zufallig with meanings: [случайный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 29 
+parsed word: unausweichlich with meanings: [неизбежно] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 31 
+parsed word: ausweichen with meanings: [избегать, уклоняться] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 33 
+parsed word: durchaus with meanings: [совсем, совершенно, абсолютно, непременно] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 35 
+parsed word: krass with meanings: [резкий, неприятный, разящий] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 37 
+parsed word: krass with meanings: [резко] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 39 
+parsed word: fluchtig with meanings: [мимолетный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 41 
+parsed word: loswerden with meanings: [избавляться, освобождаться] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 43 
+parsed word: antreiben with meanings: [погонять, поощрять] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 45 
+parsed word: Chances haben zu with meanings: [иметь шансы на] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 47 
+parsed word: hingegen with meanings: [напротив (натомість)] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 49 
+parsed word: namenlos with meanings: [неизвестный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 51 
+parsed word: schicksalhaft with meanings: [фатальный, судьбоносный] 
+word and meanings array [] has not length 2 in TEXT GLÜCK.txt line: 53 
+parsed word: mildern with meanings: [смягчать, облегчать] 
+word and meanings array [п»їvon] has not length 2 in Adjective mit Präpositionen.txt line: 0 
+word and meanings array [abhГ¤ngig sein von вЂ“ Р·Р°РІРёСЃРµС‚СЊ РѕС‚ С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 1 
+word and meanings array [begeistert sein von вЂ“ Р±С‹С‚СЊ РІР·РІРѕР»РЅРѕРІР°РЅРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 2 
+word and meanings array [Гјberzeugt sein von вЂ“ Р±С‹С‚СЊ СѓР±РµР¶РґРµРЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 3 
+word and meanings array [enttГ¤uscht sein von вЂ“ Р±С‹С‚СЊ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 4 
+word and meanings array [entfernt sein von вЂ“ Р±С‹С‚СЊ РѕС‚РґР°Р»РµРЅРЅС‹Рј РѕС‚ С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 5 
+word and meanings array [auf A] has not length 2 in Adjective mit Präpositionen.txt line: 6 
+word and meanings array [Г¤rgerlich sein auf A вЂ“ Р·Р»РёС‚СЊСЃСЏ РёР·-Р·Р° С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 7 
+word and meanings array [bГ¶se sein auf A вЂ“ Р·Р»РёС‚СЊСЃСЏ РёР·-Р·Р° С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 8 
+word and meanings array [angewiesen sein auf A вЂ“ Р±С‹С‚СЊ СѓРІРµСЂРµРЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 9 
+word and meanings array [eifersГјchtig sein auf A вЂ“ Р·Р°РІРёРґРѕРІР°С‚СЊ С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 10 
+word and meanings array [stolz sein auf A вЂ“ Р±С‹С‚СЊ РіРѕСЂРґС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 11 
+word and meanings array [an D] has not length 2 in Adjective mit Präpositionen.txt line: 12 
+word and meanings array [interessiert sein an D вЂ“ Р±С‹С‚СЊ Р·Р°РёРЅС‚РµСЂРµСЃРѕРІР°РЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 13 
+word and meanings array [erkrankt sein an D вЂ“ Р±С‹С‚СЊ Р±РѕР»СЊРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 14 
+word and meanings array [reich sein an D вЂ“ Р±С‹С‚СЊ Р±РѕРіР°С‚С‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 15 
+word and meanings array [schuld sein an D вЂ“ Р±С‹С‚СЊ РІРёРЅРѕРІР°С‚С‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 16 
+word and meanings array [beteiligt sein an D вЂ“ Р±С‹С‚СЊ Р·Р°РґРµР№СЃС‚РІРѕРІР°РЅРЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 17 
+word and meanings array [zu] has not length 2 in Adjective mit Präpositionen.txt line: 18 
+word and meanings array [freundlich sein zu вЂ“ Р±С‹С‚СЊ РґСЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Рј Рє РєРѕРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 19 
+word and meanings array [(un)fГ¤hig sein zu вЂ“ Р±С‹С‚СЊ СЃРїРѕСЃРѕР±РЅС‹Рј \ Р±С‹С‚СЊ РЅРµСЃРїРѕСЃРѕР±РЅС‹Рј РЅР° С‡С‚Рѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 20 
+word and meanings array [Bereit sein zu вЂ“ Р±С‹С‚СЊ РіРѕС‚РѕРІС‹Рј РЅР° С‡С‚Рѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 21 
+word and meanings array [nett sein zu вЂ“ Р±С‹С‚СЊ Р»СЋР±РµР·РЅС‹Рј СЃ РєРµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 22 
+word and meanings array [entschlossen sein zu вЂ“ СЂРµС€РёС‚СЊСЃСЏ РЅР° С‡С‚Рѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 23 
+word and meanings array [bei] has not length 2 in Adjective mit Präpositionen.txt line: 24 
+word and meanings array [angesehen sein bei вЂ“ Р±С‹С‚СЊ РІ РїРѕС‡РµС‚Рµ СЃСЂРµРґРё РєРѕРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 25 
+word and meanings array [(un)beliebt sein bei вЂ“ Р±С‹С‚СЊ РЅРµ Р»СЋР±РёРјС‹Рј СЃСЂРµРґРё] has not length 2 in Adjective mit Präpositionen.txt line: 26 
+word and meanings array [gegenГјber] has not length 2 in Adjective mit Präpositionen.txt line: 27 
+word and meanings array [zurГјckhaltend sein gegenГјber вЂ“ Р±С‹С‚СЊ СЃРґРµСЂР¶Р°РЅРЅС‹Рј РїРµСЂРµРґ РєРµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 28 
+word and meanings array [aufgeschlossen sein gegenГјber вЂ“ Р±С‹С‚СЊ РѕС‚РєСЂС‹С‚С‹Рј РїРµСЂРµРґ РєРµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 29 
+word and meanings array [gegen A] has not length 2 in Adjective mit Präpositionen.txt line: 30 
+word and meanings array [(un)empfindlich sein gegen A вЂ“ Р±С‹С‚СЊ РЅРµС‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅС‹Рј Рє С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 31 
+word and meanings array [immun sein gegen A вЂ“ Р±С‹С‚СЊ РЅРµСѓСЏР·РІРёРјС‹Рј Рє С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 32 
+word and meanings array [an A] has not length 2 in Adjective mit Präpositionen.txt line: 33 
+word and meanings array [adressiert sein an A вЂ“ Р±С‹С‚СЊ Р°РґСЂРµСЃРѕРІР°РЅРЅС‹Рј РєРѕРјСѓ-С‚Рѕ	] has not length 2 in Adjective mit Präpositionen.txt line: 34 
+word and meanings array [gewГ¶hnt sein an A вЂ“ РїСЂРёРІС‹РєРЅСѓС‚СЊ Рє С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 35 
+word and meanings array [fГјr] has not length 2 in Adjective mit Präpositionen.txt line: 36 
+word and meanings array [(un)geeignet sein fГјr вЂ“ Р±С‹С‚СЊ РїСЂРёРіРѕРґРЅС‹Рј \ Р±С‹С‚СЊ РЅРµРїСЂРёРіРѕРґРЅС‹Рј Рє С‡РµРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 37 
+word and meanings array [verantwortlich sein fГјr вЂ“ Р±С‹С‚СЊ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Рј Р·Р° С‡С‚Рѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 38 
+word and meanings array [(un)wichtig sein fГјr вЂ“ Р±С‹С‚СЊ РІР°Р¶РЅС‹Рј \ Р±С‹С‚СЊ РЅРµРІР°Р¶РЅС‹Рј РґР»СЏ] has not length 2 in Adjective mit Präpositionen.txt line: 39 
+word and meanings array [(un)schГ¤dlich sein fГјr вЂ“ Р±С‹С‚СЊ РІСЂРµРґРЅС‹Рј \ Р±С‹С‚СЊ Р±РµР·РІСЂРµРґРЅС‹Рј РґР»СЏ] has not length 2 in Adjective mit Präpositionen.txt line: 40 
+word and meanings array [nГјtzlich sein  fГјr вЂ“ Р±С‹С‚СЊ РїРѕР»РµР·РЅС‹Рј РґР»СЏ] has not length 2 in Adjective mit Präpositionen.txt line: 41 
+word and meanings array [mit] has not length 2 in Adjective mit Präpositionen.txt line: 42 
+word and meanings array [befreundet sein mit вЂ“ Р±С‹С‚СЊ РґСЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Рј РєРѕРјСѓ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 43 
+word and meanings array [verwandt sein mit вЂ“ Р±С‹С‚СЊ СЂРѕРґСЃС‚РІРµРЅРЅС‹Рј РґР»СЏ РєРѕРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 44 
+word and meanings array [zufrieden sein mit вЂ“ Р±С‹С‚СЊ РґРѕРІРѕР»СЊРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 45 
+word and meanings array [beschГ¤ftigt sein mit вЂ“ Р±С‹С‚СЊ Р·Р°РЅСЏС‚С‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 46 
+word and meanings array [fertig sein mit вЂ“ Р±С‹С‚СЊ РіРѕС‚РѕРІС‹Рј СЃ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 47 
+word and meanings array [nach] has not length 2 in Adjective mit Präpositionen.txt line: 48 
+word and meanings array [verrГјckt sein nach вЂ“ СЃС…РѕРґРёС‚СЊ СЃ СѓРјР° РёР·-Р·Р°] has not length 2 in Adjective mit Präpositionen.txt line: 49 
+word and meanings array [in A] has not length 2 in Adjective mit Präpositionen.txt line: 50 
+word and meanings array [unterteilt sein in A вЂ“ Р±С‹С‚СЊ СЂР°Р·РґРµР»РµРЅРЅС‹Рј РЅР° ] has not length 2 in Adjective mit Präpositionen.txt line: 51 
+word and meanings array [verliebt sein in A вЂ“ Р±С‹С‚СЊ РІР»СЋР±Р»РµРЅРЅС‹Рј РІ РєРѕРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 52 
+word and meanings array [Гјber] has not length 2 in Adjective mit Präpositionen.txt line: 53 
+word and meanings array [glГјcklich sein Гјber вЂ“ Р±С‹С‚СЊ СЂР°РґРѕСЃС‚РЅС‹Рј РёР·-Р·Р°] has not length 2 in Adjective mit Präpositionen.txt line: 54 
+word and meanings array [erfreut sein Гјber вЂ“ Р±С‹С‚СЊ РѕР±СЂР°РґРѕРІР°РЅРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 55 
+word and meanings array [erstaunt sein Гјber вЂ“ Р±С‹С‚СЊ РёР·СѓРјР»РµРЅРЅС‹Рј С‡РµРј-С‚Рѕ	] has not length 2 in Adjective mit Präpositionen.txt line: 56 
+word and meanings array [traurig sein Гјber вЂ“ Р±С‹С‚СЊ РіСЂСѓСЃС‚РЅС‹Рј РёР·-Р·Р°] has not length 2 in Adjective mit Präpositionen.txt line: 57 
+word and meanings array [verwundert sein Гјber вЂ“ Р±С‹С‚СЊ СѓРґРёРІР»РµРЅРЅС‹Рј С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 58 
+word and meanings array [wГјtend sein Гјber вЂ“ Р±С‹С‚СЊ РІ СЏСЂРѕСЃС‚Рё РёР·-Р·Р°] has not length 2 in Adjective mit Präpositionen.txt line: 59 
+word and meanings array [in D] has not length 2 in Adjective mit Präpositionen.txt line: 60 
+word and meanings array [(un)erfahren sein in D вЂ“ Р±С‹С‚СЊ РѕРїС‹С‚РЅС‹Рј \ Р±С‹С‚СЊ РЅРµРѕРїС‹С‚РЅС‹Рј РІ С‡РµРј-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 61 
+word and meanings array [gut sein in D вЂ“ Р±С‹С‚СЊ С…РѕСЂРѕС€РёРј РІ С‡РµРј-С‚Рѕ \ Р±С‹С‚СЊ С…РѕСЂРѕС€РёРј РґР»СЏ С‡РµРіРѕ-С‚Рѕ] has not length 2 in Adjective mit Präpositionen.txt line: 62 
+word and meanings array [nachlГ¤ssig sein in D вЂ“ Р±С‹С‚СЊ РЅРµРѕСЃС‚РѕСЂРѕР¶РЅС‹Рј РІ ] has not length 2 in Adjective mit Präpositionen.txt line: 63 
+word and meanings array [] has not length 2 in Adjective mit Präpositionen.txt line: 64 
+word and meanings array [п»їunverbindlich вЂ“ РЅРё Рє С‡РµРјСѓ РЅРµ РѕР±СЏР·С‹РІР°СЋС‰РёР№, СЃР»РёС€РєРѕРј РѕР±С‰РёР№] has not length 2 in Adjective.txt line: 0 
+word and meanings array [seicht вЂ“ РјРµР»РєРѕРІРѕРґРЅС‹Р№, РѕРіСЂР°РЅРёС‡РµРЅРЅС‹Р№ (СѓРјСЃС‚РІРµРЅРЅРѕ)] has not length 2 in Adjective.txt line: 1 
+word and meanings array [heiser вЂ“ С…СЂРёРїР»С‹Р№, РѕС…СЂРёРїС€РёР№] has not length 2 in Adjective.txt line: 2 
+word and meanings array [verschwommen вЂ“ С‚СѓРјР°РЅРЅС‹Р№, СЂР°СЃРїР»С‹РІС‡Р°С‚С‹Р№] has not length 2 in Adjective.txt line: 3 
+word and meanings array [artig вЂ“ РІРµР¶Р»РёРІС‹Р№, РІРѕСЃРїРёС‚Р°РЅРЅС‹Р№] has not length 2 in Adjective.txt line: 4 
+word and meanings array [gepflegt вЂ“ СѓС…РѕР¶РµРЅРЅС‹Р№] has not length 2 in Adjective.txt line: 5 
+word and meanings array [kultiviert вЂ“ РѕР±СЂР°Р·С†РѕРІС‹Р№, СѓРјСЃС‚РІРµРЅРЅРѕ СЂР°Р·РІРёС‚С‹Р№] has not length 2 in Adjective.txt line: 6 
+word and meanings array [planmГ¤Гџig вЂ“ РїР»Р°РЅРѕРјРµСЂРЅС‹Р№, С€С‚Р°С‚РЅС‹Р№] has not length 2 in Adjective.txt line: 7 
+parsed word: zahn with meanings: [СЂСѓС‡РЅРѕР№] 
+word and meanings array [schwerfГ¤llig вЂ“ РЅРµРїРѕРІРѕСЂРѕС‚Р»РёРІС‹Р№, РЅРµСѓРєР»СЋР¶РёР№] has not length 2 in Adjective.txt line: 9 
+word and meanings array [solide вЂ“ СЃРѕР»РёРґРЅС‹Р№, РЅР°РґРµР¶РЅС‹Р№] has not length 2 in Adjective.txt line: 10 
+parsed word: dumpf with meanings: [РіР»СѓС…РѕР№, Р·Р°С‚С…Р»С‹Р№] 
+word and meanings array [faul вЂ“ Р»РµРЅРёРІС‹Р№, РіРЅРёР»РѕР№, С‚СѓС…Р»С‹Р№, Р·Р°С‚С…Р»С‹Р№] has not length 2 in Adjective.txt line: 12 
+word and meanings array [matt вЂ“ СЃР»Р°Р±С‹Р№, РІСЏР»С‹Р№] has not length 2 in Adjective.txt line: 13 
+word and meanings array [ranzig вЂ“ РїСЂРѕРіРѕСЂРєР»С‹Р№, Р·Р°С‚С…Р»С‹Р№] has not length 2 in Adjective.txt line: 14 
+word and meanings array [schal вЂ“ Р±РµР·РІРєСѓСЃРЅС‹Р№, РїСЂРµСЃРЅС‹Р№] has not length 2 in Adjective.txt line: 15 
+word and meanings array [schwГјl вЂ“ РґСѓС€РЅС‹Р№, Р·РЅРѕР№РЅС‹Р№] has not length 2 in Adjective.txt line: 16 
+word and meanings array [unverfroren вЂ“ РЅР°РіР»С‹Р№, РґРµСЂР·РєРёР№] has not length 2 in Adjective.txt line: 17 
+word and meanings array [unwirsch вЂ“ РіСЂСѓР±С‹Р№, РЅРµРїСЂРёРІРµС‚Р»РёРІС‹Р№] has not length 2 in Adjective.txt line: 18 
+parsed word: unschlГјssig with meanings: [РЅРµРїСЂРёРІРµС‚Р»РёРІС‹Р№] 
+word and meanings array [unnahbar вЂ“ РІС‹СЃРѕРєРѕРјРµСЂРЅС‹Р№, РЅРµРїСЂРёСЃС‚СѓРїРЅС‹Р№] has not length 2 in Adjective.txt line: 20 
+word and meanings array [ungestГјm вЂ“ РІСЃРїС‹Р»СЊС‡РёРІС‹Р№, СЃС‚СЂРµРјРёС‚РµР»СЊРЅС‹Р№] has not length 2 in Adjective.txt line: 21 
+parsed word: unverhofft with meanings: [РЅРµРѕР¶РёРґР°РЅРЅС‹Р№] 
+word and meanings array [unbeschwert вЂ“ Р±РµР·Р·Р°Р±РѕС‚РЅС‹Р№, РЅРµРѕС‚СЏРіРѕС‰РµРЅРЅС‹Р№] has not length 2 in Adjective.txt line: 23 
+parsed word: berechtigt with meanings: [СЂРµР·РѕРЅРЅС‹Р№] 
+parsed word: besonnen with meanings: [СЂР°СЃСЃСѓРґРёС‚РµР»СЊРЅС‹Р№] 
+word and meanings array [gedrГјckt вЂ“ СѓРіРЅРµС‚РµРЅРЅС‹Р№, РїРѕРґР°РІР»РµРЅРЅС‹Р№] has not length 2 in Adjective.txt line: 26 
+word and meanings array [] has not length 2 in Adjective.txt line: 27 
+word and meanings array [] has not length 2 in Adjective.txt line: 28 
+parsed word: п»їbelegen with meanings: [РґРѕРєР°Р·С‹РІР°С‚СЊ (РЅР°СѓС‡РЅС‹Рј РїСѓС‚С‘Рј)] 
+parsed word: von Natur aus with meanings: [РѕС‚ РїСЂРёСЂРѕРґС‹] 
+parsed word: anhang with meanings: [СЃ РїРѕРјРѕС‰СЊСЋ, РїРѕ СЃСЂРµРґСЃС‚РІРѕРј, РїРѕР»СЊР·СѓСЏСЃСЊ, Р·РЅР°СЏ] 
+parsed word: ein Medikament gegen Kopfschmerzen with meanings: [СЃСЂРµРґСЃС‚РІРѕ РѕС‚ РіРѕР»РѕРІРЅРѕР№ Р±РѕР»Рё] 
+parsed word: behandeln with meanings: [Р»РµС‡РёС‚СЊ] 
+parsed word: Diagnosse stellen with meanings: [СЃС‚Р°РІРёС‚СЊ РґРёР°РіРЅРѕР·] 
+parsed word: zunachst with meanings: [СЃРЅР°С‡Р°Р»Р°, РїСЂРµР¶РґРµ РІСЃРµРіРѕ] 
+parsed word: allmahlich with meanings: [РїРѕСЃС‚РµРїРµРЅРЅРѕ] 
+parsed word: die Werkstatt with meanings: [РјР°СЃС‚РµСЂСЃРєР°СЏ, С†РµС…, РЎРўРћ] 
+parsed word: mutma?lich with meanings: [РїСЂРµРґРїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Р№, РІРµСЂРѕСЏС‚РЅС‹Р№] 
+parsed word: umfangreich with meanings: [РѕР±СЉРµРјРЅС‹Р№] 
+parsed word: vorsichtshalber with meanings: [РЅР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№, РІ С†РµР»СЏС… РїСЂРµРґРѕСЃС‚РѕСЂРѕР¶РЅРѕСЃС‚Рё] 
+word and meanings array [widerlegen] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 12 
+word and meanings array [zwischenmenschlich] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 13 
+parsed word: den Humor erwerben with meanings: [РїСЂРёРѕР±СЂРµС‚Р°С‚СЊ С‡СѓРІСЃС‚РІРѕ СЋРјРѕСЂР°] 
+parsed word: vom diesem Standpunkt with meanings: [СЃ СЌС‚РѕР№ С‚РѕС‡РєРё Р·СЂРµРЅРёСЏ] 
+parsed word: erfassen with meanings: [РїРѕРЅРёРјР°С‚СЊ] 
+parsed word: der Pechvogel with meanings: [РЅРµСѓРґР°С‡РЅРёРє] 
+parsed word: schlittern in with meanings: [СЃРєРѕР»СЊР·РёС‚СЊ] 
+parsed word: in den Griff bekommen with meanings: [РїСЂРёРЅРёРјР°С‚СЊ РІРѕ РІРЅРёРјР°РЅРёРµ] 
+parsed word: der Stillstand with meanings: [Р·Р°С‚РёС€СЊРµ, Р·Р°СЃС‚РѕР№] 
+parsed word: verherrlichen with meanings: [РїСЂРѕСЃР»Р°РІР»СЏС‚СЊ] 
+parsed word: ergiebig with meanings: [РїР»РѕРґРѕСЂРѕРґРЅС‹Р№, РѕР±РёР»СЊРЅС‹Р№] 
+parsed word: sich eignen als with meanings: [СЃС‡РёС‚Р°С‚СЊ СЃРµР±СЏ] 
+parsed word: jemandem vergehen with meanings: [РїСЂРѕРїР°РґР°С‚СЊ] 
+parsed word: der Streich with meanings: [РІС‹С…РѕРґРєР°] 
+parsed word: hereinlegen with meanings: [РїСЂРёРєР°Р»С‹РІР°С‚СЊ, СЂР°Р·РІРѕРґРёС‚] 
+parsed word: glaubhaft with meanings: [РїСЂР°РІРґРѕРїРѕРґРѕР±РЅС‹Р№] 
+parsed word: umschlagen in Akk with meanings: [РїСЂРµРІСЂР°С‰Р°С‚СЊСЃСЏ РІ] 
+parsed word: der Leistungssport with meanings: [Р±РѕР»СЊС€РѕР№ СЃРїРѕСЂС‚] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 30 
+parsed word: п»їdas Gutachten with meanings: [Р·Р°РєР»СЋС‡РµРЅРёРµ, СЌРєСЃРїРµСЂС‚РёР·Р°, СЂРµС†РµРЅР·РёСЏ] 
+parsed word: ernste Krankheit with meanings: [СЃРёР»СЊРЅР°СЏ Р±РѕР»РµР·РЅСЊ] 
+parsed word: hartnackig with meanings: [СѓРїРѕСЂРЅС‹Р№, РЅР°СЃС‚РѕР№С‡РёРІС‹Р№ (Рѕ СЃР»СѓС…Р°С…)] 
+parsed word: fruhzeitig with meanings: [РїСЂРµР¶РґРµРІСЂРµРјРµРЅРЅРѕ] 
+parsed word: vervollstandigen with meanings: [РґРѕРїРѕР»РЅСЏС‚СЊ РґРѕ С†РµР»РѕРіРѕ] 
+parsed word: zusammenlegen with meanings: [СЃРѕРµРґРёРЅСЏС‚СЊ] 
+parsed word: п»їgleichsetzen D with meanings: [РїСЂРёСЂР°РІРЅРёРІР°С‚СЊ, РѕС‚РѕР¶РґРµСЃС‚РІР»СЏС‚СЊ] 
+parsed word: aufgehen with meanings: [РІРѕСЃС…РѕРґРёС‚СЊ (Рѕ СЃРѕР»РЅС†Рµ)] 
+parsed word: heiter with meanings: [РІРµСЃРµР»С‹Р№, СЂР°РґРѕСЃС‚РЅС‹Р№] 
+parsed word: angeboren with meanings: [РІСЂРѕР¶РґРµРЅРЅС‹Р№] 
+parsed word: landen auf with meanings: [РѕРєР°Р·С‹РІР°С‚СЊСЃСЏ, РїСЂРёР·РµРјР»СЏС‚СЊСЃСЏ, РІС‹СЃР°Р¶РёРІР°С‚СЊСЃСЏ] 
+parsed word: erfassen with meanings: [РїРѕРЅРёРјР°С‚СЊ, С…РІР°С‚Р°С‚СЊ] 
+parsed word: erstellen with meanings: [СЃРѕР·РґР°РІР°С‚СЊ, СЃРѕСЃС‚Р°РІР»СЏС‚СЊ (РЅР° РѕСЃРЅРѕРІРµ РЅРµРєРѕС‚РѕСЂС‹С… РґР°РЅРЅС‹С…)] 
+parsed word: auftauchen with meanings: [РІС‹РЅС‹СЂРёРІР°С‚СЊ, РѕРєР°Р·С‹РІР°С‚СЊСЃСЏ, РІРѕР·РЅРёРєР°С‚СЊ] 
+parsed word: das Erkenntis with meanings: [РѕСЃРѕР·РЅР°РЅРёРµ, РЅР°СѓС‡РЅС‹Р№ РІС‹РІРѕРґ] 
+parsed word: der Gesundheitsstatus with meanings: [СЃРѕСЃС‚РѕСЏРЅРёРµ Р·РґРѕСЂРѕРІСЊСЏ] 
+parsed word: п»їaufgrund G with meanings: [РЅР° РѕСЃРЅРѕРІР°РЅРёРё] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 1 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 2 
+parsed word: der Wandel with meanings: [РїРµСЂРµРјРµРЅР°, РёР·РјРµРЅРµРЅРёРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 4 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 5 
+parsed word: verallgemeinern with meanings: [РѕР±РѕР±С‰РµРЅРЅРѕ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 7 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 8 
+parsed word: fusionieren with meanings: [СЃР»РёС‚СЊСЃСЏ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 10 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 11 
+parsed word: die Verausgabung with meanings: [СЂР°СЃС…РѕРґРѕРІР°РЅРёРµ, С‚СЂР°С‚Р°] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 13 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 14 
+parsed word: umgekehrt with meanings: [РїРµСЂРµРІРµСЂРЅСѓС‚С‹Р№, РІС‹РІРµСЂРЅСѓС‚С‹Р№, РІР·Р°РёРјРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 16 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 17 
+parsed word: zumindest with meanings: [РїРѕ РєСЂР°Р№РЅРµР№ РјРµСЂРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 19 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 20 
+parsed word: bewirken with meanings: [РІС‹Р·С‹РІР°С‚СЊ, СЃРїРѕСЃРѕР±СЃС‚РІРѕРІР°С‚СЊ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 22 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 23 
+parsed word: umschlagen in with meanings: [РѕР±РµСЂС‚С‹РІР°С‚СЊ, РѕР±РјР°С‚С‹РІР°С‚СЊ, СЂРµР·РєРѕ РјРµРЅСЏС‚СЊСЃСЏ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 25 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 26 
+parsed word: zum Teil with meanings: [С‡Р°СЃС‚РёС‡РЅРѕ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 28 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 29 
+parsed word: sich stГјrzem in with meanings: [СѓРїР°СЃС‚СЊ РІ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 31 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 32 
+parsed word: die Reflexion uber with meanings: [СЃР°РјРѕР°РЅР°Р»РёР· РІ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 34 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 35 
+parsed word: das Tun with meanings: [РѕР±СЂР°Р· РґРµР№СЃС‚РІРёР№, РїРѕРІРµРґРµРЅРёРµ] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 37 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 38 
+parsed word: zahlen zu with meanings: [РїСЂРёС‡РёСЃР»СЏС‚СЊ Рє] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 40 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 41 
+parsed word: die WertschГ¤tzung with meanings: [СѓРІР°Р¶РµРЅРёРµ, РѕС†РµРЅРєР°] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 43 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 44 
+parsed word: ausbleibend with meanings: [РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РёР№] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 46 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 47 
+parsed word: ideel with meanings: [РёРґРµС„РЅС–Р№] 
+parsed word: п»їdie Ressentiments with meanings: [РѕР±РёРґР°, РІСЂР°Р¶РґРµР±РЅРѕСЃС‚СЊ] 
+parsed word: allgemeingultig with meanings: [РѕР±С‰РµРїСЂРёРЅСЏС‚С–Р№] 
+parsed word: flussiges English with meanings: [Р±РµРіР»С‹Р№ Р°РЅРіР»РёР№СЃРєРёР№] 
+parsed word: ergeben with meanings: [РґРІР°РІР°С‚СЊ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ] 
+parsed word: schlichtes Wissen with meanings: [РїСЂРѕСЃС‚РѕРµ Р·РЅР°РЅРёРµ] 
+parsed word: aussagekrГ¤ftig with meanings: [СЃРѕРґРµСЂР¶Р°С‚РµР»СЊРЅС‹Р№] 
+parsed word: ruppig with meanings: [РіСЂСѓР±С‹Р№, С…Р°РјСЃРєРёР№] 
+parsed word: geldgierig with meanings: [Р°Р»С‡РЅС‹Р№, РєРѕСЂС‹СЃС‚РЅС‹Р№, Р¶Р°РґРЅС‹Р№] 
+parsed word: der Tugend with meanings: [РґРѕР±СЂРѕРґРµС‚РµР»СЊ] 
+parsed word: der AnwГ¤rter with meanings: [РїСЂРµС‚РµРЅРґРµРЅС‚, РєР°РЅРґРёРґР°С‚] 
+parsed word: vorrangig with meanings: [РїСЂРµРёРјСѓС‰РµСЃС‚РІРµРЅРЅС‹Р№, РїРµСЂРІРѕРѕС‡РµСЂРµРґРЅС‹Р№] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 11 
+parsed word: п»їdie Ehre with meanings: [С‡РµСЃС‚СЊ] 
+parsed word: das RГ¤tsel with meanings: [Р·Р°РіР°РґРєР°] 
+parsed word: der Butler with meanings: [РґРІРѕСЂРµС†РєРёР№, С€РІРµР№С†Р°СЂ, Р·Р°РІРµРґСѓСЋС‰РёР№ РІРёРЅРЅС‹Рј РїРѕРіР»РµР±РѕРј] 
+parsed word: die SГ¤nfte with meanings: [РЅРѕСЃРёР»РєРё] 
+parsed word: die Buche with meanings: [Р±СѓРє] 
+parsed word: pr?chtig with meanings: [РІРµР»РёРєРѕР»РµСЃРїРЅС‹, СЂРѕСЃРєРѕС€РЅС‹Р№, РїС‹С‰РЅС‹Р№] 
+parsed word: sich erheben with meanings: [РїРѕРґРЅРёРјР°С‚СЊСЃСЏ, РІСЃС‚Р°РІР°С‚СЊ] 
+parsed word: die Dirne with meanings: [СЃР»СѓР¶Р°РЅРєР°] 
+parsed word: der Heide with meanings: [СЏР·С‹С‡РЅРёРє] 
+parsed word: scheuГџlich with meanings: [РѕС‚РІСЂР°С‚РёС‚РµР»СЊРЅС‹Р№, СѓР¶Р°СЃРіС‹Р№] 
+parsed word: die Angelegenheit with meanings: [РґРµР»Рѕ, РІРѕРїСЂРѕСЃ, РѕР±СЃС‚РѕСЏС‚РµР»СЊСЃС‚РІРѕ] 
+parsed word: sich wenden an + A with meanings: [РѕР±СЂР°С‰Р°С‚СЊСЃСЏ Рє РєРѕРјСѓ-С‚Рѕ] 
+parsed word: unnachsichtlich with meanings: [Р±РµСЃРїРѕС‰Р°Р¶РЅС‹Р№] 
+parsed word: die Verleumdung with meanings: [РєР»РµРІРµС‚Р°] 
+parsed word: das Gespenst with meanings: [РїСЂРёРІРёР»РµРЅРёРµ, РїСЂРёР·СЂР°Рє] 
+parsed word: die Glocke with meanings: [РєРѕР»РѕРєРѕР»СЊС‡РёРє, РіРѕРЅРі] 
+parsed word: nach einer Sitte with meanings: [СЃРѕРіР»Р°СЃРЅРѕ РѕР±С‹С‡Р°СЋ] 
+parsed word: einstimmig with meanings: [РёРґРёРЅРѕСЃРіР°СЃРЅС‹Р№, РµРґРёРЅРѕРіР»Р°СЃРЅРѕ] 
+parsed word: zГ¶gern with meanings: [РјРµРґР»РёС‚СЊ РєРѕР»РµР±Р°С‚СЊСЃСЏ] 
+parsed word: п»їder Schadel with meanings: [С‡РµСЂРµРї] 
+parsed word: zittern with meanings: [РґСЂРѕР¶Р°С‚СЊ] 
+parsed word: der Fallschirm with meanings: [РїР°СЂР°С€СЋС‚] 
+parsed word: flattern with meanings: [РїРѕСЂС…Р°С‚СЊ (РЅР° РІРµС‚СЂСѓ)] 
+parsed word: der Trost with meanings: [СѓС‚РµС€РµРЅРёРµ] 
+parsed word: die Stube with meanings: [СЃРїР°Р»СЊРЅРѕРµ РїРѕРјРµС‰РµРЅРёРµ] 
+parsed word: die Handvoll with meanings: [РіРѕСЂСЃС‚СЊ] 
+parsed word: einschleppen with meanings: [Р·Р°РЅРµСЃС‚Рё Р±РѕР»РµР·РЅСЊ] 
+parsed word: sich aufrichten with meanings: [РїРѕРґРЅРёРјР°С‚СЊСЃСЏ] 
+parsed word: auffГјttern with meanings: [СЃРєР°СЂРјР»РёРІР°С‚СЊ] 
+parsed word: schmal with meanings: [СѓР·РєРёР№, С‚РѕРЅРєРёР№, С…СѓРґРѕР№] 
+parsed word: bestimmen Гјber with meanings: [РіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р°] 
+parsed word: п»їumfangreich with meanings: [РѕР±С€РёСЂРЅС‹Р№, Р±РѕР»СЊС€РѕР№] 
+parsed word: unermundlich with meanings: [РЅРµСѓС‚РѕРјРёРјС‹Р№, РЅРµСѓСЃС‚Р°РЅРЅС‹Р№] 
+parsed word: knochenhart with meanings: [С‚РІС‘СЂРґС‹Р№ РєР°Рє РєР°РјРµРЅСЊ] 
+parsed word: die Recherche with meanings: [РїРѕРёСЃРєРё] 
+parsed word: hiebfest with meanings: [РЅРµСѓСЏР·РІРёРјС‹Р№] 
+parsed word: stitchfest with meanings: [РЅРµСѓСЏР·РІРёРјС‹Р№] 
+parsed word: zerlegen with meanings: [СЂР°Р·С‡Р»РµРЅСЏС‚СЊ] 
+parsed word: die Sichtung with meanings: [РѕР±РЅР°СЂСѓР¶РµРЅРёРµ] 
+parsed word: anfallen with meanings: [РІРѕР·РЅРёРєР°С‚СЊ] 
+parsed word: der Spa?vogel with meanings: [С€СѓС‚РЅРёРє] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 10 
+parsed word: п»їdas Dabeisein with meanings: [РїСЂРёСЃСѓС‚СЃС‚РІРёРµ] 
+parsed word: die Bereicherung with meanings: [РѕР±РѕРіР°С‰РµРЅРёРµ] 
+parsed word: die Gunst with meanings: [Р±Р»Р°РіРѕСЃРєР»РѕРЅРЅРѕСЃС‚СЊ] 
+parsed word: das Wagenrennen with meanings: [Р°РІС‚РѕРіРѕРЅРєРё] 
+parsed word: sich ranken um with meanings: [РІРёС‚СЊСЃСЏ РІРѕРєСЂСѓРі] 
+parsed word: greifen zu with meanings: [РїСЂРёР±РµРіР°С‚СЊ Рє] 
+parsed word: der Fliegenpilz with meanings: [РјСѓС…РѕРјРѕСЂ] 
+parsed word: die Inkas with meanings: [РёРЅРєРё] 
+parsed word: schutten In with meanings: [РІР»РёРІР°С‚СЊ РІ] 
+parsed word: verallgemeinernd with meanings: [РѕР±РѕР±С‰РµРЅРЅРѕ (all in all)] 
+parsed word: der Anreiz with meanings: [СЃС‚РёРјСѓР»] 
+parsed word: die Hemmschwelle with meanings: [РїСЃРёС…РѕР»РѕРіРёС‡РµСЃРєРёР№ Р±Р°СЂСЊРµСЂ] 
+parsed word: der Vorreiter with meanings: [Р·Р°С‡РёРЅР°С‚РµР»СЊ] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 13 
+parsed word: п»їder Bildhauer with meanings: [СЃРєСѓР»СЊРїС‚РѕСЂ] 
+parsed word: mitstimmen with meanings: [СѓС‡Р°СЃС‚РІРѕРІР°С‚СЊ РІ РіРѕР»РѕСЃРѕРІР°РЅРёРё] 
+parsed word: das Werk with meanings: [РґРµР»Рѕ, С‚СЂСѓРґ, СЂР°Р±РѕС‚Р°] 
+parsed word: der Nobelpreis with meanings: [РЅРѕР±РµР»РµРІСЃРєР°СЏ РїСЂРµРјРёСЏ] 
+parsed word: polarisieren in A und A with meanings: [РїСЂРѕСЃС‚РёРІРѕРїРѕСЃС‚Р°РІР»СЏС‚СЊ] 
+parsed word: auГџerordentlich with meanings: [С‡СЂРµР·РІС‹С‡Р°Р№РЅС‹Р№] 
+parsed word: verfassen with meanings: [СЃРѕСЃС‚Р°РІР»СЏС‚СЊ, СЃРѕС‡РёРЅСЏС‚СЊ] 
+parsed word: die Lebensgeschichte with meanings: [Р±РёРѕРіСЂР°С„РёСЏ, РёСЃС‚РѕСЂРёСЏ Р¶РёР·РЅРё] 
+parsed word: kleinwГјchsig with meanings: [РЅРёР·РєРѕРіРѕ СЂРѕСЃС‚Р°, РјР°Р»РѕСЂРѕСЃР»С‹Р№] 
+parsed word: п»їder Goldschmied with meanings: [СЋРІРµР»РёСЂ] 
+parsed word: die Espen with meanings: [РѕСЃРёРЅР°] 
+parsed word: der Kreisverkehr with meanings: [РїРµСЂРµРєСЂС‘СЃС‚РЅРѕРµ РґРІРёР¶РµРЅРёРµ] 
+parsed word: die Kreuzung with meanings: [РїРµСЂРµРєСЂС‘СЃС‚РѕРє] 
+parsed word: es ist mir ausgegangen with meanings: [Р·Р°РєР°РЅС‡РёРІР°С‚СЊСЃСЏ] 
+parsed word: unermГјdlich with meanings: [РЅРµСѓСЃС‚Р°РЅРЅРѕ] 
+parsed word: fahrig with meanings: [СЂР°СЃС‚РѕСЂРѕРїРЅС‹Р№, СЃСѓРµС‚Р»РёРІС‹Р№] 
+parsed word: die Pachtung with meanings: [РґРѕРіРѕРІРѕСЂ Р°СЂРµРЅРґС‹] 
+parsed word: die Garbe with meanings: [СЃРЅРѕРї] 
+parsed word: der Tumpel with meanings: [РїСЂСѓРґ, Р»СѓР¶Р°, СЃС‚РѕСЏС‡Р°СЏ РІРѕРґР°] 
+parsed word: der Faden with meanings: [СЃР°Р¶РµРЅРµС†, РЅРёС‚РєР°] 
+parsed word: der Verfall with meanings: [РіРёР±РµР»СЊ] 
+parsed word: allmГ¤hlich with meanings: [РїРѕСЃС‚РµРїРµРЅРЅРѕ] 
+parsed word: verdaunen with meanings: [РїРµСЂРµРІР°СЂРёРІР°С‚СЊ] 
+parsed word: die Sprosse with meanings: [СЃС‚СѓРїРµРЅСЊРєР°] 
+parsed word: ГјbergieГџen with meanings: [Р·Р°Р»РёРІР°С‚СЊ Р·Р°РІР°СЂРєСѓ, РІС‹Р»РёРІР°С‚СЊ, РїСЂРѕР»РёРІР°С‚СЊ] 
+parsed word: die Raureif with meanings: [РёР·РјРѕСЂРѕР·СЊ] 
+parsed word: die Sorgfalt with meanings: [С‚С‰Р°С‚РµР»СЊРЅРѕСЃС‚СЊ, С‚РѕС‡РЅРѕСЃС‚СЊ, СЃС‚Р°СЂР°РЅРёРµ] 
+parsed word: die Last with meanings: [РЅРѕС€Р°, РіСЂСѓР·] 
+parsed word: die Zwischenzeit with meanings: [РїСЂРѕРјРµР¶СѓС‚РѕРє РІСЂРµРјРµРЅРё] 
+parsed word: aufbrechen with meanings: [РІР·Р»Р°РјС‹РІР°С‚СЊ (РґРІРµСЂСЊ)] 
+parsed word: die Bedingung with meanings: [СѓСЃР»РѕРІРёРµ] 
+parsed word: die Pampelmuse with meanings: [РіСЂРµР№РїС„СЂСѓС‚] 
+parsed word: groГџspurig with meanings: [РЅР°РґРјРµРЅРЅС‹Р№, РєРёС‡Р»РёРІС‹Р№] 
+parsed word: der Ahorn with meanings: [РєР»С‘РЅ] 
+parsed word: die Schmuggelware with meanings: [РєРѕРЅС‚СЂР°Р±Р°РЅРґР°] 
+parsed word: toben with meanings: [Р±СѓС€РµРІР°С‚СЊ, СЃРІРёСЂРµРїСЃС‚РІРѕРІР°С‚СЊ, РїСЃРёС…РѕРІР°С‚СЊ] 
+parsed word: fluchen with meanings: [Р±СЂР°РЅРёС‚СЊСЃСЏ, СЃРєРІРµСЂРЅРѕСЃР»РѕРІРёС‚СЊ] 
+parsed word: unverzuglich with meanings: [РЅРµРјРµРґР»РµРЅРЅРѕ, Р±РµР·РѕС‚Р»Р°РіР°С‚РµР»СЊРЅРѕ] 
+parsed word: vernachlГ¤ssigen with meanings: [РїСЂРµРЅРµР±СЂРµРіР°С‚СЊ, СѓРјР°Р»СЏС‚СЊ] 
+parsed word: den HГ¶rer abnehmen with meanings: [РїРѕРґРЅРёРјР°С‚СЊ С‚СЂСѓР±РєСѓ] 
+parsed word: п»їder Vormund with meanings: [РѕРїРµРєСѓРЅ] 
+word and meanings array [bertreuen -СѓС…Р°Р¶РёРІР°С‚СЊ ] has not length 2 in SATZBILDUNG.txt line: 1 
+parsed word: von jdm etwas erben with meanings: [РЅР°СЃР»РµРґРѕРІР°С‚СЊ РѕС‚ РєРѕРіРѕ-С‚Рѕ С‡С‚Рѕ-С‚Рѕ] 
+word and meanings array [der Junggestelle -С…РѕР»РѕСЃС‚СЏРє ] has not length 2 in SATZBILDUNG.txt line: 3 
+parsed word: der Lebensgefahrte with meanings: [СЃРїСѓС‚РЅРёРє Р¶РёР·РЅРё] 
+parsed word: unehelich with meanings: [РІРЅРµР±СЂР°С‡РЅС‹Р№] 
+parsed word: das Trauschein with meanings: [СЃРІРёРґРµС‚РµР»СЊСЃС‚РІРѕ Рѕ Р±СЂР°РєРµ] 
+parsed word: die Abtreibung with meanings: [Р°Р±РѕСЂС‚] 
+parsed word: leibliche Eltern with meanings: [РєСЂРѕРІРЅС‹Рµ СЂРѕРґРёС‚РµР»Рё] 
+word and meanings array [schmucken -СѓРєСЂР°С€Р°С‚СЊ ] has not length 2 in SATZBILDUNG.txt line: 9 
+parsed word: beisetzen with meanings: [РїРѕРіСЂРµР±Р°С‚СЊ] 
+parsed word: taufen with meanings: [РєСЂРµСЃС‚РёС‚СЊ] 
+parsed word: verwohnen durch with meanings: [Р±Р°Р»РѕРІР°С‚СЊ С‡РµРј-С‚Рѕ] 
+parsed word: beinringen D Akk with meanings: [РїСЂРёРІРёРІР°С‚СЊ РєРѕРјСѓ-С‚Рѕ С‡С‚Рѕ-С‚Рѕ] 
+parsed word: gedenken G with meanings: [С‡С‚РёС‚СЊ РїР°РјСЏС‚СЊ] 
+parsed word: beweinen with meanings: [РѕРїР»Р°РєРёРІР°С‚СЊ] 
+parsed word: schmieden with meanings: [РєРѕРІР°С‚СЊ] 
+parsed word: auskommen mit with meanings: [Р»Р°РґРёС‚СЊ СЃ РєРµРј-С‚Рѕ] 
+parsed word: versorgen with meanings: [СЃРѕРґРµСЂР¶Р°С‚СЊ (С…РѕР·СЏР№СЃС‚РІРѕ)] 
+parsed word: jdn stillen with meanings: [СѓСЃРїРѕРєР°РёРІР°С‚СЊ] 
+parsed word: krabbeln with meanings: [РїРѕР»Р·С‚Рё] 
+parsed word: п»їgewaltig with meanings: [СЃРёР»СЊРЅС‹Р№, РјРѕРіСѓС‰РµСЃС‚РІРµРЅРЅС‹Р№] 
+parsed word: vorlГ¤ufig with meanings: [РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Р№, РІСЂРµРјРµРЅРЅС‹Р№] 
+parsed word: der Trumen with meanings: [СЂР°Р·РІР°Р»РёРЅС‹, СЂСѓРёРЅС‹] 
+parsed word: aufkommen with meanings: [РІС‹Р·РґРѕСЂР°РІР»РёРІР°С‚СЊ, РІРѕР·РЅРёРєР°С‚СЊ, РїРѕСЏРІР»СЏС‚СЊСЃСЏ] 
+parsed word: reinpassen with meanings: [РїРѕРјРµС‰Р°С‚СЊСЏ, РІР»Р°Р·РёС‚СЊ, РїРѕРґС…РѕРґРёС‚СЊ РїРѕ СЂР°Р·РјРµСЂСѓ] 
+parsed word: endgultig with meanings: [РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅС‹Р№] 
+parsed word: schrittweis with meanings: [РїРѕСЃС‚РµРїРµРЅРЅС‹Р№] 
+java.lang.IllegalArgumentException: given word contains only white spaces 
+parsed word: erschutettern with meanings: [СЃРѕС‚СЂСЏСЃР°С‚СЊ] 
+parsed word: festhalten an with meanings: [РїСЂРёРґРµСЂР¶РёРІР°С‚СЊСЃСЏ] 
+parsed word: aufgeben with meanings: [Р·Р°РґР°РІР°С‚СЊ, РїРѕСЂСѓС‡Р°С‚СЊ] 
+parsed word: verstandigen with meanings: [СЃС‚Р°РІРёС‚СЊ РІ РёР·РІРµСЃС‚РЅРѕСЃС‚СЊ] 
+parsed word: der Zuschuss with meanings: [РїСЂРёР±Р°РІРєР°, СЃСѓР±СЃРёРґРёСЏ, РїРѕСЃРѕР±РёРµ] 
+parsed word: aufwendig with meanings: [СЂР°СЃС‚РѕС‡РёС‚РµР»СЊРЅС‹Р№] 
+parsed word: Bescheid wissen in with meanings: [С…РѕСЂРѕС€Рѕ РІ С‡РµРј-С‚Рѕ СЂР°Р·Р±РёСЂР°С‚СЊСЃСЏ] 
+parsed word: п»їaus biologischer Sich with meanings: [СЃ Р±РёРѕР»РѕРіРёС‡РµСЃРєРѕР№ С‚РѕС‡РєРё Р·СЂРµРЅРёСЏ] 
+word and meanings array [tendered С‚С‹ С‚РµРЅРґРµРЅС†РёСЋ Рє ] has not length 2 in TEXT GLÜCK.txt line: 1 
+parsed word: leichtsinnig with meanings: [Р±РµР·СЂР°СЃСЃСѓРґРЅС‹Р№] 
+parsed word: ubersehen with meanings: [РЅРµ Р·Р°РјРµС‡Р°С‚СЊ, РїСЂРѕРїСѓСЃРєР°С‚СЊ, СѓРїСѓСЃРєР°С‚СЊ] 
+parsed word: die Abwehrhaltung with meanings: [Р·Р°С‰РёС‚РЅР°СЏ РїРѕР·РёС†РёСЏ] 
+parsed word: vor allem und jedem with meanings: [РїРµСЂРµРґ РІСЃРµРј Рё РєР°Р¶РґС‹Рј] 
+parsed word: der Vortrag halten vor with meanings: [РІРЅРµСЃР»Рё РґРѕРєР»Р°Рґ РїРµСЂРµРґ] 
+parsed word: heirfur with meanings: [РЅР° СЌС‚Рѕ, РґР»СЏ СЌС‚РѕРіРѕ] 
+parsed word: das Lockmittel with meanings: [РїСЂРёРјР°РЅРєР°] 
+parsed word: das Ausleben with meanings: [РёР·Р¶РёРІР°РЅРёРµ (Р°С„С„РµРєС‚Р°)] 
+parsed word: der Saugling with meanings: [РіСЂСѓРґРЅРѕР№ СЂРµР±РµРЅРѕРє] 
+parsed word: die Nahrungsaufnahme with meanings: [РїСЂРёРЅСЏС‚РёРµ РїРёС‰Рё] 
+parsed word: vorasugehen with meanings: [РїСЂРµРґС€РµСЃС‚РІРѕРІР°С‚СЊ, РїСЂРµРґРІР°СЂСЏС‚СЊ] 
+parsed word: sich koppeln an with meanings: [РѕС‚РІСЏР·С‹РІР°С‚СЊСЃСЏ Рє (РґСЂСѓРіРѕРјСѓ СЃРѕР±С‹С‚РёСЋ)] 
+parsed word: zufГ¤llig with meanings: [СЃР»СѓС‡Р°Р№РЅС‹Р№] 
+parsed word: unausweichlich with meanings: [РЅРµРёР·Р±РµР¶РЅРѕ] 
+parsed word: ausweichen with meanings: [РёР·Р±РµРіР°С‚СЊ, СѓРєР»РѕРЅСЏС‚СЊСЃСЏ] 
+parsed word: durchaus with meanings: [СЃРѕРІСЃРµРј, СЃРѕРІРµСЂС€РµРЅРЅРѕ, Р°Р±СЃРѕР»СЋС‚РЅРѕ, РЅРµРїСЂРµРјРµРЅРЅРѕ] 
+parsed word: krass with meanings: [СЂРµР·РєРёР№, РЅРµРїСЂРёСЏС‚РЅС‹Р№, СЂР°Р·СЏС‰РёР№] 
+parsed word: krass with meanings: [СЂРµР·РєРѕ] 
+parsed word: fluchtig with meanings: [РјРёРјРѕР»РµС‚РЅС‹Р№] 
+parsed word: loswerden with meanings: [РёР·Р±Р°РІР»СЏС‚СЊСЃСЏ, РѕСЃРІРѕР±РѕР¶РґР°С‚СЊСЃСЏ] 
+parsed word: antreiben with meanings: [РїРѕРіРѕРЅСЏС‚СЊ, РїРѕРѕС‰СЂСЏС‚СЊ] 
+parsed word: Chances haben zu with meanings: [РёРјРµС‚СЊ С€Р°РЅСЃС‹ РЅР°] 
+parsed word: hingegen with meanings: [РЅР°РїСЂРѕС‚РёРІ (РЅР°С‚РѕРјС–СЃС‚СЊ)] 
+parsed word: namenlos with meanings: [РЅРµРёР·РІРµСЃС‚РЅС‹Р№] 
+parsed word: schicksalhaft with meanings: [С„Р°С‚Р°Р»СЊРЅС‹Р№, СЃСѓРґСЊР±РѕРЅРѕСЃРЅС‹Р№] 
+parsed word: mildern with meanings: [СЃРјСЏРіС‡Р°С‚СЊ, РѕР±Р»РµРіС‡Р°С‚СЊ] 
+word and meanings array [﻿von] has not length 2 in Adjective mit Präpositionen.txt line: 0 
+parsed word: abhängig sein von with meanings: [зависеть от чего-то] 
+parsed word: begeistert sein von with meanings: [быть взволнованным чем-то] 
+parsed word: überzeugt sein von with meanings: [быть убежденным в чем-то] 
+parsed word: enttäuscht sein von with meanings: [быть разочарованным в чем-то] 
+parsed word: entfernt sein von with meanings: [быть отдаленным от чего-то] 
+word and meanings array [auf A] has not length 2 in Adjective mit Präpositionen.txt line: 6 
+parsed word: ärgerlich sein auf A with meanings: [злиться из-за чего-то] 
+parsed word: böse sein auf A with meanings: [злиться из-за чего-то] 
+parsed word: angewiesen sein auf A with meanings: [быть уверенным в чем-то] 
+parsed word: eifersüchtig sein auf A with meanings: [завидовать чему-то] 
+parsed word: stolz sein auf A with meanings: [быть гордым чем-то] 
+word and meanings array [an D] has not length 2 in Adjective mit Präpositionen.txt line: 12 
+parsed word: interessiert sein an D with meanings: [быть заинтересованным в чем-то] 
+parsed word: erkrankt sein an D with meanings: [быть больным чем-то] 
+parsed word: reich sein an D with meanings: [быть богатым чем-то] 
+parsed word: schuld sein an D with meanings: [быть виноватым в чем-то] 
+parsed word: beteiligt sein an D with meanings: [быть задействованным в чем-то] 
+word and meanings array [zu] has not length 2 in Adjective mit Präpositionen.txt line: 18 
+parsed word: freundlich sein zu with meanings: [быть дружественным к кому-то] 
+parsed word: (un)fähig sein zu with meanings: [быть способным, быть неспособным на что-то] 
+parsed word: Bereit sein zu with meanings: [быть готовым на что-то] 
+parsed word: nett sein zu with meanings: [быть любезным с кем-то] 
+parsed word: entschlossen sein zu with meanings: [решиться на что-то] 
+word and meanings array [bei] has not length 2 in Adjective mit Präpositionen.txt line: 24 
+parsed word: angesehen sein bei with meanings: [быть в почете среди кого-то] 
+parsed word: (un)beliebt sein bei with meanings: [быть не любимым среди] 
+word and meanings array [gegenüber] has not length 2 in Adjective mit Präpositionen.txt line: 27 
+parsed word: zurückhaltend sein gegenüber with meanings: [быть сдержанным перед кем-то] 
+parsed word: aufgeschlossen sein gegenüber with meanings: [быть открытым перед кем-то] 
+word and meanings array [gegen A] has not length 2 in Adjective mit Präpositionen.txt line: 30 
+parsed word: (un)empfindlich sein gegen A with meanings: [быть нечувствительным к чему-то] 
+parsed word: immun sein gegen A with meanings: [быть неуязвимым к чему-то] 
+word and meanings array [an A] has not length 2 in Adjective mit Präpositionen.txt line: 33 
+parsed word: adressiert sein an A with meanings: [быть адресованным кому-то] 
+parsed word: gewöhnt sein an A with meanings: [привыкнуть к чему-то] 
+word and meanings array [für] has not length 2 in Adjective mit Präpositionen.txt line: 36 
+parsed word: (un)geeignet sein für with meanings: [быть пригодным, быть непригодным к чему-то] 
+parsed word: verantwortlich sein für with meanings: [быть ответственным за что-то] 
+parsed word: (un)wichtig sein für with meanings: [быть важным, быть неважным для] 
+parsed word: (un)schädlich sein für with meanings: [быть вредным, быть безвредным для] 
+parsed word: nützlich sein  für with meanings: [быть полезным для] 
+word and meanings array [mit] has not length 2 in Adjective mit Präpositionen.txt line: 42 
+parsed word: befreundet sein mit with meanings: [быть дружественным кому-то] 
+parsed word: verwandt sein mit with meanings: [быть родственным для кого-то] 
+parsed word: zufrieden sein mit with meanings: [быть довольным чем-то] 
+parsed word: beschäftigt sein mit with meanings: [быть занятым чем-то] 
+parsed word: fertig sein mit with meanings: [быть готовым с чем-то] 
+word and meanings array [nach] has not length 2 in Adjective mit Präpositionen.txt line: 48 
+parsed word: verrückt sein nach with meanings: [сходить с ума из-за] 
+word and meanings array [in A] has not length 2 in Adjective mit Präpositionen.txt line: 50 
+parsed word: unterteilt sein in A with meanings: [быть разделенным на] 
+parsed word: verliebt sein in A with meanings: [быть влюбленным в кого-то] 
+word and meanings array [über] has not length 2 in Adjective mit Präpositionen.txt line: 53 
+parsed word: glücklich sein über with meanings: [быть радостным из-за] 
+parsed word: erfreut sein über with meanings: [быть обрадованным чем-то] 
+parsed word: erstaunt sein über with meanings: [быть изумленным чем-то] 
+parsed word: traurig sein über with meanings: [быть грустным из-за] 
+parsed word: verwundert sein über with meanings: [быть удивленным чем-то] 
+parsed word: wütend sein über with meanings: [быть в ярости из-за] 
+word and meanings array [in D] has not length 2 in Adjective mit Präpositionen.txt line: 60 
+parsed word: (un)erfahren sein in D with meanings: [быть опытным, быть неопытным в чем-то] 
+parsed word: gut sein in D with meanings: [быть хорошим в чем-то, быть хорошим для чего-то] 
+parsed word: nachlässig sein in D with meanings: [быть неосторожным в] 
+word and meanings array [] has not length 2 in Adjective mit Präpositionen.txt line: 64 
+parsed word: ﻿unverbindlich with meanings: [ни к чему не обязывающий, слишком общий] 
+parsed word: seicht with meanings: [мелководный, ограниченный (умственно)] 
+parsed word: heiser with meanings: [хриплый, охрипший] 
+parsed word: verschwommen with meanings: [туманный, расплывчатый] 
+parsed word: artig with meanings: [вежливый, воспитанный] 
+parsed word: gepflegt with meanings: [ухоженный] 
+parsed word: kultiviert with meanings: [образцовый, умственно развитый] 
+parsed word: planmäßig with meanings: [планомерный, штатный] 
+parsed word: zahn with meanings: [ручной] 
+parsed word: schwerfällig with meanings: [неповоротливый, неуклюжий] 
+parsed word: solide with meanings: [солидный, надежный] 
+parsed word: dumpf with meanings: [глухой, затхлый] 
+parsed word: faul with meanings: [ленивый, гнилой, тухлый, затхлый] 
+parsed word: matt with meanings: [слабый, вялый] 
+parsed word: ranzig with meanings: [прогорклый, затхлый] 
+parsed word: schal with meanings: [безвкусный, пресный] 
+parsed word: schwül with meanings: [душный, знойный] 
+parsed word: unverfroren with meanings: [наглый, дерзкий] 
+parsed word: unwirsch with meanings: [грубый, неприветливый] 
+parsed word: unschlüssig with meanings: [неприветливый] 
+parsed word: unnahbar with meanings: [высокомерный, неприступный] 
+parsed word: ungestüm with meanings: [вспыльчивый, стремительный] 
+parsed word: unverhofft with meanings: [неожиданный] 
+parsed word: unbeschwert with meanings: [беззаботный, неотягощенный] 
+parsed word: berechtigt with meanings: [резонный] 
+parsed word: besonnen with meanings: [рассудительный] 
+parsed word: gedrückt with meanings: [угнетенный, подавленный] 
+word and meanings array [] has not length 2 in Adjective.txt line: 27 
+word and meanings array [] has not length 2 in Adjective.txt line: 28 
+parsed word: ﻿belegen with meanings: [доказывать (научным путём)] 
+parsed word: von Natur aus with meanings: [от природы] 
+parsed word: anhang with meanings: [с помощью, по средством, пользуясь, зная] 
+parsed word: ein Medikament gegen Kopfschmerzen with meanings: [средство от головной боли] 
+parsed word: behandeln with meanings: [лечить] 
+parsed word: Diagnosse stellen with meanings: [ставить диагноз] 
+parsed word: zunachst with meanings: [сначала, прежде всего] 
+parsed word: allmahlich with meanings: [постепенно] 
+parsed word: die Werkstatt with meanings: [мастерская, цех, СТО] 
+parsed word: mutma?lich with meanings: [предположительный, вероятный] 
+parsed word: umfangreich with meanings: [объемный] 
+parsed word: vorsichtshalber with meanings: [на всякий случай, в целях предосторожности] 
+word and meanings array [widerlegen] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 12 
+word and meanings array [zwischenmenschlich] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 13 
+parsed word: den Humor erwerben with meanings: [приобретать чувство юмора] 
+parsed word: vom diesem Standpunkt with meanings: [с этой точки зрения] 
+parsed word: erfassen with meanings: [понимать] 
+parsed word: der Pechvogel with meanings: [неудачник] 
+parsed word: schlittern in with meanings: [скользить] 
+parsed word: in den Griff bekommen with meanings: [принимать во внимание] 
+parsed word: der Stillstand with meanings: [затишье, застой] 
+parsed word: verherrlichen with meanings: [прославлять] 
+parsed word: ergiebig with meanings: [плодородный, обильный] 
+parsed word: sich eignen als with meanings: [считать себя] 
+parsed word: jemandem vergehen with meanings: [пропадать] 
+parsed word: der Streich with meanings: [выходка] 
+parsed word: hereinlegen with meanings: [прикалывать, разводит] 
+parsed word: glaubhaft with meanings: [правдоподобный] 
+parsed word: umschlagen in Akk with meanings: [превращаться в] 
+parsed word: der Leistungssport with meanings: [большой спорт] 
+word and meanings array [] has not length 2 in C1 Kursbuch Kapitel 2.txt line: 30 
+parsed word: ﻿das Gutachten with meanings: [заключение, экспертиза, рецензия] 
+parsed word: ernste Krankheit with meanings: [сильная болезнь] 
+parsed word: hartnackig with meanings: [упорный, настойчивый (о слухах)] 
+parsed word: fruhzeitig with meanings: [преждевременно] 
+parsed word: vervollstandigen with meanings: [дополнять до целого] 
+parsed word: zusammenlegen with meanings: [соединять] 
+parsed word: ﻿gleichsetzen D with meanings: [приравнивать, отождествлять] 
+parsed word: aufgehen with meanings: [восходить (о солнце)] 
+parsed word: heiter with meanings: [веселый, радостный] 
+parsed word: angeboren with meanings: [врожденный] 
+parsed word: landen auf with meanings: [оказываться, приземляться, высаживаться] 
+parsed word: erfassen with meanings: [понимать, хватать] 
+parsed word: erstellen with meanings: [создавать, составлять (на основе некоторых данных)] 
+parsed word: auftauchen with meanings: [выныривать, оказываться, возникать] 
+parsed word: das Erkenntis with meanings: [осознание, научный вывод] 
+parsed word: der Gesundheitsstatus with meanings: [состояние здоровья] 
+parsed word: ﻿aufgrund G with meanings: [на основании] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 1 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 2 
+parsed word: der Wandel with meanings: [перемена, изменение] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 4 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 5 
+parsed word: verallgemeinern with meanings: [обобщенно] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 7 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 8 
+parsed word: fusionieren with meanings: [слиться] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 10 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 11 
+parsed word: die Verausgabung with meanings: [расходование, трата] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 13 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 14 
+parsed word: umgekehrt with meanings: [перевернутый, вывернутый, взаимный] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 16 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 17 
+parsed word: zumindest with meanings: [по крайней мере] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 19 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 20 
+parsed word: bewirken with meanings: [вызывать, способствовать] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 22 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 23 
+parsed word: umschlagen in with meanings: [обертывать, обматывать, резко меняться] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 25 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 26 
+parsed word: zum Teil with meanings: [частично] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 28 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 29 
+parsed word: sich stürzem in with meanings: [упасть в] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 31 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 32 
+parsed word: die Reflexion uber with meanings: [самоанализ в] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 34 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 35 
+parsed word: das Tun with meanings: [образ действий, поведение] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 37 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 38 
+parsed word: zahlen zu with meanings: [причислять к] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 40 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 41 
+parsed word: die Wertschätzung with meanings: [уважение, оценка] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 43 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 44 
+parsed word: ausbleibend with meanings: [отсутствующий] 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 46 
+word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 47 
+parsed word: ideel with meanings: [идефній] 
+parsed word: ﻿die Ressentiments with meanings: [обида, враждебность] 
+parsed word: allgemeingultig with meanings: [общепринятій] 
+parsed word: flussiges English with meanings: [беглый английский] 
+parsed word: ergeben with meanings: [двавать в результате] 
+parsed word: schlichtes Wissen with meanings: [простое знание] 
+parsed word: aussagekräftig with meanings: [содержательный] 
+parsed word: ruppig with meanings: [грубый, хамский] 
+parsed word: geldgierig with meanings: [алчный, корыстный, жадный] 
+parsed word: der Tugend with meanings: [добродетель] 
+parsed word: der Anwärter with meanings: [претендент, кандидат] 
+parsed word: vorrangig with meanings: [преимущественный, первоочередный] 
+word and meanings array [] has not length 2 in C1 KURSBUCH SEITE 75.txt line: 11 
+parsed word: ﻿die Ehre with meanings: [честь] 
+parsed word: das Rätsel with meanings: [загадка] 
+parsed word: der Butler with meanings: [дворецкий, швейцар, заведующий винным поглебом] 
+parsed word: die Sänfte with meanings: [носилки] 
+parsed word: die Buche with meanings: [бук] 
+parsed word: pr?chtig with meanings: [великолеспны, роскошный, пыщный] 
+parsed word: sich erheben with meanings: [подниматься, вставать] 
+parsed word: die Dirne with meanings: [служанка] 
+parsed word: der Heide with meanings: [язычник] 
+parsed word: scheußlich with meanings: [отвратительный, ужасгый] 
+parsed word: die Angelegenheit with meanings: [дело, вопрос, обстоятельство] 
+parsed word: sich wenden an + A with meanings: [обращаться к кому-то] 
+parsed word: unnachsichtlich with meanings: [беспощажный] 
+parsed word: die Verleumdung with meanings: [клевета] 
+parsed word: das Gespenst with meanings: [привиление, призрак] 
+parsed word: die Glocke with meanings: [колокольчик, гонг] 
+parsed word: nach einer Sitte with meanings: [согласно обычаю] 
+parsed word: einstimmig with meanings: [идиносгасный, единогласно] 
+parsed word: zögern with meanings: [медлить колебаться] 
+parsed word: ﻿der Schadel with meanings: [череп] 
+parsed word: zittern with meanings: [дрожать] 
+parsed word: der Fallschirm with meanings: [парашют] 
+parsed word: flattern with meanings: [порхать (на ветру)] 
+parsed word: der Trost with meanings: [утешение] 
+parsed word: die Stube with meanings: [спальное помещение] 
+parsed word: die Handvoll with meanings: [горсть] 
+parsed word: einschleppen with meanings: [занести болезнь] 
+parsed word: sich aufrichten with meanings: [подниматься] 
+parsed word: auffüttern with meanings: [скармливать] 
+parsed word: schmal with meanings: [узкий, тонкий, худой] 
+parsed word: bestimmen über with meanings: [голосовать за] 
+parsed word: ﻿umfangreich with meanings: [обширный, большой] 
+parsed word: unermundlich with meanings: [неутомимый, неустанный] 
+parsed word: knochenhart with meanings: [твёрдый как камень] 
+parsed word: die Recherche with meanings: [поиски] 
+parsed word: hiebfest with meanings: [неуязвимый] 
+parsed word: stitchfest with meanings: [неуязвимый] 
+parsed word: zerlegen with meanings: [разчленять] 
+parsed word: die Sichtung with meanings: [обнаружение] 
+parsed word: anfallen with meanings: [возникать] 
+parsed word: der Spa?vogel with meanings: [шутник] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 51.txt line: 10 
+parsed word: ﻿das Dabeisein with meanings: [присутствие] 
+parsed word: die Bereicherung with meanings: [обогащение] 
+parsed word: die Gunst with meanings: [благосклонность] 
+parsed word: das Wagenrennen with meanings: [автогонки] 
+parsed word: sich ranken um with meanings: [виться вокруг] 
+parsed word: greifen zu with meanings: [прибегать к] 
+parsed word: der Fliegenpilz with meanings: [мухомор] 
+parsed word: die Inkas with meanings: [инки] 
+parsed word: schutten In with meanings: [вливать в] 
+parsed word: verallgemeinernd with meanings: [обобщенно (all in all)] 
+parsed word: der Anreiz with meanings: [стимул] 
+parsed word: die Hemmschwelle with meanings: [психологический барьер] 
+parsed word: der Vorreiter with meanings: [зачинатель] 
+word and meanings array [] has not length 2 in KURSBUCH SEITE 70.txt line: 13 
+parsed word: ﻿der Bildhauer with meanings: [скульптор] 
+parsed word: mitstimmen with meanings: [участвовать в голосовании] 
+parsed word: das Werk with meanings: [дело, труд, работа] 
+parsed word: der Nobelpreis with meanings: [нобелевская премия] 
+parsed word: polarisieren in A und A with meanings: [простивопоставлять] 
+parsed word: außerordentlich with meanings: [чрезвычайный] 
+parsed word: verfassen with meanings: [составлять, сочинять] 
+parsed word: die Lebensgeschichte with meanings: [биография, история жизни] 
+parsed word: kleinwüchsig with meanings: [низкого роста, малорослый] 
+parsed word: ﻿der Goldschmied with meanings: [ювелир] 
+parsed word: die Espen with meanings: [осина] 
+parsed word: der Kreisverkehr with meanings: [перекрёстное движение] 
+parsed word: die Kreuzung with meanings: [перекрёсток] 
+parsed word: es ist mir ausgegangen with meanings: [заканчиваться] 
+parsed word: unermüdlich with meanings: [неустанно] 
+parsed word: fahrig with meanings: [расторопный, суетливый] 
+parsed word: die Pachtung with meanings: [договор аренды] 
+parsed word: die Garbe with meanings: [сноп] 
+parsed word: der Tumpel with meanings: [пруд, лужа, стоячая вода] 
+parsed word: der Faden with meanings: [саженец, нитка] 
+parsed word: der Verfall with meanings: [гибель] 
+parsed word: allmählich with meanings: [постепенно] 
+parsed word: verdaunen with meanings: [переваривать] 
+parsed word: die Sprosse with meanings: [ступенька] 
+parsed word: übergießen with meanings: [заливать заварку, выливать, проливать] 
+parsed word: die Raureif with meanings: [изморозь] 
+parsed word: die Sorgfalt with meanings: [тщательность, точность, старание] 
+parsed word: die Last with meanings: [ноша, груз] 
+parsed word: die Zwischenzeit with meanings: [промежуток времени] 
+parsed word: aufbrechen with meanings: [взламывать (дверь)] 
+parsed word: die Bedingung with meanings: [условие] 
+parsed word: die Pampelmuse with meanings: [грейпфрут] 
+parsed word: großspurig with meanings: [надменный, кичливый] 
+parsed word: der Ahorn with meanings: [клён] 
+parsed word: die Schmuggelware with meanings: [контрабанда] 
+parsed word: toben with meanings: [бушевать, свирепствовать, психовать] 
+parsed word: fluchen with meanings: [браниться, сквернословить] 
+parsed word: unverzuglich with meanings: [немедленно, безотлагательно] 
+parsed word: vernachlässigen with meanings: [пренебрегать, умалять] 
+parsed word: den Hörer abnehmen with meanings: [поднимать трубку] 
+parsed word: ﻿der Vormund with meanings: [опекун] 
+word and meanings array [bertreuen -ухаживать ] has not length 2 in SATZBILDUNG.txt line: 1 
+parsed word: von jdm etwas erben with meanings: [наследовать от кого-то что-то] 
+word and meanings array [der Junggestelle -холостяк ] has not length 2 in SATZBILDUNG.txt line: 3 
+parsed word: der Lebensgefahrte with meanings: [спутник жизни] 
+parsed word: unehelich with meanings: [внебрачный] 
+parsed word: das Trauschein with meanings: [свидетельство о браке] 
+parsed word: die Abtreibung with meanings: [аборт] 
+parsed word: leibliche Eltern with meanings: [кровные родители] 
+word and meanings array [schmucken -украшать ] has not length 2 in SATZBILDUNG.txt line: 9 
+parsed word: beisetzen with meanings: [погребать] 
+parsed word: taufen with meanings: [крестить] 
+parsed word: verwohnen durch with meanings: [баловать чем-то] 
+parsed word: beinringen D Akk with meanings: [прививать кому-то что-то] 
+parsed word: gedenken G with meanings: [чтить память] 
+parsed word: beweinen with meanings: [оплакивать] 
+parsed word: schmieden with meanings: [ковать] 
+parsed word: auskommen mit with meanings: [ладить с кем-то] 
+parsed word: versorgen with meanings: [содержать (хозяйство)] 
+parsed word: jdn stillen with meanings: [успокаивать] 
+parsed word: krabbeln with meanings: [ползти] 
+parsed word: ﻿gewaltig with meanings: [сильный, могущественный] 
+parsed word: vorläufig with meanings: [предварительный, временный] 
+parsed word: der Trumen with meanings: [развалины, руины] 
+parsed word: aufkommen with meanings: [выздоравливать, возникать, появляться] 
+parsed word: reinpassen with meanings: [помещатья, влазить, подходить по размеру] 
+parsed word: endgultig with meanings: [окончательный] 
+parsed word: schrittweis with meanings: [постепенный] 
+java.lang.IllegalArgumentException: given word contains only white spaces 
+parsed word: erschutettern with meanings: [сотрясать] 
+parsed word: festhalten an with meanings: [придерживаться] 
+parsed word: aufgeben with meanings: [задавать, поручать] 
+parsed word: verstandigen with meanings: [ставить в известность] 
+parsed word: der Zuschuss with meanings: [прибавка, субсидия, пособие] 
+parsed word: aufwendig with meanings: [расточительный] 
+parsed word: Bescheid wissen in with meanings: [хорошо в чем-то разбираться] 
+parsed word: ﻿aus biologischer Sich with meanings: [с биологической точки зрения] 
+word and meanings array [tendered ты тенденцию к ] has not length 2 in TEXT GLÜCK.txt line: 1 
+parsed word: leichtsinnig with meanings: [безрассудный] 
+parsed word: ubersehen with meanings: [не замечать, пропускать, упускать] 
+parsed word: die Abwehrhaltung with meanings: [защитная позиция] 
+parsed word: vor allem und jedem with meanings: [перед всем и каждым] 
+parsed word: der Vortrag halten vor with meanings: [внесли доклад перед] 
+parsed word: heirfur with meanings: [на это, для этого] 
+parsed word: das Lockmittel with meanings: [приманка] 
+parsed word: das Ausleben with meanings: [изживание (аффекта)] 
+parsed word: der Saugling with meanings: [грудной ребенок] 
+parsed word: die Nahrungsaufnahme with meanings: [принятие пищи] 
+parsed word: vorasugehen with meanings: [предшествовать, предварять] 
+parsed word: sich koppeln an with meanings: [отвязываться к (другому событию)] 
+parsed word: zufällig with meanings: [случайный] 
+parsed word: unausweichlich with meanings: [неизбежно] 
+parsed word: ausweichen with meanings: [избегать, уклоняться] 
+parsed word: durchaus with meanings: [совсем, совершенно, абсолютно, непременно] 
+parsed word: krass with meanings: [резкий, неприятный, разящий] 
+parsed word: krass with meanings: [резко] 
+parsed word: fluchtig with meanings: [мимолетный] 
+parsed word: loswerden with meanings: [избавляться, освобождаться] 
+parsed word: antreiben with meanings: [погонять, поощрять] 
+parsed word: Chances haben zu with meanings: [иметь шансы на] 
+parsed word: hingegen with meanings: [напротив (натомість)] 
+parsed word: namenlos with meanings: [неизвестный] 
+parsed word: schicksalhaft with meanings: [фатальный, судьбоносный] 
+parsed word: mildern with meanings: [смягчать, облегчать] 

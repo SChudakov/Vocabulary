@@ -11,9 +11,8 @@ public class Main {
     private static final String ADJECTIVE_MIT_PRÄPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.docx";
 
     public static void main(String[] args) {
-        LogsRemover.removeLogs();
+        System.out.println(Charset.defaultCharset());
     }
-
 
 
     private static void readUsingAllCharsets() {

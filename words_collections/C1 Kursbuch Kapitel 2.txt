@@ -1,60 +1,31 @@
-belegen - доказывать (научным путём)
-
-von Natur aus - от природы
-
-anhang - с помощью / по средством / пользуясь / зная
-
-ein Medikament gegen Kopfschmerzen - средство от головной боли 
-
-behandeln - лечить 
-
-Diagnosse stellen - ставить диагноз 
-
-zunachst - сначала, прежде всего 
-
-allmahlich - постепенно 
-
-die Werkstatt - мастерская, цех, СТО
-
-mutma?lich - предположительный, вероятный
-
-umfangreich - объемный 
-
-vorsichtshalber - на всякий случай, в целях предосторожности 
-
+п»їbelegen - РґРѕРєР°Р·С‹РІР°С‚СЊ (РЅР°СѓС‡РЅС‹Рј РїСѓС‚С‘Рј)
+von Natur aus - РѕС‚ РїСЂРёСЂРѕРґС‹
+anhang - СЃ РїРѕРјРѕС‰СЊСЋ / РїРѕ СЃСЂРµРґСЃС‚РІРѕРј / РїРѕР»СЊР·СѓСЏСЃСЊ / Р·РЅР°СЏ
+ein Medikament gegen Kopfschmerzen - СЃСЂРµРґСЃС‚РІРѕ РѕС‚ РіРѕР»РѕРІРЅРѕР№ Р±РѕР»Рё 
+behandeln - Р»РµС‡РёС‚СЊ 
+Diagnosse stellen - СЃС‚Р°РІРёС‚СЊ РґРёР°РіРЅРѕР· 
+zunachst - СЃРЅР°С‡Р°Р»Р°, РїСЂРµР¶РґРµ РІСЃРµРіРѕ 
+allmahlich - РїРѕСЃС‚РµРїРµРЅРЅРѕ 
+die Werkstatt - РјР°СЃС‚РµСЂСЃРєР°СЏ, С†РµС…, РЎРўРћ
+mutma?lich - РїСЂРµРґРїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Р№, РІРµСЂРѕСЏС‚РЅС‹Р№
+umfangreich - РѕР±СЉРµРјРЅС‹Р№ 
+vorsichtshalber - РЅР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№, РІ С†РµР»СЏС… РїСЂРµРґРѕСЃС‚РѕСЂРѕР¶РЅРѕСЃС‚Рё 
 widerlegen - 
-
 zwischenmenschlich - 
-
-den Humor erwerben - приобретать чувство юмора 
-
-vom diesem Standpunkt - с этой точки зрения 
-
-erfassen - понимать 
-
-der Pechvogel - неудачник 
-
-schlittern in - скользить 
-
-in den Griff bekommen - принимать во внимание 
-
-der Stillstand - затишье, застой 
-
-verherrlichen - прославлять 
-
-ergiebig - плодородный, обильный 
-
-sich eignen als - считать себя 
-
-jemandem vergehen - пропадать 
-
-der Streich - выходка 
-
-hereinlegen - прикалывать, разводит 
-
-glaubhaft - правдоподобный 
-
-umschlagen in Akk - превращаться в 
-
-der Leistungssport - большой спорт 
+den Humor erwerben - РїСЂРёРѕР±СЂРµС‚Р°С‚СЊ С‡СѓРІСЃС‚РІРѕ СЋРјРѕСЂР° 
+vom diesem Standpunkt - СЃ СЌС‚РѕР№ С‚РѕС‡РєРё Р·СЂРµРЅРёСЏ 
+erfassen - РїРѕРЅРёРјР°С‚СЊ 
+der Pechvogel - РЅРµСѓРґР°С‡РЅРёРє 
+schlittern in - СЃРєРѕР»СЊР·РёС‚СЊ 
+in den Griff bekommen - РїСЂРёРЅРёРјР°С‚СЊ РІРѕ РІРЅРёРјР°РЅРёРµ 
+der Stillstand - Р·Р°С‚РёС€СЊРµ, Р·Р°СЃС‚РѕР№ 
+verherrlichen - РїСЂРѕСЃР»Р°РІР»СЏС‚СЊ 
+ergiebig - РїР»РѕРґРѕСЂРѕРґРЅС‹Р№, РѕР±РёР»СЊРЅС‹Р№ 
+sich eignen als - СЃС‡РёС‚Р°С‚СЊ СЃРµР±СЏ 
+jemandem vergehen - РїСЂРѕРїР°РґР°С‚СЊ 
+der Streich - РІС‹С…РѕРґРєР° 
+hereinlegen - РїСЂРёРєР°Р»С‹РІР°С‚СЊ, СЂР°Р·РІРѕРґРёС‚ 
+glaubhaft - РїСЂР°РІРґРѕРїРѕРґРѕР±РЅС‹Р№ 
+umschlagen in Akk - РїСЂРµРІСЂР°С‰Р°С‚СЊСЃСЏ РІ 
+der Leistungssport - Р±РѕР»СЊС€РѕР№ СЃРїРѕСЂС‚ 
 
