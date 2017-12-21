@@ -10,8 +10,8 @@ die Werkstatt - мастерская, цех, СТО
 mutma?lich - предположительный, вероятный
 umfangreich - объемный 
 vorsichtshalber - на всякий случай, в целях предосторожности 
-widerlegen - 
-zwischenmenschlich - 
+widerlegen - опровергать
+zwischenmenschlich - межличностный
 den Humor erwerben - приобретать чувство юмора 
 vom diesem Standpunkt - с этой точки зрения 
 erfassen - понимать 

@@ -6,28 +6,14 @@
       <change beforePath="$PROJECT_DIR$/../Life" afterPath="$PROJECT_DIR$/../Life" />
       <change beforePath="$PROJECT_DIR$/../Tasks" afterPath="$PROJECT_DIR$/../Tasks" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/Main.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/parsing/FileParser.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/parsing/FileParser.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/words/WordsCollectionsReader.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/words/WordsCollectionsReader.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/log4j2.xml" afterPath="$PROJECT_DIR$/out/production/Vocabulary/log4j2.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/log4j2.xml" afterPath="$PROJECT_DIR$/src/log4j2.xml" />
-      <change beforePath="$PROJECT_DIR$/words_collections/Adjective.txt" afterPath="$PROJECT_DIR$/words_collections/Adjective.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/C1 KURSBUCH SEITE 75.txt" afterPath="$PROJECT_DIR$/words_collections/C1 KURSBUCH SEITE 75.txt" />
+      <change beforePath="$PROJECT_DIR$/logs/parsing-all.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/logs/parsing-errors.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/logs/parsing-trace.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/WordsCollectionsReaderTest.class" afterPath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/WordsCollectionsReaderTest.class" />
+      <change beforePath="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" />
+      <change beforePath="$PROJECT_DIR$/words_collections/Adjective.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 2.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 2.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 3 .txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 3 .txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 39.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 39.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 48.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 48.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/DER BESUCH DER ALTE DAME.txt" afterPath="$PROJECT_DIR$/words_collections/DER BESUCH DER ALTE DAME.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/Der Funke des Lebens.txt" afterPath="$PROJECT_DIR$/words_collections/Der Funke des Lebens.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/KURSBUCH SEITE 51.txt" afterPath="$PROJECT_DIR$/words_collections/KURSBUCH SEITE 51.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/KURSBUCH SEITE 70.txt" afterPath="$PROJECT_DIR$/words_collections/KURSBUCH SEITE 70.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/LÜCKEN.txt" afterPath="$PROJECT_DIR$/words_collections/LÜCKEN.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/ROHLINGE.txt" afterPath="$PROJECT_DIR$/words_collections/ROHLINGE.txt" />
       <change beforePath="$PROJECT_DIR$/words_collections/SATZBILDUNG.txt" afterPath="$PROJECT_DIR$/words_collections/SATZBILDUNG.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/TAGESSCHAU.txt" afterPath="$PROJECT_DIR$/words_collections/TAGESSCHAU.txt" />
       <change beforePath="$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt" afterPath="$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,15 +47,6 @@
             <state relative-caret-position="357">
               <caret line="33" column="51" lean-forward="false" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="67" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parsing-errors.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/parsing-errors.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             </state>
           </provider>
         </entry>
@@ -167,11 +144,14 @@
         <option value="$PROJECT_DIR$/words_collections/Der Funke des Lebens.txt" />
         <option value="$PROJECT_DIR$/words_collections/LÜCKEN.txt" />
         <option value="$PROJECT_DIR$/words_collections/TAGESSCHAU.txt" />
-        <option value="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java" />
         <option value="$PROJECT_DIR$/src/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" />
+        <option value="$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt" />
+        <option value="$PROJECT_DIR$/words_collections/SATZBILDUNG.txt" />
+        <option value="$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 2.txt" />
       </list>
     </option>
   </component>
@@ -473,7 +453,7 @@
       <workItem from="1513513330436" duration="3903000" />
       <workItem from="1513799110122" duration="1396000" />
       <workItem from="1513805274457" duration="90000" />
-      <workItem from="1513884527412" duration="3754000" />
+      <workItem from="1513884527412" duration="4549000" />
     </task>
     <task id="LOCAL-00001" summary="[15.12.17] - ended work on FileParser with no possibility to read text from docx files">
       <created>1513349221093</created>
@@ -486,15 +466,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WordsCollectionsReaderTest_readWordsCollectionsTest - 2017.12.21 at 21h 56m 02s.xml">
-      <configuration name="WordsCollectionsReaderTest.readWordsCollectionsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WordsCollectionsReaderTest_readWordsCollectionsTest - 2017.12.21 at 21h 57m 26s.xml">
-      <configuration name="WordsCollectionsReaderTest.readWordsCollectionsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WordsCollectionsReaderTest_readWordsCollectionsTest - 2017.12.21 at 22h 04m 56s.xml">
-      <configuration name="WordsCollectionsReaderTest.readWordsCollectionsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="WordsCollectionsReaderTest_readWordsCollectionsTest - 2017.12.21 at 22h 07m 41s.xml">
       <configuration name="WordsCollectionsReaderTest.readWordsCollectionsTest" configurationId="JUnit" />
     </history-entry>
@@ -516,12 +487,22 @@
     <history-entry file="WordsCollectionsReaderTest_readWordsCollectionsTest - 2017.12.21 at 22h 32m 12s.xml">
       <configuration name="WordsCollectionsReaderTest.readWordsCollectionsTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WordsCollectionsReaderTest_readWordsCollectionsTest - 2017.12.21 at 22h 38m 18s.xml">
+      <configuration name="WordsCollectionsReaderTest.readWordsCollectionsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WordsCollectionsReaderTest_readWordsCollectionsTest - 2017.12.21 at 22h 42m 58s.xml">
+      <configuration name="WordsCollectionsReaderTest.readWordsCollectionsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WordsCollectionsReaderTest_readWordsCollectionsTest - 2017.12.21 at 22h 45m 35s.xml">
+      <configuration name="WordsCollectionsReaderTest.readWordsCollectionsTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9143000" />
+    <option name="totallyTimeSpent" value="9938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -532,12 +513,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21028744" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -549,7 +531,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,24 +740,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/words_collections/TAGESSCHAU.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/SATZBILDUNG.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -799,14 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -878,13 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/parsing-errors.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -905,6 +857,37 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/words_collections/SATZBILDUNG.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/parsing-errors.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
