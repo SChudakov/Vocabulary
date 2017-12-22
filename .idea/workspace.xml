@@ -2,25 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="890b3d7b-d139-4703-bfc2-71adc06a978d" name="Default" comment="[17.12.17] - ended work on FileParser with no possibility to read text from docx files">
-      <change beforePath="" afterPath="$PROJECT_DIR$/words_collections/Modalverben.txt" />
       <change beforePath="$PROJECT_DIR$/../FirstLab" afterPath="$PROJECT_DIR$/../FirstLab" />
       <change beforePath="$PROJECT_DIR$/../Life" afterPath="$PROJECT_DIR$/../Life" />
       <change beforePath="$PROJECT_DIR$/../Tasks" afterPath="$PROJECT_DIR$/../Tasks" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/logs/parsing-all.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/logs/parsing-all.log" afterPath="$PROJECT_DIR$/logs/parsing-all.log" />
-      <change beforePath="$PROJECT_DIR$/logs/parsing-errors.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/logs/parsing-errors.log" afterPath="$PROJECT_DIR$/logs/parsing-errors.log" />
-      <change beforePath="$PROJECT_DIR$/logs/parsing-trace.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/logs/parsing-trace.log" afterPath="$PROJECT_DIR$/logs/parsing-trace.log" />
-      <change beforePath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/WordsCollectionsReaderTest.class" afterPath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/WordsCollectionsReaderTest.class" />
-      <change beforePath="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" />
-      <change beforePath="$PROJECT_DIR$/words_collections/Adjective aus Kopien.txt" afterPath="$PROJECT_DIR$/words_collections/Adjective aus Kopien.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/Adjective.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 2.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Kapitel 2.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 48.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 48.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/SATZBILDUNG.txt" afterPath="$PROJECT_DIR$/words_collections/SATZBILDUNG.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt" afterPath="$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/C1 KURSBUCH SEITE 75.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 75.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/DER BESUCH DER ALTE DAME.txt" afterPath="$PROJECT_DIR$/words_collections/der Besuch der alte Dame.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/KURSBUCH SEITE 51.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 51.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/KURSBUCH SEITE 70.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 70.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/LÜCKEN.txt" afterPath="$PROJECT_DIR$/words_collections/Lücken.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/Modalverben.txt" afterPath="$PROJECT_DIR$/words_collections/Modalverben.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/ROHLINGE.txt" afterPath="$PROJECT_DIR$/words_collections/Rohlinge.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/SATZBILDUNG.txt" afterPath="$PROJECT_DIR$/words_collections/Satzbildung.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/TAGESSCHAU.txt" afterPath="$PROJECT_DIR$/words_collections/Tagesshau.txt" />
+      <change beforePath="$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt" afterPath="$PROJECT_DIR$/words_collections/Text Glück.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,21 +86,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Modalverben.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Modalverben.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/words_collections/Modalverben.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Adjective mit Präpositionen.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Adjective mit Präpositionen.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/words_collections/Adjective mit Präpositionen.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="3" />
+            <state relative-caret-position="204">
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -219,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -291,7 +287,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
@@ -492,7 +487,8 @@
       <workItem from="1513799110122" duration="1396000" />
       <workItem from="1513805274457" duration="90000" />
       <workItem from="1513884527412" duration="7289000" />
-      <workItem from="1513943948226" duration="2004000" />
+      <workItem from="1513943948226" duration="2170000" />
+      <workItem from="1513972613824" duration="2214000" />
     </task>
     <task id="LOCAL-00001" summary="[15.12.17] - ended work on FileParser with no possibility to read text from docx files">
       <created>1513349221093</created>
@@ -537,11 +533,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14682000" />
+    <option name="totallyTimeSpent" value="17062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -555,7 +550,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21331316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21633889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -709,14 +704,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/C1 KURSBUCH SEITE 75.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 75.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/DER BESUCH DER ALTE DAME.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/der Besuch der alte Dame.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
@@ -730,35 +725,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/KURSBUCH SEITE 51.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 51.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/KURSBUCH SEITE 70.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 70.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/LÜCKEN.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/Lücken.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/TAGESSCHAU.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/Tagesshau.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/ROHLINGE.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/Rohlinge.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -840,14 +835,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/Text Glück.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/SATZBILDUNG.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/Satzbildung.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
@@ -900,18 +895,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/Modalverben.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/Adjective mit Präpositionen.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/Adjective mit Präpositionen.txt">
+    <entry file="file://$PROJECT_DIR$/words_collections/Modalverben.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="3" />
+        <state relative-caret-position="306">
+          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
           <folding />
         </state>
       </provider>
