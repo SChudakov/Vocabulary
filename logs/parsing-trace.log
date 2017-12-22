@@ -1,5 +1,10 @@
 parsed word: ﻿unverbindlich with meanings: [ни к чему не обязывающий, слишком общий] 
 parsed word: seicht with meanings: [мелководный, ограниченный (умственно)] 
+parsed word: dünn with meanings: [тонкий, худой, редний (волосы)] 
+parsed word: unleserlich with meanings: [неразборчивый] 
+parsed word: dicht with meanings: [плотный, непроницаемый] 
+parsed word: welk with meanings: [вялый, блеклый] 
+parsed word: dürr with meanings: [сухой, высохший] 
 parsed word: heiser with meanings: [хриплый, охрипший] 
 parsed word: verschwommen with meanings: [туманный, расплывчатый] 
 parsed word: artig with meanings: [вежливый, воспитанный] 
@@ -18,15 +23,37 @@ parsed word: schwül with meanings: [душный, знойный]
 parsed word: unverfroren with meanings: [наглый, дерзкий] 
 parsed word: unwirsch with meanings: [грубый, неприветливый] 
 parsed word: unschlüssig with meanings: [неприветливый] 
+parsed word: schlüssig with meanings: [обоснованный, убедительный] 
 parsed word: unnahbar with meanings: [высокомерный, неприступный] 
 parsed word: ungestüm with meanings: [вспыльчивый, стремительный] 
 parsed word: unverhofft with meanings: [неожиданный] 
 parsed word: unbeschwert with meanings: [беззаботный, неотягощенный] 
 parsed word: berechtigt with meanings: [резонный] 
+parsed word: unbeholfen with meanings: [нерасторопный, неловкий, неуклюжиый] 
 parsed word: besonnen with meanings: [рассудительный] 
 parsed word: gedrückt with meanings: [угнетенный, подавленный] 
-word and meanings array [] has not length 2 in Adjective aus Kopien.txt line: 27 
-word and meanings array [] has not length 2 in Adjective aus Kopien.txt line: 28 
+word and meanings array [] has not length 2 in Adjective aus Kopien.txt line: 34 
+parsed word: vollkommen with meanings: [полный, совершенный, абсолютный] 
+parsed word: ungekürzt with meanings: [неукороченный, неубавленный] 
+parsed word: voll with meanings: [полный, заполненный, исполненный] 
+parsed word: vollständig with meanings: [полный (о данныйх), совершенный (о покое), абсолютно, совершенно] 
+parsed word: ausnahmslos with meanings: [не знающий исключений] 
+parsed word: vollzählig with meanings: [полный, в полном составе] 
+parsed word: umfassend with meanings: [обшщирный, всеобъемлющий, широко, всеобъемлюще] 
+parsed word: lückenlos with meanings: [полный, без пробелов, нерперывный, сплошной] 
+parsed word: vollauf with meanings: [вдоболь, достаточно, вполне] 
+parsed word: unversehrt with meanings: [невредимый, целый] 
+parsed word: völlig with meanings: [полный, совершенный] 
+parsed word: gesamt with meanings: [весь, целый, общий, совокупный] 
+parsed word: sämtlich with meanings: [все (без исключения)] 
+parsed word: rundweg with meanings: [сразу, прямо] 
+parsed word: vollendet with meanings: [совершенный, законченный, завершенный] 
+parsed word: einheitlich with meanings: [единый, стадартный] 
+parsed word: uneingeschränkt with meanings: [неограниченный] 
+parsed word: total with meanings: [всеобщиий, полный] 
+word and meanings array [] has not length 2 in Adjective aus Kopien.txt line: 53 
+word and meanings array [] has not length 2 in Adjective aus Kopien.txt line: 54 
+word and meanings array [] has not length 2 in Adjective aus Kopien.txt line: 55 
 word and meanings array [﻿von] has not length 2 in Adjective mit Präpositionen.txt line: 0 
 parsed word: abhängig sein von with meanings: [зависеть от чего-то] 
 parsed word: begeistert sein von with meanings: [быть взволнованным чем-то] 
@@ -140,53 +167,21 @@ parsed word: auftauchen with meanings: [выныривать, оказывать
 parsed word: das Erkenntis with meanings: [осознание, научный вывод] 
 parsed word: der Gesundheitsstatus with meanings: [состояние здоровья] 
 parsed word: ﻿aufgrund G with meanings: [на основании] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 1 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 2 
 parsed word: der Wandel with meanings: [перемена, изменение] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 4 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 5 
 parsed word: verallgemeinern with meanings: [обобщенно] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 7 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 8 
 parsed word: fusionieren with meanings: [слиться] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 10 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 11 
 parsed word: die Verausgabung with meanings: [расходование, трата] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 13 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 14 
 parsed word: umgekehrt with meanings: [перевернутый, вывернутый, взаимный] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 16 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 17 
 parsed word: zumindest with meanings: [по крайней мере] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 19 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 20 
 parsed word: bewirken with meanings: [вызывать, способствовать] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 22 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 23 
 parsed word: umschlagen in with meanings: [обертывать, обматывать, резко меняться] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 25 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 26 
 parsed word: zum Teil with meanings: [частично] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 28 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 29 
 parsed word: sich stürzem in with meanings: [упасть в] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 31 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 32 
 parsed word: die Reflexion uber with meanings: [самоанализ в] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 34 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 35 
 parsed word: das Tun with meanings: [образ действий, поведение] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 37 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 38 
 parsed word: zahlen zu with meanings: [причислять к] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 40 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 41 
 parsed word: die Wertschätzung with meanings: [уважение, оценка] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 43 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 44 
 parsed word: ausbleibend with meanings: [отсутствующий] 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 46 
-word and meanings array [] has not length 2 in C1 Kursbuch Seite 48.txt line: 47 
 parsed word: ideel with meanings: [идефній] 
 parsed word: ﻿die Ressentiments with meanings: [обида, враждебность] 
 parsed word: allgemeingultig with meanings: [общепринятій] 
