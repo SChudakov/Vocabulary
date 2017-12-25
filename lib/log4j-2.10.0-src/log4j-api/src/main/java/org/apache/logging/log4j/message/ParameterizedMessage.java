@@ -283,7 +283,7 @@ public class ParameterizedMessage implements Message, StringBuilderFormattable {
     /**
      * This method performs a deep toString of the given Object.
      * Primitive arrays are converted using their respective Arrays.toString methods while
-     * special handling is implemented for "container types", i.e. Object[], Map and Collection because those could
+     * special handling is implemented for "container types", i.e. Object[], Map and WordCollection because those could
      * contain themselves.
      * <p>
      * It should be noted that neither AbstractMap.toString() nor AbstractCollection.toString() implement such a

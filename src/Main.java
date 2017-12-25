@@ -1,17 +1,24 @@
-import com.sschudakov.logging.LogsRemover;
+import com.j256.ormlite.table.TableUtils;
+import com.sschudakov.daos.relationships.WordMeaningRelationship;
+import com.sschudakov.database.DatabaseManager;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.sql.SQLException;
 
 public class Main {
 
     private static final String ADJECTIVE_MIT_PRÄPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.docx";
 
     public static void main(String[] args) {
-        System.out.println(Charset.defaultCharset());
+        try {
+            TableUtils.dropTable(DatabaseManager.getConnectionSource(), WordMeaningRelationship.class, false);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 

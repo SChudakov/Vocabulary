@@ -16,6 +16,6 @@
  */
 
 /**
- * Collection of OSGi-specific classes for bundles.
+ * WordCollection of OSGi-specific classes for bundles.
  */
 package org.apache.logging.log4j.core.osgi;

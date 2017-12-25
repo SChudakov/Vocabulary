@@ -373,7 +373,7 @@ final class ParameterFormatter {
     /**
      * This method performs a deep toString of the given Object.
      * Primitive arrays are converted using their respective Arrays.toString methods while
-     * special handling is implemented for "container types", i.e. Object[], Map and Collection because those could
+     * special handling is implemented for "container types", i.e. Object[], Map and WordCollection because those could
      * contain themselves.
      * <p>
      * It should be noted that neither AbstractMap.toString() nor AbstractCollection.toString() implement such a
@@ -428,7 +428,7 @@ final class ParameterFormatter {
     /**
      * This method performs a deep toString of the given Object.
      * Primitive arrays are converted using their respective Arrays.toString methods while
-     * special handling is implemented for "container types", i.e. Object[], Map and Collection because those could
+     * special handling is implemented for "container types", i.e. Object[], Map and WordCollection because those could
      * contain themselves.
      * <p>
      * dejaVu is used in case of those container types to prevent an endless recursion.
@@ -484,7 +484,7 @@ final class ParameterFormatter {
     }
 
     /**
-     * Returns {@code true} if the specified object is an array, a Map or a Collection.
+     * Returns {@code true} if the specified object is an array, a Map or a WordCollection.
      */
     private static boolean isMaybeRecursive(final Object o) {
         return o.getClass().isArray() || o instanceof Map || o instanceof Collection;
@@ -578,7 +578,7 @@ final class ParameterFormatter {
     }
 
     private static void appendCollection(final Object o, final StringBuilder str, Set<String> dejaVu) {
-        // special handling of container Collection
+        // special handling of container WordCollection
         if (dejaVu == null) {
             dejaVu = new HashSet<>();
         }

@@ -1,6 +1,6 @@
 package com.sschudakov.words;
 
-import com.sschudakov.bins.Word;
+import com.sschudakov.daos.bins.Word;
 import com.sschudakov.parsing.FileParser;
 import com.sschudakov.utils.FileExtensionDeterminer;
 

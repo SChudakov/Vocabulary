@@ -42,7 +42,7 @@ import org.apache.logging.log4j.status.StatusLogger;
 import org.apache.logging.log4j.util.LoaderUtil;
 
 /**
- * Collection of basic TypeConverter implementations. May be used to register additional TypeConverters or find
+ * WordCollection of basic TypeConverter implementations. May be used to register additional TypeConverters or find
  * registered TypeConverters.
  *
  * @since 2.1 Moved to the {@code convert} package.

@@ -263,7 +263,7 @@ public final class LoaderUtil {
      * Finds classpath {@linkplain URL resources}.
      *
      * @param resource the name of the resource to find.
-     * @return a Collection of URLs matching the resource name. If no resources could be found, then this will be empty.
+     * @return a WordCollection of URLs matching the resource name. If no resources could be found, then this will be empty.
      * @since 2.1
      */
     public static Collection<URL> findResources(final String resource) {

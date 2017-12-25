@@ -1223,7 +1223,7 @@ public class CommandLine {
          * Generally, fields with types that cannot hold multiple values can omit the {@code arity} attribute.
          * </p><p>
          * Fields used to capture options with arity two or higher should have a type that can hold multiple values,
-         * like arrays or Collections. See {@link #type()} for strongly-typed Collection fields.
+         * like arrays or Collections. See {@link #type()} for strongly-typed WordCollection fields.
          * </p><p>
          * For example, if an option has 2 required parameters and any number of optional parameters,
          * specify {@code @Option(names = "-example", arity = "2..*")}.
@@ -1285,7 +1285,7 @@ public class CommandLine {
          * {@linkplain #registerConverter(Class, ITypeConverter) registered} for the specified type to convert
          * the raw String values before modifying the field value.
          * </p><p>
-         * Prior to 2.0, the {@code type} attribute was necessary for {@code Collection} and {@code Map} fields,
+         * Prior to 2.0, the {@code type} attribute was necessary for {@code WordCollection} and {@code Map} fields,
          * but starting from 2.0 picocli will infer the component type from the generic type's type arguments.
          * For example, for a field of type {@code Map<TimeUnit, Long>} picocli will know the option parameter
          * should be split up in key=value pairs, where the key should be converted to a {@code java.util.concurrent.TimeUnit}
@@ -1302,7 +1302,7 @@ public class CommandLine {
 
         /**
          * Specify a regular expression to use to split option parameter values before applying them to the field.
-         * All elements resulting from the split are added to the array or Collection. Ignored for single-value fields.
+         * All elements resulting from the split are added to the array or WordCollection. Ignored for single-value fields.
          * @return a regular expression to split option parameter values or {@code ""} if the value should not be split
          * @see String#split(String)
          */
@@ -1343,7 +1343,7 @@ public class CommandLine {
     @Target(ElementType.FIELD)
     public @interface Parameters {
         /** Specify an index ("0", or "1", etc.) to pick which of the command line arguments should be assigned to this
-         * field. For array or Collection fields, you can also specify an index range ("0..3", or "2..*", etc.) to assign
+         * field. For array or WordCollection fields, you can also specify an index range ("0..3", or "2..*", etc.) to assign
          * a subset of the command line arguments to this field. The default is "*", meaning all command line arguments.
          * @return an index or range specifying which of the command line arguments should be assigned to this field
          */
@@ -1394,7 +1394,7 @@ public class CommandLine {
          * {@linkplain #registerConverter(Class, ITypeConverter) registered} for the specified type to convert
          * the raw String values before modifying the field value.
          * </p><p>
-         * Prior to 2.0, the {@code type} attribute was necessary for {@code Collection} and {@code Map} fields,
+         * Prior to 2.0, the {@code type} attribute was necessary for {@code WordCollection} and {@code Map} fields,
          * but starting from 2.0 picocli will infer the component type from the generic type's type arguments.
          * For example, for a field of type {@code Map<TimeUnit, Long>} picocli will know the positional parameter
          * should be split up in key=value pairs, where the key should be converted to a {@code java.util.concurrent.TimeUnit}
@@ -1411,7 +1411,7 @@ public class CommandLine {
 
         /**
          * Specify a regular expression to use to split positional parameter values before applying them to the field.
-         * All elements resulting from the split are added to the array or Collection. Ignored for single-value fields.
+         * All elements resulting from the split are added to the array or WordCollection. Ignored for single-value fields.
          * @return a regular expression to split operand values or {@code ""} if the value should not be split
          * @see String#split(String)
          */
@@ -2549,7 +2549,7 @@ public class CommandLine {
                 }
                 return new ArrayList<Object>();
             }
-            // custom Collection implementation class must have default constructor
+            // custom WordCollection implementation class must have default constructor
             return (Collection<Object>) collectionClass.newInstance();
         }
         private Map<Object, Object> createMap(Class<?> mapClass) throws Exception {

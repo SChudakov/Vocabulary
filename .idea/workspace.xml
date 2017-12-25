@@ -2,20 +2,122 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="890b3d7b-d139-4703-bfc2-71adc06a978d" name="Default" comment="[17.12.17] - ended work on FileParser with no possibility to read text from docx files">
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Client/logs/clients_logs/127.0.0.1_50168.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Client/logs/clients_logs/127.0.0.1_50175.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_11/Main.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_14/Main.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_14/client/Client.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/src/com/sschudakov/lesson_14/Main.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/src/com/sschudakov/lesson_14/client/Client.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Server/logs/server_logs/50168.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Server/logs/server_logs/50175.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/bins/Collection.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/bins/Language.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/bins/Word.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/bins/WordClass.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/relationships/WordCollectionRelationship.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/relationships/WordMeaningRelationship.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/database/DatabaseManager.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/bins/Language.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/bins/WordClass.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/bins/WordCollection.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordCollectionRelationship.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordMeaningRelationship.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/database/DatabaseManager.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/words_collections/NDR Doku" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/com/sschudakov/client/Client.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/com/sschudakov/client/Client.class" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/com/sschudakov/client/Client.java" afterPath="$PROJECT_DIR$/../Client/src/com/sschudakov/client/Client.java" />
       <change beforePath="$PROJECT_DIR$/../FirstLab" afterPath="$PROJECT_DIR$/../FirstLab" />
+      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../JavaCourse_part2/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_10/reflection/DataBaseAccessor.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_10/reflection/DataBaseAccessor.class" />
+      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_3/file_system/Find$1.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_3/file_system/Find$1.class" />
+      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_3/file_system/Find.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_3/file_system/Find.class" />
+      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_6/databases/DataBaseQueryExecutor.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_6/databases/DataBaseQueryExecutor.class" />
+      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_9/TariffsDocumentParser.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_9/TariffsDocumentParser.class" />
+      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_9/xml_files/tariffs.xsd" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_9/xml_files/tariffs.xsd" />
       <change beforePath="$PROJECT_DIR$/../Life" afterPath="$PROJECT_DIR$/../Life" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../Tasks" afterPath="$PROJECT_DIR$/../Tasks" />
+      <change beforePath="$PROJECT_DIR$/../Underground/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Underground/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-1.2-api/src/test/java/org/apache/log4j/LevelTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-1.2-api/src/test/java/org/apache/log4j/LevelTest.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-appserver/src/main/java/org/apache/logging/log4j/appserver/tomcat/TomcatLogger.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-appserver/src/main/java/org/apache/logging/log4j/appserver/tomcat/TomcatLogger.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineArityTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineArityTest.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-distribution/pom.xml" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-distribution/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/pom.xml" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" afterPath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineArityTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineArityTest.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/Main.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/Main.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Driver.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Line.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Passenger.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Station.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Train.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Wagon.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/database/DaosPersister.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/database/DaosPersister.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/database/DatabaseManager.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/database/DatabaseManager.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/DriversFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/DriversFactory.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/LinesFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/LinesFactory.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/PassengersFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/PassengersFactory.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/StationsFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/StationsFactory.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/TrainsFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/TrainsFactory.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/WagonsFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/WagonsFactory.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/lists/StationsListFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/lists/StationsListFactory.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/lists/TrainsListFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/lists/TrainsListFactory.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/logic/DriversSeated.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/logic/DriversSeated.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/logic/TrainLineMover.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/logic/TrainLineMover.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/test/Underground/com/sschudakov/database/DaosPersisterTest.class" afterPath="$PROJECT_DIR$/../Underground/out/test/Underground/com/sschudakov/database/DaosPersisterTest.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/out/test/Underground/com/sschudakov/database/DaosTableContentReaderTest.class" afterPath="$PROJECT_DIR$/../Underground/out/test/Underground/com/sschudakov/database/DaosTableContentReaderTest.class" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/Main.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bin/Depot.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bin/WagonType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bounded_buffer/Escalator.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bounded_buffer/Escalator.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bounded_buffer/PassengersBuffer.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bounded_buffer/PassengersBuffer.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Driver.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Line.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Passenger.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Station.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Train.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Wagon.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/database/DaosPersister.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/database/DaosPersister.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/database/DatabaseManager.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/database/DatabaseManager.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/DriversFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/DriversFactory.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/LinesFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/LinesFactory.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/PassengersFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/PassengersFactory.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/StationsFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/StationsFactory.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/TrainsFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/TrainsFactory.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/WagonsFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/WagonsFactory.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/lists/StationsListFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/lists/StationsListFactory.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/lists/TrainsListFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/lists/TrainsListFactory.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/DriversSeated.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/DriversSeated.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/TrainLineMover.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/TrainLineMover.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/utils/Utils.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/utils/Utils.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/test/com/sschudakov/database/DaosPersisterTest.java" afterPath="$PROJECT_DIR$/../Underground/test/com/sschudakov/database/DaosPersisterTest.java" />
+      <change beforePath="$PROJECT_DIR$/../Underground/test/com/sschudakov/database/DaosTableContentReaderTest.java" afterPath="$PROJECT_DIR$/../Underground/test/com/sschudakov/database/DaosTableContentReaderTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/words_collections/C1 KURSBUCH SEITE 75.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 75.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/DER BESUCH DER ALTE DAME.txt" afterPath="$PROJECT_DIR$/words_collections/der Besuch der alte Dame.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/KURSBUCH SEITE 51.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 51.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/KURSBUCH SEITE 70.txt" afterPath="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 70.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/LÜCKEN.txt" afterPath="$PROJECT_DIR$/words_collections/Lücken.txt" />
+      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterFormatter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterFormatter.java" />
+      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterizedMessage.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterizedMessage.java" />
+      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/LoaderUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/LoaderUtil.java" />
+      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java" />
+      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/osgi/package-info.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/osgi/package-info.java" />
+      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/Main.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/bins/Word.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/parsing/FileParser.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/parsing/FileParser.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/words/WordsCollectionsReader.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/words/WordsCollectionsReader.class" />
+      <change beforePath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/FileParserTest.class" afterPath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/FileParserTest.class" />
+      <change beforePath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/WordsCollectionsReaderTest.class" afterPath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/WordsCollectionsReaderTest.class" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/sschudakov/bins/Word.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/bins/Word.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java" />
+      <change beforePath="$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java" />
+      <change beforePath="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" />
+      <change beforePath="$PROJECT_DIR$/words_collections/Lücken.txt" afterPath="$PROJECT_DIR$/words_collections/Lücken.txt" />
       <change beforePath="$PROJECT_DIR$/words_collections/Modalverben.txt" afterPath="$PROJECT_DIR$/words_collections/Modalverben.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/ROHLINGE.txt" afterPath="$PROJECT_DIR$/words_collections/Rohlinge.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/SATZBILDUNG.txt" afterPath="$PROJECT_DIR$/words_collections/Satzbildung.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/TAGESSCHAU.txt" afterPath="$PROJECT_DIR$/words_collections/Tagesshau.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt" afterPath="$PROJECT_DIR$/words_collections/Text Glück.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,90 +129,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="136">
+              <caret line="17" column="108" lean-forward="false" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
               <folding>
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
                 <element signature="method#readUsingAllCharsets#0;class#Main#0" expanded="false" />
                 <element signature="method#readFile#0;class#Main#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="33" column="51" lean-forward="false" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileParserTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordsCollectionsReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordsCollectionsReaderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Modalverben.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/words_collections/Modalverben.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Adjective mit Präpositionen.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/words_collections/Adjective mit Präpositionen.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parsing-errors.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/parsing-errors.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             </state>
           </provider>
         </entry>
@@ -162,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/logging/LoggersManager.java" />
         <option value="$PROJECT_DIR$/src/logging/LogsRemover.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/logging/LogsRemover.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/bins/Word.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/WordsCollectionsManager.java" />
@@ -176,7 +202,6 @@
         <option value="$PROJECT_DIR$/words_collections/TAGESSCHAU.txt" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java" />
         <option value="$PROJECT_DIR$/src/log4j2.xml" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" />
         <option value="$PROJECT_DIR$/words_collections/TEXT GLÜCK.txt" />
@@ -185,6 +210,22 @@
         <option value="$PROJECT_DIR$/words_collections/Adjective aus Kopien.txt" />
         <option value="$PROJECT_DIR$/words_collections/C1 Kursbuch Seite 48.txt" />
         <option value="$PROJECT_DIR$/words_collections/Modalverben.txt" />
+        <option value="$PROJECT_DIR$/words_collections/Lücken.txt" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/bins/Collection.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/bins/WordClass.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/bins/Language.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/bins/Word.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/bins/WordWord.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/daos/WordWord.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/daos/bins/WordClass.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordWord.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordWordRelationship.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordCollectionRelationship.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordMeaningRelationship.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/database/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/daos/bins/Word.java" />
+        <option value="$PROJECT_DIR$/words_collections/NDR Doku" />
       </list>
     </option>
   </component>
@@ -214,7 +255,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,6 +287,14 @@
               <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="daos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="daos" type="462c0819:PsiDirectoryNode" />
               <item name="bins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -250,7 +302,15 @@
               <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="parsing" type="462c0819:PsiDirectoryNode" />
+              <item name="daos" type="462c0819:PsiDirectoryNode" />
+              <item name="relationships" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vocabulary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vocabulary" type="b2602c69:ProjectViewProjectNode" />
@@ -286,18 +346,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Workspace.java/Vocabulary/src/com/sschudakov/bins/Word.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -316,7 +374,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WordsCollectionsReaderTest.readWordsCollectionsTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -457,8 +515,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.WordsCollectionsReaderTest.readWordsCollectionsTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.WordsCollectionsReaderTest.readWordsCollectionsTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.WordsCollectionsManagerTest.readExistingCollectionsTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.FileParserTest.parseTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.FileParserTest" />
@@ -488,7 +546,11 @@
       <workItem from="1513805274457" duration="90000" />
       <workItem from="1513884527412" duration="7289000" />
       <workItem from="1513943948226" duration="2170000" />
-      <workItem from="1513972613824" duration="2214000" />
+      <workItem from="1513972613824" duration="2969000" />
+      <workItem from="1514035072891" duration="2142000" />
+      <workItem from="1514040426952" duration="4080000" />
+      <workItem from="1514045333021" duration="1187000" />
+      <workItem from="1514196025277" duration="1597000" />
     </task>
     <task id="LOCAL-00001" summary="[15.12.17] - ended work on FileParser with no possibility to read text from docx files">
       <created>1513349221093</created>
@@ -533,10 +595,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17062000" />
+    <option name="totallyTimeSpent" value="26823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -545,19 +608,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21633889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24130106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -585,38 +648,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/java_courses/jII_logging/jII_logging/src/1.1_xml_log4j.properties" />
-    <entry file="file://$PROJECT_DIR$/log4j2.xml" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="method#readUsingAllCharsets#0;class#Main#0" expanded="false" />
-            <element signature="method#readFile#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/com/oracle/nio/BufferSecretsPermission.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/java_courses/jII_logging/jII_logging/logging.properties" />
-    <entry file="file://$PROJECT_DIR$/../Vocabulary_Interface/src/vocabulary_interface/InputWrodsJFrame.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/concurrent/Future.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log4j2.xml" />
     <entry file="file://D:/java_courses/jII_logging/jII_logging/src/1.1_xml_log4j.properties" />
     <entry file="file://$PROJECT_DIR$/logging/logging.properties" />
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/logging/LoggersManager.java">
@@ -648,13 +679,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/sschudakov/Class.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/bins/Word.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/AbstractList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -739,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words_collections/Lücken.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/words_collections/Tagesshau.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -775,14 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/log4j-2.10.0-bin/log4j-api-2.10.0.jar!/org/apache/logging/log4j/Marker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -801,37 +810,6 @@
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="method#readUsingAllCharsets#0;class#Main#0" expanded="false" />
-            <element signature="method#readFile#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,7 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="33" column="51" lean-forward="false" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -885,29 +862,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/words_collections/Adjective mit Präpositionen.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/words_collections/Modalverben.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        <state relative-caret-position="425">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/words_collections/Lücken.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/ormlite-core-5.0.jar!/com/j256/ormlite/field/ForeignCollectionField.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/daos/bins/WordCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/daos/bins/Language.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordCollectionRelationship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordMeaningRelationship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/database/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="59" lean-forward="false" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/daos/bins/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#Word#0" expanded="false" />
+            <element signature="method#Word#0;class#Word#0" expanded="false" />
+            <element signature="method#Word#1;class#Word#0" expanded="false" />
+            <element signature="method#equals#0;class#Word#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/daos/bins/WordClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/words_collections/NDR Doku">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="108" lean-forward="false" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
+          <folding>
+            <element signature="method#readUsingAllCharsets#0;class#Main#0" expanded="false" />
+            <element signature="method#readFile#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

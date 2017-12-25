@@ -1,12 +1,10 @@
 package com.sschudakov.parsing;
 
-import com.sschudakov.bins.Word;
+import com.sschudakov.daos.bins.Word;
 import com.sschudakov.logging.LoggersManager;
-import org.apache.logging.log4j.Marker;
 
 import java.io.*;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;

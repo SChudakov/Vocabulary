@@ -1,6 +1,6 @@
 package com.sschudakov.parsing;
 
-import com.sschudakov.bins.Word;
+import com.sschudakov.daos.bins.Word;
 import com.sschudakov.words.WordsCollectionsReader;
 import org.junit.Test;
 
