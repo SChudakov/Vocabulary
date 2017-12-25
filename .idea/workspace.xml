@@ -2,122 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="890b3d7b-d139-4703-bfc2-71adc06a978d" name="Default" comment="[17.12.17] - ended work on FileParser with no possibility to read text from docx files">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Client/logs/clients_logs/127.0.0.1_50168.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Client/logs/clients_logs/127.0.0.1_50175.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_11/Main.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_14/Main.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_14/client/Client.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/src/com/sschudakov/lesson_14/Main.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../JavaCourse_part2/src/com/sschudakov/lesson_14/client/Client.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Server/logs/server_logs/50168.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Server/logs/server_logs/50175.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/bins/Collection.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/bins/Language.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/bins/Word.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/bins/WordClass.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/relationships/WordCollectionRelationship.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/daos/relationships/WordMeaningRelationship.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/database/DatabaseManager.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/bins/Language.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/bins/WordClass.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/bins/WordCollection.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordCollectionRelationship.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/relationships/WordMeaningRelationship.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/database/DatabaseManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/words_collections/NDR Doku" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/com/sschudakov/client/Client.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/com/sschudakov/client/Client.class" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/sschudakov/client/Client.java" afterPath="$PROJECT_DIR$/../Client/src/com/sschudakov/client/Client.java" />
       <change beforePath="$PROJECT_DIR$/../FirstLab" afterPath="$PROJECT_DIR$/../FirstLab" />
-      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../JavaCourse_part2/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_10/reflection/DataBaseAccessor.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_10/reflection/DataBaseAccessor.class" />
-      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_3/file_system/Find$1.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_3/file_system/Find$1.class" />
-      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_3/file_system/Find.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_3/file_system/Find.class" />
-      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_6/databases/DataBaseQueryExecutor.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_6/databases/DataBaseQueryExecutor.class" />
-      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_9/TariffsDocumentParser.class" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_9/TariffsDocumentParser.class" />
-      <change beforePath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_9/xml_files/tariffs.xsd" afterPath="$PROJECT_DIR$/../JavaCourse_part2/out/production/JavaCourse/com/sschudakov/lesson_9/xml_files/tariffs.xsd" />
       <change beforePath="$PROJECT_DIR$/../Life" afterPath="$PROJECT_DIR$/../Life" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../Tasks" afterPath="$PROJECT_DIR$/../Tasks" />
-      <change beforePath="$PROJECT_DIR$/../Underground/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Underground/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-1.2-api/src/test/java/org/apache/log4j/LevelTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-1.2-api/src/test/java/org/apache/log4j/LevelTest.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-appserver/src/main/java/org/apache/logging/log4j/appserver/tomcat/TomcatLogger.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-appserver/src/main/java/org/apache/logging/log4j/appserver/tomcat/TomcatLogger.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineArityTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineArityTest.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-distribution/pom.xml" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/log4j-distribution/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/pom.xml" afterPath="$PROJECT_DIR$/../Underground/lib/apache-log4j-2.10.0-src/apache-log4j-2.10.0-src/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" afterPath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/GcFreeLoggingTestUtil.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/async/perftest/ResponseTimeTest.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineArityTest.java" afterPath="$PROJECT_DIR$/../Underground/lib/log4j-2.10.0-src/log4j-core/src/test/java/org/apache/logging/log4j/core/tools/picocli/CommandLineArityTest.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/Main.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/Main.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Driver.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Line.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Passenger.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Station.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Train.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/daos/bin/Wagon.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/database/DaosPersister.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/database/DaosPersister.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/database/DatabaseManager.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/database/DatabaseManager.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/DriversFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/DriversFactory.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/LinesFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/LinesFactory.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/PassengersFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/PassengersFactory.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/StationsFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/StationsFactory.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/TrainsFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/TrainsFactory.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/WagonsFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/bins/WagonsFactory.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/lists/StationsListFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/lists/StationsListFactory.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/lists/TrainsListFactory.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/factories/lists/TrainsListFactory.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/logic/DriversSeated.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/logic/DriversSeated.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/logic/TrainLineMover.class" afterPath="$PROJECT_DIR$/../Underground/out/production/Underground/com/sschudakov/logic/TrainLineMover.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/test/Underground/com/sschudakov/database/DaosPersisterTest.class" afterPath="$PROJECT_DIR$/../Underground/out/test/Underground/com/sschudakov/database/DaosPersisterTest.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/out/test/Underground/com/sschudakov/database/DaosTableContentReaderTest.class" afterPath="$PROJECT_DIR$/../Underground/out/test/Underground/com/sschudakov/database/DaosTableContentReaderTest.class" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/Main.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bin/Depot.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bin/WagonType.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bounded_buffer/Escalator.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bounded_buffer/Escalator.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bounded_buffer/PassengersBuffer.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/bounded_buffer/PassengersBuffer.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Driver.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Line.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Passenger.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Station.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Train.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/daos/bin/Wagon.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/database/DaosPersister.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/database/DaosPersister.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/database/DatabaseManager.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/database/DatabaseManager.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/DriversFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/DriversFactory.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/LinesFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/LinesFactory.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/PassengersFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/PassengersFactory.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/StationsFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/StationsFactory.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/TrainsFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/TrainsFactory.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/WagonsFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/bins/WagonsFactory.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/lists/StationsListFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/lists/StationsListFactory.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/lists/TrainsListFactory.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/factories/lists/TrainsListFactory.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/DriversSeated.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/DriversSeated.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/TrainLineMover.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/logic/TrainLineMover.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/src/com/sschudakov/utils/Utils.java" afterPath="$PROJECT_DIR$/../Underground/src/com/sschudakov/utils/Utils.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/test/com/sschudakov/database/DaosPersisterTest.java" afterPath="$PROJECT_DIR$/../Underground/test/com/sschudakov/database/DaosPersisterTest.java" />
-      <change beforePath="$PROJECT_DIR$/../Underground/test/com/sschudakov/database/DaosTableContentReaderTest.java" afterPath="$PROJECT_DIR$/../Underground/test/com/sschudakov/database/DaosTableContentReaderTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterFormatter.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterFormatter.java" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterizedMessage.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/message/ParameterizedMessage.java" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/LoaderUtil.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-api/src/main/java/org/apache/logging/log4j/util/LoaderUtil.java" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/osgi/package-info.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/osgi/package-info.java" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java" afterPath="$PROJECT_DIR$/lib/log4j-2.10.0-src/log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/Main.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/bins/Word.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/parsing/FileParser.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/parsing/FileParser.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/words/WordsCollectionsReader.class" afterPath="$PROJECT_DIR$/out/production/Vocabulary/com/sschudakov/words/WordsCollectionsReader.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/FileParserTest.class" afterPath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/FileParserTest.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/WordsCollectionsReaderTest.class" afterPath="$PROJECT_DIR$/out/test/Vocabulary/com/sschudakov/parsing/WordsCollectionsReaderTest.class" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/sschudakov/bins/Word.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/daos/bins/Word.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/parsing/FileParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/words/WordsCollectionsReader.java" />
-      <change beforePath="$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/parsing/FileParserTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/parsing/WordsCollectionsReaderTest.java" />
-      <change beforePath="$PROJECT_DIR$/words_collections/Lücken.txt" afterPath="$PROJECT_DIR$/words_collections/Lücken.txt" />
-      <change beforePath="$PROJECT_DIR$/words_collections/Modalverben.txt" afterPath="$PROJECT_DIR$/words_collections/Modalverben.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -235,7 +122,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="1" fullScreen="true">
     <option name="width" value="1366" />
     <option name="height" value="728" />
   </component>
@@ -598,8 +485,7 @@
     <option name="totallyTimeSpent" value="26823000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
