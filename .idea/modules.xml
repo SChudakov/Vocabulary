@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Vocabulary.iml" filepath="$PROJECT_DIR$/Vocabulary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Vocabulary_Interface/Vocabulary_Interface.iml" filepath="$PROJECT_DIR$/../Vocabulary_Interface/Vocabulary_Interface.iml" />
     </modules>
   </component>
 </project>
