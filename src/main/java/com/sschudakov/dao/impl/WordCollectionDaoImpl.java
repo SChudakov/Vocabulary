@@ -9,7 +9,7 @@ import com.sschudakov.entity.WordCollection;
 import java.sql.SQLException;
 import java.util.List;
 
-public class WordCollectionDaoImpl implements WordCollectionDao{
+public class WordCollectionDaoImpl implements WordCollectionDao {
     private Dao<WordCollection, Integer> wordCollectionsDao;
 
     public WordCollectionDaoImpl() {
@@ -20,27 +20,33 @@ public class WordCollectionDaoImpl implements WordCollectionDao{
         }
     }
 
+    @Override
     public void create(WordCollection wordCollection) throws SQLException {
         this.wordCollectionsDao.create(wordCollection);
     }
 
+    @Override
     public WordCollection update(WordCollection wordCollection) throws SQLException {
         this.wordCollectionsDao.update(wordCollection);
         return wordCollection;
     }
 
+    @Override
     public WordCollection findById(Integer id) throws SQLException {
         return this.wordCollectionsDao.queryForId(id);
     }
 
+    @Override
     public WordCollection findByName(String name) throws SQLException {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public List<WordCollection> findAll() throws SQLException {
         return this.wordCollectionsDao.queryForAll();
     }
 
+    @Override
     public void remove(Integer wordCollectionID) throws SQLException {
         this.wordCollectionsDao.deleteById(wordCollectionID);
     }

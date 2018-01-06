@@ -20,27 +20,33 @@ public class WordClassDaoImpl implements WordClassDao {
         }
     }
 
+    @Override
     public void create(WordClass wordClass) throws SQLException {
         this.wordClassDao.create(wordClass);
     }
 
+    @Override
     public WordClass update(WordClass wordClass) throws SQLException {
         this.wordClassDao.update(wordClass);
         return wordClass;
     }
 
+    @Override
     public WordClass findById(Integer id) throws SQLException {
         return this.wordClassDao.queryForId(id);
     }
 
+    @Override
     public WordClass findByName(String name) throws SQLException {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public List<WordClass> findAll() throws SQLException {
         return this.wordClassDao.queryForAll();
     }
 
+    @Override
     public void remove(Integer wordClassID) throws SQLException {
         this.wordClassDao.deleteById(wordClassID);
     }

@@ -20,27 +20,33 @@ public class WordCollectionRelationshipDaoImpl implements WordCollectionRelation
         }
     }
 
+    @Override
     public void create(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
         this.wordCollectionRelationshipsDao.create(wordCollectionRelationship);
     }
 
+    @Override
     public WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
         this.wordCollectionRelationshipsDao.update(wordCollectionRelationship);
         return wordCollectionRelationship;
     }
 
+    @Override
     public WordCollectionRelationship findById(Integer id) throws SQLException {
         return this.wordCollectionRelationshipsDao.queryForId(id);
     }
 
+    @Override
     public WordCollectionRelationship findByName(String name) throws SQLException {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public List<WordCollectionRelationship> findAll() throws SQLException {
         return this.wordCollectionRelationshipsDao.queryForAll();
     }
 
+    @Override
     public void remove(Integer wordCollectionRelationshipID) throws SQLException {
         this.wordCollectionRelationshipsDao.deleteById(wordCollectionRelationshipID);
     }

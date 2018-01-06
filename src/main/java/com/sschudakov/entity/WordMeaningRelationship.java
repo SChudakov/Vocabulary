@@ -3,7 +3,7 @@ package com.sschudakov.entity;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-@DatabaseTable(tableName = "word_meaning")
+@DatabaseTable(tableName = "word meaning relationship")
 public class WordMeaningRelationship {
 
     @DatabaseField(id = true)

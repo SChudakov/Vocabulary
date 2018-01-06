@@ -5,3 +5,5 @@ target/
 *.iml
 
 words_colelctions/
+
+out/

@@ -9,7 +9,7 @@ import com.sschudakov.entity.WordMeaningRelationship;
 import java.sql.SQLException;
 import java.util.List;
 
-public class WordMeaningRelationshipDaoImpl implements WordMeaningRelationshipDao{
+public class WordMeaningRelationshipDaoImpl implements WordMeaningRelationshipDao {
     private Dao<WordMeaningRelationship, Integer> wordMeaningRelationshipsDao;
 
     public WordMeaningRelationshipDaoImpl() {
@@ -20,27 +20,33 @@ public class WordMeaningRelationshipDaoImpl implements WordMeaningRelationshipDa
         }
     }
 
+    @Override
     public void create(WordMeaningRelationship wordMeaningRelationship) throws SQLException {
         this.wordMeaningRelationshipsDao.create(wordMeaningRelationship);
     }
 
+    @Override
     public WordMeaningRelationship update(WordMeaningRelationship wordMeaningRelationship) throws SQLException {
         this.wordMeaningRelationshipsDao.update(wordMeaningRelationship);
         return wordMeaningRelationship;
     }
 
+    @Override
     public WordMeaningRelationship findById(Integer id) throws SQLException {
         return this.wordMeaningRelationshipsDao.queryForId(id);
     }
 
+    @Override
     public WordMeaningRelationship findByName(String name) throws SQLException {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public List<WordMeaningRelationship> findAll() throws SQLException {
         return this.wordMeaningRelationshipsDao.queryForAll();
     }
 
+    @Override
     public void remove(Integer wordMeaningRelationshipID) throws SQLException {
         this.wordMeaningRelationshipsDao.deleteById(wordMeaningRelationshipID);
     }

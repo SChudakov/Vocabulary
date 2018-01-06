@@ -9,7 +9,7 @@ import com.sschudakov.entity.Language;
 import java.sql.SQLException;
 import java.util.List;
 
-public class LanguageDaoImpl implements LanguageDao{
+public class LanguageDaoImpl implements LanguageDao {
 
     private Dao<Language, Integer> languagesDao;
 
@@ -21,29 +21,35 @@ public class LanguageDaoImpl implements LanguageDao{
         }
     }
 
+    @Override
     public void create(Language language) throws SQLException {
         this.languagesDao.create(language);
     }
 
+    @Override
     public Language update(Language language) throws SQLException {
         this.languagesDao.update(language);
         return language;
     }
 
+    @Override
     public Language findById(Integer id) throws SQLException {
         return this.languagesDao.queryForId(id);
     }
 
+    @Override
     public Language findByName(String name) throws SQLException {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public List<Language> findAll() throws SQLException {
         return this.languagesDao.queryForAll();
     }
 
+    @Override
     public void remove(Integer languageID) throws SQLException {
         this.languagesDao.deleteById(languageID);
     }
-    
+
 }
