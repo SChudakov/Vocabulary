@@ -41,7 +41,7 @@ public class DatabaseManager {
         }
     }
 
-    public static void createTable() {
+    public static void createTables() {
         Collection<Class<?>> daoClasses = DaoClassesReader.readClasses();
         for (Class<?> daoClass : daoClasses) {
             System.out.println(daoClass);
@@ -57,7 +57,7 @@ public class DatabaseManager {
         }
     }
 
-    public static void dropTable() {
+    public static void dropTables() {
         Collection<Class<?>> daoClasses = DaoClassesReader.readClasses();
         for (Class<?> daoClass : daoClasses) {
             try {

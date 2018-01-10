@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class WordsCollectionsManager {
 
+
     private static final String WORDS_COLLECTIONS_DIRECTORY = "D:\\Workspace.java\\Vocabulary\\words_collections";
     private static final String REGULAR_EXPRESSION_FOR_REMOVING_EXTENSION = "[.][^.]+";
 

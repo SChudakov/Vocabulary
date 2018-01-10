@@ -2,13 +2,13 @@ package com.sschudakov.words;
 
 import org.junit.Test;
 
-/**
- * Created by Semen Chudakov on 16.12.2017.
- */
+import static org.junit.Assert.*;
+
 public class WordsCollectionsManagerTest {
 
     @Test
-    public void readExistingCollectionsTest(){
+    public void readExistingCollections() {
         System.out.println(WordsCollectionsManager.readExistingCollections().toString());
+
     }
 }

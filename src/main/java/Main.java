@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            TableUtils.dropTable(DatabaseManager.getConnectionSource(), WordMeaningRelationship.class, false);
+            TableUtils.dropTable(DatabaseManager.connectionSource, WordMeaningRelationship.class, false);
         } catch (SQLException e) {
             e.printStackTrace();
         }

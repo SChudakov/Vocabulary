@@ -7,4 +7,6 @@ public class WordCollectionRelationship {
 
     private int wordCollectionRelationshipID;
 
+    //
+//
 }
