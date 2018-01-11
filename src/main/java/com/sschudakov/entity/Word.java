@@ -1,8 +1,10 @@
 package com.sschudakov.entity;
 
 import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -18,18 +20,10 @@ public class Word {
     private String value;
     @DatabaseField(columnName = "word class", foreign = true, canBeNull = false)
     private WordClass wordClass;
-    @ForeignCollectionField(columnName = "meanings")
+    /*@ForeignCollectionField(columnName = "collections")*/
     private Collection<WordCollection> wordCollections;
-
-    public Word() {
-    }
-
-    public Word(String value) {
-        this.value = value;
-        this.wordID = value.hashCode();
-        this.wordCollections = new ArrayList<>();
-    }
-
+    /*@ForeignCollectionField(columnName = "meanings")*/
+    private Collection<Word> meanings;
 
     public int getWordID() {
         return wordID;
@@ -59,22 +53,50 @@ public class Word {
         this.wordCollections = wordCollections;
     }
 
+    public Collection<Word> getMeanings() {
+        return meanings;
+    }
+
+    public void setMeanings(Collection<Word> meanings) {
+        this.meanings = meanings;
+    }
+
+
+    public Word() {
+    }
+
+    public Word(String value) {
+        this.value = value;
+        this.wordID = value.hashCode();
+        this.wordCollections = new ArrayList<>();
+    }
+
+
     @Override
-    public String toString() {
-        return this.value;
+    public int hashCode() {
+        return new HashCodeBuilder()
+                .append(this.wordID)
+                .toHashCode();
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Word) {
-            Word otherWord = (Word) obj;
-            return this.value.equals(otherWord.getValue());
+            Word casted = (Word) obj;
+            return new EqualsBuilder()
+                    .append(this.wordID, casted.getWordID())
+                    .isEquals();
         }
         return false;
     }
 
     @Override
-    public int hashCode() {
-        return this.value.hashCode();
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append(this.wordID)
+                .append(this.value)
+                .append(this.wordClass)
+                .append(this.wordCollections)
+                .toString();
     }
 }

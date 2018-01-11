@@ -11,7 +11,7 @@ import java.util.Collection;
  */
 public class DatabaseManager {
     public static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    public static final String DATABASE_NAME = "underground";
+    public static final String DATABASE_NAME = "vocabulary";
 
 
     public static final String USER_PARAMETER = "user=";
@@ -60,8 +60,13 @@ public class DatabaseManager {
     public static void dropTables() {
         Collection<Class<?>> daoClasses = DaoClassesReader.readClasses();
         for (Class<?> daoClass : daoClasses) {
+            System.out.println(daoClass);
+        }
+        for (Class<?> daoClass : daoClasses) {
             try {
+
                 TableManager.dropTable(daoClass);
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }
