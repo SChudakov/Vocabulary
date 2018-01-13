@@ -15,10 +15,6 @@ public class WordsCollectionsManager {
 
     private static List<String> collections;
 
-    static {
-
-    }
-
     public static List<String> readExistingCollections() {
         return readExistingCollections(new File(WORDS_COLLECTIONS_DIRECTORY));
     }

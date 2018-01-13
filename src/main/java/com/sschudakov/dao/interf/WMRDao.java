@@ -5,7 +5,7 @@ import com.sschudakov.entity.WordMeaningRelationship;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface WordMeaningRelationshipDao {
+public interface WMRDao {
     void create(WordMeaningRelationship wordMeaningRelationship) throws SQLException;
 
     WordMeaningRelationship update(WordMeaningRelationship wordMeaningRelationship) throws SQLException;

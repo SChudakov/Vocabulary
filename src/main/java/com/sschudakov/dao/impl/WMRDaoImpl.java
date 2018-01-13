@@ -2,17 +2,17 @@ package com.sschudakov.dao.impl;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
-import com.sschudakov.dao.interf.WordMeaningRelationshipDao;
+import com.sschudakov.dao.interf.WMRDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordMeaningRelationship;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class WordMeaningRelationshipDaoImpl implements WordMeaningRelationshipDao {
+public class WMRDaoImpl implements WMRDao {
     private Dao<WordMeaningRelationship, Integer> wordMeaningRelationshipsDao;
 
-    public WordMeaningRelationshipDaoImpl() {
+    public WMRDaoImpl() {
         try {
             this.wordMeaningRelationshipsDao = DaoManager.createDao(DatabaseManager.connectionSource, WordMeaningRelationship.class);
         } catch (SQLException e) {

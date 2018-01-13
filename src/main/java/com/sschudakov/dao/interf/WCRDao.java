@@ -5,7 +5,7 @@ import com.sschudakov.entity.WordCollectionRelationship;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface WordCollectionRelationshipDao {
+public interface WCRDao {
 
     void create(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
 
