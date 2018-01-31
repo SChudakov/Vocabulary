@@ -22,7 +22,7 @@ public class LanguageDaoImpl implements LanguageDao {
     }
 
     @Override
-    public void create(Language language) throws SQLException {
+    public void save(Language language) throws SQLException {
         this.languagesDao.create(language);
     }
 
@@ -31,6 +31,13 @@ public class LanguageDaoImpl implements LanguageDao {
         this.languagesDao.update(language);
         return language;
     }
+
+    @Override
+    public void remove(Integer languageID) throws SQLException {
+        this.languagesDao.deleteById(languageID);
+    }
+
+
 
     @Override
     public Language findById(Integer id) throws SQLException {
@@ -46,10 +53,4 @@ public class LanguageDaoImpl implements LanguageDao {
     public List<Language> findAll() throws SQLException {
         return this.languagesDao.queryForAll();
     }
-
-    @Override
-    public void remove(Integer languageID) throws SQLException {
-        this.languagesDao.deleteById(languageID);
-    }
-
 }

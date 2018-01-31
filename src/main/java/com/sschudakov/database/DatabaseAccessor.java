@@ -15,13 +15,13 @@ public class DatabaseAccessor {
 
         try {
             // Connect to database
-            // create DAO object
+            // save DAO object
             productDao = DaoManager.createDao(DatabaseManager.connectionSource, tClass);
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        // create Query Builder
+        // save Query Builder
         QueryBuilder<T, String> productsQueryBuilder = productDao.queryBuilder();
 
         // executing query

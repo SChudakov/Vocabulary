@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface WordCollectionDao {
 
-    void create(WordCollection wordCollection) throws SQLException;
+    void save(WordCollection wordCollection) throws SQLException;
 
     WordCollection update(WordCollection wordCollection) throws SQLException;
 

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface LanguageDao {
 
-    void create(Language language) throws SQLException;
+    void save(Language language) throws SQLException;
 
     Language update(Language language) throws SQLException;
 

@@ -21,7 +21,7 @@ public class WCRDaoImpl implements WCRDao {
     }
 
     @Override
-    public void create(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
+    public void save(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
         this.wordCollectionRelationshipsDao.create(wordCollectionRelationship);
     }
 

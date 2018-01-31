@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface WordClassDao {
-    void create(WordClass wordClass) throws SQLException;
+    void save(WordClass wordClass) throws SQLException;
 
     WordClass update(WordClass wordClass) throws SQLException;
 

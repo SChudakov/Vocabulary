@@ -21,7 +21,7 @@ public class WordClassDaoImpl implements WordClassDao {
     }
 
     @Override
-    public void create(WordClass wordClass) throws SQLException {
+    public void save(WordClass wordClass) throws SQLException {
         this.wordClassDao.create(wordClass);
     }
 

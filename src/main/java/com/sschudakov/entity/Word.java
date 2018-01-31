@@ -71,6 +71,10 @@ public class Word {
         this.wordCollections = new ArrayList<>();
     }
 
+    public Word(String value, String wordClass) {
+        this.value = value;
+        this.wordClass = new WordClass(wordClass);
+    }
 
     @Override
     public int hashCode() {

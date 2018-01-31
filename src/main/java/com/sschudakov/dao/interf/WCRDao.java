@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface WCRDao {
 
-    void create(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
+    void save(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
 
     WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
 

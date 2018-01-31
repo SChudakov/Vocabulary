@@ -21,7 +21,7 @@ public class WMRDaoImpl implements WMRDao {
     }
 
     @Override
-    public void create(WordMeaningRelationship wordMeaningRelationship) throws SQLException {
+    public void save(WordMeaningRelationship wordMeaningRelationship) throws SQLException {
         this.wordMeaningRelationshipsDao.create(wordMeaningRelationship);
     }
 
