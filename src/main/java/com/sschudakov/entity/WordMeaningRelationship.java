@@ -21,22 +21,25 @@ public class WordMeaningRelationship {
         return wordMeaningRelationshipID;
     }
 
-    public Word getWord() {
-        return word;
+    public void setWordMeaningRelationshipID(int wordMeaningRelationshipID) {
+        this.wordMeaningRelationshipID = wordMeaningRelationshipID;
     }
 
-    public Word getMeaning() {
-        return meaning;
+    public Word getWord() {
+        return word;
     }
 
     public void setWord(Word word) {
         this.word = word;
     }
 
+    public Word getMeaning() {
+        return meaning;
+    }
+
     public void setMeaning(Word meaning) {
         this.meaning = meaning;
     }
-
 
     public WordMeaningRelationship() {
     }
@@ -50,7 +53,8 @@ public class WordMeaningRelationship {
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(this.wordMeaningRelationshipID)
+                .append(this.word)
+                .append(this.meaning)
                 .toHashCode();
     }
 
@@ -59,7 +63,8 @@ public class WordMeaningRelationship {
         if (obj instanceof WordMeaningRelationship) {
             WordMeaningRelationship casted = (WordMeaningRelationship) obj;
             return new EqualsBuilder()
-                    .append(this.wordMeaningRelationshipID, casted.getWordMeaningRelationshipID())
+                    .append(this.word, casted.getWord())
+                    .append(this.meaning, casted.getMeaning())
                     .isEquals();
         }
         return false;

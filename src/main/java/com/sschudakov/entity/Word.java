@@ -5,9 +5,7 @@ import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-
-import java.util.ArrayList;
-import java.util.Collection;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Created by Semen Chudakov on 14.12.2017.
@@ -20,13 +18,16 @@ public class Word {
     private String value;
     @DatabaseField(columnName = "word class", foreign = true, canBeNull = false)
     private WordClass wordClass;
-    /*@ForeignCollectionField(columnName = "collections")*/
-    private Collection<WordCollection> wordCollections;
-    /*@ForeignCollectionField(columnName = "meanings")*/
-    private Collection<Word> meanings;
+    @DatabaseField(columnName = "word class", foreign = true, canBeNull = false)
+    private Language language;
+
 
     public int getWordID() {
         return wordID;
+    }
+
+    public void setWordID(int wordID) {
+        this.wordID = wordID;
     }
 
     public String getValue() {
@@ -45,41 +46,30 @@ public class Word {
         this.wordClass = wordClass;
     }
 
-    public Collection<WordCollection> getWordCollections() {
-        return wordCollections;
+    public Language getLanguage() {
+        return language;
     }
 
-    public void setWordCollections(Collection<WordCollection> wordCollections) {
-        this.wordCollections = wordCollections;
+    public void setLanguage(Language language) {
+        this.language = language;
     }
-
-    public Collection<Word> getMeanings() {
-        return meanings;
-    }
-
-    public void setMeanings(Collection<Word> meanings) {
-        this.meanings = meanings;
-    }
-
 
     public Word() {
     }
 
-    public Word(String value) {
-        this.value = value;
-        this.wordID = value.hashCode();
-        this.wordCollections = new ArrayList<>();
-    }
 
-    public Word(String value, String wordClass) {
+    public Word(String value, WordClass wordClass, Language language) {
         this.value = value;
-        this.wordClass = new WordClass(wordClass);
+        this.wordClass = wordClass;
+        this.language = language;
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(this.wordID)
+                .append(this.value)
+                .append(this.language)
+                .append(this.wordClass)
                 .toHashCode();
     }
 
@@ -88,7 +78,9 @@ public class Word {
         if (obj instanceof Word) {
             Word casted = (Word) obj;
             return new EqualsBuilder()
-                    .append(this.wordID, casted.getWordID())
+                    .append(this.value, casted.getValue())
+                    .append(this.language, casted.getLanguage())
+                    .append(this.wordClass, casted.getWordID())
                     .isEquals();
         }
         return false;
@@ -96,11 +88,11 @@ public class Word {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
+        return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
                 .append(this.wordID)
                 .append(this.value)
+                .append(this.language)
                 .append(this.wordClass)
-                .append(this.wordCollections)
                 .toString();
     }
 }

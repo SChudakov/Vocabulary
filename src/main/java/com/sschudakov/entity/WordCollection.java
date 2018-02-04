@@ -18,6 +18,10 @@ public class WordCollection {
         return collectionID;
     }
 
+    public void setCollectionID(int collectionID) {
+        this.collectionID = collectionID;
+    }
+
     public String getCollectionName() {
         return collectionName;
     }
@@ -26,20 +30,18 @@ public class WordCollection {
         this.collectionName = collectionName;
     }
 
-
     public WordCollection() {
     }
 
     public WordCollection(String collectionName) {
         this.collectionName = collectionName;
-        this.collectionID = collectionName.hashCode();
     }
 
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(this.collectionID)
+                .append(this.collectionName)
                 .toHashCode();
     }
 
@@ -48,7 +50,7 @@ public class WordCollection {
         if (obj instanceof WordCollection) {
             WordCollection casted = (WordCollection) obj;
             return new EqualsBuilder()
-                    .append(this.collectionID, casted.getCollectionID())
+                    .append(this.collectionName, casted.getCollectionName())
                     .isEquals();
         }
         return false;

@@ -20,22 +20,25 @@ public class WordCollectionRelationship {
         return wordCollectionRelationshipID;
     }
 
-    public Word getWord() {
-        return word;
+    public void setWordCollectionRelationshipID(int wordCollectionRelationshipID) {
+        this.wordCollectionRelationshipID = wordCollectionRelationshipID;
     }
 
-    public WordCollection getWordCollection() {
-        return wordCollection;
+    public Word getWord() {
+        return word;
     }
 
     public void setWord(Word word) {
         this.word = word;
     }
 
+    public WordCollection getWordCollection() {
+        return wordCollection;
+    }
+
     public void setWordCollection(WordCollection wordCollection) {
         this.wordCollection = wordCollection;
     }
-
 
     public WordCollectionRelationship() {
     }
@@ -49,7 +52,8 @@ public class WordCollectionRelationship {
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(this.wordCollectionRelationshipID)
+                .append(this.word)
+                .append(this.wordCollection)
                 .toHashCode();
     }
 
@@ -58,7 +62,8 @@ public class WordCollectionRelationship {
         if (obj instanceof WordCollectionRelationship) {
             WordCollectionRelationship casted = (WordCollectionRelationship) obj;
             return new EqualsBuilder()
-                    .append(this.wordCollectionRelationshipID, casted.getWordCollectionRelationshipID())
+                    .append(this.word, casted.getWord())
+                    .append(this.wordCollection, casted.getWordCollection())
                     .isEquals();
         }
         return false;

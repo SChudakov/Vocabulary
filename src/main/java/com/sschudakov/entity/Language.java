@@ -5,6 +5,7 @@ import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 @DatabaseTable(tableName = "languages")
 public class Language {
@@ -18,8 +19,16 @@ public class Language {
         return languageID;
     }
 
+    public void setLanguageID(int languageID) {
+        this.languageID = languageID;
+    }
+
     public String getLanguageName() {
         return languageName;
+    }
+
+    public void setLanguageName(String languageName) {
+        this.languageName = languageName;
     }
 
     public Language() {
@@ -34,7 +43,7 @@ public class Language {
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(this.languageID)
+                .append(this.languageName)
                 .toHashCode();
     }
 
@@ -43,7 +52,7 @@ public class Language {
         if (obj instanceof Language) {
             Language casted = (Language) obj;
             return new EqualsBuilder()
-                    .append(this.languageID, casted.getLanguageID())
+                    .append(this.languageName, casted.getLanguageName())
                     .isEquals();
         }
         return false;
@@ -51,7 +60,7 @@ public class Language {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
+        return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
                 .append(this.languageID)
                 .append(this.languageName)
                 .toString();

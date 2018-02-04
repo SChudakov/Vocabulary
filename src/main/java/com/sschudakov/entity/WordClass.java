@@ -13,9 +13,12 @@ public class WordClass {
     @DatabaseField(columnName = "name", canBeNull = false)
     private String wordClassName;
 
-
     public int getWordClassID() {
         return wordClassID;
+    }
+
+    public void setWordClassID(int wordClassID) {
+        this.wordClassID = wordClassID;
     }
 
     public String getWordClassName() {
@@ -26,20 +29,18 @@ public class WordClass {
         this.wordClassName = wordClassName;
     }
 
-
     public WordClass() {
     }
 
     public WordClass(String wordClassName) {
         this.wordClassName = wordClassName;
-        this.wordClassID = wordClassName.hashCode();
     }
 
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(this.wordClassID)
+                .append(this.wordClassName)
                 .toHashCode();
     }
 
@@ -48,7 +49,7 @@ public class WordClass {
         if (obj instanceof WordClass) {
             WordClass casted = (WordClass) obj;
             return new EqualsBuilder()
-                    .append(this.wordClassID, casted.getWordClassID())
+                    .append(this.wordClassName, casted.getWordClassName())
                     .isEquals();
         }
         return false;
