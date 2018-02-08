@@ -57,6 +57,9 @@ public class Word {
     public Word() {
     }
 
+    public Word(String value) {
+        this(value, null, null);
+    }
 
     public Word(String value, WordClass wordClass, Language language) {
         this.value = value;
