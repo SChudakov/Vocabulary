@@ -54,6 +54,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         MegaList = new javax.swing.JList<>();
         DeleteWordButton = new javax.swing.JButton();
+        MegaListLanguageComboBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -202,6 +203,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         DeleteWordButton.setText("Delete");
 
+        MegaListLanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout MegaListPanelLayout = new javax.swing.GroupLayout(MegaListPanel);
         MegaListPanel.setLayout(MegaListPanelLayout);
         MegaListPanelLayout.setHorizontalGroup(
@@ -210,14 +213,17 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3)
-                    .addComponent(DeleteWordButton, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE))
+                    .addComponent(DeleteWordButton, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+                    .addComponent(MegaListLanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         MegaListPanelLayout.setVerticalGroup(
             MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MegaListPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MegaListLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(DeleteWordButton)
                 .addContainerGap())
@@ -303,6 +309,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel MeaningsLabel;
     private javax.swing.JList<String> MeaningsList;
     private javax.swing.JList<String> MegaList;
+    private javax.swing.JComboBox<String> MegaListLanguageComboBox;
     private javax.swing.JPanel MegaListPanel;
     private javax.swing.JTabbedPane TabbedPane;
     private javax.swing.JPanel WordPanel;
