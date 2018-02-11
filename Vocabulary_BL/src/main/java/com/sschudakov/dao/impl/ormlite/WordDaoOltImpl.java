@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl;
+package com.sschudakov.dao.impl.ormlite;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
@@ -7,6 +7,7 @@ import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.Word;
 
 import java.sql.SQLException;
+import java.util.Collection;
 import java.util.List;
 
 public class WordDaoImpl implements WordDao {
@@ -37,7 +38,12 @@ public class WordDaoImpl implements WordDao {
     }
 
     @Override
-    public Word findByName(String name) throws SQLException {
+    public Word findByValueAndLanguage(String value, int languageId) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Collection<Word> findByValue(String value) throws SQLException {
         throw new UnsupportedOperationException();
     }
 
