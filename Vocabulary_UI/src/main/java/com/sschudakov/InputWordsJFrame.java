@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sschudakov;
+package vocabulary_interface;
 
 /**
  *
@@ -16,6 +16,10 @@ public class InputWordsJFrame extends javax.swing.JFrame {
      */
     public InputWordsJFrame() {
         initComponents();
+        
+        GroupsTable.getColumnModel().getColumn(0).setMinWidth(274);
+        GroupsTable.getColumnModel().getColumn(1).setMinWidth(20);
+        GroupsTable.getColumnModel().getColumn(1).setPreferredWidth(20);
     }
 
     /**
@@ -28,91 +32,223 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        TabbedPane = new javax.swing.JTabbedPane();
+        WordPanel = new javax.swing.JPanel();
+        LanguageComboBox = new javax.swing.JComboBox<>();
+        WordTextField = new javax.swing.JTextField();
+        MeaningsLabel = new javax.swing.JLabel();
+        GroupsLabel = new javax.swing.JLabel();
+        MeaningLanguageComboBox = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        partOfSpeechJLabel = new javax.swing.JLabel();
-        partOfSpeechJComboBox = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        collectioJComboBox = new javax.swing.JComboBox<>();
-        newCollectionJButton = new javax.swing.JButton();
+        MeaningsList = new javax.swing.JList<>();
+        ApplyButton = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        GroupsTable = new javax.swing.JTable();
+        GroupsPanel = new javax.swing.JPanel();
+        GroupsComboBox = new javax.swing.JComboBox<>();
+        AddGroupTextField = new javax.swing.JTextField();
+        AddGroupButton = new javax.swing.JButton();
+        GroupsWordList = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        MegaListPanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        MegaList = new javax.swing.JList<>();
+        DeleteWordButton = new javax.swing.JButton();
+        MegaListLanguageComboBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("word");
+        TabbedPane.setPreferredSize(new java.awt.Dimension(600, 400));
 
-        jButton1.setText("input");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        WordPanel.setPreferredSize(new java.awt.Dimension(400, 400));
+
+        LanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        WordTextField.setText("word");
+
+        MeaningsLabel.setText("Meanings");
+
+        GroupsLabel.setText("Groups");
+
+        MeaningLanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        MeaningsList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(MeaningsList);
+
+        ApplyButton.setText("Apply");
+
+        GroupsTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Group", ""
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Boolean.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
             }
         });
+        jScrollPane2.setViewportView(GroupsTable);
 
-        partOfSpeechJLabel.setText("part of speech");
-        partOfSpeechJLabel.setName(""); // NOI18N
+        javax.swing.GroupLayout WordPanelLayout = new javax.swing.GroupLayout(WordPanel);
+        WordPanel.setLayout(WordPanelLayout);
+        WordPanelLayout.setHorizontalGroup(
+            WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WordPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(WordTextField)
+                    .addGroup(WordPanelLayout.createSequentialGroup()
+                        .addComponent(MeaningsLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
+                        .addComponent(GroupsLabel)
+                        .addGap(260, 260, 260))
+                    .addGroup(WordPanelLayout.createSequentialGroup()
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(MeaningLanguageComboBox, 0, 275, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(ApplyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        WordPanelLayout.setVerticalGroup(
+            WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WordPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(WordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MeaningsLabel)
+                    .addComponent(GroupsLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(WordPanelLayout.createSequentialGroup()
+                        .addComponent(MeaningLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ApplyButton)
+                .addGap(6, 6, 6))
+        );
 
-        jLabel2.setText("collection");
+        TabbedPane.addTab("Words", WordPanel);
 
-        newCollectionJButton.setText("new");
-        newCollectionJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newCollectionJButtonActionPerformed(evt);
-            }
+        GroupsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        AddGroupTextField.setText("group");
+
+        AddGroupButton.setText("Add Group");
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
+        GroupsWordList.setViewportView(jList1);
+
+        javax.swing.GroupLayout GroupsPanelLayout = new javax.swing.GroupLayout(GroupsPanel);
+        GroupsPanel.setLayout(GroupsPanelLayout);
+        GroupsPanelLayout.setHorizontalGroup(
+            GroupsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GroupsPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(GroupsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(GroupsComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(GroupsPanelLayout.createSequentialGroup()
+                        .addComponent(AddGroupTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AddGroupButton))
+                    .addComponent(GroupsWordList))
+                .addContainerGap())
+        );
+        GroupsPanelLayout.setVerticalGroup(
+            GroupsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GroupsPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(GroupsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddGroupTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AddGroupButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(GroupsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(GroupsWordList, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        TabbedPane.addTab("Groups", GroupsPanel);
+
+        MegaList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(MegaList);
+
+        DeleteWordButton.setText("Delete");
+
+        MegaListLanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout MegaListPanelLayout = new javax.swing.GroupLayout(MegaListPanel);
+        MegaListPanel.setLayout(MegaListPanelLayout);
+        MegaListPanelLayout.setHorizontalGroup(
+            MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MegaListPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3)
+                    .addComponent(DeleteWordButton, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+                    .addComponent(MegaListLanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        MegaListPanelLayout.setVerticalGroup(
+            MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MegaListPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MegaListLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(DeleteWordButton)
+                .addContainerGap())
+        );
+
+        TabbedPane.addTab("MegaList", MegaListPanel);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(partOfSpeechJLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
-                    .addComponent(partOfSpeechJComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(collectioJComboBox, 0, 257, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                    .addComponent(newCollectionJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(TabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(partOfSpeechJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(partOfSpeechJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(collectioJComboBox)
-                        .addComponent(newCollectionJButton)))
-                .addContainerGap(312, Short.MAX_VALUE))
+            .addComponent(TabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        TabbedPane.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,14 +257,6 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void newCollectionJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newCollectionJButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_newCollectionJButtonActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,15 +295,29 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> collectioJComboBox;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton AddGroupButton;
+    private javax.swing.JTextField AddGroupTextField;
+    private javax.swing.JButton ApplyButton;
+    private javax.swing.JButton DeleteWordButton;
+    private javax.swing.JComboBox<String> GroupsComboBox;
+    private javax.swing.JLabel GroupsLabel;
+    private javax.swing.JPanel GroupsPanel;
+    private javax.swing.JTable GroupsTable;
+    private javax.swing.JScrollPane GroupsWordList;
+    private javax.swing.JComboBox<String> LanguageComboBox;
+    private javax.swing.JComboBox<String> MeaningLanguageComboBox;
+    private javax.swing.JLabel MeaningsLabel;
+    private javax.swing.JList<String> MeaningsList;
+    private javax.swing.JList<String> MegaList;
+    private javax.swing.JComboBox<String> MegaListLanguageComboBox;
+    private javax.swing.JPanel MegaListPanel;
+    private javax.swing.JTabbedPane TabbedPane;
+    private javax.swing.JPanel WordPanel;
+    private javax.swing.JTextField WordTextField;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JButton newCollectionJButton;
-    private javax.swing.JComboBox<String> partOfSpeechJComboBox;
-    private javax.swing.JLabel partOfSpeechJLabel;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables
 }
