@@ -1,8 +1,10 @@
 package com.sschudakov.dao.interf;
 
+import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 
 import java.sql.SQLException;
+import java.util.Collection;
 import java.util.List;
 
 public interface WordDao {
@@ -12,7 +14,7 @@ public interface WordDao {
 
     Word findById(Integer id) throws SQLException;
 
-    Word findByName(String name) throws SQLException;
+    Word findByValueAndLanguage(String value, Language language) throws SQLException;
 
     List<Word> findAll() throws SQLException;
 

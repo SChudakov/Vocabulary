@@ -2,20 +2,25 @@ package com.sschudakov.dao.impl.ormlite;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Collection;
 import java.util.List;
 
-public class WordDaoImpl implements WordDao {
+public class WordDaoOltImpl implements WordDao {
     private Dao<Word, Integer> wordsDao;
+    private WordClassDao wordClassDao;
 
-    public WordDaoImpl() {
+    public WordDaoOltImpl() {
         try {
             this.wordsDao = DaoManager.createDao(DatabaseManager.connectionSource, Word.class);
+            this.wordClassDao = new WordClassDaoOltImpl();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -38,13 +43,28 @@ public class WordDaoImpl implements WordDao {
     }
 
     @Override
-    public Word findByValueAndLanguage(String value, int languageId) {
-        throw new UnsupportedOperationException();
+    public Word findByValueAndLanguage(String value, Language language) throws SQLException {
+        PreparedStatement statement = DatabaseManager
+                .connection.prepareStatement(
+                        "SELECT * FROM words WHERE " +
+                                Word.VALUE_COLUMN_NAME + " = " + "\'" + value + "\'" +
+                                " AND " + Word.LANGUAGE_COLUMN_NAME + " = " + language.getLanguageID()
+                );
+        statement.execute();
+        ResultSet resultSet = statement.getResultSet();
+        if (!resultSet.next()) {
+            return null;
+        }
+        return formWord(resultSet, value, language);
     }
 
-    @Override
-    public Collection<Word> findByValue(String value) throws SQLException {
-        throw new UnsupportedOperationException();
+    private Word formWord(ResultSet resultSet, String value, Language language) throws SQLException {
+        Word result = new Word();
+        result.setWordID(resultSet.getInt(Word.ID_COLUMN_NAME));
+        result.setValue(value);
+        result.setLanguage(language);
+        result.setWordClass(this.wordClassDao.findById(resultSet.getInt(Word.WORD_CLASS_COLUMN_NAME)));
+        return result;
     }
 
     @Override

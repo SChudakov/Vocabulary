@@ -3,7 +3,9 @@ package com.sschudakov.dao.impl.ormlite;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.sschudakov.dao.interf.WMRDao;
+import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordMeaningRelationship;
 
 import java.sql.PreparedStatement;
@@ -13,15 +15,17 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class WMRDaoImpl implements WMRDao {
+public class WMRDaoOltImpl implements WMRDao {
     private Dao<WordMeaningRelationship, Integer> wordMeaningRelationshipsDao;
+    private WordDao wordDao;
 
-    public WMRDaoImpl() {
+    public WMRDaoOltImpl() {
         try {
             this.wordMeaningRelationshipsDao = DaoManager.createDao(DatabaseManager.connectionSource, WordMeaningRelationship.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        this.wordDao = new WordDaoOltImpl();
     }
 
     @Override
@@ -40,12 +44,11 @@ public class WMRDaoImpl implements WMRDao {
         return this.wordMeaningRelationshipsDao.queryForId(id);
     }
 
-    @Override
-    public Collection<WordMeaningRelationship> findByWord(String word) throws SQLException {
+    public Collection<WordMeaningRelationship> findByWordId(int wordId) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM word meaning relationship WHERE " +
-                                WordMeaningRelationship.WORD_COLUMN_NAME + " = " + word
+                        "SELECT * FROM word_meaning_relationship WHERE " +
+                                WordMeaningRelationship.WORD_COLUMN_NAME + " = " + wordId
                 );
         ResultSet resultSet = statement.getResultSet();
 
@@ -53,11 +56,11 @@ public class WMRDaoImpl implements WMRDao {
     }
 
     @Override
-    public Collection<WordMeaningRelationship> findByMeaning(String meaning) throws SQLException {
+    public Collection<WordMeaningRelationship> findByMeaningId(int meaningId) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM word meaning relationship WHERE " +
-                                WordMeaningRelationship.MEANING_COLUMN_NAME + " = " + "\'" + meaning + "\'"
+                        "SELECT * FROM word_meaning_relationship WHERE " +
+                                WordMeaningRelationship.MEANING_COLUMN_NAME + " = " + "\'" + meaningId + "\'"
                 );
         statement.execute();
         ResultSet resultSet = statement.getResultSet();
@@ -65,21 +68,19 @@ public class WMRDaoImpl implements WMRDao {
         return formWMRCollection(resultSet);
     }
 
+
     private Collection<WordMeaningRelationship> formWMRCollection(ResultSet resultSet) throws SQLException {
         Collection<WordMeaningRelationship> result = new ArrayList<>();
         WordMeaningRelationship wcr;
         while (resultSet.next()) {
             wcr = new WordMeaningRelationship();
             wcr.setWordMeaningRelationshipID(resultSet.getInt(WordMeaningRelationship.ID_COLUMN_NAME));
-            /*wcr.setWord();
-            wcr.setWordCollection();*/
+            wcr.setWord(this.wordDao.findById(resultSet.getInt(WordMeaningRelationship.WORD_COLUMN_NAME)));
+            wcr.setMeaning(this.wordDao.findById(resultSet.getInt(WordMeaningRelationship.MEANING_COLUMN_NAME)));
             result.add(wcr);
         }
-        //TODO: implement
-        /*return result;*/
-        throw new UnsupportedOperationException();
+        return result;
     }
-
 
     @Override
     public List<WordMeaningRelationship> findAll() throws SQLException {

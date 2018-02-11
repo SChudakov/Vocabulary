@@ -3,6 +3,8 @@ package com.sschudakov.database;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Collection;
 
@@ -29,12 +31,14 @@ public class DatabaseManager {
             USE_SSL_PARAMETER + USE_SSL;
     public static final String DATABASE_CREATION_SQL_STATEMENT = "CREATE DATABASE ";
 
-
+    public static Connection connection;
     public static ConnectionSource connectionSource;
+
 
 
     static {
         try {
+            connection = DriverManager.getConnection(DATABASE_FULL_URL);
             connectionSource = new JdbcConnectionSource(DATABASE_FULL_URL);
         } catch (SQLException e) {
             e.printStackTrace();

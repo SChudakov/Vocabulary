@@ -9,13 +9,10 @@ public interface LanguageDao {
 
     void save(Language language) throws SQLException;
 
-    Language update(Language language) throws SQLException;
-
     Language findById(Integer id) throws SQLException;
 
     Language findByName(String name) throws SQLException;
 
     List<Language> findAll() throws SQLException;
 
-    void remove(Integer languageID) throws SQLException;
 }

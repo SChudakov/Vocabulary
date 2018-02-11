@@ -8,7 +8,4 @@ public interface LanguageSrv {
 
     void create(String languageName) throws SQLException;
 
-    void delete(Integer languageId) throws SQLException;
-
-    Language update(Language language) throws SQLException;
 }

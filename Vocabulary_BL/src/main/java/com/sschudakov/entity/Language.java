@@ -7,12 +7,29 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "languages")
 @DatabaseTable(tableName = "languages")
 public class Language {
 
-    @DatabaseField(id = true, columnName = "id")
+    public static final String ID_FIELD_COLUMN_NAME = "language_id";
+    public static final String NAME_FIELD_COLUMN_NAME = "language_name";
+
+    @Id
+    @Column(name = ID_FIELD_COLUMN_NAME)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @DatabaseField(generatedId = true, columnName = ID_FIELD_COLUMN_NAME)
     private int languageID;
-    @DatabaseField(columnName = "language", canBeNull = false)
+
+    @Column(name = NAME_FIELD_COLUMN_NAME)
+    @DatabaseField(columnName = NAME_FIELD_COLUMN_NAME, canBeNull = false)
     private String languageName;
 
     public int getLanguageID() {
@@ -61,8 +78,8 @@ public class Language {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
-                .append(this.languageID)
-                .append(this.languageName)
-                .toString();
+                .append("language id", this.languageID)
+                .append("language name", this.languageName)
+                .build();
     }
 }

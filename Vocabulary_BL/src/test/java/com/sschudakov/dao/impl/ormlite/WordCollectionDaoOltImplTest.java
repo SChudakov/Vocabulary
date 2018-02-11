@@ -1,6 +1,5 @@
 package com.sschudakov.dao.impl.ormlite;
 
-import com.sschudakov.dao.impl.ormlite.WordCollectionDaoImpl;
 import com.sschudakov.entity.WordCollection;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,13 +7,13 @@ import org.junit.Test;
 import java.sql.SQLException;
 import java.util.Collection;
 
-public class WordCollectionDaoImplTest {
+public class WordCollectionDaoOltImplTest {
 
-    private WordCollectionDaoImpl wordCollectionDao;
+    private WordCollectionDaoOltImpl wordCollectionDao;
 
     @Before
     public void init() {
-        this.wordCollectionDao = new WordCollectionDaoImpl();
+        this.wordCollectionDao = new WordCollectionDaoOltImpl();
     }
 
     @Test

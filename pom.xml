@@ -13,9 +13,7 @@
         <module>Vocabulary_BL</module>
     </modules>
 
-    <dependencies>
 
-    </dependencies>
 
     <build>
         <plugins>

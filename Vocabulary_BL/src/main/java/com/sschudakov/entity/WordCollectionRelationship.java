@@ -6,13 +6,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-@DatabaseTable(tableName = "word collection relationship")
+@DatabaseTable(tableName = "word_collection_relationships")
 public class WordCollectionRelationship {
-    @DatabaseField(columnName = "id", id = true)
+
+    public static final String ID_COLUMN_NAME = "collection_relationship_id";
+    public static final String WORD_COLUMN_NAME = "relationships_word";
+    public static final String COLLECTION_COLUMN_NAME = "relationships_collection";
+
+
+    @DatabaseField(generatedId = true,columnName = ID_COLUMN_NAME)
     private int wordCollectionRelationshipID;
-    @DatabaseField(columnName = "word", canBeNull = false, foreign = true)
+    @DatabaseField(columnName = WORD_COLUMN_NAME, canBeNull = false, foreign = true)
     private Word word;
-    @DatabaseField(columnName = "collection", canBeNull = false, foreign = true)
+    @DatabaseField(columnName = COLLECTION_COLUMN_NAME, canBeNull = false, foreign = true)
     private WordCollection wordCollection;
 
 
@@ -72,9 +78,9 @@ public class WordCollectionRelationship {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append(this.wordCollectionRelationshipID)
-                .append(this.word)
-                .append(this.wordCollection)
-                .toString();
+                .append("id", this.wordCollectionRelationshipID)
+                .append("word", this.word)
+                .append("word collection", this.wordCollection)
+                .build();
     }
 }

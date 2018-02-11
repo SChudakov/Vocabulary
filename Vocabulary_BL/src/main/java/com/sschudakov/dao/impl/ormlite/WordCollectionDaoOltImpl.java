@@ -11,10 +11,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class WordCollectionDaoImpl implements WordCollectionDao {
+public class WordCollectionDaoOltImpl implements WordCollectionDao {
     private Dao<WordCollection, Integer> wordCollectionsDao;
 
-    public WordCollectionDaoImpl() {
+    public WordCollectionDaoOltImpl() {
         try {
             this.wordCollectionsDao = DaoManager.createDao(DatabaseManager.connectionSource, WordCollection.class);
         } catch (SQLException e) {

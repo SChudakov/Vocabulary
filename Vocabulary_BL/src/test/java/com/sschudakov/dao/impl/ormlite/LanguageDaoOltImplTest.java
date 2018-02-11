@@ -1,6 +1,5 @@
 package com.sschudakov.dao.impl.ormlite;
 
-import com.sschudakov.dao.impl.ormlite.LanguageDaoImpl;
 import com.sschudakov.entity.Language;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,13 +7,13 @@ import org.junit.Test;
 import java.sql.SQLException;
 import java.util.Collection;
 
-public class LanguageDaoImplTest {
+public class LanguageDaoOltImplTest {
 
-    private LanguageDaoImpl languageDao;
+    private LanguageDaoOltImpl languageDao;
 
     @Before
     public void init() {
-        this.languageDao = new LanguageDaoImpl();
+        this.languageDao = new LanguageDaoOltImpl();
     }
 
     @Test

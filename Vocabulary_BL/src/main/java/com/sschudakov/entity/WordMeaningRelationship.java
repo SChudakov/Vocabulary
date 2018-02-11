@@ -6,14 +6,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-@DatabaseTable(tableName = "word meaning relationship")
+@DatabaseTable(tableName = "word_meaning_relationships")
 public class WordMeaningRelationship {
 
-    @DatabaseField(columnName = "id", id = true)
+    public static final String ID_COLUMN_NAME = "meaning_relationship_id";
+    public static final String WORD_COLUMN_NAME = "relationship_word";
+    public static final String MEANING_COLUMN_NAME = "relationship_meaning";
+
+    @DatabaseField(generatedId = true, columnName = ID_COLUMN_NAME)
     private int wordMeaningRelationshipID;
-    @DatabaseField(columnName = "word", canBeNull = false, foreign = true)
+    @DatabaseField(columnName = WORD_COLUMN_NAME, canBeNull = false, foreign = true)
     private Word word;
-    @DatabaseField(columnName = "meaning", canBeNull = false, foreign = true)
+    @DatabaseField(columnName = MEANING_COLUMN_NAME, canBeNull = false, foreign = true)
     private Word meaning;
 
 
@@ -73,9 +77,9 @@ public class WordMeaningRelationship {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append(this.wordMeaningRelationshipID)
-                .append(this.word)
-                .append(this.meaning)
-                .toString();
+                .append("id", this.wordMeaningRelationshipID)
+                .append("word", this.word)
+                .append("meaning", this.meaning)
+                .build();
     }
 }

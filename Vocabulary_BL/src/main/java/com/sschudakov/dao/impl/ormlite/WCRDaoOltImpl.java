@@ -3,6 +3,8 @@ package com.sschudakov.dao.impl.ormlite;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.sschudakov.dao.interf.WCRDao;
+import com.sschudakov.dao.interf.WordCollectionDao;
+import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordCollectionRelationship;
 
@@ -13,15 +15,19 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class WCRDaoImpl implements WCRDao {
+public class WCRDaoOltImpl implements WCRDao {
     private Dao<WordCollectionRelationship, Integer> wordCollectionRelationshipsDao;
+    private WordDao wordDao;
+    private WordCollectionDao wordCollectionDao;
 
-    public WCRDaoImpl() {
+    public WCRDaoOltImpl() {
         try {
             this.wordCollectionRelationshipsDao = DaoManager.createDao(DatabaseManager.connectionSource, WordCollectionRelationship.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        this.wordDao = new WordDaoOltImpl();
+        this.wordCollectionDao = new WordCollectionDaoOltImpl();
     }
 
     @Override
@@ -41,11 +47,11 @@ public class WCRDaoImpl implements WCRDao {
     }
 
     @Override
-    public Collection<WordCollectionRelationship> findByWord(String word) throws SQLException {
+    public Collection<WordCollectionRelationship> findByWordId(int wordId) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM word collection relationship WHERE " +
-                                WordCollectionRelationship.WORD_COLUMN_NAME + " = " + "\'" + word + "\'"
+                        "SELECT * FROM word_collection_relationship WHERE " +
+                                WordCollectionRelationship.WORD_COLUMN_NAME + " = " + "\'" + wordId + "\'"
                 );
         statement.execute();
         ResultSet resultSet = statement.getResultSet();
@@ -54,11 +60,11 @@ public class WCRDaoImpl implements WCRDao {
     }
 
     @Override
-    public Collection<WordCollectionRelationship> findByCollection(String collectionsName) throws SQLException {
+    public Collection<WordCollectionRelationship> findByCollection(int collectionId) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM 'word collection relationship' WHERE " +
-                                WordCollectionRelationship.COLLECTION_COLUMN_NAME + "=" + collectionsName
+                        "SELECT * FROM word_collection_relationship WHERE " +
+                                WordCollectionRelationship.COLLECTION_COLUMN_NAME + "=" + collectionId
                 );
         ResultSet resultSet = statement.getResultSet();
 
@@ -71,8 +77,12 @@ public class WCRDaoImpl implements WCRDao {
         while (resultSet.next()) {
             wcr = new WordCollectionRelationship();
             wcr.setWordCollectionRelationshipID(resultSet.getInt(WordCollectionRelationship.ID_COLUMN_NAME));
-            /*wcr.setWord();
-            wcr.setWordCollection();*/
+            wcr.setWord(
+                    this.wordDao.findById(
+                            resultSet.getInt(WordCollectionRelationship.WORD_COLUMN_NAME)));
+            wcr.setWordCollection(
+                    this.wordCollectionDao.findById(
+                            resultSet.getInt(WordCollectionRelationship.COLLECTION_COLUMN_NAME)));
             result.add(wcr);
         }
         //TODO: implement
