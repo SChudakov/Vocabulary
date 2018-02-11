@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl;
+package com.sschudakov.dao.impl.ormlite;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
@@ -6,6 +6,8 @@ import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordClass;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -25,11 +27,6 @@ public class WordClassDaoImpl implements WordClassDao {
         this.wordClassDao.create(wordClass);
     }
 
-    @Override
-    public WordClass update(WordClass wordClass) throws SQLException {
-        this.wordClassDao.update(wordClass);
-        return wordClass;
-    }
 
     @Override
     public WordClass findById(Integer id) throws SQLException {
@@ -38,7 +35,26 @@ public class WordClassDaoImpl implements WordClassDao {
 
     @Override
     public WordClass findByName(String name) throws SQLException {
-        throw new UnsupportedOperationException();
+        PreparedStatement statement = DatabaseManager
+                .connection.prepareStatement(
+                        "SELECT * FROM word_classes WHERE " +
+                                WordClass.CLASS_NAME_COLUMN_NAME + " = " + "\'" + name + "\'"
+                );
+        statement.execute();
+
+        ResultSet resultSet = statement.getResultSet();
+        if (!resultSet.next()) {
+            return null;
+        }
+
+        return formWordClass(resultSet, name);
+    }
+
+    private WordClass formWordClass(ResultSet resultSet, String name) throws SQLException {
+        WordClass result = new WordClass();
+        result.setWordClassID(resultSet.getInt(WordClass.ID_COLUMN_NAME));
+        result.setWordClassName(name);
+        return result;
     }
 
     @Override
@@ -46,8 +62,9 @@ public class WordClassDaoImpl implements WordClassDao {
         return this.wordClassDao.queryForAll();
     }
 
-    @Override
-    public void remove(Integer wordClassID) throws SQLException {
-        this.wordClassDao.deleteById(wordClassID);
-    }
+
+    /**
+     * Data about word classes never been changed or removed.
+     * So update and remove operations are not present in this DAO.
+     */
 }
