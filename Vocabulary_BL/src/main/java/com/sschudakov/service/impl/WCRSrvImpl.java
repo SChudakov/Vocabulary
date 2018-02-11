@@ -56,6 +56,6 @@ public class WCRSrvImpl implements WCRSrv {
     @Override
     public Collection<WordCollectionRelationship> findByCollection(String collection) throws SQLException {
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
-        return this.wcrDao.findByCollection(foundCollection.getCollectionID());
+        return this.wcrDao.findByCollectionId(foundCollection.getCollectionID());
     }
 }

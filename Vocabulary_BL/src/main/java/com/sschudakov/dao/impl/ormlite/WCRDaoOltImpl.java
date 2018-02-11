@@ -50,7 +50,7 @@ public class WCRDaoOltImpl implements WCRDao {
     public Collection<WordCollectionRelationship> findByWordId(int wordId) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM word_collection_relationship WHERE " +
+                        "SELECT * FROM word_collection_relationships WHERE " +
                                 WordCollectionRelationship.WORD_COLUMN_NAME + " = " + "\'" + wordId + "\'"
                 );
         statement.execute();
@@ -60,12 +60,13 @@ public class WCRDaoOltImpl implements WCRDao {
     }
 
     @Override
-    public Collection<WordCollectionRelationship> findByCollection(int collectionId) throws SQLException {
+    public Collection<WordCollectionRelationship> findByCollectionId(int collectionId) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM word_collection_relationship WHERE " +
-                                WordCollectionRelationship.COLLECTION_COLUMN_NAME + "=" + collectionId
+                        "SELECT * FROM word_collection_relationships WHERE " +
+                                WordCollectionRelationship.COLLECTION_COLUMN_NAME + " = " + collectionId
                 );
+        statement.execute();
         ResultSet resultSet = statement.getResultSet();
 
         return formWCRCollection(resultSet);
@@ -85,9 +86,7 @@ public class WCRDaoOltImpl implements WCRDao {
                             resultSet.getInt(WordCollectionRelationship.COLLECTION_COLUMN_NAME)));
             result.add(wcr);
         }
-        //TODO: implement
-        /*return result;*/
-        throw new UnsupportedOperationException();
+        return result;
     }
 
     @Override

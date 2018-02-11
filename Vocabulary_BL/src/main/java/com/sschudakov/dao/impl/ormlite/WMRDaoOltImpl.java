@@ -5,7 +5,6 @@ import com.j256.ormlite.dao.DaoManager;
 import com.sschudakov.dao.interf.WMRDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
-import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordMeaningRelationship;
 
 import java.sql.PreparedStatement;
@@ -47,9 +46,10 @@ public class WMRDaoOltImpl implements WMRDao {
     public Collection<WordMeaningRelationship> findByWordId(int wordId) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM word_meaning_relationship WHERE " +
+                        "SELECT * FROM word_meaning_relationships WHERE " +
                                 WordMeaningRelationship.WORD_COLUMN_NAME + " = " + wordId
                 );
+        statement.execute();
         ResultSet resultSet = statement.getResultSet();
 
         return formWMRCollection(resultSet);
@@ -59,8 +59,8 @@ public class WMRDaoOltImpl implements WMRDao {
     public Collection<WordMeaningRelationship> findByMeaningId(int meaningId) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM word_meaning_relationship WHERE " +
-                                WordMeaningRelationship.MEANING_COLUMN_NAME + " = " + "\'" + meaningId + "\'"
+                        "SELECT * FROM word_meaning_relationships WHERE " +
+                                WordMeaningRelationship.MEANING_COLUMN_NAME + " = " + meaningId
                 );
         statement.execute();
         ResultSet resultSet = statement.getResultSet();

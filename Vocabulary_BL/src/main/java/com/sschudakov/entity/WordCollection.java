@@ -14,7 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "word_classes")
+@Table(name = "word_collections")
 @DatabaseTable(tableName = "word_collections")
 public class WordCollection {
 

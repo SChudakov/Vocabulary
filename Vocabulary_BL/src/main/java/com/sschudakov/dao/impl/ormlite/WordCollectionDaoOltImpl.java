@@ -42,11 +42,9 @@ public class WordCollectionDaoOltImpl implements WordCollectionDao {
     public WordCollection findByName(String name) throws SQLException {
         PreparedStatement statement = DatabaseManager
                 .connection.prepareStatement(
-                        "SELECT * FROM word_collection_relationships WHERE " +
+                        "SELECT * FROM word_collections WHERE " +
                                 WordCollection.COLLECTION_NAME_COLUMN_NAME + " = " + "\'" + name + "\'"
                 );
-        System.out.println("SELECT * FROM word_collection_relationships WHERE " +
-                WordCollection.COLLECTION_NAME_COLUMN_NAME + " = " + "\'" + name + "\'");
         statement.execute();
         ResultSet resultSet = statement.getResultSet();
         if (!resultSet.next()) {

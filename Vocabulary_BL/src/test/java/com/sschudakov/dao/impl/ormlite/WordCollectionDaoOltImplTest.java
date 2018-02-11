@@ -24,10 +24,10 @@ public class WordCollectionDaoOltImplTest {
     }
 
     @Test
-    public void update() {
-        /*WordCollection wordCollection = new WordCollection();
+    public void update() throws SQLException {
+        WordCollection wordCollection = new WordCollection();
         wordCollection.setCollectionName("some collection");
-        this.wordCollectionDao.update(wordCollection);*/
+        this.wordCollectionDao.update(wordCollection);
     }
 
     @Test
