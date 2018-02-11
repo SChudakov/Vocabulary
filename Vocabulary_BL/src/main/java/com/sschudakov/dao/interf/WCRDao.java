@@ -3,6 +3,7 @@ package com.sschudakov.dao.interf;
 import com.sschudakov.entity.WordCollectionRelationship;
 
 import java.sql.SQLException;
+import java.util.Collection;
 import java.util.List;
 
 public interface WCRDao {
@@ -13,7 +14,9 @@ public interface WCRDao {
 
     WordCollectionRelationship findById(Integer id) throws SQLException;
 
-    WordCollectionRelationship findByName(String name) throws SQLException;
+    Collection<WordCollectionRelationship> findByWordId(int wordId) throws SQLException;
+
+    Collection<WordCollectionRelationship> findByCollection(int collectionId) throws SQLException;
 
     List<WordCollectionRelationship> findAll() throws SQLException;
 

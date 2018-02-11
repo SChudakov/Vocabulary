@@ -1,5 +1,8 @@
 package com.sschudakov;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,11 +14,10 @@ public class Main {
     private static final String ADJECTIVE_MIT_PRÄPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.docx";
 
     public static void main(String[] args) {
-//        try {
-//            TableUtils.dropTable(DatabaseManager.connectionSource, WordMeaningRelationship.class, false);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+        EntityManagerFactory entityManagerFactory = Persistence.
+                createEntityManagerFactory("org.hibernate.tutorial.jpa");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.close();
     }
 
 

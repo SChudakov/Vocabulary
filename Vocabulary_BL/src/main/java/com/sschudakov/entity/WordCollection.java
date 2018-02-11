@@ -6,11 +6,29 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-@DatabaseTable(tableName = "words collections")
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "word_classes")
+@DatabaseTable(tableName = "word_collections")
 public class WordCollection {
-    @DatabaseField(id = true, columnName = "id")
+
+    public static final String ID_COLUMN_NAME = "word_collection_id";
+    public static final String COLLECTION_NAME_COLUMN_NAME = "word_collection_name";
+
+    @Id
+    @Column(name = ID_COLUMN_NAME)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @DatabaseField(generatedId = true, columnName = ID_COLUMN_NAME)
     private int collectionID;
-    @DatabaseField(columnName = "name", canBeNull = false)
+
+    @Column(name = COLLECTION_NAME_COLUMN_NAME)
+    @DatabaseField(columnName = COLLECTION_NAME_COLUMN_NAME, canBeNull = false)
     private String collectionName;
 
 
@@ -59,8 +77,8 @@ public class WordCollection {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append(this.collectionID)
-                .append(this.collectionName)
-                .toString();
+                .append("id", this.collectionID)
+                .append("collection name", this.collectionName)
+                .build();
     }
 }

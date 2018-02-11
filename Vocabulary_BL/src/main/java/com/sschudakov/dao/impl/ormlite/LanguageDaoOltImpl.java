@@ -11,11 +11,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class LanguageDaoImpl implements LanguageDao {
+public class LanguageDaoOltImpl implements LanguageDao {
 
     private Dao<Language, Integer> languagesDao;
 
-    public LanguageDaoImpl() {
+    public LanguageDaoOltImpl() {
         try {
             this.languagesDao = DaoManager.createDao(DatabaseManager.connectionSource, Language.class);
         } catch (SQLException e) {
@@ -40,8 +40,6 @@ public class LanguageDaoImpl implements LanguageDao {
                         "SELECT * FROM languages WHERE " +
                                 Language.NAME_FIELD_COLUMN_NAME + " = " + "\'" + name + "\'"
                 );
-        System.out.println("SELECT * FROM languages WHERE " +
-                Language.NAME_FIELD_COLUMN_NAME + " = " + "\'" + name + "\'");
         statement.execute();
         ResultSet resultSet = statement.getResultSet();
         if (!resultSet.next()) {
