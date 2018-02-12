@@ -1,5 +1,6 @@
 package com.sschudakov.service.interf;
 
+import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 
 import java.sql.SQLException;
@@ -8,13 +9,13 @@ import java.util.List;
 
 public interface WordSrv {
 
-    void create(String word, String wordClass, String language,
-                Collection<String> collectionsNames, Collection<String> meanings,
-                String meaningsLanguage) throws SQLException;
+    void create(String word, String wordClass, String language) throws SQLException;
 
     Word update(Word word) throws SQLException;
 
     Word findById(Integer id) throws SQLException;
+
+    Word findByValueAndLanguage(String value, String languageName) throws SQLException;
 
     List<Word> findAll() throws SQLException;
 

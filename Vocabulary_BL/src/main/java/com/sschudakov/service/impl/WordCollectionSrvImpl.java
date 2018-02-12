@@ -5,6 +5,7 @@ import com.sschudakov.entity.WordCollection;
 import com.sschudakov.service.interf.WordCollectionSrv;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class WordCollectionSrvImpl implements WordCollectionSrv {
 
@@ -26,5 +27,20 @@ public class WordCollectionSrvImpl implements WordCollectionSrv {
     @Override
     public WordCollection update(WordCollection wordCollection) throws SQLException {
         return this.wordCollectionDao.update(wordCollection);
+    }
+
+    @Override
+    public WordCollection findById(Integer id) throws SQLException {
+        return this.wordCollectionDao.findById(id);
+    }
+
+    @Override
+    public WordCollection findByName(String name) throws SQLException {
+        return this.wordCollectionDao.findByName(name);
+    }
+
+    @Override
+    public List<WordCollection> findAll() throws SQLException {
+        return this.wordCollectionDao.findAll();
     }
 }
