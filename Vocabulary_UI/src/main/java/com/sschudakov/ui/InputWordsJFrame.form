@@ -65,7 +65,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="wordTabJPanel">
+            <Container class="javax.swing.JPanel" name="wordTabJP">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[400, 400]"/>
@@ -85,23 +85,23 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="wordJTextField" max="32767" attributes="0"/>
-                              <Component id="applyJButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="wordJTF" max="32767" attributes="0"/>
+                              <Component id="applyJB" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="wordLanguageJCB" alignment="0" max="32767" attributes="0"/>
                                       <Component id="meaningsLanguageJCB" alignment="0" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="meaningJLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="meaningJL" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jScrollPane1" alignment="0" pref="280" max="32767" attributes="0"/>
-                                      <Component id="meaningJTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="meaningsJlJSP" alignment="0" pref="280" max="32767" attributes="0"/>
+                                      <Component id="meaningJTF" alignment="0" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                          <Component id="addMeaningJButton" min="-2" pref="111" max="-2" attributes="0"/>
+                                          <Component id="addMeaningJB" min="-2" pref="111" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="removeMeaningJButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="removeMeaningJB" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -109,10 +109,10 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="collectionsJLabel" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jScrollPane2" min="-2" pref="280" max="-2" attributes="0"/>
+                                              <Component id="collectionsJL" min="-2" max="-2" attributes="0"/>
+                                              <Component id="collectionsJTJSP" min="-2" pref="280" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="wordClassJCB" max="32767" attributes="0"/>
                                   </Group>
@@ -126,7 +126,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Component id="wordJTextField" min="-2" max="-2" attributes="0"/>
+                          <Component id="wordJTF" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="wordLanguageJCB" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -134,28 +134,28 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="meaningJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="collectionsJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="meaningJL" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="collectionsJL" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                  <Component id="meaningJTextField" min="-2" max="-2" attributes="0"/>
+                                  <Component id="meaningJTF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="meaningsLanguageJCB" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="removeMeaningJButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="addMeaningJButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="removeMeaningJB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="addMeaningJB" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" pref="188" max="32767" attributes="0"/>
+                                  <Component id="meaningsJlJSP" pref="188" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane2" pref="0" max="32767" attributes="0"/>
+                              <Component id="collectionsJTJSP" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="applyJButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="applyJB" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -173,17 +173,14 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JTextField" name="wordJTextField">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="word"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="wordJTF">
                 </Component>
-                <Component class="javax.swing.JLabel" name="meaningJLabel">
+                <Component class="javax.swing.JLabel" name="meaningJL">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Meanings"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="collectionsJLabel">
+                <Component class="javax.swing.JLabel" name="collectionsJL">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Collections"/>
                   </Properties>
@@ -199,14 +196,14 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                <Container class="javax.swing.JScrollPane" name="meaningsJlJSP">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JList" name="meanignsJList">
+                    <Component class="javax.swing.JList" name="meanignsJL">
                       <Properties>
                         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                           <StringArray count="0"/>
@@ -218,22 +215,22 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="applyJButton">
+                <Component class="javax.swing.JButton" name="applyJB">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="apply"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="applyJButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="applyJBActionPerformed"/>
                   </Events>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                <Container class="javax.swing.JScrollPane" name="collectionsJTJSP">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="collectionsJTable">
+                    <Component class="javax.swing.JTable" name="collectionsJT">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="2" rowCount="4">
@@ -245,14 +242,14 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JTextField" name="meaningJTextField">
+                <Component class="javax.swing.JTextField" name="meaningJTF">
                 </Component>
-                <Component class="javax.swing.JButton" name="addMeaningJButton">
+                <Component class="javax.swing.JButton" name="addMeaningJB">
                   <Properties>
                     <Property name="text" type="java.lang.String" value=" add meaning"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addMeaningJButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addMeaningJBActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="wordClassJCB">
@@ -265,21 +262,21 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="removeMeaningJButton">
+                <Component class="javax.swing.JButton" name="removeMeaningJB">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="remove meaning"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeMeaningJButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeMeaningJBActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="collectionsTabJPanel">
+            <Container class="javax.swing.JPanel" name="collectionsTabJP">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Groups">
-                    <Property name="tabTitle" type="java.lang.String" value="Groups"/>
+                  <JTabbedPaneConstraints tabName="Colelctions">
+                    <Property name="tabTitle" type="java.lang.String" value="Colelctions"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -291,13 +288,13 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="collectionWordsLanguageJCB" max="32767" attributes="0"/>
-                              <Component id="GroupsWordList" alignment="0" pref="578" max="32767" attributes="0"/>
+                              <Component id="collectionWordsJSP" alignment="0" pref="578" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="collectionJTextField" max="32767" attributes="0"/>
+                                  <Component id="collectionJTF" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="createCollectionJButton" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="createCollectionJB" min="-2" pref="69" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                  <Component id="deleteCollectionJButton" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deleteCollectionJB" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -309,14 +306,14 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="collectionJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="deleteCollectionJButton" alignment="3" max="32767" attributes="0"/>
-                              <Component id="createCollectionJButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="collectionJTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="deleteCollectionJB" alignment="3" max="32767" attributes="0"/>
+                              <Component id="createCollectionJB" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="collectionWordsLanguageJCB" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="GroupsWordList" min="-2" pref="295" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="collectionWordsJSP" pref="317" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -334,24 +331,24 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JTextField" name="collectionJTextField">
+                <Component class="javax.swing.JTextField" name="collectionJTF">
                 </Component>
-                <Component class="javax.swing.JButton" name="createCollectionJButton">
+                <Component class="javax.swing.JButton" name="createCollectionJB">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="create"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createCollectionJButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createCollectionJBActionPerformed"/>
                   </Events>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="GroupsWordList">
+                <Container class="javax.swing.JScrollPane" name="collectionWordsJSP">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JList" name="collectionWordsJList">
+                    <Component class="javax.swing.JList" name="collectionWordsJL">
                       <Properties>
                         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                           <StringArray count="0"/>
@@ -363,21 +360,21 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="deleteCollectionJButton">
+                <Component class="javax.swing.JButton" name="deleteCollectionJB">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="delete"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCollectionJButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCollectionJBActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="languageWordsTabJPanel">
+            <Container class="javax.swing.JPanel" name="languagesTabJP">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="MegaList">
-                    <Property name="tabTitle" type="java.lang.String" value="MegaList"/>
+                  <JTabbedPaneConstraints tabName="Languages">
+                    <Property name="tabTitle" type="java.lang.String" value="Languages"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -388,11 +385,11 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane3" pref="578" max="32767" attributes="0"/>
+                              <Component id="languageWordsJSP" pref="578" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="allWordsLanguageJCB" max="32767" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="deleteWordJButton" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deleteWordJB" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -405,24 +402,24 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="allWordsLanguageJCB" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="deleteWordJButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="deleteWordJB" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" pref="367" max="32767" attributes="0"/>
+                          <Component id="languageWordsJSP" pref="367" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                <Container class="javax.swing.JScrollPane" name="languageWordsJSP">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JList" name="languageWordsJList">
+                    <Component class="javax.swing.JList" name="languageWordsJL">
                       <Properties>
                         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                           <StringArray count="0"/>
@@ -434,12 +431,12 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="deleteWordJButton">
+                <Component class="javax.swing.JButton" name="deleteWordJB">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="delete word"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteWordJButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteWordJBActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="allWordsLanguageJCB">
