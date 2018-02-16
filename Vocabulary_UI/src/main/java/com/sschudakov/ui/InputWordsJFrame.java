@@ -5,11 +5,8 @@
  */
 package com.sschudakov.ui;
 
-import com.sschudakov.request.UserRequestManager;
-
-import java.util.List;
-
 /**
+ *
  * @author Semen
  */
 public class InputWordsJFrame extends javax.swing.JFrame {
@@ -19,12 +16,10 @@ public class InputWordsJFrame extends javax.swing.JFrame {
      */
     public InputWordsJFrame() {
         initComponents();
-
-        this.collectionsJT.getColumnModel().getColumn(0).setMinWidth(274);
-        this.collectionsJT.getColumnModel().getColumn(1).setMinWidth(20);
-        this.collectionsJT.getColumnModel().getColumn(1).setPreferredWidth(20);
-
-        this.userRequestManager = new UserRequestManager();
+        
+        collectionsJT.getColumnModel().getColumn(0).setMinWidth(274);
+        collectionsJT.getColumnModel().getColumn(1).setMinWidth(20);
+        collectionsJT.getColumnModel().getColumn(1).setPreferredWidth(20);
     }
 
     /**
@@ -36,65 +31,81 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mainJPanel = new javax.swing.JPanel();
-        mainJTabbedPane = new javax.swing.JTabbedPane();
-        wordTabJP = new javax.swing.JPanel();
-        wordLanguageJCB = new javax.swing.JComboBox<>();
+        classesJRBG = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        TabbedPane = new javax.swing.JTabbedPane();
+        wordJP = new javax.swing.JPanel();
+        languageJCB = new javax.swing.JComboBox<>();
         wordJTF = new javax.swing.JTextField();
-        meaningJL = new javax.swing.JLabel();
+        meaningsJL = new javax.swing.JLabel();
         collectionsJL = new javax.swing.JLabel();
-        meaningsLanguageJCB = new javax.swing.JComboBox<>();
-        meaningsJlJSP = new javax.swing.JScrollPane();
-        meanignsJL = new javax.swing.JList<>();
-        applyJB = new javax.swing.JButton();
-        collectionsJTJSP = new javax.swing.JScrollPane();
+        meaningLanguageJCB = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        wordMeaningsJL = new javax.swing.JList<>();
+        saveWordJB = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
         collectionsJT = new javax.swing.JTable();
-        meaningJTF = new javax.swing.JTextField();
-        addMeaningJB = new javax.swing.JButton();
-        wordClassJCB = new javax.swing.JComboBox<>();
-        removeMeaningJB = new javax.swing.JButton();
-        collectionsTabJP = new javax.swing.JPanel();
-        collectionWordsLanguageJCB = new javax.swing.JComboBox<>();
-        collectionJTF = new javax.swing.JTextField();
-        createCollectionJB = new javax.swing.JButton();
-        collectionWordsJSP = new javax.swing.JScrollPane();
-        collectionWordsJL = new javax.swing.JList<>();
-        deleteCollectionJB = new javax.swing.JButton();
-        languagesTabJP = new javax.swing.JPanel();
-        languageWordsJSP = new javax.swing.JScrollPane();
-        languageWordsJL = new javax.swing.JList<>();
+        classJL = new javax.swing.JLabel();
+        classRadioButton1 = new javax.swing.JRadioButton();
+        classRadioButton2 = new javax.swing.JRadioButton();
+        classRadioButton3 = new javax.swing.JRadioButton();
+        classRadioButton4 = new javax.swing.JRadioButton();
+        classRadioButton5 = new javax.swing.JRadioButton();
+        classRadioButton6 = new javax.swing.JRadioButton();
+        classRadioButton7 = new javax.swing.JRadioButton();
+        classRadioButton8 = new javax.swing.JRadioButton();
+        classRadioButton9 = new javax.swing.JRadioButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        collectionsJP = new javax.swing.JPanel();
+        collectionsJCB = new javax.swing.JComboBox<>();
+        addCollectionJTF = new javax.swing.JTextField();
+        addCollectionJB = new javax.swing.JButton();
+        collectionWordsJL = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        MegaListPanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        MegaList = new javax.swing.JList<>();
         deleteWordJB = new javax.swing.JButton();
-        allWordsLanguageJCB = new javax.swing.JComboBox<>();
+        MegaListLanguageComboBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        mainJTabbedPane.setToolTipText("");
-        mainJTabbedPane.setPreferredSize(new java.awt.Dimension(600, 400));
+        TabbedPane.setPreferredSize(new java.awt.Dimension(700, 500));
 
-        wordTabJP.setPreferredSize(new java.awt.Dimension(400, 400));
+        wordJP.setPreferredSize(new java.awt.Dimension(400, 400));
 
-        wordLanguageJCB.setMaximumRowCount(3);
+        languageJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Russian", "English", "Ukrainian", "1337", "Dutch" }));
 
-        meaningJL.setText("Meanings");
+        wordJTF.setText("�����");
+
+        meaningsJL.setText("Meanings");
 
         collectionsJL.setText("Collections");
 
-        meaningsLanguageJCB.setMaximumRowCount(3);
+        meaningLanguageJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "Russian", "Ukrainian", "1337", "Dutch" }));
 
-        meaningsJlJSP.setViewportView(meanignsJL);
-
-        applyJB.setText("apply");
-        applyJB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                applyJBActionPerformed(evt);
-            }
+        wordMeaningsJL.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Hero", " " };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
+        jScrollPane1.setViewportView(wordMeaningsJL);
+
+        saveWordJB.setText("Save word");
 
         collectionsJT.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
+                {"My words", null},
+                {"Lesson1", null},
+                {"Lesson2", null},
                 {null, null}
             },
             new String [] {
@@ -109,261 +120,282 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        collectionsJTJSP.setViewportView(collectionsJT);
+        jScrollPane2.setViewportView(collectionsJT);
 
-        addMeaningJB.setText(" add meaning");
-        addMeaningJB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addMeaningJBActionPerformed(evt);
-            }
+        classJL.setText("Class");
+
+        classesJRBG.add(classRadioButton1);
+        classRadioButton1.setText("Noun");
+
+        classesJRBG.add(classRadioButton2);
+        classRadioButton2.setText("Verb");
+
+        classesJRBG.add(classRadioButton3);
+        classRadioButton3.setText("Adjective");
+
+        classesJRBG.add(classRadioButton4);
+        classRadioButton4.setText("<CLASS>");
+
+        classesJRBG.add(classRadioButton5);
+        classRadioButton5.setText("<CLASS>");
+
+        classesJRBG.add(classRadioButton6);
+        classRadioButton6.setText("<CLASS>");
+
+        classesJRBG.add(classRadioButton7);
+        classRadioButton7.setText("<CLASS>");
+
+        classesJRBG.add(classRadioButton8);
+        classRadioButton8.setText("<CLASS>");
+
+        classesJRBG.add(classRadioButton9);
+        classRadioButton9.setText("<CLASS>");
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "I", "Love", "Snake", "Name", "Lake", "Fake", "Make", "Take", "Bake", "Cake", "Hero" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
+        jScrollPane4.setViewportView(jList2);
 
-        removeMeaningJB.setText("remove meaning");
-        removeMeaningJB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                removeMeaningJBActionPerformed(evt);
-            }
-        });
+        jButton1.setText("Add meaning");
 
-        javax.swing.GroupLayout wordTabJPLayout = new javax.swing.GroupLayout(wordTabJP);
-        wordTabJP.setLayout(wordTabJPLayout);
-        wordTabJPLayout.setHorizontalGroup(
-            wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(wordTabJPLayout.createSequentialGroup()
+        jButton2.setText("Add collection");
+
+        jTextField1.setText("Collection");
+
+        jTextField2.setToolTipText("Language");
+
+        jButton3.setText("Add language");
+
+        javax.swing.GroupLayout WordPanelLayout = new javax.swing.GroupLayout(wordJP);
+        wordJP.setLayout(WordPanelLayout);
+        WordPanelLayout.setHorizontalGroup(
+            WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WordPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(wordJTF)
-                    .addComponent(applyJB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(wordTabJPLayout.createSequentialGroup()
-                        .addGroup(wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(wordLanguageJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(meaningsLanguageJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(wordTabJPLayout.createSequentialGroup()
-                                .addComponent(meaningJL)
-                                .addGap(14, 14, 14))
-                            .addComponent(meaningsJlJSP, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                            .addComponent(meaningJTF)
-                            .addGroup(wordTabJPLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(addMeaningJB, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(removeMeaningJB)
-                                .addGap(12, 12, 12)))
+                    .addComponent(saveWordJB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WordPanelLayout.createSequentialGroup()
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(classRadioButton3)
+                            .addComponent(classRadioButton4)
+                            .addComponent(classRadioButton5)
+                            .addComponent(classRadioButton6)
+                            .addComponent(classRadioButton7)
+                            .addComponent(classRadioButton8)
+                            .addComponent(classRadioButton9)
+                            .addComponent(classRadioButton2)
+                            .addComponent(classJL)
+                            .addComponent(classRadioButton1))
+                        .addGap(74, 74, 74)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(wordTabJPLayout.createSequentialGroup()
-                                .addGroup(wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(collectionsJL)
-                                    .addComponent(collectionsJTJSP, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(wordClassJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WordPanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(meaningsJL)
+                                .addGap(230, 230, 230))
+                            .addComponent(meaningLanguageJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1)
+                            .addComponent(jScrollPane4)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(collectionsJL)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
+                            .addComponent(jTextField1)))
+                    .addGroup(WordPanelLayout.createSequentialGroup()
+                        .addComponent(languageJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)))
                 .addContainerGap())
         );
-        wordTabJPLayout.setVerticalGroup(
-            wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(wordTabJPLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+        WordPanelLayout.setVerticalGroup(
+            WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WordPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(languageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(wordJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wordLanguageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(wordClassJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(meaningJL)
-                    .addComponent(collectionsJL))
+                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1)
+                    .addGroup(WordPanelLayout.createSequentialGroup()
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(WordPanelLayout.createSequentialGroup()
+                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(meaningsJL)
+                                        .addComponent(classJL))
+                                    .addComponent(collectionsJL))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(WordPanelLayout.createSequentialGroup()
+                                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(meaningLanguageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(classRadioButton1))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(WordPanelLayout.createSequentialGroup()
+                                                .addComponent(classRadioButton2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(classRadioButton3)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(classRadioButton4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(classRadioButton5)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(classRadioButton6)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(classRadioButton7)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(classRadioButton8)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(classRadioButton9))
+                                            .addGroup(WordPanelLayout.createSequentialGroup()
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jScrollPane4)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton1))
+                                    .addGroup(WordPanelLayout.createSequentialGroup()
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton2))))
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(wordTabJPLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(meaningJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(meaningsLanguageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(wordTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(removeMeaningJB)
-                            .addComponent(addMeaningJB))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(meaningsJlJSP, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
-                    .addComponent(collectionsJTJSP, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(applyJB)
+                .addComponent(saveWordJB)
                 .addGap(6, 6, 6))
         );
 
-        mainJTabbedPane.addTab("Words", wordTabJP);
+        TabbedPane.addTab("Words", wordJP);
 
-        collectionWordsLanguageJCB.setMaximumRowCount(3);
+        collectionsJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        createCollectionJB.setText("create");
-        createCollectionJB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createCollectionJBActionPerformed(evt);
-            }
+        addCollectionJTF.setToolTipText("Collection name");
+
+        addCollectionJB.setText("Add collection");
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
+        collectionWordsJL.setViewportView(jList1);
 
-        collectionWordsJSP.setViewportView(collectionWordsJL);
-
-        deleteCollectionJB.setText("delete");
-        deleteCollectionJB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteCollectionJBActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout collectionsTabJPLayout = new javax.swing.GroupLayout(collectionsTabJP);
-        collectionsTabJP.setLayout(collectionsTabJPLayout);
-        collectionsTabJPLayout.setHorizontalGroup(
-            collectionsTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(collectionsTabJPLayout.createSequentialGroup()
+        javax.swing.GroupLayout CollectionsPanelLayout = new javax.swing.GroupLayout(collectionsJP);
+        collectionsJP.setLayout(CollectionsPanelLayout);
+        CollectionsPanelLayout.setHorizontalGroup(
+            CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CollectionsPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(collectionsTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(collectionWordsLanguageJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(collectionWordsJSP, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, collectionsTabJPLayout.createSequentialGroup()
-                        .addComponent(collectionJTF)
+                .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(collectionsJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CollectionsPanelLayout.createSequentialGroup()
+                        .addComponent(addCollectionJTF, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(createCollectionJB, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
-                        .addComponent(deleteCollectionJB)))
+                        .addComponent(addCollectionJB))
+                    .addComponent(collectionWordsJL))
                 .addContainerGap())
         );
-        collectionsTabJPLayout.setVerticalGroup(
-            collectionsTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(collectionsTabJPLayout.createSequentialGroup()
+        CollectionsPanelLayout.setVerticalGroup(
+            CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CollectionsPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(collectionsTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(collectionJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deleteCollectionJB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(createCollectionJB))
-                .addGap(18, 18, 18)
-                .addComponent(collectionWordsLanguageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(collectionWordsJSP, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        mainJTabbedPane.addTab("Colelctions", collectionsTabJP);
-
-        languageWordsJSP.setViewportView(languageWordsJL);
-
-        deleteWordJB.setText("delete word");
-        deleteWordJB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteWordJBActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout languagesTabJPLayout = new javax.swing.GroupLayout(languagesTabJP);
-        languagesTabJP.setLayout(languagesTabJPLayout);
-        languagesTabJPLayout.setHorizontalGroup(
-            languagesTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(languagesTabJPLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(languagesTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(languageWordsJSP, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
-                    .addGroup(languagesTabJPLayout.createSequentialGroup()
-                        .addComponent(allWordsLanguageJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(deleteWordJB)))
-                .addContainerGap())
-        );
-        languagesTabJPLayout.setVerticalGroup(
-            languagesTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(languagesTabJPLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(languagesTabJPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(allWordsLanguageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deleteWordJB))
+                .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addCollectionJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addCollectionJB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(languageWordsJSP, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
+                .addComponent(collectionsJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(collectionWordsJL, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        mainJTabbedPane.addTab("Languages", languagesTabJP);
+        addCollectionJB.getAccessibleContext().setAccessibleName("Add collection");
 
-        javax.swing.GroupLayout mainJPanelLayout = new javax.swing.GroupLayout(mainJPanel);
-        mainJPanel.setLayout(mainJPanelLayout);
-        mainJPanelLayout.setHorizontalGroup(
-            mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainJPanelLayout.createSequentialGroup()
+        TabbedPane.addTab("Collections", collectionsJP);
+
+        MegaList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(MegaList);
+
+        deleteWordJB.setText("Delete");
+
+        MegaListLanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout MegaListPanelLayout = new javax.swing.GroupLayout(MegaListPanel);
+        MegaListPanel.setLayout(MegaListPanelLayout);
+        MegaListPanelLayout.setHorizontalGroup(
+            MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MegaListPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(mainJTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
+                .addGroup(MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3)
+                    .addComponent(deleteWordJB, javax.swing.GroupLayout.DEFAULT_SIZE, 713, Short.MAX_VALUE)
+                    .addComponent(MegaListLanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        mainJPanelLayout.setVerticalGroup(
-            mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainJTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
+        MegaListPanelLayout.setVerticalGroup(
+            MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MegaListPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MegaListLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(deleteWordJB)
+                .addContainerGap())
         );
 
-        mainJTabbedPane.getAccessibleContext().setAccessibleName("");
+        TabbedPane.addTab("MegaList", MegaListPanel);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(TabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 738, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(TabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        TabbedPane.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void applyJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_applyJBActionPerformed
-        String word = this.wordJTF.getText();
-        String wordLanguage = (String) this.wordLanguageJCB.getSelectedItem();
-        String wordClass = (String) this.wordClassJCB.getSelectedItem();
-        String meaningsLanguage = (String) this.meaningsLanguageJCB.getSelectedItem();
-        List<String> collections = extractSelectedCollections();
-        List<String> meanings = this.meanignsJL.getSelectedValuesList();
-
-        this.userRequestManager.updateOrSaveWordInformation(
-                word,
-                wordClass,
-                wordLanguage,
-                meanings,
-                collections,
-                meaningsLanguage
-        );
-    }//GEN-LAST:event_applyJBActionPerformed
-
-    private List<String> extractSelectedCollections() {
-        throw new UnsupportedOperationException();
-    }
-
-    private void createCollectionJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCollectionJBActionPerformed
-        String collectionName = this.collectionJTF.getText();
-        this.userRequestManager.createCollection(collectionName);
-    }//GEN-LAST:event_createCollectionJBActionPerformed
-
-    private void deleteCollectionJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCollectionJBActionPerformed
-        String collectionName = this.collectionJTF.getText();
-        this.userRequestManager.deleteCollection(collectionName);
-    }//GEN-LAST:event_deleteCollectionJBActionPerformed
-
-    private void deleteWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteWordJBActionPerformed
-        String word = this.languageWordsJL.getSelectedValue();
-        String language = (String) this.allWordsLanguageJCB.getSelectedItem();
-        this.userRequestManager.deleteWord(word, language);
-    }//GEN-LAST:event_deleteWordJBActionPerformed
-
-    private void addMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMeaningJBActionPerformed
-        String meaning = this.meaningJTF.getText();
-        String language = (String) this.meaningsLanguageJCB.getSelectedItem();
-        this.userRequestManager.ensureWordExists(meaning, language);
-        // display added meaning
-        throw new UnsupportedOperationException();
-    }//GEN-LAST:event_addMeaningJBActionPerformed
-
-    private void removeMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeMeaningJBActionPerformed
-        String meaning = this.meaningJTF.getText();
-        String language = (String) this.meaningsLanguageJCB.getSelectedItem();
-        this.userRequestManager.removeMeaning(meaning, language);
-        throw new UnsupportedOperationException();
-    }//GEN-LAST:event_removeMeaningJBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -372,7 +404,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -402,35 +434,50 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addMeaningJB;
-    private javax.swing.JComboBox<String> allWordsLanguageJCB;
-    private javax.swing.JButton applyJB;
-    private javax.swing.JTextField collectionJTF;
-    private javax.swing.JList<String> collectionWordsJL;
-    private javax.swing.JScrollPane collectionWordsJSP;
-    private javax.swing.JComboBox<String> collectionWordsLanguageJCB;
+    private javax.swing.JButton addCollectionJB;
+    private javax.swing.JTextField addCollectionJTF;
+    private javax.swing.JButton saveWordJB;
+    private javax.swing.JLabel classJL;
+    private javax.swing.JRadioButton classRadioButton1;
+    private javax.swing.JRadioButton classRadioButton2;
+    private javax.swing.JRadioButton classRadioButton3;
+    private javax.swing.JRadioButton classRadioButton4;
+    private javax.swing.JRadioButton classRadioButton5;
+    private javax.swing.JRadioButton classRadioButton6;
+    private javax.swing.JRadioButton classRadioButton7;
+    private javax.swing.JRadioButton classRadioButton8;
+    private javax.swing.JRadioButton classRadioButton9;
+    private javax.swing.ButtonGroup classesJRBG;
     private javax.swing.JLabel collectionsJL;
+    private javax.swing.JPanel collectionsJP;
     private javax.swing.JTable collectionsJT;
-    private javax.swing.JScrollPane collectionsJTJSP;
-    private javax.swing.JPanel collectionsTabJP;
-    private javax.swing.JButton createCollectionJB;
-    private javax.swing.JButton deleteCollectionJB;
     private javax.swing.JButton deleteWordJB;
-    private javax.swing.JList<String> languageWordsJL;
-    private javax.swing.JScrollPane languageWordsJSP;
-    private javax.swing.JPanel languagesTabJP;
-    private javax.swing.JPanel mainJPanel;
-    private javax.swing.JTabbedPane mainJTabbedPane;
-    private javax.swing.JList<String> meanignsJL;
-    private javax.swing.JLabel meaningJL;
-    private javax.swing.JTextField meaningJTF;
-    private javax.swing.JScrollPane meaningsJlJSP;
-    private javax.swing.JComboBox<String> meaningsLanguageJCB;
-    private javax.swing.JButton removeMeaningJB;
-    private javax.swing.JComboBox<String> wordClassJCB;
+    private javax.swing.JComboBox<String> collectionsJCB;
+    private javax.swing.JScrollPane collectionWordsJL;
+    private javax.swing.JComboBox<String> languageJCB;
+    private javax.swing.JComboBox<String> meaningLanguageJCB;
+    private javax.swing.JLabel meaningsJL;
+    private javax.swing.JList<String> wordMeaningsJL;
+    private javax.swing.JList<String> MegaList;
+    private javax.swing.JComboBox<String> MegaListLanguageComboBox;
+    private javax.swing.JPanel MegaListPanel;
+    private javax.swing.JTabbedPane TabbedPane;
+    private javax.swing.JPanel wordJP;
     private javax.swing.JTextField wordJTF;
-    private javax.swing.JComboBox<String> wordLanguageJCB;
-    private javax.swing.JPanel wordTabJP;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
-    private UserRequestManager userRequestManager;
+
 }
