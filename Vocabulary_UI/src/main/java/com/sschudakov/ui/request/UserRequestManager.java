@@ -1,11 +1,14 @@
-package com.sschudakov.ui;
+package com.sschudakov.ui.request;
 
 import java.util.HashMap;
 import java.util.List;
 
 public class UserRequestManager {
 
+    private UserRequestValidator userRequestValidator;
+
     public UserRequestManager() {
+        this.userRequestValidator = new UserRequestValidator();
     }
 
     //get requests
@@ -47,6 +50,12 @@ public class UserRequestManager {
     public void addCollection() {}
 
     public void addLanguage() {}
+
+    public void deleteWord() {}
+
+    public void deleteCollection() {}
+
+    public void deleteLanguage() {}
 
     public void addMeaningToWord(String word, String language, String meaning, String meaningLanguage) {};
 
