@@ -16,7 +16,6 @@ import com.sschudakov.service.interf.WCRSrv;
 
 import java.sql.SQLException;
 import java.util.Collection;
-import java.util.List;
 
 public class WCRSrvImpl implements WCRSrv {
 
@@ -35,11 +34,6 @@ public class WCRSrvImpl implements WCRSrv {
     @Override
     public void create(Word word, WordCollection wordCollection) throws SQLException {
         this.wcrDao.save(new WordCollectionRelationship(word, wordCollection));
-    }
-
-    @Override
-    public WordCollectionRelationship findById(Integer id) throws SQLException {
-        return this.wcrDao.findById(id);
     }
 
     @Override
@@ -63,10 +57,5 @@ public class WCRSrvImpl implements WCRSrv {
     public Collection<WordCollectionRelationship> findByCollection(String collection) throws SQLException {
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
         return this.wcrDao.findByCollectionId(foundCollection.getCollectionID());
-    }
-
-    @Override
-    public List<WordCollectionRelationship> findAll() throws SQLException {
-        return this.wcrDao.findAll();
     }
 }

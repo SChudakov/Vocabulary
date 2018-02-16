@@ -10,6 +10,8 @@ public interface WCRDao {
 
     void save(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
 
+    WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
+
     WordCollectionRelationship findById(Integer id) throws SQLException;
 
     Collection<WordCollectionRelationship> findByWordId(int wordId) throws SQLException;
@@ -17,8 +19,6 @@ public interface WCRDao {
     Collection<WordCollectionRelationship> findByCollectionId(int collectionId) throws SQLException;
 
     List<WordCollectionRelationship> findAll() throws SQLException;
-
-    WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
 
     void remove(Integer wordCollectionRelationshipID) throws SQLException;
 }
