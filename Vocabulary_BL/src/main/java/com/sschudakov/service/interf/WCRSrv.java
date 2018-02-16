@@ -6,16 +6,21 @@ import com.sschudakov.entity.WordCollectionRelationship;
 
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.List;
 
 public interface WCRSrv {
 
     void create(Word word, WordCollection wordCollection) throws SQLException;
 
-    WordCollectionRelationship update(WordCollectionRelationship wcr) throws SQLException;
+    WordCollectionRelationship findById(Integer id) throws SQLException;
 
     Collection<WordCollectionRelationship> findByWordAndLanguage(String word, String language) throws SQLException;
 
     Collection<WordCollectionRelationship> findByCollection(String collection) throws SQLException;
+
+    List<WordCollectionRelationship> findAll() throws SQLException;
+
+    WordCollectionRelationship update(WordCollectionRelationship wcr) throws SQLException;
 
     void delete(Integer wcrId) throws SQLException;
 }
