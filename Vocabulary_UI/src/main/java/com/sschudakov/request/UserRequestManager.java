@@ -1,6 +1,7 @@
 package com.sschudakov.request;
 
-import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
 
 public class UserRequestManager {
 
@@ -10,30 +11,68 @@ public class UserRequestManager {
         this.userRequestValidator = new UserRequestValidator();
     }
 
-    public void updateOrSaveWordInformation(String wordValue, String wordClass,
-                                            String language, Collection<String> meanings,
-                                            Collection<String> colections, String meanigsLanguage) {
-        throw new UnsupportedOperationException();
+    //get requests
+    public List<String> getLanguages() {
+        return null;
     }
 
-    public void createCollection(String collectionsName) {
-        throw new UnsupportedOperationException();
+    public List<String> getCollections() {
+        return null;
     }
 
-    public void deleteCollection(String collecitonName) {
-        throw new UnsupportedOperationException();
+    public List<String> getClasses() {
+        return null;
     }
 
-    public void deleteWord(String word, String language) {
-        throw new UnsupportedOperationException();
+    public List<String> getMeaningsByWord(String word, String wordLanguage, String meaningsLanguage) {
+        return null;
     }
 
-    public void ensureWordExists(String word, String language) {
-        this.userRequestValidator.ensureWordExists(word, language);
+    public String getClassByWord(String word, String language) {
+        return null;
     }
 
-    public void removeMeaning(String meaning, String language){
-        throw new UnsupportedOperationException();
+    public List<String> getWordsByLanguageName(String language) {
+        return null;
     }
 
+    public HashMap<String, Boolean> getCollectionsByWord(String word, String language) {
+        return null;
+    }
+
+    public List<String> getWordsByCollectionName(String collection) {
+        return null;
+    }
+
+    //change requests
+    public void addWord() {}
+
+    public void addCollection() {}
+
+    public void addLanguage() {}
+
+    public void deleteWord() {}
+
+    public void deleteCollection() {}
+
+    public void deleteLanguage() {}
+
+    public void addMeaningToWord(String word, String language, String meaning, String meaningLanguage) {};
+
+    public void addWordToCollection(String word, String language, String collection) {};
+
+    public void changeWordClassTo(String word, String language, String className) {};
+
+    //check requests
+    public boolean wordExists(String word, String language) {
+        return false;
+    }
+
+    public boolean collectionExists(String collection) {
+        return false;
+    }
+
+    public boolean languageExists(String language) {
+        return false;
+    }
 }
