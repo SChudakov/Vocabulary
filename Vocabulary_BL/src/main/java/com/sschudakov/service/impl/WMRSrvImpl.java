@@ -13,6 +13,7 @@ import com.sschudakov.service.interf.WMRSrv;
 
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.List;
 
 public class WMRSrvImpl implements WMRSrv {
 
@@ -32,6 +33,11 @@ public class WMRSrvImpl implements WMRSrv {
     }
 
     @Override
+    public WordMeaningRelationship findById(Integer id) throws SQLException {
+        return this.wmrDao.findById(id);
+    }
+
+    @Override
     public Collection<WordMeaningRelationship> findByWordAndLanguage(String word, String language) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(language);
         Word foundWord = this.wordDao.findByValueAndLanguage(word, foundLanguage);
@@ -43,6 +49,11 @@ public class WMRSrvImpl implements WMRSrv {
         Language foundLanguage = this.languageDao.findByName(language);
         Word foundMeaning = this.wordDao.findByValueAndLanguage(meaning, foundLanguage);
         return this.wmrDao.findByMeaningId(foundMeaning.getWordID());
+    }
+
+    @Override
+    public List<WordMeaningRelationship> findAll() throws SQLException {
+        return this.wmrDao.findAll();
     }
 
     @Override

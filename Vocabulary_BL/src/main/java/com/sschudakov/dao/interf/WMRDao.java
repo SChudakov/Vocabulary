@@ -11,8 +11,6 @@ import java.util.List;
 public interface WMRDao {
     void save(WordMeaningRelationship wordMeaningRelationship) throws SQLException;
 
-    WordMeaningRelationship update(WordMeaningRelationship wordMeaningRelationship) throws SQLException;
-
     WordMeaningRelationship findById(Integer id) throws SQLException;
 
     Collection<WordMeaningRelationship> findByWordId(int wordId) throws SQLException;
@@ -20,6 +18,8 @@ public interface WMRDao {
     Collection<WordMeaningRelationship> findByMeaningId(int meaningId) throws SQLException;
 
     List<WordMeaningRelationship> findAll() throws SQLException;
+
+    WordMeaningRelationship update(WordMeaningRelationship wordMeaningRelationship) throws SQLException;
 
     void remove(Integer wordMeaningRelationshipID) throws SQLException;
 }
