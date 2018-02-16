@@ -31,6 +31,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ClassesButtonGroup = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         TabbedPane = new javax.swing.JTabbedPane();
         WordPanel = new javax.swing.JPanel();
@@ -44,10 +45,29 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         ApplyButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         CollectionsTable = new javax.swing.JTable();
+        ClassLabel = new javax.swing.JLabel();
+        ClassRadioButton1 = new javax.swing.JRadioButton();
+        ClassRadioButton2 = new javax.swing.JRadioButton();
+        ClassRadioButton3 = new javax.swing.JRadioButton();
+        ClassRadioButton4 = new javax.swing.JRadioButton();
+        ClassRadioButton5 = new javax.swing.JRadioButton();
+        ClassRadioButton6 = new javax.swing.JRadioButton();
+        ClassRadioButton7 = new javax.swing.JRadioButton();
+        ClassRadioButton8 = new javax.swing.JRadioButton();
+        ClassRadioButton9 = new javax.swing.JRadioButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
         CollectionsPanel = new javax.swing.JPanel();
         GroupsComboBox = new javax.swing.JComboBox<>();
-        AddGroupTextField = new javax.swing.JTextField();
-        AddGroupButton = new javax.swing.JButton();
+        AddCollectionTextField = new javax.swing.JTextField();
+        AddCollectionButton = new javax.swing.JButton();
         GroupsWordList = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         MegaListPanel = new javax.swing.JPanel();
@@ -58,11 +78,11 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        TabbedPane.setPreferredSize(new java.awt.Dimension(600, 400));
+        TabbedPane.setPreferredSize(new java.awt.Dimension(700, 500));
 
         WordPanel.setPreferredSize(new java.awt.Dimension(400, 400));
 
-        LanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        LanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "Ukrainian", "1337", "Dutch" }));
 
         WordTextField.setText("word");
 
@@ -83,9 +103,9 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         CollectionsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
+                {"My words", null},
+                {"Lesson1", null},
+                {"Lesson2", null},
                 {null, null}
             },
             new String [] {
@@ -102,6 +122,56 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(CollectionsTable);
 
+        ClassLabel.setText("Class");
+
+        ClassesButtonGroup.add(ClassRadioButton1);
+        ClassRadioButton1.setText("Noun");
+
+        ClassesButtonGroup.add(ClassRadioButton2);
+        ClassRadioButton2.setText("Verb");
+
+        ClassesButtonGroup.add(ClassRadioButton3);
+        ClassRadioButton3.setText("Adjective");
+
+        ClassesButtonGroup.add(ClassRadioButton4);
+        ClassRadioButton4.setText("<CLASS>");
+
+        ClassesButtonGroup.add(ClassRadioButton5);
+        ClassRadioButton5.setText("<CLASS>");
+
+        ClassesButtonGroup.add(ClassRadioButton6);
+        ClassRadioButton6.setText("<CLASS>");
+
+        ClassesButtonGroup.add(ClassRadioButton7);
+        ClassRadioButton7.setText("<CLASS>");
+
+        ClassesButtonGroup.add(ClassRadioButton8);
+        ClassRadioButton8.setText("<CLASS>");
+
+        ClassesButtonGroup.add(ClassRadioButton9);
+        ClassRadioButton9.setText("<CLASS>");
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "I", "Love", "Snake", "Name", "Lake", "Fake", "Make", "Take", "Bake", "Cake" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jList2);
+
+        jButton1.setText("Add meaning");
+
+        jButton2.setText("Add collection");
+
+        jTextField1.setText("Collection");
+
+        jTextField2.setToolTipText("Language");
+
+        jButton3.setText("Add language");
+
         javax.swing.GroupLayout WordPanelLayout = new javax.swing.GroupLayout(WordPanel);
         WordPanel.setLayout(WordPanelLayout);
         WordPanelLayout.setHorizontalGroup(
@@ -109,41 +179,108 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             .addGroup(WordPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(WordTextField)
-                    .addGroup(WordPanelLayout.createSequentialGroup()
-                        .addComponent(MeaningsLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
-                        .addComponent(CollectionsLabel)
-                        .addGap(260, 260, 260))
-                    .addGroup(WordPanelLayout.createSequentialGroup()
-                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(MeaningLanguageComboBox, 0, 275, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1))
+                    .addComponent(ApplyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WordPanelLayout.createSequentialGroup()
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ClassRadioButton3)
+                            .addComponent(ClassRadioButton4)
+                            .addComponent(ClassRadioButton5)
+                            .addComponent(ClassRadioButton6)
+                            .addComponent(ClassRadioButton7)
+                            .addComponent(ClassRadioButton8)
+                            .addComponent(ClassRadioButton9)
+                            .addComponent(ClassRadioButton2)
+                            .addComponent(ClassLabel)
+                            .addComponent(ClassRadioButton1))
+                        .addGap(74, 74, 74)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addComponent(ApplyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WordPanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(MeaningsLabel)
+                                .addGap(230, 230, 230))
+                            .addComponent(MeaningLanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1)
+                            .addComponent(jScrollPane4)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(CollectionsLabel)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
+                            .addComponent(jTextField1)))
+                    .addGroup(WordPanelLayout.createSequentialGroup()
+                        .addComponent(LanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)))
                 .addContainerGap())
         );
         WordPanelLayout.setVerticalGroup(
             WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WordPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(LanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(WordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MeaningsLabel)
-                    .addComponent(CollectionsLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1)
                     .addGroup(WordPanelLayout.createSequentialGroup()
-                        .addComponent(MeaningLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(WordPanelLayout.createSequentialGroup()
+                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(MeaningsLabel)
+                                        .addComponent(ClassLabel))
+                                    .addComponent(CollectionsLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(WordPanelLayout.createSequentialGroup()
+                                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(MeaningLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ClassRadioButton1))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(WordPanelLayout.createSequentialGroup()
+                                                .addComponent(ClassRadioButton2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(ClassRadioButton3)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(ClassRadioButton4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(ClassRadioButton5)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(ClassRadioButton6)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(ClassRadioButton7)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(ClassRadioButton8)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(ClassRadioButton9))
+                                            .addGroup(WordPanelLayout.createSequentialGroup()
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jScrollPane4)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton1))
+                                    .addGroup(WordPanelLayout.createSequentialGroup()
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton2))))
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ApplyButton)
                 .addGap(6, 6, 6))
         );
@@ -152,9 +289,9 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         GroupsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        AddGroupTextField.setText("group");
+        AddCollectionTextField.setToolTipText("Collection name");
 
-        AddGroupButton.setText("Add Group");
+        AddCollectionButton.setText("Add collection");
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -172,9 +309,9 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                 .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(GroupsComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(CollectionsPanelLayout.createSequentialGroup()
-                        .addComponent(AddGroupTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
+                        .addComponent(AddCollectionTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AddGroupButton))
+                        .addComponent(AddCollectionButton))
                     .addComponent(GroupsWordList))
                 .addContainerGap())
         );
@@ -183,14 +320,16 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             .addGroup(CollectionsPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AddGroupTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AddGroupButton))
+                    .addComponent(AddCollectionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AddCollectionButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(GroupsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(GroupsWordList, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                .addComponent(GroupsWordList, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
                 .addContainerGap())
         );
+
+        AddCollectionButton.getAccessibleContext().setAccessibleName("Add collection");
 
         TabbedPane.addTab("Collections", CollectionsPanel);
 
@@ -213,7 +352,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3)
-                    .addComponent(DeleteWordButton, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+                    .addComponent(DeleteWordButton, javax.swing.GroupLayout.DEFAULT_SIZE, 713, Short.MAX_VALUE)
                     .addComponent(MegaListLanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -223,8 +362,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(MegaListLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DeleteWordButton)
                 .addContainerGap())
         );
@@ -235,11 +374,11 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(TabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 738, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(TabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         TabbedPane.getAccessibleContext().setAccessibleName("");
@@ -248,7 +387,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,9 +434,20 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AddGroupButton;
-    private javax.swing.JTextField AddGroupTextField;
+    private javax.swing.JButton AddCollectionButton;
+    private javax.swing.JTextField AddCollectionTextField;
     private javax.swing.JButton ApplyButton;
+    private javax.swing.JLabel ClassLabel;
+    private javax.swing.JRadioButton ClassRadioButton1;
+    private javax.swing.JRadioButton ClassRadioButton2;
+    private javax.swing.JRadioButton ClassRadioButton3;
+    private javax.swing.JRadioButton ClassRadioButton4;
+    private javax.swing.JRadioButton ClassRadioButton5;
+    private javax.swing.JRadioButton ClassRadioButton6;
+    private javax.swing.JRadioButton ClassRadioButton7;
+    private javax.swing.JRadioButton ClassRadioButton8;
+    private javax.swing.JRadioButton ClassRadioButton9;
+    private javax.swing.ButtonGroup ClassesButtonGroup;
     private javax.swing.JLabel CollectionsLabel;
     private javax.swing.JPanel CollectionsPanel;
     private javax.swing.JTable CollectionsTable;
@@ -314,11 +464,20 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane TabbedPane;
     private javax.swing.JPanel WordPanel;
     private javax.swing.JTextField WordTextField;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 
 }
