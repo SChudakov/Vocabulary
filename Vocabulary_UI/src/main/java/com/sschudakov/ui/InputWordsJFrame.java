@@ -82,18 +82,18 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         WordPanel.setPreferredSize(new java.awt.Dimension(400, 400));
 
-        LanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "Ukrainian", "1337", "Dutch" }));
+        LanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Russian", "English", "Ukrainian", "1337", "Dutch" }));
 
-        WordTextField.setText("word");
+        WordTextField.setText("Герой");
 
         MeaningsLabel.setText("Meanings");
 
         CollectionsLabel.setText("Collections");
 
-        MeaningLanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        MeaningLanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "Russian", "Ukrainian", "1337", "Dutch" }));
 
         MeaningsList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "Hero", " " };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -156,7 +156,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "I", "Love", "Snake", "Name", "Lake", "Fake", "Make", "Take", "Bake", "Cake" };
+            String[] strings = { "I", "Love", "Snake", "Name", "Lake", "Fake", "Make", "Take", "Bake", "Cake", "Hero" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });

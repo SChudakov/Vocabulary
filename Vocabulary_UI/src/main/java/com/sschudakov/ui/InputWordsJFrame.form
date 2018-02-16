@@ -219,11 +219,12 @@
                 <Component class="javax.swing.JComboBox" name="LanguageComboBox">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="English"/>
-                        <StringItem index="1" value="Ukrainian"/>
-                        <StringItem index="2" value="1337"/>
-                        <StringItem index="3" value="Dutch"/>
+                      <StringArray count="5">
+                        <StringItem index="0" value="Russian"/>
+                        <StringItem index="1" value="English"/>
+                        <StringItem index="2" value="Ukrainian"/>
+                        <StringItem index="3" value="1337"/>
+                        <StringItem index="4" value="Dutch"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -233,7 +234,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="WordTextField">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="word"/>
+                    <Property name="text" type="java.lang.String" value="&#x413;&#x435;&#x440;&#x43e;&#x439;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="MeaningsLabel">
@@ -249,11 +250,12 @@
                 <Component class="javax.swing.JComboBox" name="MeaningLanguageComboBox">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
+                      <StringArray count="5">
+                        <StringItem index="0" value="English"/>
+                        <StringItem index="1" value="Russian"/>
+                        <StringItem index="2" value="Ukrainian"/>
+                        <StringItem index="3" value="1337"/>
+                        <StringItem index="4" value="Dutch"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -271,12 +273,9 @@
                     <Component class="javax.swing.JList" name="MeaningsList">
                       <Properties>
                         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                          <StringArray count="5">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                            <StringItem index="4" value="Item 5"/>
+                          <StringArray count="2">
+                            <StringItem index="0" value="Hero"/>
+                            <StringItem index="1" value=" "/>
                           </StringArray>
                         </Property>
                       </Properties>
@@ -412,7 +411,7 @@
                     <Component class="javax.swing.JList" name="jList2">
                       <Properties>
                         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                          <StringArray count="10">
+                          <StringArray count="11">
                             <StringItem index="0" value="I"/>
                             <StringItem index="1" value="Love"/>
                             <StringItem index="2" value="Snake"/>
@@ -423,6 +422,7 @@
                             <StringItem index="7" value="Take"/>
                             <StringItem index="8" value="Bake"/>
                             <StringItem index="9" value="Cake"/>
+                            <StringItem index="10" value="Hero"/>
                           </StringArray>
                         </Property>
                       </Properties>
