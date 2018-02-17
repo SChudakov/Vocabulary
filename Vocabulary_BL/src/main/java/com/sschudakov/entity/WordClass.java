@@ -6,6 +6,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Cacheable
 @Entity
 @Table(name = "word_classes")
 @DatabaseTable(tableName = "word_classes")
@@ -54,6 +56,10 @@ public class WordClass {
         this.wordClassName = wordClassName;
     }
 
+    public WordClass(int wordClassID, String wordClassName) {
+        this.wordClassID = wordClassID;
+        this.wordClassName = wordClassName;
+    }
 
     @Override
     public int hashCode() {
