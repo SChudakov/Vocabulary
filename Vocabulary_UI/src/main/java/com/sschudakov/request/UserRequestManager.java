@@ -1,7 +1,7 @@
 package com.sschudakov.request;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserRequestManager {
 
@@ -36,7 +36,7 @@ public class UserRequestManager {
         throw new UnsupportedOperationException();
     }
 
-    public HashMap<String, Boolean> getCollectionsByWord(String word, String language) {
+    public Map<String, Boolean> getCollectionsByWord(String word, String language) {
         throw new UnsupportedOperationException();
     }
 
@@ -45,27 +45,19 @@ public class UserRequestManager {
     }
 
     //change requests
-    public void addWord() {
+    public void createWord(String word, String language) {
         throw new UnsupportedOperationException();
     }
 
-    public void addCollection() {
+    public void createCollection(String name) {
         throw new UnsupportedOperationException();
     }
 
-    public void addLanguage() {
+    public void deleteWord(String word, String language) {
         throw new UnsupportedOperationException();
     }
 
-    public void deleteWord() {
-        throw new UnsupportedOperationException();
-    }
-
-    public void deleteCollection() {
-        throw new UnsupportedOperationException();
-    }
-
-    public void deleteLanguage() {
+    public void deleteCollection(String name) {
         throw new UnsupportedOperationException();
     }
 
