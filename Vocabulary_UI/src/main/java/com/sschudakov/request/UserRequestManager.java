@@ -13,66 +13,84 @@ public class UserRequestManager {
 
     //get requests
     public List<String> getLanguages() {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     public List<String> getCollections() {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     public List<String> getClasses() {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     public List<String> getMeaningsByWord(String word, String wordLanguage, String meaningsLanguage) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     public String getClassByWord(String word, String language) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     public List<String> getWordsByLanguageName(String language) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     public HashMap<String, Boolean> getCollectionsByWord(String word, String language) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     public List<String> getWordsByCollectionName(String collection) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     //change requests
-    public void addWord() {}
+    public void addWord() {
+        throw new UnsupportedOperationException();
+    }
 
-    public void addCollection() {}
+    public void addCollection() {
+        throw new UnsupportedOperationException();
+    }
 
-    public void addLanguage() {}
+    public void addLanguage() {
+        throw new UnsupportedOperationException();
+    }
 
-    public void deleteWord() {}
+    public void deleteWord() {
+        throw new UnsupportedOperationException();
+    }
 
-    public void deleteCollection() {}
+    public void deleteCollection() {
+        throw new UnsupportedOperationException();
+    }
 
-    public void deleteLanguage() {}
+    public void deleteLanguage() {
+        throw new UnsupportedOperationException();
+    }
 
-    public void addMeaningToWord(String word, String language, String meaning, String meaningLanguage) {};
+    public void addMeaningToWord(String word, String language, String meaning, String meaningLanguage) {
+        throw new UnsupportedOperationException();
+    }
 
-    public void addWordToCollection(String word, String language, String collection) {};
+    public void addWordToCollection(String word, String language, String collection) {
+        throw new UnsupportedOperationException();
+    }
 
-    public void changeWordClassTo(String word, String language, String className) {};
+    public void changeWordClassTo(String word, String language, String className) {
+        throw new UnsupportedOperationException();
+    }
 
     //check requests
     public boolean wordExists(String word, String language) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     public boolean collectionExists(String collection) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     public boolean languageExists(String language) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 }
