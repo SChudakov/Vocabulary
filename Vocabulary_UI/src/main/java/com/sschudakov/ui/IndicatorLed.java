@@ -5,9 +5,10 @@
  */
 package com.sschudakov.ui;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import javax.swing.JFrame;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 /**
@@ -15,32 +16,34 @@ import javax.swing.JPanel;
  * @author Andrey
  */
 public class IndicatorLed extends JPanel {
-    private Color color;
+    private Image redLedImage;
+    private Image greenLedImage;
+    private Image currentImage;
     
     public IndicatorLed() {
+        ClassLoader classLoader = getClass().getClassLoader();
+        try {
+            redLedImage = ImageIO.read(new File(classLoader.getResource("images/led_red.png").getFile()));
+            greenLedImage = ImageIO.read(new File(classLoader.getResource("images/led_green.png").getFile()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         setRed();
     }
     
     public void setGreen() {
-        this.color = Color.green;
+        currentImage = greenLedImage;
     }
     
     public void setRed() {
-        this.color = Color.red;
-    }
-    
-    public void setColor(Color color) {
-        this.color = color;
+        currentImage = redLedImage;
     }
     
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        
-        g.setColor(color);
-        g.fillOval(1, 5, 16, 16);
-        
-        g.setColor(Color.black);
-        g.drawOval(1, 5, 16, 16);
+        if (currentImage != null) {
+            g.drawImage(currentImage,1,6,null);
+        }
     }
 }

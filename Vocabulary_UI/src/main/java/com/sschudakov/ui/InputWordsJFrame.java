@@ -85,7 +85,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             }
         });
 
-        wordJTF.setText("Герой");
+        wordJTF.setText("geroi");
         wordJTF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 wordJTFKeyPressed(evt);
