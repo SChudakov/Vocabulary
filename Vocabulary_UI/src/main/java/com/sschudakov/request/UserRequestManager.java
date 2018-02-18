@@ -1,11 +1,28 @@
 package com.sschudakov.request;
 
-import com.sschudakov.entity.*;
-import com.sschudakov.service.impl.*;
-import com.sschudakov.service.interf.*;
+import com.sschudakov.entity.Language;
+import com.sschudakov.entity.Word;
+import com.sschudakov.entity.WordClass;
+import com.sschudakov.entity.WordCollection;
+import com.sschudakov.entity.WordCollectionRelationship;
+import com.sschudakov.service.impl.LanguageSrvImpl;
+import com.sschudakov.service.impl.WCRSrvImpl;
+import com.sschudakov.service.impl.WMRSrvImpl;
+import com.sschudakov.service.impl.WordClassSrvImpl;
+import com.sschudakov.service.impl.WordCollectionSrvImpl;
+import com.sschudakov.service.impl.WordSrvImpl;
+import com.sschudakov.service.interf.LanguageSrv;
+import com.sschudakov.service.interf.WCRSrv;
+import com.sschudakov.service.interf.WMRSrv;
+import com.sschudakov.service.interf.WordClassSrv;
+import com.sschudakov.service.interf.WordCollectionSrv;
+import com.sschudakov.service.interf.WordSrv;
 
 import java.sql.SQLException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class UserRequestManager {
@@ -29,27 +46,49 @@ public class UserRequestManager {
     }
 
     //get requests
+
+    /**
+     * Tested successfully
+     *
+     * @return
+     * @throws SQLException
+     */
     public List<String> getLanguages() throws SQLException {
         return languageService.findAll().stream().map(Language::getLanguageName).collect(Collectors.toList());
     }
 
+    /**
+     * Tested successfully
+     *
+     * @return
+     * @throws SQLException
+     */
     public List<String> getCollections() throws SQLException {
         return wordCollectionService.findAll().stream().map(WordCollection::getCollectionName).collect(Collectors.toList());
     }
 
+    /**
+     * Tested successfully
+     *
+     * @return
+     * @throws SQLException
+     */
     public List<String> getClasses() throws SQLException {
         return wordClassService.findAll().stream().map(WordClass::getWordClassName).collect(Collectors.toList());
     }
 
+    /**
+     * Tested successfully
+     *
+     * @return
+     * @throws SQLException
+     */
     public List<String> getMeaningsByWord(String word, String wordLanguage, String meaningsLanguage) throws SQLException {
-        Collection<WordMeaningRelationship> wmrCollection = wmrService.findByWordAndLanguage(word, wordLanguage);
-        List<String> meanings = new ArrayList<>();
-        for (WordMeaningRelationship wmr : wmrCollection) {
-            if (wmr.getMeaning().getLanguage().getLanguageName().equals(meaningsLanguage)) {
-                meanings.add(wmr.getMeaning().getValue());
-            }
+        List<String> result = new ArrayList<>();
+        for (Word w : this.wmrService.findWordMeanings(word, wordLanguage, meaningsLanguage)) {
+            result.add(w.getValue());
         }
-        return meanings;
+        return result;
     }
 
     public String getClassByWord(String word, String language) throws SQLException {
@@ -61,35 +100,39 @@ public class UserRequestManager {
         throw new UnsupportedOperationException();
     }
 
+    /**
+     * Tested successfully
+     *
+     * @return
+     * @throws SQLException
+     */
     public Map<String, Boolean> getCollectionsByWord(String word, String language) throws SQLException {
         Map<String, Boolean> collections = new HashMap<>();
-        for (WordCollection collection : wordCollectionService.findAll()) {
+        for (WordCollection collection : this.wordCollectionService.findAll()) {
             collections.put(collection.getCollectionName(), Boolean.FALSE);
         }
-        for (WordCollectionRelationship wcr : wcrService.findByWordAndLanguage(word, language)) {
+        for (WordCollectionRelationship wcr : this.wcrService.findByWordAndLanguage(word, language)) {
             collections.put(wcr.getWordCollection().getCollectionName(), Boolean.TRUE);
         }
         return collections;
     }
-
+    /**
+     * Tested successfully
+     *
+     * @return
+     * @throws SQLException
+     */
     public List<String> getWordsByCollectionName(String collection) throws SQLException {
-        return wcrService.findByCollection(collection).stream().map(wcr -> wcr.getWord().getValue()).collect(Collectors.toList());
+        return this.wcrService.findByCollection(collection).stream().map(wcr -> wcr.getWord().getValue()).collect(Collectors.toList());
     }
+
 
     //change requests
     public boolean createWord(String word, String language) throws SQLException {
         if (wordExists(word, language)) {
             return false;
         }
-        wordService.create(word, "???", language); //todo: default word class?
-        return true;
-    }
-
-    public boolean createCollection(String name) throws SQLException {
-        if (collectionExists(name)) {
-            return false;
-        }
-        wordCollectionService.create(name);
+        this.wordService.create(word, "???", language); //TODO: default word class?
         return true;
     }
 
@@ -98,6 +141,14 @@ public class UserRequestManager {
             return false;
         }
         wordService.delete(wordService.findByValueAndLanguage(word, language).getWordID());
+        return true;
+    }
+
+    public boolean createCollection(String name) throws SQLException {
+        if (collectionExists(name)) {
+            return false;
+        }
+        wordCollectionService.create(name);
         return true;
     }
 
@@ -110,7 +161,7 @@ public class UserRequestManager {
     }
 
     public boolean addMeaningToWord(String word, String language, String meaning, String meaningLanguage) throws SQLException {
-        if (!wordExists(word, language) || !wordExists(meaning,meaningLanguage)) {
+        if (!wordExists(word, language) || !wordExists(meaning, meaningLanguage)) {
             //todo: mb throw exception to specify what exactly doesn't exist
             return false;
         }

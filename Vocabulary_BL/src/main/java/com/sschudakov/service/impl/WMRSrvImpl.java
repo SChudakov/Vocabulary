@@ -12,6 +12,7 @@ import com.sschudakov.entity.WordMeaningRelationship;
 import com.sschudakov.service.interf.WMRSrv;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -51,6 +52,7 @@ public class WMRSrvImpl implements WMRSrv {
         return this.wmrDao.findByMeaningId(foundMeaning.getWordID());
     }
 
+
     @Override
     public List<WordMeaningRelationship> findAll() throws SQLException {
         return this.wmrDao.findAll();
@@ -64,5 +66,24 @@ public class WMRSrvImpl implements WMRSrv {
     @Override
     public WordMeaningRelationship update(WordMeaningRelationship wmr) throws SQLException {
         return this.wmrDao.update(wmr);
+    }
+
+    @Override
+    public Collection<Word> findWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException {
+        Collection<Word> result = new ArrayList<>();
+
+        Language foundWordLanguage = this.languageDao.findByName(wordLanguage);
+        Language foundMeaningLanguage = this.languageDao.findByName(meaningsLanguage);
+        Word foundWord = this.wordDao.findByValueAndLanguage(word, foundWordLanguage);
+
+        System.out.println("word language: " + foundWordLanguage);
+        System.out.println("word id: " + foundMeaningLanguage);
+        System.out.println("word id" + foundWord.getValue());
+
+
+        for (int meaningId : this.wmrDao.findWordMeaningsIds(foundWord.getWordID(), foundMeaningLanguage.getLanguageID())) {
+            result.add(this.wordDao.findById(meaningId));
+        }
+        return result;
     }
 }

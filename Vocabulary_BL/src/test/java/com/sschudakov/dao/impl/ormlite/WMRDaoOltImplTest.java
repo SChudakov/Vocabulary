@@ -79,4 +79,11 @@ public class WMRDaoOltImplTest {
     public void remove() throws SQLException {
         this.wmrDaoOlt.remove(this.wordMeaningRelationship.getWordMeaningRelationshipID());
     }
+
+    @Test
+    public void findWordMeaningsIds() throws SQLException {
+        for (Integer integer : this.wmrDaoOlt.findWordMeaningsIds(1, 1)) {
+            System.out.println(integer);
+        }
+    }
 }

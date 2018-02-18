@@ -44,17 +44,22 @@ public class WordDaoOltImpl implements WordDao {
 
     @Override
     public Word findByValueAndLanguage(String value, Language language) throws SQLException {
-        PreparedStatement statement = DatabaseManager
-                .connection.prepareStatement(
-                        "SELECT * FROM words WHERE " +
-                                Word.VALUE_COLUMN_NAME + " = " + "\'" + value + "\'" +
-                                " AND " + Word.LANGUAGE_COLUMN_NAME + " = " + language.getLanguageID()
-                );
+
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM words WHERE ")
+                .append(Word.VALUE_COLUMN_NAME).append("=").append("\'" + value + "\'")
+                .append(" AND ")
+                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(language.getLanguageID());
+        System.out.println(query.toString());
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
+
         ResultSet resultSet = statement.getResultSet();
+
         if (!resultSet.next()) {
             return null;
         }
+
         return formWord(resultSet, value, language);
     }
 

@@ -1,5 +1,6 @@
 package com.sschudakov.service.impl;
 
+import com.sschudakov.dao.impl.ormlite.WordCollectionDaoOltImpl;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.service.interf.WordCollectionSrv;
@@ -12,6 +13,7 @@ public class WordCollectionSrvImpl implements WordCollectionSrv {
     private WordCollectionDao wordCollectionDao;
 
     public WordCollectionSrvImpl() {
+        this.wordCollectionDao = new WordCollectionDaoOltImpl();
     }
 
     @Override
