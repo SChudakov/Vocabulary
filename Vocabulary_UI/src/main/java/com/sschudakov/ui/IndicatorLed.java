@@ -11,39 +11,72 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import static com.sschudakov.ui.IndicatorLed.LedColor.YELLOW;
+
 /**
- *
  * @author Andrey
  */
 public class IndicatorLed extends JPanel {
-    private Image redLedImage;
+    private Image yellowLedImage;
+    private Image orangeLedImage;
+    private Image violetLedImage;
     private Image greenLedImage;
+    private Image cyanLedImage;
+    private Image blueLedImage;
+    private Image redLedImage;
+
     private Image currentImage;
-    
+
+    public enum LedColor {
+        YELLOW,
+        ORANGE,
+        VIOLET,
+        GREEN,
+        CYAN,
+        BLUE,
+        RED
+    }
+
     public IndicatorLed() {
         ClassLoader classLoader = getClass().getClassLoader();
         try {
+            yellowLedImage = ImageIO.read(new File(classLoader.getResource("images/led_yellow.png").getFile()));
+            orangeLedImage = ImageIO.read(new File(classLoader.getResource("images/led_orange.png").getFile()));
+            violetLedImage = ImageIO.read(new File(classLoader.getResource("images/led_violet.png").getFile()));
+            greenLedImage = ImageIO.read(new File(classLoader.getResource("images/led_cyan.png").getFile()));
+            cyanLedImage = ImageIO.read(new File(classLoader.getResource("images/led_cyan.png").getFile()));
+            blueLedImage = ImageIO.read(new File(classLoader.getResource("images/led_blue.png").getFile()));
             redLedImage = ImageIO.read(new File(classLoader.getResource("images/led_red.png").getFile()));
-            greenLedImage = ImageIO.read(new File(classLoader.getResource("images/led_green.png").getFile()));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        setRed();
+        setColor(LedColor.RED);
     }
-    
-    public void setGreen() {
-        currentImage = greenLedImage;
+
+    public void setColor(LedColor color) {
+        switch (color) {
+            case YELLOW:
+                currentImage = yellowLedImage;
+            case ORANGE:
+                currentImage = orangeLedImage;
+            case VIOLET:
+                currentImage = violetLedImage;
+            case GREEN:
+                currentImage = greenLedImage;
+            case CYAN:
+                currentImage = cyanLedImage;
+            case BLUE:
+                currentImage = blueLedImage;
+            case RED:
+                currentImage = redLedImage;
+        }
     }
-    
-    public void setRed() {
-        currentImage = redLedImage;
-    }
-    
+
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (currentImage != null) {
-            g.drawImage(currentImage,1,6,null);
+            g.drawImage(currentImage, 1, 6, null);
         }
     }
 }

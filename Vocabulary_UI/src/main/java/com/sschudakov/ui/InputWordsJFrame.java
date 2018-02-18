@@ -21,7 +21,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
      */
     public InputWordsJFrame() {
         initComponents();
-        
+
         collectionsJT.getColumnModel().getColumn(0).setMinWidth(220);
         collectionsJT.getColumnModel().getColumn(1).setMinWidth(60);
         collectionsJT.getColumnModel().getColumn(1).setPreferredWidth(60);
@@ -409,10 +409,12 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
     private void wordJTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_wordJTFKeyPressed
         //todo: this is test implementation, write normal implementation later
-        if (wordJTF.getText().length()%2==0)
-            wordFoundIndidcator.setGreen();
-        else
-            wordFoundIndidcator.setRed();
+        if (wordJTF.getText().length()%2==0) {
+            wordFoundIndidcator.setColor(IndicatorLed.LedColor.GREEN);
+        }
+        else {
+            wordFoundIndidcator.setColor(IndicatorLed.LedColor.RED);
+        }
         wordFoundIndidcator.repaint();
     }//GEN-LAST:event_wordJTFKeyPressed
 
@@ -423,7 +425,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
