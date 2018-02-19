@@ -5,13 +5,7 @@
  */
 package com.sschudakov.ui;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
 /**
- *
  * @author Semen
  */
 public class InputWordsJFrame extends javax.swing.JFrame {
@@ -78,7 +72,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         WordPanel.setPreferredSize(new java.awt.Dimension(600, 400));
 
-        languageJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Russian", "English", "Ukrainian", "1337", "Dutch" }));
+        languageJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Russian", "English", "Ukrainian", "1337", "Dutch"}));
         languageJCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 languageJCBActionPerformed(evt);
@@ -96,7 +90,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         collectionsJLabel.setText("Collections");
 
-        meaningsLanguageJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "Russian", "Ukrainian", "1337", "Dutch" }));
+        meaningsLanguageJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"English", "Russian", "Ukrainian", "1337", "Dutch"}));
         meaningsLanguageJCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 meaningsLanguageJCBActionPerformed(evt);
@@ -104,9 +98,15 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         });
 
         meaningsJL.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Hero", " " };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            String[] strings = {"Hero", " "};
+
+            public int getSize() {
+                return strings.length;
+            }
+
+            public String getElementAt(int i) {
+                return strings[i];
+            }
         });
         jScrollPane1.setViewportView(meaningsJL);
 
@@ -120,23 +120,23 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(280, 326));
 
         collectionsJT.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"My words", null},
-                {"Lesson1", null},
-                {"Lesson2", null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Collection", ""
-            }
+                new Object[][]{
+                        {"My words", null},
+                        {"Lesson1", null},
+                        {"Lesson2", null},
+                        {null, null},
+                        {null, null}
+                },
+                new String[]{
+                        "Collection", ""
+                }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Boolean.class
+            Class[] types = new Class[]{
+                    java.lang.Object.class, java.lang.Boolean.class
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+                return types[columnIndex];
             }
         });
         collectionsJT.setPreferredSize(new java.awt.Dimension(286, 298));
@@ -162,7 +162,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         wordClassJLabel.setText("Class");
 
-        wordClassJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        wordClassJCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
 
         meaningJTF.setText("meaning");
 
@@ -176,180 +176,192 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         javax.swing.GroupLayout wordFoundIndidcatorLayout = new javax.swing.GroupLayout(wordFoundIndidcator);
         wordFoundIndidcator.setLayout(wordFoundIndidcatorLayout);
         wordFoundIndidcatorLayout.setHorizontalGroup(
-            wordFoundIndidcatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
+                wordFoundIndidcatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 20, Short.MAX_VALUE)
         );
         wordFoundIndidcatorLayout.setVerticalGroup(
-            wordFoundIndidcatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 29, Short.MAX_VALUE)
+                wordFoundIndidcatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 29, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout WordPanelLayout = new javax.swing.GroupLayout(WordPanel);
         WordPanel.setLayout(WordPanelLayout);
         WordPanelLayout.setHorizontalGroup(
-            WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WordPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(languageJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(saveWordJB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, WordPanelLayout.createSequentialGroup()
-                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(wordClassJLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(wordClassJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WordPanelLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(WordPanelLayout.createSequentialGroup()
-                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(meaningsLanguageJCB, javax.swing.GroupLayout.Alignment.LEADING, 0, 280, Short.MAX_VALUE)
-                                        .addComponent(addMeaningJB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(meaningsJLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(meaningJTF))
-                                    .addComponent(deleteMeaningJB, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(collectionJTF, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(WordPanelLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(collectionsJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(createCollectionJB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, WordPanelLayout.createSequentialGroup()
-                        .addComponent(wordJTF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(wordFoundIndidcator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(207, 207, 207))
+                WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WordPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(languageJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(saveWordJB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, WordPanelLayout.createSequentialGroup()
+                                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(wordClassJLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(wordClassJCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WordPanelLayout.createSequentialGroup()
+                                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(WordPanelLayout.createSequentialGroup()
+                                                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                                                .addComponent(meaningsLanguageJCB, javax.swing.GroupLayout.Alignment.LEADING, 0, 280, Short.MAX_VALUE)
+                                                                                .addComponent(addMeaningJB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                .addComponent(meaningsJLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                .addComponent(meaningJTF))
+                                                                        .addComponent(deleteMeaningJB, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(collectionJTF, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGroup(WordPanelLayout.createSequentialGroup()
+                                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                                .addComponent(collectionsJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(createCollectionJB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, WordPanelLayout.createSequentialGroup()
+                                                .addComponent(wordJTF)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(wordFoundIndidcator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(207, 207, 207))
         );
         WordPanelLayout.setVerticalGroup(
-            WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WordPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(languageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(wordJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(wordFoundIndidcator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(WordPanelLayout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(WordPanelLayout.createSequentialGroup()
-                                .addComponent(wordClassJLabel)
+                WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(WordPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(languageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(wordClassJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(meaningsJLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(meaningsLanguageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(deleteMeaningJB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(meaningJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(addMeaningJB))
-                            .addGroup(WordPanelLayout.createSequentialGroup()
-                                .addComponent(collectionsJLabel)
-                                .addGap(1, 1, 1)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(collectionJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(createCollectionJB)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(WordPanelLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(separator)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(saveWordJB, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(wordJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(wordFoundIndidcator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(WordPanelLayout.createSequentialGroup()
+                                                .addGap(2, 2, 2)
+                                                .addGroup(WordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addGroup(WordPanelLayout.createSequentialGroup()
+                                                                .addComponent(wordClassJLabel)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(wordClassJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(meaningsJLabel)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(meaningsLanguageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jScrollPane1)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(deleteMeaningJB)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(meaningJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(addMeaningJB))
+                                                        .addGroup(WordPanelLayout.createSequentialGroup()
+                                                                .addComponent(collectionsJLabel)
+                                                                .addGap(1, 1, 1)
+                                                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(collectionJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(createCollectionJB)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(WordPanelLayout.createSequentialGroup()
+                                                .addGap(32, 32, 32)
+                                                .addComponent(separator)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                .addComponent(saveWordJB, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
         );
 
         TabbedPane.addTab("Words", WordPanel);
 
-        GroupsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        GroupsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
 
         AddCollectionTextField.setToolTipText("Collection name");
 
         AddCollectionButton.setText("Add collection");
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            String[] strings = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
+
+            public int getSize() {
+                return strings.length;
+            }
+
+            public String getElementAt(int i) {
+                return strings[i];
+            }
         });
         GroupsWordList.setViewportView(jList1);
 
         javax.swing.GroupLayout CollectionsPanelLayout = new javax.swing.GroupLayout(CollectionsPanel);
         CollectionsPanel.setLayout(CollectionsPanelLayout);
         CollectionsPanelLayout.setHorizontalGroup(
-            CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CollectionsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(GroupsComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(CollectionsPanelLayout.createSequentialGroup()
-                        .addComponent(AddCollectionTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AddCollectionButton))
-                    .addComponent(GroupsWordList))
-                .addContainerGap())
+                CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(CollectionsPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(GroupsComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(CollectionsPanelLayout.createSequentialGroup()
+                                                .addComponent(AddCollectionTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(AddCollectionButton))
+                                        .addComponent(GroupsWordList))
+                                .addContainerGap())
         );
         CollectionsPanelLayout.setVerticalGroup(
-            CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CollectionsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AddCollectionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AddCollectionButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(GroupsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(GroupsWordList, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
-                .addContainerGap())
+                CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(CollectionsPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(AddCollectionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(AddCollectionButton))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(GroupsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(GroupsWordList, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
+                                .addContainerGap())
         );
 
         TabbedPane.addTab("Collections", CollectionsPanel);
 
         MegaList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            String[] strings = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
+
+            public int getSize() {
+                return strings.length;
+            }
+
+            public String getElementAt(int i) {
+                return strings[i];
+            }
         });
         jScrollPane3.setViewportView(MegaList);
 
         DeleteWordButton.setText("Delete");
 
-        MegaListLanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        MegaListLanguageComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
 
         javax.swing.GroupLayout MegaListPanelLayout = new javax.swing.GroupLayout(MegaListPanel);
         MegaListPanel.setLayout(MegaListPanelLayout);
         MegaListPanelLayout.setHorizontalGroup(
-            MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MegaListPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3)
-                    .addComponent(DeleteWordButton, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
-                    .addComponent(MegaListLanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(MegaListPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane3)
+                                        .addComponent(DeleteWordButton, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+                                        .addComponent(MegaListLanguageComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         MegaListPanelLayout.setVerticalGroup(
-            MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MegaListPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(MegaListLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DeleteWordButton)
-                .addContainerGap())
+                MegaListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(MegaListPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(MegaListLanguageComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(DeleteWordButton)
+                                .addContainerGap())
         );
 
         TabbedPane.addTab("MegaList", MegaListPanel);
@@ -357,12 +369,12 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         TabbedPane.getAccessibleContext().setAccessibleName("");
@@ -370,14 +382,14 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -409,10 +421,9 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
     private void wordJTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_wordJTFKeyPressed
         //todo: this is test implementation, write normal implementation later
-        if (wordJTF.getText().length()%2==0) {
+        if (wordJTF.getText().length() % 2 == 0) {
             wordFoundIndidcator.setColor(IndicatorLed.LedColor.GREEN);
-        }
-        else {
+        } else {
             wordFoundIndidcator.setColor(IndicatorLed.LedColor.RED);
         }
         wordFoundIndidcator.repaint();
