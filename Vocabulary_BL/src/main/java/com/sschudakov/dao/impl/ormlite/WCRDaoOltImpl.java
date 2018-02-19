@@ -48,12 +48,14 @@ public class WCRDaoOltImpl implements WCRDao {
 
     @Override
     public Collection<WordCollectionRelationship> findByWordId(int wordId) throws SQLException {
-        PreparedStatement statement = DatabaseManager
-                .connection.prepareStatement(
-                        "SELECT * FROM word_collection_relationships WHERE " +
-                                WordCollectionRelationship.WORD_COLUMN_NAME + " = " + "\'" + wordId + "\'"
-                );
+
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM word_collection_relationships WHERE ")
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append("\'" + wordId + "\'");
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
+
         ResultSet resultSet = statement.getResultSet();
 
         return formWCRCollection(resultSet);
@@ -61,12 +63,13 @@ public class WCRDaoOltImpl implements WCRDao {
 
     @Override
     public Collection<WordCollectionRelationship> findByCollectionId(int collectionId) throws SQLException {
-        PreparedStatement statement = DatabaseManager
-                .connection.prepareStatement(
-                        "SELECT * FROM word_collection_relationships WHERE " +
-                                WordCollectionRelationship.COLLECTION_COLUMN_NAME + " = " + collectionId
-                );
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM word_collection_relationships WHERE ")
+                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
+
         ResultSet resultSet = statement.getResultSet();
 
         return formWCRCollection(resultSet);

@@ -35,13 +35,15 @@ public class LanguageDaoOltImpl implements LanguageDao {
 
     @Override
     public Language findByName(String name) throws SQLException {
-        PreparedStatement statement = DatabaseManager
-                .connection.prepareStatement(
-                        "SELECT * FROM languages WHERE " +
-                                Language.NAME_FIELD_COLUMN_NAME + " = " + "\'" + name + "\'"
-                );
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM languages WHERE ")
+                .append(Language.NAME_FIELD_COLUMN_NAME).append("=").append("\'" + name + "\'");
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
+
         ResultSet resultSet = statement.getResultSet();
+
         if (!resultSet.next()) {
             return null;
         }

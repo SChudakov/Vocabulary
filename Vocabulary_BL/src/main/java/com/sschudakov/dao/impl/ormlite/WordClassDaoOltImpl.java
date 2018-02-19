@@ -35,14 +35,16 @@ public class WordClassDaoOltImpl implements WordClassDao {
 
     @Override
     public WordClass findByName(String name) throws SQLException {
-        PreparedStatement statement = DatabaseManager
-                .connection.prepareStatement(
-                        "SELECT * FROM word_classes WHERE " +
-                                WordClass.CLASS_NAME_COLUMN_NAME + " = " + "\'" + name + "\'"
-                );
+
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM word_classes WHERE ")
+                .append(WordClass.CLASS_NAME_COLUMN_NAME).append("=").append("\'" + name + "\'");
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
         ResultSet resultSet = statement.getResultSet();
+
         if (!resultSet.next()) {
             return null;
         }
