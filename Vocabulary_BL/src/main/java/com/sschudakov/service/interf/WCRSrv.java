@@ -23,4 +23,6 @@ public interface WCRSrv {
     WordCollectionRelationship update(WordCollectionRelationship wcr) throws SQLException;
 
     void delete(Integer wcrId) throws SQLException;
+
+    void delete(String word, String language, String collectionName) throws SQLException;
 }

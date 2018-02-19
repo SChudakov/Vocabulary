@@ -21,4 +21,6 @@ public interface WCRDao {
     WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
 
     void remove(Integer wordCollectionRelationshipID) throws SQLException;
+
+    void remove(Integer wordId, Integer collectionId) throws SQLException;
 }

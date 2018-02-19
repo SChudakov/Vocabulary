@@ -21,5 +21,7 @@ public interface WMRDao {
 
     void remove(Integer wordMeaningRelationshipID) throws SQLException;
 
+    void remove(Integer wordId, Integer meaningId) throws SQLException;
+
     Collection<Integer> findWordMeaningsIds(int wordId, int meaningsLanguageId) throws SQLException;
 }

@@ -396,27 +396,27 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void deleteMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteMeaningJBActionPerformed
-        // TODO add your handling code here:
+        throw new UnsupportedOperationException();
     }//GEN-LAST:event_deleteMeaningJBActionPerformed
 
     private void addMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMeaningJBActionPerformed
-        // TODO add your handling code here:
+        throw new UnsupportedOperationException();
     }//GEN-LAST:event_addMeaningJBActionPerformed
 
     private void saveWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveWordJBActionPerformed
-        // TODO add your handling code here:
+        throw new UnsupportedOperationException();
     }//GEN-LAST:event_saveWordJBActionPerformed
 
     private void createCollectionJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCollectionJBActionPerformed
-        // TODO add your handling code here:
+        throw new UnsupportedOperationException();
     }//GEN-LAST:event_createCollectionJBActionPerformed
 
     private void meaningsLanguageJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_meaningsLanguageJCBActionPerformed
-        // TODO add your handling code here:
+        throw new UnsupportedOperationException();
     }//GEN-LAST:event_meaningsLanguageJCBActionPerformed
 
     private void languageJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageJCBActionPerformed
-        // TODO add your handling code here:
+        throw new UnsupportedOperationException();
     }//GEN-LAST:event_languageJCBActionPerformed
 
     private void wordJTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_wordJTFKeyPressed

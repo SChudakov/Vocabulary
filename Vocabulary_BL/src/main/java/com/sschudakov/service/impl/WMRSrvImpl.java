@@ -64,6 +64,13 @@ public class WMRSrvImpl implements WMRSrv {
     }
 
     @Override
+    public void delete(String word, String wordsLanguage, String meaning, String meaningsLanugage) throws SQLException {
+        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(wordsLanguage));
+        Word foundMeaning = this.wordDao.findByValueAndLanguage(meaning, this.languageDao.findByName(meaningsLanugage));
+        this.wmrDao.remove(foundWord.getWordID(), foundMeaning.getWordID());
+    }
+
+    @Override
     public WordMeaningRelationship update(WordMeaningRelationship wmr) throws SQLException {
         return this.wmrDao.update(wmr);
     }

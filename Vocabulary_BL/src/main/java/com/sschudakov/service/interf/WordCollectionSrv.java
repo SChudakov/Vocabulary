@@ -18,5 +18,5 @@ public interface WordCollectionSrv {
 
     List<WordCollection> findAll() throws SQLException;
 
-    void delete(Integer wordCollectionId) throws SQLException;
+    void delete(String name) throws SQLException;
 }

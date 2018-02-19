@@ -116,6 +116,7 @@ public class UserRequestManager {
         }
         return collections;
     }
+
     /**
      * Tested successfully
      *
@@ -128,36 +129,19 @@ public class UserRequestManager {
 
 
     //change requests
-    public boolean createWord(String word, String language) throws SQLException {
+    public boolean createWord(String word, String wordClass, String language) throws SQLException {
         if (wordExists(word, language)) {
             return false;
         }
-        this.wordService.create(word, "???", language); //TODO: default word class?
+        this.wordService.create(word, wordClass, language); //TODO: default word class?
         return true;
     }
 
-    public boolean deleteWord(String word, String language) throws SQLException {
-        if (!wordExists(word, language)) {
-            return false;
-        }
-        wordService.delete(wordService.findByValueAndLanguage(word, language).getWordID());
-        return true;
-    }
-
-    public boolean createCollection(String name) throws SQLException {
+    public void createCollection(String name) throws SQLException {
         if (collectionExists(name)) {
-            return false;
+            throw new IllegalAccessError("Collection with name " + name + " already exists");
         }
-        wordCollectionService.create(name);
-        return true;
-    }
-
-    public boolean deleteCollection(String name) throws SQLException {
-        if (!collectionExists(name)) {
-            return false;
-        }
-        wordCollectionService.delete(wordCollectionService.findByName(name).getCollectionID());
-        return true;
+        this.wordCollectionService.create(name);
     }
 
     public boolean addMeaningToWord(String word, String language, String meaning, String meaningLanguage) throws SQLException {
@@ -182,10 +166,6 @@ public class UserRequestManager {
         return true;
     }
 
-    public boolean removeWordFromCollection(String word, String language, String collection) {
-        throw new UnsupportedOperationException(); //todo: implement this
-    }
-
     public boolean changeWordClassTo(String word, String language, String className) throws SQLException {
         if (!wordExists(word, language) || !classExists(className)) {
             //todo: mb throw exception to specify what exactly doesn't exist
@@ -195,6 +175,23 @@ public class UserRequestManager {
         wordObj.setWordClass(wordClassService.findByName(className));
         wordService.update(wordObj);
         return true;
+    }
+
+    //remove request
+    public void deleteWord(String word, String language) throws SQLException {
+        wordService.delete(wordService.findByValueAndLanguage(word, language).getWordID());
+    }
+
+    public void deleteCollection(String name) throws SQLException {
+        this.wordCollectionService.delete(name);
+    }
+
+    public void removeWordFromCollection(String word, String language, String collectionName) throws SQLException {
+        this.wcrService.delete(word, language, collectionName);
+    }
+
+    public void removeMeaning(String word, String wordsLanguage, String meaning, String meaningsLanugage) throws SQLException {
+        this.wmrService.delete(word, wordsLanguage, meaning, meaningsLanugage);
     }
 
     //check requests

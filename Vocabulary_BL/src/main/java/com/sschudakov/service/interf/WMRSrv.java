@@ -22,5 +22,9 @@ public interface WMRSrv {
     WordMeaningRelationship update(WordMeaningRelationship wmr) throws SQLException;
 
     void delete(Integer wmrId) throws SQLException;
-    public Collection<Word> findWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException;
+
+    void delete(String word, String wordsLanguage, String meaning, String meaningsLanugage) throws SQLException;
+
+    Collection<Word> findWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException;
+
 }

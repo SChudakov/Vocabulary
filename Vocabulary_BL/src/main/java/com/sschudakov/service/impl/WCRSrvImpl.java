@@ -48,6 +48,13 @@ public class WCRSrvImpl implements WCRSrv {
     }
 
     @Override
+    public void delete(String word, String language, String collectionName) throws SQLException {
+        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(language));
+        WordCollection foundMeaning = this.wordCollectionDao.findByName(collectionName);
+        this.wcrDao.remove(foundWord.getWordID(), foundMeaning.getCollectionID());
+    }
+
+    @Override
     public WordCollectionRelationship update(WordCollectionRelationship wcr) throws SQLException {
         return this.wcrDao.update(wcr);
     }

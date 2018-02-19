@@ -91,9 +91,6 @@ public class UserRequestManagerTest {
     public void addWordToCollection() {
     }
 
-    @Test
-    public void removeWordFromCollection() {
-    }
 
     @Test
     public void changeWordClassTo() {
@@ -114,4 +111,14 @@ public class UserRequestManagerTest {
     @Test
     public void classExists() {
     }
+
+    @Test
+    public void removeMeaning() {
+
+    }
+
+    @Test
+    public void removeWordFromCollection() {
+    }
+
 }

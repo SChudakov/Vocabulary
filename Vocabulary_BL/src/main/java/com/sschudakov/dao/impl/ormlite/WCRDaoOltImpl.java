@@ -7,6 +7,7 @@ import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordCollectionRelationship;
+import com.sschudakov.entity.WordMeaningRelationship;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -100,5 +101,16 @@ public class WCRDaoOltImpl implements WCRDao {
     @Override
     public void remove(Integer wordCollectionRelationshipID) throws SQLException {
         this.wordCollectionRelationshipsDao.deleteById(wordCollectionRelationshipID);
+    }
+
+    @Override
+    public void remove(Integer wordId, Integer collectionId) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("DELETE * FROM word_collection_relationships WHERE ")
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
     }
 }
