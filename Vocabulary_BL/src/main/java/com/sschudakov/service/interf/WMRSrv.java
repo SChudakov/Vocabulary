@@ -13,6 +13,8 @@ public interface WMRSrv {
 
     WordMeaningRelationship findById(Integer id) throws SQLException;
 
+    WordMeaningRelationship findByWordAndMeaningIds(int wordId, int meaningId);
+
     Collection<WordMeaningRelationship> findByWordAndLanguage(String word, String language) throws SQLException;
 
     Collection<WordMeaningRelationship> findByMeaningAndLanguage(String meaning, String language) throws SQLException;
@@ -26,5 +28,7 @@ public interface WMRSrv {
     void delete(String word, String wordsLanguage, String meaning, String meaningsLanugage) throws SQLException;
 
     Collection<Word> findWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException;
+
+
 
 }

@@ -14,6 +14,8 @@ public interface WCRSrv {
 
     WordCollectionRelationship findById(Integer id) throws SQLException;
 
+    WordCollectionRelationship findByWordAndCollectionIds(int wordId, int collectionId);
+
     Collection<WordCollectionRelationship> findByWordAndLanguage(String word, String language) throws SQLException;
 
     Collection<WordCollectionRelationship> findByCollection(String collection) throws SQLException;

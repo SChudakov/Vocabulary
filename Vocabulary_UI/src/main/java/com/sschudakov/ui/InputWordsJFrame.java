@@ -5,6 +5,13 @@
  */
 package com.sschudakov.ui;
 
+import com.sschudakov.request.UserRequestManager;
+
+import javax.swing.JOptionPane;
+import java.sql.SQLException;
+import java.util.Collection;
+import java.util.Map;
+
 /**
  * @author Semen
  */
@@ -20,6 +27,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         collectionsJT.getColumnModel().getColumn(1).setMinWidth(60);
         collectionsJT.getColumnModel().getColumn(1).setPreferredWidth(60);
         collectionsJT.getColumnModel().getColumn(0).setPreferredWidth(220);
+        this.userRequestManager = new UserRequestManager();
     }
 
     /**
@@ -404,11 +412,34 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_addMeaningJBActionPerformed
 
     private void saveWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveWordJBActionPerformed
-        throw new UnsupportedOperationException();
+        try {
+            this.userRequestManager.saveWordInformation(
+                    this.wordJTF.getText(),
+                    (String) this.wordClassJCB.getSelectedItem(),
+                    (String) this.languageJCB.getSelectedItem(),
+                    extractMeanings(),
+                    extractCollections()
+            );
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_saveWordJBActionPerformed
 
-    private void createCollectionJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCollectionJBActionPerformed
+    private Map<String, Collection<String>> extractMeanings() {
         throw new UnsupportedOperationException();
+    }
+
+    private Collection<String> extractCollections() {
+        throw new UnsupportedOperationException();
+    }
+
+
+    private void createCollectionJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCollectionJBActionPerformed
+        try {
+            this.userRequestManager.createCollection(this.collectionJTF.getText());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_createCollectionJBActionPerformed
 
     private void meaningsLanguageJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_meaningsLanguageJCBActionPerformed
@@ -500,5 +531,6 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     private com.sschudakov.ui.IndicatorLed wordFoundIndidcator;
     private javax.swing.JTextField wordJTF;
     // End of variables declaration//GEN-END:variables
+    private UserRequestManager userRequestManager;
 
 }
