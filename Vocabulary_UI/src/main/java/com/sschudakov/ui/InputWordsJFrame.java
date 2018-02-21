@@ -412,24 +412,53 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_addMeaningJBActionPerformed
 
     private void saveWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveWordJBActionPerformed
+        String word = this.wordJTF.getText();
+        String language = (String) this.wordClassJCB.getSelectedItem();
+        String wordClass = (String) this.languageJCB.getSelectedItem();
         try {
             this.userRequestManager.saveWordInformation(
-                    this.wordJTF.getText(),
-                    (String) this.wordClassJCB.getSelectedItem(),
-                    (String) this.languageJCB.getSelectedItem(),
-                    extractMeanings(),
-                    extractCollections()
+                    word,
+                    wordClass,
+                    language
+                    );
+            this.userRequestManager.addMeanings(
+                    word,
+                    language,
+                    extractMeaningsToBeAdded()
+            );
+            this.userRequestManager.removeMeanings(
+                    word,
+                    language,
+                    extractMeaningsToBeDeleted()
+            );
+            this.userRequestManager.putInCollections(
+                    word,
+                    language,
+                    extractCollectionsToBeAddedTo()
+            );
+            this.userRequestManager.removeFromCollections(
+                    word,
+                    language,
+                    extractCollectionsToBeRemovedFrom()
             );
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_saveWordJBActionPerformed
 
-    private Map<String, Collection<String>> extractMeanings() {
+    private Map<String, Collection<String>> extractMeaningsToBeAdded() {
         throw new UnsupportedOperationException();
     }
 
-    private Collection<String> extractCollections() {
+    private Map<String, Collection<String>> extractMeaningsToBeDeleted() {
+        throw new UnsupportedOperationException();
+    }
+
+    private Collection<String> extractCollectionsToBeAddedTo() {
+        throw new UnsupportedOperationException();
+    }
+
+    private Collection<String> extractCollectionsToBeRemovedFrom() {
         throw new UnsupportedOperationException();
     }
 
