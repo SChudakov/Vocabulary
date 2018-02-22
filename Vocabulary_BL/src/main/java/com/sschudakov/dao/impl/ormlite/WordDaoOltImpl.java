@@ -11,6 +11,8 @@ import com.sschudakov.entity.Word;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class WordDaoOltImpl implements WordDao {
@@ -73,7 +75,36 @@ public class WordDaoOltImpl implements WordDao {
     }
 
     @Override
-    public List<Word> findAll() throws SQLException {
+    public List<Word> findByLanguage(Language language) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM words WHERE ")
+                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(language.getLanguageID());
+
+        System.out.println(query.toString());
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
+
+        ResultSet resultSet = statement.getResultSet();
+        return formWordsCollection(resultSet, language);
+    }
+
+    private List<Word> formWordsCollection(ResultSet resultSet, Language language) throws SQLException {
+        List<Word> result = new ArrayList<>();
+        Word word;
+        while (resultSet.next()) {
+            word = new Word();
+            word.setWordID(resultSet.getInt(Word.ID_COLUMN_NAME));
+            word.setValue(resultSet.getString(Word.VALUE_COLUMN_NAME));
+            word.setWordClass(this.wordClassDao.findByName(resultSet.getString(Word.VALUE_COLUMN_NAME)));
+            word.setLanguage(language);
+            result.add(word);
+        }
+        return result;
+    }
+
+
+    @Override
+    public Collection<Word> findAll() throws SQLException {
         return this.wordsDao.queryForAll();
     }
 

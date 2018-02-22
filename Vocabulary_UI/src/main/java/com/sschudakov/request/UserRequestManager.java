@@ -47,7 +47,6 @@ public class UserRequestManager {
     }
 
     //get requests
-
     /**
      * Tested successfully
      *
@@ -92,9 +91,8 @@ public class UserRequestManager {
         return result;
     }
 
-    public List<String> getWordsByLanguageName(String language) {
-        //todo: do we need this?
-        throw new UnsupportedOperationException();
+    public List<String> getWordsByLanguageName(String language) throws SQLException {
+        return this.wordService.findByLanguage(language).stream().map(Word::getValue).collect(Collectors.toList());
     }
 
     /**
@@ -124,8 +122,24 @@ public class UserRequestManager {
         return this.wcrService.findByCollection(collection).stream().map(wcr -> wcr.getWord().getValue()).collect(Collectors.toList());
     }
 
+    //create request
+    public void createCollection(String name) throws SQLException {
+        if (collectionExists(name)) {
+            throw new IllegalAccessError("Collection with name " + name + " already exists");
+        }
+        this.wordCollectionService.create(name);
+    }
 
-    //change requests
+    //delete request
+    public void deleteWord(String word, String language) throws SQLException {
+        this.wordService.delete(wordService.findByValueAndLanguage(word, language).getWordID());
+    }
+
+    public void deleteCollection(String name) throws SQLException {
+        this.wordCollectionService.delete(name);
+    }
+
+    //save word information methods
     public void saveWordInformation(String word, String wordClass, String language) throws SQLException {
         if (wordExists(word, language)) {
             Word foundWord = this.wordService.findByValueAndLanguage(word, language);
@@ -175,39 +189,24 @@ public class UserRequestManager {
         this.wcrService.delete(word, language, collectionName);
     }
 
-    public void createCollection(String name) throws SQLException {
-        if (collectionExists(name)) {
-            throw new IllegalAccessError("Collection with name " + name + " already exists");
-        }
-        this.wordCollectionService.create(name);
-    }
-
-    //remove request
-    public void deleteWord(String word, String language) throws SQLException {
-        wordService.delete(wordService.findByValueAndLanguage(word, language).getWordID());
-    }
-
-    public void deleteCollection(String name) throws SQLException {
-        this.wordCollectionService.delete(name);
-    }
-
-
-
 
     //check requests
     private boolean wordExists(String word, String language) throws SQLException {
         return wordService.findByValueAndLanguage(word, language) != null;
     }
 
+    private boolean collectionExists(String collection) throws SQLException {
+        return wordCollectionService.findByName(collection) != null;
+    }
+
     private boolean wordMeaningRelationshipExists(Word word, Word meaning) {
-        return this.wmrService.findByWordAndMeaningIds(word.getWordID(), meaning.getWordID()) != null;
+        throw new UnsupportedOperationException();
+        /*return this.wmrService.findByWordAndMeaningIds(word.getWordID(), meaning.getWordID()) != null;*/
     }
 
     private boolean wordCollectionsRelationshipExists(Word word, WordCollection collection) {
-        return this.wcrService.findByWordAndCollectionIds(word.getWordID(), collection.getCollectionID()) != null;
-    }
-
-    private boolean collectionExists(String collection) throws SQLException {
-        return wordCollectionService.findByName(collection) != null;
+        throw new UnsupportedOperationException();
+        /*return this.wcrService.findByWordAndCollectionIds(word.getWordID(),
+                collection.getCollectionID()) != null;*/
     }
 }

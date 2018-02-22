@@ -1,6 +1,5 @@
 package com.sschudakov.service.interf;
 
-import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 
 import java.sql.SQLException;
@@ -17,7 +16,9 @@ public interface WordSrv {
 
     Word findByValueAndLanguage(String value, String languageName) throws SQLException;
 
-    List<Word> findAll() throws SQLException;
+    Collection<Word> findAll() throws SQLException;
+
+    List<Word> findByLanguage(String languageName) throws SQLException;
 
     void delete(Integer wordId) throws SQLException;
 

@@ -31,6 +31,7 @@ public class WMRSrvImpl implements WMRSrv {
     @Override
     public void create(Word word, Word meaning) throws SQLException {
         this.wmrDao.save(new WordMeaningRelationship(word, meaning));
+        this.wmrDao.save(new WordMeaningRelationship(meaning, word));
     }
 
     @Override
@@ -82,11 +83,6 @@ public class WMRSrvImpl implements WMRSrv {
         Language foundWordLanguage = this.languageDao.findByName(wordLanguage);
         Language foundMeaningLanguage = this.languageDao.findByName(meaningsLanguage);
         Word foundWord = this.wordDao.findByValueAndLanguage(word, foundWordLanguage);
-
-        System.out.println("word language: " + foundWordLanguage);
-        System.out.println("word id: " + foundMeaningLanguage);
-        System.out.println("word id" + foundWord.getValue());
-
 
         for (int meaningId : this.wmrDao.findWordMeaningsIds(foundWord.getWordID(), foundMeaningLanguage.getLanguageID())) {
             result.add(this.wordDao.findById(meaningId));
