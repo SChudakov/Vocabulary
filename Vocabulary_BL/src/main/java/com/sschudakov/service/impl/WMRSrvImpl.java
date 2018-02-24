@@ -34,6 +34,13 @@ public class WMRSrvImpl implements WMRSrv {
         this.wmrDao.save(new WordMeaningRelationship(meaning, word));
     }
 
+
+    @Override
+    public WordMeaningRelationship update(WordMeaningRelationship wmr) throws SQLException {
+        return this.wmrDao.update(wmr);
+    }
+
+
     @Override
     public WordMeaningRelationship findById(Integer id) throws SQLException {
         return this.wmrDao.findById(id);
@@ -47,36 +54,6 @@ public class WMRSrvImpl implements WMRSrv {
     }
 
     @Override
-    public Collection<WordMeaningRelationship> findByMeaningAndLanguage(String meaning, String language) throws SQLException {
-        Language foundLanguage = this.languageDao.findByName(language);
-        Word foundMeaning = this.wordDao.findByValueAndLanguage(meaning, foundLanguage);
-        return this.wmrDao.findByMeaningId(foundMeaning.getWordID());
-    }
-
-
-    @Override
-    public List<WordMeaningRelationship> findAll() throws SQLException {
-        return this.wmrDao.findAll();
-    }
-
-    @Override
-    public void delete(Integer wmrId) throws SQLException {
-        this.wmrDao.remove(wmrId);
-    }
-
-    @Override
-    public void delete(String word, String wordsLanguage, String meaning, String meaningsLanugage) throws SQLException {
-        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(wordsLanguage));
-        Word foundMeaning = this.wordDao.findByValueAndLanguage(meaning, this.languageDao.findByName(meaningsLanugage));
-        this.wmrDao.remove(foundWord.getWordID(), foundMeaning.getWordID());
-    }
-
-    @Override
-    public WordMeaningRelationship update(WordMeaningRelationship wmr) throws SQLException {
-        return this.wmrDao.update(wmr);
-    }
-
-    @Override
     public Collection<Word> findWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException {
         Collection<Word> result = new ArrayList<>();
 
@@ -84,9 +61,27 @@ public class WMRSrvImpl implements WMRSrv {
         Language foundMeaningLanguage = this.languageDao.findByName(meaningsLanguage);
         Word foundWord = this.wordDao.findByValueAndLanguage(word, foundWordLanguage);
 
-        for (int meaningId : this.wmrDao.findWordMeaningsIds(foundWord.getWordID(), foundMeaningLanguage.getLanguageID())) {
+        for (int meaningId : this.wmrDao.findMeaningsIds(foundWord.getWordID(), foundMeaningLanguage.getLanguageID())) {
             result.add(this.wordDao.findById(meaningId));
         }
         return result;
+    }
+
+    @Override
+    public List<WordMeaningRelationship> findAll() throws SQLException {
+        return this.wmrDao.findAll();
+    }
+
+
+    @Override
+    public void delete(String word, String wordsLanguage, String meaning, String meaningsLanguage) throws SQLException {
+        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(wordsLanguage));
+        Word foundMeaning = this.wordDao.findByValueAndLanguage(meaning, this.languageDao.findByName(meaningsLanguage));
+        this.wmrDao.remove(foundWord.getWordID(), foundMeaning.getWordID());
+    }
+
+    @Override
+    public void delete(Integer wmrId) throws SQLException {
+        this.wmrDao.remove(wmrId);
     }
 }

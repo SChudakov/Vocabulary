@@ -21,5 +21,4 @@ public interface WordSrv {
     List<Word> findByLanguage(String languageName) throws SQLException;
 
     void delete(Integer wordId) throws SQLException;
-
 }

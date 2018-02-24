@@ -23,9 +23,9 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -41,12 +41,15 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="TabbedPane" min="-2" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="TabbedPane" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="TabbedPane" alignment="0" max="32767" attributes="0"/>
+              <Component id="TabbedPane" alignment="0" pref="559" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -81,106 +84,131 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="wordsLanguageJCB" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="wordClassJLabel" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="wordsWordClassJCB" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Component id="jScrollPane1" min="-2" pref="280" max="-2" attributes="0"/>
-                                      </Group>
                                       <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="wordsMeaningsLanguageJCB" alignment="0" pref="280" max="32767" attributes="0"/>
-                                              <Component id="wordsAddMeaningJB" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="meaningsJLabel" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="wordsMeaningJTF" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="wordsDeleteMeaningJB" alignment="0" pref="280" max="32767" attributes="0"/>
-                                              <Component id="wordsSaveWordJB" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="wordsAddMeaningJB" alignment="1" pref="280" max="32767" attributes="0"/>
+                                                      <Component id="wordsMeaningJTF" alignment="1" pref="280" max="32767" attributes="0"/>
+                                                      <Component id="wordsDeleteMeaningJB" alignment="0" pref="280" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="wordsMeaningsLanguageJCB" min="-2" pref="280" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="meaningsJLabel" max="32767" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="wordsMeaningsLanguageJL" min="-2" pref="280" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="separator" min="-2" pref="2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Component id="collectionsJLabel" min="-2" pref="286" max="-2" attributes="0"/>
+                                          <Component id="separator" min="-2" pref="2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="wordsDeleteWordJB" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="wordsAddCollectionJB" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="wordsCollectionNameJTF" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="wordsSaveWordJB" min="-2" pref="280" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="wordsWordValueJTF" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="wordsDeleteWordJB" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="wordsCollectionNameJTF" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="wordsCreateCollectionJB" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="wordCollectionsJL" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="wordsLanguageJL" min="-2" pref="280" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="wordsWordClassJL" min="-2" pref="280" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="wordsLanguageJCB" min="-2" pref="280" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="wordsWordClassJCB" min="-2" pref="280" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="wordsWordValueJTF" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="wordFoundIndidcator" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="wordsLanguageJL" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="wordsWordClassJL" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="wordsLanguageJCB" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="wordsLanguageJCB" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="wordsWordClassJCB" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="wordsWordValueJTF" min="-2" max="-2" attributes="0"/>
-                              <Component id="wordFoundIndidcator" min="-2" max="-2" attributes="0"/>
+                              <Component id="wordFoundIndidcator" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="wordClassJLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="wordsWordClassJCB" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="meaningsJLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="wordsMeaningsLanguageJCB" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jScrollPane1" max="32767" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="wordsDeleteMeaningJB" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="wordsMeaningJTF" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="wordsAddMeaningJB" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="collectionsJLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jScrollPane2" min="-2" pref="321" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="wordsCollectionNameJTF" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="wordsAddCollectionJB" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace pref="8" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="wordsSaveWordJB" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                                       <Component id="wordsDeleteWordJB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="wordsSaveWordJB" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="wordCollectionsJL" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="wordsMeaningsLanguageJL" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="wordsMeaningsLanguageJCB" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="meaningsJLabel" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane1" min="-2" pref="232" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="wordsDeleteMeaningJB" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="wordsMeaningJTF" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="wordsAddMeaningJB" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jScrollPane2" min="-2" pref="316" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="wordsCollectionNameJTF" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="wordsCreateCollectionJB" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -200,7 +228,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wordsLanguageJCBActionPerformed"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="wordsLanguageJCBItemStateChanged"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -216,9 +244,9 @@
                     <Property name="text" type="java.lang.String" value="Meanings"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="collectionsJLabel">
+                <Component class="javax.swing.JLabel" name="wordCollectionsJL">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Collections"/>
+                    <Property name="text" type="java.lang.String" value="collections"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="wordsMeaningsLanguageJCB">
@@ -228,7 +256,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wordsMeaningsLanguageJCBActionPerformed"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="wordsMeaningsLanguageJCBItemStateChanged"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -307,20 +335,15 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wordsAddMeaningJBActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="wordsAddCollectionJB">
+                <Component class="javax.swing.JButton" name="wordsCreateCollectionJB">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="add collection"/>
+                    <Property name="text" type="java.lang.String" value="create collection"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wordsAddCollectionJBActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wordsCreateCollectionJBActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="wordsCollectionNameJTF">
-                </Component>
-                <Component class="javax.swing.JLabel" name="wordClassJLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Class"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="wordsWordClassJCB">
                   <Properties>
@@ -328,6 +351,9 @@
                       <StringArray count="0"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="wordsWordClassJCBItemStateChanged"/>
+                  </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
@@ -365,6 +391,21 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wordsDeleteWordJBActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="wordsLanguageJL">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="language"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="wordsWordClassJL">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="word class"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="wordsMeaningsLanguageJL">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="meanings language"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="CollectionsPanel">
@@ -390,7 +431,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="collectionsAddCollectionJB" min="-2" pref="125" max="-2" attributes="0"/>
+                          <Component id="collectionsCreateCollectionJB" min="-2" pref="125" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                           <Component id="collectionDeleteCollectionJB" min="-2" pref="125" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -406,14 +447,14 @@
                           <Component id="collectionsCollectionNameJTF" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="collectionsAddCollectionJB" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="collectionsCreateCollectionJB" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="collectionDeleteCollectionJB" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="collectionsDeleteWordsJB" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="collectionsLanguageJCB" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="GroupsWordList" min="-2" pref="379" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="GroupsWordList" min="-2" pref="413" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -435,12 +476,12 @@
                     <Property name="toolTipText" type="java.lang.String" value="Collection name"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="collectionsAddCollectionJB">
+                <Component class="javax.swing.JButton" name="collectionsCreateCollectionJB">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="add collection"/>
+                    <Property name="text" type="java.lang.String" value="create collection"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="collectionsAddCollectionJBActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="collectionsCreateCollectionJBActionPerformed"/>
                   </Events>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="GroupsWordList">
@@ -498,9 +539,9 @@
                               <Component id="jScrollPane3" pref="575" max="32767" attributes="0"/>
                               <Component id="DeleteWordButton" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="MegaListLanguageComboBox" max="32767" attributes="0"/>
+                                  <Component id="languagesLanguageJCB" max="32767" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="languageDeleteWordsJB" min="-2" max="-2" attributes="0"/>
+                                  <Component id="languagesRemoveWordsJB" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -512,11 +553,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="MegaListLanguageComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="languageDeleteWordsJB" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="languagesLanguageJCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="languagesRemoveWordsJB" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" pref="426" max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" pref="451" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="DeleteWordButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -532,7 +573,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JList" name="MegaList">
+                    <Component class="javax.swing.JList" name="languagesWordsJL">
                       <Properties>
                         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                           <StringArray count="0"/>
@@ -549,25 +590,25 @@
                     <Property name="text" type="java.lang.String" value="Delete"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="MegaListLanguageComboBox">
+                <Component class="javax.swing.JComboBox" name="languagesLanguageJCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="MegaListLanguageComboBoxItemStateChanged"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="languagesLanguageJCBItemStateChanged"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="languageDeleteWordsJB">
+                <Component class="javax.swing.JButton" name="languagesRemoveWordsJB">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="remove words"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="languageDeleteWordsJBActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="languagesRemoveWordsJBActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>

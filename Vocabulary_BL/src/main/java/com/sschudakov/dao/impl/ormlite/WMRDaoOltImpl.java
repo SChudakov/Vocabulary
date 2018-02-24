@@ -101,15 +101,32 @@ public class WMRDaoOltImpl implements WMRDao {
     public void remove(Integer wordId, Integer meaningId) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("DELETE * FROM word_meaning_relationships WHERE ")
-                .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
-                .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(meaningId);
+                .append("(").append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append("AND")
+                .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(meaningId).append(")")
+                .append("OR")
+                .append("(").append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordId)
+                .append("AND")
+                .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(meaningId).append(")");
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
     }
 
     @Override
-    public Collection<Integer> findWordMeaningsIds(int wordId, int meaningsLanguageId) throws SQLException {
+    public void removeByWordId(Integer wordId) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("DELETE * FROM word_meaning_relationships WHERE ")
+                .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append("OR")
+                .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordId);
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
+    }
+
+    @Override
+    public Collection<Integer> findMeaningsIds(int wordId, int meaningsLanguageId) throws SQLException {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT word_meaning_relationships.")

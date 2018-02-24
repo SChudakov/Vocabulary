@@ -82,7 +82,7 @@ public class WMRDaoOltImplTest {
 
     @Test
     public void findWordMeaningsIds() throws SQLException {
-        for (Integer integer : this.wmrDaoOlt.findWordMeaningsIds(1, 1)) {
+        for (Integer integer : this.wmrDaoOlt.findMeaningsIds(1, 1)) {
             System.out.println(integer);
         }
     }

@@ -11,22 +11,21 @@ public interface WMRSrv {
 
     void create(Word word, Word meaning) throws SQLException;
 
+
+    WordMeaningRelationship update(WordMeaningRelationship wmr) throws SQLException;
+
+
     WordMeaningRelationship findById(Integer id) throws SQLException;
 
     Collection<WordMeaningRelationship> findByWordAndLanguage(String word, String language) throws SQLException;
 
-    Collection<WordMeaningRelationship> findByMeaningAndLanguage(String meaning, String language) throws SQLException;
+    Collection<Word> findWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException;
 
     List<WordMeaningRelationship> findAll() throws SQLException;
 
-    WordMeaningRelationship update(WordMeaningRelationship wmr) throws SQLException;
+
 
     void delete(Integer wmrId) throws SQLException;
 
     void delete(String word, String wordsLanguage, String meaning, String meaningsLanugage) throws SQLException;
-
-    Collection<Word> findWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException;
-
-
-
 }

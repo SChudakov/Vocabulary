@@ -7,7 +7,6 @@ import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordCollectionRelationship;
-import com.sschudakov.entity.WordMeaningRelationship;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,16 +30,19 @@ public class WCRDaoOltImpl implements WCRDao {
         this.wordCollectionDao = new WordCollectionDaoOltImpl();
     }
 
+
     @Override
     public void save(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
         this.wordCollectionRelationshipsDao.create(wordCollectionRelationship);
     }
+
 
     @Override
     public WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
         this.wordCollectionRelationshipsDao.update(wordCollectionRelationship);
         return wordCollectionRelationship;
     }
+
 
     @Override
     public WordCollectionRelationship findById(Integer id) throws SQLException {
@@ -98,19 +100,41 @@ public class WCRDaoOltImpl implements WCRDao {
         return this.wordCollectionRelationshipsDao.queryForAll();
     }
 
+
     @Override
-    public void remove(Integer wordCollectionRelationshipID) throws SQLException {
-        this.wordCollectionRelationshipsDao.deleteById(wordCollectionRelationshipID);
+    public void removeByWordId(Integer wordId) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("DELETE * FROM word_collection_relationships WHERE ")
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId);
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
     }
 
     @Override
-    public void remove(Integer wordId, Integer collectionId) throws SQLException {
+    public void removeByCollectionId(Integer collectionId) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("DELETE * FROM word_collection_relationships WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
                 .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
+    }
+
+    @Override
+    public void removeByWordAndCollectionId(Integer wordId, Integer collectionId) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("DELETE * FROM word_collection_relationships WHERE ")
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append("AND")
+                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
+    }
+
+    @Override
+    public void remove(Integer wordCollectionRelationshipID) throws SQLException {
+        this.wordCollectionRelationshipsDao.deleteById(wordCollectionRelationshipID);
     }
 }

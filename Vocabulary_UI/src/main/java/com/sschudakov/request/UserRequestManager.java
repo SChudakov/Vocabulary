@@ -20,7 +20,6 @@ import com.sschudakov.service.interf.WordSrv;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,6 +46,7 @@ public class UserRequestManager {
     }
 
     //get requests
+
     /**
      * Tested successfully
      *
@@ -83,7 +83,7 @@ public class UserRequestManager {
      * @return
      * @throws SQLException
      */
-    public List<String> getMeaningsByWord(String word, String wordLanguage, String meaningsLanguage) throws SQLException {
+    public List<String> getWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException {
         List<String> result = new ArrayList<>();
         for (Word w : this.wmrService.findWordMeanings(word, wordLanguage, meaningsLanguage)) {
             result.add(w.getValue());
@@ -122,6 +122,7 @@ public class UserRequestManager {
         return this.wcrService.findByCollection(collection).stream().map(wcr -> wcr.getWord().getValue()).collect(Collectors.toList());
     }
 
+
     //create request
     public void createCollection(String name) throws SQLException {
         if (collectionExists(name)) {
@@ -130,14 +131,16 @@ public class UserRequestManager {
         this.wordCollectionService.create(name);
     }
 
-    //delete request
+
+    //deleteByName request
     public void deleteWord(String word, String language) throws SQLException {
         this.wordService.delete(wordService.findByValueAndLanguage(word, language).getWordID());
     }
 
     public void deleteCollection(String name) throws SQLException {
-        this.wordCollectionService.delete(name);
+        this.wordCollectionService.deleteByName(name);
     }
+
 
     //save word information methods
     public void saveWordInformation(String word, String wordClass, String language) throws SQLException {
@@ -150,44 +153,49 @@ public class UserRequestManager {
         }
     }
 
-    public void addMeanings(String word, String language, Map<String, Collection<String>> meanings) throws SQLException {
+    /*public void addMeanings(String word, String language, Map<String, Collection<String>> meanings) throws SQLException {
         Word persistedWord = this.wordService.findByValueAndLanguage(word, language);
         for (Map.Entry<String, Collection<String>> stringCollectionEntry : meanings.entrySet()) {
             for (String s : stringCollectionEntry.getValue()) {
                 addMeaning(persistedWord, s, stringCollectionEntry.getKey());
             }
         }
-    }
+    }*/
 
-    private void addMeaning(Word word, String meaning, String meaningsLanguage) throws SQLException {
-        Word foundMeaning = this.wordService.findByValueAndLanguage(meaning, meaningsLanguage);
-        this.wmrService.create(word, foundMeaning);
+    public void addMeaning(String word, String wordLanguage, String meaning, String meaningsLanguage) throws SQLException {
+        throw new UnsupportedOperationException();
     }
-
-    public void removeMeanings(String word, String language, Map<String, Collection<String>> meanings) throws SQLException {
+    /*public void removeMeanings(String word, String language, Map<String, Collection<String>> meanings) throws SQLException {
         for (Map.Entry<String, Collection<String>> stringCollectionEntry : meanings.entrySet()) {
             for (String s : stringCollectionEntry.getValue()) {
-                this.wmrService.delete(word, language, s, stringCollectionEntry.getKey());
+                this.wmrService.deleteByName(word, language, s, stringCollectionEntry.getKey());
             }
         }
+    }*/
+    public void removeMeaning(String word, String wordLanguage, String meaning, String meaningsLanguage) throws SQLException{
+        throw new UnsupportedOperationException();
     }
-
-    public void putInCollections(String word, String lanugage, Collection<String> collections) throws SQLException {
+    /*public void putInCollections(String word, String lanugage, Collection<String> collections) throws SQLException {
         Word foundWord = this.wordService.findByValueAndLanguage(word, lanugage);
         for (String collection : collections) {
             this.wcrService.create(foundWord, this.wordCollectionService.findByName(collection));
         }
+    }*/
+    public void putInCollection(String word, String wordLanguage, String collection) throws SQLException {
+        this.wcrService.create(
+                this.wordService.findByValueAndLanguage(word,wordLanguage),
+                this.wordCollectionService.findByName(collection)
+        );
     }
-
-    public void removeFromCollections(String word, String language, Collection<String> collections) throws SQLException {
+    /*public void removeFromCollections(String word, String language, Collection<String> collections) throws SQLException {
         for (String collection : collections) {
             removeFromCollection(word, language, collection);
         }
-    }
-
+    }*/
     public void removeFromCollection(String word, String language, String collectionName) throws SQLException {
         this.wcrService.delete(word, language, collectionName);
     }
+
 
 
     //check requests
