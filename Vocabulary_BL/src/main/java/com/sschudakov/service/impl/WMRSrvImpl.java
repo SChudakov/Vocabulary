@@ -64,8 +64,17 @@ public class WMRSrvImpl implements WMRSrv {
         for (int meaningId : this.wmrDao.findMeaningsIds(foundWord.getWordID(), foundMeaningLanguage.getLanguageID())) {
             result.add(this.wordDao.findById(meaningId));
         }
+
         return result;
     }
+
+    @Override
+    public Collection<WordMeaningRelationship> findByWordAndMeaning(String word, String language, String meaning, String meaningLanguage) throws SQLException {
+        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(language));
+        Word foundMeaning = this.wordDao.findByValueAndLanguage(meaning, this.languageDao.findByName(meaningLanguage));
+        return this.wmrDao.findByWordAndMeaningIds(foundWord.getWordID(), foundMeaning.getWordID());
+    }
+
 
     @Override
     public List<WordMeaningRelationship> findAll() throws SQLException {

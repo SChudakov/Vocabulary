@@ -18,6 +18,8 @@ public interface WCRSrv {
 
     Collection<WordCollectionRelationship> findByCollection(String collection) throws SQLException;
 
+    WordCollectionRelationship findByWordAndCollection(String word, String language, String collection) throws SQLException;
+
     List<WordCollectionRelationship> findAll() throws SQLException;
 
     WordCollectionRelationship update(WordCollectionRelationship wcr) throws SQLException;

@@ -59,6 +59,7 @@ public class WordSrvImpl implements WordSrv {
         return this.wordDao.findByLanguage(this.languageDao.findByName(languageName));
     }
 
+
     @Override
     public Word findByValueAndLanguage(String value, String languageName) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(languageName);
@@ -73,7 +74,7 @@ public class WordSrvImpl implements WordSrv {
     @Override
     public void delete(Integer wordId) throws SQLException {
         this.wordDao.remove(wordId);
-        this.wmrDao.removeByWordId(wordId);
+        this.wmrDao.removeAllWordRelationships(wordId);
         this.wcrDao.removeByWordId(wordId);
     }
 }

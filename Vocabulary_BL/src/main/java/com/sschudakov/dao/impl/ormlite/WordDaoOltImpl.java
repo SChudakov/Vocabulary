@@ -52,7 +52,6 @@ public class WordDaoOltImpl implements WordDao {
                 .append(Word.VALUE_COLUMN_NAME).append("=").append("\'" + value + "\'")
                 .append(" AND ")
                 .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(language.getLanguageID());
-        System.out.println(query.toString());
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -80,7 +79,6 @@ public class WordDaoOltImpl implements WordDao {
         query.append("SELECT * FROM words WHERE ")
                 .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(language.getLanguageID());
 
-        System.out.println(query.toString());
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 

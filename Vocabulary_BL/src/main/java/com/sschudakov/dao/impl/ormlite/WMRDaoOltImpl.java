@@ -100,13 +100,13 @@ public class WMRDaoOltImpl implements WMRDao {
     @Override
     public void remove(Integer wordId, Integer meaningId) throws SQLException {
         StringBuilder query = new StringBuilder("");
-        query.append("DELETE * FROM word_meaning_relationships WHERE ")
+        query.append("DELETE FROM word_meaning_relationships WHERE ")
                 .append("(").append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
-                .append("AND")
+                .append(" AND ")
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(meaningId).append(")")
-                .append("OR")
+                .append(" OR ")
                 .append("(").append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordId)
-                .append("AND")
+                .append(" AND ")
                 .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(meaningId).append(")");
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
@@ -114,13 +114,13 @@ public class WMRDaoOltImpl implements WMRDao {
     }
 
     @Override
-    public void removeByWordId(Integer wordId) throws SQLException {
+    public void removeAllWordRelationships(Integer wordId) throws SQLException {
         StringBuilder query = new StringBuilder("");
-        query.append("DELETE * FROM word_meaning_relationships WHERE ")
+        query.append("DELETE FROM word_meaning_relationships")
+                .append(" WHERE ")
                 .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
-                .append("OR")
+                .append(" OR ")
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordId);
-
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
     }
@@ -143,6 +143,24 @@ public class WMRDaoOltImpl implements WMRDao {
         statement.execute();
 
         return formIdsCollections(statement.getResultSet());
+    }
+
+    @Override
+    public Collection<WordMeaningRelationship> findByWordAndMeaningIds(Integer wordId, Integer meaningId) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM word_meaning_relationships")
+                .append(" WHERE ")
+                .append("(").append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append(" AND ")
+                .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(meaningId).append(")")
+                .append(" OR ")
+                .append("(").append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(meaningId)
+                .append(" AND ")
+                .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordId).append(")");
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
+        ResultSet resultSet = statement.getResultSet();
+        return formWMRCollection(resultSet);
     }
 
     private static Collection<Integer> formIdsCollections(ResultSet resultSet) throws SQLException {

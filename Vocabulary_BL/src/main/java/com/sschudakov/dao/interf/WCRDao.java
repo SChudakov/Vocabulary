@@ -20,6 +20,8 @@ public interface WCRDao {
 
     Collection<WordCollectionRelationship> findByCollectionId(int collectionId) throws SQLException;
 
+    WordCollectionRelationship findByWordAndCollectionIds(Integer wordId, Integer collectionId) throws SQLException;
+
     List<WordCollectionRelationship> findAll() throws SQLException;
 
 

@@ -17,13 +17,15 @@ public interface WMRDao {
 
     Collection<WordMeaningRelationship> findByMeaningId(int meaningId) throws SQLException;
 
-    List<WordMeaningRelationship> findAll() throws SQLException;
-
     Collection<Integer> findMeaningsIds(int wordId, int meaningsLanguageId) throws SQLException;
+
+    Collection<WordMeaningRelationship> findByWordAndMeaningIds(Integer wordId, Integer meaningId) throws SQLException;
+
+    List<WordMeaningRelationship> findAll() throws SQLException;
 
     void remove(Integer wordMeaningRelationshipID) throws SQLException;
 
     void remove(Integer wordId, Integer meaningId) throws SQLException;
 
-    void removeByWordId(Integer wordId) throws SQLException;
+    void removeAllWordRelationships(Integer wordId) throws SQLException;
 }

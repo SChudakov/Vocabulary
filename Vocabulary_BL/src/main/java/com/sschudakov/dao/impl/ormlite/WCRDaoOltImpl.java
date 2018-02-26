@@ -78,6 +78,7 @@ public class WCRDaoOltImpl implements WCRDao {
         return formWCRCollection(resultSet);
     }
 
+
     private Collection<WordCollectionRelationship> formWCRCollection(ResultSet resultSet) throws SQLException {
         Collection<WordCollectionRelationship> result = new ArrayList<>();
         WordCollectionRelationship wcr;
@@ -96,6 +97,36 @@ public class WCRDaoOltImpl implements WCRDao {
     }
 
     @Override
+    public WordCollectionRelationship findByWordAndCollectionIds(Integer wordId, Integer collectionId) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM word_collection_relationships WHERE ")
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append(" AND ")
+                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
+        ResultSet resultSet = statement.getResultSet();
+        if (!resultSet.next()) {
+            return null;
+        }
+        return formWCR(resultSet);
+    }
+
+    private WordCollectionRelationship formWCR(ResultSet resultSet) throws SQLException {
+        WordCollectionRelationship result = new WordCollectionRelationship();
+        result.setWordCollectionRelationshipID(resultSet.getInt(WordCollectionRelationship.ID_COLUMN_NAME));
+        result.setWord(this.wordDao.findById(
+                resultSet.getInt(WordCollectionRelationship.WORD_COLUMN_NAME)
+        ));
+        result.setWordCollection(this.wordCollectionDao.findById(
+                resultSet.getInt(WordCollectionRelationship.COLLECTION_COLUMN_NAME)
+        ));
+        return result;
+    }
+
+
+    @Override
     public List<WordCollectionRelationship> findAll() throws SQLException {
         return this.wordCollectionRelationshipsDao.queryForAll();
     }
@@ -104,7 +135,7 @@ public class WCRDaoOltImpl implements WCRDao {
     @Override
     public void removeByWordId(Integer wordId) throws SQLException {
         StringBuilder query = new StringBuilder("");
-        query.append("DELETE * FROM word_collection_relationships WHERE ")
+        query.append("DELETE FROM word_collection_relationships WHERE ")
                 .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId);
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
@@ -114,7 +145,7 @@ public class WCRDaoOltImpl implements WCRDao {
     @Override
     public void removeByCollectionId(Integer collectionId) throws SQLException {
         StringBuilder query = new StringBuilder("");
-        query.append("DELETE * FROM word_collection_relationships WHERE ")
+        query.append("DELETE FROM word_collection_relationships WHERE ")
                 .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
@@ -124,9 +155,9 @@ public class WCRDaoOltImpl implements WCRDao {
     @Override
     public void removeByWordAndCollectionId(Integer wordId, Integer collectionId) throws SQLException {
         StringBuilder query = new StringBuilder("");
-        query.append("DELETE * FROM word_collection_relationships WHERE ")
+        query.append("DELETE FROM word_collection_relationships WHERE ")
                 .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
-                .append("AND")
+                .append(" AND ")
                 .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
