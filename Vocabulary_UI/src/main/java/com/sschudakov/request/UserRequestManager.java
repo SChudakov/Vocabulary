@@ -95,6 +95,10 @@ public class UserRequestManager {
         return this.wordService.findByLanguage(language).stream().map(Word::getValue).collect(Collectors.toList());
     }
 
+    public String getWordClassByWord(String value, String language) throws SQLException {
+        return this.wordService.findByValueAndLanguage(value,language).getWordClass().getWordClassName();
+    }
+
     /**
      * Tested successfully
      *
@@ -157,7 +161,11 @@ public class UserRequestManager {
             foundWord.setWordClass(this.wordClassService.findByName(wordClass));
             this.wordService.update(foundWord);
         } else {
-            this.wordService.create(word, wordClass, language);
+            if (wordClass == null) {
+                this.wordService.create(word, "empty", language);//todo: omg constant
+            } else {
+                this.wordService.create(word, wordClass, language);
+            }
         }
     }
 
