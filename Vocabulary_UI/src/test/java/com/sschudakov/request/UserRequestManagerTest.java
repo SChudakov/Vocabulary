@@ -41,32 +41,32 @@ public class UserRequestManagerTest {
     private static final String adverb = "adverb";
     private static final int wordId = 10000;
     private static final String wordValue = "vollkommen";
-    private static final int wordClass = 0;
+    private static final int wordClass = 10000;
     private static final int wordLanguage = germanID;
 
     private static final int firstMeaningId = 10001;
     private static final String firstMeaningValue = "полный";
-    private static final int firstMeaningClass = 0;
+    private static final int firstMeaningClass = 10000;
     private static final int firstMeaningLanguage = russianID;
 
     private static final int secondMeaningId = 10002;
     private static final String secondMeaningValue = "абсоютный";
-    private static final int secondMeaningClass = 0;
+    private static final int secondMeaningClass = 10000;
     private static final int secondMeaningLanguage = russianID;
 
     private static final int thirdMeaningId = 10003;
     private static final String thirdMeaningValue = "совершенный";
-    private static final int thirdMeaningClass = 0;
+    private static final int thirdMeaningClass = 10000;
     private static final int thirdMeaningLanguage = russianID;
 
     private static final int additionalMeaningId = 10004;
     private static final String additionalMeaningValue = "entire";
-    private static final int additionalMeaningClass = 0;
+    private static final int additionalMeaningClass = 10000;
     private static final int additionalMeaningLanguage = englishID;
 
     private static final int wordWithNoMeaningsId = 10005;
     private static final String wordWithNoMeaningsValue = "word with no minning";
-    private static final int wordWithNoMeaningsClass = 0;
+    private static final int wordWithNoMeaningsClass = 10000;
     private static final int wordWithNoMeaningsLanguage = englishID;
     private static final int wordFirstMeaningRelationshipId = 10000;
     private static final int firstMeaningWordRelationshipId = 10001;
@@ -95,9 +95,9 @@ public class UserRequestManagerTest {
             insertLanguages();
             insertCollections();
             insertWordClasses();
+            insertWordCollectionsRelationship();
             insertWords();
             insertWordMeaningRelationships();
-            insertWordCollectionsRelationship();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -109,9 +109,9 @@ public class UserRequestManagerTest {
             deleteLanguages();
             deleteCollections();
             deleteWordClasses();
+            deleteWordCollectionsRelationship();
             deleteWords();
             deleteWordMeaningRelationships();
-            deleteWordCollectionsRelationship();
         } catch (SQLException e) {
             e.printStackTrace();
         }

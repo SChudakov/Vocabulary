@@ -43,7 +43,7 @@ public class IndicatorLed extends JPanel {
             yellowLedImage = ImageIO.read(new File(classLoader.getResource("images/led_yellow.png").getFile()));
             orangeLedImage = ImageIO.read(new File(classLoader.getResource("images/led_orange.png").getFile()));
             violetLedImage = ImageIO.read(new File(classLoader.getResource("images/led_violet.png").getFile()));
-            greenLedImage = ImageIO.read(new File(classLoader.getResource("images/led_cyan.png").getFile()));
+            greenLedImage = ImageIO.read(new File(classLoader.getResource("images/led_green.png").getFile()));
             cyanLedImage = ImageIO.read(new File(classLoader.getResource("images/led_cyan.png").getFile()));
             blueLedImage = ImageIO.read(new File(classLoader.getResource("images/led_blue.png").getFile()));
             redLedImage = ImageIO.read(new File(classLoader.getResource("images/led_red.png").getFile()));
@@ -56,19 +56,19 @@ public class IndicatorLed extends JPanel {
     public void setColor(LedColor color) {
         switch (color) {
             case YELLOW:
-                currentImage = yellowLedImage;
+                currentImage = yellowLedImage; break;
             case ORANGE:
-                currentImage = orangeLedImage;
+                currentImage = orangeLedImage; break;
             case VIOLET:
-                currentImage = violetLedImage;
+                currentImage = violetLedImage; break;
             case GREEN:
-                currentImage = greenLedImage;
+                currentImage = greenLedImage; break;
             case CYAN:
-                currentImage = cyanLedImage;
+                currentImage = cyanLedImage; break;
             case BLUE:
-                currentImage = blueLedImage;
+                currentImage = blueLedImage; break;
             case RED:
-                currentImage = redLedImage;
+                currentImage = redLedImage; break;
         }
     }
 

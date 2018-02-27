@@ -1,5 +1,6 @@
 package com.sschudakov.main;
 
+import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.ui.InputWordsJFrame;
 
 public class Main {

@@ -11,13 +11,13 @@ import java.nio.charset.Charset;
 
 public class Main {
 
-    private static final String ADJECTIVE_MIT_PRÄPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.docx";
+    private static final String ADJECTIVE_MIT_PRAPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.docx";
 
     public static void main(String[] args) {
         EntityManagerFactory entityManagerFactory = Persistence.
                 createEntityManagerFactory("org.hibernate.tutorial.jpa");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        /*entityManager.close();*/
+        entityManager.close();
     }
 
 
@@ -27,7 +27,7 @@ public class Main {
 //            System.out.println(Charset.availableCharsets().get(s));
             if (Charset.availableCharsets().get(s).toString().contains("windows") ||
                     Charset.availableCharsets().get(s).toString().contains("UTF")) {
-                readFile(ADJECTIVE_MIT_PRÄPOSITIONEN_DOCX, Charset.availableCharsets().get(s));
+                readFile(ADJECTIVE_MIT_PRAPOSITIONEN_DOCX, Charset.availableCharsets().get(s));
             }
         }
     }
