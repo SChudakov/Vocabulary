@@ -41,37 +41,39 @@ public class UserRequestManagerTest {
     private static final String adverb = "adverb";
     private static final int wordId = 10000;
     private static final String wordValue = "vollkommen";
-    private static final int wordClass = 0;
+    private static final int wordClass = 10000;
     private static final int wordLanguage = germanID;
 
     private static final int firstMeaningId = 10001;
     private static final String firstMeaningValue = "полный";
-    private static final int firstMeaningClass = 0;
+    private static final int firstMeaningClass = 10000;
     private static final int firstMeaningLanguage = russianID;
 
     private static final int secondMeaningId = 10002;
     private static final String secondMeaningValue = "абсоютный";
-    private static final int secondMeaningClass = 0;
+    private static final int secondMeaningClass = 10000;
     private static final int secondMeaningLanguage = russianID;
 
     private static final int thirdMeaningId = 10003;
     private static final String thirdMeaningValue = "совершенный";
-    private static final int thirdMeaningClass = 0;
+    private static final int thirdMeaningClass = 100000;
     private static final int thirdMeaningLanguage = russianID;
 
     private static final int additionalMeaningId = 10004;
     private static final String additionalMeaningValue = "entire";
-    private static final int additionalMeaningClass = 0;
+    private static final int additionalMeaningClass = 10000;
     private static final int additionalMeaningLanguage = englishID;
 
     private static final int wordWithNoMeaningsId = 10005;
     private static final String wordWithNoMeaningsValue = "word with no minning";
-    private static final int wordWithNoMeaningsClass = 0;
+    private static final int wordWithNoMeaningsClass = 10000;
     private static final int wordWithNoMeaningsLanguage = englishID;
+
     private static final int wordFirstMeaningRelationshipId = 10000;
     private static final int firstMeaningWordRelationshipId = 10001;
     private static final int wordSecondMeaningRelationshipId = 10002;
     private static final int wordThirdMeaningRelationshipId = 10003;
+
     private static final int wordFirstCollectionRelationshipId = 10000;
     private static final int wordSecondCollectionRelationshipId = 10001;
     private static final int wordThirdCollectionRelationshipId = 10002;
@@ -129,6 +131,7 @@ public class UserRequestManagerTest {
     private static void insertLanguages() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO languages ")
+                .append("(").append(Language.ID_FIELD_COLUMN_NAME).append(",").append(Language.NAME_FIELD_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(englishID).append(",").append("\'" + english + "\'").append(")").append(",")
                 .append("(").append(russianID).append(",").append("\'" + russian + "\'").append(")").append(",")
@@ -141,6 +144,7 @@ public class UserRequestManagerTest {
     private static void insertCollections() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO word_collections ")
+                .append("(").append(WordCollection.ID_COLUMN_NAME).append(",").append(WordCollection.COLLECTION_NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(firstCollectionId).append(",").append("\'" + firstCollection + "\'").append(")").append(",")
                 .append("(").append(secondCollectionId).append(",").append("\'" + secondCollection + "\'").append(")").append(",")
@@ -153,6 +157,7 @@ public class UserRequestManagerTest {
     private static void insertWordClasses() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO word_classes ")
+                .append("(").append(WordClass.ID_COLUMN_NAME).append(",").append(WordClass.CLASS_NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(nounID).append(",").append("\'" + noun + "\'").append(")").append(",")
                 .append("(").append(verbID).append(",").append("\'" + verb + "\'").append(")").append(",")
@@ -165,13 +170,14 @@ public class UserRequestManagerTest {
     private static void insertWords() throws SQLException {
         StringBuilder insertWordsQuery = new StringBuilder("");
         insertWordsQuery.append("INSERT INTO words")
+                .append("(").append(Word.ID_COLUMN_NAME).append(",").append(Word.VALUE_COLUMN_NAME).append(",").append(Word.LANGUAGE_COLUMN_NAME).append(",").append(Word.WORD_CLASS_COLUMN_NAME).append(")")
                 .append(" VALUES ")
-                .append("(").append(wordId).append(",").append("\'" + wordValue + "\'").append(",").append(wordClass).append(",").append(wordLanguage).append(")").append(",")
-                .append("(").append(firstMeaningId).append(",").append("\'" + firstMeaningValue + "\'").append(",").append(firstMeaningClass).append(",").append(firstMeaningLanguage).append(")").append(",")
-                .append("(").append(secondMeaningId).append(",").append("\'" + secondMeaningValue + "\'").append(",").append(secondMeaningClass).append(",").append(secondMeaningLanguage).append(")").append(",")
-                .append("(").append(thirdMeaningId).append(",").append("\'" + thirdMeaningValue + "\'").append(",").append(thirdMeaningClass).append(",").append(thirdMeaningLanguage).append(")").append(",")
-                .append("(").append(additionalMeaningId).append(",").append("\'" + additionalMeaningValue + "\'").append(",").append(additionalMeaningClass).append(",").append(additionalMeaningLanguage).append(")").append(",")
-                .append("(").append(wordWithNoMeaningsId).append(",").append("\'" + wordWithNoMeaningsValue + "\'").append(",").append(wordWithNoMeaningsClass).append(",").append(wordWithNoMeaningsLanguage).append(")").append(";");
+                .append("(").append(wordId).append(",").append("\'" + wordValue + "\'").append(",").append(wordLanguage).append(",").append(wordClass).append(")").append(",")
+                .append("(").append(firstMeaningId).append(",").append("\'" + firstMeaningValue + "\'").append(",").append(firstMeaningLanguage).append(",").append(firstMeaningClass).append(")").append(",")
+                .append("(").append(secondMeaningId).append(",").append("\'" + secondMeaningValue + "\'").append(",").append(secondMeaningLanguage).append(",").append(secondMeaningClass).append(")").append(",")
+                .append("(").append(thirdMeaningId).append(",").append("\'" + thirdMeaningValue + "\'").append(",").append(thirdMeaningLanguage).append(",").append(thirdMeaningClass).append(")").append(",")
+                .append("(").append(additionalMeaningId).append(",").append("\'" + additionalMeaningValue + "\'").append(",").append(additionalMeaningLanguage).append(",").append(additionalMeaningClass).append(")").append(",")
+                .append("(").append(wordWithNoMeaningsId).append(",").append("\'" + wordWithNoMeaningsValue + "\'").append(",").append(wordWithNoMeaningsLanguage).append(",").append(wordWithNoMeaningsClass).append(")").append(";");
         ;
         printInsertQuery(insertWordsQuery.toString());
         PreparedStatement insertWordsStatement = DatabaseManager.connection.prepareStatement(insertWordsQuery.toString());
@@ -181,6 +187,7 @@ public class UserRequestManagerTest {
     private static void insertWordMeaningRelationships() throws SQLException {
         StringBuilder insertRelationshipsQuery = new StringBuilder("");
         insertRelationshipsQuery.append("INSERT INTO word_meaning_relationships ")
+                .append("(").append(WordMeaningRelationship.ID_COLUMN_NAME).append(",").append(WordMeaningRelationship.WORD_COLUMN_NAME).append(",").append(WordMeaningRelationship.MEANING_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(wordFirstMeaningRelationshipId).append(",").append(wordId).append(",").append(firstMeaningId).append(")").append(",")
                 .append("(").append(firstMeaningWordRelationshipId).append(",").append(firstMeaningId).append(",").append(wordId).append(")").append(",")
@@ -195,6 +202,7 @@ public class UserRequestManagerTest {
         StringBuilder insertCollectionsRelationshipsQuery = new StringBuilder("");
         insertCollectionsRelationshipsQuery
                 .append("INSERT INTO word_collection_relationships")
+                .append("(").append(WordCollectionRelationship.ID_COLUMN_NAME).append(",").append(WordCollectionRelationship.WORD_COLUMN_NAME).append(",").append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(wordFirstCollectionRelationshipId).append(",").append(wordId).append(",").append(firstCollectionId).append(")").append(",")
                 .append("(").append(wordSecondCollectionRelationshipId).append(",").append(wordId).append(",").append(secondCollectionId).append(")").append(",")

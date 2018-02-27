@@ -17,7 +17,7 @@ public class Main {
         EntityManagerFactory entityManagerFactory = Persistence.
                 createEntityManagerFactory("org.hibernate.tutorial.jpa");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        /*entityManager.close();*/
+        entityManager.close();
     }
 
 
