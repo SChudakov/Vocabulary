@@ -202,19 +202,19 @@ public class UserRequestManager {
 
 
     //check requests
-    private boolean wordExists(String word, String language) throws SQLException {
+    public boolean wordExists(String word, String language) throws SQLException {
         return wordService.findByValueAndLanguage(word, language) != null;
     }
 
-    private boolean collectionExists(String collection) throws SQLException {
+    public boolean collectionExists(String collection) throws SQLException {
         return wordCollectionService.findByName(collection) != null;
     }
 
-    private boolean wordMeaningRelationshipExists(String word, String language, String meaning, String meaningLanguage) throws SQLException {
+    public boolean wordMeaningRelationshipExists(String word, String language, String meaning, String meaningLanguage) throws SQLException {
         return this.wmrService.findByWordAndMeaning(word, language, meaning, meaningLanguage).size() == 2;
     }
 
-    private boolean wordCollectionsRelationshipExists(String word, String language, String collection) throws SQLException {
+    public boolean wordCollectionsRelationshipExists(String word, String language, String collection) throws SQLException {
         return this.wcrService.findByWordAndCollection(word, language, collection) != null;
     }
 }
