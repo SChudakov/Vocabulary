@@ -6,6 +6,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "word_meaning_relationships")
 @DatabaseTable(tableName = "word_meaning_relationships")
 public class WordMeaningRelationship {
 
@@ -13,10 +25,19 @@ public class WordMeaningRelationship {
     public static final String WORD_COLUMN_NAME = "relationship_word";
     public static final String MEANING_COLUMN_NAME = "relationship_meaning";
 
+    @Id
+    @Column(name = ID_COLUMN_NAME)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @DatabaseField(generatedId = true, columnName = ID_COLUMN_NAME)
     private int wordMeaningRelationshipID;
+    @ManyToOne
+    @JoinColumn(name = WORD_COLUMN_NAME,
+            foreignKey = @ForeignKey(name = WORD_COLUMN_NAME))
     @DatabaseField(columnName = WORD_COLUMN_NAME, canBeNull = false, foreign = true)
     private Word word;
+    @ManyToOne
+    @JoinColumn(name = MEANING_COLUMN_NAME,
+            foreignKey = @ForeignKey(name = MEANING_COLUMN_NAME))
     @DatabaseField(columnName = MEANING_COLUMN_NAME, canBeNull = false, foreign = true)
     private Word meaning;
 
