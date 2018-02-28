@@ -1,7 +1,5 @@
 package com.sschudakov.entity;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -18,7 +16,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "word_collection_relationships")
-@DatabaseTable(tableName = "word_collection_relationships")
 public class WordCollectionRelationship {
 
     public static final String ID_COLUMN_NAME = "collection_relationship_id";
@@ -28,26 +25,25 @@ public class WordCollectionRelationship {
     @Id
     @Column(name = ID_COLUMN_NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @DatabaseField(generatedId = true,columnName = ID_COLUMN_NAME)
-    private int wordCollectionRelationshipID;
+    private Integer id;
+
     @ManyToOne
     @JoinColumn(name = WORD_COLUMN_NAME,
             foreignKey = @ForeignKey(name = WORD_COLUMN_NAME))
-    @DatabaseField(columnName = WORD_COLUMN_NAME, canBeNull = false, foreign = true)
     private Word word;
+
     @ManyToOne
     @JoinColumn(name = COLLECTION_COLUMN_NAME,
             foreignKey = @ForeignKey(name = COLLECTION_COLUMN_NAME))
-    @DatabaseField(columnName = COLLECTION_COLUMN_NAME, canBeNull = false, foreign = true)
     private WordCollection wordCollection;
 
 
-    public int getWordCollectionRelationshipID() {
-        return wordCollectionRelationshipID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setWordCollectionRelationshipID(int wordCollectionRelationshipID) {
-        this.wordCollectionRelationshipID = wordCollectionRelationshipID;
+    public void setId(Integer wordCollectionRelationshipID) {
+        this.id = wordCollectionRelationshipID;
     }
 
     public Word getWord() {
@@ -98,7 +94,7 @@ public class WordCollectionRelationship {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("id", this.wordCollectionRelationshipID)
+                .append("id", this.id)
                 .append("word", this.word)
                 .append("word collection", this.wordCollection)
                 .build();

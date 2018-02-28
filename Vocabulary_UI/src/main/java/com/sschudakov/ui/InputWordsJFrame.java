@@ -503,7 +503,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                     language
             );
             this.wordValueOrLanguageChanged();
-        } catch (SQLException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_wordsSaveWordJBActionPerformed
@@ -520,7 +521,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                         (String) this.wordsLanguageJCB.getSelectedItem()
                 );
                 this.wordValueOrLanguageChanged();
-            } catch (SQLException e) {
+            } catch (Exception e) {
+                e.printStackTrace();
                 JOptionPane.showMessageDialog(this, e.getMessage());
             }
         }
@@ -536,7 +538,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                     (String) this.wordsMeaningsLanguageJCB.getSelectedItem()
             );
             this.loadMeaningsList();
-        } catch (SQLException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_wordsAddMeaningJBActionPerformed
@@ -564,6 +567,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             this.userRequestManager.createCollection(this.wordsCollectionNameJTF.getText());
             this.loadCollections();
         } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_wordsCreateCollectionJBActionPerformed
@@ -716,7 +720,6 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     private void wordsMeaningsLanguageJCBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_wordsMeaningsLanguageJCBItemStateChanged
         if (wordFound) {
             try {
-
                 this.loadMeaningsList();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, e.getMessage());
@@ -749,6 +752,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         try {
             this.userRequestManager.createCollection(this.collectionsCollectionNameJTF.getText());
         } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_collectionsCreateCollectionJBActionPerformed
@@ -757,6 +761,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         try {
             this.userRequestManager.deleteCollection(this.collectionsCollectionNameJTF.getText());
         } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_collectionDeleteCollectionJBActionPerformed
@@ -770,6 +775,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                         this.collectionsCollectionNameJTF.getText()
                 );
             } catch (Exception e) {
+                e.printStackTrace();
                 JOptionPane.showMessageDialog(this, e.getMessage());
             }
         }
@@ -785,7 +791,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             renderLanguageWords(
                     this.userRequestManager.getWordsByLanguageName(
                             (String) this.languagesLanguageJCB.getSelectedItem()));
-        } catch (SQLException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_languagesLanguageJCBItemStateChanged
@@ -799,7 +806,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         for (String s : extractSelectedWordsLanguagesTab()) {
             try {
                 this.userRequestManager.deleteWord(s, language);
-            } catch (SQLException e) {
+            } catch (Exception e) {
+                e.printStackTrace();
                 JOptionPane.showMessageDialog(this, e.getMessage());
             }
         }

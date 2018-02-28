@@ -1,7 +1,5 @@
 package com.sschudakov.entity;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -18,7 +16,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "word_meaning_relationships")
-@DatabaseTable(tableName = "word_meaning_relationships")
 public class WordMeaningRelationship {
 
     public static final String ID_COLUMN_NAME = "meaning_relationship_id";
@@ -28,26 +25,25 @@ public class WordMeaningRelationship {
     @Id
     @Column(name = ID_COLUMN_NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @DatabaseField(generatedId = true, columnName = ID_COLUMN_NAME)
-    private int wordMeaningRelationshipID;
+    private Integer id;
+
     @ManyToOne
     @JoinColumn(name = WORD_COLUMN_NAME,
             foreignKey = @ForeignKey(name = WORD_COLUMN_NAME))
-    @DatabaseField(columnName = WORD_COLUMN_NAME, canBeNull = false, foreign = true)
     private Word word;
+
     @ManyToOne
     @JoinColumn(name = MEANING_COLUMN_NAME,
             foreignKey = @ForeignKey(name = MEANING_COLUMN_NAME))
-    @DatabaseField(columnName = MEANING_COLUMN_NAME, canBeNull = false, foreign = true)
     private Word meaning;
 
 
-    public int getWordMeaningRelationshipID() {
-        return wordMeaningRelationshipID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setWordMeaningRelationshipID(int wordMeaningRelationshipID) {
-        this.wordMeaningRelationshipID = wordMeaningRelationshipID;
+    public void setId(Integer wordMeaningRelationshipID) {
+        this.id = wordMeaningRelationshipID;
     }
 
     public Word getWord() {
@@ -98,7 +94,7 @@ public class WordMeaningRelationship {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("id", this.wordMeaningRelationshipID)
+                .append("id", this.id)
                 .append("word", this.word)
                 .append("meaning", this.meaning)
                 .build();

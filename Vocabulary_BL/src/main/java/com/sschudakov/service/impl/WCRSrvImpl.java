@@ -49,9 +49,9 @@ public class WCRSrvImpl implements WCRSrv {
 
     @Override
     public void delete(String word, String language, String collectionName) throws SQLException {
-        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(language));
+        Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(language).getId());
         WordCollection foundMeaning = this.wordCollectionDao.findByName(collectionName);
-        this.wcrDao.removeByWordAndCollectionId(foundWord.getWordID(), foundMeaning.getCollectionID());
+        this.wcrDao.removeByWordAndCollectionId(foundWord.getWordID(), foundMeaning.getId());
     }
 
     @Override
@@ -62,21 +62,21 @@ public class WCRSrvImpl implements WCRSrv {
     @Override
     public Collection<WordCollectionRelationship> findByWordAndLanguage(String word, String language) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(language);
-        Word foundWord = this.wordDao.findByValueAndLanguage(word, foundLanguage);
+        Word foundWord = this.wordDao.findByValueAndLanguageId(word, foundLanguage.getId());
         return this.wcrDao.findByWordId(foundWord.getWordID());
     }
 
     @Override
     public Collection<WordCollectionRelationship> findByCollection(String collection) throws SQLException {
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
-        return this.wcrDao.findByCollectionId(foundCollection.getCollectionID());
+        return this.wcrDao.findByCollectionId(foundCollection.getId());
     }
 
     @Override
     public WordCollectionRelationship findByWordAndCollection(String word, String language, String collection) throws SQLException {
-        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(language));
+        Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(language).getId());
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
-        return this.wcrDao.findByWordAndCollectionIds(foundWord.getWordID(), foundCollection.getCollectionID());
+        return this.wcrDao.findByWordAndCollectionIds(foundWord.getWordID(), foundCollection.getId());
     }
 
     @Override

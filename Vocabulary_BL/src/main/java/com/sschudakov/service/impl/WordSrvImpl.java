@@ -56,14 +56,14 @@ public class WordSrvImpl implements WordSrv {
 
     @Override
     public List<Word> findByLanguage(String languageName) throws SQLException {
-        return this.wordDao.findByLanguage(this.languageDao.findByName(languageName));
+        return this.wordDao.findByLanguageId(this.languageDao.findByName(languageName).getId());
     }
 
 
     @Override
     public Word findByValueAndLanguage(String value, String languageName) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(languageName);
-        return this.wordDao.findByValueAndLanguage(value, foundLanguage);
+        return this.wordDao.findByValueAndLanguageId(value, foundLanguage.getId());
     }
 
     @Override

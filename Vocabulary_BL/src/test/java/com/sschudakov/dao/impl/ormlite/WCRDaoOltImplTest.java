@@ -21,9 +21,9 @@ public class WCRDaoOltImplTest {
     public void init() {
         this.wcrDaoOlt = new WCRDaoOltImpl();
         WordClass wordClass = new WordClass("noun");
-        wordClass.setWordClassID(0);
+        wordClass.setId(0);
         Language language = new Language("English");
-        language.setLanguageID(0);
+        language.setId(0);
         this.word = new Word();
         this.word.setValue("apple");
         this.word.setWordClass(wordClass);
@@ -31,11 +31,11 @@ public class WCRDaoOltImplTest {
         this.word.setWordID(0);
         this.wordCollection = new WordCollection();
         this.wordCollection.setCollectionName("first collection");
-        this.wordCollection.setCollectionID(0);
+        this.wordCollection.setId(0);
         this.wordCollectionRelationship = new WordCollectionRelationship();
         this.wordCollectionRelationship.setWord(this.word);
         this.wordCollectionRelationship.setWordCollection(this.wordCollection);
-        this.wordCollectionRelationship.setWordCollectionRelationshipID(0);
+        this.wordCollectionRelationship.setId(0);
     }
 
     @Test

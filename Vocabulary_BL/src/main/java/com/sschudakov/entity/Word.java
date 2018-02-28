@@ -1,7 +1,5 @@
 package com.sschudakov.entity;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -22,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "words")
-@DatabaseTable(tableName = "words")
 public class Word {
 
     public static final String ID_COLUMN_NAME = "word_id";
@@ -33,31 +30,27 @@ public class Word {
     @Id
     @Column(name = ID_COLUMN_NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @DatabaseField(generatedId = true, columnName = ID_COLUMN_NAME)
-    private int wordID;
+    private Integer wordID;
 
     @Column(name = VALUE_COLUMN_NAME)
-    @DatabaseField(columnName = VALUE_COLUMN_NAME, canBeNull = false)
     private String value;
 
     @ManyToOne
     @JoinColumn(name = WORD_CLASS_COLUMN_NAME,
             foreignKey = @ForeignKey(name = WORD_CLASS_COLUMN_NAME))
-    @DatabaseField(columnName = WORD_CLASS_COLUMN_NAME, foreign = true, canBeNull = false)
     private WordClass wordClass;
 
     @ManyToOne
     @JoinColumn(name = LANGUAGE_COLUMN_NAME,
             foreignKey = @ForeignKey(name = LANGUAGE_COLUMN_NAME))
-    @DatabaseField(columnName = LANGUAGE_COLUMN_NAME, foreign = true, canBeNull = false)
     private Language language;
 
 
-    public int getWordID() {
+    public Integer getWordID() {
         return wordID;
     }
 
-    public void setWordID(int wordID) {
+    public void setWordID(Integer wordID) {
         this.wordID = wordID;
     }
 

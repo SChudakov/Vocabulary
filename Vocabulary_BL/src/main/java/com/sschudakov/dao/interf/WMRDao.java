@@ -15,8 +15,6 @@ public interface WMRDao {
 
     Collection<WordMeaningRelationship> findByWordId(int wordId) throws SQLException;
 
-    Collection<WordMeaningRelationship> findByMeaningId(int meaningId) throws SQLException;
-
     Collection<Integer> findMeaningsIds(int wordId, int meaningsLanguageId) throws SQLException;
 
     Collection<WordMeaningRelationship> findByWordAndMeaningIds(Integer wordId, Integer meaningId) throws SQLException;

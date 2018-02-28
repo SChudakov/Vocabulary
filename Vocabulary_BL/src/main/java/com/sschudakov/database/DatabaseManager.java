@@ -1,7 +1,5 @@
 package com.sschudakov.database;
 
-import com.j256.ormlite.jdbc.JdbcConnectionSource;
-import com.j256.ormlite.support.ConnectionSource;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -32,49 +30,16 @@ public class DatabaseManager {
     public static final String DATABASE_CREATION_SQL_STATEMENT = "CREATE DATABASE ";
 
     public static Connection connection;
-    public static ConnectionSource connectionSource;
-
 
 
     static {
         try {
             connection = DriverManager.getConnection(DATABASE_FULL_URL);
-            connectionSource = new JdbcConnectionSource(DATABASE_FULL_URL);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public static void createTables() {
-        Collection<Class<?>> daoClasses = DaoClassesReader.readClasses();
-        for (Class<?> daoClass : daoClasses) {
-            System.out.println(daoClass);
-        }
-        for (Class<?> daoClass : daoClasses) {
-            try {
-                TableManager.createTable(daoClass);
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
-    public static void dropTables() {
-        Collection<Class<?>> daoClasses = DaoClassesReader.readClasses();
-        for (Class<?> daoClass : daoClasses) {
-            System.out.println(daoClass);
-        }
-        for (Class<?> daoClass : daoClasses) {
-            try {
-
-                TableManager.dropTable(daoClass);
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
 }

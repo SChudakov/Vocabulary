@@ -49,7 +49,7 @@ public class WMRSrvImpl implements WMRSrv {
     @Override
     public Collection<WordMeaningRelationship> findByWordAndLanguage(String word, String language) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(language);
-        Word foundWord = this.wordDao.findByValueAndLanguage(word, foundLanguage);
+        Word foundWord = this.wordDao.findByValueAndLanguageId(word, foundLanguage.getId());
         return this.wmrDao.findByWordId(foundWord.getWordID());
     }
 
@@ -59,9 +59,9 @@ public class WMRSrvImpl implements WMRSrv {
 
         Language foundWordLanguage = this.languageDao.findByName(wordLanguage);
         Language foundMeaningLanguage = this.languageDao.findByName(meaningsLanguage);
-        Word foundWord = this.wordDao.findByValueAndLanguage(word, foundWordLanguage);
+        Word foundWord = this.wordDao.findByValueAndLanguageId(word, foundWordLanguage.getId());
 
-        for (int meaningId : this.wmrDao.findMeaningsIds(foundWord.getWordID(), foundMeaningLanguage.getLanguageID())) {
+        for (int meaningId : this.wmrDao.findMeaningsIds(foundWord.getWordID(), foundMeaningLanguage.getId())) {
             result.add(this.wordDao.findById(meaningId));
         }
 
@@ -70,8 +70,8 @@ public class WMRSrvImpl implements WMRSrv {
 
     @Override
     public Collection<WordMeaningRelationship> findByWordAndMeaning(String word, String language, String meaning, String meaningLanguage) throws SQLException {
-        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(language));
-        Word foundMeaning = this.wordDao.findByValueAndLanguage(meaning, this.languageDao.findByName(meaningLanguage));
+        Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(language).getId());
+        Word foundMeaning = this.wordDao.findByValueAndLanguageId(meaning, this.languageDao.findByName(meaningLanguage).getId());
         return this.wmrDao.findByWordAndMeaningIds(foundWord.getWordID(), foundMeaning.getWordID());
     }
 
@@ -84,8 +84,8 @@ public class WMRSrvImpl implements WMRSrv {
 
     @Override
     public void delete(String word, String wordsLanguage, String meaning, String meaningsLanguage) throws SQLException {
-        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(wordsLanguage));
-        Word foundMeaning = this.wordDao.findByValueAndLanguage(meaning, this.languageDao.findByName(meaningsLanguage));
+        Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(wordsLanguage).getId());
+        Word foundMeaning = this.wordDao.findByValueAndLanguageId(meaning, this.languageDao.findByName(meaningsLanguage).getId());
         this.wmrDao.remove(foundWord.getWordID(), foundMeaning.getWordID());
     }
 

@@ -1,7 +1,5 @@
 package com.sschudakov.entity;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -16,28 +14,25 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "languages")
-@DatabaseTable(tableName = "languages")
 public class Language {
 
-    public static final String ID_FIELD_COLUMN_NAME = "language_id";
-    public static final String NAME_FIELD_COLUMN_NAME = "language_name";
+    public static final String ID_COLUMN_NAME = "language_id";
+    public static final String NAME_OLUMN_NAME = "language_name";
 
     @Id
-    @Column(name = ID_FIELD_COLUMN_NAME)
+    @Column(name = ID_COLUMN_NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @DatabaseField(generatedId = true, columnName = ID_FIELD_COLUMN_NAME)
-    private int languageID;
+    private Integer id;
 
-    @Column(name = NAME_FIELD_COLUMN_NAME)
-    @DatabaseField(columnName = NAME_FIELD_COLUMN_NAME, canBeNull = false)
+    @Column(name = NAME_OLUMN_NAME)
     private String languageName;
 
-    public int getLanguageID() {
-        return languageID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setLanguageID(int languageID) {
-        this.languageID = languageID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getLanguageName() {
@@ -53,7 +48,7 @@ public class Language {
 
     public Language(String languageName) {
         this.languageName = languageName;
-        this.languageID = languageName.hashCode();
+        this.id = languageName.hashCode();
     }
 
 
@@ -78,7 +73,7 @@ public class Language {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
-                .append("language id", this.languageID)
+                .append("language id", this.id)
                 .append("language name", this.languageName)
                 .build();
     }

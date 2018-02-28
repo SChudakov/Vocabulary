@@ -1,7 +1,5 @@
 package com.sschudakov.entity;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -15,28 +13,25 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "word_classes")
-@DatabaseTable(tableName = "word_classes")
 public class WordClass {
 
     public static final String ID_COLUMN_NAME = "word_class_id";
-    public static final String CLASS_NAME_COLUMN_NAME = "word_class_name";
+    public static final String NAME_COLUMN_NAME = "word_class_name";
 
     @Id
     @Column(name = ID_COLUMN_NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @DatabaseField(generatedId = true, columnName = ID_COLUMN_NAME)
-    private int wordClassID;
+    private Integer id;
 
-    @Column(name = CLASS_NAME_COLUMN_NAME)
-    @DatabaseField(columnName = CLASS_NAME_COLUMN_NAME, canBeNull = false)
+    @Column(name = NAME_COLUMN_NAME)
     private String wordClassName;
 
-    public int getWordClassID() {
-        return wordClassID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setWordClassID(int wordClassID) {
-        this.wordClassID = wordClassID;
+    public void setId(Integer wordClassID) {
+        this.id = wordClassID;
     }
 
     public String getWordClassName() {
@@ -76,7 +71,7 @@ public class WordClass {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("id", this.wordClassID)
+                .append("id", this.id)
                 .append("word class", this.wordClassName)
                 .build();
     }

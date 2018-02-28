@@ -131,7 +131,7 @@ public class UserRequestManagerTest {
     private static void insertLanguages() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO languages ")
-                .append("(").append(Language.ID_FIELD_COLUMN_NAME).append(",").append(Language.NAME_FIELD_COLUMN_NAME).append(")")
+                .append("(").append(Language.ID_COLUMN_NAME).append(",").append(Language.NAME_OLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(englishID).append(",").append("\'" + english + "\'").append(")").append(",")
                 .append("(").append(russianID).append(",").append("\'" + russian + "\'").append(")").append(",")
@@ -144,7 +144,7 @@ public class UserRequestManagerTest {
     private static void insertCollections() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO word_collections ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append(",").append(WordCollection.COLLECTION_NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordCollection.ID_COLUMN_NAME).append(",").append(WordCollection.NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(firstCollectionId).append(",").append("\'" + firstCollection + "\'").append(")").append(",")
                 .append("(").append(secondCollectionId).append(",").append("\'" + secondCollection + "\'").append(")").append(",")
@@ -157,7 +157,7 @@ public class UserRequestManagerTest {
     private static void insertWordClasses() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO word_classes ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append(",").append(WordClass.CLASS_NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordClass.ID_COLUMN_NAME).append(",").append(WordClass.NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(nounID).append(",").append("\'" + noun + "\'").append(")").append(",")
                 .append("(").append(verbID).append(",").append("\'" + verb + "\'").append(")").append(",")
@@ -220,17 +220,17 @@ public class UserRequestManagerTest {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM languages")
                 .append(" WHERE ")
-                .append("(").append(Language.ID_FIELD_COLUMN_NAME).append("=").append(englishID)
+                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(englishID)
                 .append(" AND ")
-                .append(Language.NAME_FIELD_COLUMN_NAME).append("=").append("\'" + english + "\'").append(")")
+                .append(Language.NAME_OLUMN_NAME).append("=").append("\'" + english + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(Language.ID_FIELD_COLUMN_NAME).append("=").append(russianID)
+                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(russianID)
                 .append(" AND ")
-                .append(Language.NAME_FIELD_COLUMN_NAME).append("=").append("\'" + russian + "\'").append(")")
+                .append(Language.NAME_OLUMN_NAME).append("=").append("\'" + russian + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(Language.ID_FIELD_COLUMN_NAME).append("=").append(germanID)
+                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(germanID)
                 .append(" AND ")
-                .append(Language.NAME_FIELD_COLUMN_NAME).append("=").append("\'" + german + "\'").append(")");
+                .append(Language.NAME_OLUMN_NAME).append("=").append("\'" + german + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -242,15 +242,15 @@ public class UserRequestManagerTest {
                 .append(" WHERE ")
                 .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(firstCollectionId)
                 .append(" AND ")
-                .append(WordCollection.COLLECTION_NAME_COLUMN_NAME).append("=").append("\'" + firstCollection + "\'").append(")")
+                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + firstCollection + "\'").append(")")
                 .append(" OR ")
                 .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(secondCollectionId)
                 .append(" AND ")
-                .append(WordCollection.COLLECTION_NAME_COLUMN_NAME).append("=").append("\'" + secondCollection + "\'").append(")")
+                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + secondCollection + "\'").append(")")
                 .append(" OR ")
                 .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(thirdCollectionId)
                 .append(" AND ")
-                .append(WordCollection.COLLECTION_NAME_COLUMN_NAME).append("=").append("\'" + thirdCollection + "\'").append(")");
+                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + thirdCollection + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -262,15 +262,15 @@ public class UserRequestManagerTest {
                 .append(" WHERE ")
                 .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(nounID)
                 .append(" AND ")
-                .append(WordClass.CLASS_NAME_COLUMN_NAME).append("=").append("\'" + noun + "\'").append(")")
+                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + noun + "\'").append(")")
                 .append(" OR ")
                 .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(verbID)
                 .append(" AND ")
-                .append(WordClass.CLASS_NAME_COLUMN_NAME).append("=").append("\'" + verb + "\'").append(")")
+                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + verb + "\'").append(")")
                 .append(" OR ")
                 .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(adverbID)
                 .append(" AND ")
-                .append(WordClass.CLASS_NAME_COLUMN_NAME).append("=").append("\'" + adverb + "\'").append(")");
+                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + adverb + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -484,12 +484,12 @@ public class UserRequestManagerTest {
         StringBuilder checkQuery = new StringBuilder("");
         checkQuery.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.COLLECTION_NAME_COLUMN_NAME).append("=").append("\'" + createdCollectionName + "\'");
+                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + createdCollectionName + "\'");
 
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.COLLECTION_NAME_COLUMN_NAME).append("=").append("\'" + createdCollectionName + "\'");
+                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + createdCollectionName + "\'");
 
         try {
             this.userRequestManager.createCollection(createdCollectionName);
@@ -499,7 +499,7 @@ public class UserRequestManagerTest {
             ResultSet resultSet = checkStatement.getResultSet();
 
             Assert.assertEquals(true, resultSet.next());
-            Assert.assertEquals(createdCollectionName, resultSet.getString(WordCollection.COLLECTION_NAME_COLUMN_NAME));
+            Assert.assertEquals(createdCollectionName, resultSet.getString(WordCollection.NAME_COLUMN_NAME));
             Assert.assertEquals(false, resultSet.next());
         } finally {
             PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());

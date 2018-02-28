@@ -47,7 +47,7 @@ public class WordCollectionSrvImpl implements WordCollectionSrv {
 
     @Override
     public void deleteByName(String name) throws SQLException {
-        delete(this.wordCollectionDao.findByName(name).getCollectionID());
+        delete(this.wordCollectionDao.findByName(name).getId());
     }
 
     @Override

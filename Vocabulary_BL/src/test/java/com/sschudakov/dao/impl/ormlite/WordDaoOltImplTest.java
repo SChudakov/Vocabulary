@@ -17,9 +17,9 @@ public class WordDaoOltImplTest {
     public void init() {
         this.wordDaoOlt = new WordDaoOltImpl();
         WordClass wordClass = new WordClass("noun");
-        wordClass.setWordClassID(0);
+        wordClass.setId(0);
         Language language = new Language("English");
-        language.setLanguageID(0);
+        language.setId(0);
         this.word = new Word();
         word.setValue("apple");
         word.setWordClass(wordClass);
@@ -45,11 +45,11 @@ public class WordDaoOltImplTest {
     }
 
     @Test
-    public void findByValueAndLanguage() throws SQLException {
+    public void findByValueAndLanguageId() throws SQLException {
         Language language = new Language("English");
-        language.setLanguageID(0);
+        language.setId(0);
         String value = "cat";
-        Word foundWord = this.wordDaoOlt.findByValueAndLanguage(value, language);
+        Word foundWord = this.wordDaoOlt.findByValueAndLanguageId(value, language.getId());
         System.out.println("found word" + foundWord);
     }
 
