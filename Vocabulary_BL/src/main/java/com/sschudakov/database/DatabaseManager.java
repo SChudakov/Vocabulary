@@ -17,9 +17,9 @@ public class DatabaseManager {
 
 
     public static final String USER_PARAMETER = "user=";
-    public static final String USER = "user1";
+    public static final String USER = "admin";
     public static final String PASSWORD_PARAMETER = "password=";
-    public static final String PASSWORD = "pass1";
+    public static final String PASSWORD = "admin";
     public static final String USE_SSL_PARAMETER = "useSSL=";
     public static final String USE_SSL = "false";
 

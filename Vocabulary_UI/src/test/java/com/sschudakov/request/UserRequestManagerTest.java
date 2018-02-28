@@ -56,7 +56,7 @@ public class UserRequestManagerTest {
 
     private static final int thirdMeaningId = 10003;
     private static final String thirdMeaningValue = "совершенный";
-    private static final int thirdMeaningClass = 100000;
+    private static final int thirdMeaningClass = 10000;
     private static final int thirdMeaningLanguage = russianID;
 
     private static final int additionalMeaningId = 10004;
@@ -97,9 +97,9 @@ public class UserRequestManagerTest {
             insertLanguages();
             insertCollections();
             insertWordClasses();
+            insertWordCollectionsRelationship();
             insertWords();
             insertWordMeaningRelationships();
-            insertWordCollectionsRelationship();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -111,9 +111,9 @@ public class UserRequestManagerTest {
             deleteLanguages();
             deleteCollections();
             deleteWordClasses();
+            deleteWordCollectionsRelationship();
             deleteWords();
             deleteWordMeaningRelationships();
-            deleteWordCollectionsRelationship();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -12,8 +12,8 @@ import java.util.List;
  */
 public class FileParserTest {
 
-    private static final String ADJECTIVE_MIT_PRÄPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.docx";
-    private static final String ADJECTIVE_MIT_PRÄPOSITIONEN_TXT = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.txt";
+    //private static final String ADJECTIVE_MIT_PRÄPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.docx";
+    //private static final String ADJECTIVE_MIT_PRÄPOSITIONEN_TXT = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Präpositionen.txt";
     private static final String ADJECTIVE_TXT = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective.txt";
 
 
