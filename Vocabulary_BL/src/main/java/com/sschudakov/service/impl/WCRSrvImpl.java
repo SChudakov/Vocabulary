@@ -76,6 +76,8 @@ public class WCRSrvImpl implements WCRSrv {
     public WordCollectionRelationship findByWordAndCollection(String word, String language, String collection) throws SQLException {
         Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(language).getId());
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
+        System.out.println(foundWord);
+        System.out.println(foundCollection);
         return this.wcrDao.findByWordAndCollectionIds(foundWord.getWordID(), foundCollection.getId());
     }
 

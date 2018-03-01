@@ -17,14 +17,14 @@ import javax.persistence.Table;
 public class Language {
 
     public static final String ID_COLUMN_NAME = "language_id";
-    public static final String NAME_OLUMN_NAME = "language_name";
+    public static final String NAME_COLUMN_NAME = "language_name";
 
     @Id
     @Column(name = ID_COLUMN_NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = NAME_OLUMN_NAME)
+    @Column(name = NAME_COLUMN_NAME)
     private String languageName;
 
     public Integer getId() {

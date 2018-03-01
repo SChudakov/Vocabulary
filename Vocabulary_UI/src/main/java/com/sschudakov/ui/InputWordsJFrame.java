@@ -7,11 +7,10 @@ package com.sschudakov.ui;
 
 import com.sschudakov.request.UserRequestManager;
 
-import javax.swing.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import java.sql.SQLException;
@@ -39,17 +38,17 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         wordsWordValueJTF.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                wordValueOrLanguageChanged();
+                wordStateChanged();
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                wordValueOrLanguageChanged();
+                wordStateChanged();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                wordValueOrLanguageChanged();
+                wordStateChanged();
             }
         });
 
@@ -61,9 +60,9 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                     boolean checked = (Boolean) model.getValueAt(row, 1);
                     String collection = (String) model.getValueAt(row, 0);
                     if (checked) {
-                        userRequestManager.putInCollection(getEnteredWordValue(), getSelectedLanguage(), collection);
+                        userRequestManager.putInCollection(getInputWordValue(), getSelectedWordLanguage(), collection);
                     } else {
-                        userRequestManager.removeFromCollection(getEnteredWordValue(), getSelectedLanguage(), collection);
+                        userRequestManager.removeFromCollection(getInputWordValue(), getSelectedWordLanguage(), collection);
                     }
                 }
             } catch (Exception ex) {
@@ -140,12 +139,6 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         wordsLanguageJCB.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 wordsLanguageJCBItemStateChanged(evt);
-            }
-        });
-
-        wordsWordValueJTF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                wordsWordValueJTFKeyPressed(evt);
             }
         });
 
@@ -459,8 +452,6 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                                 .addContainerGap())
         );
 
-        languagesRemoveWordsJB.getAccessibleContext().setAccessibleName("Remove words");
-
         TabbedPane.addTab("Languages", MegaListPanel);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -493,87 +484,19 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
-    private void wordsSaveWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsSaveWordJBActionPerformed
-        String word = this.wordsWordValueJTF.getText();
-        String language = (String) this.wordsLanguageJCB.getSelectedItem();
-        try {
-            this.userRequestManager.saveWordInformation(
-                    word,
-                    null,
-                    language
-            );
-            this.wordValueOrLanguageChanged();
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    }//GEN-LAST:event_wordsSaveWordJBActionPerformed
-
-    private void wordsDeleteWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsDeleteWordJBActionPerformed
-        String message =
-                "Are you sure you want to delete word \"" +
-                getEnteredWordValue() +
-                "\"? All relative information will also be deleted.";
-        if (JOptionPane.showConfirmDialog(this, message) == JOptionPane.YES_OPTION) {
-            try {
-                this.userRequestManager.deleteWord(
-                        this.wordsWordValueJTF.getText(),
-                        (String) this.wordsLanguageJCB.getSelectedItem()
-                );
-                this.wordValueOrLanguageChanged();
-            } catch (Exception e) {
-                e.printStackTrace();
-                JOptionPane.showMessageDialog(this, e.getMessage());
-            }
-        }
-    }//GEN-LAST:event_wordsDeleteWordJBActionPerformed
-
-
-    private void wordsAddMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsAddMeaningJBActionPerformed
-        try {
-            this.userRequestManager.addMeaning(
-                    this.wordsWordValueJTF.getText(),
-                    (String) this.wordsLanguageJCB.getSelectedItem(),
-                    this.wordsMeaningJTF.getText(),
-                    (String) this.wordsMeaningsLanguageJCB.getSelectedItem()
-            );
-            this.loadMeaningsList();
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    }//GEN-LAST:event_wordsAddMeaningJBActionPerformed
-
-    private void wordsDeleteMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsDeleteMeaningJBActionPerformed
-        if (wordsMeaningsJL.getSelectedValue() != null) {
-            try {
-                this.userRequestManager.removeMeaning(
-                        getEnteredWordValue(),
-                        getSelectedLanguage(),
-                        wordsMeaningsJL.getSelectedValue(),
-                        getSelectedMeaningsLanguage()
-                );
-                this.loadMeaningsList();
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(this, e.getMessage());
-                e.printStackTrace();
-            }
-        }
-    }//GEN-LAST:event_wordsDeleteMeaningJBActionPerformed
-
-
-    private void wordsCreateCollectionJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsCreateCollectionJBActionPerformed
-        try {
-            this.userRequestManager.createCollection(this.wordsCollectionNameJTF.getText());
-            this.loadCollections();
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    }//GEN-LAST:event_wordsCreateCollectionJBActionPerformed
+    //-------------- Set found status method ---------------//
 
     private void setFoundStatus(boolean found) {
-        wordFoundIndidcator.setColor(found ? IndicatorLed.LedColor.GREEN : IndicatorLed.LedColor.RED);
+        wordFound = found;
+
+        if (found) {
+            wordFoundIndidcator.setColor(IndicatorLed.LedColor.GREEN);
+        } else {
+            wordFoundIndidcator.setColor(IndicatorLed.LedColor.RED);
+            ((DefaultTableModel) wordsCollectionsJT.getModel()).setRowCount(0);//TODO: what is this?
+            ((DefaultListModel) wordsMeaningsJL.getModel()).setSize(0);
+        }
+
         wordFoundIndidcator.repaint();
         wordsSaveWordJB.setEnabled(!found);
         wordsDeleteWordJB.setEnabled(found);
@@ -588,19 +511,15 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         wordsMeaningsJL.setEnabled(found);
         jScrollPane1.setEnabled(found);
         jScrollPane2.setEnabled(found);
-
-        if (!found) {
-            ((DefaultTableModel)wordsCollectionsJT.getModel()).setRowCount(0);
-            ((DefaultListModel)wordsMeaningsJL.getModel()).setSize(0);
-        }
-
-        wordFound = found;
     }
 
-    private void wordValueOrLanguageChanged() {
-        //todo: maybe rename this method, it calls when word/lang changed and when delete/save action performed
+
+    //-------------- word value or language changed method ---------------//
+
+    private void wordStateChanged() {
+        //TODO: method renames
         try {
-            if (userRequestManager.wordExists(getEnteredWordValue(), getSelectedLanguage())) {
+            if (userRequestManager.wordExists(getInputWordValue(), getSelectedWordLanguage())) {
                 loadWordData();
                 setFoundStatus(true);
             } else {
@@ -611,26 +530,13 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         }
     }
 
+    //-------------- Load methods ---------------//
+
     private void loadLanguages() {
         wordsLanguageJCB.removeAllItems();
         try {
             for (String language : userRequestManager.getLanguages()) {
                 wordsLanguageJCB.addItem(language);
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-            e.printStackTrace();
-        }
-    }
-
-    private void loadMeaningsLanguages() {
-        wordsMeaningsLanguageJCB.removeAllItems();
-        String selectedLanguage = getSelectedLanguage();
-        try {
-            for (String language : userRequestManager.getLanguages()) {
-                if (!language.equals(selectedLanguage)) {
-                    wordsMeaningsLanguageJCB.addItem(language);
-                }
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -650,10 +556,41 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         }
     }
 
-    private void loadMeaningsList() {
+
+    private void loadWordData() {
         try {
-            String word = getEnteredWordValue();
-            String language = getSelectedLanguage();
+            String word = getInputWordValue();
+            String language = getSelectedWordLanguage();
+            String wordClass = this.userRequestManager.getWordClassByWord(word, language);
+
+            wordsWordClassJCB.setSelectedItem(wordClass);
+
+            this.loadMeaningsLanguages();
+            this.loadMeaningsList(word, language);
+            this.loadCollections(word, language);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private void loadMeaningsLanguages() {
+        wordsMeaningsLanguageJCB.removeAllItems();
+        String selectedLanguage = getSelectedWordLanguage();
+        try {
+            for (String language : userRequestManager.getLanguages()) {
+                if (!language.equals(selectedLanguage)) {
+                    wordsMeaningsLanguageJCB.addItem(language);
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private void loadMeaningsList(String word, String language) {
+        try {
             String meaningsLanguage = getSelectedMeaningsLanguage();
             if (meaningsLanguage != null) {
                 List<String> meaningsList = this.userRequestManager.getWordMeanings(word, language, meaningsLanguage);
@@ -669,10 +606,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         }
     }
 
-    private void loadCollections() {
+    private void loadCollections(String word, String language) {
         try {
-            String word = getEnteredWordValue();
-            String language = getSelectedLanguage();
             Map<String, Boolean> collections = this.userRequestManager.getCollectionsByWord(word, language);
             DefaultTableModel model = (DefaultTableModel) wordsCollectionsJT.getModel();
             model.setRowCount(0);
@@ -684,43 +619,134 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         }
     }
 
-    private void loadWordData() {
-        try {
-            String word = getEnteredWordValue();
-            String language = getSelectedLanguage();
-            String wordClass = this.userRequestManager.getWordClassByWord(word, language);
 
-            wordsWordClassJCB.setSelectedItem(wordClass);
+    //-------------- Words Tab ---------------//
 
-            this.loadCollections();
-            this.loadMeaningsLanguages();
-            this.loadMeaningsList();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-            e.printStackTrace();
-        }
+
+    private String getInputWordValue() {
+        return wordsWordValueJTF.getText();
+    }
+
+    private String getSelectedWordLanguage() {
+        return (String) wordsLanguageJCB.getSelectedItem();
+    }
+
+    private String getSelectedWordClass() {
+        return (String) this.wordsWordClassJCB.getSelectedItem();
+    }
+
+    private String getInputMeaningValue() {
+        return this.wordsMeaningJTF.getText();
     }
 
     private String getSelectedMeaningsLanguage() {
         return (String) wordsMeaningsLanguageJCB.getSelectedItem();
     }
 
-    private String getEnteredWordValue() {
-        return wordsWordValueJTF.getText();
+    private String getInputCollectionName() {
+        return this.wordsCollectionNameJTF.getText();
     }
 
-    private String getSelectedLanguage() {
-        return (String) wordsLanguageJCB.getSelectedItem();
+
+    //-------------- Words Tab ---------------//
+
+
+    private void wordsSaveWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsSaveWordJBActionPerformed
+        try {
+            this.userRequestManager.saveWordInformation(
+                    getInputWordValue(),
+                    getSelectedWordClass(),
+                    getSelectedWordLanguage()
+            );
+            this.wordStateChanged();
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_wordsSaveWordJBActionPerformed
+
+    private void wordsDeleteWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsDeleteWordJBActionPerformed
+        String message =
+                "Are you sure you want to delete word \"" +
+                        getInputWordValue() +
+                        "\"? All relative information will also be deleted.";
+        if (JOptionPane.showConfirmDialog(this, message) == JOptionPane.YES_OPTION) {
+            try {
+                this.userRequestManager.deleteWord(
+                        getInputWordValue(),
+                        getSelectedWordLanguage()
+                );
+                this.wordStateChanged();
+            } catch (Exception e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }
+    }//GEN-LAST:event_wordsDeleteWordJBActionPerformed
+
+
+    private void wordsAddMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsAddMeaningJBActionPerformed
+        try {
+            this.userRequestManager.addMeaning(
+                    getInputWordValue(),
+                    getSelectedWordLanguage(),
+                    getInputMeaningValue(),
+                    getSelectedMeaningsLanguage()
+            );
+            addMeaningToMeaningsList(getInputMeaningValue());
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_wordsAddMeaningJBActionPerformed
+
+    private void wordsDeleteMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsDeleteMeaningJBActionPerformed
+        if (wordsMeaningsJL.getSelectedValue() != null) {
+            try {
+                this.userRequestManager.removeMeaning(
+                        getInputWordValue(),
+                        getSelectedWordLanguage(),
+                        getInputMeaningValue(),
+                        getSelectedMeaningsLanguage()
+                );
+                removeMeaningToMeaningsList(getInputMeaningValue());
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_wordsDeleteMeaningJBActionPerformed
+
+    private void addMeaningToMeaningsList(String meaning) {
+        throw new UnsupportedOperationException();
     }
 
-    private void wordsWordValueJTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_wordsWordValueJTFKeyPressed
-        //todo: implement
-    }//GEN-LAST:event_wordsWordValueJTFKeyPressed
+    private void removeMeaningToMeaningsList(String meaning) {
+        throw new UnsupportedOperationException();
+    }
+
+
+    private void wordsCreateCollectionJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsCreateCollectionJBActionPerformed
+        try {
+            this.userRequestManager.createCollection(getInputCollectionName());
+            addCollectionToCollectionsTable(getInputCollectionName());
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_wordsCreateCollectionJBActionPerformed
+
+    private void addCollectionToCollectionsTable(String collectionsName) {
+        throw new UnsupportedOperationException();
+    }
 
     private void wordsMeaningsLanguageJCBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_wordsMeaningsLanguageJCBItemStateChanged
-        if (wordFound) {
+        if (this.wordFound) {
             try {
-                this.loadMeaningsList();
+                this.loadMeaningsList(
+                        getInputWordValue(),
+                        getSelectedWordLanguage()
+                );
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, e.getMessage());
                 e.printStackTrace();
@@ -729,16 +755,16 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_wordsMeaningsLanguageJCBItemStateChanged
 
     private void wordsLanguageJCBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_wordsLanguageJCBItemStateChanged
-        this.wordValueOrLanguageChanged();
+        this.wordStateChanged();
     }//GEN-LAST:event_wordsLanguageJCBItemStateChanged
 
     private void wordsWordClassJCBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_wordsWordClassJCBItemStateChanged
-        if (wordFound && wordsWordClassJCB.getSelectedItem() != null) {
+        if (wordFound && getSelectedWordClass() != null) {
             try {
                 this.userRequestManager.saveWordInformation(
-                        getEnteredWordValue(),
-                        (String) wordsWordClassJCB.getSelectedItem(),
-                        getSelectedLanguage()
+                        getInputWordValue(),
+                        getSelectedWordClass(),
+                        getSelectedWordLanguage()
                 );
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, e.getMessage());
@@ -746,6 +772,9 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_wordsWordClassJCBItemStateChanged
+
+
+    //-------------- Collections Tab ---------------//
 
 
     private void collectionsCreateCollectionJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_collectionsCreateCollectionJBActionPerformed
@@ -784,6 +813,9 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     private List<String> extractSelectedWordsCollectionsTab() {
         throw new UnsupportedOperationException();
     }
+
+
+    //-------------- Languages Tab ---------------//
 
 
     private void languagesLanguageJCBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_languagesLanguageJCBItemStateChanged

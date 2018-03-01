@@ -25,6 +25,7 @@ public class WordDaoOltImpl implements WordDao {
     @Override
     public void save(Word word) throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
+        System.out.println("Word dao word class" + word.getWordClass());
         insertQuery.append("INSERT INTO words")
                 .append("(").append(Word.VALUE_COLUMN_NAME).append(",")
                 .append(Word.WORD_CLASS_COLUMN_NAME).append(",")
@@ -76,6 +77,7 @@ public class WordDaoOltImpl implements WordDao {
                 .append(Word.VALUE_COLUMN_NAME).append("=").append("\'" + value + "\'")
                 .append(" AND ")
                 .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(languageId);
+        System.out.println(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 

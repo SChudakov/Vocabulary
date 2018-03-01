@@ -12,6 +12,7 @@ import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
+import com.sschudakov.entity.WordClass;
 import com.sschudakov.service.interf.WordSrv;
 
 import java.sql.SQLException;
@@ -39,7 +40,12 @@ public class WordSrvImpl implements WordSrv {
         Word word = new Word();
         word.setValue(wordValue);
         word.setLanguage(this.languageDao.findByName(language));
-        word.setWordClass(this.wordClassDao.findByName(wordClass));
+        System.out.println("Word service: word class: " + wordClass);
+        if(wordClass != null){
+            word.setWordClass(this.wordClassDao.findByName(wordClass));
+        }else {
+            word.setWordClass(new WordClass());//TODO: fox this
+        }
         this.wordDao.save(word);
     }
 

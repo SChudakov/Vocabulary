@@ -18,11 +18,10 @@ public class WordClassDaoOltImpl implements WordClassDao {
         insertQuery.append("INSERT INTO word_classes ")
                 .append("(").append(WordClass.NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
-                .append("(").append("\'" + wordClass.getWordClassName() + "\'").append(";");
+                .append("(").append("\'" + wordClass.getWordClassName() + "\'").append(")").append(";");
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
         insertStatement.execute();
     }
-
 
     @Override
     public WordClass findById(Integer id) throws SQLException {

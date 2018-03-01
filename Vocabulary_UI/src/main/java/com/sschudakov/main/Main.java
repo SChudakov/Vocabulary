@@ -1,7 +1,9 @@
 package com.sschudakov.main;
 
-import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.database.DatabaseSetup;
 import com.sschudakov.ui.InputWordsJFrame;
+
+import java.sql.SQLException;
 
 public class Main {
 
@@ -32,7 +34,12 @@ public class Main {
         }
         //</editor-fold>
         //</editor-fold>
-
+        DatabaseSetup databaseSetup = new DatabaseSetup();
+        try {
+            databaseSetup.setUpDatabase();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

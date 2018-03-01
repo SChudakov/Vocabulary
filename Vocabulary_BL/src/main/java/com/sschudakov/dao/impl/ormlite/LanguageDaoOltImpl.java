@@ -17,9 +17,9 @@ public class LanguageDaoOltImpl implements LanguageDao {
     public void save(Language language) throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO languages ")
-                .append("(").append(Language.NAME_OLUMN_NAME).append(")")
+                .append("(").append(Language.NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
-                .append("(").append("\'" + language.getLanguageName() + "\'").append(";");
+                .append("(").append("\'" + language.getLanguageName() + "\'").append(")").append(";");
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
         insertStatement.execute();
     }
@@ -45,7 +45,7 @@ public class LanguageDaoOltImpl implements LanguageDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM languages")
                 .append(" WHERE ")
-                .append(Language.NAME_OLUMN_NAME).append("=").append("\'" + name + "\'");
+                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + name + "\'");
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
@@ -61,7 +61,7 @@ public class LanguageDaoOltImpl implements LanguageDao {
     private Language formLanguage(ResultSet resultSet) throws SQLException {
         Language result = new Language();
         result.setId(resultSet.getInt(Language.ID_COLUMN_NAME));
-        result.setLanguageName(resultSet.getString(Language.NAME_OLUMN_NAME));
+        result.setLanguageName(resultSet.getString(Language.NAME_COLUMN_NAME));
         return result;
     }
 
@@ -84,7 +84,7 @@ public class LanguageDaoOltImpl implements LanguageDao {
         while (resultSet.next()) {
             Language language = new Language();
             language.setId(resultSet.getInt(Language.ID_COLUMN_NAME));
-            language.setLanguageName(resultSet.getString(Language.NAME_OLUMN_NAME));
+            language.setLanguageName(resultSet.getString(Language.NAME_COLUMN_NAME));
             result.add(language);
         }
         return result;

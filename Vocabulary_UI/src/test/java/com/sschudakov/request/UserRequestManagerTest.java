@@ -24,21 +24,24 @@ public class UserRequestManagerTest {
     private static final int englishID = 10000;
     private static final int russianID = 10001;
     private static final int germanID = 10002;
-    private static final String english = "English";
-    private static final String russian = "Russian";
-    private static final String german = "German";
+    private static final String english = "english";
+    private static final String russian = "russian";
+    private static final String german = "german";
+
     private static final int firstCollectionId = 10000;
     private static final int secondCollectionId = 10001;
     private static final int thirdCollectionId = 10002;
-    private static final String firstCollection = "collections 1";
-    private static final String secondCollection = "collections 2";
-    private static final String thirdCollection = "collections 3";
+    private static final String firstCollection = "collection 1";
+    private static final String secondCollection = "collection 2";
+    private static final String thirdCollection = "collection 3";
+
     private static final int nounID = 10000;
     private static final int verbID = 10001;
     private static final int adverbID = 10002;
-    private static final String noun = "noun";
-    private static final String verb = "verb";
-    private static final String adverb = "adverb";
+    private static final String noun = "NOUN";
+    private static final String verb = "VERB";
+    private static final String adverb = "ADVERB";
+
     private static final int wordId = 10000;
     private static final String wordValue = "vollkommen";
     private static final int wordClass = 10000;
@@ -131,7 +134,7 @@ public class UserRequestManagerTest {
     private static void insertLanguages() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO languages ")
-                .append("(").append(Language.ID_COLUMN_NAME).append(",").append(Language.NAME_OLUMN_NAME).append(")")
+                .append("(").append(Language.ID_COLUMN_NAME).append(",").append(Language.NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(englishID).append(",").append("\'" + english + "\'").append(")").append(",")
                 .append("(").append(russianID).append(",").append("\'" + russian + "\'").append(")").append(",")
@@ -222,15 +225,15 @@ public class UserRequestManagerTest {
                 .append(" WHERE ")
                 .append("(").append(Language.ID_COLUMN_NAME).append("=").append(englishID)
                 .append(" AND ")
-                .append(Language.NAME_OLUMN_NAME).append("=").append("\'" + english + "\'").append(")")
+                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + english + "\'").append(")")
                 .append(" OR ")
                 .append("(").append(Language.ID_COLUMN_NAME).append("=").append(russianID)
                 .append(" AND ")
-                .append(Language.NAME_OLUMN_NAME).append("=").append("\'" + russian + "\'").append(")")
+                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + russian + "\'").append(")")
                 .append(" OR ")
                 .append("(").append(Language.ID_COLUMN_NAME).append("=").append(germanID)
                 .append(" AND ")
-                .append(Language.NAME_OLUMN_NAME).append("=").append("\'" + german + "\'").append(")");
+                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + german + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
