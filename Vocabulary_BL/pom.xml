@@ -28,14 +28,14 @@
         </dependency>
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-core &ndash;&gt;
         <dependency>
-            <groupId>com.j256.ormlite</groupId>
-            <artifactId>ormlite-core</artifactId>
+            <groupId>com.j256.jdbc</groupId>
+            <artifactId>jdbc-core</artifactId>
             <version>5.0</version>
         </dependency>
         &lt;!&ndash; https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-jdbc &ndash;&gt;
         <dependency>
-            <groupId>com.j256.ormlite</groupId>
-            <artifactId>ormlite-jdbc</artifactId>
+            <groupId>com.j256.jdbc</groupId>
+            <artifactId>jdbc-jdbc</artifactId>
             <version>5.0</version>
         </dependency>-->
 
