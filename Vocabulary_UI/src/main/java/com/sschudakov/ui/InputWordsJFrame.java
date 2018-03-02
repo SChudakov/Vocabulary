@@ -493,18 +493,26 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             wordFoundIndidcator.setColor(IndicatorLed.LedColor.GREEN);
         } else {
             wordFoundIndidcator.setColor(IndicatorLed.LedColor.RED);
+        }
+        wordFoundIndidcator.repaint();
+
+
+        wordsSaveWordJB.setEnabled(!found);
+        wordsDeleteWordJB.setEnabled(found);
+
+        wordsAddMeaningJB.setEnabled(found);
+        wordsDeleteMeaningJB.setEnabled(found);
+
+        wordsWordClassJCB.setEnabled(found);
+        if (!found) {
+            wordsWordClassJCB.setSelectedIndex(-1);
             ((DefaultTableModel) wordsCollectionsJT.getModel()).setRowCount(0);//TODO: what is this?
             ((DefaultListModel) wordsMeaningsJL.getModel()).setSize(0);
         }
-
-        wordFoundIndidcator.repaint();
-        wordsSaveWordJB.setEnabled(!found);
-        wordsDeleteWordJB.setEnabled(found);
-        wordsAddMeaningJB.setEnabled(found);
-        wordsDeleteMeaningJB.setEnabled(found);
-        wordsWordClassJCB.setEnabled(found);
         wordsMeaningsLanguageJCB.setEnabled(found);
+
         wordsCollectionsJT.setEnabled(found);
+
         wordsCollectionNameJTF.setEnabled(found);
         wordsMeaningJTF.setEnabled(found);
         wordsCreateCollectionJB.setEnabled(found);
@@ -563,7 +571,11 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             String language = getSelectedWordLanguage();
             String wordClass = this.userRequestManager.getWordClassByWord(word, language);
 
-            wordsWordClassJCB.setSelectedItem(wordClass);
+            if (wordClass != null) {
+                wordsWordClassJCB.setSelectedItem(wordClass);
+            } else {
+                wordsWordClassJCB.setSelectedIndex(-1);
+            }
 
             this.loadMeaningsLanguages();
             this.loadMeaningsList(word, language);
@@ -594,8 +606,8 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             String meaningsLanguage = getSelectedMeaningsLanguage();
             if (meaningsLanguage != null) {
                 List<String> meaningsList = this.userRequestManager.getWordMeanings(word, language, meaningsLanguage);
-                DefaultListModel model = (DefaultListModel) wordsMeaningsJL.getModel();
-                model.setSize(0);
+                DefaultListModel<String> model = (DefaultListModel<String>) wordsMeaningsJL.getModel();
+                model.setSize(0);//TODO I am not sure that it is necessary
                 for (String meaning : meaningsList) {
                     model.addElement(meaning);
                 }
@@ -610,7 +622,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         try {
             Map<String, Boolean> collections = this.userRequestManager.getCollectionsByWord(word, language);
             DefaultTableModel model = (DefaultTableModel) wordsCollectionsJT.getModel();
-            model.setRowCount(0);
+            model.setRowCount(0);//TODO I am not sure that it is necessary
             for (Map.Entry<String, Boolean> collectionData : collections.entrySet()) {
                 model.addRow(new Object[]{collectionData.getKey(), collectionData.getValue()});
             }
