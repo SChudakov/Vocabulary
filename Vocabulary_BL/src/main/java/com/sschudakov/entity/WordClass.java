@@ -51,9 +51,9 @@ public class WordClass {
         this.wordClassName = wordClassName;
     }
 
-    public WordClass(int wordClassID, String wordClassName) {
-        this.wordClassID = wordClassID;
-        this.wordClassName = wordClassName;
+    public WordClass(int id, String name) {
+        this.id = id;
+        this.wordClassName = name;
     }
 
     @Override

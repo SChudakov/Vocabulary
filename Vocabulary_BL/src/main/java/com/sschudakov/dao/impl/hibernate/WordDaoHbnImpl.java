@@ -5,9 +5,11 @@ import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 
 import java.sql.SQLException;
+import java.util.Collection;
 import java.util.List;
 
 public class WordDaoHbnImpl implements WordDao{
+
     @Override
     public void save(Word word) throws SQLException {
 
@@ -24,12 +26,17 @@ public class WordDaoHbnImpl implements WordDao{
     }
 
     @Override
-    public Word findByValueAndLanguage(String value, Language language) throws SQLException {
+    public Word findByValueAndLanguageId(String value, Integer languageId) throws SQLException {
         return null;
     }
 
     @Override
-    public List<Word> findAll() throws SQLException {
+    public List<Word> findByLanguageId(Integer languageId) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Collection<Word> findAll() throws SQLException {
         return null;
     }
 

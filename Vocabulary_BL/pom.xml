@@ -116,8 +116,7 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.25</version>
         </dependency>
-<<<<<<< HEAD
-=======
+
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -133,7 +132,6 @@
             <version>5.2.13.Final</version>
         </dependency>
 
->>>>>>> courses
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>

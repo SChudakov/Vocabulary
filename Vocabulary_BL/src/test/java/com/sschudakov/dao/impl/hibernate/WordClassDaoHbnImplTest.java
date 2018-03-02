@@ -21,18 +21,12 @@ public class WordClassDaoHbnImplTest {
 
     @Test
     public void findById() throws SQLException {
-        System.out.println(this.wordClassDaoHbn.findById(2));
-        this.wordClassDaoHbn.closeEntityManager();
-        this.wordClassDaoHbn.openEntityManager();
-        System.out.println(this.wordClassDaoHbn.findById(2));
+        System.out.println(this.wordClassDaoHbn.findById(10011));
     }
 
     @Test
     public void findByName() throws SQLException {
-        System.out.println(this.wordClassDaoHbn.findByName("adverb"));
-        System.out.println(this.wordClassDaoHbn.findByName("adverb"));
-        this.wordClassDaoHbn.getEntityManager().close();
-        this.wordClassDaoHbn.getEntityManagerFactory().close();
+        System.out.println(this.wordClassDaoHbn.findByName("verb"));
     }
 
     @Test
