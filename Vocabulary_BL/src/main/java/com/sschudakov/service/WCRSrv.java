@@ -1,9 +1,9 @@
-package com.sschudakov.service.impl;
+package com.sschudakov.service;
 
-import com.sschudakov.dao.impl.ormlite.LanguageDaoOltImpl;
-import com.sschudakov.dao.impl.ormlite.WCRDaoOltImpl;
-import com.sschudakov.dao.impl.ormlite.WordCollectionDaoOltImpl;
-import com.sschudakov.dao.impl.ormlite.WordDaoOltImpl;
+import com.sschudakov.dao.impl.jdbc.LanguageDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WCRDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WordCollectionDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WordDaoJdbcImpl;
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WordCollectionDao;
@@ -12,67 +12,66 @@ import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
-import com.sschudakov.service.interf.WCRSrv;
 
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
 
-public class WCRSrvImpl implements WCRSrv {
+public class WCRSrv {
 
     private WCRDao wcrDao;
     private LanguageDao languageDao;
     private WordCollectionDao wordCollectionDao;
     private WordDao wordDao;
 
-    public WCRSrvImpl() {
-        this.wcrDao = new WCRDaoOltImpl();
-        this.languageDao = new LanguageDaoOltImpl();
-        this.wordCollectionDao = new WordCollectionDaoOltImpl();
-        this.wordDao = new WordDaoOltImpl();
+    public WCRSrv() {
+        this.wcrDao = new WCRDaoJdbcImpl();
+        this.languageDao = new LanguageDaoJdbcImpl();
+        this.wordCollectionDao = new WordCollectionDaoJdbcImpl();
+        this.wordDao = new WordDaoJdbcImpl();
     }
 
-    @Override
+
     public void create(Word word, WordCollection wordCollection) throws SQLException {
         this.wcrDao.save(new WordCollectionRelationship(word, wordCollection));
     }
 
-    @Override
+
     public WordCollectionRelationship findById(Integer id) throws SQLException {
         return this.wcrDao.findById(id);
     }
 
-    @Override
+
     public void delete(Integer wcrId) throws SQLException {
         this.wcrDao.remove(wcrId);
     }
 
-    @Override
+
     public void delete(String word, String language, String collectionName) throws SQLException {
         Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(language).getId());
         WordCollection foundMeaning = this.wordCollectionDao.findByName(collectionName);
         this.wcrDao.removeByWordAndCollectionId(foundWord.getWordID(), foundMeaning.getId());
     }
 
-    @Override
+
     public WordCollectionRelationship update(WordCollectionRelationship wcr) throws SQLException {
         return this.wcrDao.update(wcr);
     }
 
-    @Override
+
     public Collection<WordCollectionRelationship> findByWordAndLanguage(String word, String language) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(language);
         Word foundWord = this.wordDao.findByValueAndLanguageId(word, foundLanguage.getId());
         return this.wcrDao.findByWordId(foundWord.getWordID());
     }
 
-    @Override
+
     public Collection<WordCollectionRelationship> findByCollection(String collection) throws SQLException {
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
         return this.wcrDao.findByCollectionId(foundCollection.getId());
     }
 
-    @Override
+
     public WordCollectionRelationship findByWordAndCollection(String word, String language, String collection) throws SQLException {
         Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(language).getId());
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
@@ -81,7 +80,7 @@ public class WCRSrvImpl implements WCRSrv {
         return this.wcrDao.findByWordAndCollectionIds(foundWord.getWordID(), foundCollection.getId());
     }
 
-    @Override
+
     public List<WordCollectionRelationship> findAll() throws SQLException {
         return this.wcrDao.findAll();
     }

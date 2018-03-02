@@ -18,6 +18,11 @@ public class Main {
                 createEntityManagerFactory("org.hibernate.tutorial.jpa");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.close();
+<<<<<<< HEAD
+=======
+        entityManagerFactory.close();
+
+>>>>>>> courses
     }
 
 

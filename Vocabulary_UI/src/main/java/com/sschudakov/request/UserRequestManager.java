@@ -5,18 +5,12 @@ import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
-import com.sschudakov.service.impl.LanguageSrvImpl;
-import com.sschudakov.service.impl.WCRSrvImpl;
-import com.sschudakov.service.impl.WMRSrvImpl;
-import com.sschudakov.service.impl.WordClassSrvImpl;
-import com.sschudakov.service.impl.WordCollectionSrvImpl;
-import com.sschudakov.service.impl.WordSrvImpl;
-import com.sschudakov.service.interf.LanguageSrv;
-import com.sschudakov.service.interf.WCRSrv;
-import com.sschudakov.service.interf.WMRSrv;
-import com.sschudakov.service.interf.WordClassSrv;
-import com.sschudakov.service.interf.WordCollectionSrv;
-import com.sschudakov.service.interf.WordSrv;
+import com.sschudakov.service.LanguageSrv;
+import com.sschudakov.service.WCRSrv;
+import com.sschudakov.service.WMRSrv;
+import com.sschudakov.service.WordClassSrv;
+import com.sschudakov.service.WordCollectionSrv;
+import com.sschudakov.service.WordSrv;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -36,12 +30,12 @@ public class UserRequestManager {
     private WMRSrv wmrService;
 
     public UserRequestManager() {
-        wordCollectionService = new WordCollectionSrvImpl();
-        wordClassService = new WordClassSrvImpl();
-        languageService = new LanguageSrvImpl();
-        wordService = new WordSrvImpl();
-        wcrService = new WCRSrvImpl();
-        wmrService = new WMRSrvImpl();
+        wordCollectionService = new WordCollectionSrv();
+        wordClassService = new WordClassSrv();
+        languageService = new LanguageSrv();
+        wordService = new WordSrv();
+        wcrService = new WCRSrv();
+        wmrService = new WMRSrv();
     }
 
 

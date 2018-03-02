@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl.ormlite;
+package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.entity.WordClass;
 import org.junit.Before;
@@ -7,13 +7,13 @@ import org.junit.Test;
 import java.sql.SQLException;
 import java.util.Collection;
 
-public class WordClassDaoOltImplTest {
+public class WordClassDaoJdbcImplTest {
 
-    private WordClassDaoOltImpl wordClassDao;
+    private WordClassDaoJdbcImpl wordClassDao;
 
     @Before
     public void init() {
-        this.wordClassDao = new WordClassDaoOltImpl();
+        this.wordClassDao = new WordClassDaoJdbcImpl();
     }
 
     @Test

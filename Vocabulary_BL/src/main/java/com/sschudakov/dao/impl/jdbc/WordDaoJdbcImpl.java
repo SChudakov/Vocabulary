@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl.ormlite;
+package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.dao.interf.WordClassDao;
@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class WordDaoOltImpl implements WordDao {
+public class WordDaoJdbcImpl implements WordDao {
     private WordClassDao wordClassDao;
     private LanguageDao languageDao;
 
-    public WordDaoOltImpl() {
-        this.wordClassDao = new WordClassDaoOltImpl();
-        this.languageDao = new LanguageDaoOltImpl();
+    public WordDaoJdbcImpl() {
+        this.wordClassDao = new WordClassDaoJdbcImpl();
+        this.languageDao = new LanguageDaoJdbcImpl();
     }
 
     @Override

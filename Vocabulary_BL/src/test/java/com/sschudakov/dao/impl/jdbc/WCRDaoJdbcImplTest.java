@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl.ormlite;
+package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
@@ -10,16 +10,16 @@ import org.junit.Test;
 
 import java.sql.SQLException;
 
-public class WCRDaoOltImplTest {
+public class WCRDaoJdbcImplTest {
 
-    private WCRDaoOltImpl wcrDaoOlt;
+    private WCRDaoJdbcImpl wcrDaoOlt;
     private WordCollectionRelationship wordCollectionRelationship;
     private Word word;
     private WordCollection wordCollection;
 
     @Before
     public void init() {
-        this.wcrDaoOlt = new WCRDaoOltImpl();
+        this.wcrDaoOlt = new WCRDaoJdbcImpl();
         WordClass wordClass = new WordClass("noun");
         wordClass.setId(0);
         Language language = new Language("English");

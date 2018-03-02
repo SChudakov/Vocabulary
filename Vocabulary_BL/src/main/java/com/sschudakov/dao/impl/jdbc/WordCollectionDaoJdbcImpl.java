@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl.ormlite;
+package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.database.DatabaseManager;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WordCollectionDaoOltImpl implements WordCollectionDao {
+public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
     @Override
     public void save(WordCollection wordCollection) throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");

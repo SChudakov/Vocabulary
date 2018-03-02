@@ -1,10 +1,10 @@
-package com.sschudakov.service.impl;
+package com.sschudakov.service;
 
-import com.sschudakov.dao.impl.ormlite.LanguageDaoOltImpl;
-import com.sschudakov.dao.impl.ormlite.WCRDaoOltImpl;
-import com.sschudakov.dao.impl.ormlite.WMRDaoOltImpl;
-import com.sschudakov.dao.impl.ormlite.WordClassDaoOltImpl;
-import com.sschudakov.dao.impl.ormlite.WordDaoOltImpl;
+import com.sschudakov.dao.impl.jdbc.LanguageDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WCRDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WMRDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WordClassDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WordDaoJdbcImpl;
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WMRDao;
@@ -13,13 +13,12 @@ import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
-import com.sschudakov.service.interf.WordSrv;
 
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
 
-public class WordSrvImpl implements WordSrv {
+public class WordSrv {
 
     private WordDao wordDao;
     private LanguageDao languageDao;
@@ -27,57 +26,55 @@ public class WordSrvImpl implements WordSrv {
     private WMRDao wmrDao;
     private WCRDao wcrDao;
 
-    public WordSrvImpl() {
-        this.wordDao = new WordDaoOltImpl();
-        this.languageDao = new LanguageDaoOltImpl();
-        this.wordClassDao = new WordClassDaoOltImpl();
-        this.wmrDao = new WMRDaoOltImpl();
-        this.wcrDao = new WCRDaoOltImpl();
+    public WordSrv() {
+        this.wordDao = new WordDaoJdbcImpl();
+        this.languageDao = new LanguageDaoJdbcImpl();
+        this.wordClassDao = new WordClassDaoJdbcImpl();
+        this.wmrDao = new WMRDaoJdbcImpl();
+        this.wcrDao = new WCRDaoJdbcImpl();
     }
 
-    @Override
+
     public void create(String wordValue, String wordClass, String language) throws SQLException {
         Word word = new Word();
         word.setValue(wordValue);
         word.setLanguage(this.languageDao.findByName(language));
         System.out.println("Word service: word class: " + wordClass);
-        if(wordClass != null){
+        if (wordClass != null) {
             word.setWordClass(this.wordClassDao.findByName(wordClass));
-        }else {
-            word.setWordClass(new WordClass());//TODO: fox this
+        } else {
+            word.setWordClass(new WordClass());//TODO: fix this
         }
         this.wordDao.save(word);
     }
 
 
-    @Override
     public Word update(Word word) throws SQLException {
         return this.wordDao.update(word);
     }
 
-    @Override
+
     public Word findById(Integer id) throws SQLException {
         return this.wordDao.findById(id);
     }
 
-    @Override
+
     public List<Word> findByLanguage(String languageName) throws SQLException {
         return this.wordDao.findByLanguageId(this.languageDao.findByName(languageName).getId());
     }
 
 
-    @Override
     public Word findByValueAndLanguage(String value, String languageName) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(languageName);
         return this.wordDao.findByValueAndLanguageId(value, foundLanguage.getId());
     }
 
-    @Override
+
     public Collection<Word> findAll() throws SQLException {
         return this.wordDao.findAll();
     }
 
-    @Override
+
     public void delete(Integer wordId) throws SQLException {
         this.wordDao.remove(wordId);
         this.wmrDao.removeAllWordRelationships(wordId);

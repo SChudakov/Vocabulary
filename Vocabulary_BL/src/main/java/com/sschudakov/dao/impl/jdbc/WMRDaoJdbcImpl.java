@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl.ormlite;
+package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.WMRDao;
 import com.sschudakov.dao.interf.WordDao;
@@ -13,11 +13,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class WMRDaoOltImpl implements WMRDao {
+public class WMRDaoJdbcImpl implements WMRDao {
     private WordDao wordDao;
 
-    public WMRDaoOltImpl() {
-        this.wordDao = new WordDaoOltImpl();
+    public WMRDaoJdbcImpl() {
+        this.wordDao = new WordDaoJdbcImpl();
     }
 
     @Override

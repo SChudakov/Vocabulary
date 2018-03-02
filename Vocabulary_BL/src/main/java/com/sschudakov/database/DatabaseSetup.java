@@ -2,10 +2,8 @@ package com.sschudakov.database;
 
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.WordClass;
-import com.sschudakov.service.impl.LanguageSrvImpl;
-import com.sschudakov.service.impl.WordClassSrvImpl;
-import com.sschudakov.service.interf.LanguageSrv;
-import com.sschudakov.service.interf.WordClassSrv;
+import com.sschudakov.service.LanguageSrv;
+import com.sschudakov.service.WordClassSrv;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -22,8 +20,8 @@ public class DatabaseSetup {
     private List<String> wordClasses;
 
     public DatabaseSetup() {
-        this.languageSrv = new LanguageSrvImpl();
-        this.wordClassSrv = new WordClassSrvImpl();
+        this.languageSrv = new LanguageSrv();
+        this.wordClassSrv = new WordClassSrv();
 
         this.languages = new ArrayList<>();
         this.wordClasses = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl.ormlite;
+package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WordCollectionDao;
@@ -12,13 +12,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WCRDaoOltImpl implements WCRDao {
+public class WCRDaoJdbcImpl implements WCRDao {
     private WordDao wordDao;
     private WordCollectionDao wordCollectionDao;
 
-    public WCRDaoOltImpl() {
-        this.wordDao = new WordDaoOltImpl();
-        this.wordCollectionDao = new WordCollectionDaoOltImpl();
+    public WCRDaoJdbcImpl() {
+        this.wordDao = new WordDaoJdbcImpl();
+        this.wordCollectionDao = new WordCollectionDaoJdbcImpl();
     }
 
 

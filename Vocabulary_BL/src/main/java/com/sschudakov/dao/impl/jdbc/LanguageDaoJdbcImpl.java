@@ -1,4 +1,4 @@
-package com.sschudakov.dao.impl.ormlite;
+package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.database.DatabaseManager;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LanguageDaoOltImpl implements LanguageDao {
+public class LanguageDaoJdbcImpl implements LanguageDao {
 
 
     @Override
