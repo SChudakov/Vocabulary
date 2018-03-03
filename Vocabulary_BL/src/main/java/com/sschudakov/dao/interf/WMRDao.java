@@ -1,5 +1,7 @@
 package com.sschudakov.dao.interf;
 
+import com.sschudakov.entity.Language;
+import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordMeaningRelationship;
 
 import java.sql.SQLException;
@@ -13,17 +15,15 @@ public interface WMRDao {
 
     WordMeaningRelationship findById(Integer id) throws SQLException;
 
-    Collection<WordMeaningRelationship> findByWordId(int wordId) throws SQLException;
+    Collection<WordMeaningRelationship> findByWord(Word word) throws SQLException;
 
-    Collection<Integer> findMeaningsIds(int wordId, int meaningsLanguageId) throws SQLException;
+    Collection<WordMeaningRelationship> findByMeaning(Word meaning) throws SQLException;
 
-    Collection<WordMeaningRelationship> findByWordAndMeaningIds(Integer wordId, Integer meaningId) throws SQLException;
+    Collection<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) throws SQLException;
+
+    WordMeaningRelationship findByWordAndMeaning(Word word, Word meaning) throws SQLException;
 
     List<WordMeaningRelationship> findAll() throws SQLException;
 
     void remove(Integer wordMeaningRelationshipID) throws SQLException;
-
-    void remove(Integer wordId, Integer meaningId) throws SQLException;
-
-    void removeAllWordRelationships(Integer wordId) throws SQLException;
 }

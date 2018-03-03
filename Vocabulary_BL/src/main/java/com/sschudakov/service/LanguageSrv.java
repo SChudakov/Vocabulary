@@ -3,6 +3,7 @@ package com.sschudakov.service;
 import com.sschudakov.dao.impl.jdbc.LanguageDaoJdbcImpl;
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.entity.Language;
+import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -13,7 +14,7 @@ public class LanguageSrv {
 
 
     public LanguageSrv() {
-        this.languageDao = new LanguageDaoJdbcImpl();
+        this.languageDao = DaoFactory.createLanguageDao();
     }
 
 

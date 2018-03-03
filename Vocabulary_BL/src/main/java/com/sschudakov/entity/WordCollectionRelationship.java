@@ -63,13 +63,18 @@ public class WordCollectionRelationship {
     }
 
     public WordCollectionRelationship() {
+        this(null, null, null);
     }
 
     public WordCollectionRelationship(Word word, WordCollection wordCollection) {
+        this(null, word, wordCollection);
+    }
+
+    public WordCollectionRelationship(Integer id, Word word, WordCollection wordCollection) {
+        this.id = id;
         this.word = word;
         this.wordCollection = wordCollection;
     }
-
 
     @Override
     public int hashCode() {

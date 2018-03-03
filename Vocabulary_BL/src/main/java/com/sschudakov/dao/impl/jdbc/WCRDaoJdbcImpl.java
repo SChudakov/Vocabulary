@@ -4,6 +4,8 @@ import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.entity.Word;
+import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
 
 import java.sql.PreparedStatement;
@@ -29,7 +31,7 @@ public class WCRDaoJdbcImpl implements WCRDao {
                 .append("(").append(WordCollectionRelationship.WORD_COLUMN_NAME).append(",")
                 .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append(")")
                 .append(" VALUES ")
-                .append("(").append(wordCollectionRelationship.getWord().getWordID()).append(",")
+                .append("(").append(wordCollectionRelationship.getWord().getId()).append(",")
                 .append(wordCollectionRelationship.getWordCollection().getId()).append(")").append(";");
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
         insertStatement.execute();
@@ -41,7 +43,7 @@ public class WCRDaoJdbcImpl implements WCRDao {
         StringBuilder query = new StringBuilder("");
         query.append("UPDATE word_collection_relationships")
                 .append(" SET ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordCollectionRelationship.getWord().getWordID()).append(",")
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordCollectionRelationship.getWord().getId()).append(",")
                 .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(wordCollectionRelationship.getWordCollection().getId())
                 .append(" WHERE ")
                 .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordCollectionRelationship.getId()).append(";");
@@ -68,11 +70,11 @@ public class WCRDaoJdbcImpl implements WCRDao {
     }
 
     @Override
-    public List<WordCollectionRelationship> findByWordId(int wordId) throws SQLException {
+    public List<WordCollectionRelationship> findByWord(Word word) throws SQLException {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append("\'" + wordId + "\'");
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(word.getId());
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
@@ -83,10 +85,10 @@ public class WCRDaoJdbcImpl implements WCRDao {
     }
 
     @Override
-    public List<WordCollectionRelationship> findByCollectionId(int collectionId) throws SQLException {
+    public List<WordCollectionRelationship> findByCollection(WordCollection collection) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships WHERE ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
+                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId());
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
@@ -115,13 +117,13 @@ public class WCRDaoJdbcImpl implements WCRDao {
     }
 
     @Override
-    public WordCollectionRelationship findByWordAndCollectionIds(Integer wordId, Integer collectionId) throws SQLException {
+    public WordCollectionRelationship findByWordAndCollection(Word word, WordCollection collection) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(word.getId())
                 .append(" AND ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
+                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId());
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
@@ -155,39 +157,6 @@ public class WCRDaoJdbcImpl implements WCRDao {
         ResultSet resultSet = statement.getResultSet();
 
         return formWCRCollection(resultSet);
-    }
-
-
-    @Override
-    public void removeByWordId(Integer wordId) throws SQLException {
-        StringBuilder query = new StringBuilder("");
-        query.append("DELETE FROM word_collection_relationships WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId);
-
-        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
-        statement.execute();
-    }
-
-    @Override
-    public void removeByCollectionId(Integer collectionId) throws SQLException {
-        StringBuilder query = new StringBuilder("");
-        query.append("DELETE FROM word_collection_relationships WHERE ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
-
-        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
-        statement.execute();
-    }
-
-    @Override
-    public void removeByWordAndCollectionId(Integer wordId, Integer collectionId) throws SQLException {
-        StringBuilder query = new StringBuilder("");
-        query.append("DELETE FROM word_collection_relationships WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
-                .append(" AND ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collectionId);
-
-        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
-        statement.execute();
     }
 
     @Override

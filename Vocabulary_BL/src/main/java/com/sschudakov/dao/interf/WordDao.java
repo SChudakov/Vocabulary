@@ -14,9 +14,9 @@ public interface WordDao {
 
     Word findById(Integer id) throws SQLException;
 
-    Word findByValueAndLanguageId(String value, Integer languageId) throws SQLException;
+    Word findByValueAndLanguage(String value, Language language) throws SQLException;
 
-    List<Word> findByLanguageId(Integer languageId) throws SQLException;
+    List<Word> findByLanguage(Language language) throws SQLException;
 
     Collection<Word> findAll() throws SQLException;
 

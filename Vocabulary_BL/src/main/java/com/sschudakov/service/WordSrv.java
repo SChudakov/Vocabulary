@@ -1,10 +1,5 @@
 package com.sschudakov.service;
 
-import com.sschudakov.dao.impl.jdbc.LanguageDaoJdbcImpl;
-import com.sschudakov.dao.impl.jdbc.WCRDaoJdbcImpl;
-import com.sschudakov.dao.impl.jdbc.WMRDaoJdbcImpl;
-import com.sschudakov.dao.impl.jdbc.WordClassDaoJdbcImpl;
-import com.sschudakov.dao.impl.jdbc.WordDaoJdbcImpl;
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WMRDao;
@@ -13,6 +8,9 @@ import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
+import com.sschudakov.entity.WordCollectionRelationship;
+import com.sschudakov.entity.WordMeaningRelationship;
+import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.Collection;
@@ -27,11 +25,11 @@ public class WordSrv {
     private WCRDao wcrDao;
 
     public WordSrv() {
-        this.wordDao = new WordDaoJdbcImpl();
-        this.languageDao = new LanguageDaoJdbcImpl();
-        this.wordClassDao = new WordClassDaoJdbcImpl();
-        this.wmrDao = new WMRDaoJdbcImpl();
-        this.wcrDao = new WCRDaoJdbcImpl();
+        this.wordDao = DaoFactory.createWordDao();
+        this.languageDao = DaoFactory.createLanguageDao();
+        this.wordClassDao = DaoFactory.createWordClassDao();
+        this.wmrDao = DaoFactory.createWMRDao();
+        this.wcrDao = DaoFactory.createWCRDao();
     }
 
 
@@ -39,7 +37,6 @@ public class WordSrv {
         Word word = new Word();
         word.setValue(wordValue);
         word.setLanguage(this.languageDao.findByName(language));
-        System.out.println("Word service: word class: " + wordClass);
         if (wordClass != null) {
             word.setWordClass(this.wordClassDao.findByName(wordClass));
         } else {
@@ -60,13 +57,13 @@ public class WordSrv {
 
 
     public List<Word> findByLanguage(String languageName) throws SQLException {
-        return this.wordDao.findByLanguageId(this.languageDao.findByName(languageName).getId());
+        return this.wordDao.findByLanguage(this.languageDao.findByName(languageName));
     }
 
 
     public Word findByValueAndLanguage(String value, String languageName) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(languageName);
-        return this.wordDao.findByValueAndLanguageId(value, foundLanguage.getId());
+        return this.wordDao.findByValueAndLanguage(value, foundLanguage);
     }
 
 
@@ -76,8 +73,16 @@ public class WordSrv {
 
 
     public void delete(Integer wordId) throws SQLException {
+        Word foundWord = wordDao.findById(wordId);
+        for (WordCollectionRelationship wordCollectionRelationship : wcrDao.findByWord(foundWord)) {
+            this.wcrDao.remove(wordCollectionRelationship.getId());
+        }
+        for (WordMeaningRelationship wordMeaningRelationship : wmrDao.findByWord(foundWord)) {
+            this.wmrDao.remove(wordMeaningRelationship.getId());
+        }
+        for (WordMeaningRelationship wordMeaningRelationship : wmrDao.findByMeaning(foundWord)) {
+            this.wmrDao.remove(wordMeaningRelationship.getId());
+        }
         this.wordDao.remove(wordId);
-        this.wmrDao.removeAllWordRelationships(wordId);
-        this.wcrDao.removeByWordId(wordId);
     }
 }

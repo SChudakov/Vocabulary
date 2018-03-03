@@ -18,7 +18,7 @@
         <Logger name="org.ehcache" level="info" additivity="false">
             <AppenderRef ref="Console" />
         </Logger>
-        <Root level="info">
+        <Root level="error">
             <AppenderRef ref="Console" />
         </Root>
     </Loggers>

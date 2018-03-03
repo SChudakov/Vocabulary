@@ -4,6 +4,7 @@ import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 
 import java.sql.PreparedStatement;
@@ -47,7 +48,7 @@ public class WordDaoJdbcImpl implements WordDao {
                 .append(Word.WORD_CLASS_COLUMN_NAME).append("=").append(word.getWordClass().getId()).append(",")
                 .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(word.getLanguage().getId())
                 .append(" WHERE ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(word.getWordID()).append(";");
+                .append(Word.ID_COLUMN_NAME).append("=").append(word.getId()).append(";");
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         return word;
@@ -70,13 +71,13 @@ public class WordDaoJdbcImpl implements WordDao {
     }
 
     @Override
-    public Word findByValueAndLanguageId(String value, Integer languageId) throws SQLException {
+    public Word findByValueAndLanguage(String value, Language language) throws SQLException {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM words WHERE ")
                 .append(Word.VALUE_COLUMN_NAME).append("=").append("\'" + value + "\'")
                 .append(" AND ")
-                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(languageId);
+                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(language.getId());
         System.out.println(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
@@ -87,12 +88,19 @@ public class WordDaoJdbcImpl implements WordDao {
             return null;
         }
 
-        return formWord(resultSet);
+        Word result = formWord(resultSet);
+
+        if (resultSet.next()) {
+            throw new IllegalArgumentException("multiple words match the value "
+                    + value + " and language " + language);
+        }
+
+        return result;
     }
 
     private Word formWord(ResultSet resultSet) throws SQLException {
         Word result = new Word();
-        result.setWordID(resultSet.getInt(Word.ID_COLUMN_NAME));
+        result.setId(resultSet.getInt(Word.ID_COLUMN_NAME));
         result.setValue(resultSet.getString(Word.VALUE_COLUMN_NAME));
         result.setLanguage(this.languageDao.findById(resultSet.getInt(Word.LANGUAGE_COLUMN_NAME)));
         result.setWordClass(this.wordClassDao.findById(resultSet.getInt(Word.WORD_CLASS_COLUMN_NAME)));
@@ -100,10 +108,10 @@ public class WordDaoJdbcImpl implements WordDao {
     }
 
     @Override
-    public List<Word> findByLanguageId(Integer languageId) throws SQLException {
+    public List<Word> findByLanguage(Language language) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM words WHERE ")
-                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(languageId);
+                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(language.getId());
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
@@ -129,7 +137,7 @@ public class WordDaoJdbcImpl implements WordDao {
         Word word;
         while (resultSet.next()) {
             word = new Word();
-            word.setWordID(resultSet.getInt(Word.ID_COLUMN_NAME));
+            word.setId(resultSet.getInt(Word.ID_COLUMN_NAME));
             word.setValue(resultSet.getString(Word.VALUE_COLUMN_NAME));
             word.setWordClass(this.wordClassDao.findByName(resultSet.getString(Word.VALUE_COLUMN_NAME)));
             word.setLanguage(this.languageDao.findById(resultSet.getInt(Word.LANGUAGE_COLUMN_NAME)));

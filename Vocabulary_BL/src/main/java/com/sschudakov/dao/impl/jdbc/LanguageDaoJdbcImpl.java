@@ -55,7 +55,13 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         if (!resultSet.next()) {
             return null;
         }
-        return formLanguage(resultSet);
+
+        Language result = formLanguage(resultSet);
+
+        if (resultSet.next()) {
+            throw new IllegalArgumentException("multiple languages match the name " + name);
+        }
+        return result;
     }
 
     private Language formLanguage(ResultSet resultSet) throws SQLException {

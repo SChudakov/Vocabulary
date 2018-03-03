@@ -106,7 +106,7 @@ public class UserRequestManager {
 
     public void deleteWord(String word, String language) throws SQLException {
         if (wordExists(word, language)) {
-            this.wordService.delete(wordService.findByValueAndLanguage(word, language).getWordID());
+            this.wordService.delete(wordService.findByValueAndLanguage(word, language).getId());
         } else {
             throw new IllegalArgumentException("There is no word " + word + " in " + language);
         }
@@ -188,7 +188,7 @@ public class UserRequestManager {
     }
 
     public boolean wordMeaningRelationshipExists(String word, String language, String meaning, String meaningLanguage) throws SQLException {
-        return this.wmrService.findByWordAndMeaning(word, language, meaning, meaningLanguage).size() == 2;
+        return this.wmrService.findByWordAndMeaning(word, language, meaning, meaningLanguage) != null;
     }
 
     public boolean wordCollectionsRelationshipExists(String word, String language, String collection) throws SQLException {

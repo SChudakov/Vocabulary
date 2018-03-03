@@ -5,6 +5,8 @@ import com.sschudakov.dao.impl.jdbc.WordCollectionDaoJdbcImpl;
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.entity.WordCollection;
+import com.sschudakov.entity.WordCollectionRelationship;
+import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -15,8 +17,8 @@ public class WordCollectionSrv {
     private WCRDao wcrDao;
 
     public WordCollectionSrv() {
-        this.wordCollectionDao = new WordCollectionDaoJdbcImpl();
-        this.wcrDao = new WCRDaoJdbcImpl();
+        this.wordCollectionDao = DaoFactory.createWordCollection();
+        this.wcrDao = DaoFactory.createWCRDao();
     }
 
 
@@ -51,7 +53,11 @@ public class WordCollectionSrv {
 
 
     public void delete(Integer collectionsId) throws SQLException {
+        for (WordCollectionRelationship wordCollectionRelationship : this.wcrDao.findByCollection(
+                wordCollectionDao.findById(collectionsId)
+        )) {
+            this.wcrDao.remove(wordCollectionRelationship.getId());
+        }
         this.wordCollectionDao.remove(collectionsId);
-        this.wcrDao.removeByCollectionId(collectionsId);
     }
 }

@@ -12,6 +12,7 @@ import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
+import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.Collection;
@@ -25,10 +26,10 @@ public class WCRSrv {
     private WordDao wordDao;
 
     public WCRSrv() {
-        this.wcrDao = new WCRDaoJdbcImpl();
-        this.languageDao = new LanguageDaoJdbcImpl();
-        this.wordCollectionDao = new WordCollectionDaoJdbcImpl();
-        this.wordDao = new WordDaoJdbcImpl();
+        this.wcrDao = DaoFactory.createWCRDao();
+        this.languageDao = DaoFactory.createLanguageDao();
+        this.wordCollectionDao = DaoFactory.createWordCollection();
+        this.wordDao = DaoFactory.createWordDao();
     }
 
 
@@ -48,9 +49,9 @@ public class WCRSrv {
 
 
     public void delete(String word, String language, String collectionName) throws SQLException {
-        Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(language).getId());
-        WordCollection foundMeaning = this.wordCollectionDao.findByName(collectionName);
-        this.wcrDao.removeByWordAndCollectionId(foundWord.getWordID(), foundMeaning.getId());
+        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(language));
+        WordCollection foundCollection = this.wordCollectionDao.findByName(collectionName);
+        this.wcrDao.remove(this.wcrDao.findByWordAndCollection(foundWord, foundCollection).getId());
     }
 
 
@@ -61,23 +62,21 @@ public class WCRSrv {
 
     public Collection<WordCollectionRelationship> findByWordAndLanguage(String word, String language) throws SQLException {
         Language foundLanguage = this.languageDao.findByName(language);
-        Word foundWord = this.wordDao.findByValueAndLanguageId(word, foundLanguage.getId());
-        return this.wcrDao.findByWordId(foundWord.getWordID());
+        Word foundWord = this.wordDao.findByValueAndLanguage(word, foundLanguage);
+        return this.wcrDao.findByWord(foundWord);
     }
 
 
     public Collection<WordCollectionRelationship> findByCollection(String collection) throws SQLException {
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
-        return this.wcrDao.findByCollectionId(foundCollection.getId());
+        return this.wcrDao.findByCollection(foundCollection);
     }
 
 
     public WordCollectionRelationship findByWordAndCollection(String word, String language, String collection) throws SQLException {
-        Word foundWord = this.wordDao.findByValueAndLanguageId(word, this.languageDao.findByName(language).getId());
+        Word foundWord = this.wordDao.findByValueAndLanguage(word, this.languageDao.findByName(language));
         WordCollection foundCollection = this.wordCollectionDao.findByName(collection);
-        System.out.println(foundWord);
-        System.out.println(foundCollection);
-        return this.wcrDao.findByWordAndCollectionIds(foundWord.getWordID(), foundCollection.getId());
+        return this.wcrDao.findByWordAndCollection(foundWord, foundCollection);
     }
 
 

@@ -5,33 +5,36 @@ import com.sschudakov.entity.WordClass;
 import com.sschudakov.entity.WordClass_;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
-import java.sql.SQLException;
 import java.util.List;
 
 public class WordClassDaoHbnImpl implements WordClassDao {
 
     private EntityManager entityManager;
+    private CriteriaBuilder criteriaBuilder;
 
     public WordClassDaoHbnImpl() {
         this.entityManager = Persistence
                 .createEntityManagerFactory("org.hibernate.tutorial.jpa")
                 .createEntityManager();
+        this.criteriaBuilder = this.entityManager.getCriteriaBuilder();
     }
 
     @Override
-    public void save(WordClass wordClass) throws SQLException {
-        throw new UnsupportedOperationException();
+    public void save(WordClass wordClass) {
+        this.entityManager.getTransaction().begin();
+        this.entityManager.persist(wordClass);
+        this.entityManager.getTransaction().commit();
     }
 
     @Override
-    public WordClass findById(Integer id) throws SQLException {
-        CriteriaBuilder criteriaBuilder = this.entityManager.getCriteriaBuilder();
-        CriteriaQuery<WordClass> criteriaQuery = criteriaBuilder.createQuery(WordClass.class);
+    public WordClass findById(Integer id) {
+        CriteriaQuery<WordClass> criteriaQuery = this.criteriaBuilder.createQuery(WordClass.class);
         Root<WordClass> root = criteriaQuery.from(WordClass.class);
 
         Path<Integer> wordClassIdPath = root.get(WordClass_.id);
@@ -44,14 +47,19 @@ public class WordClassDaoHbnImpl implements WordClassDao {
                         wordClassNamePath
                 )
         ).where(criteriaBuilder.equal(root.get(WordClass_.id), id));
-        return this.entityManager.createQuery(criteriaQuery).getSingleResult();
-        /*return this.entityManager.find(WordClass.class, 2);*/
+
+        WordClass result = null;
+        try {
+            result = this.entityManager.createQuery(criteriaQuery).getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
+        return result;
     }
 
     @Override
-    public WordClass findByName(String name) throws SQLException {
-        CriteriaBuilder criteriaBuilder = this.entityManager.getCriteriaBuilder();
-        CriteriaQuery<WordClass> criteriaQuery = criteriaBuilder.createQuery(WordClass.class);
+    public WordClass findByName(String name) {
+        CriteriaQuery<WordClass> criteriaQuery = this.criteriaBuilder.createQuery(WordClass.class);
         Root<WordClass> root = criteriaQuery.from(WordClass.class);
 
         Path<Integer> wordClassIdPath = root.get(WordClass_.id);
@@ -64,11 +72,32 @@ public class WordClassDaoHbnImpl implements WordClassDao {
                         wordClassNamePath
                 )
         ).where(criteriaBuilder.equal(root.get(WordClass_.wordClassName), name));
-        return this.entityManager.createQuery(criteriaQuery).getSingleResult();
+
+        WordClass result = null;
+        try {
+            result = this.entityManager.createQuery(criteriaQuery).getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
+        return result;
     }
 
     @Override
-    public List<WordClass> findAll() throws SQLException {
-        throw new UnsupportedOperationException();
+    public List<WordClass> findAll() {
+        CriteriaQuery<WordClass> criteriaQuery = this.criteriaBuilder.createQuery(WordClass.class);
+        Root<WordClass> root = criteriaQuery.from(WordClass.class);
+
+        Path<Integer> wordClassIdPath = root.get(WordClass_.id);
+        Path<String> wordClassNamePath = root.get(WordClass_.wordClassName);
+
+        criteriaQuery.select(
+                criteriaBuilder.construct(
+                        WordClass.class,
+                        wordClassIdPath,
+                        wordClassNamePath
+                )
+        );
+        List<WordClass> result = this.entityManager.createQuery(criteriaQuery).getResultList();
+        return result;
     }
 }

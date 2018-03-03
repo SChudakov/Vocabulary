@@ -44,13 +44,17 @@ public class Language {
     }
 
     public Language() {
+        this(null, null);
     }
 
     public Language(String languageName) {
-        this.languageName = languageName;
-        this.id = languageName.hashCode();
+        this(null, languageName);
     }
 
+    public Language(Integer id, String languageName) {
+        this.id = id;
+        this.languageName = languageName;
+    }
 
     @Override
     public int hashCode() {

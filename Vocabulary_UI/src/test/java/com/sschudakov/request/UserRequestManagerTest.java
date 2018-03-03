@@ -10,6 +10,7 @@ import com.sschudakov.entity.WordMeaningRelationship;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.sql.PreparedStatement;
@@ -19,14 +20,14 @@ import java.util.List;
 import java.util.Map;
 
 public class UserRequestManagerTest {
-    private UserRequestManager userRequestManager;
+    private static UserRequestManager userRequestManager;
 
     private static final int englishID = 10000;
     private static final int russianID = 10001;
     private static final int germanID = 10002;
-    private static final String english = "english";
-    private static final String russian = "russian";
-    private static final String german = "german";
+    private static final String english = "englishh";
+    private static final String russian = "russiann";
+    private static final String german = "germann";
 
     private static final int firstCollectionId = 10000;
     private static final int secondCollectionId = 10001;
@@ -38,9 +39,9 @@ public class UserRequestManagerTest {
     private static final int nounID = 10000;
     private static final int verbID = 10001;
     private static final int adverbID = 10002;
-    private static final String noun = "NOUN";
-    private static final String verb = "VERB";
-    private static final String adverb = "ADVERB";
+    private static final String noun = "nounn";
+    private static final String verb = "verbb";
+    private static final String adverb = "adverbb";
 
     private static final int wordId = 10000;
     private static final String wordValue = "vollkommen";
@@ -93,9 +94,13 @@ public class UserRequestManagerTest {
 
     private static final String notExistingWord = "not existing word";
 
-    @Before
-    public void setup() {
+    @BeforeClass
+    public static void setup() {
         userRequestManager = new UserRequestManager();
+    }
+
+    @Before
+    public void init() {
         try {
             insertLanguages();
             insertCollections();

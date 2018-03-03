@@ -1,5 +1,8 @@
 package com.sschudakov;
 
+import com.sschudakov.dao.impl.jdbc.WordClassDaoJdbcImpl;
+import com.sschudakov.entity.WordClass;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -8,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.sql.SQLException;
 
 public class Main {
 
@@ -19,7 +23,6 @@ public class Main {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.close();
         entityManagerFactory.close();
-
     }
 
 

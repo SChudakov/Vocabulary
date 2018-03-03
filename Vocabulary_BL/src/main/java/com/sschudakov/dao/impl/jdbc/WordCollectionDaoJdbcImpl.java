@@ -69,7 +69,13 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
             return null;
         }
 
-        return formWordCollection(resultSet);
+        WordCollection result = formWordCollection(resultSet);
+
+        if(resultSet.next()){
+            throw new IllegalArgumentException("multiple word collections match the name " + name);
+        }
+
+        return result;
     }
 
     private WordCollection formWordCollection(ResultSet resultSet) throws SQLException {

@@ -1,5 +1,6 @@
 package com.sschudakov.dao.impl.hibernate;
 
+import com.sschudakov.entity.WordClass;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,6 +18,7 @@ public class WordClassDaoHbnImplTest {
 
     @Test
     public void save() {
+        this.wordClassDaoHbn.save(new WordClass("test word class"));
     }
 
     @Test
@@ -31,5 +33,8 @@ public class WordClassDaoHbnImplTest {
 
     @Test
     public void findAll() {
+        for (WordClass wordClass : this.wordClassDaoHbn.findAll()) {
+            System.out.println(wordClass);
+        }
     }
 }

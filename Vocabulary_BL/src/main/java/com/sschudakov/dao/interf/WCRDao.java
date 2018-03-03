@@ -1,5 +1,7 @@
 package com.sschudakov.dao.interf;
 
+import com.sschudakov.entity.Word;
+import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
 
 import java.sql.SQLException;
@@ -16,20 +18,14 @@ public interface WCRDao {
 
     WordCollectionRelationship findById(Integer id) throws SQLException;
 
-    Collection<WordCollectionRelationship> findByWordId(int wordId) throws SQLException;
+    Collection<WordCollectionRelationship> findByWord(Word word) throws SQLException;
 
-    Collection<WordCollectionRelationship> findByCollectionId(int collectionId) throws SQLException;
+    Collection<WordCollectionRelationship> findByCollection(WordCollection collection) throws SQLException;
 
-    WordCollectionRelationship findByWordAndCollectionIds(Integer wordId, Integer collectionId) throws SQLException;
+    WordCollectionRelationship findByWordAndCollection(Word word, WordCollection collection) throws SQLException;
 
     List<WordCollectionRelationship> findAll() throws SQLException;
 
 
     void remove(Integer wordCollectionRelationshipID) throws SQLException;
-
-    void removeByWordAndCollectionId(Integer wordId, Integer collectionId) throws SQLException;
-
-    void removeByWordId(Integer wordId) throws SQLException;
-
-    void removeByCollectionId(Integer collectionId) throws SQLException;
 }

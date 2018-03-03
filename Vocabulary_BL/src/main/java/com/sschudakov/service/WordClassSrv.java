@@ -1,8 +1,8 @@
 package com.sschudakov.service;
 
-import com.sschudakov.dao.impl.jdbc.WordClassDaoJdbcImpl;
 import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.entity.WordClass;
+import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -12,7 +12,7 @@ public class WordClassSrv {
     private WordClassDao wordClassDao;
 
     public WordClassSrv() {
-        this.wordClassDao = new WordClassDaoJdbcImpl();
+        this.wordClassDao = DaoFactory.createWordClassDao();
     }
 
 

@@ -43,13 +43,19 @@ public class WordCollection {
         this.collectionName = collectionName;
     }
 
+
     public WordCollection() {
+        this(null, null);
     }
 
     public WordCollection(String collectionName) {
-        this.collectionName = collectionName;
+        this(null, collectionName);
     }
 
+    public WordCollection(Integer id, String collectionName) {
+        this.id = id;
+        this.collectionName = collectionName;
+    }
 
     @Override
     public int hashCode() {

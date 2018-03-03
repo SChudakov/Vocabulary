@@ -30,7 +30,7 @@ public class Word {
     @Id
     @Column(name = ID_COLUMN_NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer wordID;
+    private Integer id;
 
     @Column(name = VALUE_COLUMN_NAME)
     private String value;
@@ -46,12 +46,12 @@ public class Word {
     private Language language;
 
 
-    public Integer getWordID() {
-        return wordID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setWordID(Integer wordID) {
-        this.wordID = wordID;
+    public void setId(Integer wordID) {
+        this.id = wordID;
     }
 
     public String getValue() {
@@ -78,14 +78,21 @@ public class Word {
         this.language = language;
     }
 
+
     public Word() {
+        this(null, null, null, null);
     }
 
     public Word(String value) {
-        this(value, null, null);
+        this(null, value, null, null);
     }
 
     public Word(String value, WordClass wordClass, Language language) {
+        this(null, value, wordClass, language);
+    }
+
+    public Word(Integer id, String value, WordClass wordClass, Language language) {
+        this.id = id;
         this.value = value;
         this.wordClass = wordClass;
         this.language = language;
@@ -107,7 +114,7 @@ public class Word {
             return new EqualsBuilder()
                     .append(this.value, casted.getValue())
                     .append(this.language, casted.getLanguage())
-                    .append(this.wordClass, casted.getWordID())
+                    .append(this.wordClass, casted.getId())
                     .isEquals();
         }
         return false;
@@ -116,7 +123,7 @@ public class Word {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
-                .append("id", this.wordID)
+                .append("id", this.id)
                 .append("value", this.value)
                 .append("language", this.language)
                 .append("value class", this.wordClass)

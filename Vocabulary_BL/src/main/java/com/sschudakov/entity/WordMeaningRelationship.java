@@ -63,13 +63,18 @@ public class WordMeaningRelationship {
     }
 
     public WordMeaningRelationship() {
+        this(null, null, null);
     }
 
     public WordMeaningRelationship(Word word, Word meaning) {
+        this(null, word, meaning);
+    }
+
+    public WordMeaningRelationship(Integer id, Word word, Word meaning) {
+        this.id = id;
         this.word = word;
         this.meaning = meaning;
     }
-
 
     @Override
     public int hashCode() {

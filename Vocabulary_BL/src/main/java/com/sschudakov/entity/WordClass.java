@@ -45,13 +45,14 @@ public class WordClass {
     }
 
     public WordClass() {
+        this(null, null);
     }
 
     public WordClass(String wordClassName) {
-        this.wordClassName = wordClassName;
+        this(null, wordClassName);
     }
 
-    public WordClass(int id, String name) {
+    public WordClass(Integer id, String name) {
         this.id = id;
         this.wordClassName = name;
     }

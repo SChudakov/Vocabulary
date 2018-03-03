@@ -55,7 +55,13 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
             return null;
         }
 
-        return formWordClass(resultSet);
+        WordClass result = formWordClass(resultSet);
+
+        if(resultSet.next()){
+            throw new IllegalArgumentException("multiple word classes match the name " + name);
+        }
+
+        return result;
     }
 
     private WordClass formWordClass(ResultSet resultSet) throws SQLException {
