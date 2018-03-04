@@ -26,18 +26,6 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.39</version>
         </dependency>
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-core &ndash;&gt;
-        <dependency>
-            <groupId>com.j256.jdbc</groupId>
-            <artifactId>jdbc-core</artifactId>
-            <version>5.0</version>
-        </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-jdbc &ndash;&gt;
-        <dependency>
-            <groupId>com.j256.jdbc</groupId>
-            <artifactId>jdbc-jdbc</artifactId>
-            <version>5.0</version>
-        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
         <dependency>
@@ -66,6 +54,7 @@
             <version>2.9.1</version>
         </dependency>
 
+
         <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
         <dependency>
             <groupId>org.jetbrains</groupId>
@@ -80,13 +69,13 @@
             <version>3.7</version>
         </dependency>
 
+
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>5.2.12.Final</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -94,22 +83,18 @@
             <version>5.2.10.Final</version>
             <scope>provided</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-ehcache</artifactId>
             <version>5.2.13.Final</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
         </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -117,36 +102,13 @@
             <version>1.7.25</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen -->
+        <!-- https://mvnrepository.com/artifact/org.spockframework/spock-core -->
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-jpamodelgen</artifactId>
-            <version>5.2.10.Final</version>
-            <scope>provided</scope>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>1.1-groovy-2.4</version>
+            <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-ehcache</artifactId>
-            <version>5.2.13.Final</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-
     </dependencies>
 
 </project>
