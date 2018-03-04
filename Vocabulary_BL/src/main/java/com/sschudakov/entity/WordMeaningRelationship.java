@@ -1,32 +1,49 @@
 package com.sschudakov.entity;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-@DatabaseTable(tableName = "word_meaning_relationships")
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "word_meaning_relationships")
 public class WordMeaningRelationship {
 
     public static final String ID_COLUMN_NAME = "meaning_relationship_id";
     public static final String WORD_COLUMN_NAME = "relationship_word";
     public static final String MEANING_COLUMN_NAME = "relationship_meaning";
 
-    @DatabaseField(generatedId = true, columnName = ID_COLUMN_NAME)
-    private int wordMeaningRelationshipID;
-    @DatabaseField(columnName = WORD_COLUMN_NAME, canBeNull = false, foreign = true)
+    @Id
+    @Column(name = ID_COLUMN_NAME)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @ManyToOne
+    @JoinColumn(name = WORD_COLUMN_NAME,
+            foreignKey = @ForeignKey(name = WORD_COLUMN_NAME))
     private Word word;
-    @DatabaseField(columnName = MEANING_COLUMN_NAME, canBeNull = false, foreign = true)
+
+    @ManyToOne
+    @JoinColumn(name = MEANING_COLUMN_NAME,
+            foreignKey = @ForeignKey(name = MEANING_COLUMN_NAME))
     private Word meaning;
 
 
-    public int getWordMeaningRelationshipID() {
-        return wordMeaningRelationshipID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setWordMeaningRelationshipID(int wordMeaningRelationshipID) {
-        this.wordMeaningRelationshipID = wordMeaningRelationshipID;
+    public void setId(Integer wordMeaningRelationshipID) {
+        this.id = wordMeaningRelationshipID;
     }
 
     public Word getWord() {
@@ -46,13 +63,18 @@ public class WordMeaningRelationship {
     }
 
     public WordMeaningRelationship() {
+        this(null, null, null);
     }
 
     public WordMeaningRelationship(Word word, Word meaning) {
+        this(null, word, meaning);
+    }
+
+    public WordMeaningRelationship(Integer id, Word word, Word meaning) {
+        this.id = id;
         this.word = word;
         this.meaning = meaning;
     }
-
 
     @Override
     public int hashCode() {
@@ -77,7 +99,7 @@ public class WordMeaningRelationship {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("id", this.wordMeaningRelationshipID)
+                .append("id", this.id)
                 .append("word", this.word)
                 .append("meaning", this.meaning)
                 .build();

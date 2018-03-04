@@ -8,6 +8,6 @@ public class WordsCollectionsManagerTest {
 
     @Test
     public void readExistingCollections() {
-        System.out.println(WordsCollectionsManager.readExistingCollections().toString());
+        /*System.out.println(WordsCollectionsManager.readExistingCollections().toString());*/
     }
 }

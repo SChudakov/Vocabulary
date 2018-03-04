@@ -1,7 +1,5 @@
 package com.sschudakov.entity;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -22,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "words")
-@DatabaseTable(tableName = "words")
 public class Word {
 
     public static final String ID_COLUMN_NAME = "word_id";
@@ -33,32 +30,28 @@ public class Word {
     @Id
     @Column(name = ID_COLUMN_NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @DatabaseField(generatedId = true, columnName = ID_COLUMN_NAME)
-    private int wordID;
+    private Integer id;
 
     @Column(name = VALUE_COLUMN_NAME)
-    @DatabaseField(columnName = VALUE_COLUMN_NAME, canBeNull = false)
     private String value;
 
     @ManyToOne
     @JoinColumn(name = WORD_CLASS_COLUMN_NAME,
             foreignKey = @ForeignKey(name = WORD_CLASS_COLUMN_NAME))
-    @DatabaseField(columnName = WORD_CLASS_COLUMN_NAME, foreign = true, canBeNull = false)
     private WordClass wordClass;
 
     @ManyToOne
     @JoinColumn(name = LANGUAGE_COLUMN_NAME,
             foreignKey = @ForeignKey(name = LANGUAGE_COLUMN_NAME))
-    @DatabaseField(columnName = LANGUAGE_COLUMN_NAME, foreign = true, canBeNull = false)
     private Language language;
 
 
-    public int getWordID() {
-        return wordID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setWordID(int wordID) {
-        this.wordID = wordID;
+    public void setId(Integer wordID) {
+        this.id = wordID;
     }
 
     public String getValue() {
@@ -85,14 +78,21 @@ public class Word {
         this.language = language;
     }
 
+
     public Word() {
+        this(null, null, null, null);
     }
 
     public Word(String value) {
-        this(value, null, null);
+        this(null, value, null, null);
     }
 
     public Word(String value, WordClass wordClass, Language language) {
+        this(null, value, wordClass, language);
+    }
+
+    public Word(Integer id, String value, WordClass wordClass, Language language) {
+        this.id = id;
         this.value = value;
         this.wordClass = wordClass;
         this.language = language;
@@ -114,7 +114,7 @@ public class Word {
             return new EqualsBuilder()
                     .append(this.value, casted.getValue())
                     .append(this.language, casted.getLanguage())
-                    .append(this.wordClass, casted.getWordID())
+                    .append(this.wordClass, casted.getId())
                     .isEquals();
         }
         return false;
@@ -123,7 +123,7 @@ public class Word {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
-                .append("id", this.wordID)
+                .append("id", this.id)
                 .append("value", this.value)
                 .append("language", this.language)
                 .append("value class", this.wordClass)

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%highlight{%5p}] %d{dd/M/yy HH:mm:ss} [%t] %logger{36} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- Log SQL statements -->
+        <Logger name="org.hibernate.SQL" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <!-- Log cache -->
+        <Logger name="org.hibernate.cache" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <Logger name="org.ehcache" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>

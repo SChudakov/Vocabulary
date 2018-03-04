@@ -12,7 +12,7 @@ public class WordsCollectionsReaderTest {
 
     @Test
     public void readWordsCollections() {
-        int numOfWords = 0;
+        /*int numOfWords = 0;
         for (HashMap<Word, List<Word>> wordListHashMap : WordsCollectionsReader.readWordsCollections()) {
             numOfWords += wordListHashMap.keySet().size();
             for (Word word : wordListHashMap.keySet()) {
@@ -20,6 +20,6 @@ public class WordsCollectionsReaderTest {
             }
         }
 
-        System.out.println("num of words: " + numOfWords);
+        System.out.println("num of words: " + numOfWords);*/
     }
 }

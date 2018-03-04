@@ -1,0 +1,17 @@
+Stimmungen
+
+r Ärger - злость
+s Glück - счастье
+e Freude - радость
+e Sorge - беспокойство
+r Neid - зависть
+r Stress - стресс
+e Aufregung - волнение
+e Furcht - боязнь
+e Angst - страх
+e Trauer - печаль
+e Wut - ярость
+r Mut - мужество
+e Rache - мечть
+e Trost - утешение
+r Leid - горе, печаль 

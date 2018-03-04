@@ -6,12 +6,12 @@ public class DatabaseManagerTest {
 
     @Test
     public void createTables() {
-        DatabaseManager.createTables();
+        /*DatabaseManager.createTables();*/
     }
 
     @Test
     public void dropTables() {
-        DatabaseManager.dropTables();
+        /*DatabaseManager.dropTables();*/
     }
 
 }

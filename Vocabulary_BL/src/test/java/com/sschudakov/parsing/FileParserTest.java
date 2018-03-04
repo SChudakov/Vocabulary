@@ -19,11 +19,11 @@ public class FileParserTest {
 
     @Test
     public void parseTest() {
-        LogsRemover.removeLogs();
+        /*LogsRemover.removeLogs();
         HashMap<Word, List<Word>> result = FileParser.parse(ADJECTIVE_TXT);
         for (Word word : result.keySet()) {
             System.out.println("word: " + word + " meanings: " + result.get(word));
-        }
+        }*/
     }
 
 }
