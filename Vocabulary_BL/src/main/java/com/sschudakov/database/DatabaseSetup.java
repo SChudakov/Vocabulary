@@ -45,8 +45,7 @@ public class DatabaseSetup {
     }
 
     private void setUpLanguages() throws SQLException {
-        List<String> existingLanguages = languageSrv.findAll()
-                .stream().map(Language::getLanguageName).collect(Collectors.toList());
+        List<String> existingLanguages = languageSrv.findAll();
         List<String> languagesToBeAdded = this.languages.stream().filter(a -> !existingLanguages.contains(a))
                 .collect(Collectors.toList());
         List<String> languagesToDeleted = existingLanguages.stream().filter(a -> !this.languages.contains(a))
@@ -70,8 +69,7 @@ public class DatabaseSetup {
     }
 
     private void setUpWordClasses() throws SQLException {
-        List<String> existingClasses = this.wordClassSrv.findAll()
-                .stream().map(WordClass::getWordClassName).collect(Collectors.toList());
+        List<String> existingClasses = this.wordClassSrv.findAll();
         List<String> classesToBeAdded = this.wordClasses.stream().filter(a -> !existingClasses.contains(a))
                 .collect(Collectors.toList());
         List<String> classesToDeleted = existingClasses.stream().filter(a -> !this.wordClasses.contains(a))

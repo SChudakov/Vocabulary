@@ -1,17 +1,8 @@
 package com.sschudakov.request;
 
 import com.sschudakov.database.DatabaseManager;
-import com.sschudakov.entity.Language;
-import com.sschudakov.entity.Word;
-import com.sschudakov.entity.WordClass;
-import com.sschudakov.entity.WordCollection;
-import com.sschudakov.entity.WordCollectionRelationship;
-import com.sschudakov.entity.WordMeaningRelationship;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import com.sschudakov.entity.*;
+import org.junit.*;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -44,32 +35,32 @@ public class UserRequestManagerTest {
     private static final String adverb = "adverbb";
 
     private static final int wordId = 10000;
-    private static final String wordValue = "vollkommen";
+    private static final String wordValue = "vollkommenn";
     private static final int wordClass = 10000;
     private static final int wordLanguage = germanID;
 
     private static final int firstMeaningId = 10001;
-    private static final String firstMeaningValue = "полный";
+    private static final String firstMeaningValue = "полныйй";
     private static final int firstMeaningClass = 10000;
     private static final int firstMeaningLanguage = russianID;
 
     private static final int secondMeaningId = 10002;
-    private static final String secondMeaningValue = "абсоютный";
+    private static final String secondMeaningValue = "абсоютныйй";
     private static final int secondMeaningClass = 10000;
     private static final int secondMeaningLanguage = russianID;
 
     private static final int thirdMeaningId = 10003;
-    private static final String thirdMeaningValue = "совершенный";
+    private static final String thirdMeaningValue = "совершенныйй";
     private static final int thirdMeaningClass = 10000;
     private static final int thirdMeaningLanguage = russianID;
 
     private static final int additionalMeaningId = 10004;
-    private static final String additionalMeaningValue = "entire";
+    private static final String additionalMeaningValue = "entiree";
     private static final int additionalMeaningClass = 10000;
     private static final int additionalMeaningLanguage = englishID;
 
     private static final int wordWithNoMeaningsId = 10005;
-    private static final String wordWithNoMeaningsValue = "word with no minning";
+    private static final String wordWithNoMeaningsValue = "word with no meaning";
     private static final int wordWithNoMeaningsClass = 10000;
     private static final int wordWithNoMeaningsLanguage = englishID;
 
@@ -105,8 +96,8 @@ public class UserRequestManagerTest {
             insertLanguages();
             insertCollections();
             insertWordClasses();
-            insertWordCollectionsRelationship();
             insertWords();
+            insertWordCollectionsRelationship();
             insertWordMeaningRelationships();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -116,12 +107,12 @@ public class UserRequestManagerTest {
     @After
     public void clean() {
         try {
+            deleteWordCollectionsRelationship();
+            deleteWordMeaningRelationships();
+            deleteWords();
             deleteLanguages();
             deleteCollections();
             deleteWordClasses();
-            deleteWordCollectionsRelationship();
-            deleteWords();
-            deleteWordMeaningRelationships();
         } catch (SQLException e) {
             e.printStackTrace();
         }

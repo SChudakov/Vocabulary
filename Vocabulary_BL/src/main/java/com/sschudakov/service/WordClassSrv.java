@@ -6,6 +6,7 @@ import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class WordClassSrv {
 
@@ -17,7 +18,11 @@ public class WordClassSrv {
 
 
     public void create(String wordClassName) throws SQLException {
-        this.wordClassDao.save(new WordClass(wordClassName));
+        if (wordClassExists(wordClassName)) {
+            throw new IllegalArgumentException("There is already word class with name " + wordClassName);
+        } else {
+            this.wordClassDao.save(new WordClass(wordClassName));
+        }
     }
 
 
@@ -31,8 +36,12 @@ public class WordClassSrv {
     }
 
 
-    public List<WordClass> findAll() throws SQLException {
-        return this.wordClassDao.findAll();
+    public List<String> findAll() throws SQLException {
+        return this.wordClassDao.findAll().stream().map(WordClass::getWordClassName).collect(Collectors.toList());
+    }
+
+    private boolean wordClassExists(String wordClassName) throws SQLException {
+        return this.wordClassDao.findByName(wordClassName) != null;
     }
 
 }

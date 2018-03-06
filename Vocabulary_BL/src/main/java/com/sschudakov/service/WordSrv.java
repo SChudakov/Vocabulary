@@ -15,6 +15,7 @@ import com.sschudakov.factory.DaoFactory;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class WordSrv {
 
@@ -56,8 +57,9 @@ public class WordSrv {
     }
 
 
-    public List<Word> findByLanguage(String languageName) throws SQLException {
-        return this.wordDao.findByLanguage(this.languageDao.findByName(languageName));
+    public List<String> findByLanguage(String languageName) throws SQLException {
+        return this.wordDao.findByLanguage(this.languageDao.findByName(languageName))
+                .stream().map(Word::getValue).collect(Collectors.toList());
     }
 
 

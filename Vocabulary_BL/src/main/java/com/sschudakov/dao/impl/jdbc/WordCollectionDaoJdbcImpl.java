@@ -18,7 +18,6 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
                 .append("(").append(WordCollection.NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append("\'" + wordCollection.getCollectionName() + "\'").append(")").append(";");
-        System.out.println(insertQuery.toString());
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
         insertStatement.execute();
     }
@@ -71,7 +70,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
 
         WordCollection result = formWordCollection(resultSet);
 
-        if(resultSet.next()){
+        if (resultSet.next()) {
             throw new IllegalArgumentException("multiple word collections match the name " + name);
         }
 

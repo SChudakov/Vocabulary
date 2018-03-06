@@ -1,9 +1,5 @@
 package com.sschudakov.service;
 
-import com.sschudakov.dao.impl.jdbc.LanguageDaoJdbcImpl;
-import com.sschudakov.dao.impl.jdbc.WCRDaoJdbcImpl;
-import com.sschudakov.dao.impl.jdbc.WordCollectionDaoJdbcImpl;
-import com.sschudakov.dao.impl.jdbc.WordDaoJdbcImpl;
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WordCollectionDao;
