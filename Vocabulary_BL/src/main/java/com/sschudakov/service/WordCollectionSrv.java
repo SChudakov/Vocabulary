@@ -16,7 +16,7 @@ public class WordCollectionSrv {
     private WCRDao wcrDao;
 
     public WordCollectionSrv() {
-        this.wordCollectionDao = DaoFactory.createWordCollection();
+        this.wordCollectionDao = DaoFactory.createWordCollectionDao();
         this.wcrDao = DaoFactory.createWCRDao();
     }
 

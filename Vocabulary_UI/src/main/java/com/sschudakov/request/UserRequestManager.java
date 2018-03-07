@@ -1,13 +1,18 @@
 package com.sschudakov.request;
 
+import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
-import com.sschudakov.entity.WordCollectionRelationship;
-import com.sschudakov.service.*;
+import com.sschudakov.entity.WordCollection;
+import com.sschudakov.service.LanguageSrv;
+import com.sschudakov.service.WordClassSrv;
+import com.sschudakov.service.WordCollectionSrv;
+import com.sschudakov.service.WordSrv;
 
 import java.sql.SQLException;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 public class UserRequestManager {
 
@@ -15,16 +20,14 @@ public class UserRequestManager {
     private WordClassSrv wordClassService;
     private LanguageSrv languageService;
     private WordSrv wordService;
-    private WCRSrv wcrService;
-    private WMRSrv wmrService;
 
     public UserRequestManager() {
         wordCollectionService = new WordCollectionSrv();
         wordClassService = new WordClassSrv();
         languageService = new LanguageSrv();
         wordService = new WordSrv();
-        wcrService = new WCRSrv();
-        wmrService = new WMRSrv();
+        /*wcrService = new WCRSrv();
+        wmrService = new WMRSrv();*/
     }
 
 
@@ -46,36 +49,35 @@ public class UserRequestManager {
     //-------------- load information get requests ---------------//
 
     public List<String> getWordMeanings(String word, String wordLanguage, String meaningsLanguage) throws SQLException {
-        List<String> result = new ArrayList<>();
-        for (Word w : this.wmrService.findWordMeanings(word, wordLanguage, meaningsLanguage)) {
-            result.add(w.getValue());
-        }
-        return result;
+        Language foundWordLanguage = this.languageService.findByName(wordLanguage);
+        Word foundWord = this.wordService.findByValueAndLanguage(word, foundWordLanguage);
+        Language foundMeaningLanguage = this.languageService.findByName(meaningsLanguage);
+        return this.wordService.getWordsMeanings(foundWord, foundMeaningLanguage);
     }
 
-    public List<String> getWordsByLanguageName(String language) throws SQLException {
-        return this.wordService.findByLanguage(language);
+    public List<String> getWordsByLanguageName(String languageName) throws SQLException {
+        Language foundLanguage = this.languageService.findByName(languageName);
+        return this.wordService.findByLanguage(foundLanguage);
     }
 
     public String getWordClassByWord(String value, String language) throws SQLException {
-        Optional<WordClass> foundWordClass = Optional.of(this.wordService.findByValueAndLanguage(value, language).getWordClass());
-        if (foundWordClass.isPresent()) { //TODO: ---------------------------------------------------------------------------------------------------------------
+        Language foundLanguage = this.languageService.findByName(language);
+        Optional<WordClass> foundWordClass = Optional.of(this.wordService.findByValueAndLanguage(value, foundLanguage).getWordClass());
+        if (foundWordClass.isPresent()) {
             return foundWordClass.get().getWordClassName();
         }
         return null;
     }
 
-    public Map<String, Boolean> getCollectionsByWord(String word, String language) throws SQLException {
-        Map<String, Boolean> collections = new HashMap<>();
-        this.wordCollectionService.findAll().stream().forEach(a -> collections.put(a, Boolean.FALSE));
-        for (WordCollectionRelationship wcr : this.wcrService.findByWordAndLanguage(word, language)) {
-            collections.put(wcr.getWordCollection().getCollectionName(), Boolean.TRUE);
-        }
-        return collections;
+    public Map<String, Boolean> getWordCollections(String word, String language) throws SQLException {
+        Language foundLanguage = this.languageService.findByName(language);
+        Word foundWord = this.wordService.findByValueAndLanguage(word, foundLanguage);
+        return this.wordService.getWordCollections(foundWord);
     }
 
-    public List<String> getWordsByCollectionName(String collection) throws SQLException {
-        return this.wcrService.findByCollection(collection).stream().map(wcr -> wcr.getWord().getValue()).collect(Collectors.toList());
+    public List<String> getCollectionWords(String collectionName) throws SQLException {
+        WordCollection foundCollection = this.wordCollectionService.findByName(collectionName);
+        return this.wordService.getCollectionWords(foundCollection);
     }
 
 
@@ -85,15 +87,12 @@ public class UserRequestManager {
         this.wordCollectionService.create(name);
     }
 
-
     //-------------- delete requests ---------------//
 
-    public void deleteWord(String word, String language) throws SQLException {
-        if (wordExists(word, language)) {
-            this.wordService.delete(wordService.findByValueAndLanguage(word, language).getId()); //TODO: -------------------------------------------------------
-        } else {
-            throw new IllegalArgumentException("There is no word " + word + " in " + language);
-        }
+    public void deleteWord(String wordValue, String languageName) throws SQLException {
+        Language wordLanguage = this.languageService.findByName(languageName);
+        Word word = this.wordService.findByValueAndLanguage(wordValue, wordLanguage);
+        this.wordService.delete(word);
     }
 
     public void deleteCollection(String name) throws SQLException {
@@ -101,74 +100,58 @@ public class UserRequestManager {
     }
 
 
-    //-------------- save word information method ---------------//
+    //-------------- create and update word methods ---------------//
 
-    public void saveWordInformation(String word, String wordClass, String language) throws SQLException {
-        if (wordExists(word, language)) {
-            Word foundWord = this.wordService.findByValueAndLanguage(word, language);//TODO: -------------------------------------------------------
-            foundWord.setWordClass(this.wordClassService.findByName(wordClass));
-            this.wordService.update(foundWord);//TODO: -------------------------------------------------------
-        } else {
-            this.wordService.create(word, wordClass, language);//TODO: -------------------------------------------------------
-        }
+    public void createWord(String wordValue, String wordClassName, String languageName) throws SQLException {
+        WordClass wordClass = this.wordClassService.findByName(wordClassName);
+        Language language = this.languageService.findByName(languageName);
+        this.wordService.create(wordValue, wordClass, language);
+    }
+
+    public void updateWord(String wordValue, String wordClassName, String languageName) throws SQLException {
+        Language language = this.languageService.findByName(languageName);
+        Word word = this.wordService.findByValueAndLanguage(wordValue, language);
+        WordClass wordClass = this.wordClassService.findByName(wordClassName);
+        this.wordService.update(word, wordClass);
     }
 
 
     //-------------- add \ remove meaning methods ---------------//
 
     public void addMeaning(String word, String wordLanguage, String meaning, String meaningsLanguage) throws SQLException {
-        Word foundWord = this.wordService.findByValueAndLanguage(word, wordLanguage);//TODO: -------------------------------------------------------
-        Word foundMeaning = this.wordService.findByValueAndLanguage(meaning, meaningsLanguage);//TODO: -------------------------------------------------------
-        if (!wordMeaningRelationshipExists(word, wordLanguage, meaning, meaningsLanguage)) {
-            this.wmrService.create(foundWord, foundMeaning);
-        } else {
-            throw new IllegalArgumentException("Word " + word + " already has meaning " + meaning);
-        }
+        Language foundWordLanguage = this.languageService.findByName(wordLanguage);
+        Language foundMeaningLanguage = this.languageService.findByName(meaningsLanguage);
+        Word foundWord = this.wordService.findByValueAndLanguage(word, foundWordLanguage);
+        Word foundMeaning = this.wordService.findByValueAndLanguage(meaning, foundMeaningLanguage);
+        this.wordService.addMeaning(foundWord, foundMeaning);
     }
 
     public void removeMeaning(String word, String wordLanguage, String meaning, String meaningsLanguage) throws SQLException {
-        if (wordMeaningRelationshipExists(word, wordLanguage, meaning, meaningsLanguage)) {
-            this.wmrService.delete(word, wordLanguage, meaning, meaningsLanguage);
-        } else {
-            throw new IllegalArgumentException("word " + word + " has no meaning " + meaning);
-        }
+        Language foundWordLanguage = this.languageService.findByName(wordLanguage);
+        Language foundMeaningLanguage = this.languageService.findByName(meaningsLanguage);
+        Word foundWord = this.wordService.findByValueAndLanguage(word, foundWordLanguage);
+        Word foundMeaning = this.wordService.findByValueAndLanguage(meaning, foundMeaningLanguage);
+        this.wordService.removeMeaning(foundWord, foundMeaning);
     }
 
 
     //-------------- put into \ remove from collection methods ---------------//
 
     public void putInCollection(String word, String wordLanguage, String collection) throws SQLException {
-        if (!wordCollectionsRelationshipExists(word, wordLanguage, collection)) {
-            this.wcrService.create(
-                    this.wordService.findByValueAndLanguage(word, wordLanguage),//TODO: -------------------------------------------------------
-                    this.wordCollectionService.findByName(collection)
-            );
-        } else {
-            throw new IllegalArgumentException("word " + word + " is already in " + collection + " collection");
-        }
+        Language foundWordLanguage = this.languageService.findByName(wordLanguage);
+        Word foundWord = this.wordService.findByValueAndLanguage(word, foundWordLanguage);
+        WordCollection foundWordCollection = this.wordCollectionService.findByName(collection);
+        this.wordService.putInCollection(foundWord, foundWordCollection);
     }
 
     public void removeFromCollection(String word, String wordLanguage, String collection) throws SQLException {
-        if (wordCollectionsRelationshipExists(word, wordLanguage, collection)) {
-            this.wcrService.delete(word, wordLanguage, collection);
-        } else {
-            throw new IllegalArgumentException("there is no word " + word + " in " + collection + " collection");
-        }
+        Language foundWordLanguage = this.languageService.findByName(wordLanguage);
+        Word foundWord = this.wordService.findByValueAndLanguage(word, foundWordLanguage);
+        WordCollection foundWordCollection = this.wordCollectionService.findByName(collection);
+        this.wordService.removeFromCollection(foundWord, foundWordCollection);
     }
-
-
-    //-------------- check requests ---------------//
 
     public boolean wordExists(String word, String language) throws SQLException {
-        return wordService.findByValueAndLanguage(word, language) != null;
-    }
-
-
-    public boolean wordMeaningRelationshipExists(String word, String language, String meaning, String meaningLanguage) throws SQLException {
-        return this.wmrService.findByWordAndMeaning(word, language, meaning, meaningLanguage) != null;
-    }
-
-    public boolean wordCollectionsRelationshipExists(String word, String language, String collection) throws SQLException {
-        return this.wcrService.findByWordAndCollection(word, language, collection) != null;
+        return this.wordService.wordExists(word, language);
     }
 }

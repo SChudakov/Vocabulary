@@ -18,7 +18,7 @@ public interface WCRDao {
 
     WordCollectionRelationship findById(Integer id) throws SQLException;
 
-    Collection<WordCollectionRelationship> findByWord(Word word) throws SQLException;
+    Collection<WordCollectionRelationship> findRelationshipsByWord(Word word) throws SQLException;
 
     Collection<WordCollectionRelationship> findByCollection(WordCollection collection) throws SQLException;
 

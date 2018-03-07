@@ -40,7 +40,7 @@ public class DaoFactory {
         }
     }
 
-    public static WordCollectionDao createWordCollection() {
+    public static WordCollectionDao createWordCollectionDao() {
         if (daoType == DaoType.JDBC) {
             return new WordCollectionDaoJdbcImpl();
         } else {

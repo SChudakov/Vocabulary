@@ -70,7 +70,7 @@ public class WCRDaoJdbcImpl implements WCRDao {
     }
 
     @Override
-    public List<WordCollectionRelationship> findByWord(Word word) throws SQLException {
+    public List<WordCollectionRelationship> findRelationshipsByWord(Word word) throws SQLException {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships WHERE ")

@@ -620,7 +620,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
     private void loadCollections(String word, String language) {
         try {
-            Map<String, Boolean> collections = this.userRequestManager.getCollectionsByWord(word, language);
+            Map<String, Boolean> collections = this.userRequestManager.getWordCollections(word, language);
             DefaultTableModel model = (DefaultTableModel) wordsCollectionsJT.getModel();
             model.setRowCount(0);//TODO I am not sure that it is necessary
             for (Map.Entry<String, Boolean> collectionData : collections.entrySet()) {
@@ -665,7 +665,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
     private void wordsSaveWordJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsSaveWordJBActionPerformed
         try {
-            this.userRequestManager.saveWordInformation(
+            this.userRequestManager.createWord(
                     getInputWordValue(),
                     getSelectedWordClass(),
                     getSelectedWordLanguage()
@@ -773,7 +773,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     private void wordsWordClassJCBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_wordsWordClassJCBItemStateChanged
         if (wordFound && getSelectedWordClass() != null) {
             try {
-                this.userRequestManager.saveWordInformation(
+                this.userRequestManager.updateWord(
                         getInputWordValue(),
                         getSelectedWordClass(),
                         getSelectedWordLanguage()
