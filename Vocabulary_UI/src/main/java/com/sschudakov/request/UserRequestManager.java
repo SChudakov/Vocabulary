@@ -62,6 +62,8 @@ public class UserRequestManager {
 
     public String getWordClassByWord(String value, String language) throws SQLException {
         Language foundLanguage = this.languageService.findByName(language);
+        System.out.println(value);
+        System.out.println(language);
         Optional<WordClass> foundWordClass = Optional.of(this.wordService.findByValueAndLanguage(value, foundLanguage).getWordClass());
         if (foundWordClass.isPresent()) {
             return foundWordClass.get().getWordClassName();

@@ -7,8 +7,7 @@ package com.sschudakov.ui;
 
 import com.sschudakov.request.UserRequestManager;
 
-import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
@@ -72,11 +71,13 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         });
 
         wordsMeaningsJL.setModel(new DefaultListModel<>());
+        languagesWordsJL.setModel(new DefaultListModel<>());
 
         this.userRequestManager = new UserRequestManager();
         this.setFoundStatus(false);
 
-        this.loadLanguages();
+        this.loadLanguages(wordsLanguageJCB);
+        this.loadLanguages(languagesLanguageJCB);
         this.loadWordClasses();
     }
 
@@ -115,7 +116,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         wordsWordClassJL = new javax.swing.JLabel();
         wordsMeaningsLanguageJL = new javax.swing.JLabel();
         CollectionsPanel = new javax.swing.JPanel();
-        collectionsLanguageJCB = new javax.swing.JComboBox<>();
+        collectionsCollectionsJCB = new javax.swing.JComboBox<>();
         collectionsCollectionNameJTF = new javax.swing.JTextField();
         collectionsCreateCollectionJB = new javax.swing.JButton();
         GroupsWordList = new javax.swing.JScrollPane();
@@ -383,7 +384,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(collectionsCreateCollectionJB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addComponent(GroupsWordList)
-                                        .addComponent(collectionsLanguageJCB, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(collectionsCollectionsJCB, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addContainerGap())
         );
         CollectionsPanelLayout.setVerticalGroup(
@@ -394,7 +395,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
                                         .addComponent(collectionsCollectionNameJTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(collectionsCreateCollectionJB))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(collectionsLanguageJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(collectionsCollectionsJCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(CollectionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(collectionsDeleteWordsJB)
@@ -540,11 +541,11 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
     //-------------- Load methods ---------------//
 
-    private void loadLanguages() {
-        wordsLanguageJCB.removeAllItems();
+    private void loadLanguages(JComboBox<String> languagesJcb) {
+        languagesJcb.removeAllItems();
         try {
             for (String language : userRequestManager.getLanguages()) {
-                wordsLanguageJCB.addItem(language);
+                languagesJcb.addItem(language);
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -607,7 +608,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             if (meaningsLanguage != null) {
                 List<String> meaningsList = this.userRequestManager.getWordMeanings(word, language, meaningsLanguage);
                 DefaultListModel<String> model = (DefaultListModel<String>) wordsMeaningsJL.getModel();
-                model.setSize(0);//TODO I am not sure that it is necessary
+                model.setSize(0);
                 for (String meaning : meaningsList) {
                     model.addElement(meaning);
                 }
@@ -649,6 +650,10 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
     private String getInputMeaningValue() {
         return this.wordsMeaningJTF.getText();
+    }
+
+    private String getSelectedMeaningValue() {
+        return wordsMeaningsJL.getSelectedValue();
     }
 
     private String getSelectedMeaningsLanguage() {
@@ -713,28 +718,32 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_wordsAddMeaningJBActionPerformed
 
     private void wordsDeleteMeaningJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordsDeleteMeaningJBActionPerformed
-        if (wordsMeaningsJL.getSelectedValue() != null) {
+        if (getSelectedMeaningValue() != null) {
             try {
                 this.userRequestManager.removeMeaning(
                         getInputWordValue(),
                         getSelectedWordLanguage(),
-                        getInputMeaningValue(),
+                        getSelectedMeaningValue(),
                         getSelectedMeaningsLanguage()
                 );
-                removeMeaningToMeaningsList(getInputMeaningValue());
+                removeMeaningFromMeaningsList(getSelectedMeaningValue());
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, e.getMessage());
                 e.printStackTrace();
             }
+        } else {
+            String message = "Please, select the value you want to delete from the list";
+            JOptionPane.showMessageDialog(this, message);
         }
     }//GEN-LAST:event_wordsDeleteMeaningJBActionPerformed
 
     private void addMeaningToMeaningsList(String meaning) {
-        throw new UnsupportedOperationException();
+        ((DefaultListModel<String>) wordsMeaningsJL.getModel()).insertElementAt(meaning, 0);
+        //todo: insert in front because database loads in reversed order
     }
 
-    private void removeMeaningToMeaningsList(String meaning) {
-        throw new UnsupportedOperationException();
+    private void removeMeaningFromMeaningsList(String meaning) {
+        ((DefaultListModel<String>) wordsMeaningsJL.getModel()).removeElement(meaning);
     }
 
 
@@ -749,7 +758,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_wordsCreateCollectionJBActionPerformed
 
     private void addCollectionToCollectionsTable(String collectionsName) {
-        throw new UnsupportedOperationException();
+        ((DefaultTableModel) wordsCollectionsJT.getModel()).addRow(new Object[]{collectionsName, false});
     }
 
     private void wordsMeaningsLanguageJCBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_wordsMeaningsLanguageJCBItemStateChanged
@@ -812,7 +821,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             try {
                 this.userRequestManager.removeFromCollection(
                         s,
-                        (String) this.collectionsLanguageJCB.getSelectedItem(),
+                        (String) this.collectionsCollectionsJCB.getSelectedItem(),
                         this.collectionsCollectionNameJTF.getText()
                 );
             } catch (Exception e) {
@@ -826,40 +835,58 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         throw new UnsupportedOperationException();
     }
 
+    private void collectionsLoadCollections() {
+        collectionsCollectionsJCB.removeAllItems();
+        try {
+            for (String collection : userRequestManager.getCollections()) {
+                collectionsCollectionsJCB.addItem(collection);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     //-------------- Languages Tab ---------------//
 
 
     private void languagesLanguageJCBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_languagesLanguageJCBItemStateChanged
-        try {
-            renderLanguageWords(
-                    this.userRequestManager.getWordsByLanguageName(
-                            (String) this.languagesLanguageJCB.getSelectedItem()));
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    }//GEN-LAST:event_languagesLanguageJCBItemStateChanged
-
-    private void renderLanguageWords(List<String> words) {
-        throw new UnsupportedOperationException();
-    }
-
-    private void languagesRemoveWordsJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languagesRemoveWordsJBActionPerformed
-        String language = (String) this.languagesLanguageJCB.getSelectedItem();
-        for (String s : extractSelectedWordsLanguagesTab()) {
+        if (languagesLanguageJCB.getSelectedItem() != null) {
             try {
-                this.userRequestManager.deleteWord(s, language);
+                renderLanguageWords(this.userRequestManager.getWordsByLanguageName(
+                        (String) this.languagesLanguageJCB.getSelectedItem()
+                ));
             } catch (Exception e) {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(this, e.getMessage());
             }
         }
-    }//GEN-LAST:event_languagesRemoveWordsJBActionPerformed
+    }//GEN-LAST:event_languagesLanguageJCBItemStateChanged
 
-    private List<String> extractSelectedWordsLanguagesTab() {
-        throw new UnsupportedOperationException();
+    private void renderLanguageWords(List<String> words) {
+        DefaultListModel model = (DefaultListModel) languagesWordsJL.getModel();
+        model.setSize(0);
+        for (String word : words) {
+            model.addElement(word);
+        }
     }
+
+    private void languagesRemoveWordsJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languagesRemoveWordsJBActionPerformed
+        String message = "Are you sure you want to delete selected word? " +
+                "All relative information will also be deleted.";
+
+        if (JOptionPane.showConfirmDialog(this, message) == JOptionPane.YES_OPTION) {
+            String language = (String) this.languagesLanguageJCB.getSelectedItem();
+            String word = languagesWordsJL.getSelectedValue();
+            if (word != null){
+                try {
+                    this.userRequestManager.deleteWord(word, language);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(this, e.getMessage());
+                }
+            }
+        }
+    }//GEN-LAST:event_languagesRemoveWordsJBActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -873,7 +900,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField collectionsCollectionNameJTF;
     private javax.swing.JButton collectionsCreateCollectionJB;
     private javax.swing.JButton collectionsDeleteWordsJB;
-    private javax.swing.JComboBox<String> collectionsLanguageJCB;
+    private javax.swing.JComboBox<String> collectionsCollectionsJCB;
     private javax.swing.JList<String> collectionsWordsJL;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
