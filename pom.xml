@@ -12,7 +12,13 @@
         <module>Vocabulary_UI</module>
         <module>Vocabulary_BL</module>
     </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>4.0.2.RELEASE</version>
+        </dependency>
+    </dependencies>
 
 
     <build>
