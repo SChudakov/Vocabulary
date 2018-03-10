@@ -12,8 +12,9 @@ public class LanguageSrv {
 
     private LanguageDao languageDao;
 
-    public LanguageSrv() {
-        this.languageDao = DaoFactory.createLanguageDao();
+
+    public LanguageSrv(LanguageDao languageDao) {
+        this.languageDao = languageDao;
     }
 
 

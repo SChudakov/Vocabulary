@@ -5,7 +5,13 @@
  */
 package com.sschudakov.ui;
 
+import com.sschudakov.factory.DaoFactory;
+import com.sschudakov.factory.UserRequestManagerFactory;
 import com.sschudakov.request.UserRequestManager;
+import com.sschudakov.service.LanguageSrv;
+import com.sschudakov.service.WordClassSrv;
+import com.sschudakov.service.WordCollectionSrv;
+import com.sschudakov.service.WordSrv;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
@@ -73,7 +79,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
 
         wordsMeaningsJL.setModel(new DefaultListModel<>());
 
-        this.userRequestManager = new UserRequestManager();
+        this.userRequestManager = UserRequestManagerFactory.createRequestManager();
         this.setFoundStatus(false);
 
         this.loadLanguages();

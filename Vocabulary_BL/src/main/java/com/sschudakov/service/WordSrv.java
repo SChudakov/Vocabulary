@@ -1,6 +1,9 @@
 package com.sschudakov.service;
 
-import com.sschudakov.dao.interf.*;
+import com.sschudakov.dao.interf.WCRDao;
+import com.sschudakov.dao.interf.WMRDao;
+import com.sschudakov.dao.interf.WordCollectionDao;
+import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.entity.*;
 import com.sschudakov.factory.DaoFactory;
 
@@ -14,21 +17,14 @@ import java.util.stream.Collectors;
 public class WordSrv {
 
     private WordDao wordDao;
-    private LanguageDao languageDao;
-    private WordClassDao wordClassDao;
-    private WordCollectionDao wordCollectionDao;
     private WMRDao wmrDao;
     private WCRDao wcrDao;
 
-    public WordSrv() {
-        this.wordDao = DaoFactory.createWordDao();
-        this.languageDao = DaoFactory.createLanguageDao();
-        this.wordClassDao = DaoFactory.createWordClassDao();
-        this.wordCollectionDao = DaoFactory.createWordCollectionDao();
-        this.wmrDao = DaoFactory.createWMRDao();
-        this.wcrDao = DaoFactory.createWCRDao();
+    public WordSrv(WordDao wordDao, WMRDao wmrDao, WCRDao wcrDao) {
+        this.wordDao = wordDao;
+        this.wmrDao = wmrDao;
+        this.wcrDao = wcrDao;
     }
-
 
     //-------------- create  ---------------//
 
@@ -113,11 +109,10 @@ public class WordSrv {
 
     //-------------- get word collections ---------------//
 
-    public Map<String, Boolean> getWordCollections(Word word) throws SQLException {
+    public Map<String, Boolean> getWordCollections(Word word, List<String> collections) throws SQLException {
         Map<String, Boolean> collectionsMap = new HashMap<>();
 
-        this.wordCollectionDao.findAll()
-                .stream().forEach(a -> collectionsMap.put(a.getCollectionName(), Boolean.FALSE));
+        collections.stream().forEach(a -> collectionsMap.put(a, Boolean.FALSE));
 
         for (WordCollectionRelationship wcr : this.wcrDao.findRelationshipsByWord(word)) {
             collectionsMap.put(wcr.getWordCollection().getCollectionName(), Boolean.TRUE);
@@ -177,9 +172,8 @@ public class WordSrv {
 
     //-------------- exist queries ---------------//
 
-    public boolean wordExists(String word, String language) throws SQLException {
-        Language foundLanguage = this.languageDao.findByName(language);
-        return this.wordDao.findByValueAndLanguage(word, foundLanguage) != null;
+    public boolean wordExists(String word, Language language) throws SQLException {
+        return this.wordDao.findByValueAndLanguage(word, language) != null;
     }
 
     private boolean wordMeaningRelationshipExists(Word word, Word meaning) throws SQLException {

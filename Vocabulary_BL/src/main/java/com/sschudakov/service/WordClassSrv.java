@@ -12,8 +12,9 @@ public class WordClassSrv {
 
     private WordClassDao wordClassDao;
 
-    public WordClassSrv() {
-        this.wordClassDao = DaoFactory.createWordClassDao();
+
+    public WordClassSrv(WordClassDao wordClassDao) {
+        this.wordClassDao = wordClassDao;
     }
 
 

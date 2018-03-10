@@ -2,6 +2,7 @@ package com.sschudakov.database;
 
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.WordClass;
+import com.sschudakov.factory.ServiceFactory;
 import com.sschudakov.service.LanguageSrv;
 import com.sschudakov.service.WordClassSrv;
 
@@ -20,8 +21,8 @@ public class DatabaseSetup {
     private List<String> wordClasses;
 
     public DatabaseSetup() {
-        this.languageSrv = new LanguageSrv();
-        this.wordClassSrv = new WordClassSrv();
+        this.languageSrv = ServiceFactory.createLanguageService();
+        this.wordClassSrv = ServiceFactory.createWordClassService();
 
         this.languages = new ArrayList<>();
         this.wordClasses = new ArrayList<>();
