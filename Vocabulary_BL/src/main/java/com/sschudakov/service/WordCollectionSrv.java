@@ -78,7 +78,7 @@ public class WordCollectionSrv {
         this.wordCollectionDao.remove(collectionsId);
     }
 
-    private boolean collectionExists(String collection) throws SQLException {
+    public boolean collectionExists(String collection) throws SQLException {
         return this.wordCollectionDao.findByName(collection) != null;
     }
 }

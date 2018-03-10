@@ -156,4 +156,8 @@ public class UserRequestManager {
     public boolean wordExists(String word, String language) throws SQLException {
         return this.wordService.wordExists(word, language);
     }
+
+    public boolean wordCollectionExists(String collection) throws SQLException {
+        return this.wordCollectionService.collectionExists(collection);
+    }
 }
