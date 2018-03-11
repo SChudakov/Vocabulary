@@ -14,9 +14,6 @@ import java.util.stream.Collectors;
 
 public class WordSrv {
 
-
-    //-------------- dao objects  ---------------//
-
     private WordDao wordDao;
     private WMRDao wmrDao;
     private WCRDao wcrDao;
@@ -29,7 +26,6 @@ public class WordSrv {
         this.wmrDao = wmrDao;
         this.wcrDao = wcrDao;
     }
-
 
     //-------------- create  ---------------//
 
@@ -44,7 +40,6 @@ public class WordSrv {
         }
         this.wordDao.save(word);
     }
-
 
     //-------------- update ---------------//
 
@@ -136,14 +131,8 @@ public class WordSrv {
     }
 
     public List<String> getCollectionWords(WordCollection collection, Language language) throws SQLException {
-        //todo: implement findByCollectionAndLanguage in dao!!
-        List<String> words = new ArrayList<>();
-        for (WordCollectionRelationship wcr : wcrDao.findByCollection(collection)) {
-            if (wcr.getWord().getLanguage().equals(language)) {
-                words.add(wcr.getWord().getValue());
-            }
-        }
-        return words;
+        return this.wcrDao.findByCollectionAndLanguage(collection, language)
+                .stream().map(a -> a.getWord().getValue()).collect(Collectors.toList());
     }
 
 
