@@ -1,20 +1,12 @@
 package com.sschudakov.dao.impl.hibernate;
 
 import com.sschudakov.dao.interf.WCRDao;
-import com.sschudakov.entity.Word;
-import com.sschudakov.entity.WordCollection;
-import com.sschudakov.entity.WordCollectionRelationship;
-import com.sschudakov.entity.WordCollectionRelationship_;
+import com.sschudakov.entity.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Path;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-import java.util.Collection;
+import javax.persistence.criteria.*;
 import java.util.List;
 
 public class WCRDaoHbnImpl implements WCRDao {
@@ -85,7 +77,7 @@ public class WCRDaoHbnImpl implements WCRDao {
     }
 
     @Override
-    public Collection<WordCollectionRelationship> findRelationshipsByWord(Word word) {
+    public List<WordCollectionRelationship> findRelationshipsByWord(Word word) {
         CriteriaQuery<WordCollectionRelationship> criteriaQuery = this.criteriaBuilder
                 .createQuery(WordCollectionRelationship.class);
         Root<WordCollectionRelationship> root = criteriaQuery.from(WordCollectionRelationship.class);
@@ -108,7 +100,7 @@ public class WCRDaoHbnImpl implements WCRDao {
     }
 
     @Override
-    public Collection<WordCollectionRelationship> findByCollection(WordCollection wordCollection) {
+    public List<WordCollectionRelationship> findByCollection(WordCollection wordCollection) {
         CriteriaQuery<WordCollectionRelationship> criteriaQuery = this.criteriaBuilder
                 .createQuery(WordCollectionRelationship.class);
         Root<WordCollectionRelationship> root = criteriaQuery.from(WordCollectionRelationship.class);
@@ -128,6 +120,30 @@ public class WCRDaoHbnImpl implements WCRDao {
 
         List<WordCollectionRelationship> result = this.entityManager.createQuery(criteriaQuery).getResultList();
         return result;
+    }
+
+    @Override
+    public List<WordCollectionRelationship> findByCollectionAndLanguage(WordCollection collection, Language language) {
+        CriteriaQuery<WordCollectionRelationship> criteriaQuery = this.criteriaBuilder
+                .createQuery(WordCollectionRelationship.class);
+        Root<WordCollectionRelationship> root = criteriaQuery.from(WordCollectionRelationship.class);
+
+        Path<Integer> wcrIdPath = root.get(WordCollectionRelationship_.id);
+        Path<Word> wcrWordPath = root.get(WordCollectionRelationship_.word);
+        Path<WordCollection> wcrCollectionPath = root.get(WordCollectionRelationship_.wordCollection);
+
+        Join<WordCollectionRelationship, Word> wmrAndMeaningJoin = root.join(WordCollectionRelationship_.word);
+
+        Path<Language> wordLanguagePath = wmrAndMeaningJoin.get(Word_.language);
+
+        criteriaQuery.select(criteriaBuilder.construct(
+                WordCollectionRelationship.class,
+                wcrIdPath,
+                wcrWordPath,
+                wcrCollectionPath
+        )).where(criteriaBuilder.equal(wordLanguagePath, language));
+
+        return entityManager.createQuery(criteriaQuery).getResultList();
     }
 
     @Override

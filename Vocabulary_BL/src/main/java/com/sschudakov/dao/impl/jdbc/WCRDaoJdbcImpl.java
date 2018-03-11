@@ -4,6 +4,7 @@ import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
@@ -101,6 +102,25 @@ public class WCRDaoJdbcImpl implements WCRDao {
     public List<WordCollectionRelationship> findByCollection(WordCollection collection) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships WHERE ")
+                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId());
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
+
+        ResultSet resultSet = statement.getResultSet();
+
+        return formWCRCollection(resultSet);
+    }
+
+    @Override
+    public List<WordCollectionRelationship> findByCollectionAndLanguage(WordCollection collection, Language language) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT *")
+                .append(" FROM ")
+                .append("word_collection_relationships INNER JOIN words")
+                .append(" ON ")
+                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(Word.ID_COLUMN_NAME)
+                .append(" WHERE ")
                 .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId());
 
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
