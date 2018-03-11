@@ -40,8 +40,7 @@ die Zahlen zeigen die Veränderung ... im Jahr - цила показывают �
 die Tabelle gibt die Auskunft über folgende Aspekte: ... - таблица дает справку о таких аспектах
 aus der Tabelle geht allerdings nicht hervor - из таблицы все же не следует, что 
 in der Legende wird die Bedeutung der im Schaublid 
-verwendeten Farben \ Abkürzungen \ Kurzzeichen - 
-в легенде объясняется значение использованных в схеме обозначений
+verwendeten Farben \ Abkürzungen \ Kurzzeichen - в легенде объясняется значение использованных в схеме обозначений
 
 BESCHREIBUNG :: Entwiklungen
 

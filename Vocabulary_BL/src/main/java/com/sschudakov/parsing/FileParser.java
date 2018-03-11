@@ -1,6 +1,5 @@
 package com.sschudakov.parsing;
 
-import com.sschudakov.entity.Word;
 import com.sschudakov.logging.LoggersManager;
 
 import java.io.*;
@@ -16,28 +15,30 @@ import java.util.List;
 public class FileParser {
 
     private static final String WORD_FROM_MEANING_SEPARATOR = " – | - ";
+    private static final String MEANING_REGULAR_EXPRESSION = ",|/|\\\\";//[^\w]
     private static final int WORD_POSITION = 0;
     private static final int MEANINGS_POSITION = 1;
-    private static final String REGULAR_EXPRESSION_FOR_PARSING_MEANINGS = ",|/|\\\\";//[^\w]
 
-    public static HashMap<Word, List<Word>> parse(String path) {
+    public static HashMap<String, List<String>> parse(String path) {
         return parse(new File(path));
     }
 
-    public static HashMap<Word, List<Word>> parse(File file) {
+    public static HashMap<String, List<String>> parse(File file) {
 
-        HashMap<Word, List<Word>> result = new HashMap<>();
+        HashMap<String, List<String>> result = new HashMap<>();
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(
                 new FileInputStream(file), Charset.defaultCharset()/*forName("windows-1251")*/))) {
 
             String line;
-            Word word;
-            List<Word> meanings;
+
+            String word;
+            List<String> meanings;
+
             int i = 0;
             while ((line = reader.readLine()) != null) {
                 try {
-                    System.out.println(line);
+                    /*System.out.println(line);*/
 
                     String[] wordAndMeanings = line.split(WORD_FROM_MEANING_SEPARATOR);
 
@@ -66,11 +67,16 @@ public class FileParser {
     }
 
 
-    private static List<Word> parseMeanings(String line) {
-        System.out.println("meanings line: " + line);
-        List<Word> result = new ArrayList<>();
-        String[] meanings = line.split(REGULAR_EXPRESSION_FOR_PARSING_MEANINGS);
-        System.out.println("meanings array: " + Arrays.toString(meanings));
+    private static List<String> parseMeanings(String line) {
+
+        /*System.out.println("meanings line: " + line);*/
+
+        List<String> result = new ArrayList<>();
+
+        String[] meanings = line.split(MEANING_REGULAR_EXPRESSION);
+
+        /*System.out.println("meanings array: " + Arrays.toString(meanings));*/
+
         try {
             for (String meaning : meanings) {
                 result.add(parseWord(meaning));
@@ -82,11 +88,10 @@ public class FileParser {
         return result;
     }
 
-    private static Word parseWord(String word) {
-        word = word.trim();
-
+    private static String parseWord(String word) {
         ensureWordIsCorrect(word);
-        return new Word(word);
+        word = word.trim();
+        return word;
     }
 
     private static void ensureCorrectSeparation(String[] wordAndMeanings) {

@@ -38,6 +38,7 @@ public class DatabaseSetup {
         this.wordClasses.add("pronoun");
         this.wordClasses.add("preposition");
         this.wordClasses.add("conjunction");
+        this.wordClasses.add("collocation");
     }
 
     public void setUpDatabase() throws SQLException {

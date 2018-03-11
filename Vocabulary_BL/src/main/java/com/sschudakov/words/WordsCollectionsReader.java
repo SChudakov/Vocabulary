@@ -11,8 +11,8 @@ public class WordsCollectionsReader {
 
     private static final String WORDS_COLLECTIONS_DIRECTORY_PATH = "D:\\Workspace.java\\Vocabulary\\words_collections";
 
-    public static Collection<HashMap<Word, List<Word>>> readWordsCollections() {
-        Collection<HashMap<Word, List<Word>>> result = new ArrayList<>();
+    public static Collection<HashMap<String, List<String>>> readWordsCollections() {
+        Collection<HashMap<String, List<String>>> result = new ArrayList<>();
         for (File file : new File(WORDS_COLLECTIONS_DIRECTORY_PATH).listFiles()) {
             System.out.println("\nFILE: " + file.getName() + "\n");
             if (!FileExtensionDeterminer.isDOCXFile(file.getPath())) {

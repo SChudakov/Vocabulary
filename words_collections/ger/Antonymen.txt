@@ -60,7 +60,8 @@ e Zerstörung - уничтожение
 e Treue - верность
 r Verrat - предательство
 
-r Willkür - произвол (e Ordnung)
+r Willkür - произвол
+e Ordnung - порядок
 
 e Fülle - изобилие
 e Mangel - недостаток
