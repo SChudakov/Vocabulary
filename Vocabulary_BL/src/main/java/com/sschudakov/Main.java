@@ -23,10 +23,22 @@ public class Main {
         WordClassSrv wordClassSrv = ServiceFactory.createWordClassService();
         try {
             WordsCollectionsManager.persistCollectionIntoDatabase(
+                    "D:\\Workspace.java\\Vocabulary\\words_collections\\ger\\Adjective aus Kopien.txt",
+                    languageSrv.findByName("German"),
+                    languageSrv.findByName("Russian"),
+                    wordClassSrv.findByName("adkective")
+            );
+            WordsCollectionsManager.persistCollectionIntoDatabase(
                     "D:\\Workspace.java\\Vocabulary\\words_collections\\ger\\Adjective mit Präpositionen.txt",
                     languageSrv.findByName("German"),
                     languageSrv.findByName("Russian"),
-                    wordClassSrv.findByName("adjective")
+                    wordClassSrv.findByName("adkective")
+            );
+            WordsCollectionsManager.persistCollectionIntoDatabase(
+                    "D:\\Workspace.java\\Vocabulary\\words_collections\\ger\\Antonymen.txt",
+                    languageSrv.findByName("German"),
+                    languageSrv.findByName("Russian"),
+                    wordClassSrv.findByName("noun")
             );
         } catch (SQLException e) {
             e.printStackTrace();

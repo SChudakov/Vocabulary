@@ -144,12 +144,14 @@ public class WordSrv {
                     " already a has meaning " + meaning.getValue());
         } else {
             this.wmrDao.save(new WordMeaningRelationship(word, meaning));
+            this.wmrDao.save(new WordMeaningRelationship(meaning, word));
         }
     }
 
     public void removeMeaning(Word word, Word meaning) throws SQLException {
         if (wordMeaningRelationshipExists(word, meaning)) {
             this.wmrDao.remove(this.wmrDao.findByWordAndMeaning(word, meaning).getId());
+            this.wmrDao.remove(this.wmrDao.findByWordAndMeaning(meaning, word).getId());
         } else {
             throw new IllegalArgumentException("word " + word + " has by now no meaning " + meaning);
         }

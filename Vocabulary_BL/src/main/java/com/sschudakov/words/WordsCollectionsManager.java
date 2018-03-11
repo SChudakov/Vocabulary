@@ -72,7 +72,9 @@ public class WordsCollectionsManager {
 
     private static void createWord(String value, WordClass wordClass, Language language) {
         try {
-            wordSrv.create(value, wordClass, language);
+            if (!wordSrv.wordExists(value, language)) {
+                wordSrv.create(value, wordClass, language);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
