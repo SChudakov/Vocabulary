@@ -5,3 +5,9 @@ target/
 *.iml
 
 out/
+
+Vocabulary_BL\dependency-reduced-pom.xml
+
+Vocabulary_UI\dependency-reduced-pom.xml
+
+Vocabulary_UI\manifest.mf

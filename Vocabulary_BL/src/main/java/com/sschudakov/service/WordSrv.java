@@ -14,9 +14,6 @@ import java.util.stream.Collectors;
 
 public class WordSrv {
 
-
-    //-------------- dao objects  ---------------//
-
     private WordDao wordDao;
     private WMRDao wmrDao;
     private WCRDao wcrDao;
@@ -29,7 +26,6 @@ public class WordSrv {
         this.wmrDao = wmrDao;
         this.wcrDao = wcrDao;
     }
-
 
     //-------------- create  ---------------//
 
@@ -44,7 +40,6 @@ public class WordSrv {
         }
         this.wordDao.save(word);
     }
-
 
     //-------------- update ---------------//
 
