@@ -25,12 +25,18 @@ public class WMRDaoHbnImpl implements WMRDao {
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
 
+
+    //-------------- constructor ---------------//
+
     public WMRDaoHbnImpl() {
         this.entityManager = Persistence
                 .createEntityManagerFactory("org.hibernate.tutorial.jpa")
                 .createEntityManager();
         this.criteriaBuilder = this.entityManager.getCriteriaBuilder();
     }
+
+
+    //-------------- save  ---------------//
 
     @Override
     public void save(WordMeaningRelationship wordMeaningRelationship) {
@@ -39,6 +45,9 @@ public class WMRDaoHbnImpl implements WMRDao {
         this.entityManager.getTransaction().commit();
     }
 
+
+    //-------------- update ---------------//
+
     @Override
     public WordMeaningRelationship update(WordMeaningRelationship wordMeaningRelationship) {
         this.entityManager.getTransaction().begin();
@@ -46,6 +55,9 @@ public class WMRDaoHbnImpl implements WMRDao {
         this.entityManager.getTransaction().commit();
         return wordMeaningRelationship;
     }
+
+
+    //-------------- find ---------------//
 
     @Override
     public WordMeaningRelationship findById(Integer id) {
@@ -204,6 +216,9 @@ public class WMRDaoHbnImpl implements WMRDao {
         List<WordMeaningRelationship> result = this.entityManager.createQuery(criteriaQuery).getResultList();
         return result;
     }
+
+
+    //-------------- remove ---------------//
 
     @Override
     public void remove(Integer wordMeaningRelationshipID) {

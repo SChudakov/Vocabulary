@@ -15,14 +15,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WCRDaoJdbcImpl implements WCRDao {
+
+
+    //-------------- helping dao objects ---------------//
+
     private WordDao wordDao;
     private WordCollectionDao wordCollectionDao;
 
-    public WCRDaoJdbcImpl() {
-        this.wordDao = new WordDaoJdbcImpl();
-        this.wordCollectionDao = new WordCollectionDaoJdbcImpl();
+
+    //-------------- constructor ---------------//
+
+    public WCRDaoJdbcImpl(WordDao wordDao, WordCollectionDao wordCollectionDao) {
+        this.wordDao = wordDao;
+        this.wordCollectionDao = wordCollectionDao;
     }
 
+
+    //-------------- save  ---------------//
 
     @Override
     public void save(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
@@ -38,6 +47,8 @@ public class WCRDaoJdbcImpl implements WCRDao {
     }
 
 
+    //-------------- update ---------------//
+
     @Override
     public WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
         StringBuilder query = new StringBuilder("");
@@ -52,6 +63,8 @@ public class WCRDaoJdbcImpl implements WCRDao {
         return wordCollectionRelationship;
     }
 
+
+    //-------------- find ---------------//
 
     @Override
     public WordCollectionRelationship findById(Integer id) throws SQLException {
@@ -158,6 +171,9 @@ public class WCRDaoJdbcImpl implements WCRDao {
 
         return formWCRCollection(resultSet);
     }
+
+
+    //-------------- remove ---------------//
 
     @Override
     public void remove(Integer wordCollectionRelationshipID) throws SQLException {

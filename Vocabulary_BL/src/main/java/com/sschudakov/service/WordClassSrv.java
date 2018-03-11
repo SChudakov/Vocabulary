@@ -2,7 +2,6 @@ package com.sschudakov.service;
 
 import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.entity.WordClass;
-import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -10,13 +9,20 @@ import java.util.stream.Collectors;
 
 public class WordClassSrv {
 
+
+    //-------------- dao object  ---------------//
+
     private WordClassDao wordClassDao;
 
+
+    //-------------- constructor  ---------------//
 
     public WordClassSrv(WordClassDao wordClassDao) {
         this.wordClassDao = wordClassDao;
     }
 
+
+    //-------------- create  ---------------//
 
     public void create(String wordClassName) throws SQLException {
         if (wordClassExists(wordClassName)) {
@@ -26,6 +32,8 @@ public class WordClassSrv {
         }
     }
 
+
+    //-------------- find ---------------//
 
     public WordClass findById(Integer id) throws SQLException {
         return this.wordClassDao.findById(id);
@@ -40,6 +48,9 @@ public class WordClassSrv {
     public List<String> findAll() throws SQLException {
         return this.wordClassDao.findAll().stream().map(WordClass::getWordClassName).collect(Collectors.toList());
     }
+
+
+    //-------------- exist query ---------------//
 
     private boolean wordClassExists(String wordClassName) throws SQLException {
         return this.wordClassDao.findByName(wordClassName) != null;

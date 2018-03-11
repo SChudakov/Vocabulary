@@ -14,8 +14,12 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 public class LanguageDaoHbnImpl implements LanguageDao {
+
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
+
+
+    //-------------- constructor  ---------------//
 
     public LanguageDaoHbnImpl() {
         this.entityManager = Persistence
@@ -24,12 +28,18 @@ public class LanguageDaoHbnImpl implements LanguageDao {
         this.criteriaBuilder = this.entityManager.getCriteriaBuilder();
     }
 
+
+    //-------------- save  ---------------//
+
     @Override
     public void save(Language language) {
         this.entityManager.getTransaction().begin();
         this.entityManager.persist(language);
         this.entityManager.getTransaction().commit();
     }
+
+
+    //-------------- find  ---------------//
 
     @Override
     public Language findById(Integer id) {

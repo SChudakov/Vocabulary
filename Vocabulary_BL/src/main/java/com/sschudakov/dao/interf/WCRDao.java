@@ -10,11 +10,18 @@ import java.util.List;
 
 public interface WCRDao {
 
+
+    //-------------- save  ---------------//
+
     void save(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
 
 
+    //-------------- update ---------------//
+
     WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) throws SQLException;
 
+
+    //-------------- find ---------------//
 
     WordCollectionRelationship findById(Integer id) throws SQLException;
 
@@ -26,6 +33,8 @@ public interface WCRDao {
 
     List<WordCollectionRelationship> findAll() throws SQLException;
 
+
+    //-------------- remove ---------------//
 
     void remove(Integer wordCollectionRelationshipID) throws SQLException;
 }

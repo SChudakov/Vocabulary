@@ -8,9 +8,19 @@ import java.util.Collection;
 import java.util.List;
 
 public interface WordDao {
+
+
+    //-------------- save  ---------------//
+
     void save(Word word) throws SQLException;
 
+
+    //-------------- update ---------------//
+
     Word update(Word word) throws SQLException;
+
+
+    //-------------- find ---------------//
 
     Word findById(Integer id) throws SQLException;
 
@@ -19,6 +29,9 @@ public interface WordDao {
     List<Word> findByLanguage(Language language) throws SQLException;
 
     Collection<Word> findAll() throws SQLException;
+
+
+    //-------------- remove ---------------//
 
     void remove(Integer wordID) throws SQLException;
 }

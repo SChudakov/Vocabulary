@@ -2,10 +2,8 @@ package com.sschudakov.service;
 
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WMRDao;
-import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.entity.*;
-import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -16,15 +14,22 @@ import java.util.stream.Collectors;
 
 public class WordSrv {
 
+
+    //-------------- dao objects  ---------------//
+
     private WordDao wordDao;
     private WMRDao wmrDao;
     private WCRDao wcrDao;
+
+
+    //-------------- constructor  ---------------//
 
     public WordSrv(WordDao wordDao, WMRDao wmrDao, WCRDao wcrDao) {
         this.wordDao = wordDao;
         this.wmrDao = wmrDao;
         this.wcrDao = wcrDao;
     }
+
 
     //-------------- create  ---------------//
 
@@ -39,6 +44,7 @@ public class WordSrv {
         }
         this.wordDao.save(word);
     }
+
 
     //-------------- update ---------------//
 
@@ -134,7 +140,8 @@ public class WordSrv {
 
     public void addMeaning(Word word, Word meaning) throws SQLException {
         if (wordMeaningRelationshipExists(word, meaning)) {
-            throw new IllegalArgumentException("Word " + word + " already a has meaning " + meaning);
+            throw new IllegalArgumentException("Word " + word.getValue() +
+                    " already a has meaning " + meaning.getValue());
         } else {
             this.wmrDao.save(new WordMeaningRelationship(word, meaning));
         }

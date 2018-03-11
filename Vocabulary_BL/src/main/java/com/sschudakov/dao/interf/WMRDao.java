@@ -9,9 +9,19 @@ import java.util.Collection;
 import java.util.List;
 
 public interface WMRDao {
+
+
+    //-------------- save  ---------------//
+
     void save(WordMeaningRelationship wordMeaningRelationship) throws SQLException;
 
+
+    //-------------- update ---------------//
+
     WordMeaningRelationship update(WordMeaningRelationship wordMeaningRelationship) throws SQLException;
+
+
+    //-------------- find ---------------//
 
     WordMeaningRelationship findById(Integer id) throws SQLException;
 
@@ -24,6 +34,9 @@ public interface WMRDao {
     WordMeaningRelationship findByWordAndMeaning(Word word, Word meaning) throws SQLException;
 
     List<WordMeaningRelationship> findAll() throws SQLException;
+
+
+    //-------------- remove ---------------//
 
     void remove(Integer wordMeaningRelationshipID) throws SQLException;
 }
