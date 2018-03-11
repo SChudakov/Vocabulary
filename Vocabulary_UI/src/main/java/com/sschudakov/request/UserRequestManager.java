@@ -81,6 +81,12 @@ public class UserRequestManager {
         return this.wordService.getCollectionWords(foundCollection);
     }
 
+    public List<String> getCollectionWords(String collectionName, String languageName) throws SQLException {
+        WordCollection foundCollection = this.wordCollectionService.findByName(collectionName);
+        Language language = this.languageService.findByName(languageName);
+        return this.wordService.getCollectionWords(foundCollection, language);
+    }
+
 
     //-------------- create collection request  ---------------//
 
