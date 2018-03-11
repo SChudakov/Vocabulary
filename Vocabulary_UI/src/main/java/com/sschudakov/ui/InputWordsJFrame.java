@@ -30,7 +30,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
      * Creates new form InputWrodsJFrame
      */
     public InputWordsJFrame() {
-        this.userRequestManager = new UserRequestManager();
+        this.userRequestManager = UserRequestManagerFactory.createRequestManager();
 
         initComponents();
 
