@@ -134,6 +134,17 @@ public class WordSrv {
                 .stream().map(wcr -> wcr.getWord().getValue()).collect(Collectors.toList());
     }
 
+    public List<String> getCollectionWords(WordCollection collection, Language language) throws SQLException {
+        //todo: implement findByCollectionAndLanguage in dao!!
+        List<String> words = new ArrayList<>();
+        for (WordCollectionRelationship wcr : wcrDao.findByCollection(collection)) {
+            if (wcr.getWord().getLanguage().equals(language)) {
+                words.add(wcr.getWord().getValue());
+            }
+        }
+        return words;
+    }
+
 
     //-------------- add \ remove meaning ---------------//
 
