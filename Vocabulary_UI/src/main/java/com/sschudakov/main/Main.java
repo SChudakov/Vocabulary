@@ -34,12 +34,12 @@ public class Main {
         }
         //</editor-fold>
         //</editor-fold>
-        /*DatabaseSetup databaseSetup = new DatabaseSetup();
+        DatabaseSetup databaseSetup = new DatabaseSetup();
         try {
             databaseSetup.setUpDatabase();
         } catch (SQLException e) {
             e.printStackTrace();
-        }*/
+        }/**/
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
