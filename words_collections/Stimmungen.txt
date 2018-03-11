@@ -13,5 +13,20 @@ e Trauer - печаль
 e Wut - ярость
 r Mut - мужество
 e Rache - мечть
-e Trost - утешение
-r Leid - горе, печаль 
+r Trost - утешение
+s Leid - горе, печаль 
+e Feindschaft - вражда
+r Haß - ненависть
+e Muße - время прилежного делания раби себя
+e Unrast - неугомонность, обеспокоеннсть
+e Nachsicht - снисхождение
+e Härte - твёрдость
+e Langweile - скука
+e Tätigkeit - занятость (есть что делать)
+e Geborgenheit - чувство безопасности
+e Verlassenheit - заброшенность, одиночество
+r Eigennutz - корысть
+e Hilfsbereitschaft - готовность помочь 
+e Heiterkeit - веселость
+e Anteilnahme - участие, сочувствие
+

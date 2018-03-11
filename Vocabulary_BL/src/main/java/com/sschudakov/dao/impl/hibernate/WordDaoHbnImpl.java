@@ -22,12 +22,18 @@ public class WordDaoHbnImpl implements WordDao {
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
 
+
+    //-------------- constructor  ---------------//
+
     public WordDaoHbnImpl() {
         this.entityManager = Persistence
                 .createEntityManagerFactory("org.hibernate.tutorial.jpa")
                 .createEntityManager();
         this.criteriaBuilder = this.entityManager.getCriteriaBuilder();
     }
+
+
+    //-------------- save  ---------------//
 
     @Override
     public void save(Word word) {
@@ -36,6 +42,9 @@ public class WordDaoHbnImpl implements WordDao {
         this.entityManager.getTransaction().commit();
     }
 
+
+    //-------------- update ---------------//
+
     @Override
     public Word update(Word word) {
         this.entityManager.getTransaction().begin();
@@ -43,6 +52,9 @@ public class WordDaoHbnImpl implements WordDao {
         this.entityManager.getTransaction().commit();
         return word;
     }
+
+
+    //-------------- find ---------------//
 
     @Override
     public Word findById(Integer id) {
@@ -159,6 +171,9 @@ public class WordDaoHbnImpl implements WordDao {
 
         return result;
     }
+
+
+    //-------------- remove ---------------//
 
     @Override
     public void remove(Integer id) {

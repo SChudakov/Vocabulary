@@ -1,15 +1,16 @@
 package com.sschudakov.request
 
+import com.sschudakov.factory.UserRequestManagerFactory
 import spock.lang.Shared
 import spock.lang.Specification
 
 class UserRequestManagerSpec extends Specification {
-    
+
     @Shared
     UserRequestManager userRequestManager
 
     def setupSpec() {
-        this.userRequestManager = new UserRequestManager()
+        this.userRequestManager = UserRequestManagerFactory.createRequestManager()
 
     }
 

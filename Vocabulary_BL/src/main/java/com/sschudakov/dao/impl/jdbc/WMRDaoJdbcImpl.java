@@ -15,11 +15,20 @@ import java.util.Collection;
 import java.util.List;
 
 public class WMRDaoJdbcImpl implements WMRDao {
+
+    //-------------- helping dao object ---------------//
+
     private WordDao wordDao;
 
-    public WMRDaoJdbcImpl() {
-        this.wordDao = new WordDaoJdbcImpl();
+
+    //-------------- constructor ---------------//
+
+    public WMRDaoJdbcImpl(WordDao wordDao) {
+        this.wordDao = wordDao;
     }
+
+
+    //-------------- save  ---------------//
 
     @Override
     public void save(WordMeaningRelationship wordMeaningRelationship) throws SQLException {
@@ -35,6 +44,8 @@ public class WMRDaoJdbcImpl implements WMRDao {
     }
 
 
+    //-------------- update ---------------//
+
     @Override
     public WordMeaningRelationship update(WordMeaningRelationship wordMeaningRelationship) throws SQLException {
         StringBuilder query = new StringBuilder("");
@@ -49,6 +60,8 @@ public class WMRDaoJdbcImpl implements WMRDao {
         return wordMeaningRelationship;
     }
 
+
+    //-------------- find ---------------//
 
     @Override
     public WordMeaningRelationship findById(Integer id) throws SQLException {
@@ -150,6 +163,8 @@ public class WMRDaoJdbcImpl implements WMRDao {
     }
 
 
+    //-------------- remove ---------------//
+
     @Override
     public void remove(Integer wordMeaningRelationshipID) throws SQLException {
         StringBuilder query = new StringBuilder("");
@@ -160,6 +175,8 @@ public class WMRDaoJdbcImpl implements WMRDao {
         statement.execute();
     }
 
+
+    //-------------- helping methods ---------------//
 
     private static Collection<Integer> formIdsCollections(ResultSet resultSet) throws SQLException {
         Collection<Integer> result = new ArrayList<>();

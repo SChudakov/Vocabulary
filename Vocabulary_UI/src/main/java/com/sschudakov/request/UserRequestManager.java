@@ -16,20 +16,18 @@ import java.util.Optional;
 
 public class UserRequestManager {
 
-    private WordCollectionSrv wordCollectionService;
-    private WordClassSrv wordClassService;
     private LanguageSrv languageService;
+    private WordClassSrv wordClassService;
+    private WordCollectionSrv wordCollectionService;
     private WordSrv wordService;
 
-    public UserRequestManager() {
-        wordCollectionService = new WordCollectionSrv();
-        wordClassService = new WordClassSrv();
-        languageService = new LanguageSrv();
-        wordService = new WordSrv();
-        /*wcrService = new WCRSrv();
-        wmrService = new WMRSrv();*/
+    public UserRequestManager(LanguageSrv languageService, WordClassSrv wordClassService,
+                              WordCollectionSrv wordCollectionService, WordSrv wordService) {
+        this.languageService = languageService;
+        this.wordClassService = wordClassService;
+        this.wordCollectionService = wordCollectionService;
+        this.wordService = wordService;
     }
-
 
     //-------------- initializations get requests ---------------//
 
@@ -74,7 +72,8 @@ public class UserRequestManager {
     public Map<String, Boolean> getWordCollections(String word, String language) throws SQLException {
         Language foundLanguage = this.languageService.findByName(language);
         Word foundWord = this.wordService.findByValueAndLanguage(word, foundLanguage);
-        return this.wordService.getWordCollections(foundWord);
+        List<String> allCollection = this.wordCollectionService.findAll();
+        return this.wordService.getWordCollections(foundWord, allCollection);
     }
 
     public List<String> getCollectionWords(String collectionName) throws SQLException {
@@ -160,7 +159,8 @@ public class UserRequestManager {
     }
 
     public boolean wordExists(String word, String language) throws SQLException {
-        return this.wordService.wordExists(word, language);
+        Language foundLanguage = this.languageService.findByName(language);
+        return this.wordService.wordExists(word, foundLanguage);
     }
 
     public boolean wordCollectionExists(String collection) throws SQLException {

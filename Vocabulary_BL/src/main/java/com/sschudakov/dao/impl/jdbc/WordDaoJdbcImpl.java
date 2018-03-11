@@ -15,13 +15,23 @@ import java.util.Collection;
 import java.util.List;
 
 public class WordDaoJdbcImpl implements WordDao {
-    private WordClassDao wordClassDao;
-    private LanguageDao languageDao;
 
-    public WordDaoJdbcImpl() {
-        this.wordClassDao = new WordClassDaoJdbcImpl();
-        this.languageDao = new LanguageDaoJdbcImpl();
+
+    //-------------- helping dao objects ---------------//
+
+    private LanguageDao languageDao;
+    private WordClassDao wordClassDao;
+
+
+    //-------------- constructor ---------------//
+
+    public WordDaoJdbcImpl(LanguageDao languageDao, WordClassDao wordClassDao) {
+        this.languageDao = languageDao;
+        this.wordClassDao = wordClassDao;
     }
+
+
+    //-------------- save  ---------------//
 
     @Override
     public void save(Word word) throws SQLException {
@@ -39,6 +49,9 @@ public class WordDaoJdbcImpl implements WordDao {
         insertStatement.execute();
     }
 
+
+    //-------------- update ---------------//
+
     @Override
     public Word update(Word word) throws SQLException {
         StringBuilder query = new StringBuilder("");
@@ -53,6 +66,9 @@ public class WordDaoJdbcImpl implements WordDao {
         statement.execute();
         return word;
     }
+
+
+    //-------------- find ---------------//
 
     @Override
     public Word findById(Integer id) throws SQLException {
@@ -145,6 +161,9 @@ public class WordDaoJdbcImpl implements WordDao {
         }
         return result;
     }
+
+
+    //-------------- remove ---------------//
 
     @Override
     public void remove(Integer wordID) throws SQLException {

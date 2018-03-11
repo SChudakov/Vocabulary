@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
+
+
+    //-------------- save  ---------------//
+
     @Override
     public void save(WordCollection wordCollection) throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
@@ -21,6 +25,9 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
         insertStatement.execute();
     }
+
+
+    //-------------- update ---------------//
 
     @Override
     public WordCollection update(WordCollection wordCollection) throws SQLException {
@@ -34,6 +41,9 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         statement.execute();
         return wordCollection;
     }
+
+
+    //-------------- find ---------------//
 
     @Override
     public WordCollection findById(Integer id) throws SQLException {
@@ -108,6 +118,8 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         return result;
     }
 
+
+    //-------------- remove ---------------//
 
     @Override
     public void remove(Integer wordCollectionID) throws SQLException {

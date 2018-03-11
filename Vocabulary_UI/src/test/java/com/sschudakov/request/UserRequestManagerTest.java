@@ -2,6 +2,7 @@ package com.sschudakov.request;
 
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.*;
+import com.sschudakov.factory.UserRequestManagerFactory;
 import org.junit.*;
 
 import java.sql.PreparedStatement;
@@ -87,7 +88,7 @@ public class UserRequestManagerTest {
 
     @BeforeClass
     public static void setup() {
-        userRequestManager = new UserRequestManager();
+        userRequestManager = UserRequestManagerFactory.createRequestManager();
     }
 
     @Before

@@ -13,6 +13,8 @@ import java.util.List;
 public class LanguageDaoJdbcImpl implements LanguageDao {
 
 
+    //-------------- save  ---------------//
+
     @Override
     public void save(Language language) throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
@@ -23,6 +25,9 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
         insertStatement.execute();
     }
+
+
+    //-------------- find  ---------------//
 
     @Override
     public Language findById(Integer id) throws SQLException {
@@ -95,9 +100,4 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         }
         return result;
     }
-
-    /**
-     * Data about languages should never been changed or removed.
-     * So update and remove operations are not present in this DAO.
-     */
 }

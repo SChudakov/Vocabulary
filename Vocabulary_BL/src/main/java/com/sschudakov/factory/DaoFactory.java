@@ -50,7 +50,10 @@ public class DaoFactory {
 
     public static WordDao createWordDao() {
         if (daoType == DaoType.JDBC) {
-            return new WordDaoJdbcImpl();
+            return new WordDaoJdbcImpl(
+                    createLanguageDao(),
+                    createWordClassDao()
+            );
         } else {
             return new WordDaoHbnImpl();
         }
@@ -58,7 +61,9 @@ public class DaoFactory {
 
     public static WMRDao createWMRDao() {
         if (daoType == DaoType.JDBC) {
-            return new WMRDaoJdbcImpl();
+            return new WMRDaoJdbcImpl(
+                    createWordDao()
+            );
         } else {
             return new WMRDaoHbnImpl();
         }
@@ -66,7 +71,10 @@ public class DaoFactory {
 
     public static WCRDao createWCRDao() {
         if (daoType == DaoType.JDBC) {
-            return new WCRDaoJdbcImpl();
+            return new WCRDaoJdbcImpl(
+                    createWordDao(),
+                    createWordCollectionDao()
+            );
         } else {
             return new WCRDaoHbnImpl();
         }

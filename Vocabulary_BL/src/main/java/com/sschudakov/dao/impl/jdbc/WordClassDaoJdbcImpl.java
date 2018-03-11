@@ -12,6 +12,9 @@ import java.util.List;
 
 public class WordClassDaoJdbcImpl implements WordClassDao {
 
+
+    //-------------- save  ---------------//
+
     @Override
     public void save(WordClass wordClass) throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
@@ -22,6 +25,9 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
         insertStatement.execute();
     }
+
+
+    //-------------- find ---------------//
 
     @Override
     public WordClass findById(Integer id) throws SQLException {
@@ -94,9 +100,4 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         }
         return result;
     }
-
-    /**
-     * Data about word classes never been changed or removed.
-     * So update and remove operations are not present in this DAO.
-     */
 }

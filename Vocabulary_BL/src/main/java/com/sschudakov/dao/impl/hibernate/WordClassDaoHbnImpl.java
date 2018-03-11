@@ -18,6 +18,9 @@ public class WordClassDaoHbnImpl implements WordClassDao {
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
 
+
+    //-------------- constructor  ---------------//
+
     public WordClassDaoHbnImpl() {
         this.entityManager = Persistence
                 .createEntityManagerFactory("org.hibernate.tutorial.jpa")
@@ -25,12 +28,18 @@ public class WordClassDaoHbnImpl implements WordClassDao {
         this.criteriaBuilder = this.entityManager.getCriteriaBuilder();
     }
 
+
+    //-------------- save  ---------------//
+
     @Override
     public void save(WordClass wordClass) {
         this.entityManager.getTransaction().begin();
         this.entityManager.persist(wordClass);
         this.entityManager.getTransaction().commit();
     }
+
+
+    //-------------- find ---------------//
 
     @Override
     public WordClass findById(Integer id) {

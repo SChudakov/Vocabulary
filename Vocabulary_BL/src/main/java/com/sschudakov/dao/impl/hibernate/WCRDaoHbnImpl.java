@@ -22,12 +22,18 @@ public class WCRDaoHbnImpl implements WCRDao {
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
 
+
+    //-------------- constructor ---------------//
+
     public WCRDaoHbnImpl() {
         this.entityManager = Persistence
                 .createEntityManagerFactory("org.hibernate.tutorial.jpa")
                 .createEntityManager();
         this.criteriaBuilder = this.entityManager.getCriteriaBuilder();
     }
+
+
+    //-------------- save  ---------------//
 
     @Override
     public void save(WordCollectionRelationship wordCollectionRelationship) {
@@ -36,6 +42,9 @@ public class WCRDaoHbnImpl implements WCRDao {
         this.entityManager.getTransaction().commit();
     }
 
+
+    //-------------- update ---------------//
+
     @Override
     public WordCollectionRelationship update(WordCollectionRelationship wordCollectionRelationship) {
         this.entityManager.getTransaction().begin();
@@ -43,6 +52,9 @@ public class WCRDaoHbnImpl implements WCRDao {
         this.entityManager.getTransaction().commit();
         return wordCollectionRelationship;
     }
+
+
+    //-------------- find ---------------//
 
     @Override
     public WordCollectionRelationship findById(Integer id) {
@@ -175,6 +187,9 @@ public class WCRDaoHbnImpl implements WCRDao {
         List<WordCollectionRelationship> result = this.entityManager.createQuery(criteriaQuery).getResultList();
         return result;
     }
+
+
+    //-------------- remove ---------------//
 
     @Override
     public void remove(Integer wordCollectionRelationshipID) {

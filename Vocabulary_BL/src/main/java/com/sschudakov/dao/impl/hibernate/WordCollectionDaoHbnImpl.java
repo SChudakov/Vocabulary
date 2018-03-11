@@ -18,12 +18,18 @@ public class WordCollectionDaoHbnImpl implements WordCollectionDao {
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
 
+
+    //-------------- constructor ---------------//
+
     public WordCollectionDaoHbnImpl() {
         this.entityManager = Persistence
                 .createEntityManagerFactory("org.hibernate.tutorial.jpa")
                 .createEntityManager();
         this.criteriaBuilder = this.entityManager.getCriteriaBuilder();
     }
+
+
+    //-------------- save  ---------------//
 
     @Override
     public void save(WordCollection wordCollection) {
@@ -32,6 +38,9 @@ public class WordCollectionDaoHbnImpl implements WordCollectionDao {
         this.entityManager.getTransaction().commit();
     }
 
+
+    //-------------- update ---------------//
+
     @Override
     public WordCollection update(WordCollection wordCollection) {
         this.entityManager.getTransaction().begin();
@@ -39,6 +48,9 @@ public class WordCollectionDaoHbnImpl implements WordCollectionDao {
         this.entityManager.getTransaction().commit();
         return wordCollection;
     }
+
+
+    //-------------- find ---------------//
 
     @Override
     public WordCollection findById(Integer id) {
@@ -109,6 +121,9 @@ public class WordCollectionDaoHbnImpl implements WordCollectionDao {
         List<WordCollection> result = this.entityManager.createQuery(criteriaQuery).getResultList();
         return result;
     }
+
+
+    //-------------- remove ---------------//
 
     @Override
     public void remove(Integer wordCollectionID) {

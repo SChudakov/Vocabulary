@@ -5,6 +5,8 @@
  */
 package com.sschudakov.ui;
 
+import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.factory.UserRequestManagerFactory;
 import com.sschudakov.request.UserRequestManager;
 
 import javax.swing.*;
@@ -212,6 +214,11 @@ public class InputWordsJFrame extends javax.swing.JFrame {
         jLabel3.setText("jLabel3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         TabbedPane.setPreferredSize(new java.awt.Dimension(600, 500));
         TabbedPane.setRequestFocusEnabled(false);
@@ -858,7 +865,7 @@ public class InputWordsJFrame extends javax.swing.JFrame {
     }
 
 
-    //-------------- Data getters ---------------//
+    //-------------- Access to ui elements ---------------//
 
 
     private String wordsGetInputWordValue() {
@@ -1218,6 +1225,19 @@ public class InputWordsJFrame extends javax.swing.JFrame {
             languagesLoadWordsAndMeanings();
         }
     }//GEN-LAST:event_TabbedPaneStateChanged
+
+
+    //-------------- Window closing action ---------------//
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            DatabaseManager.connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+        this.setVisible(false);
+    }//GEN-LAST:event_formWindowClosing
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
