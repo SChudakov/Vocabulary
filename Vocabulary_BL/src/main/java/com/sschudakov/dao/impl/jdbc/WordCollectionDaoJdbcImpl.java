@@ -3,6 +3,7 @@ package com.sschudakov.dao.impl.jdbc;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordCollection;
+import com.sschudakov.logging.LoggersManager;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,12 +18,13 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
 
     @Override
     public void save(WordCollection wordCollection) throws SQLException {
-        StringBuilder insertQuery = new StringBuilder("");
-        insertQuery.append("INSERT INTO word_collections ")
+        StringBuilder query = new StringBuilder("");
+        query.append("INSERT INTO word_collections ")
                 .append("(").append(WordCollection.NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append("\'" + wordCollection.getCollectionName() + "\'").append(")").append(";");
-        PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
+        LoggersManager.getParsingLogger().info(query);
+        PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
 
@@ -37,6 +39,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
                 .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + wordCollection.getCollectionName() + "\'")
                 .append(" WHERE ")
                 .append(WordCollection.ID_COLUMN_NAME).append("=").append(wordCollection.getId()).append(";");
+        LoggersManager.getParsingLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         return wordCollection;
@@ -47,11 +50,12 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
 
     @Override
     public WordCollection findById(Integer id) throws SQLException {
-        StringBuilder selectQuery = new StringBuilder("");
-        selectQuery.append("SELECT * FROM word_collections ")
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM word_collections ")
                 .append(" WHERE ")
                 .append(WordCollection.ID_COLUMN_NAME).append("=").append(id);
-        PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(selectQuery.toString());
+        LoggersManager.getParsingLogger().info(query);
+        PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
 
@@ -68,7 +72,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         query.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
                 .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + name + "\'");
-
+        LoggersManager.getParsingLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -98,7 +102,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
     public List<WordCollection> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collections");
-
+        LoggersManager.getParsingLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -127,7 +131,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         query.append("DELETE FROM word_collections")
                 .append(" WHERE ")
                 .append(WordCollection.ID_COLUMN_NAME).append("=").append(wordCollectionID);
-
+        LoggersManager.getParsingLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
     }

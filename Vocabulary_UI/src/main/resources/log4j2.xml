@@ -5,6 +5,10 @@
         <Property name="parsing_all">logs\parsing-all.log</Property>
         <Property name="parsing_errors">logs\parsing-errors.log</Property>
         <Property name="parsing_trace">logs\parsing-trace.log</Property>
+
+        <Property name="sql_all">logs\sql-all.log</Property>
+        <Property name="sql_errors">logs\sql-errors.log</Property>
+        <Property name="sql_info">logs\sql-info.log</Property>
     </Properties>
 
     <!-- Appenders section -->
@@ -20,14 +24,13 @@
                      filePattern="logs/arch/arch_parsing_all-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
             <PatternLayout>
-                <Pattern><!--%d [%marker] %p %c{1.} [%t]--> %m %ex%n</Pattern>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
             </PatternLayout>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="6" modulate="true"/>
-            </Policies>
-            <Policies>
                 <SizeBasedTriggeringPolicy size="1000000"/>
             </Policies>
+
         </RollingFile>
 
         <!-- File appender of for com.sschudakov.parsing errors -->
@@ -35,7 +38,7 @@
                      filePattern="logs/arch/arch_parsing_errors-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
             <PatternLayout>
-                <Pattern><!--%d [%marker] %p %c{1.} [%t]--> %m %ex%n</Pattern>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
             </PatternLayout>
             <Policies>
                 <SizeBasedTriggeringPolicy size="1000000"/>
@@ -46,7 +49,7 @@
                      filePattern="logs/arch/arch_parsing_trace-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
             <PatternLayout>
-                <Pattern><!--%d [%marker] %p %c{1.} [%t]--> %m %ex%n</Pattern>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
             </PatternLayout>
             <Policies>
                 <SizeBasedTriggeringPolicy size="1000000"/>
@@ -54,38 +57,36 @@
         </RollingFile>
 
 
-        <!-- File appender for com.sschudakov.parsing all-->
+        <!-- File appender for com.sschudakov.sql all-->
         <RollingFile name="sql_appender_all" fileName="${sql_all}"
                      filePattern="logs/arch/arch_sql_all-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
             <PatternLayout>
-                <Pattern><!--%d [%marker] %p %c{1.} [%t]--> %m %ex%n</Pattern>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
             </PatternLayout>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="6" modulate="true"/>
-            </Policies>
-            <Policies>
                 <SizeBasedTriggeringPolicy size="1000000"/>
             </Policies>
         </RollingFile>
 
-        <!-- File appender of for com.sschudakov.parsing errors -->
+        <!-- File appender of for com.sschudakov.sql errors -->
         <RollingFile name="sql_appender_errors" fileName="${sql_errors}"
                      filePattern="logs/arch/arch_sql_errors-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
             <PatternLayout>
-                <Pattern><!--%d [%marker] %p %c{1.} [%t]--> %m %ex%n</Pattern>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
             </PatternLayout>
-            <Policies>
-                <SizeBasedTriggeringPolicy size="1000000"/>
-            </Policies>
+             <Policies>
+                 <SizeBasedTriggeringPolicy size="1000000"/>
+             </Policies>
         </RollingFile>
 
-        <RollingFile name="sql_appender_trace" fileName="${sql_trace}"
+        <RollingFile name="sql_appender_info" fileName="${sql_info}"
                      filePattern="logs/arch/arch_sql_trace-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
             <PatternLayout>
-                <Pattern><!--%d [%marker] %p %c{1.} [%t]--> %m %ex%n</Pattern>
+                <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
             </PatternLayout>
             <Policies>
                 <SizeBasedTriggeringPolicy size="1000000"/>
@@ -111,7 +112,7 @@
         <Logger name="com.sschudakov.sql_logger" additivity="TRUE" level="ALL">
             <AppenderRef ref="sql_appender_all" level="ALL"/>
             <AppenderRef ref="sql_appender_errors" level="ERROR"/>
-            <AppenderRef ref="sql_appender_trace" level="TRACE"/>
+            <AppenderRef ref="sql_appender_info" level="INFO"/>
         </Logger>
 
     </Loggers>

@@ -3,6 +3,7 @@ package com.sschudakov.dao.impl.jdbc;
 import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordClass;
+import com.sschudakov.logging.LoggersManager;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,12 +18,13 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
 
     @Override
     public void save(WordClass wordClass) throws SQLException {
-        StringBuilder insertQuery = new StringBuilder("");
-        insertQuery.append("INSERT INTO word_classes ")
+        StringBuilder query = new StringBuilder("");
+        query.append("INSERT INTO word_classes ")
                 .append("(").append(WordClass.NAME_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append("\'" + wordClass.getWordClassName() + "\'").append(")").append(";");
-        PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(insertQuery.toString());
+        LoggersManager.getParsingLogger().info(query);
+        PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
 
@@ -31,11 +33,12 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
 
     @Override
     public WordClass findById(Integer id) throws SQLException {
-        StringBuilder selectQuery = new StringBuilder("");
-        selectQuery.append("SELECT * FROM word_classes ")
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT * FROM word_classes ")
                 .append(" WHERE ")
                 .append(WordClass.ID_COLUMN_NAME).append("=").append(id);
-        PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(selectQuery.toString());
+        LoggersManager.getParsingLogger().info(query);
+        PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
 
@@ -51,7 +54,7 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes WHERE ")
                 .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + name + "\'");
-
+        LoggersManager.getParsingLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -81,7 +84,7 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
     public List<WordClass> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes");
-
+        LoggersManager.getParsingLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
