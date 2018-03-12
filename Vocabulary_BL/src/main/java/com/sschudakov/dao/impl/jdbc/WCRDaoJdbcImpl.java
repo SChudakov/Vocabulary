@@ -125,7 +125,9 @@ public class WCRDaoJdbcImpl implements WCRDao {
                 .append(" ON ")
                 .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(Word.ID_COLUMN_NAME)
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId());
+                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId())
+                .append(" AND ")
+                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(language.getId());
         LoggersManager.getParsingLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
