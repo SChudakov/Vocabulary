@@ -1,6 +1,10 @@
 package com.sschudakov.request
 
 import com.sschudakov.factory.UserRequestManagerFactory
+import com.sschudakov.service.LanguageSrv
+import com.sschudakov.service.WordClassSrv
+import com.sschudakov.service.WordCollectionSrv
+import com.sschudakov.service.WordSrv
 import spock.lang.Shared
 import spock.lang.Specification
 
@@ -8,10 +12,26 @@ class UserRequestManagerSpec extends Specification {
 
     @Shared
     UserRequestManager userRequestManager
+    @Shared
+    LanguageSrv languageSrv
+    @Shared
+    WordClassSrv wordClassSrv
+    @Shared
+    WordCollectionSrv wordCollectionSrv
+    @Shared
+    WordSrv wordSrv
 
     def setupSpec() {
-        this.userRequestManager = UserRequestManagerFactory.createRequestManager()
-
+        this.languageSrv = Mock()
+        this.wordClassSrv = Mock()
+        this.wordCollectionSrv = Mock()
+        this.wordSrv = Mock()
+        this.userRequestManager = new UserRequestManager(
+                this.languageSrv,
+                this.wordClassSrv,
+                this.wordCollectionSrv,
+                this.wordSrv
+        )
     }
 
     def cleanupSpec() {
