@@ -1,6 +1,7 @@
 package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.LanguageDao;
+import com.sschudakov.database.DatabaseCache;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.Language;
 import com.sschudakov.logging.LoggersManager;
@@ -33,7 +34,7 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
 
     @Override
     public Language findById(Integer id) throws SQLException {
-        StringBuilder query = new StringBuilder("");
+        /*StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM languages ")
                 .append(" WHERE ")
                 .append(Language.ID_COLUMN_NAME).append("=").append(id);
@@ -45,7 +46,8 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         if (!resultSet.next()) {
             return null;
         }
-        return formLanguage(resultSet);
+        return formLanguage(resultSet);*/
+        return DatabaseCache.getInstance().getLanguageBzId(id);
     }
 
     @Override

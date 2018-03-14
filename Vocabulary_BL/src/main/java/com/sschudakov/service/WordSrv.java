@@ -94,7 +94,7 @@ public class WordSrv {
 
     //-------------- get word meanings ---------------//
 
-    public List<String> getWordsMeanings(Word word, Language meaningsLanguage) throws SQLException {
+    public List<String> getWordMeanings(Word word, Language meaningsLanguage) throws SQLException {
         List<String> result = new ArrayList<>();
         this.wmrDao.findWordMeaningsIds(word, meaningsLanguage)
                 .stream().forEach(meaningId -> {
@@ -104,6 +104,18 @@ public class WordSrv {
                 e.printStackTrace();
             }
         });
+        return result;
+    }
+
+    public Map<String, List<String>> getWordsMeanings(Language wordsLanguage, Language meaningsLanguage) throws SQLException {
+        Map<String, List<String>> result = new HashMap<>();
+        List<Word> wordsList = this.wordDao.findByLanguage(wordsLanguage);
+        this.wmrDao.findWordsMeanings(wordsList, meaningsLanguage)
+                .entrySet().forEach(entry ->
+            result.put(
+                    entry.getKey().getValue(),
+                    entry.getValue().stream().map(Word::getValue).collect(Collectors.toList())
+            ));
         return result;
     }
 

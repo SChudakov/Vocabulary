@@ -16,8 +16,10 @@ import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class WMRDaoHbnImpl implements WMRDao {
@@ -89,7 +91,7 @@ public class WMRDaoHbnImpl implements WMRDao {
     }
 
     @Override
-    public Collection<WordMeaningRelationship> findByWord(Word word) {
+    public List<WordMeaningRelationship> findByWord(Word word) {
         CriteriaQuery<WordMeaningRelationship> criteriaQuery = this.criteriaBuilder
                 .createQuery(WordMeaningRelationship.class);
         Root<WordMeaningRelationship> root = criteriaQuery.from(WordMeaningRelationship.class);
@@ -112,7 +114,7 @@ public class WMRDaoHbnImpl implements WMRDao {
     }
 
     @Override
-    public Collection<WordMeaningRelationship> findByMeaning(Word meaning) {
+    public List<WordMeaningRelationship> findByMeaning(Word meaning) {
         CriteriaQuery<WordMeaningRelationship> criteriaQuery = this.criteriaBuilder
                 .createQuery(WordMeaningRelationship.class);
         Root<WordMeaningRelationship> root = criteriaQuery.from(WordMeaningRelationship.class);
@@ -170,7 +172,7 @@ public class WMRDaoHbnImpl implements WMRDao {
     }
 
     @Override
-    public Collection<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) {
+    public List<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) {
         CriteriaQuery<WordMeaningRelationship> criteriaQuery = this.criteriaBuilder
                 .createQuery(WordMeaningRelationship.class);
         Root<WordMeaningRelationship> root = criteriaQuery.from(WordMeaningRelationship.class);
@@ -192,6 +194,11 @@ public class WMRDaoHbnImpl implements WMRDao {
 
         return entityManager.createQuery(criteriaQuery).getResultList()
                 .stream().map(a -> a.getMeaning().getId()).collect(Collectors.toList());
+    }
+
+    @Override
+    public Map<Word, List<Word>> findWordsMeanings(List<Word> words, Language meaningsLanguage) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 
     @Override

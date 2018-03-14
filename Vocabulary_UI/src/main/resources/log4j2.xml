@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
+    <!--<Appenders>
+        &lt;!&ndash; Console Appender &ndash;&gt;
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%highlight{%5p}] %d{dd/M/yy HH:mm:ss} [%t] %logger{36} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        &lt;!&ndash; Log SQL statements &ndash;&gt;
+        <Logger name="org.hibernate.SQL" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        &lt;!&ndash; Log cache &ndash;&gt;
+        <Logger name="org.hibernate.cache" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <Logger name="org.ehcache" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>-->
     <!-- Properties section -->
     <Properties>
         <Property name="parsing_all">logs\parsing-all.log</Property>
@@ -13,10 +35,11 @@
 
     <!-- Appenders section -->
     <Appenders>
+
         <!-- console appender -->
         <Console name="console_appender_all" target="SYSTEM_OUT">
             <!--%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - -->
-            <PatternLayout pattern="%msg%n"/>
+            <PatternLayout pattern="[%highlight{%5p}] %d{dd/M/yy HH:mm:ss} [%t] %logger{36} - %msg%n" />
         </Console>
 
         <!-- File appender for com.sschudakov.parsing all-->
@@ -57,7 +80,7 @@
         </RollingFile>
 
 
-        <!-- File appender for com.sschudakov.sql all-->
+        <!-- File appender for com.sschudakov.sql logger all-->
         <RollingFile name="sql_appender_all" fileName="${sql_all}"
                      filePattern="logs/arch/arch_sql_all-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
@@ -70,18 +93,18 @@
             </Policies>
         </RollingFile>
 
-        <!-- File appender of for com.sschudakov.sql errors -->
+        <!-- File appender of for com.sschudakov.sql logger errors -->
         <RollingFile name="sql_appender_errors" fileName="${sql_errors}"
                      filePattern="logs/arch/arch_sql_errors-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
             <PatternLayout>
                 <Pattern>%d [%marker] %p %c{1.} [%t] %m %ex%n</Pattern>
             </PatternLayout>
-             <Policies>
-                 <SizeBasedTriggeringPolicy size="1000000"/>
-             </Policies>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="1000000"/>
+            </Policies>
         </RollingFile>
-
+        <!-- File appender of for com.sschudakov.sql logger info -->
         <RollingFile name="sql_appender_info" fileName="${sql_info}"
                      filePattern="logs/arch/arch_sql_trace-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
@@ -115,5 +138,18 @@
             <AppenderRef ref="sql_appender_info" level="INFO"/>
         </Logger>
 
+
+        <!-- Log SQL statements -->
+        <Logger name="org.hibernate.SQL" level="info" additivity="false">
+            <AppenderRef ref="console_appender_all" />
+        </Logger>
+        <!-- Log cache -->
+        <Logger name="org.hibernate.cache" level="info" additivity="false">
+            <AppenderRef ref="console_appender_all" />
+        </Logger>
+        <Logger name="org.ehcache" level="info" additivity="false">
+            <AppenderRef ref="console_appender_all" />
+        </Logger>
     </Loggers>
+
 </Configuration>

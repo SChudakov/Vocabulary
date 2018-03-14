@@ -5,8 +5,8 @@ import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordMeaningRelationship;
 
 import java.sql.SQLException;
-import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 public interface WMRDao {
 
@@ -25,11 +25,13 @@ public interface WMRDao {
 
     WordMeaningRelationship findById(Integer id) throws SQLException;
 
-    Collection<WordMeaningRelationship> findByWord(Word word) throws SQLException;
+    List<WordMeaningRelationship> findByWord(Word word) throws SQLException;
 
-    Collection<WordMeaningRelationship> findByMeaning(Word meaning) throws SQLException;
+    List<WordMeaningRelationship> findByMeaning(Word meaning) throws SQLException;
 
-    Collection<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) throws SQLException;
+    List<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) throws SQLException;
+
+    Map<Word, List<Word>> findWordsMeanings(List<Word> words, Language meaningsLanguage) throws SQLException;
 
     WordMeaningRelationship findByWordAndMeaning(Word word, Word meaning) throws SQLException;
 

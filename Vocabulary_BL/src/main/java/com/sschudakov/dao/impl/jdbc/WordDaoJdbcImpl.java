@@ -160,7 +160,7 @@ public class WordDaoJdbcImpl implements WordDao {
             word = new Word();
             word.setId(resultSet.getInt(Word.ID_COLUMN_NAME));
             word.setValue(resultSet.getString(Word.VALUE_COLUMN_NAME));
-            word.setWordClass(this.wordClassDao.findByName(resultSet.getString(Word.VALUE_COLUMN_NAME)));
+            word.setWordClass(this.wordClassDao.findById(resultSet.getInt(Word.WORD_CLASS_COLUMN_NAME)));
             word.setLanguage(this.languageDao.findById(resultSet.getInt(Word.LANGUAGE_COLUMN_NAME)));
             result.add(word);
         }

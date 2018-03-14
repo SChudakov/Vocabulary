@@ -5,6 +5,9 @@ import com.sschudakov.service.LanguageSrv;
 import com.sschudakov.service.WordClassSrv;
 import com.sschudakov.words.WordsCollectionsManager;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,7 +21,11 @@ public class Main {
             "\\test_files\\Adjective mit Prapositionen.docx";
 
     public static void main(String[] args) {
+        /*runHibernate();*/
+        insertData();
+    }
 
+    private static void insertData(){
         LanguageSrv languageSrv = ServiceFactory.createLanguageService();
         WordClassSrv wordClassSrv = ServiceFactory.createWordClassService();
         try {
@@ -40,9 +47,21 @@ public class Main {
                     languageSrv.findByName("Russian"),
                     wordClassSrv.findByName("noun")
             );
+            WordsCollectionsManager.persistCollectionIntoDatabase(
+                    "D:\\Workspace.java\\Vocabulary\\words_collections\\eng\\The Financier.txt",
+                    languageSrv.findByName("English"),
+                    languageSrv.findByName("Russian"),
+                    wordClassSrv.findByName("expression")
+            );
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void runHibernate(){
+         EntityManager entityManager = Persistence
+                 .createEntityManagerFactory("org.hibernate.tutorial.jpa")
+                 .createEntityManager();
     }
 
 

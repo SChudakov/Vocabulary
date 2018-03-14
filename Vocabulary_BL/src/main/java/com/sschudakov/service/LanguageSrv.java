@@ -49,6 +49,10 @@ public class LanguageSrv {
         return this.languageDao.findAll().stream().map(Language::getLanguageName).collect(Collectors.toList());
     }
 
+    public List<Language> findAllObjects() throws SQLException {
+        return this.languageDao.findAll();
+    }
+
 
     //-------------- exist query ---------------//
 

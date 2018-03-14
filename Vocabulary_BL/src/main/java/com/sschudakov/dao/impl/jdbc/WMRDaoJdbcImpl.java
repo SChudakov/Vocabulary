@@ -12,8 +12,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class WMRDaoJdbcImpl implements WMRDao {
 
@@ -84,7 +85,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
     }
 
     @Override
-    public Collection<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) throws SQLException {
+    public List<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) throws SQLException {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT word_meaning_relationships.")
@@ -105,6 +106,77 @@ public class WMRDaoJdbcImpl implements WMRDao {
         return formIdsCollections(statement.getResultSet());
     }
 
+    private static List<Integer> formIdsCollections(ResultSet resultSet) throws SQLException {
+        List<Integer> result = new ArrayList<>();
+        while (resultSet.next()) {
+            result.add(resultSet.getInt(WordMeaningRelationship.MEANING_COLUMN_NAME));
+        }
+        return result;
+    }
+
+
+    @Override
+    public Map<Word, List<Word>> findWordsMeanings(List<Word> words, Language meaningsLanguage) throws SQLException {
+        StringBuilder query = new StringBuilder("");
+        query.append("SELECT word_meaning_relationships.").append(WordMeaningRelationship.WORD_COLUMN_NAME).append(",")
+                .append("word_meaning_relationships.").append(WordMeaningRelationship.MEANING_COLUMN_NAME)
+                .append(" FROM ")
+                .append("word_meaning_relationships INNER JOIN words")
+                .append(" ON ")
+                .append("word_meaning_relationships.").append(WordMeaningRelationship.MEANING_COLUMN_NAME)
+                .append("=")
+                .append("words.").append(Word.ID_COLUMN_NAME)
+                .append(" WHERE ")
+                .append("word_meaning_relationships.").append(WordMeaningRelationship.WORD_COLUMN_NAME)
+                .append(" IN ")
+                .append(formQueryInSection(words))
+                .append(" AND ")
+                .append("words.").append(Word.LANGUAGE_COLUMN_NAME).append("=").append(meaningsLanguage.getId());
+        LoggersManager.getParsingLogger().info(query);
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
+        statement.execute();
+
+        return formDataMap(statement.getResultSet());
+    }
+
+    private Map<Word, List<Word>> formDataMap(ResultSet resultSet) throws SQLException {
+        Map<Word, List<Word>> result = new HashMap<>();
+        Map<Integer, List<Integer>> idsMap = formIdsMap(resultSet);
+
+        for (Map.Entry<Integer, List<Integer>> idsMapEntry : idsMap.entrySet()) {
+            Word entryWord = this.wordDao.findById(idsMapEntry.getKey());
+            List<Word> entryMeanings = new ArrayList<>();
+            for (Integer meaningId : idsMapEntry.getValue()) {
+                entryMeanings.add(this.wordDao.findById(meaningId));
+            }
+            result.put(entryWord, entryMeanings);
+        }
+        return result;
+    }
+
+    private static Map<Integer, List<Integer>> formIdsMap(ResultSet resultSet) throws SQLException {
+        Map<Integer, List<Integer>> result = new HashMap<>();
+        while (resultSet.next()) {
+            Integer wordId = resultSet.getInt(WordMeaningRelationship.WORD_COLUMN_NAME);
+            if (result.get(wordId) == null) {
+                result.put(wordId, new ArrayList<>());
+            }
+            result.get(wordId).add(resultSet.getInt(WordMeaningRelationship.MEANING_COLUMN_NAME));
+        }
+        return result;
+    }
+
+    private static String formQueryInSection(List<Word> words) {
+        StringBuilder result = new StringBuilder("");
+        result.append("(");
+
+        words.forEach(word -> result.append(word.getId()).append(","));
+
+        result.deleteCharAt(result.length() - 1).append(")");
+        return result.toString();
+    }
+
+
     @Override
     public WordMeaningRelationship findByWordAndMeaning(Word word, Word meaning) throws SQLException {
         StringBuilder query = new StringBuilder("");
@@ -124,7 +196,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
     }
 
     @Override
-    public Collection<WordMeaningRelationship> findByWord(Word word) throws SQLException {
+    public List<WordMeaningRelationship> findByWord(Word word) throws SQLException {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_meaning_relationships")
@@ -140,7 +212,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
     }
 
     @Override
-    public Collection<WordMeaningRelationship> findByMeaning(Word meaning) throws SQLException {
+    public List<WordMeaningRelationship> findByMeaning(Word meaning) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
@@ -183,14 +255,6 @@ public class WMRDaoJdbcImpl implements WMRDao {
 
 
     //-------------- helping methods ---------------//
-
-    private static Collection<Integer> formIdsCollections(ResultSet resultSet) throws SQLException {
-        Collection<Integer> result = new ArrayList<>();
-        while (resultSet.next()) {
-            result.add(resultSet.getInt(WordMeaningRelationship.MEANING_COLUMN_NAME));
-        }
-        return result;
-    }
 
     private List<WordMeaningRelationship> formWMRCollection(ResultSet resultSet) throws SQLException {
         List<WordMeaningRelationship> result = new ArrayList<>();

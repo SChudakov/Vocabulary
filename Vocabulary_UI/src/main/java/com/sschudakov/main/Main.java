@@ -39,13 +39,9 @@ public class Main {
             databaseSetup.setUpDatabase();
         } catch (SQLException e) {
             e.printStackTrace();
-        }/**/
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InputWordsJFrame().setVisible(true);
-            }
-        });
+        }
+        /*Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> new InputWordsJFrame().setVisible(true));
     }
 
 }

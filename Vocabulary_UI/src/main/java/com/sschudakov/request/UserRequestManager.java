@@ -50,7 +50,13 @@ public class UserRequestManager {
         Language foundWordLanguage = this.languageService.findByName(wordLanguage);
         Word foundWord = this.wordService.findByValueAndLanguage(word, foundWordLanguage);
         Language foundMeaningLanguage = this.languageService.findByName(meaningsLanguage);
-        return this.wordService.getWordsMeanings(foundWord, foundMeaningLanguage);
+        return this.wordService.getWordMeanings(foundWord, foundMeaningLanguage);
+    }
+
+    public Map<String, List<String>> getWordsMeanings(String wordsLanguage, String meaningsLanguage) throws SQLException {
+        Language foundWordsLanguage = this.languageService.findByName(wordsLanguage);
+        Language foundMeaningLanguage = this.languageService.findByName(meaningsLanguage);
+        return this.wordService.getWordsMeanings(foundWordsLanguage, foundMeaningLanguage);
     }
 
     public List<String> getWordsByLanguageName(String languageName) throws SQLException {
@@ -60,8 +66,6 @@ public class UserRequestManager {
 
     public String getWordClassByWord(String value, String language) throws SQLException {
         Language foundLanguage = this.languageService.findByName(language);
-        System.out.println(value);
-        System.out.println(language);
         Optional<WordClass> foundWordClass = Optional.of(this.wordService.findByValueAndLanguage(value, foundLanguage).getWordClass());
         if (foundWordClass.isPresent()) {
             return foundWordClass.get().getWordClassName();

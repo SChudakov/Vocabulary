@@ -49,6 +49,10 @@ public class WordClassSrv {
         return this.wordClassDao.findAll().stream().map(WordClass::getWordClassName).collect(Collectors.toList());
     }
 
+    public List<WordClass> findAllObjects() throws SQLException {
+        return this.wordClassDao.findAll();
+    }
+
 
     //-------------- exist query ---------------//
 
