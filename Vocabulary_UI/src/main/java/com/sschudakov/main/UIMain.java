@@ -5,7 +5,7 @@ import com.sschudakov.ui.InputWordsJFrame;
 
 import java.sql.SQLException;
 
-public class Main {
+public class UIMain {
 
     /**
      * @param args the command line arguments

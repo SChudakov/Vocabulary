@@ -12,17 +12,16 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.sql.SQLException;
 
-public class Main {
+public class BLMain {
 
-    private static final String ADJECTIVE_MIT_PRAPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary" +
-            "\\test_files\\Adjective mit Prapositionen.docx";
-    private static final String BL_SRC_DIRECTORY = "D:\\desktop\\Vocabulary_BL\\src";
-    private static final String UI_SRC_DIRECTORY = "D:\\desktop\\Vocabulary_UI\\src";
+    private static final String ADJECTIVE_MIT_PRAPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Prapositionen.docx";
+    private static final String BL_SRC_DIRECTORY = "D:\\Workspace.java\\Vocabulary\\Vocabulary_BL\\src";
+    private static final String UI_SRC_DIRECTORY = "D:\\Workspace.java\\Vocabulary\\Vocabulary_UI\\src";
 
     public static void main(String[] args) {
         /*runHibernate();*/
-        insertData();
-        /*countNumOfLinesInProject();*/
+        /*insertData();*/
+        countNumOfLinesInProject();
     }
 
 

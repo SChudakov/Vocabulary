@@ -33,7 +33,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.sschudakov.Main</mainClass>
+                            <mainClass>com.sschudakov.BLMain</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -148,7 +148,7 @@
                 <version>3.2.0</version>
                 <configuration>
                     <webappDirectory>src\main\webapp</webappDirectory>
-                    <webXml>\src\main\webapp\WEB-INF\web.xml</webXml>
+                    <webXml>D:\Workspace.java\Vocabulary\Vocabulary_BL\src\main\webapp\WEB-INF\web.xml</webXml>
                 </configuration>
             </plugin>
         </plugins>
