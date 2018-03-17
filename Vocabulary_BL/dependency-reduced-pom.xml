@@ -7,6 +7,19 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>Vocabulary_BL</artifactId>
+  <build>
+    <finalName>webAppMaven</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -39,5 +52,8 @@
       </exclusions>
     </dependency>
   </dependencies>
+  <properties>
+    <spring-framwork-version>5.0.4.RELEASE</spring-framwork-version>
+  </properties>
 </project>
 
