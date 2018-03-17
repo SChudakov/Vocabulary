@@ -2,10 +2,8 @@ package com.sschudakov.service;
 
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WMRDao;
-import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.entity.*;
-import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -125,7 +123,7 @@ public class WordSrv {
     //-------------- get collection words ---------------//
 
     public List<String> getCollectionWords(WordCollection collection) throws SQLException {
-        return this.wcrDao.findByCollection(collection)
+        return this.wcrDao.findWordsByCollection(collection)
                 .stream().map(wcr -> wcr.getWord().getValue()).collect(Collectors.toList());
     }
 

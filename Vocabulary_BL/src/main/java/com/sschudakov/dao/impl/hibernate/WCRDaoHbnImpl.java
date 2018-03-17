@@ -96,7 +96,7 @@ public class WCRDaoHbnImpl implements WCRDao {
     }
 
     @Override
-    public Collection<WordCollectionRelationship> findByCollection(WordCollection wordCollection) {
+    public Collection<WordCollectionRelationship> findWordsByCollection(WordCollection wordCollection) {
         CriteriaQuery<WordCollectionRelationship> criteriaQuery = this.criteriaBuilder
                 .createQuery(WordCollectionRelationship.class);
         Root<WordCollectionRelationship> root = criteriaQuery.from(WordCollectionRelationship.class);

@@ -4,7 +4,6 @@ import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
-import com.sschudakov.factory.DaoFactory;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -71,7 +70,7 @@ public class WordCollectionSrv {
 
 
     private void delete(Integer collectionsId) throws SQLException {
-        for (WordCollectionRelationship wordCollectionRelationship : this.wcrDao.findByCollection(
+        for (WordCollectionRelationship wordCollectionRelationship : this.wcrDao.findWordsByCollection(
                 wordCollectionDao.findById(collectionsId)
         )) {
             this.wcrDao.remove(wordCollectionRelationship.getId());
