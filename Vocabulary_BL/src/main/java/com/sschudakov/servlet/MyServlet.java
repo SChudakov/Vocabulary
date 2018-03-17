@@ -10,8 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpSession;
 
 /**
- * @author Danny Briskin (sql.coach.kiev@gmail.com)
- *         on  21.04.2017 for springMvcSecond project.
+ * @author Semen Chudakov
  */
 
 
@@ -20,9 +19,9 @@ public class MyServlet {
 
     // 1st part
     @RequestMapping(value = "myServlet", method = RequestMethod.GET)
-    public String manageName(@RequestParam("name") String param, Model m) {
+    public String manageName(@RequestParam("name") String param, Model model) {
         // Model visibility - all application context
-        m.addAttribute("name", param);
+        model.addAttribute("name", param);
 
         return "user";
     }
@@ -47,7 +46,7 @@ public class MyServlet {
 
     @RequestMapping(value = "job", method = RequestMethod.GET)
     public ModelAndView manageJob(@RequestParam("job") String param,
-                                  HttpSession session, Model m) {
+                                  HttpSession session, Model model) {
         // common use this variant
         // we set a page and an object to send
         ModelAndView modelAndView = new ModelAndView();

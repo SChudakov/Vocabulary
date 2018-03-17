@@ -18,6 +18,14 @@
         <param-value>/WEB-INF/MyServlet-servlet.xml</param-value>
     </context-param>
 
+    <!--added-->
+
+    <!--<listener>
+        &lt;!&ndash; reads parameters and sends them to dispatcher servlet &ndash;&gt;
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>-->
+
+
     <servlet>
         <servlet-name>MyServlet</servlet-name>
         <!--not our servlet, but spring's dispatcher servlet-->
@@ -34,13 +42,9 @@
         <url-pattern>/job</url-pattern>
     </servlet-mapping>
 
+    <!-- commented -->
 
-
-    <session-config>
+    <!--<session-config>
         <session-timeout>30</session-timeout>
-    </session-config>
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
-
+    </session-config>-->
 </web-app>
