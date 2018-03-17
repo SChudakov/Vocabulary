@@ -29,7 +29,7 @@ public interface WMRDao {
 
     List<WordMeaningRelationship> findByMeaning(Word meaning) throws SQLException;
 
-    List<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) throws SQLException;
+    List<Word> findWordMeanings(Word word, Language meaningsLanguage) throws SQLException;
 
     Map<Word, List<Word>> findWordsMeanings(List<Word> words, Language meaningsLanguage) throws SQLException;
 

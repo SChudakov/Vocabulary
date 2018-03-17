@@ -10,6 +10,7 @@ public class FileExtensionDeterminer {
     private static final String XSL_EXTENSION = ".xsl";
     private static final String XML_EXTENSION = ".xml";
     private static final String JAVA_EXTENSION = ".java";
+    private static final String GROOVY_EXTENSION = ".groovy";
     private static final String DOCX_EXTENSION = ".docx";
 
     public static boolean isHTNLFile(String path) {
@@ -34,6 +35,10 @@ public class FileExtensionDeterminer {
 
     public static boolean isJavaFile(String path) {
         return path.endsWith(JAVA_EXTENSION);
+    }
+
+    public static boolean isGroovyFile(String path) {
+        return path.endsWith(GROOVY_EXTENSION);
     }
 
     public static boolean isDOCXFile(String path) {

@@ -95,15 +95,8 @@ public class WordSrv {
     //-------------- get word meanings ---------------//
 
     public List<String> getWordMeanings(Word word, Language meaningsLanguage) throws SQLException {
-        List<String> result = new ArrayList<>();
-        this.wmrDao.findWordMeaningsIds(word, meaningsLanguage)
-                .stream().forEach(meaningId -> {
-            try {
-                result.add(this.wordDao.findById(meaningId).getValue());
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        });
+        List<String> result = this.wmrDao.findWordMeanings(word, meaningsLanguage)
+                .stream().map(Word::getValue).collect(Collectors.toList());
         return result;
     }
 

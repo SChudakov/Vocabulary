@@ -85,7 +85,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
     }
 
     @Override
-    public List<Integer> findWordMeaningsIds(Word word, Language meaningsLanguage) throws SQLException {
+    public List<Word> findWordMeanings(Word word, Language meaningsLanguage) throws SQLException {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT word_meaning_relationships.")
@@ -103,13 +103,15 @@ public class WMRDaoJdbcImpl implements WMRDao {
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
-        return formIdsCollections(statement.getResultSet());
+        return formMeaningsCollection(statement.getResultSet());
     }
 
-    private static List<Integer> formIdsCollections(ResultSet resultSet) throws SQLException {
-        List<Integer> result = new ArrayList<>();
+    private List<Word> formMeaningsCollection(ResultSet resultSet) throws SQLException {
+        List<Word> result = new ArrayList<>();
         while (resultSet.next()) {
-            result.add(resultSet.getInt(WordMeaningRelationship.MEANING_COLUMN_NAME));
+            result.add(this.wordDao.findById(
+                    resultSet.getInt(WordMeaningRelationship.MEANING_COLUMN_NAME)
+            ));
         }
         return result;
     }
@@ -129,27 +131,30 @@ public class WMRDaoJdbcImpl implements WMRDao {
                 .append(" WHERE ")
                 .append("word_meaning_relationships.").append(WordMeaningRelationship.WORD_COLUMN_NAME)
                 .append(" IN ")
-                .append(formQueryInSection(words))
+                .append(formINSectionForQuery(words))
                 .append(" AND ")
                 .append("words.").append(Word.LANGUAGE_COLUMN_NAME).append("=").append(meaningsLanguage.getId());
         LoggersManager.getParsingLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
-        return formDataMap(statement.getResultSet());
+        return formDataMap(words, statement.getResultSet());
     }
 
-    private Map<Word, List<Word>> formDataMap(ResultSet resultSet) throws SQLException {
+    private Map<Word, List<Word>> formDataMap(List<Word> words, ResultSet resultSet) throws SQLException {
         Map<Word, List<Word>> result = new HashMap<>();
         Map<Integer, List<Integer>> idsMap = formIdsMap(resultSet);
+        for (Word word : words) {
+            if (idsMap.get(word.getId()) != null) {
 
-        for (Map.Entry<Integer, List<Integer>> idsMapEntry : idsMap.entrySet()) {
-            Word entryWord = this.wordDao.findById(idsMapEntry.getKey());
-            List<Word> entryMeanings = new ArrayList<>();
-            for (Integer meaningId : idsMapEntry.getValue()) {
-                entryMeanings.add(this.wordDao.findById(meaningId));
+                List<Word> loadedMeaningsList = new ArrayList<>();
+
+                for (Integer id : idsMap.get(word.getId())) {
+                    loadedMeaningsList.add(this.wordDao.findById(id));
+                }
+
+                result.put(word, loadedMeaningsList);
             }
-            result.put(entryWord, entryMeanings);
         }
         return result;
     }
@@ -158,15 +163,13 @@ public class WMRDaoJdbcImpl implements WMRDao {
         Map<Integer, List<Integer>> result = new HashMap<>();
         while (resultSet.next()) {
             Integer wordId = resultSet.getInt(WordMeaningRelationship.WORD_COLUMN_NAME);
-            if (result.get(wordId) == null) {
-                result.put(wordId, new ArrayList<>());
-            }
+            result.computeIfAbsent(wordId, k -> new ArrayList<>());
             result.get(wordId).add(resultSet.getInt(WordMeaningRelationship.MEANING_COLUMN_NAME));
         }
         return result;
     }
 
-    private static String formQueryInSection(List<Word> words) {
+    private static String formINSectionForQuery(List<Word> words) {
         StringBuilder result = new StringBuilder("");
         result.append("(");
 

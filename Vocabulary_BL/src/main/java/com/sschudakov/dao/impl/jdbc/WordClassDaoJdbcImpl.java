@@ -34,7 +34,7 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
 
     @Override
     public WordClass findById(Integer id) throws SQLException {
-        /*StringBuilder query = new StringBuilder("");
+        StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes ")
                 .append(" WHERE ")
                 .append(WordClass.ID_COLUMN_NAME).append("=").append(id);
@@ -46,8 +46,8 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         if (!resultSet.next()) {
             return null;
         }
-        return formWordClass(resultSet);*/
-        return DatabaseCache.getInstance().getWordClassBzId(id);
+        return formWordClass(resultSet);
+        /*return DatabaseCache.getInstance().getWordClassBzId(id);*/
     }
 
     @Override
