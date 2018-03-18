@@ -22,7 +22,7 @@ import com.sschudakov.dao.interf.WordDao;
 public class DaoFactory {
     private enum DaoType {JDBC(), HIBERNATE()}
 
-    private static DaoType daoType = DaoType.JDBC;
+    private static DaoType daoType = DaoType.HIBERNATE;
 
     public static LanguageDao createLanguageDao() {
         if (daoType == DaoType.JDBC) {

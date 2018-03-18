@@ -8,6 +8,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -186,13 +187,11 @@ public class WMRDaoHbnImpl implements WMRDao {
 
     @Override
     public Map<Word, List<Word>> findWordsMeanings(List<Word> words, Language meaningsLanguage) throws SQLException {
-
-        Map<Word, List<Word>> result = new HashMap<>();
-
-        CriteriaQuery<Word> criteriaQuery = this.criteriaBuilder
-                .createQuery(Word.class);
+        CriteriaQuery<WordMeaningRelationship> criteriaQuery = this.criteriaBuilder
+                .createQuery(WordMeaningRelationship.class);
         Root<WordMeaningRelationship> root = criteriaQuery.from(WordMeaningRelationship.class);
 
+        Path<Integer> wmrIdPath = root.get(WordMeaningRelationship_.id);
         Path<Word> wmrWordPath = root.get(WordMeaningRelationship_.word);
         Path<Word> wmrMeaningPath = root.get(WordMeaningRelationship_.meaning);
 
@@ -200,17 +199,29 @@ public class WMRDaoHbnImpl implements WMRDao {
 
         Path<Language> meaningsLanguagePath = wmrAndMeaningJoin.get(Word_.language);
 
-        for (Word word : words) {
-            Predicate wordAndMeaningLanguage = criteriaBuilder.and(
-                    criteriaBuilder.equal(wmrWordPath, word),
-                    criteriaBuilder.equal(meaningsLanguagePath, meaningsLanguage)
-            );
+        Predicate wordAndMeaningLanguage = criteriaBuilder.and(
+                wmrWordPath.in(words),
+                criteriaBuilder.equal(meaningsLanguagePath, meaningsLanguage)
+        );
 
-            criteriaQuery.select(wmrMeaningPath).where(wordAndMeaningLanguage);
-            result.put(word, entityManager.createQuery(criteriaQuery).getResultList());
+        criteriaQuery.select(criteriaBuilder.construct(
+                WordMeaningRelationship.class,
+                wmrIdPath,
+                wmrWordPath,
+                wmrMeaningPath
+        )).where(wordAndMeaningLanguage);
+
+        List<WordMeaningRelationship> relationships = this.entityManager.createQuery(criteriaQuery).getResultList();
+
+        return transformToMap(relationships);
+    }
+
+    private static Map<Word, List<Word>> transformToMap(List<WordMeaningRelationship> relationships) {
+        Map<Word, List<Word>> result = new HashMap<>();
+        for (WordMeaningRelationship relationship : relationships) {
+            result.computeIfAbsent(relationship.getWord(), k -> new ArrayList<>());
+            result.get(relationship.getWord()).add(relationship.getMeaning());
         }
-
-
         return result;
     }
 
