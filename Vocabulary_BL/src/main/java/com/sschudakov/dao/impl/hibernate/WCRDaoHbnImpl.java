@@ -136,12 +136,17 @@ public class WCRDaoHbnImpl implements WCRDao {
 
         Path<Language> wordLanguagePath = wmrAndMeaningJoin.get(Word_.language);
 
+        Predicate predicate = criteriaBuilder.and(
+                criteriaBuilder.equal(root.get(WordCollectionRelationship_.wordCollection), collection),
+                criteriaBuilder.equal(wordLanguagePath, language)
+        );
+
         criteriaQuery.select(criteriaBuilder.construct(
                 WordCollectionRelationship.class,
                 wcrIdPath,
                 wcrWordPath,
                 wcrCollectionPath
-        )).where(criteriaBuilder.equal(wordLanguagePath, language));
+        )).where(predicate);
 
         return entityManager.createQuery(criteriaQuery).getResultList();
     }

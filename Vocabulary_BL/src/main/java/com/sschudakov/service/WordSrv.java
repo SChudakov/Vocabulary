@@ -36,7 +36,7 @@ public class WordSrv {
         if (wordClass != null) {
             word.setWordClass(wordClass);
         } else {
-            word.setWordClass(new WordClass(10008, "noun"));//TODO: fix this
+            word.setWordClass(new WordClass(9, "expression"));//TODO: fix this
         }
         this.wordDao.save(word);
     }

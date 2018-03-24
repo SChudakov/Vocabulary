@@ -20,8 +20,8 @@ public class BLMain {
 
     public static void main(String[] args) {
         /*runHibernate();*/
-        /*insertData();*/
-        countNumOfLinesInProject();
+        insertData();
+        /*countNumOfLinesInProject();*/
     }
 
 
