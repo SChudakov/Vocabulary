@@ -13,15 +13,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import java.util.Locale;
 
-/**
- * @author Danny Briskin (sql.coach.kiev@gmail.com)
- * on  7/10/2017 for springJConfInterHiber project.
- */
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.sschudakov.servlet")
 public class WebConfiguration implements WebMvcConfigurer {
-
 
     @Bean
     public ReloadableResourceBundleMessageSource messageSource() {

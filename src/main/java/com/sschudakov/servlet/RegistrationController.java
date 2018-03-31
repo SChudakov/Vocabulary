@@ -90,8 +90,8 @@ public class RegistrationController {
 
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String getLogin(SessionStatus status) {
-        return "login";
+    public ModelAndView getLogin(SessionStatus status) {
+        return new ModelAndView( "login");
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)

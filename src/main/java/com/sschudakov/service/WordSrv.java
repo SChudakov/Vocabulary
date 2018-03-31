@@ -131,7 +131,7 @@ public class WordSrv {
     //-------------- get collection words ---------------//
 
     public List<String> getCollectionWords(WordCollection collection) throws SQLException {
-        return this.wcrDao.findWordsByCollection(collection)
+        return this.wcrDao.findByCollection(collection)
                 .stream().map(wcr -> wcr.getWord().getValue()).collect(Collectors.toList());
     }
 

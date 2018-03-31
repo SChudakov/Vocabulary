@@ -23,12 +23,12 @@ import java.util.Properties;
  * @author Danny Briskin (sql.coach.kiev@gmail.com)
  * on  11.07.2017 for springJConfInterHiber project.
  */
-@Configuration
-@EnableTransactionManagement
-@PropertySource("classpath:app.properties")
+//@Configuration
+//@EnableTransactionManagement
+//@PropertySource("classpath:app.properties")
 public class DataConfiguration {
 
-    @Resource
+    /*@Resource
     private Environment env;
 
     @Bean
@@ -88,6 +88,6 @@ public class DataConfiguration {
     @Bean
     public UserDao getUserDao() {
         return new UserDao();
-    }
+    }*/
 
 }

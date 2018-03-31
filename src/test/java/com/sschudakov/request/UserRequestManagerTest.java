@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 public class UserRequestManagerTest {
-    private static UserRequestManager userRequestManager;
+    /*private static UserRequestManager userRequestManager;
 
     private static final int englishID = 10000;
     private static final int russianID = 10001;
@@ -120,11 +120,11 @@ public class UserRequestManagerTest {
     }
 
     private static void printInsertQuery(String query) {
-        /*System.out.println("insert query: " + query);*/
+        *//*System.out.println("insert query: " + query);*//*
     }
 
     private static void printDeleteQuery(String query) {
-        /*System.out.println("delete query: " + query);*/
+        *//*System.out.println("delete query: " + query);*//*
     }
 
     //insert operations
@@ -370,21 +370,21 @@ public class UserRequestManagerTest {
         Assert.assertEquals(true, classes.contains(adverb));
     }
 
-    /**
+    *//**
      * Method throws an NPE if there is no such word in database
      *
      * @throws SQLException
-     */
+     *//*
     @Ignore
     @Test
     public void getWordMeanings() throws SQLException {
-        /*List<String> meanings = this.userRequestManager.getWordMeanings(wordValue, german, russian);
+        *//*List<String> meanings = this.userRequestManager.getWordMeanings(wordValue, german, russian);
         for (String s : meanings) {
             System.out.println(s);
         }
         Assert.assertEquals(true, meanings.contains(firstMeaningValue));
         Assert.assertEquals(true, meanings.contains(secondMeaningValue));
-        Assert.assertEquals(true, meanings.contains(thirdMeaningValue));*/
+        Assert.assertEquals(true, meanings.contains(thirdMeaningValue));*//*
     }
 
     @Test
@@ -440,7 +440,7 @@ public class UserRequestManagerTest {
         int anotherWordClassId = adverbID;
 
         try {
-            /*this.userRequestManager.saveWordInformation(createdWordValue, noun, english);
+            *//*this.userRequestManager.saveWordInformation(createdWordValue, noun, english);
 
             PreparedStatement checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString());
             checkStatement.execute();
@@ -462,7 +462,7 @@ public class UserRequestManagerTest {
             Assert.assertEquals(createdWordValue, secondResultSet.getString(Word.VALUE_COLUMN_NAME));
             Assert.assertEquals(anotherWordClassId, secondResultSet.getInt(Word.WORD_CLASS_COLUMN_NAME));
             Assert.assertEquals(createdWordLanguage, secondResultSet.getInt(Word.LANGUAGE_COLUMN_NAME));
-            Assert.assertEquals(false, secondResultSet.next());*/
+            Assert.assertEquals(false, secondResultSet.next());*//*
         } finally {
             PreparedStatement checkStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
             checkStatement.execute();
@@ -476,7 +476,7 @@ public class UserRequestManagerTest {
             this.userRequestManager.createCollection(firstCollection);
             throw new AssertionError("An IllegalArgumentException should be thrown if such collections already exists");
         } catch (IllegalArgumentException e) {
-            /*nop*/
+            *//*nop*//*
         }
     }
 
@@ -508,15 +508,15 @@ public class UserRequestManagerTest {
         }
     }
 
-    /**
+    *//**
      * Produces NPE if there is no such word or meaning in database
      *
      * @throws SQLException
-     */
+     *//*
     @Ignore
     @Test
     public void addMeaning() throws SQLException {
-/*
+*//*
         this.userRequestManager.addMeaning(wordValue, german, additionalMeaningValue, english);
 
         // check that two relationships were created
@@ -547,7 +547,7 @@ public class UserRequestManagerTest {
                     .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(additionalMeaningId);
             PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
             deleteStatement.execute();
-        }*/
+        }*//*
     }
 
     @Test
@@ -557,13 +557,13 @@ public class UserRequestManagerTest {
             throw new AssertionError("adding already existing meaning " +
                     "should cause an IllegalArgumentException");
         } catch (IllegalArgumentException e) {
-            /*nop*/
+            *//*nop*//*
         }
     }
     @Ignore
     @Test
     public void removeMeaning() throws SQLException {
-        /*this.userRequestManager.removeMeaning(wordValue, german, firstMeaningValue, russian);
+        *//*this.userRequestManager.removeMeaning(wordValue, german, firstMeaningValue, russian);
         StringBuilder firstCheckQuery = new StringBuilder("");
         firstCheckQuery.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
@@ -584,7 +584,7 @@ public class UserRequestManagerTest {
         PreparedStatement secondCheckStatement = DatabaseManager.connection.prepareStatement(secondCheckQuery.toString());
         secondCheckStatement.execute();
         ResultSet secondResultSet = secondCheckStatement.getResultSet();
-        Assert.assertEquals(false, secondResultSet.next());*/
+        Assert.assertEquals(false, secondResultSet.next());*//*
     }
 
     @Test
@@ -594,7 +594,7 @@ public class UserRequestManagerTest {
             throw new AssertionError("removing not existing meaning " +
                     "should cause an IllegalArgumentException");
         } catch (IllegalArgumentException e) {
-            /*nop*/
+            *//*nop*//*
         }
     }
 
@@ -652,13 +652,13 @@ public class UserRequestManagerTest {
     @Ignore
     @Test
     public void deleteNotExistingWord() throws SQLException {
-       /* try {
+       *//* try {
             this.userRequestManager.deleteWord(notExistingWord, english);
             throw new AssertionError("deleting not existing word " +
                     "should cause an IllegalArgumentException");
         } catch (IllegalArgumentException e) {
-            *//*nop*//*
-        }*/
+            *//**//*nop*//**//*
+        }*//*
     }
 
     @Test
@@ -681,7 +681,7 @@ public class UserRequestManagerTest {
             throw new AssertionError("deleting not existing collection " +
                     "should cause an IllegalArgumentException");
         } catch (IllegalArgumentException e) {
-            /*nop*/
+            *//*nop*//*
         }
     }
 
@@ -720,7 +720,7 @@ public class UserRequestManagerTest {
             throw new AssertionError("putting repeatedly a word in a collection " +
                     "should cause an IllegalArgumentException");
         } catch (IllegalArgumentException e) {
-            /*nop*/
+            *//*nop*//*
         }
     }
 
@@ -746,7 +746,7 @@ public class UserRequestManagerTest {
             throw new AssertionError("removing word from collection where there was no such word " +
                     "should cause an IllegalArgumentException");
         } catch (IllegalArgumentException e) {
-            /*nop*/
+            *//*nop*//*
         }
-    }
+    }*/
 }

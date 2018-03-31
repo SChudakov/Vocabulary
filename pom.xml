@@ -9,19 +9,33 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.RELEASE</version>
+    </parent>
 
     <properties>
         <spring-framwork-version>5.0.4.RELEASE</spring-framwork-version>
+        <slf4j-version>1.7.25</slf4j-version>
+        <hibernate-version>5.2.16.Final</hibernate-version>
+        <log4j-version>2.9.1</log4j-version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+
     <dependencies>
+
+
+                            <!--junit and spock-->
+
+
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.spockframework/spock-core -->
@@ -32,104 +46,151 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+
+                                <!-- log4j -->
+
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core &ndash;&gt;
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.9.1</version>
+            <version>${log4j-version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api &ndash;&gt;
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.9.1</version>
-        </dependency>
+            <version>${log4j-version}</version>
+        </dependency>-->
 
-        <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
+
+                        <!--jetbrains annotations-->
+
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.jetbrains/annotations &ndash;&gt;
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>13.0</version>
-        </dependency>
+        </dependency>-->
+
+
+                        <!---->
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.7</version>
+            <!--<version>3.7</version>-->
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.39</version>
+            <!--<version>5.1.39</version>-->
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-            <!--<scope>provided</scope>-->
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/jstl/jstl -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <!--<version>1.2</version>-->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.2.12.Final</version>
+            <!--<version>${hibernate-version}</version>-->
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-jpamodelgen</artifactId>
-            <version>5.2.10.Final</version>
+            <!--<version>${hibernate-version}</version>-->
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-ehcache</artifactId>
-            <version>5.2.13.Final</version>
+            <!--<version>${hibernate-version}</version>-->
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-api &ndash;&gt;
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
+            <version>${slf4j-version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-simple &ndash;&gt;
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
-        </dependency>
+            <version>${slf4j-version}</version>
+        </dependency>-->
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-core &ndash;&gt;
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>${spring-framwork-version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-web &ndash;&gt;
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>${spring-framwork-version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-webmvc &ndash;&gt;
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring-framwork-version}</version>
+        </dependency>
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa &ndash;&gt;
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.0.5.RELEASE</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
     </dependencies>
@@ -139,11 +200,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
+                <!--<version>3.2.0</version>-->
+                <!--<configuration>
                     <webappDirectory>src\main\webapp</webappDirectory>
                     <webXml>D:\Workspace.java\Vocabulary\src\main\webapp\WEB-INF\web.xml</webXml>
-                </configuration>
+                </configuration>-->
             </plugin>
             <plugin>
                 <groupId>com.zenjava</groupId>

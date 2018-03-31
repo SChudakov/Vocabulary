@@ -12,6 +12,7 @@ import java.util.List;
  * @author Danny Briskin (sql.coach.kiev@gmail.com)
  * on  11.07.2017 for springJConfInterHiber project.
  */
+@Component
 public class UserDao {
 
     /*@Autowired
