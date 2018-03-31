@@ -73,7 +73,7 @@ public class WordCollectionSrv {
     }
 
     private void delete(Integer collectionsId) throws SQLException {
-        for (WordCollectionRelationship wordCollectionRelationship : this.wcrDao.findByCollection(
+        for (WordCollectionRelationship wordCollectionRelationship : this.wcrDao.findWordsByCollection(
                 wordCollectionDao.findById(collectionsId)
         )) {
             this.wcrDao.remove(wordCollectionRelationship.getId());
