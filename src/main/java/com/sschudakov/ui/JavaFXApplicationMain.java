@@ -16,9 +16,9 @@ public class JavaFXApplicationMain extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        String fxmlFile = "fxml/sample.fxml";
+        String fxmlFile = "fxml/samples.fxml";
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource(fxmlFile)));
-        stage.setTitle("JavaFX and Maven");
+        stage.setTitle("Databases lab");
         stage.setScene(new Scene(root));
         stage.show();
     }
