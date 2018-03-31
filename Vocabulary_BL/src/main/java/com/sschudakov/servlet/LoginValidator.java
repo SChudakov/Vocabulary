@@ -1,7 +1,7 @@
 package com.sschudakov.servlet;
 
 
-import com.sschudakov.servlet.entity.User;
+import com.sschudakov.servlet.forvalidators.entity.User;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

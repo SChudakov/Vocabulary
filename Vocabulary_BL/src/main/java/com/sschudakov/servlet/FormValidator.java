@@ -1,8 +1,8 @@
 package com.sschudakov.servlet;
 
 
-import com.sschudakov.servlet.dao.UserDAO;
-import com.sschudakov.servlet.entity.User;
+import com.sschudakov.servlet.forvalidators.dao.UserDao;
+import com.sschudakov.servlet.forvalidators.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -17,7 +17,7 @@ import org.springframework.validation.Validator;
 public class FormValidator implements Validator {
 
     @Autowired
-    UserDAO userDAO;
+    UserDao userDAO;
 
     @Override
     public boolean supports(Class<?> type) {
@@ -39,10 +39,10 @@ public class FormValidator implements Validator {
         ValidationUtils.rejectIfEmpty(errors, "password", "error.enterYourPassword");
 
         // check in DB that there is no such user and then permit validation
-        boolean isUserExists = userDAO.isLoginExists(((User) o).getLogin());
+        /*boolean isUserExists = userDAO.isLoginExists(((User) o).getLogin());
         if (isUserExists) {
             errors.rejectValue("login", "error.loginExists");
-        }
+        }*/
 
     }
 

@@ -1,7 +1,7 @@
 package com.sschudakov.servlet;
 
-import com.sschudakov.servlet.dao.UserDAO;
-import com.sschudakov.servlet.entity.User;
+import com.sschudakov.servlet.forvalidators.dao.UserDao;
+import com.sschudakov.servlet.forvalidators.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,7 +25,7 @@ import javax.servlet.http.HttpSession;
 public class RegistrationController {
 
     @Autowired
-    UserDAO userDao;
+    UserDao userDao;
     @Autowired
     HttpSession session;
 

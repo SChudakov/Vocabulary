@@ -1,4 +1,4 @@
-package com.sschudakov.servlet.entity;
+package com.sschudakov.servlet.forvalidators.entity;
 
 import org.springframework.stereotype.Component;
 
@@ -10,7 +10,7 @@ import javax.persistence.Id;
  * @author Danny Briskin (sql.coach.kiev@gmail.com)
  *         on  23.04.2017 for thirdSpringApp project.
  */
-@Component
+
 @Entity(name = "springUsers")
 public class User {
     @Id
