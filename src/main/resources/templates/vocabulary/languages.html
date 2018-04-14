@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>languages</title>
+    </head>
+    <body>
+        <form th:action="@{/languages/languageInfo}" method="get">
+            <input type="text" th:name="languageName" th:placeholder="languageName"/><br>
+            <input type="submit" value="find"/>
+        </form>
+    </body>
+</html>

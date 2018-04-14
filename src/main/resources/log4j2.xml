@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
-    <!--<Appenders>
-        &lt;!&ndash; Console Appender &ndash;&gt;
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="[%highlight{%5p}] %d{dd/M/yy HH:mm:ss} [%t] %logger{36} - %msg%n" />
-        </Console>
-    </Appenders>
-    <Loggers>
-        &lt;!&ndash; Log SQL statements &ndash;&gt;
-        <Logger name="org.hibernate.SQL" level="info" additivity="false">
-            <AppenderRef ref="Console" />
-        </Logger>
-        &lt;!&ndash; Log cache &ndash;&gt;
-        <Logger name="org.hibernate.cache" level="info" additivity="false">
-            <AppenderRef ref="Console" />
-        </Logger>
-        <Logger name="org.ehcache" level="info" additivity="false">
-            <AppenderRef ref="Console" />
-        </Logger>
-        <Root level="error">
-            <AppenderRef ref="Console" />
-        </Root>
-    </Loggers>-->
     <!-- Properties section -->
     <Properties>
         <Property name="parsing_all">logs\parsing-all.log</Property>
@@ -39,7 +17,7 @@
         <!-- console appender -->
         <Console name="console_appender_all" target="SYSTEM_OUT">
             <!--%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - -->
-            <PatternLayout pattern="[%highlight{%5p}] %d{dd/M/yy HH:mm:ss} [%t] %logger{36} - %msg%n" />
+            <PatternLayout pattern="[%highlight{%5p}] %d{dd/M/yy HH:mm:ss} [%t] %logger{36} - %msg%n"/>
         </Console>
 
         <!-- File appender for com.sschudakov.words.parsing all-->
@@ -141,14 +119,14 @@
 
         <!-- Log SQL statements -->
         <Logger name="org.hibernate.SQL" level="info" additivity="false">
-            <AppenderRef ref="console_appender_all" />
+            <AppenderRef ref="console_appender_all"/>
         </Logger>
         <!-- Log cache -->
         <Logger name="org.hibernate.cache" level="info" additivity="false">
-            <AppenderRef ref="console_appender_all" />
+            <AppenderRef ref="console_appender_all"/>
         </Logger>
         <Logger name="org.ehcache" level="info" additivity="false">
-            <AppenderRef ref="console_appender_all" />
+            <AppenderRef ref="console_appender_all"/>
         </Logger>
     </Loggers>
 

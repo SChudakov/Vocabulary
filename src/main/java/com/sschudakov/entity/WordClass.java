@@ -3,6 +3,7 @@ package com.sschudakov.entity;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
@@ -17,15 +18,15 @@ import javax.persistence.Table;
 @Table(name = "word_classes")
 public class WordClass {
 
-    public static final String ID_COLUMN_NAME = "word_class_id";
-    public static final String NAME_COLUMN_NAME = "word_class_name";
+    public static final String ID_CN = "word_class_id";
+    public static final String NAME_CN = "word_class_name";
 
     @Id
-    @Column(name = ID_COLUMN_NAME)
+    @Column(name = ID_CN)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = NAME_COLUMN_NAME)
+    @Column(name = NAME_CN)
     private String wordClassName;
 
     public Integer getId() {
@@ -77,7 +78,7 @@ public class WordClass {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
+        return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
                 .append("id", this.id)
                 .append("word class", this.wordClassName)
                 .build();

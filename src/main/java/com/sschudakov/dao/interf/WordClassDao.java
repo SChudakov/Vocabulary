@@ -1,10 +1,11 @@
 package com.sschudakov.dao.interf;
 
 import com.sschudakov.entity.WordClass;
+import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
 import java.util.List;
-
+@Repository
 public interface WordClassDao {
 
 

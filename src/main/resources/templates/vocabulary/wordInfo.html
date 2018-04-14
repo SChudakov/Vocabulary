@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>wordInfo</title>
+    </head>
+    <body>
+        <th:block>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>value</th>
+                    <th>class</th>
+                    <th>language</th>
+                </tr>
+                <tr>
+                    <td th:text="${word.id}">id</td>
+                    <td th:text="${word.value}">value</td>
+                    <td th:text="${word.wordClass.wordClassName}">class</td>
+                    <td th:text="${word.language.languageName}">language</td>
+                </tr>
+            </table>
+        </th:block>
+    </body>
+</html>

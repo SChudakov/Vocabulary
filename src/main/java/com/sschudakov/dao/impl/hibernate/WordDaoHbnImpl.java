@@ -5,6 +5,9 @@ import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
 import com.sschudakov.entity.Word_;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -16,9 +19,9 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.Collection;
 import java.util.List;
-
+@Repository
 public class WordDaoHbnImpl implements WordDao {
-
+    @Autowired
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
 

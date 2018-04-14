@@ -24,7 +24,7 @@ class LanguageSrvSpec extends Specification {
         this.languageSrv = new LanguageSrv()
         StringBuilder insertQuery = new StringBuilder("")
         insertQuery.append("INSERT INTO languages ")
-                .append("(").append(Language.ID_COLUMN_NAME).append(",").append(Language.NAME_COLUMN_NAME).append(")")
+                .append("(").append(Language.ID_CN).append(",").append(Language.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(englishId).append(",").append("\'" + english + "\'").append(")").append(",")
                 .append("(").append(russianId).append(",").append("\'" + russian + "\'").append(")").append("")
@@ -37,13 +37,13 @@ class LanguageSrvSpec extends Specification {
         StringBuilder deleteQuery = new StringBuilder("")
         deleteQuery.append("DELETE FROM languages")
                 .append(" WHERE ")
-                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(englishId)
+                .append("(").append(Language.ID_CN).append("=").append(englishId)
                 .append(" AND ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + english + "\'").append(")")
+                .append(Language.NAME_CN).append("=").append("\'" + english + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(russianId)
+                .append("(").append(Language.ID_CN).append("=").append(russianId)
                 .append(" AND ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + russian + "\'").append(")")
+                .append(Language.NAME_CN).append("=").append("\'" + russian + "\'").append(")")
         println deleteQuery
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString())
         deleteStatement.execute()
@@ -55,13 +55,13 @@ class LanguageSrvSpec extends Specification {
         def checkQuery = new StringBuilder("")
         checkQuery.append("SELECT * FROM languages")
                 .append(" WHERE ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + german + "\'")
+                .append(Language.NAME_CN).append("=").append("\'" + german + "\'")
         def checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString())
         and: "a query that deletes created language"
         def deleteQuery = new StringBuilder("")
         deleteQuery.append("DELETE FROM languages")
                 .append(" WHERE ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + german + "\'")
+                .append(Language.NAME_CN).append("=").append("\'" + german + "\'")
         def deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString())
         def resultSet
 
@@ -82,7 +82,7 @@ class LanguageSrvSpec extends Specification {
         def checkQuery = new StringBuilder("")
         checkQuery.append("SELECT * FROM languages")
                 .append(" WHERE ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + english + "\'")
+                .append(Language.NAME_CN).append("=").append("\'" + english + "\'")
         def checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString())
         def resultSet
 

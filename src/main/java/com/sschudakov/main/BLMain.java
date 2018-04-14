@@ -1,5 +1,7 @@
 package com.sschudakov.main;
 
+import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.database.DatabaseSetup;
 import com.sschudakov.factory.ServiceFactory;
 import com.sschudakov.service.LanguageSrv;
 import com.sschudakov.service.WordClassSrv;
@@ -13,6 +15,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class BLMain {
@@ -24,43 +27,42 @@ public class BLMain {
     private static final String GROOVY_EXTENSION = ".groovy";
 
     public static void main(String[] args) {
-        /*runHibernate();*/
-        /*insertData();*/
-        /*countNumOfLinesInProject();*/
-    }
-
-
-    private static void insertData() {
-        LanguageSrv languageSrv = ServiceFactory.createLanguageService();
-        WordClassSrv wordClassSrv = ServiceFactory.createWordClassService();
         try {
-            WordsCollectionsManager.persistCollectionIntoDatabase(
-                    "D:\\desktop\\words_collections\\ger\\Adjective aus Kopien.txt",
-                    languageSrv.findByName("German"),
-                    languageSrv.findByName("Russian"),
-                    wordClassSrv.findByName("adjective")
-            );
-            WordsCollectionsManager.persistCollectionIntoDatabase(
-                    "D:\\desktop\\words_collections\\ger\\Adjective mit Präpositionen.txt",
-                    languageSrv.findByName("German"),
-                    languageSrv.findByName("Russian"),
-                    wordClassSrv.findByName("adjective")
-            );
-            WordsCollectionsManager.persistCollectionIntoDatabase(
-                    "D:\\desktop\\words_collections\\ger\\Antonymen.txt",
-                    languageSrv.findByName("German"),
-                    languageSrv.findByName("Russian"),
-                    wordClassSrv.findByName("noun")
-            );
-            WordsCollectionsManager.persistCollectionIntoDatabase(
-                    "D:\\desktop\\words_collections\\eng\\The Financier.txt",
-                    languageSrv.findByName("English"),
-                    languageSrv.findByName("Russian"),
-                    wordClassSrv.findByName("expression")
-            );
+            insertData();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+    }
+
+    private static void renewDatabaseContent() {
+        try {
+            dropTables();
+            runHibernate();
+            insertLanguagesAndClassesInfo();
+            insertData();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void dropTables() throws SQLException {
+        String dropWMR = "DROP TABLE word_meaning_relationships;";
+        String dropWCR = "DROP TABLE word_collection_relationships;";
+        String dropWords = "DROP TABLE words;";
+        String dropClasses = "DROP TABLE word_classes;";
+        String dropCollections = "DROP TABLE word_collections;";
+        String dropLanguages = "DROP TABLE languages;";
+
+        PreparedStatement statement = DatabaseManager.connection.prepareStatement(dropWMR);
+
+        statement.addBatch(dropWCR);
+        statement.addBatch(dropWords);
+        statement.addBatch(dropClasses);
+        statement.addBatch(dropCollections);
+        statement.addBatch(dropLanguages);
+
+        statement.executeBatch();
     }
 
     private static void runHibernate() {
@@ -68,6 +70,43 @@ public class BLMain {
                 .createEntityManagerFactory("org.hibernate.tutorial.jpa")
                 .createEntityManager();
     }
+
+    private static void insertLanguagesAndClassesInfo() throws SQLException {
+        DatabaseSetup databaseSetup = new DatabaseSetup();
+        databaseSetup.setUpDatabase();
+
+    }
+
+    private static void insertData() throws SQLException {
+        LanguageSrv languageSrv = ServiceFactory.createLanguageService();
+        WordClassSrv wordClassSrv = ServiceFactory.createWordClassService();
+        WordsCollectionsManager.persistCollectionIntoDatabase(
+                "D:\\desktop\\words_collections\\ger\\Adjective aus Kopien.txt",
+                languageSrv.findByName("German"),
+                languageSrv.findByName("Russian"),
+                wordClassSrv.findByName("adjective")
+        );
+        WordsCollectionsManager.persistCollectionIntoDatabase(
+                "D:\\desktop\\words_collections\\ger\\Adjective mit Präpositionen.txt",
+                languageSrv.findByName("German"),
+                languageSrv.findByName("Russian"),
+                wordClassSrv.findByName("adjective")
+        );
+        WordsCollectionsManager.persistCollectionIntoDatabase(
+                "D:\\desktop\\words_collections\\ger\\Antonymen.txt",
+                languageSrv.findByName("German"),
+                languageSrv.findByName("Russian"),
+                wordClassSrv.findByName("noun")
+        );
+        WordsCollectionsManager.persistCollectionIntoDatabase(
+                "D:\\desktop\\words_collections\\eng\\The Financier.txt",
+                languageSrv.findByName("English"),
+                languageSrv.findByName("Russian"),
+                wordClassSrv.findByName("expression")
+        );
+
+    }
+
 
     private static void countNumOfLinesInProject() {
         try {

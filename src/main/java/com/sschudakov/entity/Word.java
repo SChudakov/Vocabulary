@@ -22,27 +22,27 @@ import javax.persistence.Table;
 @Table(name = "words")
 public class Word {
 
-    public static final String ID_COLUMN_NAME = "word_id";
-    public static final String VALUE_COLUMN_NAME = "value";
-    public static final String WORD_CLASS_COLUMN_NAME = "class";
-    public static final String LANGUAGE_COLUMN_NAME = "language";
+    public static final String ID_CN = "word_id";
+    public static final String VALUE_CN = "value";
+    public static final String WORD_CLASS_CN = "class";
+    public static final String LANGUAGE_CN = "language";
 
     @Id
-    @Column(name = ID_COLUMN_NAME)
+    @Column(name = ID_CN)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = VALUE_COLUMN_NAME)
+    @Column(name = VALUE_CN)
     private String value;
 
     @ManyToOne
-    @JoinColumn(name = WORD_CLASS_COLUMN_NAME,
-            foreignKey = @ForeignKey(name = WORD_CLASS_COLUMN_NAME))
+    @JoinColumn(name = WORD_CLASS_CN,
+            foreignKey = @ForeignKey(name = WORD_CLASS_CN))
     private WordClass wordClass;
 
     @ManyToOne
-    @JoinColumn(name = LANGUAGE_COLUMN_NAME,
-            foreignKey = @ForeignKey(name = LANGUAGE_COLUMN_NAME))
+    @JoinColumn(name = LANGUAGE_CN,
+            foreignKey = @ForeignKey(name = LANGUAGE_CN))
     private Language language;
 
 

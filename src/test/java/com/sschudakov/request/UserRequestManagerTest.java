@@ -131,7 +131,7 @@ public class UserRequestManagerTest {
     private static void insertLanguages() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO languages ")
-                .append("(").append(Language.ID_COLUMN_NAME).append(",").append(Language.NAME_COLUMN_NAME).append(")")
+                .append("(").append(Language.ID_CN).append(",").append(Language.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(englishID).append(",").append("\'" + english + "\'").append(")").append(",")
                 .append("(").append(russianID).append(",").append("\'" + russian + "\'").append(")").append(",")
@@ -144,7 +144,7 @@ public class UserRequestManagerTest {
     private static void insertCollections() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO word_collections ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append(",").append(WordCollection.NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordCollection.ID_CN).append(",").append(WordCollection.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(firstCollectionId).append(",").append("\'" + firstCollection + "\'").append(")").append(",")
                 .append("(").append(secondCollectionId).append(",").append("\'" + secondCollection + "\'").append(")").append(",")
@@ -157,7 +157,7 @@ public class UserRequestManagerTest {
     private static void insertWordClasses() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO word_classes ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append(",").append(WordClass.NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordClass.ID_CN).append(",").append(WordClass.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(nounID).append(",").append("\'" + noun + "\'").append(")").append(",")
                 .append("(").append(verbID).append(",").append("\'" + verb + "\'").append(")").append(",")
@@ -170,7 +170,7 @@ public class UserRequestManagerTest {
     private static void insertWords() throws SQLException {
         StringBuilder insertWordsQuery = new StringBuilder("");
         insertWordsQuery.append("INSERT INTO words")
-                .append("(").append(Word.ID_COLUMN_NAME).append(",").append(Word.VALUE_COLUMN_NAME).append(",").append(Word.LANGUAGE_COLUMN_NAME).append(",").append(Word.WORD_CLASS_COLUMN_NAME).append(")")
+                .append("(").append(Word.ID_CN).append(",").append(Word.VALUE_CN).append(",").append(Word.LANGUAGE_CN).append(",").append(Word.WORD_CLASS_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(wordId).append(",").append("\'" + wordValue + "\'").append(",").append(wordLanguage).append(",").append(wordClass).append(")").append(",")
                 .append("(").append(firstMeaningId).append(",").append("\'" + firstMeaningValue + "\'").append(",").append(firstMeaningLanguage).append(",").append(firstMeaningClass).append(")").append(",")
@@ -187,7 +187,7 @@ public class UserRequestManagerTest {
     private static void insertWordMeaningRelationships() throws SQLException {
         StringBuilder insertRelationshipsQuery = new StringBuilder("");
         insertRelationshipsQuery.append("INSERT INTO word_meaning_relationships ")
-                .append("(").append(WordMeaningRelationship.ID_COLUMN_NAME).append(",").append(WordMeaningRelationship.WORD_COLUMN_NAME).append(",").append(WordMeaningRelationship.MEANING_COLUMN_NAME).append(")")
+                .append("(").append(WordMeaningRelationship.ID_CN).append(",").append(WordMeaningRelationship.WORD_CN).append(",").append(WordMeaningRelationship.MEANING_COLUMN_NAME).append(")")
                 .append(" VALUES ")
                 .append("(").append(wordFirstMeaningRelationshipId).append(",").append(wordId).append(",").append(firstMeaningId).append(")").append(",")
                 .append("(").append(firstMeaningWordRelationshipId).append(",").append(firstMeaningId).append(",").append(wordId).append(")").append(",")
@@ -202,7 +202,7 @@ public class UserRequestManagerTest {
         StringBuilder insertCollectionsRelationshipsQuery = new StringBuilder("");
         insertCollectionsRelationshipsQuery
                 .append("INSERT INTO word_collection_relationships")
-                .append("(").append(WordCollectionRelationship.ID_COLUMN_NAME).append(",").append(WordCollectionRelationship.WORD_COLUMN_NAME).append(",").append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append(")")
+                .append("(").append(WordCollectionRelationship.ID_CN).append(",").append(WordCollectionRelationship.WORD_CN).append(",").append(WordCollectionRelationship.COLLECTION_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(wordFirstCollectionRelationshipId).append(",").append(wordId).append(",").append(firstCollectionId).append(")").append(",")
                 .append("(").append(wordSecondCollectionRelationshipId).append(",").append(wordId).append(",").append(secondCollectionId).append(")").append(",")
@@ -220,17 +220,17 @@ public class UserRequestManagerTest {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM languages")
                 .append(" WHERE ")
-                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(englishID)
+                .append("(").append(Language.ID_CN).append("=").append(englishID)
                 .append(" AND ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + english + "\'").append(")")
+                .append(Language.NAME_CN).append("=").append("\'" + english + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(russianID)
+                .append("(").append(Language.ID_CN).append("=").append(russianID)
                 .append(" AND ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + russian + "\'").append(")")
+                .append(Language.NAME_CN).append("=").append("\'" + russian + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(germanID)
+                .append("(").append(Language.ID_CN).append("=").append(germanID)
                 .append(" AND ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + german + "\'").append(")");
+                .append(Language.NAME_CN).append("=").append("\'" + german + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -240,17 +240,17 @@ public class UserRequestManagerTest {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM word_collections")
                 .append(" WHERE ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(firstCollectionId)
+                .append("(").append(WordCollection.ID_CN).append("=").append(firstCollectionId)
                 .append(" AND ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + firstCollection + "\'").append(")")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + firstCollection + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(secondCollectionId)
+                .append("(").append(WordCollection.ID_CN).append("=").append(secondCollectionId)
                 .append(" AND ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + secondCollection + "\'").append(")")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + secondCollection + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(thirdCollectionId)
+                .append("(").append(WordCollection.ID_CN).append("=").append(thirdCollectionId)
                 .append(" AND ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + thirdCollection + "\'").append(")");
+                .append(WordCollection.NAME_CN).append("=").append("\'" + thirdCollection + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -260,17 +260,17 @@ public class UserRequestManagerTest {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM word_classes")
                 .append(" WHERE ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(nounID)
+                .append("(").append(WordClass.ID_CN).append("=").append(nounID)
                 .append(" AND ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + noun + "\'").append(")")
+                .append(WordClass.NAME_CN).append("=").append("\'" + noun + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(verbID)
+                .append("(").append(WordClass.ID_CN).append("=").append(verbID)
                 .append(" AND ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + verb + "\'").append(")")
+                .append(WordClass.NAME_CN).append("=").append("\'" + verb + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(adverbID)
+                .append("(").append(WordClass.ID_CN).append("=").append(adverbID)
                 .append(" AND ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + adverb + "\'").append(")");
+                .append(WordClass.NAME_CN).append("=").append("\'" + adverb + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -280,17 +280,17 @@ public class UserRequestManagerTest {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM words")
                 .append(" WHERE ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(wordId)
+                .append(Word.ID_CN).append("=").append(wordId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(firstMeaningId)
+                .append(Word.ID_CN).append("=").append(firstMeaningId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(secondMeaningId)
+                .append(Word.ID_CN).append("=").append(secondMeaningId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(thirdMeaningId)
+                .append(Word.ID_CN).append("=").append(thirdMeaningId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(additionalMeaningId)
+                .append(Word.ID_CN).append("=").append(additionalMeaningId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(wordWithNoMeaningsId);
+                .append(Word.ID_CN).append("=").append(wordWithNoMeaningsId);
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -300,13 +300,13 @@ public class UserRequestManagerTest {
         StringBuilder deleteWordMeaningRelationshipsQuery = new StringBuilder("");
         deleteWordMeaningRelationshipsQuery.append("DELETE FROM word_meaning_relationships ")
                 .append(" WHERE ")
-                .append(WordMeaningRelationship.ID_COLUMN_NAME).append("=").append(wordFirstMeaningRelationshipId)
+                .append(WordMeaningRelationship.ID_CN).append("=").append(wordFirstMeaningRelationshipId)
                 .append(" OR ")
-                .append(WordMeaningRelationship.ID_COLUMN_NAME).append("=").append(firstMeaningWordRelationshipId)
+                .append(WordMeaningRelationship.ID_CN).append("=").append(firstMeaningWordRelationshipId)
                 .append(" OR ")
-                .append(WordMeaningRelationship.ID_COLUMN_NAME).append("=").append(wordSecondMeaningRelationshipId)
+                .append(WordMeaningRelationship.ID_CN).append("=").append(wordSecondMeaningRelationshipId)
                 .append(" OR ")
-                .append(WordMeaningRelationship.ID_COLUMN_NAME).append("=").append(wordThirdMeaningRelationshipId);
+                .append(WordMeaningRelationship.ID_CN).append("=").append(wordThirdMeaningRelationshipId);
         printDeleteQuery(deleteWordMeaningRelationshipsQuery.toString());
         PreparedStatement insertRelationshipsStatement = DatabaseManager.connection.prepareStatement(deleteWordMeaningRelationshipsQuery.toString());
         insertRelationshipsStatement.execute();
@@ -318,19 +318,19 @@ public class UserRequestManagerTest {
         deleteCollectionsRelationshipsQuery
                 .append("DELETE FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordFirstCollectionRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(wordFirstCollectionRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordSecondMeaningRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(wordSecondMeaningRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordThirdCollectionRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(wordThirdCollectionRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(firstMeaningWordRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(firstMeaningWordRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(firstMeaningFirstCollectionRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(firstMeaningFirstCollectionRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(secondMeaningFirstCollectionRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(secondMeaningFirstCollectionRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(thirdMeaningFirstCollectionRelationshipId);
+                .append(WordCollectionRelationship.ID_CN).append("=").append(thirdMeaningFirstCollectionRelationshipId);
         printDeleteQuery(deleteCollectionsRelationshipsQuery.toString());
         PreparedStatement insertCollectionsRelationshipsStatement = DatabaseManager.connection.prepareStatement(deleteCollectionsRelationshipsQuery.toString());
         insertCollectionsRelationshipsStatement.execute();
@@ -427,14 +427,14 @@ public class UserRequestManagerTest {
         StringBuilder checkQuery = new StringBuilder("");
         checkQuery.append("SELECT * FROM words")
                 .append(" WHERE ")
-                .append(Word.VALUE_COLUMN_NAME).append("=").append("\'" + createdWordValue + "\'")
+                .append(Word.VALUE_CN).append("=").append("\'" + createdWordValue + "\'")
                 .append(" AND ")
-                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(createdWordLanguage);
+                .append(Word.LANGUAGE_CN).append("=").append(createdWordLanguage);
 
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM words")
                 .append(" WHERE ")
-                .append(Word.VALUE_COLUMN_NAME).append("=").append("\'" + createdWordValue + "\'");
+                .append(Word.VALUE_CN).append("=").append("\'" + createdWordValue + "\'");
 
         String anotherWordClass = adverb;
         int anotherWordClassId = adverbID;
@@ -447,9 +447,9 @@ public class UserRequestManagerTest {
             ResultSet resultSet = checkStatement.getResultSet();
 
             Assert.assertEquals(true, resultSet.next());
-            Assert.assertEquals(createdWordValue, resultSet.getString(Word.VALUE_COLUMN_NAME));
-            Assert.assertEquals(createdWordClass, resultSet.getInt(Word.WORD_CLASS_COLUMN_NAME));
-            Assert.assertEquals(createdWordLanguage, resultSet.getInt(Word.LANGUAGE_COLUMN_NAME));
+            Assert.assertEquals(createdWordValue, resultSet.getString(Word.VALUE_CN));
+            Assert.assertEquals(createdWordClass, resultSet.getInt(Word.WORD_CLASS_CN));
+            Assert.assertEquals(createdWordLanguage, resultSet.getInt(Word.LANGUAGE_CN));
             Assert.assertEquals(false, resultSet.next());
 
 
@@ -459,9 +459,9 @@ public class UserRequestManagerTest {
             ResultSet secondResultSet = secondCheckStatement.getResultSet();
 
             Assert.assertEquals(true, secondResultSet.next());
-            Assert.assertEquals(createdWordValue, secondResultSet.getString(Word.VALUE_COLUMN_NAME));
-            Assert.assertEquals(anotherWordClassId, secondResultSet.getInt(Word.WORD_CLASS_COLUMN_NAME));
-            Assert.assertEquals(createdWordLanguage, secondResultSet.getInt(Word.LANGUAGE_COLUMN_NAME));
+            Assert.assertEquals(createdWordValue, secondResultSet.getString(Word.VALUE_CN));
+            Assert.assertEquals(anotherWordClassId, secondResultSet.getInt(Word.WORD_CLASS_CN));
+            Assert.assertEquals(createdWordLanguage, secondResultSet.getInt(Word.LANGUAGE_CN));
             Assert.assertEquals(false, secondResultSet.next());*//*
         } finally {
             PreparedStatement checkStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
@@ -485,12 +485,12 @@ public class UserRequestManagerTest {
         StringBuilder checkQuery = new StringBuilder("");
         checkQuery.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + createdCollectionName + "\'");
+                .append(WordCollection.NAME_CN).append("=").append("\'" + createdCollectionName + "\'");
 
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + createdCollectionName + "\'");
+                .append(WordCollection.NAME_CN).append("=").append("\'" + createdCollectionName + "\'");
 
         try {
             this.userRequestManager.createCollection(createdCollectionName);
@@ -500,7 +500,7 @@ public class UserRequestManagerTest {
             ResultSet resultSet = checkStatement.getResultSet();
 
             Assert.assertEquals(true, resultSet.next());
-            Assert.assertEquals(createdCollectionName, resultSet.getString(WordCollection.NAME_COLUMN_NAME));
+            Assert.assertEquals(createdCollectionName, resultSet.getString(WordCollection.NAME_CN));
             Assert.assertEquals(false, resultSet.next());
         } finally {
             PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
@@ -525,11 +525,11 @@ public class UserRequestManagerTest {
             checkQuery = new StringBuilder("");
             checkQuery.append("SELECT * FROM word_meaning_relationships")
                     .append(" WHERE ")
-                    .append("(").append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                    .append("(").append(WordMeaningRelationship.WORD_CN).append("=").append(wordId)
                     .append(" AND ")
                     .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(additionalMeaningId).append(")")
                     .append(" OR ")
-                    .append("(").append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(additionalMeaningId)
+                    .append("(").append(WordMeaningRelationship.WORD_CN).append("=").append(additionalMeaningId)
                     .append(" AND ")
                     .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordId).append(")");
             PreparedStatement firstCheckStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString());
@@ -542,9 +542,9 @@ public class UserRequestManagerTest {
             StringBuilder deleteQuery = new StringBuilder("");
             deleteQuery.append("DELETE FROM word_meaning_relationships")
                     .append(" WHERE ")
-                    .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                    .append(WordMeaningRelationship.WORD_CN).append("=").append(wordId)
                     .append(" OR ")
-                    .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(additionalMeaningId);
+                    .append(WordMeaningRelationship.WORD_CN).append("=").append(additionalMeaningId);
             PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
             deleteStatement.execute();
         }*//*
@@ -567,7 +567,7 @@ public class UserRequestManagerTest {
         StringBuilder firstCheckQuery = new StringBuilder("");
         firstCheckQuery.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
-                .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append(WordMeaningRelationship.WORD_CN).append("=").append(wordId)
                 .append(" AND ")
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(firstMeaningId);
         PreparedStatement firstCheckStatement = DatabaseManager.connection.prepareStatement(firstCheckQuery.toString());
@@ -578,7 +578,7 @@ public class UserRequestManagerTest {
         StringBuilder secondCheckQuery = new StringBuilder("");
         secondCheckQuery.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
-                .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(firstMeaningId)
+                .append(WordMeaningRelationship.WORD_CN).append("=").append(firstMeaningId)
                 .append(" AND ")
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordId);
         PreparedStatement secondCheckStatement = DatabaseManager.connection.prepareStatement(secondCheckQuery.toString());
@@ -606,9 +606,9 @@ public class UserRequestManagerTest {
         StringBuilder zeroCheckQuery = new StringBuilder("");
         zeroCheckQuery.append("SELECT * FROM words")
                 .append(" WHERE ")
-                .append(Word.VALUE_COLUMN_NAME).append("=").append("\'" + firstMeaningValue + "\'")
+                .append(Word.VALUE_CN).append("=").append("\'" + firstMeaningValue + "\'")
                 .append(" AND ")
-                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(russianID);
+                .append(Word.LANGUAGE_CN).append("=").append(russianID);
         PreparedStatement zeroCheckStatement = DatabaseManager.connection.prepareStatement(zeroCheckQuery.toString());
         zeroCheckStatement.execute();
         ResultSet zeroResultSet = zeroCheckStatement.getResultSet();
@@ -618,7 +618,7 @@ public class UserRequestManagerTest {
         StringBuilder firstCheckQuery = new StringBuilder("");
         firstCheckQuery.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
-                .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append(WordMeaningRelationship.WORD_CN).append("=").append(wordId)
                 .append(" AND ")
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(firstMeaningId);
         PreparedStatement firstCheckStatement = DatabaseManager.connection.prepareStatement(firstCheckQuery.toString());
@@ -629,7 +629,7 @@ public class UserRequestManagerTest {
         StringBuilder secondCheckQuery = new StringBuilder("");
         secondCheckQuery.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
-                .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(firstMeaningId)
+                .append(WordMeaningRelationship.WORD_CN).append("=").append(firstMeaningId)
                 .append(" AND ")
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordId);
         PreparedStatement secondCheckStatement = DatabaseManager.connection.prepareStatement(secondCheckQuery.toString());
@@ -641,9 +641,9 @@ public class UserRequestManagerTest {
         StringBuilder thirdCheckQuery = new StringBuilder("");
         thirdCheckQuery.append("SELECT * FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(firstMeaningId)
+                .append(WordCollectionRelationship.WORD_CN).append("=").append(firstMeaningId)
                 .append(" AND ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(firstCollectionId);
+                .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(firstCollectionId);
         PreparedStatement thirdCheckStatement = DatabaseManager.connection.prepareStatement(thirdCheckQuery.toString());
         thirdCheckStatement.execute();
         ResultSet thirdResultSet = secondCheckStatement.getResultSet();
@@ -667,7 +667,7 @@ public class UserRequestManagerTest {
         StringBuilder checkQuery = new StringBuilder("");
         checkQuery.append("SELECT * FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(firstCollectionId);
+                .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(firstCollectionId);
         PreparedStatement checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString());
         checkStatement.execute();
         ResultSet checkResultSet = checkStatement.getResultSet();
@@ -693,9 +693,9 @@ public class UserRequestManagerTest {
             StringBuilder checkQuery = new StringBuilder("");
             checkQuery.append("SELECT * FROM word_collection_relationships")
                     .append(" WHERE ")
-                    .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(firstMeaningId)
+                    .append(WordCollectionRelationship.WORD_CN).append("=").append(firstMeaningId)
                     .append(" AND ")
-                    .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(secondCollectionId);
+                    .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(secondCollectionId);
             PreparedStatement checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString());
             checkStatement.execute();
             ResultSet checkResultSet = checkStatement.getResultSet();
@@ -705,9 +705,9 @@ public class UserRequestManagerTest {
             StringBuilder deleteQuery = new StringBuilder("");
             deleteQuery.append("DELETE FROM word_collection_relationships")
                     .append(" WHERE ")
-                    .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(firstMeaningId)
+                    .append(WordCollectionRelationship.WORD_CN).append("=").append(firstMeaningId)
                     .append(" AND ")
-                    .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(secondCollectionId);
+                    .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(secondCollectionId);
             PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
             deleteStatement.execute();
         }
@@ -730,9 +730,9 @@ public class UserRequestManagerTest {
         StringBuilder checkQuery = new StringBuilder("");
         checkQuery.append("SELECT * FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordId)
+                .append(WordCollectionRelationship.WORD_CN).append("=").append(wordId)
                 .append(" AND ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(firstCollectionId);
+                .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(firstCollectionId);
         PreparedStatement checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString());
         checkStatement.execute();
         ResultSet checkResultSet = checkStatement.getResultSet();

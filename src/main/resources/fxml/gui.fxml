@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="mainGP" alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <TabPane fx:id="mainTP" prefHeight="655.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="wordsT" text="words">
+                    <content>
+                        <AnchorPane fx:id="wordsAP" minHeight="0.0" minWidth="0.0" prefHeight="628.0" prefWidth="600.0">
+                            <children>
+                                <Label fx:id="wordsWordLanguageL" layoutX="18.0" layoutY="14.0" prefHeight="25.0" prefWidth="130.0" text="Language" />
+                                <ComboBox fx:id="wordsWordLanguageCB" layoutX="18.0" layoutY="49.0" prefHeight="25.0" prefWidth="274.0" promptText="language" />
+                                <TextField fx:id="wordsWordValueTF" layoutX="18.0" layoutY="86.0" prefHeight="25.0" prefWidth="564.0" promptText="word">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <Button fx:id="wordsSaveWordB" layoutX="18.0" layoutY="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="280.0" text="Save word" />
+                                <Button fx:id="wordsDeleteWordB" layoutX="303.0" layoutY="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="280.0" text="DeleteWord" />
+                                <Label fx:id="wordsWordClassL" layoutX="303.0" layoutY="14.0" prefHeight="25.0" prefWidth="130.0" text="Word class" />
+                                <Label fx:id="wordsCollectionsL" layoutX="303.0" layoutY="152.0" prefHeight="25.0" prefWidth="130.0" text="Collecitons" />
+                                <ComboBox fx:id="wordsWordClassCB" layoutX="303.0" layoutY="49.0" prefHeight="25.0" prefWidth="280.0" promptText="word class" />
+                                <Label fx:id="wordsMeaningsLanguageL" layoutX="18.0" layoutY="152.0" prefHeight="25.0" prefWidth="130.0" text="Meanings langauge" />
+                                <ComboBox fx:id="wordsMeaningsLanguageCB" layoutX="18.0" layoutY="181.0" prefHeight="25.0" prefWidth="280.0" promptText="meaning language" />
+                                <Label fx:id="wordsMeaningsL" layoutX="18.0" layoutY="217.0" prefHeight="25.0" prefWidth="130.0" text="Meanigns" />
+                                <ListView fx:id="wordsMeaningsLV" layoutX="18.0" layoutY="250.0" prefHeight="281.0" prefWidth="280.0" />
+                                <Button fx:id="wordAddMeaningB" layoutX="18.0" layoutY="582.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Add meaning" />
+                                <Button fx:id="wordsRemoveMeaningB" layoutX="168.0" layoutY="582.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Remove meaning" />
+                                <TextField fx:id="wordsMeaningValueTF" layoutX="18.0" layoutY="545.0" prefHeight="25.0" prefWidth="280.0" promptText="meaning">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TableView layoutX="303.0" layoutY="181.0" prefHeight="349.0" prefWidth="279.0">
+                                    <columns>
+                                        <TableColumn fx:id="wordsCollectionsTV" prefWidth="236.0" text="C1" />
+                                        <TableColumn prefWidth="41.0" text="C2" />
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="wordsCreateCollectionB" layoutX="303.0" layoutY="582.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="280.0" text="Create colleciton" />
+                                <TextField fx:id="wordsCollectionsNameTF" layoutX="303.0" layoutY="545.0" prefHeight="25.0" prefWidth="280.0" promptText="collection">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="collectinsT" text="collections">
+                    <content>
+                        <AnchorPane fx:id="collecitonsAP" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="collectionsCollectionNameTF" layoutX="12.0" layoutY="28.0" prefHeight="25.0" prefWidth="430.0" promptText="collection">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font>
+                                </TextField>
+                                <Button fx:id="collectionsCreateCollectionB" layoutX="450.0" layoutY="28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="Create colelction" />
+                                <Label fx:id="collectionsCollectionNameCB" layoutX="14.0" layoutY="66.0" prefHeight="25.0" prefWidth="131.0" text="Colleciton" />
+                                <Label fx:id="collectionsLanguageL" layoutX="300.0" layoutY="70.0" prefHeight="25.0" prefWidth="130.0" text="Language" />
+                                <ComboBox fx:id="collectionsCollectionNameL" layoutX="14.0" layoutY="107.0" prefHeight="25.0" prefWidth="270.0" promptText="collections" />
+                                <ComboBox fx:id="collectionsLanguageCB" layoutX="300.0" layoutY="107.0" prefHeight="25.0" prefWidth="287.0" promptText="language" />
+                                <Button fx:id="collectionsDeleteCollectionB" layoutX="14.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="269.0" text="Delete colleciton" />
+                                <Button fx:id="collectionsRemoveWordB" layoutX="300.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="287.0" text="Remove word" />
+                                <ListView fx:id="collectionsCollectionWordLV" layoutX="14.0" layoutY="198.0" prefHeight="412.0" prefWidth="573.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="languagesT" text="languages">
+                    <content>
+                        <AnchorPane fx:id="languagesAP" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label fx:id="languagesWordsLanguageL" layoutX="14.0" layoutY="19.0" prefHeight="25.0" prefWidth="130.0" text="Words language" />
+                                <Label fx:id="languagesMMeaningsLanguageL" layoutX="300.0" layoutY="19.0" prefHeight="25.0" prefWidth="130.0" text="Meanings language" />
+                                <ComboBox fx:id="languagesMeaningsLanguageCB" layoutX="300.0" layoutY="62.0" prefHeight="25.0" prefWidth="289.0" promptText="meanigns language" />
+                                <ComboBox fx:id="languagesWordsLanguageCB" layoutX="14.0" layoutY="62.0" prefHeight="25.0" prefWidth="279.0" promptText="words langauge" />
+                                <TableView fx:id="languagesWordsMeaningsTV" layoutX="14.0" layoutY="127.0" prefHeight="481.0" prefWidth="574.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</GridPane>

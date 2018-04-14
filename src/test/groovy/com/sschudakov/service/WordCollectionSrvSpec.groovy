@@ -32,7 +32,7 @@ class WordCollectionSrvSpec extends Specification {
 
         StringBuilder insertQuery = new StringBuilder("")
         insertQuery.append("INSERT INTO word_collections ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append(",").append(WordCollection.NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordCollection.ID_CN).append(",").append(WordCollection.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(firstCollectionId).append(",").append("\'" + firstCollection + "\'").append(")").append(",")
                 .append("(").append(secondCollectionId).append(",").append("\'" + secondCollection + "\'").append(")").append("")
@@ -45,13 +45,13 @@ class WordCollectionSrvSpec extends Specification {
         StringBuilder deleteQuery = new StringBuilder("")
         deleteQuery.append("DELETE FROM word_collections")
                 .append(" WHERE ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(firstCollectionId)
+                .append("(").append(WordCollection.ID_CN).append("=").append(firstCollectionId)
                 .append(" AND ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + firstCollection + "\'").append(")")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + firstCollection + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(secondCollectionId)
+                .append("(").append(WordCollection.ID_CN).append("=").append(secondCollectionId)
                 .append(" AND ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + secondCollection + "\'").append(")")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + secondCollection + "\'").append(")")
         println deleteQuery
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString())
         deleteStatement.execute()
@@ -62,7 +62,7 @@ class WordCollectionSrvSpec extends Specification {
         def checkQuery = new StringBuilder("")
         checkQuery.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + thirdCollection + "\'")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + thirdCollection + "\'")
         def checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString())
         def resultSet
 
@@ -81,7 +81,7 @@ class WordCollectionSrvSpec extends Specification {
         def checkQuery = new StringBuilder("")
         checkQuery.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + firstCollection + "\'")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + firstCollection + "\'")
         def checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString())
         def resultSet
 
@@ -107,7 +107,7 @@ class WordCollectionSrvSpec extends Specification {
         def checkQuery = new StringBuilder("")
         checkQuery.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + thirdCollectionNewName + "\'")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + thirdCollectionNewName + "\'")
         def checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString())
         def resultSet
 
@@ -140,7 +140,7 @@ class WordCollectionSrvSpec extends Specification {
         def checkQuery = new StringBuilder("")
         checkQuery.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + thirdCollectionNewName + "\'")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + thirdCollectionNewName + "\'")
         def checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString())
         def resultSet
 

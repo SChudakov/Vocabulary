@@ -3,11 +3,12 @@ package com.sschudakov.dao.interf;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordMeaningRelationship;
+import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-
+@Repository
 public interface WMRDao {
 
 

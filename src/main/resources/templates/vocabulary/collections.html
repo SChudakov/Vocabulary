@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>collections</title>
+    </head>
+    <body>
+        <form th:action="@{/collections/collectionInfo}" method="get">
+            <input type="text" th:name="collectionName" th:placeholder="collectionsName"/><br>
+            <input type="submit" value="find"/>
+        </form>
+    </body>
+</html>

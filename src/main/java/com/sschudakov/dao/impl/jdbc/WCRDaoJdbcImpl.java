@@ -9,13 +9,15 @@ import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
 import com.sschudakov.logging.LoggersManager;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class WCRDaoJdbcImpl implements WCRDao {
 
 
@@ -39,12 +41,12 @@ public class WCRDaoJdbcImpl implements WCRDao {
     public void save(WordCollectionRelationship wordCollectionRelationship) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("INSERT INTO word_collection_relationships")
-                .append("(").append(WordCollectionRelationship.WORD_COLUMN_NAME).append(",")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append(")")
+                .append("(").append(WordCollectionRelationship.WORD_CN).append(",")
+                .append(WordCollectionRelationship.COLLECTION_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(wordCollectionRelationship.getWord().getId()).append(",")
                 .append(wordCollectionRelationship.getWordCollection().getId()).append(")").append(";");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -57,11 +59,11 @@ public class WCRDaoJdbcImpl implements WCRDao {
         StringBuilder query = new StringBuilder("");
         query.append("UPDATE word_collection_relationships")
                 .append(" SET ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(wordCollectionRelationship.getWord().getId()).append(",")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(wordCollectionRelationship.getWordCollection().getId())
+                .append(WordCollectionRelationship.WORD_CN).append("=").append(wordCollectionRelationship.getWord().getId()).append(",")
+                .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(wordCollectionRelationship.getWordCollection().getId())
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordCollectionRelationship.getId()).append(";");
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollectionRelationship.ID_CN).append("=").append(wordCollectionRelationship.getId()).append(";");
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         return wordCollectionRelationship;
@@ -75,8 +77,8 @@ public class WCRDaoJdbcImpl implements WCRDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(id);
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollectionRelationship.ID_CN).append("=").append(id);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
@@ -92,8 +94,8 @@ public class WCRDaoJdbcImpl implements WCRDao {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(word.getId());
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollectionRelationship.WORD_CN).append("=").append(word.getId());
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -106,8 +108,8 @@ public class WCRDaoJdbcImpl implements WCRDao {
     public List<WordCollectionRelationship> findByCollection(WordCollection collection) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships WHERE ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId());
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(collection.getId());
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -123,12 +125,12 @@ public class WCRDaoJdbcImpl implements WCRDao {
                 .append(" FROM ")
                 .append("word_collection_relationships INNER JOIN words")
                 .append(" ON ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(Word.ID_COLUMN_NAME)
+                .append(WordCollectionRelationship.WORD_CN).append("=").append(Word.ID_CN)
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId())
+                .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(collection.getId())
                 .append(" AND ")
-                .append(Word.LANGUAGE_COLUMN_NAME).append("=").append(language.getId());
-        LoggersManager.getParsingLogger().info(query);
+                .append(Word.LANGUAGE_CN).append("=").append(language.getId());
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -143,13 +145,13 @@ public class WCRDaoJdbcImpl implements WCRDao {
         WordCollectionRelationship wcr;
         while (resultSet.next()) {
             wcr = new WordCollectionRelationship();
-            wcr.setId(resultSet.getInt(WordCollectionRelationship.ID_COLUMN_NAME));
+            wcr.setId(resultSet.getInt(WordCollectionRelationship.ID_CN));
             wcr.setWord(
                     this.wordDao.findById(
-                            resultSet.getInt(WordCollectionRelationship.WORD_COLUMN_NAME)));
+                            resultSet.getInt(WordCollectionRelationship.WORD_CN)));
             wcr.setWordCollection(
                     this.wordCollectionDao.findById(
-                            resultSet.getInt(WordCollectionRelationship.COLLECTION_COLUMN_NAME)));
+                            resultSet.getInt(WordCollectionRelationship.COLLECTION_CN)));
             result.add(wcr);
         }
         return result;
@@ -160,10 +162,10 @@ public class WCRDaoJdbcImpl implements WCRDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.WORD_COLUMN_NAME).append("=").append(word.getId())
+                .append(WordCollectionRelationship.WORD_CN).append("=").append(word.getId())
                 .append(" AND ")
-                .append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append("=").append(collection.getId());
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollectionRelationship.COLLECTION_CN).append("=").append(collection.getId());
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         ResultSet resultSet = statement.getResultSet();
@@ -175,12 +177,12 @@ public class WCRDaoJdbcImpl implements WCRDao {
 
     private WordCollectionRelationship formWCR(ResultSet resultSet) throws SQLException {
         WordCollectionRelationship result = new WordCollectionRelationship();
-        result.setId(resultSet.getInt(WordCollectionRelationship.ID_COLUMN_NAME));
+        result.setId(resultSet.getInt(WordCollectionRelationship.ID_CN));
         result.setWord(this.wordDao.findById(
-                resultSet.getInt(WordCollectionRelationship.WORD_COLUMN_NAME)
+                resultSet.getInt(WordCollectionRelationship.WORD_CN)
         ));
         result.setWordCollection(this.wordCollectionDao.findById(
-                resultSet.getInt(WordCollectionRelationship.COLLECTION_COLUMN_NAME)
+                resultSet.getInt(WordCollectionRelationship.COLLECTION_CN)
         ));
         return result;
     }
@@ -190,7 +192,7 @@ public class WCRDaoJdbcImpl implements WCRDao {
     public List<WordCollectionRelationship> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collection_relationships");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -207,8 +209,8 @@ public class WCRDaoJdbcImpl implements WCRDao {
         StringBuilder query = new StringBuilder("");
         query.append("DELETE FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordCollectionRelationshipID);
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollectionRelationship.ID_CN).append("=").append(wordCollectionRelationshipID);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
     }

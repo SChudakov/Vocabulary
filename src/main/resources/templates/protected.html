@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>Protected</title>
+    </head>
+    <body>
+        <!--th:text="Title ${title}"-->
+        <!--th:text="Message ${message}"-->
+        <h1>title</h1>
+        <h1>message</h1>
+
+        <div sec:authorize="isAuthenticated()">
+            <h2 th:text=Welcome sec:authentication="name"></h2>
+
+            <a th:href="@{/logout}">log out</a>
+
+            <!--Включение маркера CSRF во всех методах PATCH, POST, PUT и DELETE.
+            Один из способов приблизиться к этому - использовать
+            атрибут запроса _csrf для получения текущего CsrfToken-->
+
+            <form action="${logoutUrl}" id="logout" method="post">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <input type="submit" name="submit" value="Log Out">
+            </form>
+        </div>
+
+        <div sec:authorize="hasRole('ROLE_ADMIN')">
+            This content is only shown to administrators.
+        </div>
+
+        <div sec:authorize="hasRole('ROLE_USER')">
+            This content is only shown to users.
+        </div>
+
+        <div>Get <a th:href="@{/protected}">protected</a> resource for admin.</div>
+        <div>Get <a th:href="@{/confidential}">confidential</a> resource for super-admin.</div>
+
+    </body>
+</html>

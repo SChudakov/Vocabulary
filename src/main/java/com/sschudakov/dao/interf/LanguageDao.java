@@ -1,10 +1,12 @@
 package com.sschudakov.dao.interf;
 
 import com.sschudakov.entity.Language;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
 import java.util.List;
-
+@Repository
 public interface LanguageDao {
 
 

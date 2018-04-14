@@ -5,13 +5,15 @@ import com.sschudakov.database.DatabaseCache;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.Language;
 import com.sschudakov.logging.LoggersManager;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class LanguageDaoJdbcImpl implements LanguageDao {
 
 
@@ -21,10 +23,10 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
     public void save(Language language) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("INSERT INTO languages ")
-                .append("(").append(Language.NAME_COLUMN_NAME).append(")")
+                .append("(").append(Language.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append("\'" + language.getLanguageName() + "\'").append(")").append(";");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -37,10 +39,10 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         /*StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM languages ")
                 .append(" WHERE ")
-                .append(Language.ID_COLUMN_NAME).append("=").append(id);
+                .append(Language.ID_CN).append("=").append(id);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         ResultSet resultSet = selectStatement.getResultSet();
 
         if (!resultSet.next()) {
@@ -55,8 +57,8 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM languages")
                 .append(" WHERE ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + name + "\'");
-        LoggersManager.getParsingLogger().info(query);
+                .append(Language.NAME_CN).append("=").append("\'" + name + "\'");
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -76,8 +78,8 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
 
     private Language formLanguage(ResultSet resultSet) throws SQLException {
         Language result = new Language();
-        result.setId(resultSet.getInt(Language.ID_COLUMN_NAME));
-        result.setLanguageName(resultSet.getString(Language.NAME_COLUMN_NAME));
+        result.setId(resultSet.getInt(Language.ID_CN));
+        result.setLanguageName(resultSet.getString(Language.NAME_CN));
         return result;
     }
 
@@ -86,7 +88,7 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
     public List<Language> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM languages");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -99,8 +101,8 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         List<Language> result = new ArrayList<>();
         while (resultSet.next()) {
             Language language = new Language();
-            language.setId(resultSet.getInt(Language.ID_COLUMN_NAME));
-            language.setLanguageName(resultSet.getString(Language.NAME_COLUMN_NAME));
+            language.setId(resultSet.getInt(Language.ID_CN));
+            language.setLanguageName(resultSet.getString(Language.NAME_CN));
             result.add(language);
         }
         return result;

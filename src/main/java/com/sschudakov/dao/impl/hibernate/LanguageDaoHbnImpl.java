@@ -3,6 +3,7 @@ package com.sschudakov.dao.impl.hibernate;
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Language_;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -12,6 +13,8 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 import java.util.List;
+
+@Repository
 
 public class LanguageDaoHbnImpl implements LanguageDao {
 

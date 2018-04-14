@@ -4,9 +4,11 @@ import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
+import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
 import java.util.List;
+@Repository
 
 public interface WCRDao {
 

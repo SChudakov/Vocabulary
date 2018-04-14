@@ -23,7 +23,7 @@ class WordClassSrvSpec extends Specification {
         this.wordClassSrv = new WordClassSrv()
         StringBuilder insertQuery = new StringBuilder("")
         insertQuery.append("INSERT INTO word_classes ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append(",").append(WordClass.NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordClass.ID_CN).append(",").append(WordClass.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(nounID).append(",").append("\'" + noun + "\'").append(")").append(",")
                 .append("(").append(verbID).append(",").append("\'" + verb + "\'").append(")").append(";")
@@ -36,13 +36,13 @@ class WordClassSrvSpec extends Specification {
         StringBuilder deleteQuery = new StringBuilder("")
         deleteQuery.append("DELETE FROM word_classes")
                 .append(" WHERE ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(nounID)
+                .append("(").append(WordClass.ID_CN).append("=").append(nounID)
                 .append(" AND ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + noun + "\'").append(")")
+                .append(WordClass.NAME_CN).append("=").append("\'" + noun + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(verbID)
+                .append("(").append(WordClass.ID_CN).append("=").append(verbID)
                 .append(" AND ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + verb + "\'").append(")")
+                .append(WordClass.NAME_CN).append("=").append("\'" + verb + "\'").append(")")
         println deleteQuery
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString())
         deleteStatement.execute()
@@ -54,13 +54,13 @@ class WordClassSrvSpec extends Specification {
         def checkQuery = new StringBuilder("")
         checkQuery.append("SELECT * FROM word_classes")
                 .append(" WHERE ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + adverb + "\'")
+                .append(WordClass.NAME_CN).append("=").append("\'" + adverb + "\'")
         def checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString())
         and: "a query that deletes created word class"
         def deleteQuery = new StringBuilder("")
         deleteQuery.append("DELETE FROM word_classes")
                 .append(" WHERE ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + adverb + "\'")
+                .append(WordClass.NAME_CN).append("=").append("\'" + adverb + "\'")
         def deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString())
         def resultSet
 
@@ -80,7 +80,7 @@ class WordClassSrvSpec extends Specification {
         def checkQuery = new StringBuilder("")
         checkQuery.append("SELECT * FROM word_classes")
                 .append(" WHERE ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + noun + "\'")
+                .append(WordClass.NAME_CN).append("=").append("\'" + noun + "\'")
         def checkStatement = DatabaseManager.connection.prepareStatement(checkQuery.toString())
         def resultSet
 

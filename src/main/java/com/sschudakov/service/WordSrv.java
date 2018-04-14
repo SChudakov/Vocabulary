@@ -3,19 +3,29 @@ package com.sschudakov.service;
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WMRDao;
 import com.sschudakov.dao.interf.WordDao;
-import com.sschudakov.entity.*;
+import com.sschudakov.entity.Language;
+import com.sschudakov.entity.Word;
+import com.sschudakov.entity.WordClass;
+import com.sschudakov.entity.WordCollection;
+import com.sschudakov.entity.WordCollectionRelationship;
+import com.sschudakov.entity.WordMeaningRelationship;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Service
 public class WordSrv {
 
+    @Autowired
     private WordDao wordDao;
+    @Autowired
     private WMRDao wmrDao;
+    @Autowired
     private WCRDao wcrDao;
 
 
@@ -105,10 +115,10 @@ public class WordSrv {
         List<Word> wordsList = this.wordDao.findByLanguage(wordsLanguage);
         this.wmrDao.findWordsMeanings(wordsList, meaningsLanguage)
                 .entrySet().forEach(entry ->
-            result.put(
-                    entry.getKey().getValue(),
-                    entry.getValue().stream().map(Word::getValue).collect(Collectors.toList())
-            ));
+                result.put(
+                        entry.getKey().getValue(),
+                        entry.getValue().stream().map(Word::getValue).collect(Collectors.toList())
+                ));
         return result;
     }
 

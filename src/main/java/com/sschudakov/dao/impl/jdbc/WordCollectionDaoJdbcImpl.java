@@ -4,13 +4,15 @@ import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.logging.LoggersManager;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
 
 
@@ -20,10 +22,10 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
     public void save(WordCollection wordCollection) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("INSERT INTO word_collections ")
-                .append("(").append(WordCollection.NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordCollection.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append("\'" + wordCollection.getCollectionName() + "\'").append(")").append(";");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -36,10 +38,10 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         StringBuilder query = new StringBuilder("");
         query.append("UPDATE word_collections")
                 .append(" SET ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + wordCollection.getCollectionName() + "\'")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + wordCollection.getCollectionName() + "\'")
                 .append(" WHERE ")
-                .append(WordCollection.ID_COLUMN_NAME).append("=").append(wordCollection.getId()).append(";");
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollection.ID_CN).append("=").append(wordCollection.getId()).append(";");
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         return wordCollection;
@@ -53,8 +55,8 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collections ")
                 .append(" WHERE ")
-                .append(WordCollection.ID_COLUMN_NAME).append("=").append(id);
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollection.ID_CN).append("=").append(id);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
@@ -71,8 +73,8 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + name + "\'");
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollection.NAME_CN).append("=").append("\'" + name + "\'");
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -93,8 +95,8 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
 
     private WordCollection formWordCollection(ResultSet resultSet) throws SQLException {
         WordCollection result = new WordCollection();
-        result.setId(resultSet.getInt(WordCollection.ID_COLUMN_NAME));
-        result.setCollectionName(resultSet.getString(WordCollection.NAME_COLUMN_NAME));
+        result.setId(resultSet.getInt(WordCollection.ID_CN));
+        result.setCollectionName(resultSet.getString(WordCollection.NAME_CN));
         return result;
     }
 
@@ -102,7 +104,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
     public List<WordCollection> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collections");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -115,8 +117,8 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         List<WordCollection> result = new ArrayList<>();
         while (resultSet.next()) {
             WordCollection wordCollection = new WordCollection();
-            wordCollection.setId(resultSet.getInt(WordCollection.ID_COLUMN_NAME));
-            wordCollection.setCollectionName(resultSet.getString(WordCollection.NAME_COLUMN_NAME));
+            wordCollection.setId(resultSet.getInt(WordCollection.ID_CN));
+            wordCollection.setCollectionName(resultSet.getString(WordCollection.NAME_CN));
             result.add(wordCollection);
         }
         return result;
@@ -130,8 +132,8 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         StringBuilder query = new StringBuilder("");
         query.append("DELETE FROM word_collections")
                 .append(" WHERE ")
-                .append(WordCollection.ID_COLUMN_NAME).append("=").append(wordCollectionID);
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordCollection.ID_CN).append("=").append(wordCollectionID);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
     }

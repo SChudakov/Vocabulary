@@ -107,7 +107,7 @@ class WordSrvSpec extends Specification {
     def insertLanguages() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO languages ")
-                .append("(").append(Language.ID_COLUMN_NAME).append(",").append(Language.NAME_COLUMN_NAME).append(")")
+                .append("(").append(Language.ID_CN).append(",").append(Language.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(unifiedLanguageId).append(",").append("\'" + unifiedLanguage + "\'").append(")").append(",")
                 .append("(").append(russianID).append(",").append("\'" + russian + "\'").append(")").append(",")
@@ -120,7 +120,7 @@ class WordSrvSpec extends Specification {
     def insertCollections() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO word_collections ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append(",").append(WordCollection.NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordCollection.ID_CN).append(",").append(WordCollection.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(firstCollectionId).append(",").append("\'" + firstCollection + "\'").append(")").append(",")
                 .append("(").append(secondCollectionId).append(",").append("\'" + secondCollection + "\'").append(")").append(",")
@@ -133,7 +133,7 @@ class WordSrvSpec extends Specification {
     def insertWordClasses() throws SQLException {
         StringBuilder insertQuery = new StringBuilder("");
         insertQuery.append("INSERT INTO word_classes ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append(",").append(WordClass.NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordClass.ID_CN).append(",").append(WordClass.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(firstWordClassId).append(",").append("\'" + firstWordClass + "\'").append(")").append(",")
                 .append("(").append(secondWordClassId).append(",").append("\'" + secondWordClass + "\'").append(")").append(",")
@@ -146,7 +146,7 @@ class WordSrvSpec extends Specification {
     def insertWords() throws SQLException {
         StringBuilder insertWordsQuery = new StringBuilder("");
         insertWordsQuery.append("INSERT INTO words")
-                .append("(").append(Word.ID_COLUMN_NAME).append(",").append(Word.VALUE_COLUMN_NAME).append(",").append(Word.LANGUAGE_COLUMN_NAME).append(",").append(Word.WORD_CLASS_COLUMN_NAME).append(")")
+                .append("(").append(Word.ID_CN).append(",").append(Word.VALUE_CN).append(",").append(Word.LANGUAGE_CN).append(",").append(Word.WORD_CLASS_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(wordId).append(",").append("\'" + wordValue + "\'").append(",").append(wordLanguage).append(",").append(wordClass).append(")").append(",")
                 .append("(").append(firstMeaningId).append(",").append("\'" + firstMeaningValue + "\'").append(",").append(firstMeaningLanguage).append(",").append(firstMeaningClass).append(")").append(",")
@@ -178,7 +178,7 @@ class WordSrvSpec extends Specification {
         StringBuilder insertCollectionsRelationshipsQuery = new StringBuilder("");
         insertCollectionsRelationshipsQuery
                 .append("INSERT INTO word_collection_relationships")
-                .append("(").append(WordCollectionRelationship.ID_COLUMN_NAME).append(",").append(WordCollectionRelationship.WORD_COLUMN_NAME).append(",").append(WordCollectionRelationship.COLLECTION_COLUMN_NAME).append(")")
+                .append("(").append(WordCollectionRelationship.ID_CN).append(",").append(WordCollectionRelationship.WORD_CN).append(",").append(WordCollectionRelationship.COLLECTION_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append(wordFirstCollectionRelationshipId).append(",").append(wordId).append(",").append(firstCollectionId).append(")").append(",")
                 .append("(").append(wordSecondCollectionRelationshipId).append(",").append(wordId).append(",").append(secondCollectionId).append(")").append(",")
@@ -197,17 +197,17 @@ class WordSrvSpec extends Specification {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM languages")
                 .append(" WHERE ")
-                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(unifiedLanguageId)
+                .append("(").append(Language.ID_CN).append("=").append(unifiedLanguageId)
                 .append(" AND ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + unifiedLanguage + "\'").append(")")
+                .append(Language.NAME_CN).append("=").append("\'" + unifiedLanguage + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(russianID)
+                .append("(").append(Language.ID_CN).append("=").append(russianID)
                 .append(" AND ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + russian + "\'").append(")")
+                .append(Language.NAME_CN).append("=").append("\'" + russian + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(Language.ID_COLUMN_NAME).append("=").append(germanID)
+                .append("(").append(Language.ID_CN).append("=").append(germanID)
                 .append(" AND ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + german + "\'").append(")");
+                .append(Language.NAME_CN).append("=").append("\'" + german + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -217,17 +217,17 @@ class WordSrvSpec extends Specification {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM word_collections")
                 .append(" WHERE ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(firstCollectionId)
+                .append("(").append(WordCollection.ID_CN).append("=").append(firstCollectionId)
                 .append(" AND ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + firstCollection + "\'").append(")")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + firstCollection + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(secondCollectionId)
+                .append("(").append(WordCollection.ID_CN).append("=").append(secondCollectionId)
                 .append(" AND ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + secondCollection + "\'").append(")")
+                .append(WordCollection.NAME_CN).append("=").append("\'" + secondCollection + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordCollection.ID_COLUMN_NAME).append("=").append(thirdCollectionId)
+                .append("(").append(WordCollection.ID_CN).append("=").append(thirdCollectionId)
                 .append(" AND ")
-                .append(WordCollection.NAME_COLUMN_NAME).append("=").append("\'" + thirdCollection + "\'").append(")");
+                .append(WordCollection.NAME_CN).append("=").append("\'" + thirdCollection + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -237,17 +237,17 @@ class WordSrvSpec extends Specification {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM word_classes")
                 .append(" WHERE ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(firstWordClassId)
+                .append("(").append(WordClass.ID_CN).append("=").append(firstWordClassId)
                 .append(" AND ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + firstWordClass + "\'").append(")")
+                .append(WordClass.NAME_CN).append("=").append("\'" + firstWordClass + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(secondWordClassId)
+                .append("(").append(WordClass.ID_CN).append("=").append(secondWordClassId)
                 .append(" AND ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + secondWordClass + "\'").append(")")
+                .append(WordClass.NAME_CN).append("=").append("\'" + secondWordClass + "\'").append(")")
                 .append(" OR ")
-                .append("(").append(WordClass.ID_COLUMN_NAME).append("=").append(adverbID)
+                .append("(").append(WordClass.ID_CN).append("=").append(adverbID)
                 .append(" AND ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + adverb + "\'").append(")");
+                .append(WordClass.NAME_CN).append("=").append("\'" + adverb + "\'").append(")");
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -257,17 +257,17 @@ class WordSrvSpec extends Specification {
         StringBuilder deleteQuery = new StringBuilder("");
         deleteQuery.append("DELETE FROM words")
                 .append(" WHERE ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(wordId)
+                .append(Word.ID_CN).append("=").append(wordId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(firstMeaningId)
+                .append(Word.ID_CN).append("=").append(firstMeaningId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(secondMeaningId)
+                .append(Word.ID_CN).append("=").append(secondMeaningId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(thirdMeaningId)
+                .append(Word.ID_CN).append("=").append(thirdMeaningId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(additionalMeaningId)
+                .append(Word.ID_CN).append("=").append(additionalMeaningId)
                 .append(" OR ")
-                .append(Word.ID_COLUMN_NAME).append("=").append(wordWithNoMeaningsId);
+                .append(Word.ID_CN).append("=").append(wordWithNoMeaningsId);
         printDeleteQuery(deleteQuery.toString());
         PreparedStatement deleteStatement = DatabaseManager.connection.prepareStatement(deleteQuery.toString());
         deleteStatement.execute();
@@ -295,19 +295,19 @@ class WordSrvSpec extends Specification {
         deleteCollectionsRelationshipsQuery
                 .append("DELETE FROM word_collection_relationships")
                 .append(" WHERE ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordFirstCollectionRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(wordFirstCollectionRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordSecondMeaningRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(wordSecondMeaningRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(wordThirdCollectionRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(wordThirdCollectionRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(firstMeaningWordRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(firstMeaningWordRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(firstMeaningFirstCollectionRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(firstMeaningFirstCollectionRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(secondMeaningFirstCollectionRelationshipId)
+                .append(WordCollectionRelationship.ID_CN).append("=").append(secondMeaningFirstCollectionRelationshipId)
                 .append(" OR ")
-                .append(WordCollectionRelationship.ID_COLUMN_NAME).append("=").append(thirdMeaningFirstCollectionRelationshipId);
+                .append(WordCollectionRelationship.ID_CN).append("=").append(thirdMeaningFirstCollectionRelationshipId);
         printDeleteQuery(deleteCollectionsRelationshipsQuery.toString());
         PreparedStatement insertCollectionsRelationshipsStatement = DatabaseManager.connection.prepareStatement(deleteCollectionsRelationshipsQuery.toString());
         insertCollectionsRelationshipsStatement.execute();

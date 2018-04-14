@@ -18,23 +18,23 @@ import javax.persistence.Table;
 @Table(name = "word_collection_relationships")
 public class WordCollectionRelationship {
 
-    public static final String ID_COLUMN_NAME = "collection_relationship_id";
-    public static final String WORD_COLUMN_NAME = "relationships_word";
-    public static final String COLLECTION_COLUMN_NAME = "relationships_collection";
+    public static final String ID_CN = "collection_relationship_id";
+    public static final String WORD_CN = "relationships_word";
+    public static final String COLLECTION_CN = "relationships_collection";
 
     @Id
-    @Column(name = ID_COLUMN_NAME)
+    @Column(name = ID_CN)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = WORD_COLUMN_NAME,
-            foreignKey = @ForeignKey(name = WORD_COLUMN_NAME))
+    @JoinColumn(name = WORD_CN,
+            foreignKey = @ForeignKey(name = WORD_CN))
     private Word word;
 
     @ManyToOne
-    @JoinColumn(name = COLLECTION_COLUMN_NAME,
-            foreignKey = @ForeignKey(name = COLLECTION_COLUMN_NAME))
+    @JoinColumn(name = COLLECTION_CN,
+            foreignKey = @ForeignKey(name = COLLECTION_CN))
     private WordCollection wordCollection;
 
 

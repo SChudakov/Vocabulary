@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>words</title>
+    </head>
+    <body>
+
+        <form th:action="@{/words/wordInfo}" method="get">
+            <input type="text" th:name="value" th:placeholder="value"/><br>
+            <input type="text" th:name="language" th:placeholder="language"/><br>
+            <input type="submit" value="find"/>
+        </form>
+    </body>
+</html>

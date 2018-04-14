@@ -5,13 +5,15 @@ import com.sschudakov.database.DatabaseCache;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordClass;
 import com.sschudakov.logging.LoggersManager;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class WordClassDaoJdbcImpl implements WordClassDao {
 
 
@@ -21,10 +23,10 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
     public void save(WordClass wordClass) throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("INSERT INTO word_classes ")
-                .append("(").append(WordClass.NAME_COLUMN_NAME).append(")")
+                .append("(").append(WordClass.NAME_CN).append(")")
                 .append(" VALUES ")
                 .append("(").append("\'" + wordClass.getWordClassName() + "\'").append(")").append(";");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -37,8 +39,8 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         /*StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes ")
                 .append(" WHERE ")
-                .append(WordClass.ID_COLUMN_NAME).append("=").append(id);
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordClass.ID_CN).append("=").append(id);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
@@ -55,8 +57,8 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes WHERE ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + name + "\'");
-        LoggersManager.getParsingLogger().info(query);
+                .append(WordClass.NAME_CN).append("=").append("\'" + name + "\'");
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -77,8 +79,8 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
 
     private WordClass formWordClass(ResultSet resultSet) throws SQLException {
         WordClass result = new WordClass();
-        result.setId(resultSet.getInt(WordClass.ID_COLUMN_NAME));
-        result.setWordClassName(resultSet.getString(WordClass.NAME_COLUMN_NAME));
+        result.setId(resultSet.getInt(WordClass.ID_CN));
+        result.setWordClassName(resultSet.getString(WordClass.NAME_CN));
         return result;
     }
 
@@ -86,7 +88,7 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
     public List<WordClass> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -99,8 +101,8 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         List<WordClass> result = new ArrayList<>();
         while (resultSet.next()) {
             WordClass wordClass = new WordClass();
-            wordClass.setId(resultSet.getInt(WordClass.ID_COLUMN_NAME));
-            wordClass.setWordClassName(resultSet.getString(WordClass.NAME_COLUMN_NAME));
+            wordClass.setId(resultSet.getInt(WordClass.ID_CN));
+            wordClass.setWordClassName(resultSet.getString(WordClass.NAME_CN));
             result.add(wordClass);
         }
         return result;

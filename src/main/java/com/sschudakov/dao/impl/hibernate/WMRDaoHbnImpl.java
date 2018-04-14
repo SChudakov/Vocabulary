@@ -1,18 +1,29 @@
 package com.sschudakov.dao.impl.hibernate;
 
 import com.sschudakov.dao.interf.WMRDao;
-import com.sschudakov.entity.*;
+import com.sschudakov.entity.Language;
+import com.sschudakov.entity.Word;
+import com.sschudakov.entity.WordMeaningRelationship;
+import com.sschudakov.entity.WordMeaningRelationship_;
+import com.sschudakov.entity.Word_;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
-import javax.persistence.criteria.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Join;
+import javax.persistence.criteria.Path;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class WMRDaoHbnImpl implements WMRDao {
 
     private EntityManager entityManager;

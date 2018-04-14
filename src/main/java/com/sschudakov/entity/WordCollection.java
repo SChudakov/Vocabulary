@@ -15,15 +15,15 @@ import javax.persistence.Table;
 @Table(name = "word_collections")
 public class WordCollection {
 
-    public static final String ID_COLUMN_NAME = "word_collection_id";
-    public static final String NAME_COLUMN_NAME = "word_collection_name";
+    public static final String ID_CN = "word_collection_id";
+    public static final String NAME_CN = "word_collection_name";
 
     @Id
-    @Column(name = ID_COLUMN_NAME)
+    @Column(name = ID_CN)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = NAME_COLUMN_NAME)
+    @Column(name = NAME_CN)
     private String collectionName;
 
 

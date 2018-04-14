@@ -7,6 +7,8 @@ import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordMeaningRelationship;
 import com.sschudakov.logging.LoggersManager;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,7 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@Repository
 public class WMRDaoJdbcImpl implements WMRDao {
 
     //-------------- helping dao object ---------------//
@@ -41,7 +43,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
                 .append(" VALUES ")
                 .append("(").append(wordMeaningRelationship.getWord().getId()).append(",")
                 .append(wordMeaningRelationship.getMeaning().getId()).append(")").append(";");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -58,7 +60,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(wordMeaningRelationship.getMeaning().getId())
                 .append(" WHERE ")
                 .append(WordMeaningRelationship.ID_COLUMN_NAME).append("=").append(wordMeaningRelationship.getId()).append(";");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         return wordMeaningRelationship;
@@ -73,7 +75,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
         query.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
                 .append(WordMeaningRelationship.ID_COLUMN_NAME).append("=").append(id);
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
@@ -94,12 +96,12 @@ public class WMRDaoJdbcImpl implements WMRDao {
                 .append(" ON ")
                 .append("word_meaning_relationships.").append(WordMeaningRelationship.MEANING_COLUMN_NAME)
                 .append("=")
-                .append("words.").append(Word.ID_COLUMN_NAME)
+                .append("words.").append(Word.ID_CN)
                 .append(" WHERE ")
                 .append("word_meaning_relationships.").append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(word.getId())
                 .append(" AND ")
-                .append(" words.").append(Word.LANGUAGE_COLUMN_NAME).append("=").append(meaningsLanguage.getId());
-        LoggersManager.getParsingLogger().info(query);
+                .append(" words.").append(Word.LANGUAGE_CN).append("=").append(meaningsLanguage.getId());
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -127,14 +129,14 @@ public class WMRDaoJdbcImpl implements WMRDao {
                 .append(" ON ")
                 .append("word_meaning_relationships.").append(WordMeaningRelationship.MEANING_COLUMN_NAME)
                 .append("=")
-                .append("words.").append(Word.ID_COLUMN_NAME)
+                .append("words.").append(Word.ID_CN)
                 .append(" WHERE ")
                 .append("word_meaning_relationships.").append(WordMeaningRelationship.WORD_COLUMN_NAME)
                 .append(" IN ")
                 .append(formINSectionForQuery(words))
                 .append(" AND ")
-                .append("words.").append(Word.LANGUAGE_COLUMN_NAME).append("=").append(meaningsLanguage.getId());
-        LoggersManager.getParsingLogger().info(query);
+                .append("words.").append(Word.LANGUAGE_CN).append("=").append(meaningsLanguage.getId());
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -188,7 +190,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
                 .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(word.getId())
                 .append(" AND ")
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(meaning.getId());
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         ResultSet resultSet = statement.getResultSet();
@@ -205,7 +207,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
         query.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
                 .append(WordMeaningRelationship.WORD_COLUMN_NAME).append("=").append(word.getId());
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -220,7 +222,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
         query.append("SELECT * FROM word_meaning_relationships")
                 .append(" WHERE ")
                 .append(WordMeaningRelationship.MEANING_COLUMN_NAME).append("=").append(meaning.getId());
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -233,7 +235,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
     public List<WordMeaningRelationship> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_meaning_relationships");
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -251,7 +253,7 @@ public class WMRDaoJdbcImpl implements WMRDao {
         query.append("DELETE FROM word_meaning_relationships")
                 .append(" WHERE ")
                 .append(WordMeaningRelationship.ID_COLUMN_NAME).append("=").append(wordMeaningRelationshipID);
-        LoggersManager.getParsingLogger().info(query);
+        LoggersManager.getSqlLogger().info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
     }

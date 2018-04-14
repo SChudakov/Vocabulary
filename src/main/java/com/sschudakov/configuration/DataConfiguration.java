@@ -1,35 +1,135 @@
 package com.sschudakov.configuration;
 
-import com.sschudakov.servlet.forvalidators.dao.UserDao;
+import com.sschudakov.dao.impl.jdbc.LanguageDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WCRDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WMRDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WordClassDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WordCollectionDaoJdbcImpl;
+import com.sschudakov.dao.impl.jdbc.WordDaoJdbcImpl;
+import com.sschudakov.dao.interf.LanguageDao;
+import com.sschudakov.dao.interf.WCRDao;
+import com.sschudakov.dao.interf.WMRDao;
+import com.sschudakov.dao.interf.WordClassDao;
+import com.sschudakov.dao.interf.WordCollectionDao;
+import com.sschudakov.dao.interf.WordDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.hibernate.jpa.HibernatePersistenceProvider;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.util.Properties;
 
-/**
- * @author Danny Briskin (sql.coach.kiev@gmail.com)
- * on  11.07.2017 for springJConfInterHiber project.
- */
-//@Configuration
-//@EnableTransactionManagement
-//@PropertySource("classpath:app.properties")
+
+@Configuration
+@EnableTransactionManagement
+@PropertySource("classpath:app.properties")
 public class DataConfiguration {
 
-    /*@Resource
+    @Autowired
+    DataSource dataSource;
+
+    @Resource
     private Environment env;
+
+
+    /*------------ jdbc dao beans ------------------*/
+    @Primary
+    @Bean
+    public LanguageDao languageJdbcDao() {
+        return new LanguageDaoJdbcImpl();
+    }
+
+    @Primary
+    @Bean
+    public WordCollectionDao wordCollectionJdbcDao() {
+        return new WordCollectionDaoJdbcImpl();
+    }
+
+    @Primary
+    @Bean
+    public WordClassDao wordClassJdbcDao() {
+        return new WordClassDaoJdbcImpl();
+    }
+
+    @Primary
+    @Bean
+    public WordDao wordDao() {
+        return new WordDaoJdbcImpl(
+                languageJdbcDao(),
+                wordClassJdbcDao()
+        );
+    }
+
+    @Primary
+    @Bean
+    public WMRDao wmrJdbcDao() {
+        return new WMRDaoJdbcImpl(wordDao());
+    }
+
+    @Primary
+    @Bean
+    public WCRDao wcrJdbcDao() {
+        return new WCRDaoJdbcImpl(wordDao(), wordCollectionJdbcDao());
+    }
+
+
+    /*------------ hibernate dao beans ------------------*/
+
+    /*@Bean
+    public LanguageDao languageHbnDao() {
+        return new LanguageDaoHbnImpl();
+    }
+
+    @Bean
+    public WordCollectionDao wordCollectionHbnDao() {
+        return new WordCollectionDaoHbnImpl();
+    }
+
+    @Bean
+    public WordClassDao wordClassHbnDao() {
+        return new WordClassDaoHbnImpl();
+    }
+
+    @Bean
+    public WordDao wordHbnDao() {
+        return new WordDaoHbnImpl();
+    }
+
+    @Bean
+    public WMRDao wmrHbnDao() {
+        return new WMRDaoHbnImpl();
+    }
+
+    @Bean
+    public WCRDao wcrHbnDao() {
+        return new WCRDaoHbnImpl();
+    }*/
+
+
+    /*----------- other stuff --------------*/
+
+    @Bean(name = "userDetailsService")
+    public UserDetailsService userDetailsService() {
+        // UserDetailsServiceRetrieves implementation which retrieves the
+        // user details (username, password, enabled flag, and authorities) from a database using JDBC queries.
+
+        JdbcDaoImpl jdbcDao = new JdbcDaoImpl();
+        jdbcDao.setDataSource(dataSource);
+        jdbcDao.setUsersByUsernameQuery("select username ,password, enabled from sps_users where username=?");
+        jdbcDao.setAuthoritiesByUsernameQuery("select b.username, a.role from sps_user_roles a join sps_users b on a.userid=b.userid where b.username=?");
+        return jdbcDao;
+    }
 
     @Bean
     @Qualifier(value = "jpaTransactionManager")
@@ -38,56 +138,7 @@ public class DataConfiguration {
     }
 
     @Bean
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(env.getRequiredProperty("db.driver"));
-        dataSource.setUrl(env.getRequiredProperty("db.url"));
-        dataSource.setUsername(env.getRequiredProperty("db.username"));
-        dataSource.setPassword(env.getRequiredProperty("db.password"));
-
-        return dataSource;
-    }
-
-    @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-
-        LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
-        entityManagerFactoryBean.setDataSource(dataSource());
-        entityManagerFactoryBean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
-        entityManagerFactoryBean.setPackagesToScan(env.getRequiredProperty("db.entitymanager.packages.to.scan"));
-        entityManagerFactoryBean.setJpaProperties(getHibernateProperties());
-
-        return entityManagerFactoryBean;
-    }
-
-    private Properties getHibernateProperties() {
-        Properties properties = new Properties();
-
-        properties.put("hibernate.dialect",
-                env.getRequiredProperty("db.hibernate.dialect"));
-        properties.put("hibernate.show_sql",
-                env.getRequiredProperty("db.hibernate.show_sql"));
-        properties.put("hibernate.hbm2ddl.auto",
-                env.getRequiredProperty("db.hibernate.hbm2ddl.auto"));
-        properties.put("hibernate.connection.CharSet",
-                env.getRequiredProperty("db.hibernate.connection.CharSet"));
-        properties.put("hibernate.connection.characterEncoding",
-                env.getRequiredProperty("db.hibernate.connection.characterEncoding"));
-        properties.put("hibernate.connection.useUnicode",
-                env.getRequiredProperty("db.hibernate.connection.useUnicode"));
-
-        return properties;
-    }
-
-
-    @Bean
     public Logger getLogger() {
-        return LogManager.getLogger("ua.com.univerpulse.loggers.model");
+        return LogManager.getLogger("com.sschudakov.dao");
     }
-
-    @Bean
-    public UserDao getUserDao() {
-        return new UserDao();
-    }*/
-
 }

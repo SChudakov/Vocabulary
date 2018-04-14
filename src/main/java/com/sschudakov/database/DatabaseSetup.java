@@ -66,7 +66,7 @@ public class DatabaseSetup {
         StringBuilder insert = new StringBuilder("");
         insert.append("DELETE FROM languages")
                 .append(" WHERE ")
-                .append(Language.NAME_COLUMN_NAME).append("=").append("\'" + languageName + "\'");
+                .append(Language.NAME_CN).append("=").append("\'" + languageName + "\'");
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(insert.toString());
         statement.execute();
     }
@@ -90,7 +90,7 @@ public class DatabaseSetup {
         StringBuilder insert = new StringBuilder("");
         insert.append("DELETE FROM word_classes")
                 .append(" WHERE ")
-                .append(WordClass.NAME_COLUMN_NAME).append("=").append("\'" + className + "\'");
+                .append(WordClass.NAME_CN).append("=").append("\'" + className + "\'");
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(insert.toString());
         statement.execute();
     }

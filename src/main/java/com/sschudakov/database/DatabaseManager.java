@@ -26,7 +26,6 @@ public class DatabaseManager {
             USER_PARAMETER + USER + "&" +
             PASSWORD_PARAMETER + PASSWORD + "&" +
             USE_SSL_PARAMETER + USE_SSL;
-    public static final String DATABASE_CREATION_SQL_STATEMENT = "CREATE DATABASE ";
 
     public static Connection connection;
 

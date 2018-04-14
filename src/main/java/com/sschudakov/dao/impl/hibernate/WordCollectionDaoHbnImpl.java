@@ -3,6 +3,9 @@ package com.sschudakov.dao.impl.hibernate;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollection_;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -12,9 +15,8 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 import java.util.List;
-
+@Repository
 public class WordCollectionDaoHbnImpl implements WordCollectionDao {
-
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
 

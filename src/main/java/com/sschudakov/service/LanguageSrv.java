@@ -2,16 +2,19 @@ package com.sschudakov.service;
 
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.entity.Language;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class LanguageSrv {
 
 
     //-------------- dao object  ---------------//
-
+    @Autowired
     private LanguageDao languageDao;
 
 
