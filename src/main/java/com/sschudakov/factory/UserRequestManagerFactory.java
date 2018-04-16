@@ -1,6 +1,6 @@
 package com.sschudakov.factory;
 
-import com.sschudakov.request.UserRequestManager;
+import com.sschudakov.desktop.swing.request.UserRequestManager;
 import com.sschudakov.service.LanguageSrv;
 import com.sschudakov.service.WordClassSrv;
 import com.sschudakov.service.WordCollectionSrv;

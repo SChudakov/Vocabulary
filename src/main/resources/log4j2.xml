@@ -20,7 +20,7 @@
             <PatternLayout pattern="[%highlight{%5p}] %d{dd/M/yy HH:mm:ss} [%t] %logger{36} - %msg%n"/>
         </Console>
 
-        <!-- File appender for com.sschudakov.words.parsing all-->
+        <!-- File appender for com.sschudakov.desktop.words.parsing all-->
         <RollingFile name="parsing_appender_all" fileName="${parsing_all}"
                      filePattern="logs/arch/arch_parsing_all-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
@@ -34,7 +34,7 @@
 
         </RollingFile>
 
-        <!-- File appender of for com.sschudakov.words.parsing errors -->
+        <!-- File appender of for com.sschudakov.desktop.words.parsing errors -->
         <RollingFile name="parsing_appender_errors" fileName="${parsing_errors}"
                      filePattern="logs/arch/arch_parsing_errors-%d{MM-dd-yyyy_HH}-%i.gz"
                      append="true">
@@ -103,13 +103,13 @@
         <Root level="INFO">
             <AppenderRef ref="console_appender_all"/>
         </Root>
-        <!-- com.sschudakov.words.parsing logger -->
+        <!-- com.sschudakov.desktop.words.parsing logger -->
         <Logger name="com.sschudakov.parsing_logger" additivity="TRUE" level="ALL">
             <AppenderRef ref="parsing_appender_all" level="ALL"/>
             <AppenderRef ref="parsing_appender_errors" level="ERROR"/>
             <AppenderRef ref="parsing_appender_trace" level="TRACE"/>
         </Logger>
-        <!-- com.sschudakov.words.parsing logger -->
+        <!-- com.sschudakov.desktop.words.parsing logger -->
         <Logger name="com.sschudakov.sql_logger" additivity="TRUE" level="ALL">
             <AppenderRef ref="sql_appender_all" level="ALL"/>
             <AppenderRef ref="sql_appender_errors" level="ERROR"/>

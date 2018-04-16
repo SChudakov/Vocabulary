@@ -6,8 +6,7 @@ import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
-import com.sschudakov.logging.LoggersManager;
-import org.springframework.stereotype.Component;
+import com.sschudakov.desktop.logging.LoggersManager;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
@@ -44,7 +43,7 @@ public class WordDaoJdbcImpl implements WordDao {
                 .append(Word.WORD_CLASS_CN).append(",")
                 .append(Word.LANGUAGE_CN).append(")")
                 .append(" VALUES ")
-                .append("(").append("\'" + word.getValue() + "\'").append(",")
+                .append("(").append("\'").append(word.getValue()).append("\'").append(",")
                 .append(word.getWordClass().getId()).append(",")
                 .append(word.getLanguage().getId()).append(")").append(";");
         LoggersManager.getSqlLogger().info(query);
@@ -60,7 +59,7 @@ public class WordDaoJdbcImpl implements WordDao {
         StringBuilder query = new StringBuilder("");
         query.append("UPDATE words")
                 .append(" SET ")
-                .append(Word.VALUE_CN).append("=").append("\'" + word.getValue() + "\'").append(",")
+                .append(Word.VALUE_CN).append("=").append("\'").append(word.getValue()).append("\'").append(",")
                 .append(Word.WORD_CLASS_CN).append("=").append(word.getWordClass().getId()).append(",")
                 .append(Word.LANGUAGE_CN).append("=").append(word.getLanguage().getId())
                 .append(" WHERE ")
@@ -96,7 +95,7 @@ public class WordDaoJdbcImpl implements WordDao {
 
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM words WHERE ")
-                .append(Word.VALUE_CN).append("=").append("\'" + value + "\'")
+                .append(Word.VALUE_CN).append("=").append("\'").append(value).append("\'")
                 .append(" AND ")
                 .append(Word.LANGUAGE_CN).append("=").append(language.getId());
         LoggersManager.getSqlLogger().info(query);

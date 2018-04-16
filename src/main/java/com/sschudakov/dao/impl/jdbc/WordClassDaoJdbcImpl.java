@@ -4,8 +4,7 @@ import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.database.DatabaseCache;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordClass;
-import com.sschudakov.logging.LoggersManager;
-import org.springframework.stereotype.Component;
+import com.sschudakov.desktop.logging.LoggersManager;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;

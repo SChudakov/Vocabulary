@@ -3,8 +3,7 @@ package com.sschudakov.dao.impl.jdbc;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordCollection;
-import com.sschudakov.logging.LoggersManager;
-import org.springframework.stereotype.Component;
+import com.sschudakov.desktop.logging.LoggersManager;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;

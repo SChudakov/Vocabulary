@@ -1,6 +1,6 @@
 package com.sschudakov.main;
 
-import com.sschudakov.ui.swing.InputWordsJFrame;
+import com.sschudakov.desktop.swing.ui.InputWordsJFrame;
 
 public class UIMain {
 

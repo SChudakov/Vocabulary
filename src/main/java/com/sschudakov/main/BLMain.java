@@ -5,7 +5,7 @@ import com.sschudakov.database.DatabaseSetup;
 import com.sschudakov.factory.ServiceFactory;
 import com.sschudakov.service.LanguageSrv;
 import com.sschudakov.service.WordClassSrv;
-import com.sschudakov.words.WordsCollectionsManager;
+import com.sschudakov.desktop.words.WordsCollectionsManager;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -17,6 +17,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class BLMain {
 
@@ -121,7 +122,7 @@ public class BLMain {
     private static int numOfLines(File file) throws IOException {
         if (file.isDirectory()) {
             int result = 0;
-            for (File file1 : file.listFiles()) {
+            for (File file1 : Objects.requireNonNull(file.listFiles())) {
                 result += numOfLines(file1);
             }
             return result;

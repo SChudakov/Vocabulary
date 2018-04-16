@@ -6,8 +6,7 @@ import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordMeaningRelationship;
-import com.sschudakov.logging.LoggersManager;
-import org.springframework.stereotype.Component;
+import com.sschudakov.desktop.logging.LoggersManager;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
