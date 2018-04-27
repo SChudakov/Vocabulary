@@ -16,7 +16,6 @@
 
         <!-- console appender -->
         <Console name="console_appender_all" target="SYSTEM_OUT">
-            <!--%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - -->
             <PatternLayout pattern="[%highlight{%5p}] %d{dd/M/yy HH:mm:ss} [%t] %logger{36} - %msg%n"/>
         </Console>
 

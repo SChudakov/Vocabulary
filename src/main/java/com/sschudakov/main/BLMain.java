@@ -2,10 +2,10 @@ package com.sschudakov.main;
 
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.database.DatabaseSetup;
+import com.sschudakov.desktop.words.WordsCollectionsManager;
 import com.sschudakov.factory.ServiceFactory;
 import com.sschudakov.service.LanguageSrv;
 import com.sschudakov.service.WordClassSrv;
-import com.sschudakov.desktop.words.WordsCollectionsManager;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -22,18 +22,17 @@ import java.util.Objects;
 public class BLMain {
 
     private static final String ADJECTIVE_MIT_PRAPOSITIONEN_DOCX = "D:\\Workspace.java\\Vocabulary\\test_files\\Adjective mit Prapositionen.docx";
-    private static final String BL_SRC_DIRECTORY = "D:\\Workspace.java\\Vocabulary\\Vocabulary_BL\\src";
-    private static final String UI_SRC_DIRECTORY = "D:\\Workspace.java\\Vocabulary\\Vocabulary_UI\\src";
+    private static final String PROJECT_SRC_FOLDER = "D:\\Workspace.java\\Vocabulary\\src";
     private static final String JAVA_EXTENSION = ".java";
     private static final String GROOVY_EXTENSION = ".groovy";
 
     public static void main(String[] args) {
-        try {
+        /*try {
             insertData();
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-
+        }*/
+        countNumOfLinesInProject();
     }
 
     private static void renewDatabaseContent() {
@@ -79,27 +78,29 @@ public class BLMain {
     }
 
     private static void insertData() throws SQLException {
+        WordsCollectionsManager wordsCollectionsManager = new WordsCollectionsManager();
+
         LanguageSrv languageSrv = ServiceFactory.createLanguageService();
         WordClassSrv wordClassSrv = ServiceFactory.createWordClassService();
-        WordsCollectionsManager.persistCollectionIntoDatabase(
+        wordsCollectionsManager.persistCollectionIntoDatabase(
                 "D:\\desktop\\words_collections\\ger\\Adjective aus Kopien.txt",
                 languageSrv.findByName("German"),
                 languageSrv.findByName("Russian"),
                 wordClassSrv.findByName("adjective")
         );
-        WordsCollectionsManager.persistCollectionIntoDatabase(
+        wordsCollectionsManager.persistCollectionIntoDatabase(
                 "D:\\desktop\\words_collections\\ger\\Adjective mit Präpositionen.txt",
                 languageSrv.findByName("German"),
                 languageSrv.findByName("Russian"),
                 wordClassSrv.findByName("adjective")
         );
-        WordsCollectionsManager.persistCollectionIntoDatabase(
+        wordsCollectionsManager.persistCollectionIntoDatabase(
                 "D:\\desktop\\words_collections\\ger\\Antonymen.txt",
                 languageSrv.findByName("German"),
                 languageSrv.findByName("Russian"),
                 wordClassSrv.findByName("noun")
         );
-        WordsCollectionsManager.persistCollectionIntoDatabase(
+        wordsCollectionsManager.persistCollectionIntoDatabase(
                 "D:\\desktop\\words_collections\\eng\\The Financier.txt",
                 languageSrv.findByName("English"),
                 languageSrv.findByName("Russian"),
@@ -112,8 +113,8 @@ public class BLMain {
     private static void countNumOfLinesInProject() {
         try {
             System.out.println(
-                    numOfLines(new File(BL_SRC_DIRECTORY)) + numOfLines(new File(UI_SRC_DIRECTORY))
-            );
+                    numOfLines(new File(PROJECT_SRC_FOLDER)));
+
         } catch (IOException e) {
             e.printStackTrace();
         }

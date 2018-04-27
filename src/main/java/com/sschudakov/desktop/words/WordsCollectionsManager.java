@@ -1,11 +1,11 @@
 package com.sschudakov.desktop.words;
 
+import com.sschudakov.desktop.words.parsing.FileParser;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.factory.ServiceFactory;
-import com.sschudakov.desktop.words.parsing.FileParser;
 import com.sschudakov.service.WordCollectionSrv;
 import com.sschudakov.service.WordSrv;
 
@@ -26,19 +26,33 @@ public class WordsCollectionsManager {
 
     private static final String REGULAR_EXPRESSION_FOR_REMOVING_EXTENSION = "[.][^.]+";
 
+    //-------------- file parser -----------------//
 
-    //-------------- regular expression constant -----------------//
+    private FileParser fileParser;
 
-    private static WordSrv wordSrv = ServiceFactory.createWordService();
-    private static WordCollectionSrv wordCollectionSrv = ServiceFactory.createWordCollectionService();
+
+    //-------------- service objects  -----------------//
+
+    private WordSrv wordSrv;
+    private WordCollectionSrv wordCollectionSrv;
+
+    //-------------- constructor  -----------------//
+
+    public WordsCollectionsManager() {
+
+        this.fileParser = new FileParser();
+
+        this.wordSrv = ServiceFactory.createWordService();
+        this.wordCollectionSrv = ServiceFactory.createWordCollectionService();
+    }
 
 
     //-------------- persisting collections into database -----------------//
 
-    public static void persistCollectionIntoDatabase(String path, Language wordLanguage,
-                                                     Language meaningLanguage, WordClass wordClass) {
+    public void persistCollectionIntoDatabase(String path, Language wordLanguage,
+                                              Language meaningLanguage, WordClass wordClass) {
         File collectionFile = new File(path);
-        HashMap<String, List<String>> readCollection = FileParser.parse(collectionFile);
+        HashMap<String, List<String>> readCollection = this.fileParser.parse(collectionFile);
 
         WordCollection persistedCollection = null;
 
@@ -71,7 +85,7 @@ public class WordsCollectionsManager {
         });
     }
 
-    private static void createWord(String value, WordClass wordClass, Language language) {
+    private void createWord(String value, WordClass wordClass, Language language) {
         try {
             if (!wordSrv.wordExists(value, language)) {
                 wordSrv.create(value, wordClass, language);
@@ -81,7 +95,7 @@ public class WordsCollectionsManager {
         }
     }
 
-    private static Word findWord(String value, Language language) {
+    private Word findWord(String value, Language language) {
         Word result = null;
         try {
             result = wordSrv.findByValueAndLanguage(value, language);
@@ -91,7 +105,7 @@ public class WordsCollectionsManager {
         return result;
     }
 
-    private static void addMeaning(Word word, Word meaning) {
+    private void addMeaning(Word word, Word meaning) {
         try {
             wordSrv.addMeaning(word, meaning);
         } catch (SQLException e) {
@@ -99,7 +113,7 @@ public class WordsCollectionsManager {
         }
     }
 
-    private static void putInCollection(Word word, WordCollection collection) {
+    private void putInCollection(Word word, WordCollection collection) {
         try {
             wordSrv.putInCollection(word, collection);
         } catch (SQLException e) {
@@ -110,11 +124,11 @@ public class WordsCollectionsManager {
 
     //-------------- read collections names -----------------//
 
-    private static List<String> readCollectionsNames(String directoryPath) {
+    private List<String> readCollectionsNames(String directoryPath) {
         return readCollectionsNames(new File(directoryPath));
     }
 
-    private static List<String> readCollectionsNames(File collectionsDirectory) {
+    private List<String> readCollectionsNames(File collectionsDirectory) {
         List<String> result = new ArrayList<>();
         for (File file : Objects.requireNonNull(collectionsDirectory.listFiles())) {
             result.add(formCollectionsName(file.getName()));
@@ -122,7 +136,7 @@ public class WordsCollectionsManager {
         return result;
     }
 
-    private static String formCollectionsName(String fileName) {
+    private String formCollectionsName(String fileName) {
         return fileName.replaceFirst(
                 REGULAR_EXPRESSION_FOR_REMOVING_EXTENSION,
                 ""

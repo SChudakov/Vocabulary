@@ -1,8 +1,13 @@
 package com.sschudakov.desktop.words.parsing;
 
-import com.sschudakov.desktop.logging.LoggersManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,15 +20,17 @@ import java.util.List;
 public class FileParser {
 
     private static final String WORD_FROM_MEANING_SEPARATOR = " – | - ";
-    private static final String MEANING_REGULAR_EXPRESSION = ",|/|\\\\";//[^\w]
+    private static final String MEANING_REGULAR_EXPRESSION = ",|/|\\\\";
     private static final int WORD_POSITION = 0;
     private static final int MEANINGS_POSITION = 1;
 
-    public static HashMap<String, List<String>> parse(String path) {
+    private static Logger logger = LogManager.getLogger(FileParser.class);
+
+    public HashMap<String, List<String>> parse(String path) {
         return parse(new File(path));
     }
 
-    public static HashMap<String, List<String>> parse(File file) {
+    public HashMap<String, List<String>> parse(File file) {
 
         HashMap<String, List<String>> result = new HashMap<>();
 
@@ -38,7 +45,6 @@ public class FileParser {
             int i = 0;
             while ((line = reader.readLine()) != null) {
                 try {
-                    /*System.out.println(line);*/
 
                     String[] wordAndMeanings = line.split(WORD_FROM_MEANING_SEPARATOR);
 
@@ -47,61 +53,55 @@ public class FileParser {
                     word = parseWord(wordAndMeanings[WORD_POSITION]);
                     meanings = parseMeanings(wordAndMeanings[MEANINGS_POSITION]);
 
-                    LoggersManager.getParsingLogger().trace("parsed word: " + word + " with meanings: " + meanings);
+                    logger.trace("parsed word: " + word + " with meanings: " + meanings);
 
                     result.put(
                             word,
                             meanings
                     );
                 } catch (IllegalArgumentException e) {
-                    LoggersManager.getParsingLogger().error(e.getMessage() + " in " + file.getName() + " line: " + i);
-//                    e.printStackTrace();
+                    logger.error(e.getMessage() + " in " + file.getName() + " line: " + i);
                 }
                 i++;
             }
         } catch (IOException e) {
-            LoggersManager.getParsingLogger().error(e);
-//            e.printStackTrace();
+            logger.error(e);
         }
         return result;
     }
 
 
-    private static List<String> parseMeanings(String line) {
+    private List<String> parseMeanings(String line) {
 
-        /*System.out.println("meanings line: " + line);*/
 
         List<String> result = new ArrayList<>();
 
         String[] meanings = line.split(MEANING_REGULAR_EXPRESSION);
-
-        /*System.out.println("meanings array: " + Arrays.toString(meanings));*/
 
         try {
             for (String meaning : meanings) {
                 result.add(parseWord(meaning));
             }
         } catch (Exception e) {
-            LoggersManager.getParsingLogger().error(e);
-//            e.printStackTrace();
+            logger.error(e);
         }
         return result;
     }
 
-    private static String parseWord(String word) {
+    private String parseWord(String word) {
         ensureWordIsCorrect(word);
         word = word.trim();
         return word;
     }
 
-    private static void ensureCorrectSeparation(String[] wordAndMeanings) {
+    private void ensureCorrectSeparation(String[] wordAndMeanings) {
         if (wordAndMeanings.length != 2) {
             throw new IllegalArgumentException("word and meanings array " +
                     Arrays.toString(wordAndMeanings) + " has not length 2");
         }
     }
 
-    private static void ensureWordIsCorrect(String word) {
+    private void ensureWordIsCorrect(String word) {
         if (word == null) {
             throw new IllegalArgumentException("given word is null");
         }

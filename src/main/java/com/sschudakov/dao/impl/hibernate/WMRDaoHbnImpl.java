@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Join;
@@ -25,7 +26,6 @@ import java.util.Map;
 
 @Repository
 public class WMRDaoHbnImpl implements WMRDao {
-
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;
 

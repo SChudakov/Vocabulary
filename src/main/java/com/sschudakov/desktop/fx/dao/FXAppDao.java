@@ -8,7 +8,8 @@ import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.entity.WordCollectionRelationship;
 import com.sschudakov.entity.WordMeaningRelationship;
-import com.sschudakov.desktop.logging.LoggersManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,6 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FXAppDao {
+
+    private static Logger logger = LogManager.getLogger(FXAppDao.class);
 
     //-------------- helping dao objects ---------------//
 
@@ -41,7 +44,7 @@ public class FXAppDao {
                 "\t(SELECT COUNT(" + WordMeaningRelationship.MEANING_COLUMN_NAME + ") \n" +
                 "\tFROM word_meaning_relationships \n" +
                 "\tWHERE " + WordMeaningRelationship.WORD_COLUMN_NAME + " = words.word_id)=?";
-        LoggersManager.getParsingLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query);
         selectStatement.setInt(1, numOfMeanings);
         selectStatement.execute();
@@ -56,7 +59,7 @@ public class FXAppDao {
                 "\t(SELECT COUNT(" + WordMeaningRelationship.MEANING_COLUMN_NAME + ") \n" +
                 "\tFROM word_meaning_relationships \n" +
                 "\tWHERE " + WordMeaningRelationship.WORD_COLUMN_NAME + " = words.word_id)>=?";
-        LoggersManager.getParsingLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query);
         selectStatement.setInt(1, minNumOfMeanings);
         selectStatement.execute();
@@ -73,7 +76,7 @@ public class FXAppDao {
                 "\tON " + WordMeaningRelationship.MEANING_COLUMN_NAME + " = " + Word.ID_CN + " \n" +
                 "\tWHERE " + WordMeaningRelationship.WORD_COLUMN_NAME + " = W." + Word.ID_CN + " \n" +
                 "\tAND value = ?)";
-        LoggersManager.getParsingLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query);
         selectStatement.setString(1, meaning);
         selectStatement.execute();
@@ -90,7 +93,7 @@ public class FXAppDao {
                 "\tON " + WordCollectionRelationship.COLLECTION_CN + " = " + WordCollection.ID_CN + " \n" +
                 "\tWHERE " + WordCollectionRelationship.WORD_CN + " = " + Word.ID_CN + " \n" +
                 "\tAND " + WordCollection.NAME_CN + " = ?)";
-        LoggersManager.getParsingLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query);
         selectStatement.setString(1, collectionsName);
         selectStatement.execute();
@@ -103,7 +106,7 @@ public class FXAppDao {
                 "FROM words INNER JOIN languages \n" +
                 "ON " + Word.LANGUAGE_CN + " = " + Language.ID_CN + " \n" +
                 "WHERE " + Language.NAME_CN + " = ?";
-        LoggersManager.getParsingLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query);
         selectStatement.setString(1, languageName);
         selectStatement.execute();
@@ -126,7 +129,7 @@ public class FXAppDao {
                 "\t\tFROM word_meaning_relationships WMR INNER JOIN words W \n" +
                 "\t\tON W." + Word.ID_CN + " = WMR." + WordMeaningRelationship.WORD_COLUMN_NAME + "\n" +
                 "\t\tWHERE W." + Word.VALUE_CN + " = ?))";
-        LoggersManager.getParsingLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query);
         selectStatement.setString(1, word);
         selectStatement.execute();
@@ -155,7 +158,7 @@ public class FXAppDao {
                 "\t\t(SELECT WCR3." + WordCollectionRelationship.COLLECTION_CN + "\n" +
                 "\t\tFROM word_collection_relationships WCR3\n" +
                 "\t\tWHERE WCR3." + WordCollectionRelationship.WORD_CN + " = " + Word.ID_CN + "))";
-        LoggersManager.getParsingLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query);
         selectStatement.setString(1, word);
         selectStatement.setString(2, word);
@@ -176,7 +179,7 @@ public class FXAppDao {
                 "\t\tFROM word_meaning_relationships WMR INNER JOIN words W \n" +
                 "\t\tON W." + Word.ID_CN + " = WMR." + WordMeaningRelationship.WORD_COLUMN_NAME + "\n" +
                 "\t\tWHERE W." + Word.VALUE_CN + " = ?))";
-        LoggersManager.getParsingLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query);
         selectStatement.setString(1, word);
         selectStatement.execute();

@@ -3,7 +3,8 @@ package com.sschudakov.dao.impl.jdbc;
 import com.sschudakov.dao.interf.WordCollectionDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordCollection;
-import com.sschudakov.desktop.logging.LoggersManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
@@ -11,9 +12,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 @Repository
 public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
 
+    private static Logger logger = LogManager.getLogger(WordCollectionDaoJdbcImpl.class);
 
     //-------------- save  ---------------//
 
@@ -23,8 +26,8 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         query.append("INSERT INTO word_collections ")
                 .append("(").append(WordCollection.NAME_CN).append(")")
                 .append(" VALUES ")
-                .append("(").append("\'" + wordCollection.getCollectionName() + "\'").append(")").append(";");
-        LoggersManager.getSqlLogger().info(query);
+                .append("(").append("\'").append(wordCollection.getCollectionName()).append("\'").append(")").append(";");
+        logger.info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -40,7 +43,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
                 .append(WordCollection.NAME_CN).append("=").append("\'" + wordCollection.getCollectionName() + "\'")
                 .append(" WHERE ")
                 .append(WordCollection.ID_CN).append("=").append(wordCollection.getId()).append(";");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         return wordCollection;
@@ -55,7 +58,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         query.append("SELECT * FROM word_collections ")
                 .append(" WHERE ")
                 .append(WordCollection.ID_CN).append("=").append(id);
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
@@ -73,7 +76,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         query.append("SELECT * FROM word_collections")
                 .append(" WHERE ")
                 .append(WordCollection.NAME_CN).append("=").append("\'" + name + "\'");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -103,7 +106,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
     public List<WordCollection> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_collections");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -132,7 +135,7 @@ public class WordCollectionDaoJdbcImpl implements WordCollectionDao {
         query.append("DELETE FROM word_collections")
                 .append(" WHERE ")
                 .append(WordCollection.ID_CN).append("=").append(wordCollectionID);
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
     }

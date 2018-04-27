@@ -1,10 +1,10 @@
 package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.LanguageDao;
-import com.sschudakov.database.DatabaseCache;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.Language;
-import com.sschudakov.desktop.logging.LoggersManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
@@ -12,9 +12,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 @Repository
 public class LanguageDaoJdbcImpl implements LanguageDao {
 
+    private static Logger logger = LogManager.getLogger(LanguageDaoJdbcImpl.class);
 
     //-------------- save  ---------------//
 
@@ -24,8 +26,8 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         query.append("INSERT INTO languages ")
                 .append("(").append(Language.NAME_CN).append(")")
                 .append(" VALUES ")
-                .append("(").append("\'" + language.getLanguageName() + "\'").append(")").append(";");
-        LoggersManager.getSqlLogger().info(query);
+                .append("(").append("\'").append(language.getLanguageName()).append("\'").append(")").append(";");
+        logger.info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -35,20 +37,21 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
 
     @Override
     public Language findById(Integer id) throws SQLException {
-        /*StringBuilder query = new StringBuilder("");
+        StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM languages ")
                 .append(" WHERE ")
                 .append(Language.ID_CN).append("=").append(id);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
-        LoggersManager.getSqlLogger().info(query);
+
+        logger.info(query);
         ResultSet resultSet = selectStatement.getResultSet();
 
         if (!resultSet.next()) {
             return null;
         }
-        return formLanguage(resultSet);*/
-        return DatabaseCache.getInstance().getLanguageBzId(id);
+        return formLanguage(resultSet);
+        /*return DatabaseCache.getInstance().getLanguageBzId(id);*/
     }
 
     @Override
@@ -56,8 +59,8 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM languages")
                 .append(" WHERE ")
-                .append(Language.NAME_CN).append("=").append("\'" + name + "\'");
-        LoggersManager.getSqlLogger().info(query);
+                .append(Language.NAME_CN).append("=").append("\'").append(name).append("\'");
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -87,7 +90,7 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
     public List<Language> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM languages");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 

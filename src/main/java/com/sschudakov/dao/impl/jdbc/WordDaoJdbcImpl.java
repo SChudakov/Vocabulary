@@ -6,7 +6,8 @@ import com.sschudakov.dao.interf.WordDao;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
-import com.sschudakov.desktop.logging.LoggersManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
@@ -15,9 +16,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 @Repository
 public class WordDaoJdbcImpl implements WordDao {
 
+    private static Logger logger = LogManager.getLogger(WordDaoJdbcImpl.class);
 
     //-------------- helping dao objects ---------------//
 
@@ -46,7 +49,7 @@ public class WordDaoJdbcImpl implements WordDao {
                 .append("(").append("\'").append(word.getValue()).append("\'").append(",")
                 .append(word.getWordClass().getId()).append(",")
                 .append(word.getLanguage().getId()).append(")").append(";");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -64,7 +67,7 @@ public class WordDaoJdbcImpl implements WordDao {
                 .append(Word.LANGUAGE_CN).append("=").append(word.getLanguage().getId())
                 .append(" WHERE ")
                 .append(Word.ID_CN).append("=").append(word.getId()).append(";");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
         return word;
@@ -79,7 +82,7 @@ public class WordDaoJdbcImpl implements WordDao {
         query.append("SELECT * FROM words ")
                 .append(" WHERE ")
                 .append(Word.ID_CN).append("=").append(id);
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
@@ -98,7 +101,7 @@ public class WordDaoJdbcImpl implements WordDao {
                 .append(Word.VALUE_CN).append("=").append("\'").append(value).append("\'")
                 .append(" AND ")
                 .append(Word.LANGUAGE_CN).append("=").append(language.getId());
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -132,7 +135,7 @@ public class WordDaoJdbcImpl implements WordDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM words WHERE ")
                 .append(Word.LANGUAGE_CN).append("=").append(language.getId());
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -144,7 +147,7 @@ public class WordDaoJdbcImpl implements WordDao {
     public Collection<Word> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM words");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -176,7 +179,7 @@ public class WordDaoJdbcImpl implements WordDao {
         query.append("DELETE FROM words")
                 .append(" WHERE ")
                 .append(Word.ID_CN).append("=").append(wordID);
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
     }

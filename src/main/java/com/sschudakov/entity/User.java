@@ -1,6 +1,8 @@
 package com.sschudakov.entity;
 
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.CascadeType;
@@ -39,7 +41,7 @@ public class User {
 
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "user")
-    private List<Role> roleList= new ArrayList<>();
+    private List<Role> roleList = new ArrayList<>();
 
     @CreationTimestamp
     private Date created;
@@ -52,7 +54,6 @@ public class User {
 
 
     public User() {
-        super();
         this.enabled = false;
     }
 
@@ -62,9 +63,8 @@ public class User {
         this.enabled = false;
     }
 
-    public void addToRole(Role role){
+    public void addToRole(Role role) {
         this.roleList.add(role);
-
     }
 
     public void setUserName(String userName) {
@@ -126,10 +126,14 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                ", userName='" + userName + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                ", enabled=" + enabled +
-                '}';
+        return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
+                .append(this.ID)
+                .append(this.userName)
+                .append(this.userPassword)
+                .append(this.userEmail)
+                .append(this.roleList)
+                .append(this.created)
+                .append(this.enabled)
+                .build();
     }
 }

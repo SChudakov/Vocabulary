@@ -14,13 +14,18 @@ public class WordsCollectionsReader {
     private static final String WORDS_COLLECTIONS_DIRECTORY_PATH = "D:\\Workspace.java\\Vocabulary\\words_collections";
     private static final String DOCX_EXTENSION = ".docx";
 
+    private FileParser fileParser;
 
-    public static Collection<HashMap<String, List<String>>> readWordsCollections() {
+    public WordsCollectionsReader() {
+        this.fileParser = new FileParser();
+    }
+
+    public Collection<HashMap<String, List<String>>> readWordsCollections() {
         Collection<HashMap<String, List<String>>> result = new ArrayList<>();
         for (File file : Objects.requireNonNull(new File(WORDS_COLLECTIONS_DIRECTORY_PATH).listFiles())) {
             System.out.println("\nFILE: " + file.getName() + "\n");
             if (!isDOCXFile(file.getPath())) {
-                result.add(FileParser.parse(file));
+                result.add(this.fileParser.parse(file));
             }
         }
         return result;

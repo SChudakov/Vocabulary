@@ -1,10 +1,10 @@
 package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.WordClassDao;
-import com.sschudakov.database.DatabaseCache;
 import com.sschudakov.database.DatabaseManager;
 import com.sschudakov.entity.WordClass;
-import com.sschudakov.desktop.logging.LoggersManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
@@ -12,9 +12,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 @Repository
 public class WordClassDaoJdbcImpl implements WordClassDao {
 
+    private static Logger logger = LogManager.getLogger(WordClassDaoJdbcImpl.class);
 
     //-------------- save  ---------------//
 
@@ -24,8 +26,8 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         query.append("INSERT INTO word_classes ")
                 .append("(").append(WordClass.NAME_CN).append(")")
                 .append(" VALUES ")
-                .append("(").append("\'" + wordClass.getWordClassName() + "\'").append(")").append(";");
-        LoggersManager.getSqlLogger().info(query);
+                .append("(").append("\'").append(wordClass.getWordClassName()).append("\'").append(")").append(";");
+        logger.info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
     }
@@ -35,11 +37,11 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
 
     @Override
     public WordClass findById(Integer id) throws SQLException {
-        /*StringBuilder query = new StringBuilder("");
+        StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes ")
                 .append(" WHERE ")
                 .append(WordClass.ID_CN).append("=").append(id);
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement selectStatement = DatabaseManager.connection.prepareStatement(query.toString());
         selectStatement.execute();
         ResultSet resultSet = selectStatement.getResultSet();
@@ -47,8 +49,8 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         if (!resultSet.next()) {
             return null;
         }
-        return formWordClass(resultSet);*/
-        return DatabaseCache.getInstance().getWordClassBzId(id);
+        return formWordClass(resultSet);
+        /*return DatabaseCache.getInstance().getWordClassBzId(id);*/
     }
 
     @Override
@@ -57,7 +59,7 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes WHERE ")
                 .append(WordClass.NAME_CN).append("=").append("\'" + name + "\'");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
@@ -69,7 +71,7 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
 
         WordClass result = formWordClass(resultSet);
 
-        if(resultSet.next()){
+        if (resultSet.next()) {
             throw new IllegalArgumentException("multiple word classes match the name " + name);
         }
 
@@ -87,7 +89,7 @@ public class WordClassDaoJdbcImpl implements WordClassDao {
     public List<WordClass> findAll() throws SQLException {
         StringBuilder query = new StringBuilder("");
         query.append("SELECT * FROM word_classes");
-        LoggersManager.getSqlLogger().info(query);
+        logger.info(query);
         PreparedStatement statement = DatabaseManager.connection.prepareStatement(query.toString());
         statement.execute();
 
