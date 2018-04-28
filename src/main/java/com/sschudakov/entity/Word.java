@@ -32,16 +32,16 @@ public class Word {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = VALUE_CN)
+    @Column(name = VALUE_CN, nullable = false)
     private String value;
 
     @ManyToOne
-    @JoinColumn(name = WORD_CLASS_CN,
+    @JoinColumn(name = WORD_CLASS_CN, nullable = false,
             foreignKey = @ForeignKey(name = WORD_CLASS_CN))
     private WordClass wordClass;
 
     @ManyToOne
-    @JoinColumn(name = LANGUAGE_CN,
+    @JoinColumn(name = LANGUAGE_CN, nullable = false,
             foreignKey = @ForeignKey(name = LANGUAGE_CN))
     private Language language;
 

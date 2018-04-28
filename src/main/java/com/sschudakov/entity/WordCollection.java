@@ -23,7 +23,7 @@ public class WordCollection {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = NAME_CN)
+    @Column(name = NAME_CN, nullable = false)
     private String collectionName;
 
 

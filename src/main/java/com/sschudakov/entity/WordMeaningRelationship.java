@@ -28,12 +28,12 @@ public class WordMeaningRelationship {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = WORD_COLUMN_NAME,
+    @JoinColumn(name = WORD_COLUMN_NAME, nullable = false,
             foreignKey = @ForeignKey(name = WORD_COLUMN_NAME))
     private Word word;
 
     @ManyToOne
-    @JoinColumn(name = MEANING_COLUMN_NAME,
+    @JoinColumn(name = MEANING_COLUMN_NAME, nullable = false,
             foreignKey = @ForeignKey(name = MEANING_COLUMN_NAME))
     private Word meaning;
 

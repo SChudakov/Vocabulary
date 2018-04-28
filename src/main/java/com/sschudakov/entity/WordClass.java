@@ -22,11 +22,11 @@ public class WordClass {
     public static final String NAME_CN = "word_class_name";
 
     @Id
-    @Column(name = ID_CN)
+    @Column(name = ID_CN, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = NAME_CN)
+    @Column(name = NAME_CN, updatable = false, nullable = false)
     private String wordClassName;
 
     public Integer getId() {

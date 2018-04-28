@@ -119,6 +119,7 @@ public class DataConfiguration {
 
     /*----------- other stuff --------------*/
 
+
     @Bean(name = "userDetailsService")
     public UserDetailsService userDetailsService() {
         // UserDetailsServiceRetrieves implementation which retrieves the

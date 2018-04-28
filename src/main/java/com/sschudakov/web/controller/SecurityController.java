@@ -8,11 +8,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 
-/**
- * @author Danny Briskin (sql.coach.kiev@gmail.com)
- * on  14.07.2017 for spingSecurityAdv project.
- */
-
 @RestController
 public class SecurityController {
 

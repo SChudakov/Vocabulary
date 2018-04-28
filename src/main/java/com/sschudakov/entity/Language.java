@@ -20,11 +20,11 @@ public class Language {
     public static final String NAME_CN = "language_name";
 
     @Id
-    @Column(name = ID_CN)
+    @Column(name = ID_CN, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = NAME_CN)
+    @Column(name = NAME_CN, updatable = false, nullable = false)
     private String languageName;
 
     public Integer getId() {

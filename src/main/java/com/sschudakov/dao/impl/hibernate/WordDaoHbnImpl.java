@@ -22,7 +22,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.Collection;
 import java.util.List;
-@Repository
+
 public class WordDaoHbnImpl implements WordDao {
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;

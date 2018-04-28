@@ -16,7 +16,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 import java.util.List;
-@Repository
+
 public class WordCollectionDaoHbnImpl implements WordCollectionDao {
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;

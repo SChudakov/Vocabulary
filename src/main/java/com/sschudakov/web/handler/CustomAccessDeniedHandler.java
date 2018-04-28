@@ -11,10 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * @author Danny Briskin (sql.coach.kiev@gmail.com)
- * on  14.07.2017 for spingSecurityAdv project.
- */
 @Component
 public class CustomAccessDeniedHandler implements AccessDeniedHandler {
     @Override

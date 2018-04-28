@@ -24,7 +24,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Repository
 public class WMRDaoHbnImpl implements WMRDao {
     private EntityManager entityManager;
     private CriteriaBuilder criteriaBuilder;

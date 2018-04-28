@@ -1,8 +1,7 @@
 package com.sschudakov.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,45 +9,43 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 
 @Entity
-@Table(name = "verification_tokenss")
+@Table(name = "verification_tokens")
 public class VerificationToken {
-
     private static final int EXPIRATION = 60 * 24;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ID;
+    public static final String ID_CN = "toke_id";
+    public static final String TOKEN_CN = "token";
+    public static final String USER_CN = "user";
+    public static final String EXPIRY_CN = "expiry";
 
+    @Id
+    @JoinColumn(name = ID_CN)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = TOKEN_CN)
     private String token;
 
-    @OneToOne(targetEntity = User.class, fetch = FetchType.EAGER)
-    @JoinColumn(nullable = false, name = "user_id", foreignKey = @ForeignKey(name = "fk_userrc_verification_tokens"))
+    @OneToOne
+    @JoinColumn(name = USER_CN)
     private User user;
 
-    private Date expiryDate;
+    @Column(name = EXPIRY_CN)
+    private LocalDateTime expiryDate;
 
-    private Date calculateExpiryDate(int expiryTimeInMinutes) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(new Timestamp(cal.getTime().getTime()));
-        cal.add(Calendar.MINUTE, expiryTimeInMinutes);
-        return new Date(cal.getTime().getTime());
+
+    //getters and setters
+    public Integer getId() {
+        return id;
     }
 
-    public VerificationToken() {
-    }
-
-    public VerificationToken(String token, User user) {
-        this.token = token;
-        this.user = user;
-        this.expiryDate = calculateExpiryDate(3600);
-    }
-
-    public static int getEXPIRATION() {
-        return EXPIRATION;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getToken() {
@@ -67,19 +64,21 @@ public class VerificationToken {
         this.user = user;
     }
 
-    public Date getExpiryDate() {
+    public LocalDateTime getExpiryDate() {
         return expiryDate;
     }
 
-    public void setExpiryDate(Date expiryDate) {
+    public void setExpiryDate(LocalDateTime expiryDate) {
         this.expiryDate = expiryDate;
     }
 
-    public Integer getID() {
-        return ID;
+    public VerificationToken() {
     }
 
-    public void setID(Integer ID) {
-        this.ID = ID;
+    private Date calculateExpiryDate(int expiryTimeInMinutes) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Timestamp(cal.getTime().getTime()));
+        cal.add(Calendar.MINUTE, expiryTimeInMinutes);
+        return new Date(cal.getTime().getTime());
     }
 }

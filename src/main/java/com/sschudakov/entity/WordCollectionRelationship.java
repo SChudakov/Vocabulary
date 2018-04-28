@@ -28,12 +28,12 @@ public class WordCollectionRelationship {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = WORD_CN,
+    @JoinColumn(name = WORD_CN, nullable = false,
             foreignKey = @ForeignKey(name = WORD_CN))
     private Word word;
 
     @ManyToOne
-    @JoinColumn(name = COLLECTION_CN,
+    @JoinColumn(name = COLLECTION_CN, nullable = false,
             foreignKey = @ForeignKey(name = COLLECTION_CN))
     private WordCollection wordCollection;
 
