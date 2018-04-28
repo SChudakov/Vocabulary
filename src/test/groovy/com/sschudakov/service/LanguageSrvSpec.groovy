@@ -109,7 +109,7 @@ class LanguageSrvSpec extends Specification {
         then: "it is found"
         foundLanguage != null
         foundLanguage.getId() == englishId
-        foundLanguage.getLanguageName().equals(english)
+        foundLanguage.getName().equals(english)
     }
 
     def "test finding not existing language by id"() {
@@ -130,7 +130,7 @@ class LanguageSrvSpec extends Specification {
         then: "it is found"
         foundLanguage != null
         foundLanguage.getId() == russianId
-        foundLanguage.getLanguageName() == russian
+        foundLanguage.getName() == russian
     }
 
     def "test finding not existing language by name"() {

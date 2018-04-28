@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"com.sschudakov.web.registration.repository"})
+@EnableJpaRepositories(basePackages = {"com.sschudakov.dao.springdata"})
 @EntityScan(basePackages = {"com.sschudakov.entity"})
 @EnableTransactionManagement
 public class RepositoryConfiguration {

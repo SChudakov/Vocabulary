@@ -25,7 +25,7 @@ public class Language {
     private Integer id;
 
     @Column(name = NAME_CN, updatable = false, nullable = false)
-    private String languageName;
+    private String name;
 
     public Integer getId() {
         return id;
@@ -35,31 +35,31 @@ public class Language {
         this.id = id;
     }
 
-    public String getLanguageName() {
-        return languageName;
+    public String getName() {
+        return name;
     }
 
-    public void setLanguageName(String languageName) {
-        this.languageName = languageName;
+    public void setName(String languageName) {
+        this.name = languageName;
     }
 
     public Language() {
         this(null, null);
     }
 
-    public Language(String languageName) {
-        this(null, languageName);
+    public Language(String name) {
+        this(null, name);
     }
 
-    public Language(Integer id, String languageName) {
+    public Language(Integer id, String name) {
         this.id = id;
-        this.languageName = languageName;
+        this.name = name;
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(this.languageName)
+                .append(this.name)
                 .toHashCode();
     }
 
@@ -68,7 +68,7 @@ public class Language {
         if (obj instanceof Language) {
             Language casted = (Language) obj;
             return new EqualsBuilder()
-                    .append(this.languageName, casted.getLanguageName())
+                    .append(this.name, casted.getName())
                     .isEquals();
         }
         return false;
@@ -78,7 +78,7 @@ public class Language {
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
                 .append("language id", this.id)
-                .append("language name", this.languageName)
+                .append("language name", this.name)
                 .build();
     }
 }

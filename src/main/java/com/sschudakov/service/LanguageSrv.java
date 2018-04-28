@@ -49,7 +49,7 @@ public class LanguageSrv {
 
 
     public List<String> findAll() throws SQLException {
-        return this.languageDao.findAll().stream().map(Language::getLanguageName).collect(Collectors.toList());
+        return this.languageDao.findAll().stream().map(Language::getName).collect(Collectors.toList());
     }
 
     public List<Language> findAllObjects() throws SQLException {

@@ -1,6 +1,8 @@
 package com.sschudakov.entity;
 
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.hibernate.annotations.CreationTimestamp;
@@ -30,6 +32,10 @@ public class User {
     public static final String PASSWORD_CN = "password";
     public static final String EMAIL_CN = "email";
 
+    public static final String USER_ROLE_TN = "user_role";
+    public static final String USER_ROLE_CN = "user";
+    public static final String ROLE_ROLE_CN = "role";
+
     @Id
     @Column(name = ID_CN)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,9 +53,9 @@ public class User {
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(
-            name = "user_role",
-            joinColumns = {@JoinColumn(name = "user")},
-            inverseJoinColumns = {@JoinColumn(name = "role")}
+            name = USER_ROLE_TN,
+            joinColumns = {@JoinColumn(name = USER_ROLE_CN)},
+            inverseJoinColumns = {@JoinColumn(name = ROLE_ROLE_CN)}
     )
     private List<Role> roles;
 
@@ -111,6 +117,32 @@ public class User {
 
     public void addToRole(Role one) {
         this.roles.add(one);
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder()
+                .append(this.name)
+                .append(this.password)
+                .append(this.email)
+                .append(this.roles)
+                .append(this.created)
+                .build();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof User) {
+            User casted = (User) obj;
+            return new EqualsBuilder()
+                    .append(this.name, casted.getName())
+                    .append(this.password, casted.getPassword())
+                    .append(this.email, casted.getEmail())
+                    .append(this.roles, casted.getRoles())
+                    .append(this.created, casted.getCreated())
+                    .build();
+        }
+        return false;
     }
 
     @Override

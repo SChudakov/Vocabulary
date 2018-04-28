@@ -9,30 +9,52 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 
 @Configuration
-@EnableWebSecurity//(debug = true)
+@EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    UserDetailsService userDetailsService;
+    private UserDetailsService userDetailsService;
 
     @Autowired
-    public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
+    private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+
+    @Autowired
+    private MySavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;
+
+    @Autowired
+    public void configAuthentication(AuthenticationManagerBuilder auth) {
         //   auth.userDetailsService(userDetailsService).passwordEncoder(passwordencoder());;
         auth.authenticationProvider(authProvider());
     }
 
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http.csrf().disable()
+
+                .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint)
+                .and().authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/protected/**").access("hasRole('ROLE_ADMIN')")
                 .antMatchers("/confidential/**").access("hasRole('ROLE_SUPERADMIN')")
+
+                .antMatchers("/words/**").permitAll()
+                .antMatchers("/collections/**").permitAll()
+                .antMatchers("/languages/**").permitAll()
+
+                .and().httpBasic().realmName("EVocabulary")
+                .and().formLogin().successHandler(this.authenticationSuccessHandler)
+                .failureHandler(new SimpleUrlAuthenticationFailureHandler())
+                .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+
                 .and().formLogin().loginPage("/newlogin").permitAll()
                 .and().logout().logoutSuccessUrl("/home.html")
                 .and().exceptionHandling().accessDeniedHandler(accessDeniedHandler());

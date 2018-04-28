@@ -48,7 +48,7 @@ public class LanguageDaoHbnImpl implements LanguageDao {
         Root<Language> root = criteriaQuery.from(Language.class);
 
         Path<Integer> languageIdPath = root.get(Language_.id);
-        Path<String> languageNamePath = root.get(Language_.languageName);
+        Path<String> languageNamePath = root.get(Language_.name);
 
         criteriaQuery.select(
                 criteriaBuilder.construct(
@@ -73,7 +73,7 @@ public class LanguageDaoHbnImpl implements LanguageDao {
         Root<Language> root = criteriaQuery.from(Language.class);
 
         Path<Integer> languageIdPath = root.get(Language_.id);
-        Path<String> languageNamePath = root.get(Language_.languageName);
+        Path<String> languageNamePath = root.get(Language_.name);
 
         criteriaQuery.select(
                 criteriaBuilder.construct(
@@ -81,7 +81,7 @@ public class LanguageDaoHbnImpl implements LanguageDao {
                         languageIdPath,
                         languageNamePath
                 )
-        ).where(criteriaBuilder.equal(root.get(Language_.languageName), name));
+        ).where(criteriaBuilder.equal(root.get(Language_.name), name));
 
         Language result = null;
         try {
@@ -98,7 +98,7 @@ public class LanguageDaoHbnImpl implements LanguageDao {
         Root<Language> root = criteriaQuery.from(Language.class);
 
         Path<Integer> languageIdPath = root.get(Language_.id);
-        Path<String> languageNamePath = root.get(Language_.languageName);
+        Path<String> languageNamePath = root.get(Language_.name);
 
         criteriaQuery.select(
                 criteriaBuilder.construct(

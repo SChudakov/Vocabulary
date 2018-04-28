@@ -119,7 +119,6 @@ public class DataConfiguration {
 
     /*----------- other stuff --------------*/
 
-
     @Bean(name = "userDetailsService")
     public UserDetailsService userDetailsService() {
         // UserDetailsServiceRetrieves implementation which retrieves the
@@ -127,8 +126,8 @@ public class DataConfiguration {
 
         JdbcDaoImpl jdbcDao = new JdbcDaoImpl();
         jdbcDao.setDataSource(dataSource);
-        jdbcDao.setUsersByUsernameQuery("select username ,password, enabled from sps_users where username=?");
-        jdbcDao.setAuthoritiesByUsernameQuery("select b.username, a.role from sps_user_roles a join sps_users b on a.userid=b.userid where b.username=?");
+        jdbcDao.setUsersByUsernameQuery("select name as username ,password, 1 as enabled from users where name=?");
+        jdbcDao.setAuthoritiesByUsernameQuery("select uu.name as username, ro.name as role from users uu  join user_role ur on uu.user_id=ur.user join roles ro on ro.role_id=ur.role where uu.name=?");
         return jdbcDao;
     }
 

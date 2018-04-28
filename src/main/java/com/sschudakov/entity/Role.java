@@ -1,5 +1,7 @@
 package com.sschudakov.entity;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -18,7 +20,7 @@ import java.util.List;
 public class Role {
 
     public static final String ID_CN = "role_id";
-    public static final String NAME_CN = "name_id";
+    public static final String NAME_CN = "name";
 
     @Id
     @Column(name = ID_CN)
@@ -60,6 +62,27 @@ public class Role {
     }
 
     public Role() {
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder()
+                .append(this.name)
+                .append(this.users)
+                .build();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (obj instanceof Role) {
+            Role casted = (Role) obj;
+            return new EqualsBuilder()
+                    .append(this.name, casted.getName())
+                    .append(this.users, casted.getUsers())
+                    .build();
+        }
+        return false;
     }
 
     @Override

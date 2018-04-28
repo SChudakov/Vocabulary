@@ -32,7 +32,7 @@ public class VocabularyController {
         this.wordSrv = wordSrv;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView getIndex() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("home");
@@ -112,5 +112,5 @@ public class VocabularyController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/vocabulary/languageInfo");
         return modelAndView;
-    }
+    }*/
 }

@@ -26,7 +26,7 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         query.append("INSERT INTO languages ")
                 .append("(").append(Language.NAME_CN).append(")")
                 .append(" VALUES ")
-                .append("(").append("\'").append(language.getLanguageName()).append("\'").append(")").append(";");
+                .append("(").append("\'").append(language.getName()).append("\'").append(")").append(";");
         logger.info(query);
         PreparedStatement insertStatement = DatabaseManager.connection.prepareStatement(query.toString());
         insertStatement.execute();
@@ -81,7 +81,7 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
     private Language formLanguage(ResultSet resultSet) throws SQLException {
         Language result = new Language();
         result.setId(resultSet.getInt(Language.ID_CN));
-        result.setLanguageName(resultSet.getString(Language.NAME_CN));
+        result.setName(resultSet.getString(Language.NAME_CN));
         return result;
     }
 
@@ -104,7 +104,7 @@ public class LanguageDaoJdbcImpl implements LanguageDao {
         while (resultSet.next()) {
             Language language = new Language();
             language.setId(resultSet.getInt(Language.ID_CN));
-            language.setLanguageName(resultSet.getString(Language.NAME_CN));
+            language.setName(resultSet.getString(Language.NAME_CN));
             result.add(language);
         }
         return result;

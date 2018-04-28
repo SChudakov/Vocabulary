@@ -65,7 +65,7 @@ public class ApplicationController {
         this.wordClassColumn.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()
                 .getWordClass().getWordClassName()));
         this.languageColumn.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()
-                .getLanguage().getLanguageName()));
+                .getLanguage().getName()));
     }
 
 
