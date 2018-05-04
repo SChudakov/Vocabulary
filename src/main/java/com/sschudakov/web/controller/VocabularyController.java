@@ -1,11 +1,11 @@
 package com.sschudakov.web.controller;
 
+import com.sschudakov.dao.springdata.LanguageRepository;
+import com.sschudakov.dao.springdata.WordCollectionRepository;
+import com.sschudakov.dao.springdata.WordRepository;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordCollection;
-import com.sschudakov.service.LanguageSrv;
-import com.sschudakov.service.WordCollectionSrv;
-import com.sschudakov.service.WordSrv;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,25 +14,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Controller
 public class VocabularyController {
 
-    private LanguageSrv languageSrv;
-    private WordCollectionSrv wordCollectionSrv;
-    private WordSrv wordSrv;
+    private LanguageRepository languageRepository;
+    private WordCollectionRepository wordCollectionRepository;
+    private WordRepository wordRepository;
 
     @Autowired
-    public VocabularyController(LanguageSrv languageSrv,
-                                WordCollectionSrv wordCollectionSrv, WordSrv wordSrv) {
-        this.languageSrv = languageSrv;
-        this.wordCollectionSrv = wordCollectionSrv;
-        this.wordSrv = wordSrv;
+    public VocabularyController(LanguageRepository languageRepository,
+                                WordCollectionRepository wordCollectionRepository,
+                                WordRepository wordRepository) {
+        this.languageRepository = languageRepository;
+        this.wordCollectionRepository = wordCollectionRepository;
+        this.wordRepository = wordRepository;
     }
 
-    /*@RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView getIndex() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("home");
@@ -52,15 +54,36 @@ public class VocabularyController {
             @RequestParam("value") String value,
             @RequestParam("language") String languageName,
             Model model
-    ) throws SQLException {
-
-        Language language = this.languageSrv.findByName(languageName);
-        Word word = this.wordSrv.findByValueAndLanguage(value, language);
-
-        model.addAttribute("word", word);
-
+    ) {
+        Optional<Language> optionalLanguage = this.languageRepository.getByName(languageName);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/vocabulary/wordInfo");
+
+        if (optionalLanguage.isPresent()) {
+
+            Language language = optionalLanguage.get();
+            Optional<Word> optionalWord = this.wordRepository.getByValueAndLanguage(value, language);
+
+            if (optionalWord.isPresent()) {
+
+                Word word = optionalWord.get();
+
+                model.addAttribute("word", word);
+                modelAndView.setViewName("/vocabulary/wordInfo");
+
+            } else {
+
+                model.addAttribute("languageName", languageName);
+                model.addAttribute("wordValue", value);
+                modelAndView.setViewName("/wordNotFound");
+
+            }
+
+        } else {
+
+            model.addAttribute("languageName", languageName);
+            modelAndView.setViewName("/languageNotFound");
+
+        }
 
         return modelAndView;
     }
@@ -77,15 +100,27 @@ public class VocabularyController {
     public ModelAndView getCollectionInfo(
             @RequestParam("collectionName") String collectionsName,
             Model model
-    ) throws SQLException {
+    ) {
 
-        WordCollection collection = this.wordCollectionSrv.findByName(collectionsName);
-        List<String> words = this.wordSrv.getCollectionWords(collection);
-
-        model.addAttribute("words", words);
-
+        Optional<WordCollection> optionalCollection = this.wordCollectionRepository.getByCollectionName(collectionsName);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/vocabulary/collectionInfo");
+
+
+        if (optionalCollection.isPresent()) {
+
+            WordCollection collection = optionalCollection.get();
+            List<Word> words = this.wordRepository.getByCollection(collection);
+            List<String> wordsValues = words.stream().map(Word::getValue).collect(Collectors.toList());
+
+            model.addAttribute("words", wordsValues);
+            modelAndView.setViewName("/vocabulary/collectionInfo");
+
+        } else {
+
+            model.addAttribute("collectionName", collectionsName);
+            modelAndView.setViewName("/collectionNotFound");
+
+        }
         return modelAndView;
     }
 
@@ -101,16 +136,28 @@ public class VocabularyController {
     public ModelAndView getLanguageInfo(
             @RequestParam("languageName") String languageName,
             Model model
-    ) throws SQLException {
+    ) {
 
-        Language language = this.languageSrv.findByName(languageName);
-        List<String> words = this.wordSrv.findByLanguage(language);
-
-        model.addAttribute("words", words);
-
-
+        Optional<Language> optionalLanguage = this.languageRepository.getByName(languageName);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/vocabulary/languageInfo");
+
+
+        if (optionalLanguage.isPresent()) {
+
+            Language language = optionalLanguage.get();
+            List<Word> words = this.wordRepository.getByLanguage(language);
+            List<String> wordsValues = words.stream().map(Word::getValue).collect(Collectors.toList());
+
+
+            model.addAttribute("words", wordsValues);
+            modelAndView.setViewName("/vocabulary/languageInfo");
+        } else {
+
+            model.addAttribute("languageName", languageName);
+            modelAndView.setViewName("/languageNotFound");
+
+        }
+
         return modelAndView;
-    }*/
+    }
 }

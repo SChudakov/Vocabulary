@@ -11,20 +11,26 @@ import java.io.IOException;
 @Component
 public class RestAuthenticationEntryPoint extends BasicAuthenticationEntryPoint {
 
+    private static final String AUTHENTICATE_HEADER = "WWW-Authenticate";
+    private static final String BASIC_REALN = "Basic realm=";
+    private static final String UNAUTHORIZED = "!Unauthorized!";
+
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
-        // можем написать что угодно прямо в response
-        response.addHeader("WWW-Authenticate", "Basic realm=" + getRealmName());
-        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "!Unauthorized!");
+        response.addHeader(AUTHENTICATE_HEADER, BASIC_REALN + getRealmName());
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, UNAUTHORIZED);
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        // Realm – имя засекреченной области. механизм Digest аутентификации
-        // использует эту информацию для идентификации защищённой зоны.
-        // Поэтому этот параметр должен обязательно присутствовать в заголовке Authorization и совпадать
-        // со значением realm, переданным сервером в заголовке WWW-Authenticate.
+        /**
+         * Realm – the name of the secret area. The mechanism pof
+         * Digest authentication uses this information of identifying
+         * the secret zone. That is why this parameter should obligatory
+         * be present in the header of the Authorization and match
+         * to the value of realm, passed be server in the WWW-Authenticate header.
+         **/
         setRealmName("EVocabulary");
         super.afterPropertiesSet();
     }

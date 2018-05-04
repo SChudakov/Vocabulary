@@ -8,7 +8,6 @@ import com.sschudakov.entity.Word;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +19,7 @@ import java.util.Optional;
 @RestController
 public class RESTController {
 
-    private final WordRepository wordRepository;
+    /*private final WordRepository wordRepository;
     private final LanguageRepository languageRepository;
 
     @Autowired
@@ -49,11 +48,12 @@ public class RESTController {
         return result;
     }
 
-    /*@RequestMapping(value = "/collections/collectionInfo", method = RequestMethod.GET)
+    @RequestMapping(value = "/collections/collectionInfo", method = RequestMethod.GET)
     public ResponseEntity<List<Word>> getCollectionInfo(
-            @PathVariable("collectionName") String collectionsName
+            @RequestParam("collectionName") String collectionsName
     ) {
-    }*/
+        throw new UnsupportedOperationException();
+    }
 
     @RequestMapping(value = "/languages/languageInfo", method = RequestMethod.GET)
     public ResponseEntity<List<Word>> getLanguageInfo(
@@ -71,5 +71,5 @@ public class RESTController {
         }
 
         return result;
-    }
+    }*/
 }

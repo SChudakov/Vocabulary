@@ -52,18 +52,14 @@ public class SecurityController {
 
     }
 
-
-    // for 403 access denied page
     @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
     public ModelAndView accessDenied(
             Principal user,
             Model model) {
 
         if (user != null) {
-
             model.addAttribute("msg", "Hi " + user.getName() + ", you do not have permission to access this page!");
         } else {
-
             model.addAttribute("msg", "You do not have permission to access this page!");
         }
 

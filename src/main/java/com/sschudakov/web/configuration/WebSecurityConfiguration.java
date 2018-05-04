@@ -27,7 +27,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
 
     @Autowired
-    private MySavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;
+    private SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;
 
     @Autowired
     public void configAuthentication(AuthenticationManagerBuilder auth) {

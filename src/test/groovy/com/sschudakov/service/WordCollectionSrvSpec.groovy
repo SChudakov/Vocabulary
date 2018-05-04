@@ -128,7 +128,7 @@ class WordCollectionSrvSpec extends Specification {
     def "test update on not existing collection"() {
         // service lair methods have been changed
         /*when: "a not existing collection is being tried to be updated"
-        this.wordCollectionSrv.update(notExistingCollection, notExistingCollectionNewName)
+        this.wordCollectionRepository.update(notExistingCollection, notExistingCollectionNewName)
 
         then: "an IllegalArgumentException is thrown"
         thrown(IllegalArgumentException)*/

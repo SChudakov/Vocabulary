@@ -42,90 +42,20 @@ public class DataConfiguration {
     @Resource
     private Environment env;
 
-
-    /*------------ jdbc dao beans ------------------*/
-    @Primary
-    @Bean
-    public LanguageDao languageJdbcDao() {
-        return new LanguageDaoJdbcImpl();
-    }
-
-    @Primary
-    @Bean
-    public WordCollectionDao wordCollectionJdbcDao() {
-        return new WordCollectionDaoJdbcImpl();
-    }
-
-    @Primary
-    @Bean
-    public WordClassDao wordClassJdbcDao() {
-        return new WordClassDaoJdbcImpl();
-    }
-
-    @Primary
-    @Bean
-    public WordDao wordDao() {
-        return new WordDaoJdbcImpl(
-                languageJdbcDao(),
-                wordClassJdbcDao()
-        );
-    }
-
-    @Primary
-    @Bean
-    public WMRDao wmrJdbcDao() {
-        return new WMRDaoJdbcImpl(wordDao());
-    }
-
-    @Primary
-    @Bean
-    public WCRDao wcrJdbcDao() {
-        return new WCRDaoJdbcImpl(wordDao(), wordCollectionJdbcDao());
-    }
-
-
-    /*------------ hibernate dao beans ------------------*/
-
-    /*@Bean
-    public LanguageDao languageHbnDao() {
-        return new LanguageDaoHbnImpl();
-    }
-
-    @Bean
-    public WordCollectionDao wordCollectionHbnDao() {
-        return new WordCollectionDaoHbnImpl();
-    }
-
-    @Bean
-    public WordClassDao wordClassHbnDao() {
-        return new WordClassDaoHbnImpl();
-    }
-
-    @Bean
-    public WordDao wordHbnDao() {
-        return new WordDaoHbnImpl();
-    }
-
-    @Bean
-    public WMRDao wmrHbnDao() {
-        return new WMRDaoHbnImpl();
-    }
-
-    @Bean
-    public WCRDao wcrHbnDao() {
-        return new WCRDaoHbnImpl();
-    }*/
-
-
-    /*----------- other stuff --------------*/
+    /*----------- stuff --------------*/
 
     @Bean(name = "userDetailsService")
     public UserDetailsService userDetailsService() {
-        // UserDetailsServiceRetrieves implementation which retrieves the
-        // user details (username, password, enabled flag, and authorities) from a database using JDBC queries.
+
+
+         /**
+          * UserDetailsServiceRetrieves implementation which retrieves the
+          * user details (username, password, enabled flag, and authorities)
+          * from a database using JDBC queries.
+         */
 
         JdbcDaoImpl jdbcDao = new JdbcDaoImpl();
-        jdbcDao.setDataSource(dataSource);
+        jdbcDao.setDataSource(this.dataSource);
         jdbcDao.setUsersByUsernameQuery("select name as username ,password, 1 as enabled from users where name=?");
         jdbcDao.setAuthoritiesByUsernameQuery("select uu.name as username, ro.name as role from users uu  join user_role ur on uu.user_id=ur.user join roles ro on ro.role_id=ur.role where uu.name=?");
         return jdbcDao;

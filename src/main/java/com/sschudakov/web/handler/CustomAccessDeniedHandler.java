@@ -6,7 +6,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -17,12 +16,15 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
     public void handle(
             HttpServletRequest request,
             HttpServletResponse response,
-            AccessDeniedException exc) throws IOException, ServletException {
-//Authentication представляет пользователя (Principal) с точки зрения Spring Security.
-        Authentication auth
-                = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            System.out.println("User: " + auth.getName()
+            AccessDeniedException exc) throws IOException {
+        /**
+         * Authentication represents the user (Principal)
+         * from the Spring Security standpoint.
+         */
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null) {
+            System.out.println("User: " + authentication.getName()
                     + " attempted to access the protected URL: "
                     + request.getRequestURI());
         }
