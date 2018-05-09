@@ -115,7 +115,7 @@ public class User {
         this.roles = new ArrayList<>();
     }
 
-    public void addToRole(Role one) {
+    public void addRole(Role one) {
         this.roles.add(one);
     }
 

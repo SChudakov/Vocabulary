@@ -3,7 +3,7 @@ package com.sschudakov.dao.impl.jdbc;
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.dao.interf.WordClassDao;
 import com.sschudakov.dao.interf.WordDao;
-import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.desktop.database.DatabaseManager;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import org.apache.logging.log4j.LogManager;

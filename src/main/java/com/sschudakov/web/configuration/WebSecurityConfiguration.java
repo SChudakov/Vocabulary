@@ -20,14 +20,18 @@ import org.springframework.security.web.authentication.SimpleUrlAuthenticationFa
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private UserDetailsService userDetailsService;
+    private final UserDetailsService userDetailsService;
+
+    private final RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+
+    private final SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;
 
     @Autowired
-    private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
-
-    @Autowired
-    private SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;
+    public WebSecurityConfiguration(UserDetailsService userDetailsService, RestAuthenticationEntryPoint restAuthenticationEntryPoint, SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler) {
+        this.userDetailsService = userDetailsService;
+        this.restAuthenticationEntryPoint = restAuthenticationEntryPoint;
+        this.authenticationSuccessHandler = authenticationSuccessHandler;
+    }
 
     @Autowired
     public void configAuthentication(AuthenticationManagerBuilder auth) {
@@ -55,7 +59,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .failureHandler(new SimpleUrlAuthenticationFailureHandler())
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 
-                .and().formLogin().loginPage("/newlogin").permitAll()
+                .and().formLogin().loginPage("/newlogin").permitAll()///clogin originally!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 .and().logout().logoutSuccessUrl("/home.html")
                 .and().exceptionHandling().accessDeniedHandler(accessDeniedHandler());
     }

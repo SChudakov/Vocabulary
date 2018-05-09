@@ -1,7 +1,7 @@
 package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.WordCollectionDao;
-import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.desktop.database.DatabaseManager;
 import com.sschudakov.entity.WordCollection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

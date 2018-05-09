@@ -29,6 +29,14 @@ public class WebConfiguration implements WebMvcConfigurer {
     /*--------------  my stuff ---------------------------*/
 
     @Bean
+    public InternalResourceViewResolver getViewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".html");
+        return viewResolver;
+    }
+
+    @Bean
     public ReloadableResourceBundleMessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("classpath:messages");
@@ -58,13 +66,6 @@ public class WebConfiguration implements WebMvcConfigurer {
     }
 
 
-    @Bean
-    public InternalResourceViewResolver getViewResolver() {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/views/");
-        viewResolver.setSuffix(".html");
-        return viewResolver;
-    }
 
     /*-----------------  other stuff ----------------------*/
 

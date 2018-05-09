@@ -1,4 +1,4 @@
-package com.sschudakov.factory;
+package com.sschudakov.desktop.factory;
 
 import com.sschudakov.dao.impl.hibernate.LanguageDaoHbnImpl;
 import com.sschudakov.dao.impl.hibernate.WCRDaoHbnImpl;

@@ -2,7 +2,7 @@ package com.sschudakov.dao.impl.jdbc;
 
 import com.sschudakov.dao.interf.WMRDao;
 import com.sschudakov.dao.interf.WordDao;
-import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.desktop.database.DatabaseManager;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordMeaningRelationship;

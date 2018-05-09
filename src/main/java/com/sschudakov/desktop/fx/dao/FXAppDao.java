@@ -2,7 +2,7 @@ package com.sschudakov.desktop.fx.dao;
 
 import com.sschudakov.dao.interf.LanguageDao;
 import com.sschudakov.dao.interf.WordClassDao;
-import com.sschudakov.database.DatabaseManager;
+import com.sschudakov.desktop.database.DatabaseManager;
 import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordCollection;

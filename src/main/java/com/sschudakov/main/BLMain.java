@@ -1,9 +1,9 @@
 package com.sschudakov.main;
 
-import com.sschudakov.database.DatabaseManager;
-import com.sschudakov.database.DatabaseSetup;
+import com.sschudakov.desktop.database.DatabaseManager;
+import com.sschudakov.desktop.database.DatabaseSetup;
 import com.sschudakov.desktop.words.WordsCollectionsManager;
-import com.sschudakov.factory.ServiceFactory;
+import com.sschudakov.desktop.factory.ServiceFactory;
 import com.sschudakov.service.LanguageSrv;
 import com.sschudakov.service.WordClassSrv;
 

@@ -10,14 +10,11 @@ import org.springframework.stereotype.Service;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.stream.Collectors;
-@Service
 public class WordCollectionSrv {
 
 
     //-------------- dao objects  ---------------//
-    @Autowired
     private WordCollectionDao wordCollectionDao;
-    @Autowired
     private WCRDao wcrDao;
 
 

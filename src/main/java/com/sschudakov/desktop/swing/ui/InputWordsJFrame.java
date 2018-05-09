@@ -5,8 +5,8 @@
  */
 package com.sschudakov.desktop.swing.ui;
 
-import com.sschudakov.database.DatabaseManager;
-import com.sschudakov.factory.UserRequestManagerFactory;
+import com.sschudakov.desktop.database.DatabaseManager;
+import com.sschudakov.desktop.factory.UserRequestManagerFactory;
 import com.sschudakov.desktop.swing.request.UserRequestManager;
 
 import javax.swing.*;

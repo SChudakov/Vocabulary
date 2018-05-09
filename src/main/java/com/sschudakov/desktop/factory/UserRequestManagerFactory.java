@@ -1,4 +1,4 @@
-package com.sschudakov.factory;
+package com.sschudakov.desktop.factory;
 
 import com.sschudakov.desktop.swing.request.UserRequestManager;
 import com.sschudakov.service.LanguageSrv;

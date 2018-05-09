@@ -5,7 +5,7 @@ import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
 import com.sschudakov.entity.WordCollection;
-import com.sschudakov.factory.ServiceFactory;
+import com.sschudakov.desktop.factory.ServiceFactory;
 import com.sschudakov.service.WordCollectionSrv;
 import com.sschudakov.service.WordSrv;
 

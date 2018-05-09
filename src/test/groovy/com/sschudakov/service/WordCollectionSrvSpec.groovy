@@ -1,6 +1,6 @@
 package com.sschudakov.service
 
-import com.sschudakov.database.DatabaseManager
+import com.sschudakov.desktop.database.DatabaseManager
 import com.sschudakov.entity.WordCollection
 import org.junit.Ignore
 import spock.lang.Shared

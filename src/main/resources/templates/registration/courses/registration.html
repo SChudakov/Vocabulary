@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+        lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/celloperwebstyle.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <title>Register User</title>
+    </head>
+    <body>
+        <div class="container">
+
+            <h1 align="center">Enter your registration details</h1>
+
+            <th::if test="${customMessage != null}">
+                <p class="myAlert" align="center">
+                    <th:block th:each="message : ${customMessage}">
+                        <div th:text="${message}">message</div>
+                        <br>
+                    </th:block>
+                </p>
+            </th::if>
+
+            <sf:form modelAttribute="user" action="registration">
+
+                <label for="userName">
+                    <s:message code="property.enterName"/>
+                </label>
+                <sf:input path="userName"/>
+                <sf:errors path="userName" cssClass="error"/>
+                <br>
+
+                <label for="userPassword">
+                    <s:message code="property.enterPassword"/>
+                </label>
+                <sf:input path="userPassword"/>
+                <sf:errors path="userPassword" cssClass="error"/>
+
+                <br>
+                <label for="email">
+                    <s:message code="property.enterEmail"/>
+                </label>
+                <sf:input path="email"/>
+                <sf:errors path="email" cssClass="error"/>
+                <br>
+
+                <button type="submit" name="regUser">
+                    <s:message code="property.registerUser"/>
+                </button>
+
+            </sf:form>
+
+        </div>
+    </body>
+</html>

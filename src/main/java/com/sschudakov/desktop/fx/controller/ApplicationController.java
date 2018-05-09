@@ -2,7 +2,7 @@ package com.sschudakov.desktop.fx.controller;
 
 import com.sschudakov.desktop.fx.dao.FXAppDao;
 import com.sschudakov.entity.Word;
-import com.sschudakov.factory.DaoFactory;
+import com.sschudakov.desktop.factory.DaoFactory;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
