@@ -1,5 +1,6 @@
 package com.sschudakov.web.configuration;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
@@ -12,28 +13,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Component
-public class SavedRequestAwareAuthenticationSuccessHandler
-        extends SimpleUrlAuthenticationSuccessHandler {
+public class SavedRequestAwareAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 
-    private RequestCache requestCache = new HttpSessionRequestCache();
+    private final RequestCache requestCache;
 
-    // но, т.к. это просто веб-сервис и его никуда перенаправлять не надо,
-    // мы просто очищаем информацию об аутентификации
+    @Autowired
+    public SavedRequestAwareAuthenticationSuccessHandler(RequestCache requestCache) {
+        this.requestCache = requestCache;
+    }
+
+
     @Override
     public void onAuthenticationSuccess(
             HttpServletRequest request,
             HttpServletResponse response,
             Authentication authentication) {
 
-        SavedRequest savedRequest
-                = requestCache.getRequest(request, response);
-        // если реквест не в кэше, очищаем аутентификацию
+        SavedRequest savedRequest = this.requestCache.getRequest(request, response);
+
+        // if there is no request in he cache -> clean the authentication
         if (savedRequest == null) {
             clearAuthenticationAttributes(request);
             return;
         }
-        // если есть дефолтная переадресация на какой-то URL, обычно "/"
-        // то удаляем реквест из кэша и чистим аутенфтикацию
+
+        // if there eis default redirection (usually to the "/")
+        // delete request frim the cache and clean the authentication
         String targetUrlParam = getTargetUrlParameter();
         if (isAlwaysUseDefaultTargetUrl()
                 || (targetUrlParam != null
@@ -44,9 +49,5 @@ public class SavedRequestAwareAuthenticationSuccessHandler
         }
 
         clearAuthenticationAttributes(request);
-    }
-
-    public void setRequestCache(RequestCache requestCache) {
-        this.requestCache = requestCache;
     }
 }

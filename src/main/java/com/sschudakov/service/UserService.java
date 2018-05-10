@@ -1,11 +1,11 @@
 package com.sschudakov.service;
 
 import com.sschudakov.dao.springdata.UserRepository;
-import com.sschudakov.dto.UserDTO;
 import com.sschudakov.entity.User;
-import com.sschudakov.entity.VerificationToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -17,15 +17,15 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User registerNewUserAccount(UserDTO accountDto) {
-        return null;
+    public User save(User user) {
+        return this.userRepository.save(user);
     }
 
-    public VerificationToken getVerificationToken(String token) {
-        return null;
+    public boolean userExistsByName(User user) {
+        return this.userRepository.existsUserByName(user.getName());
     }
 
-    public void saveRegisteredUser(User user) {
-
+    public Optional<User> getUserByNameAndPassword(String name, String password) {
+        return this.userRepository.existsUserByNameAndPassword(name, password);
     }
 }

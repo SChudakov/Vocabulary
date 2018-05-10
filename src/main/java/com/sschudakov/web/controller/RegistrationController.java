@@ -1,132 +1,112 @@
 package com.sschudakov.web.controller;
 
-import com.sschudakov.dao.springdata.RoleRepository;
-import com.sschudakov.dto.UserDTO;
-import com.sschudakov.entity.Role;
 import com.sschudakov.entity.User;
-import com.sschudakov.entity.VerificationToken;
+import com.sschudakov.service.RoleService;
 import com.sschudakov.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.MessageSource;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.validation.Valid;
-import java.util.Calendar;
-import java.util.Locale;
+import java.util.Optional;
 
 @RestController
 public class RegistrationController {
 
-    /*private final ApplicationEventPublisher eventPublisher;*/
     private final UserService userService;
-    private final RoleRepository roleRepository;
+    private final RoleService roleService;
     private final ApplicationContext applicationContext;
-    private final MessageSource messages;
 
     @Autowired
-    public RegistrationController(/*ApplicationEventPublisher eventPublisher,*/
+    public RegistrationController(
             UserService userService,
-            RoleRepository roleRepository,
-            ApplicationContext applicationContext,
-            MessageSource messages
+            RoleService roleService,
+            ApplicationContext applicationContext
     ) {
-
-        /*this.eventPublisher = eventPublisher;*/
         this.userService = userService;
-        this.roleRepository = roleRepository;
+        this.roleService = roleService;
         this.applicationContext = applicationContext;
-        this.messages = messages;
     }
 
-    @RequestMapping(value = "/regUser")
-    public ModelAndView regUser() {
-        return new ModelAndView("registration", "user", new UserDTO());
-    }
-
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public ModelAndView registerUserAccount(
-            @ModelAttribute("user")
-            @Valid UserDTO accountDto,
-            BindingResult result,
-            WebRequest request
+    @RequestMapping(value = "/loginPage", method = RequestMethod.GET)
+    public ModelAndView getLoginPage(
+            ModelAndView modelAndView
     ) {
-        ModelAndView modelAndView;
+        modelAndView.setViewName("/registration/courses/loginPage");
+        User user = new User();
+        modelAndView.addObject("user", user);
 
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/loginPage", method = RequestMethod.POST)
+    public ModelAndView loginUser(
+            ModelAndView modelAndView,
+            @ModelAttribute("user") User user,
+            BindingResult result
+    ) {
         if (result.hasErrors()) {
-            modelAndView = new ModelAndView("registration", "user", accountDto);
+            modelAndView.setViewName("registration/courses/loginPage");
+            modelAndView.addObject("user", user);
         } else {
+            System.out.println("USER NAME: " + user.getName());
+            System.out.println("USER PASSWORD: " + user.getPassword());
 
-            User registered = this.userService.registerNewUserAccount(accountDto);
+            Optional<User> optionalUser = this.userService.getUserByNameAndPassword(
+                    user.getName(),
+                    user.getPassword()
+            );
 
-            if (registered == null) {
-                result.rejectValue("email", "message.regError");
+            if (optionalUser.isPresent()) {
+                modelAndView.addObject("confirmLoginMessage", "User logged successfully");
+            } else {
+                result.rejectValue("notSuchUser", "message.loginErr");
+                modelAndView.addObject("loginErrorMessage", "Username or login is incorrect");
             }
 
-            /*try {
-
-                String appUrl = request.getContextPath();
-                this.eventPublisher.publishEvent(new OnRegistrationCompleteEvent(registered, request.getLocale(), appUrl));
-
-            } catch (Exception e) {
-
-                System.out.println("Email registration was failed with " + accountDto.getEmail());
-                return new ModelAndView("login", "customMessage", "Email registration was failed with " + accountDto.getEmail());
-
-            }*/
-
-            modelAndView = new ModelAndView();
-            modelAndView.setViewName("clogin");
-            modelAndView.addObject("customMessage", "Please check your email " + accountDto.getEmail() + " to confirm registration!");
-
-
+            modelAndView.setViewName("registration/courses/registration");
         }
         return modelAndView;
     }
 
-    @RequestMapping(value = "/registrationConfirm", method = RequestMethod.GET)
-    public ModelAndView confirmRegistration(
-            WebRequest request,
-            @RequestParam("token") String token
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public ModelAndView getRegistrationPage(
+            ModelAndView modelAndView
+
     ) {
+        modelAndView.setViewName("registration/courses/registration");
+        User user = new User();
+        modelAndView.addObject("user", user);
 
-        Locale locale = request.getLocale();
+        return modelAndView;
+    }
 
-        VerificationToken verificationToken = this.userService.getVerificationToken(token);
-        if (verificationToken == null) {
-            String message = this.messages.getMessage("auth.message.invalidToken", null, locale);
-            return new ModelAndView("clogin", "customMessage", message);
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public ModelAndView registerUser(
+            ModelAndView modelAndView,
+            @ModelAttribute("user") User user,
+            BindingResult result
+    ) {
+        if (result.hasErrors()) {
+            modelAndView.setViewName("registration/courses/registration");
+            modelAndView.addObject("user", user);
+        } else {
+
+            boolean userExists = this.userService.userExistsByName(user);
+
+            if (userExists) {
+                result.rejectValue("userName", "message.userNameError");
+                modelAndView.addObject("nameErrorMessage", "Please check choose another name");
+            } else {
+                modelAndView.addObject("confirmationMessage", "User has been registered successfully");
+            }
+
+            modelAndView.setViewName("registration/courses/registration");
         }
-
-        User user = verificationToken.getUser();
-        Calendar calendar = Calendar.getInstance();
-
-        /*if ((verificationToken.getExpiryDate().getTime() - calendar.getTime().getTime()) <= 0) {
-
-            String messageValue = this.messages.getMessage("auth.message.expired", null, locale);
-            return new ModelAndView("clogin", "customMessage", messageValue);
-
-        }*/
-
-        /*user.setEnabled(true);*/
-
-        Role role = this.roleRepository.getByName("ROLE_USER");
-
-        user.addRole(role);
-        this.userService.saveRegisteredUser(user);
-
-
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("clogin");
-        modelAndView.addObject("User was registered");
-
         return modelAndView;
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
     <head>
         <meta charset="utf-8"/>
@@ -23,17 +24,16 @@
         <div class="middle-box text-center loginscreen animated fadeInDown">
             <div>
 
-                <h4>New User Registration</h4>
+                <h4>Login here</h4>
 
-                <form autocomplete="off" action="#" th:action="@{/registration/courses/registration}"
-                      th:object="${user}" method="post" class="m-t" role="form"
-                      data-toggle="validator">
+                <form autocomplete="off" action="#" th:action="@{/loginPage}" method="POST"
+                      th:object="${user}" class="m-t" role="form" data-toggle="validator">
 
-                    <div th:if="${confirmationMessage}" class="alert alert-success"
-                         role="alert" th:text="${confirmationMessage}"></div>
+                    <div th:if="${loginErrorMessage}" class="alert alert-danger" role="alert"
+                         th:text="${loginErrorMessage}"></div>
 
-                    <div th:if="${nameErrorMessage}" class="alert alert-danger" role="alert"
-                         th:text="${nameErrorMessage}"></div>
+                    <div th:if="${confirmLoginMessage}" class="alert alert-success"
+                         role="alert" th:text="${confirmLoginMessage}"></div>
 
 
                     <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
@@ -42,48 +42,43 @@
                     <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
                          class="validation-message alert alert-danger" role="alert"></div>
 
+
                     <div class="form-group input-group has-feedback">
-                        <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
-                               class="validation-message"></label>
 
                         <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
+                            <span class="glyphicon glyphicon-user"></span>
                         </span>
 
-                        <input type="text" th:field="*{name}"
-                               placeholder="Name" class="form-control" required/>
-                        <span class="glyphicon form-control-feedback"
-                              aria-hidden="true"></span>
+                        <input type="text" th:field="*{name}" placeholder="Name" class="form-control" required/>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
+
 
                     <div class="form-group input-group has-feedback">
                       <span class="input-group-addon">
                         <span class="glyphicon glyphicon-user"></span>
                       </span>
-                        <input type="text" th:field="*{password}"
-                               placeholder="Last Name" class="form-control" required/>
-                        <span class="glyphicon form-control-feedback"
-                              aria-hidden="true"></span>
+                        <input type="text" th:field="*{password}" placeholder="Password" class="form-control" required/>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
 
-                    <div class="form-group input-group has-feedback">
-                          <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-envelope"></span>
-                          </span>
-                        <input type="email" th:field="*{email}"
-                               placeholder="Email Address" class="form-control"
-                               data-error="This email address is invalid" required/>
-                        <span class="glyphicon form-control-feedback"
-                              aria-hidden="true"></span>
 
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-btn input-group-btn-left">
+                                <button type="submit" class="btn btn-primary block full-width m-b">
+                                    Sign in
+                                </button>
+                            </span>
+                            <span class="input-group-btn input-group-btn-right">
+                                <button type="submit" class="btn btn-primary block full-width m-b"
+                                        th:action="@{/registration}" method="GET">
+                                    Sign up
+                                </button>
+                            </span>
+                        </div>
                     </div>
-
-                    <button type="submit" class="btn btn-primary block full-width m-b">
-                        Register
-                    </button>
-
                 </form>
-
             </div>
         </div>
 
@@ -98,5 +93,7 @@
 
         <!-- Bootstrap Validator plugin -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+
     </body>
 </html>

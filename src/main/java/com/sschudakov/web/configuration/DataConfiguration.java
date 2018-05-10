@@ -25,8 +25,12 @@ import javax.sql.DataSource;
 @PropertySource("classpath:app.properties")
 public class DataConfiguration {
 
+    private final DataSource dataSource;
+
     @Autowired
-    DataSource dataSource;
+    public DataConfiguration(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     /*----------- stuff --------------*/
 
@@ -40,9 +44,9 @@ public class DataConfiguration {
                         "WHERE name=?"
         );
         jdbcDao.setAuthoritiesByUsernameQuery(
-                "SELECT uu.name AS username, ro.name AS role " +
-                        "FROM users uu  JOIN user_role ur on uu.user_id=ur.user JOIN roles ro on ro.role_id=ur.role " +
-                        "WHERE uu.name=?"
+                "SELECT users.name AS username, roles.name AS role" +
+                        "FROM users JOIN user_role ON users.user_id=user_role.user JOIN roles ON roles.role_id=user_role.role" +
+                        "WHERE users.name=?"
         );
         return jdbcDao;
     }

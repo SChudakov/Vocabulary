@@ -1,34 +1,11 @@
 package com.sschudakov.web.controller;
 
-import java.util.Map;
-import java.util.UUID;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
-import com.sschudakov.entity.User;
-import com.sschudakov.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import com.codebyamir.model.User;
-import com.codebyamir.service.EmailService;
-import com.codebyamir.service.UserService;
-import com.nulabinc.zxcvbn.Strength;
-import com.nulabinc.zxcvbn.Zxcvbn;
 
 @Controller
 public class RegisterController {
 
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+   /* private BCryptPasswordEncoder bCryptPasswordEncoder;
     private UserService userService;
     private EmailService emailService;
 
@@ -60,11 +37,11 @@ public class RegisterController {
     ) {
 
         // Lookup user in database by e-mail
-        User userExists = userService.findByEmail(user.getEmail());
+        User userExistsByName = userService.findByEmail(user.getEmail());
 
-        System.out.println(userExists);
+        System.out.println(userExistsByName);
 
-        if (userExists != null) {
+        if (userExistsByName != null) {
             modelAndView.addObject("alreadyRegisteredMessage", "Oops!  There is already a user registered with the email provided.");
             modelAndView.setViewName("register");
             bindingResult.reject("email");
@@ -153,5 +130,5 @@ public class RegisterController {
         modelAndView.addObject("successMessage", "Your password has been set!");
         return modelAndView;
     }
-
+*/
 }

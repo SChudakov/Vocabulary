@@ -2,12 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="" />
-        <meta name="author" content="Amir Boroumand" />
-        <link rel="icon" href="favicon.ico" />
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content="Amir Boroumand"/>
+        <link rel="icon" href="favicon.ico"/>
 
         <title>User Registration with Spring Boot</title>
 
@@ -15,10 +15,10 @@
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
               rel="stylesheet"
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-              crossorigin="anonymous" />
+              crossorigin="anonymous"/>
 
-        <link th:href="@{css/style.css}" rel="stylesheet" />
-        <link th:href="@{css/fv.css}" rel="stylesheet" />
+        <link th:href="@{css/style.css}" rel="stylesheet"/>
+        <link th:href="@{css/fv.css}" rel="stylesheet"/>
     </head>
 
     <body class="gray-bg">
@@ -26,7 +26,7 @@
         <div class="middle-box text-center loginscreen animated fadeInDown">
             <div>
 
-                <hr />
+                <hr/>
                 <h4>Set Your Password</h4>
 
                 <div th:if="${successMessage}" class="alert alert-success"
@@ -41,14 +41,14 @@
                 <form th:if="!${invalidToken}" class="m-t" id="passwordForm" role="form" action="#"
                       th:object="${setPassword}" th:action="@{/confirm}" method="post">
 
-                    <input type="hidden" name="token" th:value=${confirmationToken}  >
+                    <input type="hidden" name="token" th:value=${confirmationToken}>
 
                     <div class="form-group input-group">
           <span class="input-group-addon">
             <span class="glyphicon glyphicon-lock"></span>
           </span>
                         <input name="password" type="password" id="password"
-                               placeholder="Password" class="form-control" required />
+                               placeholder="Password" class="form-control" required/>
                         <span class="glyphicon"
                               aria-hidden="true"></span>
                     </div>
@@ -57,15 +57,15 @@
           <span class="input-group-addon">
             <span class="glyphicon glyphicon-lock"></span>
           </span>
-                        <input type="password" class="form-control" id="signup-password-confirm" placeholder="Confirm Password" name="ConfirmPassword" data-fv-notempty="true"
+                        <input type="password" class="form-control" id="signup-password-confirm"
+                               placeholder="Confirm Password" name="ConfirmPassword" data-fv-notempty="true"
                                data-fv-notempty-message="Please confirm password"
                                data-fv-identical="true"
                                data-fv-identical-field="password"
-                               data-fv-identical-message="Both passwords must be identical" />
+                               data-fv-identical-message="Both passwords must be identical"/>
 
                         <div class="help-block with-errors"></div>
                     </div>
-
 
 
                     <button type="submit"
@@ -79,14 +79,14 @@
         </div>
 
         <!-- jQuery-->
-        <script
-                src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
         <!-- Bootstrap -->
         <script
                 src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-                crossorigin="anonymous"></script>
+                crossorigin="anonymous">
+        </script>
 
         <!-- Bootstrap Validator plugin -->
         <script
@@ -96,7 +96,7 @@
 
         <script th:src="@{js/fv.min.js}"></script>
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
                 $('#passwordForm').formValidation({
                     framework: 'bootstrap',
                     icon: {
@@ -112,14 +112,14 @@
                                     message: 'The password is required'
                                 },
                                 callback: {
-                                    callback: function(value, validator, $field) {
+                                    callback: function (value, validator, $field) {
                                         var password = $field.val();
                                         if (password == '') {
                                             return true;
                                         }
 
-                                        var result  = zxcvbn(password),
-                                            score   = result.score,
+                                        var result = zxcvbn(password),
+                                            score = result.score,
                                             message = result.feedback.warning || 'The password is weak';
 
                                         // Update the progress bar width and add alert class
@@ -163,9 +163,8 @@
                     }
                 });
             });
-        </script>
-        });
+
         </script>
 
-        </body>
-        </html>;
+    </body>
+</html>

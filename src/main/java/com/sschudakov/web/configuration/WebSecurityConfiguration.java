@@ -21,9 +21,7 @@ import org.springframework.security.web.authentication.SimpleUrlAuthenticationFa
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
-
     private final RestAuthenticationEntryPoint restAuthenticationEntryPoint;
-
     private final SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;
 
     @Autowired
@@ -50,16 +48,16 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/protected/**").access("hasRole('ROLE_ADMIN')")
                 .antMatchers("/confidential/**").access("hasRole('ROLE_SUPERADMIN')")
 
-                .antMatchers("/words/**").permitAll()
-                .antMatchers("/collections/**").permitAll()
-                .antMatchers("/languages/**").permitAll()
+                .antMatchers("/words/**").access("hasRole('ROLE_USER')")
+                .antMatchers("/collections/**").access("hasRole('ROLE_USER')")
+                .antMatchers("/languages/**").access("hasRole('ROLE_USER')")
 
                 .and().httpBasic().realmName("EVocabulary")
                 .and().formLogin().successHandler(this.authenticationSuccessHandler)
                 .failureHandler(new SimpleUrlAuthenticationFailureHandler())
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 
-                .and().formLogin().loginPage("/newlogin").permitAll()///clogin originally!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                .and().formLogin().loginPage("/loginPage").permitAll()
                 .and().logout().logoutSuccessUrl("/home.html")
                 .and().exceptionHandling().accessDeniedHandler(accessDeniedHandler());
     }

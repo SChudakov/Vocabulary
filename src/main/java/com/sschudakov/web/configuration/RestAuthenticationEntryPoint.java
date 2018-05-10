@@ -24,13 +24,13 @@ public class RestAuthenticationEntryPoint extends BasicAuthenticationEntryPoint 
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        /**
-         * Realm – the name of the secret area. The mechanism pof
-         * Digest authentication uses this information of identifying
-         * the secret zone. That is why this parameter should obligatory
-         * be present in the header of the Authorization and match
-         * to the value of realm, passed be server in the WWW-Authenticate header.
-         **/
+        /*
+          Realm – the name of the secret area. The mechanism pof
+          Digest authentication uses this information of identifying
+          the secret zone. That is why this parameter should obligatory
+          be present in the header of the Authorization and match
+          to the value of realm, passed be server in the WWW-Authenticate header.
+         */
         setRealmName("EVocabulary");
         super.afterPropertiesSet();
     }
