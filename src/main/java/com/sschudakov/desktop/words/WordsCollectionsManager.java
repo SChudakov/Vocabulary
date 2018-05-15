@@ -6,8 +6,8 @@ import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
 import com.sschudakov.entity.WordCollection;
 import com.sschudakov.desktop.factory.ServiceFactory;
-import com.sschudakov.service.WordCollectionSrv;
-import com.sschudakov.service.WordSrv;
+import com.sschudakov.service.dao.WordCollectionSrv;
+import com.sschudakov.service.dao.WordSrv;
 
 import java.io.File;
 import java.sql.SQLException;

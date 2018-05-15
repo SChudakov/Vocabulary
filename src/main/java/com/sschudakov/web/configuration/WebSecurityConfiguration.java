@@ -9,55 +9,54 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
-import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
-    private final RestAuthenticationEntryPoint restAuthenticationEntryPoint;
-    private final SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;
+    /*private final RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+    private final SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;*/
 
     @Autowired
-    public WebSecurityConfiguration(UserDetailsService userDetailsService, RestAuthenticationEntryPoint restAuthenticationEntryPoint, SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler) {
+    public WebSecurityConfiguration(UserDetailsService userDetailsService/*,
+                                    RestAuthenticationEntryPoint restAuthenticationEntryPoint,
+                                    SavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler*/) {
         this.userDetailsService = userDetailsService;
-        this.restAuthenticationEntryPoint = restAuthenticationEntryPoint;
-        this.authenticationSuccessHandler = authenticationSuccessHandler;
+        /*this.restAuthenticationEntryPoint = restAuthenticationEntryPoint;
+        this.authenticationSuccessHandler = authenticationSuccessHandler;*/
     }
 
-    @Autowired
-    public void configAuthentication(AuthenticationManagerBuilder auth) {
-        //   auth.userDetailsService(userDetailsService).passwordEncoder(passwordencoder());;
-        auth.authenticationProvider(authProvider());
-    }
+//    @Autowired
+//    public void configAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) {
+//        authenticationManagerBuilder.authenticationProvider(authProvider());
+//    }
 
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
 
-                .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint)
+                .exceptionHandling()
+                //.authenticationEntryPoint(restAuthenticationEntryPoint)
                 .and().authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/protected/**").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/confidential/**").access("hasRole('ROLE_SUPERADMIN')")
 
                 .antMatchers("/words/**").access("hasRole('ROLE_USER')")
                 .antMatchers("/collections/**").access("hasRole('ROLE_USER')")
                 .antMatchers("/languages/**").access("hasRole('ROLE_USER')")
 
-                .and().httpBasic().realmName("EVocabulary")
+                /*.and().httpBasic().realmName("EVocabulary")
                 .and().formLogin().successHandler(this.authenticationSuccessHandler)
                 .failureHandler(new SimpleUrlAuthenticationFailureHandler())
-                .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)*/
 
                 .and().formLogin().loginPage("/loginPage").permitAll()
+                .usernameParameter("name").passwordParameter("password")
                 .and().logout().logoutSuccessUrl("/home.html")
                 .and().exceptionHandling().accessDeniedHandler(accessDeniedHandler());
     }
@@ -68,17 +67,16 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new CustomAccessDeniedHandler();
     }
 
-    @Bean(name = "passwordEncoder")
+    @Bean
     public PasswordEncoder passwordencoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
     public DaoAuthenticationProvider authProvider() {
-        // Specific Authentication implementation that retrieves user details from a UserDetailsService.
-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(this.userDetailsService);
-        authProvider.setPasswordEncoder(passwordencoder());
-        return authProvider;
+        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+        authenticationProvider.setUserDetailsService(this.userDetailsService);
+        authenticationProvider.setPasswordEncoder(passwordencoder());
+        return authenticationProvider;
     }
 }

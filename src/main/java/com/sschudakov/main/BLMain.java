@@ -4,8 +4,8 @@ import com.sschudakov.desktop.database.DatabaseManager;
 import com.sschudakov.desktop.database.DatabaseSetup;
 import com.sschudakov.desktop.words.WordsCollectionsManager;
 import com.sschudakov.desktop.factory.ServiceFactory;
-import com.sschudakov.service.LanguageSrv;
-import com.sschudakov.service.WordClassSrv;
+import com.sschudakov.service.dao.LanguageSrv;
+import com.sschudakov.service.dao.WordClassSrv;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;

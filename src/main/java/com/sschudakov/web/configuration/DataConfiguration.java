@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
@@ -15,7 +14,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.annotation.Resource;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
@@ -39,13 +37,13 @@ public class DataConfiguration {
         JdbcDaoImpl jdbcDao = new JdbcDaoImpl();
         jdbcDao.setDataSource(this.dataSource);
         jdbcDao.setUsersByUsernameQuery(
-                "SELECT name AS username, password, 1 AS enabled " +
+                "SELECT users.name AS username, users.password AS password, 1 AS enabled " +
                         "FROM users " +
-                        "WHERE name=?"
+                        "WHERE users.name=?"
         );
         jdbcDao.setAuthoritiesByUsernameQuery(
-                "SELECT users.name AS username, roles.name AS role" +
-                        "FROM users JOIN user_role ON users.user_id=user_role.user JOIN roles ON roles.role_id=user_role.role" +
+                "SELECT users.name AS username, roles.name " +
+                        "FROM users JOIN user_role ON users.user_id=user_role.user JOIN roles ON roles.role_id=user_role.role " +
                         "WHERE users.name=?"
         );
         return jdbcDao;

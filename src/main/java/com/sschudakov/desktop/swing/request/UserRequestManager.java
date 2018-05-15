@@ -4,10 +4,10 @@ import com.sschudakov.entity.Language;
 import com.sschudakov.entity.Word;
 import com.sschudakov.entity.WordClass;
 import com.sschudakov.entity.WordCollection;
-import com.sschudakov.service.LanguageSrv;
-import com.sschudakov.service.WordClassSrv;
-import com.sschudakov.service.WordCollectionSrv;
-import com.sschudakov.service.WordSrv;
+import com.sschudakov.service.dao.LanguageSrv;
+import com.sschudakov.service.dao.WordClassSrv;
+import com.sschudakov.service.dao.WordCollectionSrv;
+import com.sschudakov.service.dao.WordSrv;
 
 import java.sql.SQLException;
 import java.util.List;

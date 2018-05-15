@@ -1,4 +1,4 @@
-package com.sschudakov.service;
+package com.sschudakov.service.dao;
 
 import com.sschudakov.dao.interf.WCRDao;
 import com.sschudakov.dao.interf.WMRDao;

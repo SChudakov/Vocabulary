@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
     <head>
@@ -7,8 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="description" content="User account registration"/>
-        <meta name="author" content="Amir Boroumand"/>
-        <link rel="icon" href="favicon.ico"/>
+        <!--<link rel="icon" href="favicon.ico"/>-->
 
         <title>Registration Page</title>
 
@@ -26,7 +26,7 @@
 
                 <h4>Login here</h4>
 
-                <form autocomplete="off" action="#" th:action="@{/loginPage}" method="POST"
+                <form autocomplete="off" action="#" th:action="@{/loginPage}" method="post"
                       th:object="${user}" class="m-t" role="form" data-toggle="validator">
 
                     <div th:if="${loginErrorMessage}" class="alert alert-danger" role="alert"
@@ -79,6 +79,11 @@
                         </div>
                     </div>
                 </form>
+                <div>
+                    <a th:href="@{/words}">Words</a><br>
+                    <a th:href="@{/collections}">Collections</a><br>
+                    <a th:href="@{/languages}">Languages</a><br>
+                </div>
             </div>
         </div>
 

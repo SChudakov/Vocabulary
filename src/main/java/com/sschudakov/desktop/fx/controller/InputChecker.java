@@ -2,7 +2,7 @@ package com.sschudakov.desktop.fx.controller;
 
 public class InputChecker {
 
-    private static final String REGEX_FOR_STRING_INPUT = "[a-zA-Zа-яА-Я]+";
+    private static final String REGEX_FOR_STRING_INPUT = "[a-zA-Zа-яА-Я ]+";
 
     public void checkMinNumOfMeanings(int number) {
         ensureNumberNonNegative(number);

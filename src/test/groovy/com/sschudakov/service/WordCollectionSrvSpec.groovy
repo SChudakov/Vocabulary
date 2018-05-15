@@ -2,6 +2,7 @@ package com.sschudakov.service
 
 import com.sschudakov.desktop.database.DatabaseManager
 import com.sschudakov.entity.WordCollection
+import com.sschudakov.service.dao.WordCollectionSrv
 import org.junit.Ignore
 import spock.lang.Shared
 import spock.lang.Specification

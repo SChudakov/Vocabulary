@@ -1,4 +1,4 @@
-package com.sschudakov.service;
+package com.sschudakov.service.repository;
 
 import com.sschudakov.dao.springdata.UserRepository;
 import com.sschudakov.entity.User;
@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class UserSrv {
 
     private final UserRepository userRepository;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserSrv(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

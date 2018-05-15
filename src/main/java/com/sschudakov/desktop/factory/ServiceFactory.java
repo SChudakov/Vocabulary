@@ -1,9 +1,9 @@
 package com.sschudakov.desktop.factory;
 
-import com.sschudakov.service.LanguageSrv;
-import com.sschudakov.service.WordClassSrv;
-import com.sschudakov.service.WordCollectionSrv;
-import com.sschudakov.service.WordSrv;
+import com.sschudakov.service.dao.LanguageSrv;
+import com.sschudakov.service.dao.WordClassSrv;
+import com.sschudakov.service.dao.WordCollectionSrv;
+import com.sschudakov.service.dao.WordSrv;
 
 public class ServiceFactory {
 

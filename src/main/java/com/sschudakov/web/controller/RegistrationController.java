@@ -1,8 +1,8 @@
 package com.sschudakov.web.controller;
 
 import com.sschudakov.entity.User;
-import com.sschudakov.service.RoleService;
-import com.sschudakov.service.UserService;
+import com.sschudakov.service.repository.RoleSrv;
+import com.sschudakov.service.repository.UserSrv;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.validation.BindingResult;
@@ -17,26 +17,23 @@ import java.util.Optional;
 @RestController
 public class RegistrationController {
 
-    private final UserService userService;
-    private final RoleService roleService;
+    private final UserSrv userSrv;
+    private final RoleSrv roleSrv;
     private final ApplicationContext applicationContext;
 
     @Autowired
-    public RegistrationController(
-            UserService userService,
-            RoleService roleService,
-            ApplicationContext applicationContext
-    ) {
-        this.userService = userService;
-        this.roleService = roleService;
+    public RegistrationController(UserSrv userSrv, RoleSrv roleSrv, ApplicationContext applicationContext) {
+        this.userSrv = userSrv;
+        this.roleSrv = roleSrv;
         this.applicationContext = applicationContext;
     }
+
 
     @RequestMapping(value = "/loginPage", method = RequestMethod.GET)
     public ModelAndView getLoginPage(
             ModelAndView modelAndView
     ) {
-        modelAndView.setViewName("/registration/courses/loginPage");
+        modelAndView.setViewName("/registration/loginPage");
         User user = new User();
         modelAndView.addObject("user", user);
 
@@ -50,25 +47,25 @@ public class RegistrationController {
             BindingResult result
     ) {
         if (result.hasErrors()) {
-            modelAndView.setViewName("registration/courses/loginPage");
+            modelAndView.setViewName("registration/loginPage");
             modelAndView.addObject("user", user);
         } else {
             System.out.println("USER NAME: " + user.getName());
             System.out.println("USER PASSWORD: " + user.getPassword());
 
-            Optional<User> optionalUser = this.userService.getUserByNameAndPassword(
+            Optional<User> optionalUser = this.userSrv.getUserByNameAndPassword(
                     user.getName(),
                     user.getPassword()
             );
 
             if (optionalUser.isPresent()) {
-                modelAndView.addObject("confirmLoginMessage", "User logged successfully");
+                modelAndView.addObject("confirmLoginMessage", "User logged in successfully");
             } else {
-                result.rejectValue("notSuchUser", "message.loginErr");
+                result.rejectValue("noSuchUser", "There is no such user!");
                 modelAndView.addObject("loginErrorMessage", "Username or login is incorrect");
             }
 
-            modelAndView.setViewName("registration/courses/registration");
+            modelAndView.setViewName("registration/registration");
         }
         return modelAndView;
     }
@@ -78,7 +75,7 @@ public class RegistrationController {
             ModelAndView modelAndView
 
     ) {
-        modelAndView.setViewName("registration/courses/registration");
+        modelAndView.setViewName("registration/registration");
         User user = new User();
         modelAndView.addObject("user", user);
 
@@ -92,11 +89,11 @@ public class RegistrationController {
             BindingResult result
     ) {
         if (result.hasErrors()) {
-            modelAndView.setViewName("registration/courses/registration");
+            modelAndView.setViewName("registration/registration");
             modelAndView.addObject("user", user);
         } else {
 
-            boolean userExists = this.userService.userExistsByName(user);
+            boolean userExists = this.userSrv.userExistsByName(user);
 
             if (userExists) {
                 result.rejectValue("userName", "message.userNameError");
@@ -105,7 +102,7 @@ public class RegistrationController {
                 modelAndView.addObject("confirmationMessage", "User has been registered successfully");
             }
 
-            modelAndView.setViewName("registration/courses/registration");
+            modelAndView.setViewName("registration/registration");
         }
         return modelAndView;
     }
