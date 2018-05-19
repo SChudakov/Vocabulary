@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>collections</title>
-    </head>
-    <body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="index"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>words</title>
+</head>
+<body>
+<th:block layout:fragment="page_content">
+    <nav>
+        <a href="/collections">Collection</a>
+        <a href="/languages">Languages</a>
+        <a href="/words">Words</a>
+    </nav>
+    <div class="container">
         <form th:action="@{/collections/collectionInfo}" method="get">
-            <input type="text" th:name="collectionName" th:placeholder="collectionsName"/><br>
-            <input type="submit" value="find"/>
+            <select name="collectionName" class="collections-list">
+                <div th:each="collection : ${collections}">
+                    <option
+                        th:value="${collection.getCollectionName()}"
+                        th:text="${collection.getCollectionName()}"
+                    >
+                        Option
+                    </option>
+                </div>
+            </select>
+            <input type="submit" class="btn green button-input-big" value="Select"/>
         </form>
-    </body>
+    </div>
+    <div class="container" th:if="${collection}">
+        <table class="collection-table">
+            <tr class="rainbow" id="first-line">
+                <td th:text="${collection.getCollectionName()}"></td>
+            </tr>
+            <div th:each="word : ${words}">
+                <tr>
+                    <td>
+                        <a
+                                th:text="${word.getCapitalizedValue()}"
+                                th:href="${'/words/wordInfo?language='+word.getLanguage().getName()+'&value='+word.getValue()}">
+                        </a>
+                    </td>
+                </tr>
+            </div>
+        </table>
+
+        <script>
+            $('#first-line').css('background-position', (shift - 200) + 'px 0px');
+        </script>
+    </div>
+</th:block>
+</body>
 </html>

@@ -1,15 +1,77 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>words</title>
-    </head>
-    <body>
-
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="index"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>words</title>
+</head>
+<body>
+<th:block layout:fragment="page_content">
+    <nav>
+        <a href="/collections">Collection</a>
+        <a href="/languages">Languages</a>
+        <a href="/words">Words</a>
+    </nav>
+    <div class="container">
         <form th:action="@{/words/wordInfo}" method="get">
-            <input type="text" th:name="value" th:placeholder="value"/><br>
-            <input type="text" th:name="language" th:placeholder="language"/><br>
-            <input type="submit" value="find"/>
+            <select name="language" class="languages-list-small">
+                <div th:each="language : ${languages}">
+                    <option th:value="${language.getName()}" th:text="${language.getName()}"></option>
+                </div>
+            </select>
+            <input type="text" placeholder="Word" name="value" class="word-input-big"/>
+            <input type="submit" class="btn green button-input-big" value="Search"/>
         </form>
-    </body>
+    </div>
+    <div class="container" th:if="${word}">
+        <div class="rainbow words-head" id="words-head">
+            <a class="word-title" th:text="${word.getCapitalizedValue()}">Man</a>
+            <div class="cell">
+                <a th:text="${word.getLanguage().getName()}">Language</a><br>
+                <a th:text="${word.getWordClass().getWordClassName()}">Word class</a>
+            </div>
+        </div>
+        <script>
+            $('#words-head').css('background-position', (shift - 200) + 'px 0px');
+        </script>
+        <div class="box column50" style="margin-right: 1%">
+            <div class="box-head">
+                Meanings
+            </div>
+            <div class="box-body">
+                <ul class="meanings">
+                    <div th:each="meaning : ${meanings}">
+                        <li>
+                            <a
+                                    th:text="${meaning.getCapitalizedValue()}"
+                                    th:href="${'/words/wordInfo?language='+meaning.getLanguage().getName()+'&value='+meaning.getValue()}">
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="box column50">
+            <div class="box-head">
+                Collections
+            </div>
+            <div class="box-body">
+                <ul class="meanings">
+                    <div th:each="collection : ${collections}">
+                        <li>
+                            <a
+                                th:text="${collection.getCollectionName()}"
+                                th:href="${'/collections/collectionInfo?collectionName='+collection.getCollectionName()}">
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</th:block>
+</body>
 </html>

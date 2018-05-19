@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index page</title>
+    <title>Base</title>
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic" rel="stylesheet" referrerpolicy="origin">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link th:href="@{/css/reset.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div id = "gradientContainer">
+    <div id="gradient"></div>
+    <script>
+        var shift = randomInt(-10000,0);
+        $('#gradient').css('background-position', shift + 'px 0px');
+    </script>
+    </div>
+    <div id="content">
+        <div layout:fragment="page_content"></div>
+    </div>
+</body>
+</html>

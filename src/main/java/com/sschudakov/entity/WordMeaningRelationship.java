@@ -19,8 +19,8 @@ import javax.persistence.Table;
 public class WordMeaningRelationship {
 
     public static final String ID_COLUMN_NAME = "meaning_relationship_id";
-    public static final String WORD_COLUMN_NAME = "relationships_word";
-    public static final String MEANING_COLUMN_NAME = "relationships_meaning";
+    public static final String WORD_COLUMN_NAME = "relationship_word";
+    public static final String MEANING_COLUMN_NAME = "relationship_meaning";
 
     @Id
     @Column(name = ID_COLUMN_NAME)

@@ -129,4 +129,8 @@ public class Word {
                 .append("value class", this.wordClass)
                 .build();
     }
+
+    public String getCapitalizedValue() {
+        return value.substring(0, 1).toUpperCase() + value.substring(1);
+    }
 }

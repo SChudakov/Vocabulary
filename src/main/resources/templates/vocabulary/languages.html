@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>languages</title>
-    </head>
-    <body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="index"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>words</title>
+</head>
+<body>
+<th:block layout:fragment="page_content">
+    <nav>
+        <a href="/collections">Collection</a>
+        <a href="/languages">Languages</a>
+        <a href="/words">Words</a>
+    </nav>
+    <div class="container">
         <form th:action="@{/languages/languageInfo}" method="get">
-            <input type="text" th:name="languageName" th:placeholder="languageName"/><br>
-            <input type="submit" value="find"/>
+            <select name="languageName" class="languages-list-big">
+                <div th:each="language : ${languages}">
+                    <option th:value="${language.getName()}" th:text="${language.getName()}"></option>
+                </div>
+            </select>
+            <input type="submit" class="btn green button-input-big" value="Select"/>
         </form>
-    </body>
+    </div>
+    <div class="container" th:if="${words}">
+        <table class="words-table">
+            <tr id="first-line" class="rainbow"><td>Word</td><td>Meanings</td></tr>
+            <div th:each="word : ${words}">
+                <tr>
+                    <td th:text="${word.getCapitalizedValue()}"></td>
+                    <td>
+                        <text th:text="${meanings.get(word)}"></text>
+                    </td>
+                </tr>
+            </div>
+        </table>
+
+        <script>
+            $('#first-line').css('background-position', (shift-200) + 'px 0px');
+        </script>
+    </div>
+</th:block>
+</body>
 </html>
