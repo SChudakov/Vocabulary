@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Optional;
-
 @RestController
 public class RegistrationController {
 
@@ -45,11 +43,6 @@ public class RegistrationController {
             ModelAndView modelAndView,
             @ModelAttribute("user") User user
     ) {
-
-        System.out.println("USER NAME: " + user.getName());
-        System.out.println("USER PASSWORD: " + user.getPassword());
-
-
         modelAndView.setViewName("vocabulary/words");
         return modelAndView;
     }
