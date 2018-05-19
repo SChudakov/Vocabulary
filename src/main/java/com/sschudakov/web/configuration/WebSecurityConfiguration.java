@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
 @Configuration
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
@@ -56,7 +56,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)*/
 
                 .and().formLogin().loginPage("/loginPage").permitAll()
-                .usernameParameter("name").passwordParameter("password")
+                .usernameParameter("name")
+                .passwordParameter("password")
                 .and().logout().logoutSuccessUrl("/home.html")
                 .and().exceptionHandling().accessDeniedHandler(accessDeniedHandler());
     }

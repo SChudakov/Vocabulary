@@ -11,13 +11,12 @@
 <body>
 <th:block layout:fragment="page_content">
     <div class="container login">
-        <form action="#" th:action="@{/loginPage}" method="post"
-              th:object="${user}">
-            <div th:if="${loginErrorMessage}" class="alert alert-danger" role="alert"
+        <form action="#" th:action="@{/loginPage}" method="post" th:object="${user}">
+            <!--<div th:if="${loginErrorMessage}" class="alert alert-danger" role="alert"
                  th:text="${loginErrorMessage}"></div>
 
             <div th:if="${confirmLoginMessage}" class="alert alert-success"
-                 role="alert" th:text="${confirmLoginMessage}"></div>
+                 role="alert" th:text="${confirmLoginMessage}"></div>-->
 
             <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
                  class="validation-message alert alert-danger" role="alert"></div>

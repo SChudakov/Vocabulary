@@ -32,7 +32,7 @@ public class DataConfiguration {
 
     /*----------- stuff --------------*/
 
-    @Bean(name = "userDetailsService")
+    @Bean
     public UserDetailsService userDetailsService() {
         JdbcDaoImpl jdbcDao = new JdbcDaoImpl();
         jdbcDao.setDataSource(this.dataSource);
@@ -50,12 +50,11 @@ public class DataConfiguration {
     }
 
     @Bean
-    @Qualifier(value = "jpaTransactionManager")
     public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
         return new JpaTransactionManager(emf);
     }
 
-    @Bean(name = "passwordEncoder")
+    @Bean
     public PasswordEncoder passwordencoder() {
         return new BCryptPasswordEncoder();
     }

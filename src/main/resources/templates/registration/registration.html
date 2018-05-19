@@ -25,8 +25,8 @@
 
                 <h4>New User Registration</h4>
 
-                <form autocomplete="off" action="#" th:action="@{/registration/courses/registration}"
-                      th:object="${user}" method="post" class="m-t" role="form"
+                <form autocomplete="off" action="#" th:action="@{/registration}"
+                      th:object="${user}" method="POST" class="m-t" role="form"
                       data-toggle="validator">
 
                     <div th:if="${confirmationMessage}" class="alert alert-success"
@@ -61,7 +61,7 @@
                         <span class="glyphicon glyphicon-user"></span>
                       </span>
                         <input type="text" th:field="*{password}"
-                               placeholder="Last Name" class="form-control" required/>
+                               placeholder="Password" class="form-control" required/>
                         <span class="glyphicon form-control-feedback"
                               aria-hidden="true"></span>
                     </div>
