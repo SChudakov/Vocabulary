@@ -10,22 +10,33 @@
 </head>
 <body>
 <th:block layout:fragment="page_content">
+
     <nav>
-        <a href="/collections">Collection</a>
-        <a href="/languages">Languages</a>
-        <a href="/words">Words</a>
+        <a href="/words" th:text="#{words_reference_text}">Words</a>
+        <a href="/collections" th:text="#{collection_reference_text}">Collection</a>
     </nav>
+
     <div class="container">
+
         <form th:action="@{/languages/languageInfo}" method="get">
+
             <select name="languageName" class="languages-list-big">
                 <div th:each="language : ${languages}">
-                    <option th:value="${language.getName()}" th:text="${language.getName()}"></option>
+                    <option
+                            th:value="${language.getName()}"
+                            th:text="${language.getName()}"
+                    >
+                    </option>
                 </div>
             </select>
-            <input type="submit" class="btn green button-input-big" value="Select"/>
+
+            <input type="submit" class="btn green button-input-big" th:value="#{search_button_text}"/>
         </form>
+
     </div>
+
     <div class="container" th:if="${words}">
+
         <table class="words-table">
             <tr id="first-line" class="rainbow"><td>Word</td><td>Meanings</td></tr>
             <div th:each="word : ${words}">

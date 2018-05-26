@@ -23,8 +23,6 @@
         <div class="middle-box text-center loginscreen animated fadeInDown">
             <div>
 
-                <h4>Registration</h4>
-
                 <form autocomplete="off" action="#" th:action="@{/registration}"
                       th:object="${user}" method="POST" class="m-t" role="form"
                       data-toggle="validator">
@@ -50,31 +48,31 @@
                         <span class="glyphicon glyphicon-user"></span>
                         </span>
 
-                        <input type="text" th:field="*{name}"
-                               placeholder="Name" class="form-control" required/>
-                        <span class="glyphicon form-control-feedback"
-                              aria-hidden="true"></span>
+                        <input type="text" th:field="*{name}" th:placeholder="#{username_placeholder}" class="form-control" required/>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
 
                     <div class="form-group input-group has-feedback">
+
                       <span class="input-group-addon">
                         <span class="glyphicon glyphicon-user"></span>
+
                       </span>
-                        <input type="text" th:field="*{password}"
-                               placeholder="Password" class="form-control" required/>
-                        <span class="glyphicon form-control-feedback"
-                              aria-hidden="true"></span>
+
+                        <input type="text" th:field="*{password}" th:placeholder="#{user_pasdword_placeholder}" class="form-control" required/>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+
                     </div>
 
                     <div class="form-group input-group has-feedback">
+
                           <span class="input-group-addon">
                             <span class="glyphicon glyphicon-envelope"></span>
+
                           </span>
-                        <input type="email" th:field="*{email}"
-                               placeholder="Email Address" class="form-control"
-                               data-error="This email address is invalid" required/>
-                        <span class="glyphicon form-control-feedback"
-                              aria-hidden="true"></span>
+
+                        <input type="email" th:field="*{email}" th:placeholder="#{user_email_placeholder}" class="form-control" data-error="This email address is invalid" required/>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 
                     </div>
 

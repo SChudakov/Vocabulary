@@ -20,7 +20,6 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource("classpath:app.properties")
 public class DataConfiguration {
 
     private final DataSource dataSource;
@@ -63,6 +62,4 @@ public class DataConfiguration {
     public Logger getLogger() {
         return LogManager.getLogger("com.sschudakov.dao");
     }
-
-
 }

@@ -1,5 +1,6 @@
 package com.sschudakov.web.configuration;
 
+import nz.net.ultraq.thymeleaf.LayoutDialect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
@@ -12,16 +13,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import nz.net.ultraq.thymeleaf.LayoutDialect;
 
 import java.util.Locale;
 
 @Configuration
 @EnableWebMvc
 public class WebConfiguration implements WebMvcConfigurer {
-
-    /*--------------  my stuff ---------------------------*/
-
     @Bean
     public InternalResourceViewResolver getViewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -41,7 +38,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Bean
     public CookieLocaleResolver localeResolver() {
         CookieLocaleResolver localeResolver = new CookieLocaleResolver();
-        localeResolver.setDefaultLocale(Locale.ENGLISH);
+        localeResolver.setDefaultLocale(new Locale.Builder().setLanguage("uk").setRegion("EE").build());
         localeResolver.setCookieName("my-locale-cookie");
         localeResolver.setCookieMaxAge(3600);
         return localeResolver;
@@ -83,35 +80,5 @@ public class WebConfiguration implements WebMvcConfigurer {
                         "classpath:/static/css/",
                         "classpath:/static/js/");
     }
-    /*-----------------  other stuff ----------------------*/
-
-
-
-    /*@Bean
-    public CommonsMultipartResolver multipartResolver() {
-        CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
-        commonsMultipartResolver.setMaxUploadSize(10000000);
-        return commonsMultipartResolver;
-    }
-
-
-    @Bean
-    public JavaMailSenderImpl mailSender() {
-        JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
-        javaMailSender.setUsername(env.getRequiredProperty("java.mail.username"));
-        javaMailSender.setPassword(env.getRequiredProperty("java.mail.password"));
-        javaMailSender.setPort(465);
-
-        Properties javaMailProperties = new Properties();
-
-        javaMailProperties.setProperty("mail.smtp.auth", "true");
-        javaMailProperties.setProperty("mail.smtp.starttls.enable", "true");
-        javaMailProperties.setProperty("mail.smtp.starttls.required", "true");
-        javaMailProperties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-        javaMailProperties.setProperty("mail.smtp.host", env.getRequiredProperty("java.mail.host"));
-
-        javaMailSender.setJavaMailProperties(javaMailProperties);
-        return javaMailSender;
-    }*/
 }
 

@@ -10,13 +10,16 @@
 </head>
 <body>
 <th:block layout:fragment="page_content">
+
     <nav>
-        <a href="/collections">Collection</a>
-        <a href="/languages">Languages</a>
-        <a href="/words">Words</a>
+        <a href="/words" th:text="#{words_reference_text}">Words</a>
+        <a href="/languages" th:text="#{languages_reference_text}">Languages</a>
     </nav>
+
     <div class="container">
+
         <form th:action="@{/collections/collectionInfo}" method="get">
+
             <select name="collectionName" class="collections-list">
                 <div th:each="collection : ${collections}">
                     <option
@@ -27,9 +30,12 @@
                     </option>
                 </div>
             </select>
-            <input type="submit" class="btn green button-input-big" value="Select"/>
+
+            <input type="submit" class="btn green button-input-big" th:value="#{search_button_text}"/>
         </form>
+
     </div>
+
     <div class="container" th:if="${collection}">
         <table class="collection-table">
             <tr class="rainbow" id="first-line">
