@@ -17,14 +17,41 @@
     </nav>
     <div class="container">
         <form th:action="@{/words/wordInfo}" method="get">
-            <select name="language" class="languages-list-small">
+            <select name="language" class="languages-list-small" id="languages-select">
                 <div th:each="language : ${languages}">
                     <option th:value="${language.getName()}" th:text="${language.getName()}"></option>
                 </div>
             </select>
-            <input type="text" placeholder="Word" name="value" class="word-input-big"/>
+            <div class="input-container">
+                <input type="text" placeholder="Word" name="value" id="input-word" class="word-input-big" autocomplete="off"/>
+                <div class="hints-container">
+                    <ul id="hints"></ul>
+                </div>
+            </div>
             <input type="submit" class="btn green button-input-big" value="Search"/>
         </form>
+        <script>
+            var hints = $('#hints');
+            function refresh() {
+                $.get("/api/words/get_by_prefix",
+                    {prefix: $("#input-word").val()},
+                    function (data, status) {
+                        hints.html('');
+                        data.forEach(function (word) {
+                            hints.append('<li onclick=\"'+
+                                'selectItemByValue(document.getElementById(\'languages-select\'),\''+word.language.name+'\');'+
+                                '$(\'#input-word\').val(\''+word.value+'\');hints.html(\'\');\">'+
+                                word.language.name +
+                                ':' +
+                                word.capitalizedValue +
+                                '</li>');
+                        });
+                    });
+            }
+            $("#input-word").keyup(function (e) {
+                refresh();
+            });
+        </script>
     </div>
     <div class="container" th:if="${word}">
         <div class="rainbow words-head" id="words-head">
@@ -63,8 +90,8 @@
                     <div th:each="collection : ${collections}">
                         <li>
                             <a
-                                th:text="${collection.getCollectionName()}"
-                                th:href="${'/collections/collectionInfo?collectionName='+collection.getCollectionName()}">
+                                    th:text="${collection.getCollectionName()}"
+                                    th:href="${'/collections/collectionInfo?collectionName='+collection.getCollectionName()}">
                             </a>
                         </li>
                     </div>

@@ -31,7 +31,7 @@ public class RegistrationController {
     public ModelAndView getLoginPage(
             ModelAndView modelAndView
     ) {
-        modelAndView.setViewName("/registration/loginPage");
+        modelAndView.setViewName("/registration/login");
         User user = new User();
         modelAndView.addObject("user", user);
 
@@ -50,7 +50,6 @@ public class RegistrationController {
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public ModelAndView getRegistrationPage(
             ModelAndView modelAndView
-
     ) {
         modelAndView.setViewName("registration/registration");
         User user = new User();
@@ -82,7 +81,7 @@ public class RegistrationController {
                 modelAndView.addObject("confirmationMessage", "User has been registered successfully");
             }
 
-            modelAndView.setViewName("registration/loginPage");
+            modelAndView.setViewName("registration/login");
         }
         return modelAndView;
     }

@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 public class RESTController {
 
-    /*private final WordRepository wordRepository;
+    private final WordRepository wordRepository;
     private final LanguageRepository languageRepository;
 
     @Autowired
@@ -27,7 +28,7 @@ public class RESTController {
         this.wordRepository = wordRepository;
         this.languageRepository = languageRepository;
     }
-
+/*
     @RequestMapping(value = "/words/wordInfo", method = RequestMethod.GET)
     public ResponseEntity<Word> getWordInfo(
             @RequestParam("value") String value,
@@ -72,4 +73,14 @@ public class RESTController {
 
         return result;
     }*/
+
+    @RequestMapping(value = "/api/words/get_by_prefix", method = RequestMethod.GET)
+    public ResponseEntity<List<Word>> getWordsByPrefix(
+            @RequestParam("prefix") String prefix
+    ) {
+        if (prefix.length() == 0) {
+            return new ResponseEntity<>(new ArrayList<>(), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(wordRepository.getWordsLike(prefix+"%"), HttpStatus.OK);
+    }
 }

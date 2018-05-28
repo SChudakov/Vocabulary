@@ -11,7 +11,8 @@
 <body>
 <th:block layout:fragment="page_content">
     <div class="container login">
-        <form action="#" th:action="@{/loginPage}" method="post" th:object="${user}">
+        <form th:action="@{/loginPage}"
+              method="POST" th:object="${user}">
             <!--<div th:if="${loginErrorMessage}" class="alert alert-danger" role="alert"
                  th:text="${loginErrorMessage}"></div>
 
@@ -25,10 +26,12 @@
                  class="validation-message alert alert-danger" role="alert"></div>
 
             <div class="login-header">Login form</div>
-            <input type="text" placeholder="Login" class="login-input"/>
-            <input type="password" placeholder="Password" class="login-input"/>
+
+            <input name="name" type="text" placeholder="Login" class="login-input"/>
+            <input name="password" type="password" placeholder="Password" class="login-input"/>
+
             <input type="submit" class="btn green button-sign-in" value="Sign in"/>
-            <input type="submit" class="btn green button-sign-up" value="Sign up"/>
+            <a class="btn green button-sign-up" href="/registration">Sign up</a>
         </form>
     </div>
 </th:block>

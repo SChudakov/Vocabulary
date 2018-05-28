@@ -39,4 +39,8 @@ public interface WordRepository extends JpaRepository<Word, Integer> {
     //todo: move to WMRRepository
     @Query(value = "SELECT wmr FROM WordMeaningRelationship wmr WHERE wmr.word.language = :language")
     List<WordMeaningRelationship> getAllMeaningsByLanguage(@Param(value = "language") Language language);
+
+
+    @Query(value = "SELECT w FROM Word w WHERE w.value LIKE :pattern")
+    List<Word> getWordsLike(@Param(value = "pattern") String patter);
 }
