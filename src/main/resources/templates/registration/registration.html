@@ -14,11 +14,11 @@
         <form autocomplete="off" action="#" th:action="@{/registration}"
               th:object="${user}" method="POST">
 
-            <div th:if="${confirmationMessage}" class="alert alert-success"
-                 role="alert" th:text="${confirmationMessage}"></div>
+            <!--<div th:if="${confirmationMessage}" class="alert alert-success"
+                 role="alert" th:text="#{user_registration_confirm_message}"></div>
 
             <div th:if="${nameErrorMessage}" class="alert alert-danger" role="alert"
-                 th:text="${nameErrorMessage}"></div>
+                 th:text="#{user_already_exists}"></div>-->
 
 
             <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
@@ -65,10 +65,10 @@
 
             </div>
 
-            <button type="submit" class="btn green button-sign-in">
+            <button type="submit" class="btn green button-sign-in" th:text="#{register_button_text}">
                 Register
             </button>
-            <a class="btn green button-sign-up" href="/loginPage">Back to login</a>
+            <a class="btn green button-sign-up" href="/loginPage" th:text="#{back_to_login_page_button_text}">Back to login</a>
         </form>
     </div>
 </th:block>

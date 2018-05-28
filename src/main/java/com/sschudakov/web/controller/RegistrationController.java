@@ -72,7 +72,7 @@ public class RegistrationController {
             boolean userExists = this.userSrv.userExistsByName(user);
 
             if (userExists) {
-                result.rejectValue("name", "user already exists");
+                result.rejectValue("name", "user_already_exists");
                 modelAndView.addObject("nameErrorMessage", "User with such name already exists. Please choose another one.");
                 modelAndView.setViewName("registration/registration");
             } else {
