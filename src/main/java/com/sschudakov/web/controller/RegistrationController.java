@@ -72,16 +72,16 @@ public class RegistrationController {
             boolean userExists = this.userSrv.userExistsByName(user);
 
             if (userExists) {
-                /*result.rejectValue("userAlreadyExists", "message.userAlreadyExists");*/
+                result.rejectValue("name", "user already exists");
                 modelAndView.addObject("nameErrorMessage", "User with such name already exists. Please choose another one.");
+                modelAndView.setViewName("registration/registration");
             } else {
                 Role userRole = this.roleSrv.findByName(ROLE_USER);
                 user.addRole(userRole);
                 this.userSrv.save(user);
                 modelAndView.addObject("confirmationMessage", "User has been registered successfully");
+                modelAndView.setViewName("registration/login");
             }
-
-            modelAndView.setViewName("registration/login");
         }
         return modelAndView;
     }
