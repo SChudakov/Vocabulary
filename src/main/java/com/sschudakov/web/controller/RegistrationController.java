@@ -31,7 +31,7 @@ public class RegistrationController {
     public ModelAndView getLoginPage(
             ModelAndView modelAndView
     ) {
-        modelAndView.setViewName("/registration/loginPage");
+        modelAndView.setViewName("/registration/login");
         User user = new User();
         modelAndView.addObject("user", user);
 
@@ -50,7 +50,6 @@ public class RegistrationController {
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public ModelAndView getRegistrationPage(
             ModelAndView modelAndView
-
     ) {
         modelAndView.setViewName("registration/registration");
         User user = new User();
@@ -73,16 +72,16 @@ public class RegistrationController {
             boolean userExists = this.userSrv.userExistsByName(user);
 
             if (userExists) {
-                /*result.rejectValue("userAlreadyExists", "message.userAlreadyExists");*/
+                result.rejectValue("name", "user already exists");
                 modelAndView.addObject("nameErrorMessage", "User with such name already exists. Please choose another one.");
+                modelAndView.setViewName("registration/registration");
             } else {
                 Role userRole = this.roleSrv.findByName(ROLE_USER);
                 user.addRole(userRole);
                 this.userSrv.save(user);
                 modelAndView.addObject("confirmationMessage", "User has been registered successfully");
+                modelAndView.setViewName("registration/login");
             }
-
-            modelAndView.setViewName("registration/loginPage");
         }
         return modelAndView;
     }
