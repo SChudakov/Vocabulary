@@ -23,8 +23,8 @@
                     <input name="name" type="text" th:placeholder="#{login}" class="login-input"/>
                     <input name="password" type="password" th:placeholder="#{password}" class="login-input"/>
 
-                    <input type="submit" class="btn green button-sign-in" value="Sign in"/>
-                    <input type="submit" class="btn green button-sign-up" value="Sign up"/>
+                    <input type="submit" class="btn green button-sign-in" th:value="#{sign_in_button_text}"/>
+                    <input type="submit" class="btn green button-sign-up" th:value="#{sign_up_button_text}"/>
                 </form>
             </div>
         </th:block>
