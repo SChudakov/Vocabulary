@@ -38,7 +38,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Bean
     public CookieLocaleResolver localeResolver() {
         CookieLocaleResolver localeResolver = new CookieLocaleResolver();
-        localeResolver.setDefaultLocale(new Locale.Builder().setLanguage("uk").setRegion("EE").build());
+        localeResolver.setDefaultLocale(new Locale.Builder().setLanguage("ru").setRegion("EE").build());
         localeResolver.setCookieName("my-locale-cookie");
         localeResolver.setCookieMaxAge(3600);
         return localeResolver;

@@ -4,36 +4,28 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="index"
       lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-<th:block layout:fragment="page_content">
-    <div class="container login">
-        <form th:action="@{/loginPage}"
-              method="POST" th:object="${user}">
-            <!--<div th:if="${loginErrorMessage}" class="alert alert-danger" role="alert"
-                 th:text="${loginErrorMessage}"></div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <th:block layout:fragment="page_content">
+            <div class="container login">
+                <form th:action="@{/loginPage}" method="POST" th:object="${user}" autocomplete="off">
 
-            <div th:if="${confirmLoginMessage}" class="alert alert-success"
-                 role="alert" th:text="${confirmLoginMessage}"></div>-->
+                    <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+                         class="validation-message alert alert-danger" role="alert"></div>
 
-            <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
-                 class="validation-message alert alert-danger" role="alert"></div>
+                    <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                         class="validation-message alert alert-danger" role="alert"></div>
 
-            <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
-                 class="validation-message alert alert-danger" role="alert"></div>
+                    <input name="name" type="text" th:placeholder="#{login_placeholder_text}" class="login-input" autocomplete="off"/>
+                    <input name="password" type="password" th:placeholder="#{password_password_text}" class="login-input" autocomplete="off"/>
 
-            <div class="login-header">Login form</div>
-
-            <input name="name" type="text" placeholder="Login" class="login-input"/>
-            <input name="password" type="password" placeholder="Password" class="login-input"/>
-
-            <input type="submit" class="btn green button-sign-in" th:value="#{sign_in_button_text}"/>
-            <a class="btn green button-sign-up" href="/registration" th:text="#{sign_up_button_text}">Sign up</a>
-        </form>
-    </div>
-</th:block>
-</body>
+                    <input type="submit" class="btn green button-sign-in" th:value="#{sign_in_button_text}"/>
+                    <a class="btn green button-sign-up" href="/registration" th:text="#{sign_up_button_text}">Sign up</a>
+                </form>
+            </div>
+        </th:block>
+    </body>
 </html>
