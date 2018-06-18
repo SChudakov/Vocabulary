@@ -1,0 +1,6 @@
+FROM maven
+
+WORKDIR /tmp/build/
+COPY ./* /tmp/build/
+
+CMD cd /tmp/build && mvn clean install
